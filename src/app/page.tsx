@@ -7,6 +7,7 @@ import slide3 from "@/app/public/slide.png";
 import Initiatives from "@/components/Initiatives";
 import LifeAtVst from "@/components/LifeAtVst";
 import ContactUs from "@/components/ContactUs";
+import Footer from "@/components/Footer";
 // import slide4 from "@/app/public/slide4.jpg";
 // import slide5 from "@/app/public/slide5.jpg";
 // import slide6 from "@/app/public/slide6.jpg";
@@ -160,6 +161,7 @@ export default function Home() {
       <Initiatives />
 
       <ContactUs />
+      <Footer />
     </main>
   );
 }
