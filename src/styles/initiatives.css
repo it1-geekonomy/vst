@@ -1,0 +1,37 @@
+.gallery {
+  --s: 305px; /* control the size */
+  --g: 0px; /* control the gap */
+  --f: 1; /* control the scale factor */
+
+  display: grid;
+  gap: var(--g);
+  width: calc(3 * var(--s) + 2 * var(--g));
+  height: calc(3 * var(--s) * var(--g)); /* Added height calculation */
+  grid-template-rows: repeat(2, auto); /* Added rows definition */
+  grid-template-columns: repeat(2, auto);
+}
+
+.gallery > div {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(90%);
+  transition: 0.55s linear;
+}
+
+.gallery div:hover {
+  filter: grayscale(0);
+  width: calc(var(--s) * var(--f));
+  height: calc(var(--s) * var(--f));
+  z-index: 1; /* Added to ensure hovered item appears above others */
+}
+
+/* Optional: Container styling */
+.gallery-container {
+  display: grid;
+  place-content: center;
+  background: #000;
+}
