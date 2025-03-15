@@ -156,7 +156,6 @@ export default function Home() {
 
       {/* Initiatives Section */}
       <Initiatives />
-      <FranchiseSlider />
     </main>
   );
 }
