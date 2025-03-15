@@ -18,6 +18,7 @@ interface SlideData {
     from: string;
     to: string;
   };
+  logo: StaticImageData;
 }
 
 const slides: SlideData[] = [
@@ -30,6 +31,7 @@ const slides: SlideData[] = [
       from: "rgba(221, 184, 80, 0.46)",
       to: "#0F1F2A",
     },
+    logo: logo1,
   },
   {
     id: 2,
@@ -40,6 +42,7 @@ const slides: SlideData[] = [
       from: "rgba(223, 172, 79, 0.56)",
       to: "#397A9BCC",
     },
+    logo: logo1,
   },
   {
     id: 3,
@@ -50,6 +53,7 @@ const slides: SlideData[] = [
       from: "rgba(247, 203, 117, 0.46)", // Warm golden color for Land Rover
       to: "#B4734700",
     },
+    logo: logo1,
   },
   // Add more slides for other brands
 ];
@@ -131,7 +135,7 @@ const FranchiseSlider = () => {
           </h2>
 
           {/* Navigation and logos */}
-          <div className="flex flex-col items-center lg:items-start gap-6 lg:gap-8 h-auto lg:h-[16rem]">
+          <div className="flex flex-col items-center lg:items-start justify-start gap-6 lg:gap-8 h-auto lg:h-[16rem]">
             {/* Up arrow */}
             <button
               onClick={() =>
@@ -139,7 +143,7 @@ const FranchiseSlider = () => {
                   (prev) => (prev - 1 + slides.length) % slides.length
                 )
               }
-              className="text-white hover:text-purple-400 transition-colors"
+              className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[3.5rem]"
             >
               <svg
                 className="w-8 lg:w-12 h-8 lg:h-12"
@@ -157,35 +161,40 @@ const FranchiseSlider = () => {
             </button>
 
             {/* Brand logos */}
-            <div className="flex justify-between items-center gap-4 lg:gap-8 overflow-hidden w-full lg:w-[400px]">
+            <div className="w-full flex justify-center lg:justify-start overflow-hidden">
               <motion.div
-                className="flex items-center gap-8 lg:gap-16"
+                className="flex items-center gap-8 lg:gap-20"
                 animate={{
                   x: `-${
-                    currentSlide * (window.innerWidth > 1024 ? 96 : 64)
+                    currentSlide * (window.innerWidth < 1024 ? 120 : 260)
                   }px`,
+                  translateX: window.innerWidth < 1024 ? "40%" : "0%",
                 }}
-                transition={{ duration: 0.5 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }}
               >
-                {["mercedes", "jaguar", "landrover", "porsche", "maserati"].map(
-                  (brand) => (
-                    <button
-                      key={brand}
-                      onClick={() => goToSlide(brand as SlideData["brand"])}
-                      className={`transition-opacity duration-300 min-w-[50px] lg:min-w-[80px] ${
-                        slides[currentSlide].brand === brand
-                          ? "opacity-100"
-                          : "opacity-50 hover:opacity-75"
-                      }`}
-                    >
-                      <img
-                        src={logo1}
-                        alt={`${brand} logo`}
-                        className="h-10 lg:h-16 w-auto"
-                      />
-                    </button>
-                  )
-                )}
+                {slides.map((slide, index) => (
+                  <motion.button
+                    key={slide.brand}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`transition-opacity duration-300 flex-shrink-0 ${
+                      currentSlide === index
+                        ? "opacity-100"
+                        : "opacity-50 hover:opacity-75"
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Image
+                      src={slide.logo}
+                      alt={`${slide.brand} logo`}
+                      width={340}
+                      height={120}
+                      className="h-12 lg:h-24 w-auto object-contain"
+                    />
+                  </motion.button>
+                ))}
               </motion.div>
             </div>
 
@@ -194,7 +203,7 @@ const FranchiseSlider = () => {
               onClick={() =>
                 setCurrentSlide((prev) => (prev + 1) % slides.length)
               }
-              className="text-white hover:text-purple-400 transition-colors"
+              className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[3.5rem]"
             >
               <svg
                 className="w-8 lg:w-12 h-8 lg:h-12"
