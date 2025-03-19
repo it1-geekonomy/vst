@@ -5,7 +5,9 @@ import slide1 from "@/app/public/slid1.png";
 import slide2 from "@/app/public/slid 2.png";
 import slide3 from "@/app/public/slide.png";
 import Initiatives from "@/components/Initiatives";
-import FranchiseSlider from "@/components/automotiveFranchises/franchiesMain";
+import LifeAtVst from "@/components/LifeAtVst";
+import ContactUs from "@/components/ContactUs";
+import Footer from "@/components/Footer";
 // import slide4 from "@/app/public/slide4.jpg";
 // import slide5 from "@/app/public/slide5.jpg";
 // import slide6 from "@/app/public/slide6.jpg";
@@ -153,9 +155,13 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      {/* Life at VST Section */}
+      <LifeAtVst />
       {/* Initiatives Section */}
       <Initiatives />
+
+      <ContactUs />
+      <Footer />
     </main>
   );
 }
