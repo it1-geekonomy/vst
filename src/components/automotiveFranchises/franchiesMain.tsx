@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import bg1 from "@/app/public/faranchies/pexels-jack-redgate-333633-30140021 1 (1).png";
 import bg2 from "@/app/public/faranchies/pexels-jack-redgate-333633-30140021 1 (2).png";
 import bg3 from "@/app/public/faranchies/pexels-jack-redgate-333633-30140021 2 (1).png";
 import car1 from "@/app/public/faranchies/Mercedes 1 (1).png";
 import car2 from "@/app/public/faranchies/Benz Car 2 1.png";
 import car3 from "@/app/public/faranchies/land-rover car.png";
-import logo1 from "@/app/public/faranchies/13.png";
-
+import MercedesIcon from "@/app/public/faranchies/MercedesIcon";
+import LandRoverIcon from "@/app/public/faranchies/LandRoverIcon";
+import PorscheIcon from "@/app/public/faranchies/PorscheIcon";
+import StaticImageData from "next/image";
 interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
@@ -18,7 +20,7 @@ interface SlideData {
     from: string;
     to: string;
   };
-  logo: StaticImageData;
+  LogoComponent: React.ComponentType<{ className?: string }>;
 }
 
 const slides: SlideData[] = [
@@ -26,12 +28,12 @@ const slides: SlideData[] = [
     id: 1,
     backgroundImage: bg1,
     carImage: car1,
-    brand: "mercedes",
+    brand: "porsche",
     bgColor: {
       from: "rgba(221, 184, 80, 0.46)",
       to: "#0F1F2A",
     },
-    logo: logo1,
+    LogoComponent: PorscheIcon,
   },
   {
     id: 2,
@@ -42,7 +44,7 @@ const slides: SlideData[] = [
       from: "rgba(223, 172, 79, 0.56)",
       to: "#397A9BCC",
     },
-    logo: logo1,
+    LogoComponent: MercedesIcon,
   },
   {
     id: 3,
@@ -53,8 +55,9 @@ const slides: SlideData[] = [
       from: "rgba(247, 203, 117, 0.46)", // Warm golden color for Land Rover
       to: "#B4734700",
     },
-    logo: logo1,
+    LogoComponent: LandRoverIcon,
   },
+
   // Add more slides for other brands
 ];
 
@@ -186,13 +189,7 @@ const FranchiseSlider = () => {
                     }`}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <Image
-                      src={slide.logo}
-                      alt={`${slide.brand} logo`}
-                      width={340}
-                      height={120}
-                      className="h-12 lg:h-24 w-auto object-contain"
-                    />
+                    <slide.LogoComponent />
                   </motion.button>
                 ))}
               </motion.div>
