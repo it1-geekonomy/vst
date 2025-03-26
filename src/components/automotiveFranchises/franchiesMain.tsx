@@ -30,7 +30,7 @@ const slides: SlideData[] = [
     carImage: car1,
     brand: "porsche",
     bgColor: {
-      from: "rgba(221, 184, 80, 0.46)",
+      from: "rgba(223, 172, 79, 0.56)",
       to: "#0F1F2A",
     },
     LogoComponent: PorscheIcon,
@@ -42,7 +42,7 @@ const slides: SlideData[] = [
     brand: "mercedes",
     bgColor: {
       from: "rgba(223, 172, 79, 0.56)",
-      to: "#397A9BCC",
+      to: "#0F1F2A",
     },
     LogoComponent: MercedesIcon,
   },
@@ -52,8 +52,8 @@ const slides: SlideData[] = [
     carImage: car3,
     brand: "landrover",
     bgColor: {
-      from: "rgba(247, 203, 117, 0.46)", // Warm golden color for Land Rover
-      to: "#B4734700",
+      from: "rgba(223, 172, 79, 0.56)",
+      to: "#0F1F2A",
     },
     LogoComponent: LandRoverIcon,
   },
@@ -76,7 +76,10 @@ const FranchiseSlider = () => {
       className="relative w-full min-h-screen overflow-x-hidden"
       initial={false}
       animate={{
-        background: `radial-gradient(53.31% 73.31% at 91.72% 9.91%, ${slides[currentSlide].bgColor.from} 0%, ${slides[currentSlide].bgColor.to} 100%)`,
+        background: `
+          radial-gradient(33.31% 35.31% at 91.72% 2.91%, ${slides[currentSlide].bgColor.from} 0%, transparent 100%),
+          linear-gradient(328.88deg, rgba(0, 0, 0, 09) 1.12%, rgba(65, 148, 216, 0.6) 82.2%)
+        `,
       }}
       transition={{ duration: 0.5 }}
     >
