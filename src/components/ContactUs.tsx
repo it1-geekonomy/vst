@@ -22,50 +22,57 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-around bg-black text-white min-h-screen pt-0">
-      <div className="container mx-auto max-w-6xl flex justify-around items-center py-10">
-        <div className="flex-1 flex flex-col items-start">
-          <div className="w-[700px]">
-            <h1 className="text-[#ffd700] text-6xl font-normal mb-8">
-              Contact Us
-            </h1>
-            <div className="w-[700px] h-[700px] pr-45">
+
+    <div className="flex justify-around p-3 xs:p-4 sm:p-6 md:p-10 bg-black text-white min-h-screen overflow-x-hidden">
+      <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row justify-around items-center gap-6 xs:gap-8 md:gap-10 lg:gap-12">
+        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
+          <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
+            <h1 className="text-[#ffd700] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8 text-center lg:text-left">
+Get in touch            </h1>
+            <div className="w-full h-[200px] xs:h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px]">
               <video
                 src="/ContactUsLogo.mp4"
                 autoPlay
                 muted
                 loop
                 className="w-full h-full object-cover"
+                playsInline
               />
             </div>
           </div>
         </div>
 
-        <div className="flex-1 pl-10">
+        <div className="w-full lg:w-1/2 lg:pl-6 xl:pl-10 mt-6 lg:mt-0">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-8 w-[600px]"
+            className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8 w-full max-w-[450px] sm:max-w-[500px] md:max-w-[550px] mx-auto lg:mx-0"
           >
-            <div className="flex gap-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               <div className="flex-1">
-                <label className="block text-white mb-2">First Name</label>
+                <label className="block text-white mb-1 sm:mb-2">First Name</label>
                 <input
                   {...register("firstName", { required: true })}
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
                 />
+                {errors.firstName && (
+                  <span className="text-red-500 text-sm mt-1">Required field</span>
+                )}
               </div>
               <div className="flex-1">
-                <label className="block text-white mb-2">Last Name</label>
+                <label className="block text-white mb-1 sm:mb-2">Last Name</label>
                 <input
                   {...register("lastName", { required: true })}
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
                 />
+                {errors.lastName && (
+                  <span className="text-red-500 text-sm mt-1">Required field</span>
+                )}
               </div>
             </div>
 
-            <div className="flex gap-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               <div className="flex-1">
-                <label className="block text-white mb-2">Email</label>
+                <label className="block text-white mb-1 sm:mb-2">Email</label>
                 <input
                   {...register("email", {
                     required: true,
@@ -74,28 +81,41 @@ const ContactUs: React.FC = () => {
                   type="email"
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
                 />
+                {errors.email && (
+                  <span className="text-red-500 text-sm mt-1">
+                    {errors.email.type === "required"
+                      ? "Required field"
+                      : "Invalid email address"}
+                  </span>
+                )}
               </div>
               <div className="flex-1">
-                <label className="block text-white mb-2">Phone Number</label>
+                <label className="block text-white mb-1 sm:mb-2">Phone Number</label>
                 <input
                   {...register("phone", { required: true })}
                   type="tel"
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
                 />
+                {errors.phone && (
+                  <span className="text-red-500 text-sm mt-1">Required field</span>
+                )}
               </div>
             </div>
 
             <div>
-              <label className="block text-white mb-2">Message</label>
+              <label className="block text-white mb-1 sm:mb-2">Message</label>
               <textarea
                 {...register("message", { required: true })}
-                className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
+                className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white min-h-[80px] xs:min-h-[100px] md:min-h-[120px]"
               />
+              {errors.message && (
+                <span className="text-red-500 text-sm mt-1">Required field</span>
+              )}
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#ffd700] text-black py-4 rounded-md hover:bg-[#f4c430] transition-colors mt-8"
+              className="w-full bg-[#ffd700] text-black py-2.5 xs:py-3 md:py-4 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-medium"
             >
               Send Message
             </button>
