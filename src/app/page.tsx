@@ -8,6 +8,8 @@ import Initiatives from "@/components/Initiatives";
 import LifeAtVst from "@/components/LifeAtVst";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
+import OurMilestone from "@/components/OurMilestone";
+import EmpoweringScroll from "@/components/EmpoweringScroll";
 // import slide4 from "@/app/public/slide4.jpg";
 // import slide5 from "@/app/public/slide5.jpg";
 // import slide6 from "@/app/public/slide6.jpg";
@@ -155,11 +157,12 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <OurMilestone />
       {/* Life at VST Section */}
       <LifeAtVst />
       {/* Initiatives Section */}
       <Initiatives />
-
+      <EmpoweringScroll />
       <ContactUs />
       <Footer />
     </main>

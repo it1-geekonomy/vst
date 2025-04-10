@@ -22,8 +22,8 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-around p-10 bg-black text-white min-h-screen">
-      <div className="container mx-auto max-w-6xl flex justify-around items-center">
+    <div className="flex justify-around bg-black text-white min-h-screen pt-0">
+      <div className="container mx-auto max-w-6xl flex justify-around items-center py-10">
         <div className="flex-1 flex flex-col items-start">
           <div className="w-[700px]">
             <h1 className="text-[#ffd700] text-6xl font-normal mb-8">
