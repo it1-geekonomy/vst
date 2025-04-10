@@ -1,14 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Image1881 from "@/app/public/images/AboutUs/1881Image.png";
 import Image1920 from "@/app/public/images/AboutUs/1920Image.png";
 import Image1950 from "@/app/public/images/AboutUs/1950Image.png";
 
-const AboutUsPage = () => {
+function AboutUsPage() {
   const [selectedYear, setSelectedYear] = useState("1920");
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [imageOpacity, setImageOpacity] = useState(1);
+  const [blurAmount, setBlurAmount] = useState(0);
+  const [scale, setScale] = useState(1);
+  
   const timelineData = [
     {
       year: "1881",
@@ -23,6 +27,20 @@ const AboutUsPage = () => {
       image: Image1950,
     },
   ];
+
+  // Apply subtle zoom effect to the selected image
+  useEffect(() => {
+    if (!isTransitioning) {
+      const zoomInterval = setInterval(() => {
+        setScale(prev => {
+          // Enhanced zoom effect between 1 and 1.05
+          return prev >= 1.05 ? 1 : prev + 0.0005;
+        });
+      }, 50);
+      
+      return () => clearInterval(zoomInterval);
+    }
+  }, [isTransitioning]);
 
   const getPosition = (year: string) => {
     const years = ["1881", "1920", "1950"];
@@ -39,11 +57,44 @@ const AboutUsPage = () => {
     return position;
   };
 
+  // Enhanced transition with faster fadeout
   const handleYearClick = (year: string) => {
-    if (year === selectedYear || isAnimating) return;
-    setIsAnimating(true);
-    setSelectedYear(year);
-    setTimeout(() => setIsAnimating(false), 150);
+    if (year === selectedYear || isTransitioning) return;
+    
+    setIsTransitioning(true);
+    
+    // Fade out and blur simultaneously - faster fadeout
+    setImageOpacity(0.15);
+    setBlurAmount(8);
+    
+    // Wait for faster fade out to complete
+    setTimeout(() => {
+      // Update selected year - this will reorder the images in the DOM
+      setSelectedYear(year);
+      setScale(1); // Reset scale for new image
+      
+      // Short delay to ensure DOM updates
+      setTimeout(() => {
+        // Start removing blur first
+        setBlurAmount(4);
+        
+        // Then gradually restore opacity
+        setTimeout(() => {
+          setImageOpacity(0.6);
+          
+          // Complete transition with final values
+          setTimeout(() => {
+            setBlurAmount(0);
+            setImageOpacity(1);
+            
+            // Allow Ken Burns effect to restart
+            setTimeout(() => {
+              setIsTransitioning(false);
+            }, 80);
+          }, 120);
+        }, 100);
+      }, 30);
+    }, 150);
   };
 
   return (
@@ -77,6 +128,7 @@ const AboutUsPage = () => {
         <div className="flex flex-col lg:flex-row w-full min-h-[600px] px-4 sm:px-6 md:px-8">
           {/* Timeline Years */}
           <div className="w-full lg:w-1/4 flex flex-row lg:flex-col items-center justify-between lg:justify-center h-[100px] lg:h-[600px] relative">
+            {/* Up arrow - Moves timeline up (previous year) */}
             <button
               onClick={() => {
                 const currentIndex = timelineData.findIndex((item) => item.year === selectedYear)
@@ -96,31 +148,62 @@ const AboutUsPage = () => {
               </svg>
             </button>
 
-            <div className="relative flex flex-row lg:flex-col items-center justify-center gap-8 lg:gap-0 lg:h-[400px]">
-              {timelineData.map((item) => {
-                const position = getPosition(item.year)
-                const isSelected = selectedYear === item.year
-
-                return (
-                  <button
-                    key={item.year}
-                    onClick={() => handleYearClick(item.year)}
-                    className={`text-3xl sm:text-4xl lg:text-5xl font-bold transition-all duration-500 absolute lg:relative
-                      ${isSelected ? 'scale-125 lg:translate-x-0' : 'scale-85 lg:translate-x-0'}
-                      ${position === -1 ? 'lg:translate-y-[-120px]' : position === 1 ? 'lg:translate-y-[120px]' : ''}`}
-                    style={{
-                      opacity: isSelected ? 1 : 0.5,
-                      filter: isSelected ? "none" : "blur(2px)",
-                      color: isSelected ? "#FCD34D" : "#6B7280",
-                      zIndex: isSelected ? 20 : 10,
-                    }}
-                  >
-                    {item.year}
-                  </button>
-                )
-              })}
+            {/* Timeline Years - 3D circular carousel effect without axis */}
+            <div className="relative h-[240px] w-full flex items-center justify-center" 
+                style={{ perspective: "1000px" }}>
+              {/* 3D carousel container */}
+              <div className="w-full h-full relative" style={{ transformStyle: "preserve-3d" }}>
+                {timelineData.map((item) => {
+                  const position = getPosition(item.year);
+                  const isSelected = selectedYear === item.year;
+                  
+                  // Calculate 3D rotation and z position
+                  let rotateX = 0;
+                  let translateZ = 0;
+                  let opacity = 1;
+                  let scale = 1;
+                  
+                  if (position === -1) {
+                    rotateX = -60; // Rotated upward
+                    translateZ = -100; // Behind
+                    opacity = 0.5;
+                    scale = 0.85;
+                  } else if (position === 1) {
+                    rotateX = 60; // Rotated downward
+                    translateZ = -100; // Behind
+                    opacity = 0.5;
+                    scale = 0.85;
+                  } else {
+                    // Center position
+                    rotateX = 0;
+                    translateZ = 0;
+                    opacity = 1;
+                    scale = 1.25;
+                  }
+                  
+                  return (
+                    <button
+                      key={item.year}
+                      onClick={() => handleYearClick(item.year)}
+                      className="absolute left-1/2 top-1/2 text-3xl sm:text-4xl lg:text-5xl font-bold"
+                      style={{
+                        transform: `translate(-50%, -50%) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${scale})`,
+                        opacity: opacity,
+                        color: isSelected ? "#FCD34D" : "#6B7280",
+                        filter: isSelected ? "none" : "blur(1px)",
+                        transformStyle: "preserve-3d",
+                        backfaceVisibility: "hidden",
+                        transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)", // Elastic ease-out for more engaging motion
+                      }}
+                    >
+                      {item.year}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
+            {/* Down arrow - Moves timeline down (next year) */}
             <button
               onClick={() => {
                 const currentIndex = timelineData.findIndex((item) => item.year === selectedYear)
@@ -143,11 +226,8 @@ const AboutUsPage = () => {
 
           {/* Timeline Images */}
           <div className="w-full lg:w-3/4 flex items-center justify-center mt-8 lg:mt-0">
-            <div className={`flex items-center justify-center 
-              ${isAnimating ? 'opacity-0' : 'opacity-100'}
-              transition-all duration-300`}
-            >
-              <div className="flex flex-row items-center justify-center 
+            <div className="flex items-center justify-center">
+              <div className="flex flex-row items-center justify-center
                 -space-x-4 sm:-space-x-8 md:-space-x-12 lg:-space-x-16">
                 {[...timelineData]
                   .sort((a, b) => {
@@ -155,54 +235,56 @@ const AboutUsPage = () => {
                     if (b.year === selectedYear) return 1
                     return 0
                   })
-                  .map((item, index) => (
-                    <div
-                      key={item.year}
-                      className="relative transition-all duration-500 flex items-center"
-                      style={{
-                        zIndex: selectedYear === item.year ? 30 : 20 - index,
-                      }}
-                    >
-                      {/* Colored ring */}
+                  .map((item, index) => {
+                    const isMainImage = item.year === selectedYear;
+                    
+                    return (
                       <div
-                        className={`absolute rounded-full transition-all duration-500 
-                          ${selectedYear === item.year 
-                            ? '-inset-2 sm:-inset-3 md:-inset-4 lg:-inset-6' 
-                            : '-inset-1 sm:-inset-2 md:-inset-3 lg:-inset-4'}`}
+                        key={item.year}
+                        className="relative flex items-center"
                         style={{
-                          background:
-                            item.year === "1881"
-                              ? "linear-gradient(180deg, rgba(26, 57, 85, 0.6) 0%, rgba(163, 126, 53, 0.6) 100%)"
-                              : item.year === "1920"
-                              ? "linear-gradient(180deg, rgba(84, 66, 62, 0.5) 0%, rgba(184, 151, 255, 0.5) 100%)"
-                              : "linear-gradient(180deg, rgba(120, 14, 38, 0.6) 0%, rgba(163, 126, 53, 0.6) 100%)",
-                          opacity: selectedYear === item.year ? 1 : 0.5,
+                          zIndex: isMainImage ? 30 : 20 - index,
+                          transition: "all 400ms cubic-bezier(0.4, 0.0, 0.2, 1)", // Faster transition
+                          willChange: "transform, opacity", // Performance optimization
                         }}
-                      />
-
-                      {/* Image container */}
-                      <div
-                        className={`relative rounded-full overflow-hidden transition-all duration-500
-                          ${selectedYear === item.year 
-                            ? 'w-[160px] h-[160px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[420px] lg:h-[420px]' 
-                            : index === 1
-                            ? 'w-[120px] h-[120px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[340px] lg:h-[340px]'
-                            : 'w-[100px] h-[100px] sm:w-[180px] sm:h-[180px] md:w-[240px] md:h-[240px] lg:w-[300px] lg:h-[300px]'}`}
                       >
-                        <Image
-                          src={item.image}
-                          alt={`Timeline ${item.year}`}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 640px) 160px,
-                                 (max-width: 768px) 280px,
-                                 (max-width: 1024px) 340px,
-                                 420px"
-                          priority={selectedYear === item.year}
-                        />
+                        {/* Image container with enhanced transition */}
+                        <div
+                          className={`relative rounded-full overflow-hidden
+                            ${isMainImage
+                              ? 'w-[160px] h-[160px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[420px] lg:h-[420px]'
+                              : index === 1
+                              ? 'w-[120px] h-[120px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[340px] lg:h-[340px]'
+                              : 'w-[100px] h-[100px] sm:w-[180px] sm:h-[180px] md:w-[240px] md:h-[240px] lg:w-[300px] lg:h-[300px]'}`}
+                          style={{
+                            transition: "width 400ms cubic-bezier(0.4, 0.0, 0.2, 1), height 400ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                            transform: isMainImage ? `scale(${scale})` : 'scale(1)', 
+                            transformOrigin: 'center center',
+                            transitionProperty: 'transform, width, height',  
+                            transitionDuration: isMainImage ? '5s, 400ms, 400ms' : '400ms, 400ms, 400ms',
+                            transitionTimingFunction: 'ease-in-out, cubic-bezier(0.4, 0.0, 0.2, 1), cubic-bezier(0.4, 0.0, 0.2, 1)'
+                          }}
+                        >
+                          <Image
+                            src={item.image}
+                            alt={`Timeline ${item.year}`}
+                            fill
+                            style={{
+                              opacity: imageOpacity,
+                              filter: `blur(${blurAmount}px)`,
+                              transition: "opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 180ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                              objectFit: "cover"
+                            }}
+                            sizes="(max-width: 640px) 160px,
+                                   (max-width: 768px) 280px,
+                                   (max-width: 1024px) 340px,
+                                   420px"
+                            priority={isMainImage}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
               </div>
             </div>
           </div>
@@ -283,6 +365,6 @@ const AboutUsPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default AboutUsPage;
