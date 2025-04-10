@@ -45,18 +45,23 @@ const LifeAtVst = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] bg-black text-white overflow-hidden ">
+    <div className="relative w-full h-[400px] bg-black text-white overflow-hidden">
       {/* Fixed Title Section - Centered relative to content area */}
-      <div className="absolute top-10 right-[-30.5%] transform -translate-x-1/2 z-40 text-center">
-        <h1 className="text-6xl  mb-2 font-['Roc_Grotesk'] tracking-[0.2em] uppercase">
+      <div className="absolute top-10 right-[-30.5%] transform -translate-x-1/2 z-40 text-center md:right-[-30.5%] sm:right-[-20%] xs:right-[-10%] right-0">
+        <h1 className="text-4xl md:text-6xl mb-2 font-['Roc_Grotesk'] tracking-[0.2em] uppercase">
           Life At VST
         </h1>
-        <div className="w-[900px] h-[2px] bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto" />
+        <div className="w-full max-w-[900px] h-[2px] bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto" />
       </div>
 
       {/* Fixed "0" */}
-      <div className="absolute top-1/2 left-[40%] transform -translate-x-1/2 -translate-y-1/2 z-20">
+      <div className="absolute top-1/2 left-[40%] transform -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
         <span className="text-[400px] font-['Roc_Grotesk'] text-white">0</span>
+      </div>
+
+      {/* Mobile version of "0" */}
+      <div className="absolute top-1/2 left-[40%] transform -translate-x-1/2 -translate-y-1/2 z-20 md:hidden">
+        <span className="text-[200px] font-['Roc_Grotesk'] text-white">0</span>
       </div>
 
       <AnimatePresence mode="wait">
@@ -85,13 +90,13 @@ const LifeAtVst = () => {
 
           {/* Animated Second Digit - Reduced duration and delay */}
           <motion.div
-            className="absolute top-1/2 left-[calc(40%+100px)] transform -translate-y-1/2 z-10"
+            className="absolute top-1/2 left-[calc(40%+60px)] md:left-[calc(40%+100px)] transform -translate-y-1/2 z-10"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.4 }} // Reduced from 0.8s to 0.4s
           >
-            <span className="text-[400px] font-['Roc_Grotesk'] bg-gradient-to-r from-[#00f5ff] via-[#ff3e3e] to-[#ff00ff] bg-clip-text text-transparent animate-gradient">
+            <span className="text-[200px] md:text-[400px] font-['Roc_Grotesk'] bg-gradient-to-r from-[#00f5ff] via-[#ff3e3e] to-[#ff00ff] bg-clip-text text-transparent animate-gradient">
               {(currentSlide + 1).toString()}
             </span>
           </motion.div>

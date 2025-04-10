@@ -61,24 +61,23 @@ const slides = [
 ];
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(2);
+  const [currentSlide, setCurrentSlide] = useState<number>(2);
 
   return (
-    <main className="relative min-h-screen bg-black">
+    <main className="relative min-h-screen bg-black overflow-x-hidden">
       {/* Hero Section with Slider */}
-      <section className="relative h-screen">
-        <div className="relative h-full w-full flex space-x-0">
+      <section className="relative h-screen overflow-hidden">
+        <div className="relative h-full w-full flex flex-row">
           {/* Navigation Strips */}
           {slides.map((slide, index) => (
             <div
               key={slide.id}
               className={`relative transition-all duration-700 ease-in-out ${
                 currentSlide === index
-                  ? "flex-1"
-                  : "w-34 cursor-pointer hover:w-40 group"
+                  ? "w-full"
+                  : "w-20 sm:w-24 md:w-34 cursor-pointer"
               }`}
-              style={{ marginLeft: 0 }}
-              onClick={() => currentSlide !== index && setCurrentSlide(index)}
+              onClick={() => setCurrentSlide(index)}
             >
               {/* Background Image */}
               <div className="absolute inset-0">
@@ -89,31 +88,22 @@ export default function Home() {
                   className={`object-cover transition-all duration-700 ${
                     currentSlide === index
                       ? "opacity-100 scale-100"
-                      : "opacity-90 scale-110 group-hover:opacity-100 group-hover:scale-105"
+                      : "opacity-90 scale-110"
                   }`}
                   priority={index === 0}
                 />
 
                 {/* Colored overlay with gradient */}
-                <div
-                  className={`absolute inset-0 transition-all duration-700 bg-gradient-to-b ${
+                {/* <div
+                  className={`absolute inset-0 w-full h-full transition-all duration-700 bg-gradient-to-b ${
                     currentSlide === index
                       ? "opacity-0"
-                      : `${slide.color} group-hover:opacity-75`
+                      : `${slide.color} opacity-80`
                   }`}
-                />
+                /> */}
 
-                {/* Shadow effect between strips */}
-                <div className="absolute inset-y-0 left-0 w-4 bg-gradient-to-l from-black/50 to-transparent" />
-
-                {/* Hover indicator line */}
-                <div
-                  className={`absolute right-0 top-0 bottom-0 w-1 bg-white transform transition-all duration-500 ${
-                    currentSlide === index
-                      ? "opacity-0"
-                      : "opacity-0 group-hover:opacity-100"
-                  }`}
-                />
+               
+            
               </div>
 
               {/* Content */}
@@ -125,18 +115,18 @@ export default function Home() {
                 }`}
               >
                 {currentSlide === index && (
-                  <div className="relative flex flex-col items-center justify-center text-white p-4">
+                  <div className="relative flex flex-col items-center justify-center text-white p-2 sm:p-4">
                     <Image
                       src="/vst-logo-white.png"
                       alt="VST Group"
-                      width={200}
-                      height={80}
-                      className="mb-8"
+                      width={150}
+                      height={60}
+                      className="mb-4 sm:mb-8 w-[120px] sm:w-[200px]"
                     />
-                    <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-center mb-2 sm:mb-4">
                       {slide.title}
                     </h1>
-                    <h2 className="text-2xl md:text-4xl text-center">
+                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-center">
                       {slide.subtitle}
                     </h2>
                   </div>
@@ -146,7 +136,7 @@ export default function Home() {
               {/* Label for inactive slides */}
               {currentSlide !== index && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white font-medium -rotate-90 transform whitespace-nowrap text-xl drop-shadow-lg group-hover:scale-110 transition-transform">
+                  <span className="text-white font-medium -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg">
                     {slide.label}
                   </span>
                 </div>
@@ -157,8 +147,7 @@ export default function Home() {
       </section>
       {/* Life at VST Section */}
       <LifeAtVst />
-      {/* Initiatives Section */}
-      <Initiatives />
+     
 
       <ContactUs />
       <Footer />
