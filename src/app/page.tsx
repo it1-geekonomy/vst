@@ -151,7 +151,7 @@ export default function Home() {
       {/* Life at VST Section */}
       <LifeAtVst />
       {/* Initiatives Section */}
-      <Initiatives />
+      
       <EmpoweringScroll />
 
       <ContactUs />
