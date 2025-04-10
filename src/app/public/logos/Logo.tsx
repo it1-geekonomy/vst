@@ -1,8 +1,13 @@
 import React from "react";
 
-const Logo = () => {
+interface LogoProps {
+  className?: string;
+}
+
+const Logo = ({ className }: LogoProps) => {
   return (
     <svg
+      className={className}
       width="74"
       height="126"
       viewBox="0 0 74 126"

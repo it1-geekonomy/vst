@@ -1,16 +1,34 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import bg1 from "@/app/public/faranchies/pexels-jack-redgate-333633-30140021 1 (1).png";
-import bg2 from "@/app/public/faranchies/pexels-jack-redgate-333633-30140021 1 (2).png";
-import bg3 from "@/app/public/faranchies/pexels-jack-redgate-333633-30140021 2 (1).png";
-import car1 from "@/app/public/faranchies/Mercedes 1 (1).png";
-import car2 from "@/app/public/faranchies/Benz Car 2 1.png";
-import car3 from "@/app/public/faranchies/land-rover car.png";
+import Image, { StaticImageData } from "next/image";
+import bg1 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (1).png";
+import bg2 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (2).png";
+import bg3 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 2 (1).png";
+import car1 from "@/app/public/faranchies/carpic/Mercedes 1 (1).png";
+import car2 from "@/app/public/faranchies/carpic/Benz Car 2 1.png";
+import car3 from "@/app/public/faranchies/carpic/land-rover car.png";
+import bg4 from "@/app/public/faranchies/bgpic/4carbg.png";
+import bg5 from "@/app/public/faranchies/bgpic/5carbg.png";
+import bg6 from "@/app/public/faranchies/bgpic/6carbg.png";
+import bg7 from "@/app/public/faranchies/bgpic/7carbg.png";
+
+import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
+
+import car4 from "@/app/public/faranchies/carpic/4car.png";
+import car5 from "@/app/public/faranchies/carpic/5car.png";
+import car6 from "@/app/public/faranchies/carpic/6car.png";
+import car7 from "@/app/public/faranchies/carpic/7car.png";
+import bike from "@/app/public/faranchies/carpic/bike.png";
 import MercedesIcon from "@/app/public/faranchies/MercedesIcon";
 import LandRoverIcon from "@/app/public/faranchies/LandRoverIcon";
 import PorscheIcon from "@/app/public/faranchies/PorscheIcon";
-import StaticImageData from "next/image";
+import MaseratiIcon from "@/app/public/faranchies/MaseratiIcon";
+import MahindraIcon from "@/app/public/faranchies/MahindraIcon";
+import KiaIcon from "@/app/public/faranchies/KiaIcon";
+import DucatiIcon from "@/app/public/faranchies/DucatiIcon";
+import TataIcon from "@/app/public/faranchies/TataIcon";
+import BusinessSectors from "./BusinessSectors";
+
 interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
@@ -57,8 +75,61 @@ const slides: SlideData[] = [
     },
     LogoComponent: LandRoverIcon,
   },
-
-  // Add more slides for other brands
+  {
+    id: 4,
+    backgroundImage: bg4,
+    carImage: car4,
+    brand: "maserati",
+    bgColor: {
+      from: "rgba(223, 172, 79, 0.56)",
+      to: "#0F1F2A",
+    },
+    LogoComponent: MercedesIcon,
+  },
+  {
+    id: 5,
+    backgroundImage: bg4,
+    carImage: car5,
+    brand: "maserati",
+    bgColor: {
+      from: "rgba(223, 172, 79, 0.56)",
+      to: "#0F1F2A",
+    },
+    LogoComponent: KiaIcon,
+  },
+  {
+    id: 6,
+    backgroundImage: bg6,
+    carImage: car6,
+    brand: "maserati",
+    bgColor: {
+      from: "rgba(223, 172, 79, 0.56)",
+      to: "#0F1F2A",
+    },
+    LogoComponent: MercedesIcon,
+  },
+  {
+    id: 7,
+    backgroundImage: bg7,
+    carImage: car7,
+    brand: "maserati",
+    bgColor: {
+      from: "rgba(223, 172, 79, 0.56)",
+      to: "#0F1F2A",
+    },
+    LogoComponent: MahindraIcon,
+  },
+  {
+    id: 8,
+    backgroundImage: bikebg,
+    carImage: bike,
+    brand: "maserati",
+    bgColor: {
+      from: "rgba(223, 172, 79, 0.56)",
+      to: "#0F1F2A",
+    },
+    LogoComponent: DucatiIcon,
+  },
 ];
 
 const FranchiseSlider = () => {
@@ -81,7 +152,7 @@ const FranchiseSlider = () => {
           linear-gradient(328.88deg, rgba(0, 0, 0, 09) 1.12%, rgba(65, 148, 216, 0.6) 82.2%)
         `,
       }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.01}}
     >
       {/* Car section */}
       <div className="relative w-full h-screen flex flex-col lg:flex-row">
@@ -94,7 +165,7 @@ const FranchiseSlider = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="absolute left-0 lg:left-[20%] w-full lg:w-[55%] h-full"
+              className="absolute left-0 lg:left-[20%] w-full lg:w-[55%] h-[90%]"
             >
               <Image
                 src={slides[currentSlide].backgroundImage}
@@ -116,7 +187,7 @@ const FranchiseSlider = () => {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="absolute bottom-0 lg:bottom-[-5%] w-full lg:w-screen h-[40vh] lg:h-[70vh] z-[1002] pointer-events-none"
+              className="absolute bottom-0 lg:bottom-[-10%] w-full lg:w-screen h-[40vh] lg:h-[70vh] z-[1002] pointer-events-none"
             >
               <Image
                 src={slides[currentSlide].carImage}
@@ -141,7 +212,7 @@ const FranchiseSlider = () => {
           </h2>
 
           {/* Navigation and logos */}
-          <div className="flex flex-col items-center lg:items-start justify-start gap-6 lg:gap-8 h-auto lg:h-[16rem]">
+          <div className="flex flex-col items-center lg:items-start justify-start gap-6 lg:gap-8 h-auto lg:h-[16rem] ">
             {/* Up arrow */}
             <button
               onClick={() =>
@@ -149,7 +220,7 @@ const FranchiseSlider = () => {
                   (prev) => (prev - 1 + slides.length) % slides.length
                 )
               }
-              className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[3.5rem]"
+              className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
             >
               <svg
                 className="w-8 lg:w-12 h-8 lg:h-12"
@@ -169,10 +240,10 @@ const FranchiseSlider = () => {
             {/* Brand logos */}
             <div className="w-full flex justify-center lg:justify-start overflow-hidden">
               <motion.div
-                className="flex items-center gap-8 lg:gap-20"
+                className="flex items-center gap-8 lg:gap-27"
                 animate={{
                   x: `-${
-                    currentSlide * (window.innerWidth < 1024 ? 120 : 260)
+                    currentSlide * (window.innerWidth < 1024 ? 12 : 240)
                   }px`,
                   translateX: window.innerWidth < 1024 ? "40%" : "0%",
                 }}
@@ -203,7 +274,7 @@ const FranchiseSlider = () => {
               onClick={() =>
                 setCurrentSlide((prev) => (prev + 1) % slides.length)
               }
-              className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[3.5rem]"
+              className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
             >
               <svg
                 className="w-8 lg:w-12 h-8 lg:h-12"
@@ -239,60 +310,7 @@ const FranchiseSlider = () => {
         </p>
       </div>
 
-      {/* Business sectors section */}
-      <div className="w-full py-10 lg:py-16 px-6 lg:px-24">
-        <h2 className="text-white text-3xl lg:text-4xl mb-10 lg:mb-16 text-center">
-          Explore Our Other Business Sectors
-        </h2>
-        <div className="flex justify-center items-center gap-8 lg:gap-20">
-          <button className="text-white hidden lg:block">
-            <svg
-              className="w-6 lg:w-8 h-6 lg:h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-
-          <div className="flex gap-8 lg:gap-20 overflow-x-auto px-4 lg:px-0">
-            {["Finance", "Manufacturing", "Education"].map((sector) => (
-              <div key={sector} className="text-center flex-shrink-0">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 mb-3 lg:mb-4 mx-auto">
-                  <img
-                    src={`/icons/${sector.toLowerCase()}.svg`}
-                    alt={sector}
-                    className="w-full h-full"
-                  />
-                </div>
-                <p className="text-white text-lg lg:text-xl">{sector}</p>
-              </div>
-            ))}
-          </div>
-
-          <button className="text-white hidden lg:block">
-            <svg
-              className="w-6 lg:w-8 h-6 lg:h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+      <BusinessSectors />
 
       {/* Logo section */}
       <div className="w-full flex justify-center py-12 lg:py-20">
