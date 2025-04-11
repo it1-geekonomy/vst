@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import bg1 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (1).png";
@@ -134,6 +134,19 @@ const slides: SlideData[] = [
 
 const FranchiseSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [screenWidth, setScreenWidth] = useState<number | null>(null);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+  
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
+
 
   const goToSlide = (brand: SlideData["brand"]) => {
     const index = slides.findIndex((slide) => slide.brand === brand);
@@ -239,19 +252,20 @@ const FranchiseSlider = () => {
 
             {/* Brand logos */}
             <div className="w-full flex justify-center lg:justify-start overflow-hidden">
-              <motion.div
-                className="flex items-center gap-8 lg:gap-27"
-                animate={{
-                  x: `-${
-                    currentSlide * (window.innerWidth < 1024 ? 12 : 240)
-                  }px`,
-                  translateX: window.innerWidth < 1024 ? "40%" : "0%",
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                }}
-              >
+            <motion.div
+  className="flex items-center gap-8 lg:gap-27"
+  animate={{
+    x: `-${
+      currentSlide * ((screenWidth ?? 1200) < 1024 ? 12 : 240)
+    }px`,
+    translateX: (screenWidth ?? 1200) < 1024 ? "40%" : "0%",
+  }}
+  transition={{
+    duration: 0.5,
+    ease: "easeInOut",
+  }}
+>
+
                 {slides.map((slide, index) => (
                   <motion.button
                     key={slide.brand}
