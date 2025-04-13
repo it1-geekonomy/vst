@@ -149,14 +149,14 @@ export default function Navbar() {
               </button>
               <div className="pl-4 hidden">
                 <Link
-                  href="/business-1"
+                  href="/automotive-franchises"
                   className="block px-3 py-2 text-base text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Automotive Franchises
                 </Link>
                 <Link
-                  href="/business-2"
+                  href="/education"
                   className="block px-3 py-2 text-base text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

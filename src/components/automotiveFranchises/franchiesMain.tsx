@@ -217,7 +217,7 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Right section */}
-        <div className="relative w-full lg:w-[30%] px-6 lg:px-0 flex flex-col justify-between py-8 lg:py-20">
+        <div className="relative w-full lg:w-[30%] px-6 lg:px-0 flex flex-col justify-end py-8 lg:py-20">
           {/* Title */}
           <h2 className="text-white text-4xl lg:text-6xl font-light text-center lg:text-left">
             Our
