@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Scurve from '../education/Frame 1973341729.png';
-import img1 from '../public/images/LifeAtVst/Image1.png';
-import img2 from '../public/images/LifeAtVst/Image2.png';
-import img3 from '../public/images/LifeAtVst/Image3.png';
+import img1 from '../public/education/Frame 6.jpg';
+import img2 from '../public/education/Frame 7.jpg';
+import img3 from '../public/education/Frame 8.jpg';
+import img4 from '../public/education/Frame 9.jpg';
+import img5 from '../public/education/Frame 10.jpg';
 import { StaticImageData } from 'next/image';
 import EducationLogo from '../public/logos/educationlogo';
 import Logo from '../public/logos/Logo';
@@ -25,10 +27,10 @@ export default function EducationPage() {
     { id: 1, src: img1, alt: 'Teacher interacting with students', height: '100%' },
     { id: 2, src: img2, alt: 'Student learning', height: '95%' },
     { id: 3, src: img3, alt: 'School building', height: '93%' },
-    { id: 4, src: img1, alt: 'Robotics project', height: '94%' },
-    { id: 5, src: img2, alt: 'Students on stairs', height: '97%' },
-    { id: 6, src: img3, alt: 'Students in uniform', height: '100%' },
-    { id: 7, src: img1, alt: 'Students outdoors', height: '88%' },
+    { id: 4, src: img4, alt: 'Robotics project', height: '94%' },
+    { id: 5, src: img5, alt: 'Students on stairs', height: '97%' },
+    // { id: 6, src: img2, alt: 'Students in uniform', height: '100%' },
+    // { id: 7, src: img1, alt: 'Students outdoors', height: '88%' },
   ];
 
   // Function to navigate to the next image
