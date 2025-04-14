@@ -3,9 +3,9 @@ import React from "react";
 const LandRoverIcon = () => {
   return (
     <svg
-      width="84"
-      height="45"
-      viewBox="0 0 84 45"
+      width="200"
+      height="75"
+      viewBox="0 0 200 75"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -13,8 +13,8 @@ const LandRoverIcon = () => {
       <rect
         x="0.257812"
         y="0.5"
-        width="83"
-        height="44"
+        width="200"
+        height="75"
         fill="url(#pattern0_4508_5237)"
       />
       <defs>

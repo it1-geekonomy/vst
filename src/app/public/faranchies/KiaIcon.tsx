@@ -3,9 +3,9 @@ import React from "react";
 const KiaIcon = () => {
   return (
     <svg
-      width="71"
-      height="20"
-      viewBox="0 0 71 20"
+      width="200"
+      height="65"
+      viewBox="0 0 210 65"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -13,8 +13,8 @@ const KiaIcon = () => {
       <rect
         x="0.466797"
         y="0.5"
-        width="70.533"
-        height="19"
+        width="200"
+        height="65"
         fill="url(#pattern0_4756_4911)"
       />
       <defs>
