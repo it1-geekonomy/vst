@@ -85,7 +85,7 @@ const slides: SlideData[] = [
       from: "rgba(223, 172, 79, 0.56)",
       to: "#0F1F2A",
     },
-    LogoComponent: MercedesIcon,
+    LogoComponent: MaseratiIcon,
   },
   {
     id: 5,
@@ -107,7 +107,7 @@ const slides: SlideData[] = [
       from: "rgba(223, 172, 79, 0.56)",
       to: "#0F1F2A",
     },
-    LogoComponent: MercedesIcon,
+    LogoComponent: TataIcon,
   },
   {
     id: 7,
@@ -147,8 +147,6 @@ const FranchiseSlider = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   
-
-
   const goToSlide = (brand: SlideData["brand"]) => {
     const index = slides.findIndex((slide) => slide.brand === brand);
     if (index !== -1) {
@@ -157,107 +155,116 @@ const FranchiseSlider = () => {
   };
 
   return (
-    <motion.div
-      className="relative w-full min-h-screen overflow-x-hidden"
-      initial={false}
-      animate={{
-        background: `
-          radial-gradient(33.31% 35.31% at 91.72% 2.91%, ${slides[currentSlide].bgColor.from} 0%, transparent 100%),
-          linear-gradient(328.88deg, rgba(0, 0, 0, 09) 1.12%, rgba(65, 148, 216, 0.6) 82.2%)
-        `,
-      }}
-      transition={{ duration: 0.01}}
-    >
-      {/* Car section */}
-      <div className="relative w-full h-screen flex flex-col lg:flex-row">
-        {/* Left section with background and car */}
-        <div className="relative w-full lg:w-[60%] h-[60vh] lg:h-full">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`bg-${currentSlide}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="absolute left-0 lg:left-[20%] w-full lg:w-[55%] h-[90%]"
-            >
-              <Image
-                src={slides[currentSlide].backgroundImage}
-                alt="Background"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 55vw"
-              />
-            </motion.div>
+    <div className="relative w-full min-h-screen">
+      {/* Fixed background gradient */}
+      <div 
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(33.31% 35.31% at 91.72% 2.91%, ${slides[currentSlide].bgColor.from} 0%, transparent 100%),
+            linear-gradient(348.88deg, rgba(0, 0, 0, 09) 2.12%, rgba(65, 148, 216, 0.6) 82.2%)
+          `
+        }}
+      />
 
-            {/* Purple accent bars - hidden on mobile */}
-            <div className="hidden lg:block absolute top-0 right-0 w-[1.5rem] h-[30%] bg-[#8B5CF6] rounded-full" />
-            <div className="hidden lg:block absolute top-0 right-[40px] w-[1.5rem] h-[40%] bg-[#8B5CF6] rounded-full" />
-
-            <motion.div
-              key={`car-${currentSlide}`}
-              initial={{ x: 300, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -300, opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="absolute bottom-0 lg:bottom-[-10%] w-full lg:w-screen h-[40vh] lg:h-[70vh] z-[1002] pointer-events-none"
-            >
-              <Image
-                src={slides[currentSlide].carImage}
-                alt="Luxury Car"
-                width={2000}
-                height={700}
-                className="w-full lg:w-[60%] h-full object-contain scale-75 lg:scale-85 lg:left-[10%]"
-                priority
-                sizes="(max-width: 768px) 100vw, 60vw"
-              />
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Right section */}
-        <div className="relative w-full lg:w-[40%] px-6 lg:px-0 flex flex-col justify-end py-8 lg:py-20">
-          {/* Title */}
-          <h2 className="text-white text-4xl lg:text-6xl font-light text-center lg:text-left">
-            Our
-            <br />
-            Franchises
-          </h2>
-
-          {/* Navigation and logos */}
-          <div className="flex flex-col items-center lg:items-start justify-start gap-6 lg:gap-8 h-auto lg:h-[16rem] w-[100%] ">
-            {/* Up arrow */}
-            <button
-              onClick={() =>
-                setCurrentSlide(
-                  (prev) => (prev - 1 + slides.length) % slides.length
-                )
-              }
-              className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
-            >
-              <svg
-                className="w-8 lg:w-12 h-8 lg:h-12"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+      {/* Content */}
+      <motion.div
+        className="relative w-full min-h-screen overflow-x-hidden z-10"
+        initial={false}
+        transition={{ duration: 0.01 }}
+      >
+        {/* Car section */}
+        <div className="relative w-full h-screen flex flex-col lg:flex-row">
+          {/* Left section with background and car */}
+          <div className="relative w-full lg:w-[55%] h-[60vh] lg:h-full">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`bg-${currentSlide}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="absolute left-0 lg:left-[20%] w-full lg:w-[55%] h-[90%]"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 15l7-7 7 7"
+                <Image
+                  src={slides[currentSlide].backgroundImage}
+                  alt="Background"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 55vw"
                 />
-              </svg>
-            </button>
+              </motion.div>
 
-            {/* Brand logos */}
-            <div className="w-full flex justify-center lg:justify-start overflow-hidden">
-            <motion.div
-  className="flex items-center gap-8 lg:gap-15"
+              {/* Purple accent bars - hidden on mobile */}
+              <div className="hidden lg:block absolute top-0 right-0 w-[1.5rem] h-[30%] bg-[#8B5CF6] rounded-full" />
+              <div className="hidden lg:block absolute top-0 right-[40px] w-[1.5rem] h-[40%] bg-[#8B5CF6] rounded-full" />
+
+              <motion.div
+                key={`car-${currentSlide}`}
+                initial={{ x: 300, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -300, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="absolute bottom-0 lg:bottom-[-10%] w-full lg:w-screen h-[40vh] lg:h-[70vh] z-[1002] pointer-events-none"
+              >
+                <Image
+                  src={slides[currentSlide].carImage}
+                  alt="Luxury Car"
+                  width={2000}
+                  height={700}
+                  className="w-full lg:w-[60%] h-full object-contain scale-75 lg:scale-85 lg:left-[10%]"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right section */}
+          <div className="relative w-full lg:w-[45%] px-6 lg:px-0 flex flex-col justify-between py-8 lg:py-20">
+            {/* Title */}
+            <div className="flex-1 flex items-center justify-center">
+              <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-4xl lg:text-[90px] tracking-[0.2em] text-center">
+                Our
+                <br />
+                Franchises
+              </h2>
+            </div>
+
+            {/* Navigation and logos */}
+            <div className="flex flex-col items-center lg:items-start justify-start gap-6 lg:gap-8 h-auto lg:h-[16rem] w-[100%] ">
+              {/* Up arrow */}
+              <button
+                onClick={() =>
+                  setCurrentSlide(
+                    (prev) => (prev - 1 + slides.length) % slides.length
+                  )
+                }
+                className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
+              >
+                <svg
+                  className="w-8 lg:w-12 h-8 lg:h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 15l7-7 7 7"
+                  />
+                </svg>
+              </button>
+
+              {/* Brand logos */}
+              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-[3rem] pl-[2rem] lg:pl-[3rem]">
+              <motion.div
+  className="flex items-center gap-10 lg:gap-16"
   animate={{
     x: `-${
-      currentSlide * ((screenWidth ?? 1200) < 1024 ? 233 : 260)
+      currentSlide * ((screenWidth ?? 1200) < 1024 ? 233 : 267)
     }px`,
     translateX: (screenWidth ?? 1200) < 1024 ? "43%" : "-1%",
   }}
@@ -277,61 +284,68 @@ const FranchiseSlider = () => {
                         : "opacity-50 hover:opacity-75"
                     }`}
                     whileHover={{ scale: 1.05 }}
+                    animate={{ 
+                      scale: currentSlide === index ? 1.10 : 0.80
+                    }}
+                    transition={{
+                      scale: { duration: 0.3 }
+                    }}
                   >
                     <slide.LogoComponent />
                   </motion.button>
                 ))}
               </motion.div>
-            </div>
+              </div>
 
-            {/* Down arrow */}
-            <button
-              onClick={() =>
-                setCurrentSlide((prev) => (prev + 1) % slides.length)
-              }
-              className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
-            >
-              <svg
-                className="w-8 lg:w-12 h-8 lg:h-12"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              {/* Down arrow */}
+              <button
+                onClick={() =>
+                  setCurrentSlide((prev) => (prev + 1) % slides.length)
+                }
+                className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
+                <svg
+                  className="w-8 lg:w-12 h-8 lg:h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Description section */}
-      <div className="w-full py-8 lg:py-12 px-6 lg:px-24 flex justify-center">
-        <p
-          className="text-white text-base lg:text-[24px] text-center lg:text-justify 
-          font-normal leading-[177%] tracking-[0%] max-w-6xl
-          font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
-        >
-          The primary showroom is located in central Bangalore on Sankey road.
-          The second showroom along with an adjoining workshop is located in
-          Whitefield, an affluent neighborhood on the eastern side of the city.
-          Since inception, the VST Porsche franchise has done exceptionally well
-          in expanding the market for this niche premium segment in the state,
-          winning the bronze performance award by Porsche Middle East for 2023.
-        </p>
-      </div>
+        {/* Description section */}
+        <div className="w-full py-8 lg:py-12 px-6 lg:px-24 flex justify-center">
+          <p
+            className="text-white text-base lg:text-[24px] text-center lg:text-justify 
+            font-normal leading-[177%] tracking-[0%] max-w-6xl
+            font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
+          >
+            The primary showroom is located in central Bangalore on Sankey road.
+            The second showroom along with an adjoining workshop is located in
+            Whitefield, an affluent neighborhood on the eastern side of the city.
+            Since inception, the VST Porsche franchise has done exceptionally well
+            in expanding the market for this niche premium segment in the state,
+            winning the bronze performance award by Porsche Middle East for 2023.
+          </p>
+        </div>
 
-      <BusinessSectors />
+        <BusinessSectors />
 
-      {/* Logo section */}
-      <div className="w-full flex justify-center py-12 lg:py-20">
-        <img src="/logo.svg" alt="Company Logo" className="w-24 lg:w-32" />
-      </div>
-    </motion.div>
+        {/* Logo section */}
+        <div className="w-full flex justify-center py-12 lg:py-20">
+          <img src="/logo.svg" alt="Company Logo" className="w-24 lg:w-32" />
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

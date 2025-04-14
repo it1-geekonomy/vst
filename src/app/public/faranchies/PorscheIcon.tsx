@@ -3,9 +3,9 @@ import React from "react";
 const PorscheIcon = () => {
   return (
     <svg
-      width="250"
+      width="200"
       height="93"
-      viewBox="0 0 250 93"
+      viewBox="0 0 200 93"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -13,7 +13,7 @@ const PorscheIcon = () => {
       <rect
         x="5"
         y="37.2217"
-        width="240"
+        width="200"
         height="18.8817"
         fill="url(#pattern0_5582_9692)"
       />
