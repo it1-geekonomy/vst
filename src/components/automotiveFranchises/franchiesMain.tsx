@@ -174,9 +174,9 @@ const FranchiseSlider = () => {
         transition={{ duration: 0.01 }}
       >
         {/* Car section */}
-        <div className="relative w-full h-screen flex flex-col lg:flex-row">
+        <div className="relative w-full h-[100vh] flex flex-col lg:flex-row">
           {/* Left section with background and car */}
-          <div className="relative w-full lg:w-[55%] h-[60vh] lg:h-full">
+          <div className="relative w-full lg:w-[55%] h-[45vh] lg:h-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`bg-${currentSlide}`}
@@ -222,10 +222,10 @@ const FranchiseSlider = () => {
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-6 lg:px-0 flex flex-col justify-between py-8 lg:py-20">
+          <div className="relative w-full lg:w-[45%] px-6 lg:px-0 flex flex-col justify-between py-4 lg:py-20">
             {/* Title */}
             <div className="flex-1 flex items-center justify-center">
-              <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-4xl lg:text-[90px] tracking-[0.2em] text-center">
+              <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-3xl lg:text-[90px] tracking-[0.2em] text-center">
                 Our
                 <br />
                 Franchises
@@ -233,7 +233,7 @@ const FranchiseSlider = () => {
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-6 lg:gap-8 h-auto lg:h-[16rem] w-[100%] ">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-3 lg:gap-8 h-auto lg:h-[16rem] w-[100%]">
               {/* Up arrow */}
               <button
                 onClick={() =>
@@ -241,10 +241,10 @@ const FranchiseSlider = () => {
                     (prev) => (prev - 1 + slides.length) % slides.length
                   )
                 }
-                className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
+                className="text-white hover:text-purple-400 transition-colors w-10 lg:w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
               >
                 <svg
-                  className="w-8 lg:w-12 h-8 lg:h-12"
+                  className="w-6 lg:w-12 h-6 lg:h-12"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -259,14 +259,14 @@ const FranchiseSlider = () => {
               </button>
 
               {/* Brand logos */}
-              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-[3rem] pl-[2rem] lg:pl-[3rem]">
+              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-2 lg:py-[3rem] pl-[1rem] lg:pl-[3rem]">
               <motion.div
-  className="flex items-center gap-10 lg:gap-16"
+  className="flex items-center gap-5 lg:gap-16"
   animate={{
     x: `-${
-      currentSlide * ((screenWidth ?? 1200) < 1024 ? 233 : 267)
+      currentSlide * ((screenWidth ?? 1200) < 1024 ? 215 : 267)
     }px`,
-    translateX: (screenWidth ?? 1200) < 1024 ? "43%" : "-1%",
+    translateX: (screenWidth ?? 1200) < 1024 ? "44%" : "-1%",
   }}
   transition={{
     duration: 0.5,
@@ -302,10 +302,10 @@ const FranchiseSlider = () => {
                 onClick={() =>
                   setCurrentSlide((prev) => (prev + 1) % slides.length)
                 }
-                className="text-white hover:text-purple-400 transition-colors w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
+                className="text-white hover:text-purple-400 transition-colors w-10 lg:w-12 flex justify-center ml-[1rem] lg:ml-[5.5rem]"
               >
                 <svg
-                  className="w-8 lg:w-12 h-8 lg:h-12"
+                  className="w-6 lg:w-12 h-6 lg:h-12"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -323,7 +323,7 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Description section */}
-        <div className="w-full py-8 lg:py-12 px-6 lg:px-24 flex justify-center">
+        <div className="w-full py-6 lg:py-12 px-6 lg:px-24 flex justify-center">
           <p
             className="text-white text-base lg:text-[24px] text-center lg:text-justify 
             font-normal leading-[177%] tracking-[0%] max-w-6xl
