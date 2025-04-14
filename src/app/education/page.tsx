@@ -52,7 +52,7 @@ export default function EducationPage() {
           {/* Logo placeholder - user will add later */}
           <div className="w-full h-full flex justify-center items-center">
             <EducationLogo className="w-full h-full" />
-            <Logo className="w-full h-full" />
+            
           </div>
         </div>
       </section>

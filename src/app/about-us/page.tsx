@@ -147,9 +147,9 @@ function AboutUsPage() {
       {/* Layer 3: Content */}
       <div className="relative z-10 p-4 md:p-8 pt-24 md:pt-32"> {/* Increased top padding */}
         {/* Timeline component */}
-        <div className="flex flex-col lg:flex-row w-full min-h-[600px] px-4 sm:px-6 md:px-8">
+        <div className="flex flex-col lg:flex-row w-full  px-4 sm:px-6 md:px-8">
           {/* Timeline Years */}
-          <div className="w-full lg:w-1/4 flex flex-row lg:flex-col items-center justify-between lg:justify-center h-[100px] lg:h-[600px] relative">
+          <div className="w-full lg:w-1/4 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative">
             {/* Up arrow - Moves timeline up (previous year) */}
             <button
               onClick={() => {
@@ -157,24 +157,33 @@ function AboutUsPage() {
                 const prevIndex = (currentIndex - 1 + timelineData.length) % timelineData.length
                 handleYearClick(timelineData[prevIndex].year)
               }}
-              className="text-gray-400 hover:text-yellow-300 transition-colors transform rotate-90 lg:rotate-0"
+              className="text-gray-400 hover:text-yellow-300 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20"
+                className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 hidden lg:block"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
               </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-12 sm:h-16 sm:w-16 lg:hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
             </button>
 
             {/* Timeline Years - 3D circular carousel effect without axis */}
-            <div className="relative h-[240px] w-full flex items-center justify-center" 
+            <div className="relative h-[240px] w-full flex items-center justify-center lg:block" 
                 style={{ perspective: "1000px" }}>
               {/* 3D carousel container */}
-              <div className="w-full h-full relative" style={{ transformStyle: "preserve-3d" }}>
+              <div className="w-full h-full relative flex flex-row lg:block" style={{ transformStyle: "preserve-3d" }}>
                 {timelineData.map((item) => {
                   const position = getPosition(item.year);
                   const isSelected = selectedYear === item.year;
@@ -207,15 +216,15 @@ function AboutUsPage() {
                     <button
                       key={item.year}
                       onClick={() => handleYearClick(item.year)}
-                      className="absolute left-1/2 top-1/2 text-3xl sm:text-4xl lg:text-5xl font-bold"
+                      className="absolute lg:absolute left-1/2 top-1/2 text-3xl sm:text-4xl lg:text-5xl font-bold"
                       style={{
                         transform: `translate(-50%, -50%) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${scale})`,
                         opacity: opacity,
-                        color: isSelected ? "#FCD34D" : "#373737", // Bright gold for selected, darker gray for unselected
+                        color: isSelected ? "#FCD34D" : "#373737",
                         filter: isSelected ? "none" : "blur(1px)",
                         transformStyle: "preserve-3d",
                         backfaceVisibility: "hidden",
-                        transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)" // Elastic ease-out for more engaging motion
+                        transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"
                       }}
                     >
                       {item.year}
@@ -232,22 +241,31 @@ function AboutUsPage() {
                 const nextIndex = (currentIndex + 1) % timelineData.length
                 handleYearClick(timelineData[nextIndex].year)
               }}
-              className="text-gray-400 hover:text-yellow-300 transition-colors transform rotate-90 lg:rotate-0"
+              className="text-gray-400 hover:text-yellow-300 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20"
+                className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 hidden lg:block"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-12 sm:h-16 sm:w-16 lg:hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </div>
 
           {/* Timeline Images */}
-          <div className="w-full lg:w-3/4 flex items-center justify-center mt-8 lg:mt-0">
+          <div className="w-full lg:w-3/4 flex items-center justify-center lg:mt-0">
             <div className="flex items-center justify-center">
               <div className="flex flex-row items-center justify-center
                 -space-x-4 sm:-space-x-8 md:-space-x-12 lg:-space-x-16">
@@ -320,7 +338,7 @@ function AboutUsPage() {
             <h2 className="text-lg md:text-xl mb-2 text-white">About VST Group</h2>
             <div
               style={{
-                fontFamily: "'FONTSPRING DEMO - Roc Grotesk', sans-serif",
+                fontFamily: "roc-grotesk",
                 fontWeight: 400,
                 fontSize: "16px",
                 lineHeight: "120%",
@@ -332,7 +350,8 @@ function AboutUsPage() {
                 className="mb-4 text-justify hyphens-auto"
                 style={{
                   wordSpacing: "0.1em",
-                  fontFamily: "FONTSPRING DEMO - Roc Grotesk",
+                  fontFamily:  "roc-grotesk",
+                  fontWeight: 400,
                 }}
               >
                 Established in 1911, VST Group is a distinguished 11 year old enterprise headquartered in Bangalore.
@@ -341,7 +360,8 @@ function AboutUsPage() {
                 className="mb-4 text-justify hyphens-auto"
                 style={{
                   wordSpacing: "0.1em",
-                  fontFamily: "FONTSPRING DEMO - Roc Grotesk",
+                  fontFamily:  "roc-grotesk",
+                  fontWeight: 400,
                 }}
               >
                 It encompasses a wide array of luxury and mid variant car franchises, like Porsche, Maserati, Mercedes Benz, Jaguar, Land Rover, Ducati, Tata, Kia, Volkswagen, BYD Mahindra, Honda Scooters alongside a prominent manufacturing sector and significant interests in real estate, financial services and education industry. Under the leadership of its fourth generation, the Group has a turnover of Rs. 5,000 crores 570 million with sustainable growth, excellence, and innovation.
@@ -350,7 +370,8 @@ function AboutUsPage() {
                 className="mb-4 text-justify hyphens-auto"
                 style={{
                   wordSpacing: "0.1em",
-                  fontFamily: "FONTSPRING DEMO - Roc Grotesk",
+                  fontFamily:  "roc-grotesk",
+                  fontWeight: 400,
                 }}
               >
                 VST Tractors & Tillers, a key division, is renowned for its innovative and reliable agricultural machinery, supporting farmers with high quality equipment to boost productivity and modernize farming techniques. Gove Finance Limited, the leader in Auto Finance services for more than 30 years, is a dynamic nonbanking finance company led by a team of specialists with proven track record. It finance cars, commercial vehicles, construction equipments, used vehicles, tractors and buses. Meanwhile, SKEI stands out for its commitment to holistic education, offering a range of academic and extracurricular programs in a supportive environment, enhanced by state of the art facilities and a dedicated faculty to foster intellectual and personal growth.
