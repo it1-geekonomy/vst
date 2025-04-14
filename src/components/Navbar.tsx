@@ -193,6 +193,13 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
+            <Link
+              href="/about-us"
+              className="block px-3 py-2 text-lg font-medium text-white hover:bg-gray-800 rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About Us
+            </Link>
           </div>
         </div>
       )}
