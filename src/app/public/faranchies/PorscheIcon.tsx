@@ -3,34 +3,34 @@ import React from "react";
 const PorscheIcon = () => {
   return (
     <svg
-      width="221"
-      height="16"
-      viewBox="0 0 221 16"
+      width="250"
+      height="93"
+      viewBox="0 0 250 93"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <rect
-        x="0.540039"
-        y="0.278809"
-        width="220"
-        height="15.4423"
-        fill="url(#pattern0_4756_5137)"
+        x="5"
+        y="37.2217"
+        width="240"
+        height="18.8817"
+        fill="url(#pattern0_5582_9692)"
       />
       <defs>
         <pattern
-          id="pattern0_4756_5137"
+          id="pattern0_5582_9692"
           patternContentUnits="objectBoundingBox"
           width="1"
           height="1"
         >
           <use
-            xlinkHref="#image0_4756_5137"
+            xlinkHref="#image0_5582_9692"
             transform="scale(0.000961538 0.0136986)"
           />
         </pattern>
         <image
-          id="image0_4756_5137"
+          id="image0_5582_9692"
           width="1040"
           height="73"
           preserveAspectRatio="none"

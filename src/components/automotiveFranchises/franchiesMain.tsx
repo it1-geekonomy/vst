@@ -217,7 +217,7 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Right section */}
-        <div className="relative w-full lg:w-[30%] px-6 lg:px-0 flex flex-col justify-end py-8 lg:py-20">
+        <div className="relative w-full lg:w-[40%] px-6 lg:px-0 flex flex-col justify-end py-8 lg:py-20">
           {/* Title */}
           <h2 className="text-white text-4xl lg:text-6xl font-light text-center lg:text-left">
             Our
@@ -226,7 +226,7 @@ const FranchiseSlider = () => {
           </h2>
 
           {/* Navigation and logos */}
-          <div className="flex flex-col items-center lg:items-start justify-start gap-6 lg:gap-8 h-auto lg:h-[16rem] ">
+          <div className="flex flex-col items-center lg:items-start justify-start gap-6 lg:gap-8 h-auto lg:h-[16rem] w-[100%] ">
             {/* Up arrow */}
             <button
               onClick={() =>
@@ -254,12 +254,12 @@ const FranchiseSlider = () => {
             {/* Brand logos */}
             <div className="w-full flex justify-center lg:justify-start overflow-hidden">
             <motion.div
-  className="flex items-center gap-8 lg:gap-27"
+  className="flex items-center gap-8 lg:gap-15"
   animate={{
     x: `-${
-      currentSlide * ((screenWidth ?? 1200) < 1024 ? 12 : 240)
+      currentSlide * ((screenWidth ?? 1200) < 1024 ? 233 : 260)
     }px`,
-    translateX: (screenWidth ?? 1200) < 1024 ? "40%" : "0%",
+    translateX: (screenWidth ?? 1200) < 1024 ? "43%" : "-1%",
   }}
   transition={{
     duration: 0.5,

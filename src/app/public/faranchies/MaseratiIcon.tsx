@@ -3,14 +3,15 @@ import React from "react";
 const MaseratiIcon = () => {
   return (
     <svg
-      width="120"
-      height="58"
-      viewBox="0 0 120 58"
+     width="200"
+        height="75"
+      viewBox="0 0 200 75"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect width="120" height="58" fill="url(#pattern0_4756_4440)" />
+      <rect width="200"
+        height="75" fill="url(#pattern0_4756_4440)" />
       <defs>
         <pattern
           id="pattern0_4756_4440"

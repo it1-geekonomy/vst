@@ -3,9 +3,9 @@ import React from "react";
 const DucatiIcon = () => {
   return (
     <svg
-      width="67"
-      height="14"
-      viewBox="0 0 67 14"
+      width="200"
+      height="35"
+      viewBox="0 0 200 35"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -13,8 +13,8 @@ const DucatiIcon = () => {
       <rect
         x="0.467041"
         y="0.318726"
-        width="66"
-        height="13.3625"
+        width="200"
+        height="35"
         fill="url(#pattern0_4756_4797)"
       />
       <defs>

@@ -3,17 +3,17 @@ import React from "react";
 const MercedesIcon = () => {
   return (
     <svg
-      width="147"
-      height="80"
-      viewBox="0 0 147 80"
+      width="200"
+      height="75"
+      viewBox="0 0 200 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <rect
         y="0.77832"
-        width="147"
-        height="78.4434"
+        width="200"
+        height="76"
         fill="url(#pattern0_4756_4438)"
       />
       <defs>
