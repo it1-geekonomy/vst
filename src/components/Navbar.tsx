@@ -160,7 +160,7 @@ export default function Navbar() {
                   className="block px-3 py-2 text-base text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Business 2
+                  education
                 </Link>
                 <Link
                   href="/business-3"
