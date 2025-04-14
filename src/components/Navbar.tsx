@@ -119,6 +119,12 @@ export default function Navbar() {
               >
                 Contact Us
               </Link>
+              <Link
+                href="/about-us"
+                className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
+              >
+                About Us
+              </Link>
             </div>
           </div>
         </div>
