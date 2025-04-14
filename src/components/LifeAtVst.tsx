@@ -47,7 +47,7 @@ const LifeAtVst = () => {
   return (
     <div className="relative w-full h-[400px] bg-black text-white overflow-hidden">
       {/* Fixed Title Section - Centered relative to content area */}
-      <div className="absolute top-10 right-[-30.5%] transform -translate-x-1/2 z-40 text-center md:right-[-30.5%] sm:right-[-20%] xs:right-[-10%] right-0">
+      <div className="absolute top-10  transform -translate-x-1/2 z-40 text-center md:right-[-8.5%] sm:right-[-20%] xs:right-[-10%] right-[-30]">
         <h1 className="text-4xl md:text-6xl mb-2 font-['Roc_Grotesk'] tracking-[0.2em] uppercase">
           Life At VST
         </h1>

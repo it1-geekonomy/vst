@@ -98,32 +98,54 @@ function AboutUsPage() {
   };
 
   return (
-    <div className="min-h-screen text-white relative bg-black">
-      {/* Update the gradient overlay with blur effect */}
+    <div className="min-h-screen text-white relative" style={{ background: "#000000" }}>
+      {/* Layer 1: Top gradient with blur effect AND fade-in mask */}
       <div
-        className="absolute top-0 left-0 right-0 h-[800px] md:h-[1000px]"
+        className="absolute left-0 right-0 w-full" // Positioned below navbar
         style={{
-          background:
-            "linear-gradient(132.98deg, rgba(47, 129, 174, 0.6) 28.43%, rgba(92, 62, 188, 0.6) 110.85%)",
+          top: '4rem', // Starts 64px (h-16) from the top (adjust if needed)
+          height: 'calc(60% - 4rem)', // Extend height slightly to ensure fade is covered
+          background: "linear-gradient(132.98deg, rgba(47, 129, 174, 0.6) 28.43%, rgba(92, 62, 188, 0.6) 110.85%)",
           pointerEvents: "none",
           backdropFilter: "blur(720px)",
-          WebkitBackdropFilter: "blur(720px)", // For Safari support
-          maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
+          WebkitBackdropFilter: "blur(720px)",
+          opacity: 0.8,
+          mixBlendMode: "screen", // Keep screen blend mode for color interaction
+          // Mask to fade IN from the top edge of *this div*
+          maskImage: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%)", // Fade over 20% of this div's height
+          WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%)",
+          zIndex: 1 // Base layer for top effect
         }}
       ></div>
 
-      {/* Corner vignette effect */}
+      {/* Layer 2: Combined Vertical Fade (In & Out) + Vignette */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none" // Covers entire page
         style={{
-          background:
-            "radial-gradient(circle at center, transparent 900%, rgba(0,0,0,0.5) 900%)",
+          // Combined gradient:
+          // - Fade IN from dark just below navbar
+          // - Transparent middle
+          // - Fade OUT to dark starting around 50%
+          // - Radial gradient for vignette layered on top
+          background: `
+            linear-gradient(to bottom,
+              transparent 0%, /* Transparent at very top */
+              transparent calc(4rem - 1px), /* Stay transparent until navbar bottom */
+              rgba(0,0,0,0.6) calc(4rem + 1px), /* Start fading IN dark overlay */
+              transparent calc(4rem + 20vh), /* Fade to transparent below navbar */
+              transparent 45vh, /* Stay transparent through middle */
+              rgba(0,0,0,0.7) 65vh, /* Start fading OUT to dark */
+              #000000 85vh /* Fully black towards bottom */
+            ),
+            radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.7) 100%) /* Vignette */
+          `,
+          // Multiple backgrounds blend by default (vignette over linear fade)
+          zIndex: 2 // On top of the blur layer, below content
         }}
       ></div>
 
-      {/* Content */}
-      <div className="relative z-10 p-4 md:p-8 pt-16 md:pt-24">
+      {/* Layer 3: Content */}
+      <div className="relative z-10 p-4 md:p-8 pt-24 md:pt-32"> {/* Increased top padding */}
         {/* Timeline component */}
         <div className="flex flex-col lg:flex-row w-full min-h-[600px] px-4 sm:px-6 md:px-8">
           {/* Timeline Years */}
@@ -166,12 +188,12 @@ function AboutUsPage() {
                   if (position === -1) {
                     rotateX = -60; // Rotated upward
                     translateZ = -100; // Behind
-                    opacity = 0.5;
+                    opacity = 0.7;
                     scale = 0.85;
                   } else if (position === 1) {
                     rotateX = 60; // Rotated downward
                     translateZ = -100; // Behind
-                    opacity = 0.5;
+                    opacity = 0.7;
                     scale = 0.85;
                   } else {
                     // Center position
@@ -189,11 +211,11 @@ function AboutUsPage() {
                       style={{
                         transform: `translate(-50%, -50%) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${scale})`,
                         opacity: opacity,
-                        color: isSelected ? "#FCD34D" : "#6B7280",
+                        color: isSelected ? "#FCD34D" : "#373737", // Bright gold for selected, darker gray for unselected
                         filter: isSelected ? "none" : "blur(1px)",
                         transformStyle: "preserve-3d",
                         backfaceVisibility: "hidden",
-                        transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)", // Elastic ease-out for more engaging motion
+                        transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)" // Elastic ease-out for more engaging motion
                       }}
                     >
                       {item.year}
