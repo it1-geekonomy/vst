@@ -7,6 +7,8 @@ import img2 from '../public/education/Frame 7.jpg';
 import img3 from '../public/education/Frame 8.jpg';
 import img4 from '../public/education/Frame 9.jpg';
 import img5 from '../public/education/Frame 10.jpg';
+import img6 from '../public/education/Frame11.jpeg';
+import img7 from '../public/education/Frame12.jpeg';
 import { StaticImageData } from 'next/image';
 import EducationLogo from '../public/logos/educationlogo';
 import Logo from '../public/logos/Logo';
@@ -29,8 +31,8 @@ export default function EducationPage() {
     { id: 3, src: img3, alt: 'School building', height: '93%' },
     { id: 4, src: img4, alt: 'Robotics project', height: '94%' },
     { id: 5, src: img5, alt: 'Students on stairs', height: '97%' },
-    // { id: 6, src: img2, alt: 'Students in uniform', height: '100%' },
-    // { id: 7, src: img1, alt: 'Students outdoors', height: '88%' },
+     { id: 6, src: img6, alt: 'Students in uniform', height: '100%' },
+     { id: 7, src: img7, alt: 'Students outdoors', height: '88%' },
   ];
 
   // Function to navigate to the next image
@@ -58,7 +60,7 @@ export default function EducationPage() {
       </section>
 
       {/* Gallery section with varying height strips */}
-      <section className="w-full px-4 md:px-8 lg:px-24 h-auto md:h-[550px] lg:h-[620px] mb-8 md:mb-12 lg:mb-16 z-10 relative mx-auto">
+      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-24 h-auto md:h-[550px] lg:h-[620px] xl:h-[700px] mb-8 md:mb-12 lg:mb-16 z-10 relative mx-auto">
         {/* Background image with light orange glow - ONLY in this section */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           <Image 
@@ -79,9 +81,9 @@ export default function EducationPage() {
         </div>
         
         {/* Improved Mobile Gallery - Card Swipe Animation */}
-        <div className="block md:hidden w-full aspect-[5/3] max-h-[200px] relative z-10">
+        <div className="block md:hidden w-full aspect-[5/3] max-h-[300px] sm:max-h-[400px] relative z-10">
           {/* Main featured image */}
-          <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xl flex items-center justify-center bg-black/20">
+          <div className="relative w-full h-full overflow-hidden shadow-xl flex items-center justify-center bg-black/20">
             {galleryImages.map((image, index) => (
               <div 
                 key={image.id}
@@ -98,13 +100,13 @@ export default function EducationPage() {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw"
                     className="object-contain"
                     priority
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent py-2">
-                  <p className="text-white text-sm text-center">{image.alt}</p>
+                  <p className="text-white text-xs sm:text-sm text-center">{image.alt}</p>
                 </div>
               </div>
             ))}
@@ -114,20 +116,20 @@ export default function EducationPage() {
           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 z-20">
             <button 
               onClick={prevImage}
-              className="bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70 active:scale-95 transition-all"
+              className="bg-black/50 text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70 active:scale-95 transition-all"
               aria-label="Previous image"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             
             <button 
               onClick={nextImage}
-              className="bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70 active:scale-95 transition-all"
+              className="bg-black/50 text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70 active:scale-95 transition-all"
               aria-label="Next image"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -139,8 +141,8 @@ export default function EducationPage() {
               <button 
                 key={index} 
                 onClick={() => setActiveImageIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === activeImageIndex ? 'bg-[#FEBF3D] w-4' : 'bg-white/50'
+                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all ${
+                  index === activeImageIndex ? 'bg-[#FEBF3D] w-3 sm:w-4' : 'bg-white/50'
                 }`}
                 aria-label={`Go to image ${index + 1}`}
               />
@@ -171,11 +173,11 @@ export default function EducationPage() {
         </div>
         
         {/* Desktop Layout - Expandable strips */}
-        <div className="hidden md:flex w-full h-[90%] items-end gap-2 md:gap-4 lg:gap-6 relative z-10">
+        <div className="hidden md:flex w-full h-[90%] items-end gap-4 md:gap-8 lg:gap-14 relative z-10">
           {galleryImages.map((image) => (
             <div 
               key={image.id} 
-              className="flex-[0.5] relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out hover:flex-[10] group rounded-lg"
+              className="flex-[0.5] relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out hover:flex-[10] group"
               style={{ height: image.height }}
             >
               <div className="w-full h-full relative">
@@ -183,7 +185,7 @@ export default function EducationPage() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                   className="object-cover object-center"
                   priority
                 />
@@ -195,6 +197,7 @@ export default function EducationPage() {
                         src={image.src}
                         alt={image.alt}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover w-[100%] h-[100%]"
                         priority
                       />
@@ -214,7 +217,7 @@ export default function EducationPage() {
             className="text-base sm:text-lg md:text-xl lg:text-2xl font-light"
             style={{
               fontFamily: "'FONTSPRING DEMO - Roc Grotesk', sans-serif",
-              fontWeight: 400,
+              fontWeight: 350,
               lineHeight: "150%",
               letterSpacing: "0%",
             }}
