@@ -29,12 +29,13 @@ function OurMilestone() {
         <div className="inline-block lg:w-full">
           <div style={{ 
             fontFamily: "Roc Grotesk",
-            fontSize: "clamp(2.5rem, 8vw, 3.5rem)", 
+            fontWeight: 500,
+            fontSize: "57px", 
             lineHeight: "1.1", 
             letterSpacing: "0%"
           }}>
             <div>Our</div>
-            <div>Milestone</div>
+            <div>Milestones</div>
           </div>
         </div>
       </div>
