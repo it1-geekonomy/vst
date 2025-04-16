@@ -99,22 +99,25 @@ export default function Navbar() {
                   <Link href="/education" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
                     Education
                   </Link>
-                  <Link href="/business-3" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
-                    Business 3
+                  <Link href="/csr" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
+                    CSR
                   </Link>
-                  <Link href="/business-4" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
-                    Business 4
+                  <Link href="/auto-parts" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
+                    Auto Parts
+                  </Link>
+                  <Link href="/manufacture" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
+                    Manufcture
                   </Link>
                 </div>
               </div>
               <Link
-                href="/careers"
+                href="/career"
                 className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
               >
                 Careers
               </Link>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
               >
                 Contact Us
