@@ -150,7 +150,7 @@ export default function Home() {
       <OurMilestone />
       {/* Life at VST Section */}
       <LifeAtVst />
-      {/* Initiatives Section */}
+      
       
       <EmpoweringScroll />
 
