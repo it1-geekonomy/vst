@@ -6,7 +6,7 @@ import slide2 from "@/app/public/slid 2.png";
 import slide3 from "@/app/public/slide.png";
 import Initiatives from "@/components/Initiatives";
 import LifeAtVst from "@/components/LifeAtVst";
-import ContactUs from "@/components/ContactUs";
+import ContactUs from "@/components/GetInTouch";
 import Footer from "@/components/Footer";
 import OurMilestone from "@/components/OurMilestone";
 import EmpoweringScroll from "@/components/EmpoweringScroll";
