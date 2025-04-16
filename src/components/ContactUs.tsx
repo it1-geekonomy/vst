@@ -29,23 +29,23 @@ const ContactUs: React.FC = () => {
           <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
             <h1 className="text-[#ffd700] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8 text-center lg:text-left">
 Get in touch            </h1>
-            <div className="w-full h-[200px] xs:h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px]">
+            <div className="w-full h-[100px] xs:h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] flex justify-center">
               <video
                 src="/ContactUsLogo.mp4"
                 autoPlay
                 muted
                 loop
-                className="w-full h-full object-cover"
+                className="w-[80%] h-[90%] md:object-cover"
                 playsInline
               />
             </div>
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 lg:pl-6 xl:pl-10 mt-6 lg:mt-0">
+        <div className="w-full lg:w-1/2 mt-6 lg:mt-0 flex justify-center lg:justify-start">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8 w-full max-w-[450px] sm:max-w-[500px] md:max-w-[550px] mx-auto lg:mx-0"
+            className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8 w-full max-w-[450px] sm:max-w-[500px] md:max-w-[550px]"
           >
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               <div className="flex-1">
@@ -115,7 +115,7 @@ Get in touch            </h1>
 
             <button
               type="submit"
-              className="w-full bg-[#ffd700] text-black py-2.5 xs:py-3 md:py-4 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-medium"
+              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-medium"
             >
               Send Message
             </button>

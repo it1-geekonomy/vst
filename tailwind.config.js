@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "roc-grotesk": ["FONTSPRING DEMO - Roc Grotesk", "sans-serif"],
+        roc: ['"Roc Grotesk"', 'sans-serif'],
       },
     },
   },
