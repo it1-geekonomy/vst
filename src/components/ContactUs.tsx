@@ -27,8 +27,17 @@ const ContactUs: React.FC = () => {
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row justify-around items-center gap-6 xs:gap-8 md:gap-10 lg:gap-12">
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
           <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
-            <h1 className="text-[#ffd700] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8 text-center lg:text-left">
-Get in touch            </h1>
+            <div className="flex justify-center w-[80%] mx-auto">
+              <h1 className=" text-[#ffd700] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8 text-center"
+              style={{
+                fontFamily: "roc",
+                fontWeight: 400,
+                letterSpacing: "0.05em",
+                
+              }}
+              >
+Get In Touch              </h1>
+            </div>
             <div className="w-full h-[100px] xs:h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] flex justify-center">
               <video
                 src="/ContactUsLogo.mp4"

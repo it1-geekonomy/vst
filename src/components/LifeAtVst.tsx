@@ -44,7 +44,7 @@ const LifeAtVst = () => {
   }, [])
 
   return (
-    <div className="relative w-full h-[350px] md:h-[450px] lg:h-[420px] bg-black text-white overflow-hidden">
+    <div className="relative w-full h-[360px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden">
       {/* Add keyframes for the flowing gradient animation matching the image */}
       <style jsx global>{`
         @keyframes flowingGradient {
@@ -73,7 +73,7 @@ const LifeAtVst = () => {
       `}</style>
 
       {/* Fixed Title Section with subtitle and description */}
-      <div className="absolute top-6 md:top-10 left-1/2 transform -translate-x-1/2 md:left-auto md:transform-none md:right-[-18.5%] z-40 text-center w-full md:w-auto">
+      <div className="absolute top-6 md:top-10 left-1/2 transform -translate-x-1/2 md:left-auto md:transform-none md:right-[-19.5%] z-40 text-center w-full md:w-auto">
         <h1 
           className="mb-2 uppercase text-white text-4xl md:text-6xl lg:text-7xl xl:text-[80px]"
           style={{
@@ -87,7 +87,7 @@ const LifeAtVst = () => {
         </h1>
         
         {/* Container for horizontal line and white ball */}
-        <div className="relative flex justify-center items-center mb-8">
+        <div className="relative flex justify-center items-center mb-1">
           {/* White ball at the start of line */}
           <div className="w-3 h-3 md:w-4 md:h-4 bg-[#8CE0FF] rounded-full"></div>
           
@@ -103,12 +103,12 @@ const LifeAtVst = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="px-4 md:px-0 max-w-[100%] md:max-w-[320px] lg:max-w-[450px] xl:max-w-[600px] mx-auto h-[100%] md:h-auto overflow-y-auto md:overflow-visible"
+            className="px-4 md:px-4 w-full max-w-[100%] md:max-w-[320px] lg:max-w-[450px] xl:max-w-[600px] mx-auto h-[230px] md:h-auto overflow-y-auto md:overflow-visible"
           >
-            <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-3 text-center fontFamily-roc">
+            <h2 className="text-2xl md:text-xl lg:text-1xl xl:text-1xl font-semibold mb-3 text-center fontFamily-roc">
               {slides[currentSlide].subtitle}
             </h2>
-            <p className="text-sm md:text-sm lg:text-base xl:text-lg text-center fontFamily-roc leading-relaxed md:leading-tight">
+            <p className="text-base md:text-xs lg:text-base xl:text-base text-center fontFamily-roc leading-relaxed md:leading-tight hyphens-auto " style={{ wordBreak: "break-word", textAlign: "justify", textJustify: "inter-word" }}>
               {slides[currentSlide].description}
             </p>
           </motion.div>
