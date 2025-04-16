@@ -80,7 +80,7 @@ function AboutUsPage() {
         
         // Then gradually restore opacity
         setTimeout(() => {
-          setImageOpacity(0.6);
+          setImageOpacity(0.3);
           
           // Complete transition with final values
           setTimeout(() => {
@@ -338,10 +338,10 @@ function AboutUsPage() {
             <h2 className="text-lg md:text-xl mb-2 text-white">About VST Group</h2>
             <div
               style={{
-                fontFamily: "roc-grotesk",
+                fontFamily: "roc",
                 fontWeight: 400,
-                fontSize: "16px",
-                lineHeight: "120%",
+                fontSize: "18px",
+                lineHeight: "150%",
                 letterSpacing: "0%",
                 color: "white",
               }}
