@@ -1,0 +1,243 @@
+"use client";
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface CSRItemProps {
+    title: string;
+    description: string;
+    year: string;
+    images: string[];
+}
+
+const timelineData = [
+    {
+        year: "2015-2016",
+        title: "Anugraha Charitable Trust",
+        description: "Facilitating good health, Education, Food and shelter to the sufferings of the needy Sheila Kothavala Inst. For Deaf to build confidence, empower and mainstream members of the hearing impaired",
+        images: ["/makingdiff/imagesanime/image1.jpeg", "/makingdiff/imagesanime/image2.jpeg", "/makingdiff/imagesanime/image3.jpeg"]
+    },
+    {
+        year: "2016-2017",
+        title: "Education Initiative",
+        description: "Supporting educational programs and providing resources to underprivileged students through various initiatives and partnerships",
+        images: ["/makingdiff/imagesanime/image4.jpeg", "/makingdiff/imagesanime/image5.jpeg", "/makingdiff/imagesanime/image6.jpeg"]
+    },
+    {
+        year: "2017-2018",
+        title: "Healthcare Programs",
+        description: "Implementing healthcare initiatives and medical camps in rural areas to provide essential medical services",
+        images: ["/makingdiff/imagesanime/image7.jpeg", "/makingdiff/imagesanime/image8.jpeg", "/makingdiff/imagesanime/image1.jpeg"]
+    },
+    {
+        year: "2018-2019",
+        title: "Community Development",
+        description: "Focusing on sustainable community development through various social welfare programs and infrastructure support",
+        images: ["/makingdiff/imagesanime/image2.jpeg", "/makingdiff/imagesanime/image3.jpeg", "/makingdiff/imagesanime/image4.jpeg"]
+    },
+    {
+        year: "2020-2021",
+        title: "COVID-19 Relief Efforts",
+        description: "Providing emergency relief, medical supplies, and support to communities affected by the pandemic",
+        images: ["/makingdiff/imagesanime/image5.jpeg", "/makingdiff/imagesanime/image6.jpeg", "/makingdiff/imagesanime/image7.jpeg"]
+    },
+    {
+        year: "2021-2022",
+        title: "Digital Education",
+        description: "Bridging the digital divide by providing technology access and digital literacy programs to underserved communities",
+        images: ["/makingdiff/imagesanime/image8.jpeg", "/makingdiff/imagesanime/image1.jpeg", "/makingdiff/imagesanime/image2.jpeg"]
+    }
+];
+
+const TimelineYear: React.FC<{ year: string; isActive: boolean; onClick: () => void; position: number }> = ({ year, isActive, onClick, position }) => {
+    return (
+        <motion.div
+            className={`cursor-pointer absolute right-0 flex items-center gap-2 sm:gap-4 ${isActive ? 'text-red-500' : 'text-white'}`}
+            animate={{ x: position }}
+            transition={{ type: "spring", stiffness: 100 }}
+            onClick={onClick}
+        >
+            <div className="h-3 w-3 sm:h-4 sm:w-4 rounded-full bg-red-500" />
+            <p className="text-base sm:text-lg font-medium whitespace-nowrap">{year}</p>
+        </motion.div>
+    );
+};
+
+const CSRItem: React.FC<CSRItemProps> = ({ title, description, images }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % images.length);
+            setCurrentTextIndex((prev) => (prev + 1) % 3); // Assuming 3 different text variations
+        }, 3000); // Change every 3 seconds
+
+        return () => clearInterval(interval);
+    }, [images.length]);
+
+    const textVariations = [
+        description,
+        "Our commitment to excellence and innovation drives us to create lasting positive impact in communities.",
+        "Through strategic partnerships and dedicated efforts, we continue to build a better future for all."
+    ];
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-center px-4 sm:px-6"
+        >
+            <div className="relative h-[250px] sm:h-[300px] md:h-[400px] w-full sm:w-[90%] md:w-[80%] mx-auto rounded-lg overflow-hidden bg-gray-800">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={currentImageIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="absolute inset-0"
+                    >
+                        <Image
+                            src={images[currentImageIndex]}
+                            alt={`${title} - Image ${currentImageIndex + 1}`}
+                            fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 50vw"
+                            className="object-cover"
+                            onError={(e) => {
+                                console.error(`Error loading image: ${images[currentImageIndex]}`);
+                                e.currentTarget.src = '/placeholder.jpg';
+                            }}
+                        />
+                    </motion.div>
+                </AnimatePresence>
+            </div>
+            <div className="space-y-2 sm:space-y-4 mt-4 sm:mt-0">
+                <h3 className="text-xl sm:text-2xl font-semibold text-white">{title}</h3>
+                <AnimatePresence mode="wait">
+                    <motion.p
+                        key={currentTextIndex}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-sm sm:text-base text-gray-300"
+                    >
+                        {textVariations[currentTextIndex]}
+                    </motion.p>
+                </AnimatePresence>
+            </div>
+        </motion.div>
+    );
+};
+
+const CSR = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [yearPosition, setYearPosition] = useState(0);
+    const [stepSize, setStepSize] = useState(200);
+    const maxSteps = timelineData.length;
+
+    // Adjust step size based on screen width
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 640) {
+                setStepSize(150);
+            } else if (window.innerWidth < 768) {
+                setStepSize(175);
+            } else {
+                setStepSize(200);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const handleYearClick = () => {
+        const newPosition = yearPosition - stepSize;
+        
+        if (Math.abs(newPosition) >= stepSize * (maxSteps - 1)) {
+            setYearPosition(0);
+            setCurrentIndex(0);
+        } else {
+            setYearPosition(newPosition);
+            setCurrentIndex((currentIndex + 1) % timelineData.length);
+        }
+    };
+
+    const currentData = timelineData[currentIndex];
+
+    return (
+        <main className="relative min-h-screen overflow-x-hidden bg-black">
+            {/* Background Image */}
+            <div className="fixed inset-0 z-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/80 to-transparent" />
+                <Image
+                    src="/makingdiff/bg.svg"
+                    alt="Background Pattern"
+                    fill
+                    className="object-cover opacity-20"
+                    priority
+                />
+            </div>
+
+            {/* Content */}
+            <motion.div
+                className="relative w-full min-h-screen overflow-x-hidden z-10"
+                initial={false}
+                transition={{ duration: 0.01 }}
+            >
+                {/* Hero Section */}
+                <section className="relative h-[60vh] sm:h-[70vh] md:h-screen overflow-hidden z-10">
+                    <div className="relative h-full flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-8">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-3 sm:mb-6">Making a Difference</h1>
+                        <p className="text-base sm:text-lg md:text-xl text-center max-w-3xl mx-auto text-gray-200">
+                            Rooted in a legacy of responsibility and service, VST Group, through the VST Foundation/Academy 
+                            (Anugraha Memorial Trust), has consistently extended its hands to contribute back to society.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Timeline Section */}
+                <section className="container mx-auto px-2 sm:px-4 py-4 sm:py-8 relative z-10">
+                    <div className="relative h-16 sm:h-20">
+                        {/* Timeline Line */}
+                        <div className="absolute h-[2px] bg-white w-full top-[20px] sm:top-[25px]" />
+                        
+                        {/* Fixed Flag on Left */}
+                        <div className="absolute left-0 top-[-12px] sm:top-[-15px] w-[24px] h-[24px] sm:w-[30px] sm:h-[30px] z-10">
+                            <svg width="100%" height="100%" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29.9788 20.164C29.827 20.012 29.6088 19.8506 29.3242 19.6797C29.3053 19.6607 29.2388 19.6227 29.125 19.5658C28.9163 19.4518 28.7076 19.3474 28.4989 19.2524C28.3851 19.1954 28.3092 19.1669 28.2712 19.1669C27.6831 18.9201 27.038 18.7206 26.336 18.5687V14.78C27.721 14.9699 28.9353 15.5491 29.9788 16.5177V20.164ZM24.1732 14.6945C23.7368 14.6945 23.2435 14.723 22.6933 14.78V11.1337C23.2435 11.0767 23.7368 11.0482 24.1732 11.0482C25.1218 11.0482 25.8428 11.0767 26.336 11.1337V14.78C25.8617 14.723 25.1408 14.6945 24.1732 14.6945ZM22.6933 7.48742V3.84113C23.2435 3.78415 23.7368 3.75567 24.1732 3.75567C25.1408 3.75567 25.8617 3.78415 26.336 3.84113V7.48742C25.8617 7.43044 25.1408 7.40196 24.1732 7.40196C23.7368 7.40196 23.2435 7.43044 22.6933 7.48742ZM15.4078 9.73786V6.09157C17.2102 5.35092 18.4245 4.87614 19.0506 4.66724V8.31353C18.4624 8.50344 17.2482 8.97822 15.4078 9.73786ZM10.3706 11.0482C9.64967 11.0482 8.90026 10.9723 8.12238 10.8204V7.17406C8.90026 7.32599 9.64967 7.40196 10.3706 7.40196C10.788 7.40196 11.2529 7.35448 11.7651 7.25952V10.9058C11.2529 11.0008 10.788 11.0482 10.3706 11.0482ZM4.47965 9.2251C5.29547 9.96575 6.50971 10.4975 8.12238 10.8204V14.4666C6.49074 14.1438 5.27649 13.612 4.47965 12.8714V16.5177C5.29547 17.2583 6.50971 17.7901 8.12238 18.1129V21.9017C7.85676 21.8637 7.58166 21.8067 7.29707 21.7307C7.25913 21.7307 7.2117 21.7212 7.15478 21.7023C7.09786 21.6833 7.0694 21.6643 7.0694 21.6453C6.8607 21.5883 6.66149 21.5218 6.47177 21.4459C6.35793 21.4079 6.26307 21.3699 6.18718 21.3319C5.99745 21.237 5.79824 21.123 5.58954 20.9901C5.43776 20.8951 5.35239 20.8477 5.33341 20.8477C5.01088 20.6198 4.72629 20.3919 4.47965 20.164V27.4566C4.47965 27.9503 4.29941 28.3776 3.93893 28.7385C3.57845 29.0993 3.14682 29.2797 2.64405 29.2797C2.14128 29.2797 1.7144 29.0993 1.3634 28.7385C1.01241 28.3776 0.836914 27.9503 0.836914 27.4566V1.93252C0.836914 1.41976 1.01241 0.987713 1.3634 0.636378C1.7144 0.285043 2.14128 0.109375 2.64405 0.109375C3.14682 0.109375 3.57845 0.285043 3.93893 0.636378C4.29941 0.987713 4.47965 1.41976 4.47965 1.93252C4.6504 2.10344 4.87807 2.27436 5.16266 2.44528C5.18163 2.44528 5.20535 2.45478 5.23381 2.47377L5.31918 2.53074L5.39033 2.55923C5.58006 2.67317 5.77927 2.77762 5.98797 2.87258C6.08283 2.91056 6.15872 2.94854 6.21564 2.98653C6.50023 3.08148 6.76584 3.16694 7.01249 3.24291L7.09786 3.27139C7.4204 3.36635 7.7619 3.45181 8.12238 3.52777V7.17406C6.50971 6.85121 5.29547 6.31946 4.47965 5.57881V9.2251ZM10.3706 14.6945C10.788 14.6945 11.2529 14.6471 11.7651 14.5521V18.1984C11.2529 18.2934 10.788 18.3408 10.3706 18.3408C9.64967 18.3408 8.90026 18.2649 8.12238 18.1129V14.4666C8.90026 14.6186 9.64967 14.6945 10.3706 14.6945ZM19.0506 11.9598V15.6061C18.4435 15.815 17.2292 16.2898 15.4078 17.0304V13.3842C17.2102 12.6435 18.4245 12.1687 19.0506 11.9598ZM19.0506 8.31353C20.3217 7.89572 21.536 7.62035 22.6933 7.48742V11.1337C21.536 11.2666 20.3217 11.542 19.0506 11.9598V8.31353ZM11.7651 14.5521V10.9058C12.6758 10.7539 13.89 10.3646 15.4078 9.73786V13.3842C13.89 14.0109 12.6758 14.4002 11.7651 14.5521ZM22.6933 18.4263C21.517 18.5402 20.3028 18.8061 19.0506 19.2239V15.6061C20.3217 15.1883 21.536 14.9129 22.6933 14.78V18.4263ZM15.4078 20.6482C15.1233 20.7622 14.8576 20.8666 14.611 20.9616C14.5541 20.9806 14.4877 21.0091 14.4118 21.0471C14.2031 21.123 13.9659 21.2085 13.7003 21.3034L13.5296 21.3604C13.207 21.4744 12.9224 21.5598 12.6758 21.6168C12.3533 21.7117 12.0497 21.7877 11.7651 21.8447V18.1984C12.6758 18.0465 13.89 17.6571 15.4078 17.0304V20.6482ZM11.7651 3.61323C12.524 3.48029 13.4252 3.21442 14.4687 2.81561L14.4972 2.80136L14.5541 2.78712C14.8576 2.67317 15.1422 2.55923 15.4078 2.44528V6.09157C13.89 6.71828 12.6758 7.10759 11.7651 7.25952V3.61323ZM19.0506 1.02095C20.3217 0.603144 21.536 0.327773 22.6933 0.194835V3.84113C21.536 3.97406 20.3217 4.24943 19.0506 4.66724V1.02095ZM27.1614 0.365755C27.1993 0.365755 27.242 0.37525 27.2894 0.394241C27.3368 0.413233 27.3701 0.422728 27.389 0.422728C27.5977 0.479701 27.8064 0.555666 28.0151 0.650621C28.091 0.688603 28.1764 0.726586 28.2712 0.764568C28.461 0.859523 28.6602 0.97347 28.8689 1.10641C29.0207 1.20136 29.106 1.24884 29.125 1.24884C29.4475 1.47673 29.7321 1.70463 29.9788 1.93252V5.57881C28.9353 4.61026 27.721 4.03104 26.336 3.84113V0.194835C26.6017 0.232817 26.8768 0.28979 27.1614 0.365755ZM29.9788 9.2251V12.8714C28.9353 11.9028 27.721 11.3236 26.336 11.1337V7.48742C27.721 7.67733 28.9353 8.25656 29.9788 9.2251Z" fill="white"/>
+                            </svg>
+                        </div>
+                        
+                        {/* Moving Year */}
+                        <motion.div
+                            className={`absolute right-0 top-[-12px] sm:top-[-15px] flex items-center cursor-pointer text-white z-10`}
+                            animate={{ x: yearPosition }}
+                            transition={{ type: "spring", stiffness: 100 }}
+                            onClick={handleYearClick}
+                        >
+                            <p className="text-xl sm:text-2xl font-medium whitespace-nowrap">{currentData.year}</p>
+                        </motion.div>
+                    </div>
+
+                    {/* Content Section */}
+                    <AnimatePresence mode="wait">
+                        <CSRItem
+                            key={currentData.year}
+                            title={currentData.title}
+                            description={currentData.description}
+                            year={currentData.year}
+                            images={currentData.images}
+                        />
+                    </AnimatePresence>
+                </section>
+            </motion.div>
+        </main>
+    );
+};
+
+export default CSR; 
