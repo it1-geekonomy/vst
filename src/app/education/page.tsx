@@ -50,12 +50,10 @@ export default function EducationPage() {
     <main className="flex min-h-screen flex-col items-center bg-black text-white relative overflow-hidden">
       <div className='w-full'>
       {/* Hero section with logo */}
-      <section className="w-full py-8 md:py-12 lg:py-16 flex justify-center items-center z-10 relative">
-        <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 relative">
-          {/* Logo placeholder - user will add later */}
+      <section className="w-full py-8 md:py-12 lg:py-14 flex justify-center items-center z-10 relative">
+        <div className="w-72 h-64 md:w-80 md:h-72 lg:w-3/4 lg:h-3/4 relative md:py-10 lg:pt-20">
           <div className="w-full h-full flex justify-center items-center">
             <EducationLogo className="w-full h-full" />
-            
           </div>
         </div>
       </section>
@@ -178,7 +176,7 @@ export default function EducationPage() {
           {galleryImages.map((image) => (
             <div 
               key={image.id} 
-              className="flex-[0.5] relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out hover:flex-[10] group"
+              className="flex-[0.5] relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out hover:flex-[35] group"
               style={{ height: image.height }}
             >
               <div className="w-full h-full relative">
@@ -199,7 +197,7 @@ export default function EducationPage() {
                         alt={image.alt}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover w-[100%] h-[100%]"
+                        className="object-fill w-[100%] h-[100%]"
                         priority
                       />
                     </div>
