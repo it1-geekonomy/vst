@@ -4,6 +4,7 @@ module.exports = {
       fontFamily: {
         roc: ['"Roc Grotesk"', 'sans-serif'],
         rocWide: ['"Roc Grotesk Wide"', 'sans-serif'],
+        
       },
     },
   },
