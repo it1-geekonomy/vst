@@ -75,7 +75,7 @@ const LifeAtVst = () => {
       {/* Fixed Title Section with subtitle and description */}
       <div className="absolute top-6 md:top-10 left-1/2 transform -translate-x-1/2 md:left-auto md:transform-none md:right-[-19.5%] z-40 text-center w-full md:w-auto">
         <h1 
-          className="mb-2 text-white text-4xl md:text-6xl lg:text-7xl xl:text-[80px] font-roc"
+          className="mb-2 text-white text-4xl md:text-6xl lg:text-7xl xl:text-[80px] font-rocWide"
           style={{
             fontWeight: 300,
             lineHeight: "90%",
