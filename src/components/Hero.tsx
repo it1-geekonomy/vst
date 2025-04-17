@@ -1,50 +1,56 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-import slide1 from "@/app/public/slid1.png";
-import slide2 from "@/app/public/slid 2.png";
-import slide3 from "@/app/public/slide.png";
+// import slide1 from "@/app/public/slid1.png";
+// import slide2 from "@/app/public/slid 2.png";
+// import slide3 from "@/app/public/slide.png";
+
+import slide1 from "@/app/public/hero-section/Image 1.png";
+import slide2 from "@/app/public/hero-section/Image 5.png";
+import slide3 from "@/app/public/hero-section/image 3.png";
+import slide4 from "@/app/public/hero-section/Image 4.png";
+import slide5 from "@/app/public/hero-section/Image 6.png";
 
 const slides = [
   {
-    id: 1,
-    image: slide1,
-    title: "BUILDING TOMORROW",
-    subtitle: "ON A CENTURY OF TRUST",
-    label: "Mercedes-Benz",
-    color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
+    id: 5,
+    image: slide5,
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "Premium Motors",
+    color: "from-green-600/80 to-green-800/80",
   },
   {
-    id: 2,
-    image: slide2,
-    title: "AUTOMOTIVE EXCELLENCE",
-    subtitle: "PREMIUM MOBILITY SOLUTIONS",
+    id: 4,
+    image: slide4,
+    // title: "AUTOMOTIVE EXCELLENCE",
+    // subtitle: "PREMIUM MOBILITY SOLUTIONS",
     label: "Automotive Division",
     color: "from-blue-600/80 to-blue-800/80",
   },
   {
     id: 3,
     image: slide3,
-    title: "LUXURY REDEFINED",
-    subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "Premium Motors",
     color: "from-green-600/80 to-green-800/80",
   },
   {
-    id: 4,
+    id: 2,
     image: slide2,
-    title: "AUTOMOTIVE EXCELLENCE",
-    subtitle: "PREMIUM MOBILITY SOLUTIONS",
+    // title: "AUTOMOTIVE EXCELLENCE",
+    // subtitle: "PREMIUM MOBILITY SOLUTIONS",
     label: "Automotive Division",
     color: "from-blue-600/80 to-blue-800/80",
   },
   {
-    id: 5,
-    image: slide3,
-    title: "LUXURY REDEFINED",
-    subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
-    color: "from-green-600/80 to-green-800/80",
+    id: 1,
+    image: slide1,
+    // title: "BUILDING TOMORROW",
+    // subtitle: "ON A CENTURY OF TRUST",
+    label: "Mercedes-Benz",
+    color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
   },
 ];
 
@@ -86,7 +92,7 @@ const Hero = () => {
             onClick={() => handleSlideClick(index)}
           >
             {/* Background Image */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 overflow-hidden">
               <Image
                 src={slide.image}
                 alt={slide.label}
@@ -94,8 +100,11 @@ const Hero = () => {
                 className={`object-cover transition-all duration-700 ${
                   currentSlide === index
                     ? "opacity-100 scale-100"
-                    : "opacity-90 scale-110"
+                    : "opacity-90 scale-110 object-left"
                 }`}
+                style={{
+                  objectPosition: currentSlide === index ? "center" : "0% center",
+                }}
                 priority={index === 0}
               />
 
@@ -110,31 +119,7 @@ const Hero = () => {
             </div>
 
             {/* Content */}
-            <div
-              className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ${
-                currentSlide === index
-                  ? "opacity-100 scale-100"
-                  : "opacity-0 scale-90"
-              }`}
-            >
-              {currentSlide === index && (
-                <div className="relative flex flex-col items-center justify-center text-white p-2 sm:p-4">
-                  <Image
-                    src="/vst-logo-white.png"
-                    alt="VST Group"
-                    width={150}
-                    height={60}
-                    className="mb-4 sm:mb-8 w-[120px] sm:w-[200px]"
-                  />
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-center mb-2 sm:mb-4">
-                    {slide.title}
-                  </h1>
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-center">
-                    {slide.subtitle}
-                  </h2>
-                </div>
-              )}
-            </div>
+          
 
             {/* Label for inactive slides */}
             {currentSlide !== index && (
