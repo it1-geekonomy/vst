@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
 @import "tailwindcss";
+@import "./font.css";
 
 
 
@@ -46,4 +47,9 @@ html {
 
 .nav-scrolled .text-white {
   @apply text-gray-900;
+}
+
+/* Font utility class */
+.font-rocWide {
+  font-family: 'Roc Grotesk wide', sans-serif;
 }
