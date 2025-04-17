@@ -22,23 +22,18 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-
     <div className="flex justify-around p-3 xs:p-4 sm:p-6 md:p-10 bg-black text-white min-h-screen overflow-x-hidden">
-      <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row justify-around items-center gap-6 xs:gap-8 md:gap-10 lg:gap-12">
-        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
+      <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row justify-around items-start gap-6 xs:gap-8 md:gap-10 lg:gap-12">
+        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start pt-[50px] lg:pt-0">
           <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
-            <div className="flex justify-center w-[80%] mx-auto">
-              <h1 className=" text-[#ffd700] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8 text-center"
-              style={{
-                fontFamily: "roc",
-                fontWeight: 400,
-                letterSpacing: "0.05em",
-                
-              }}
+            <div className="w-full flex justify-end pr-10 sm:pr-16 md:pr-20 lg:pr-24">
+              <h1 
+                className="text-[#FEBF3D] text-3xl xs:text-4xl sm:text-5xl md:text-5xl font-roc font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8"
               >
-Get In Touch              </h1>
+                Get In Touch
+              </h1>
             </div>
-            <div className="w-full h-[100px] xs:h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] flex justify-center">
+            <div className="w-full h-[80px] xs:h-[180px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[450px] flex justify-center">
               <video
                 src="/ContactUsLogo.mp4"
                 autoPlay
@@ -58,7 +53,7 @@ Get In Touch              </h1>
           >
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               <div className="flex-1">
-                <label className="block text-white mb-1 sm:mb-2">First Name</label>
+                <label className="block text-white mb-1 font-roc sm:mb-2">First Name</label>
                 <input
                   {...register("firstName", { required: true })}
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
@@ -68,7 +63,7 @@ Get In Touch              </h1>
                 )}
               </div>
               <div className="flex-1">
-                <label className="block text-white mb-1 sm:mb-2">Last Name</label>
+                <label className="block text-white mb-1 font-roc sm:mb-2">Last Name</label>
                 <input
                   {...register("lastName", { required: true })}
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
@@ -81,7 +76,7 @@ Get In Touch              </h1>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               <div className="flex-1">
-                <label className="block text-white mb-1 sm:mb-2">Email</label>
+                <label className="block text-white mb-1 font-roc sm:mb-2">Email</label>
                 <input
                   {...register("email", {
                     required: true,
@@ -99,7 +94,7 @@ Get In Touch              </h1>
                 )}
               </div>
               <div className="flex-1">
-                <label className="block text-white mb-1 sm:mb-2">Phone Number</label>
+                <label className="block text-white mb-1 font-roc sm:mb-2">Phone Number</label>
                 <input
                   {...register("phone", { required: true })}
                   type="tel"
@@ -112,7 +107,7 @@ Get In Touch              </h1>
             </div>
 
             <div>
-              <label className="block text-white mb-1 sm:mb-2">Message</label>
+              <label className="block text-white mb-1 font-roc sm:mb-2">Message</label>
               <textarea
                 {...register("message", { required: true })}
                 className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white min-h-[80px] xs:min-h-[100px] md:min-h-[120px]"
@@ -124,7 +119,7 @@ Get In Touch              </h1>
 
             <button
               type="submit"
-              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-medium"
+              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg  font-poppins"
             >
               Send Message
             </button>
