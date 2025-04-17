@@ -6,11 +6,11 @@ import ManufacturingIcon from '@/app/public/common/BusinessSectorIcons/Manufactu
 const BusinessSectors = () => {
   return (
     <div className="w-full py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24">
-      <h2 className="text-white text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 md:mb-10 lg:mb-16 text-center">
+      <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 md:mb-10 lg:mb-16 text-center">
         Explore Our Other Business Sectors
       </h2>
       <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-20">
-        <button className="text-white hidden md:block hover:opacity-80 transition-opacity">
+        <button className="text-white hidden md:block hover:opacity-100 transition-opacity">
           <svg
             className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
             fill="none"

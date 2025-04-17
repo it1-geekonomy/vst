@@ -104,13 +104,12 @@ function CounterItem({ item }: { item: MilestoneItem }) {
   const firstDigit = count.toString()[0]
   const restDigits = count.toString().slice(1)
   
-  // Calculate the left offset for the digits/label container
-  const contentLeftOffset = `${BAR_WIDTH_PX + SPACING_PX}px` 
+  // Adjust the left offset to create overlap with the bar
+  const contentLeftOffset = `${BAR_WIDTH_PX - 20}px` // Reduced to create overlap
 
   return (
     <div ref={counterRef} className="flex flex-col items-start">
       {/* Container for bar and positioned content */}
-      {/* Increased min-height slightly to ensure space for label */}
       <div className="relative" style={{ minHeight: `${BAR_HEIGHT_PX + 40}px` }}> 
         {/* Bar */}
         <div 
@@ -118,24 +117,31 @@ function CounterItem({ item }: { item: MilestoneItem }) {
           style={{ height: `${BAR_HEIGHT_PX}px`, width: `${BAR_WIDTH_PX}px` }}
         ></div>
         
-        {/* Absolute container for digits AND label, positioned right of bar */}
-        {/* Centered vertically relative to the bar height */}
+        {/* Absolute container for digits AND label */}
         <div 
           className="absolute top-1/2 transform -translate-y-1/2 flex flex-col items-start" 
           style={{ left: contentLeftOffset }} 
         >
-          {/* Digits */}
+          {/* Digits container with first digit overlapping */}
           <div className="flex items-baseline">
             <span 
-              className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk'] relative pr-0" 
-            >{firstDigit}</span> 
-            <span className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk']">{restDigits}</span>
-            <span className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk']">{item.suffix}</span>
+              className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk'] relative z-10" 
+              style={{
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)' // Optional: add shadow for better visibility
+              }}
+            >
+              {firstDigit}
+            </span> 
+            <span className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk']">
+              {restDigits}
+            </span>
+            <span className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk']">
+              {item.suffix}
+            </span>
           </div>
 
-          {/* Label positioned directly below digits within the same absolute container */}
-          {/* Removed margin-left style, mt-0 for tight spacing */}
-          <div className="text-xl md:text-2xl lg:text-3xl text-gray-400 mt-0 font-['Roc_Grotesk'] text-left"> 
+          {/* Label with added padding-left */}
+          <div className="text-xl md:text-2xl lg:text-3xl text-gray-400 mt-0 font-['Roc_Grotesk'] text-left pl-8"> 
             {item.label}
           </div>
         </div>

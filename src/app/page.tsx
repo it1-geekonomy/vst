@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Initiatives from "@/components/Initiatives";
 import LifeAtVst from "@/components/LifeAtVst";
-import ContactUs from "@/components/ContactUs";
+import ContactUs from "@/components/GetInTouch";
 import Footer from "@/components/Footer";
 import OurMilestone from "@/components/OurMilestone";
 import EmpoweringScroll from "@/components/EmpoweringScroll";
@@ -41,8 +41,6 @@ export default function Home() {
       <OurMilestone />
       {/* Life at VST Section */}
       <LifeAtVst />
-      {/* Initiatives Section */}
-
       <EmpoweringScroll />
 
       <ContactUs />
