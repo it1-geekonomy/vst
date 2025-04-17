@@ -7,18 +7,26 @@ import frame1 from '../public/careers/frame1.jpg'
 import frame2 from '../public/careers/upload-icon.png'
 
 export default function Page() {
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState('');
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    
+  
     if (file) {
       // Check file type
-      const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
-      const fileExtension = file.name.split('.').pop().toLowerCase();
-      
-      if (validTypes.includes(file.type) || ['doc', 'docx', 'pdf', 'txt'].includes(fileExtension)) {
+      const validTypes = [
+        'application/pdf',
+        'application/msword',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        'text/plain'
+      ];
+      const fileExtension = file.name.split('.').pop()?.toLowerCase();
+  
+      if (
+        validTypes.includes(file.type) ||
+        ['doc', 'docx', 'pdf', 'txt'].includes(fileExtension || '')
+      ) {
         setSelectedFile(file);
         setFileError('');
       } else {
@@ -27,10 +35,10 @@ export default function Page() {
       }
     }
   };
+  
 
-  // Function to get file icon based on type
-  const getFileIcon = (fileName) => {
-    const extension = fileName.split('.').pop().toLowerCase();
+  const getFileIcon = (fileName: string) => {
+    const extension = fileName.split('.').pop()?.toLowerCase();
     switch (extension) {
       case 'pdf':
         return '📄';
@@ -43,7 +51,7 @@ export default function Page() {
         return '📎';
     }
   };
-
+  
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section with Background */}
