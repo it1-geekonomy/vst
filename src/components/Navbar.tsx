@@ -7,29 +7,47 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      const currentScrollY = window.scrollY;
+      
+      // Show navbar when scrolling up or at the top of the page
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        setIsVisible(true);
+      } else {
+        // Hide navbar when scrolling down
+        setIsVisible(false);
+      }
+      
+      // Update last scroll position
+      setLastScrollY(currentScrollY);
+      
+      // Update scrolled state for styling changes
+      setIsScrolled(currentScrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-[#000000]">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center h-25">
+    <nav className={`fixed w-full z-50 bg-[#000000] transition-transform duration-300 ${
+      isVisible ? 'translate-y-0' : 'translate-y-[-100%]'
+    }`}>
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 w-[90%]">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-3">
-              <Logo className="h-18 w-auto" />
-              <span className="text-white text-4xl font-serif">VST Group</span>
+            <Link href="/" className="flex items-center gap-2">
+              <Logo className="h-14 w-auto" />
+              <span className="text-white text-3xl font-serif">VST Group</span>
             </Link>
           </div>
 
@@ -40,7 +58,7 @@ export default function Navbar() {
               className="text-white p-2 focus:outline-none"
             >
               <svg 
-                className="h-8 w-8" 
+                className="h-6 w-6" 
                 fill="none" 
                 viewBox="0 0 24 24" 
                 stroke="currentColor"
@@ -66,20 +84,20 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-8 lg:space-x-12">
+            <div className="flex items-center space-x-6 lg:space-x-8">
               <Link
                 href="/"
-                className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
+                className="text-base font-medium text-white hover:text-gray-300 transition-colors"
               >
                 Home
               </Link>
               <div className="relative group">
                 <button
-                  className="text-lg font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1"
+                  className="text-base font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1"
                 >
                   Our Businesses
                   <svg
-                    className="w-4 h-4 text-white"
+                    className="w-3 h-3 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -92,39 +110,39 @@ export default function Navbar() {
                     />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <Link href="/automotive-franchises" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
+                <div className="absolute left-0 mt-2 w-40 bg-black rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <Link href="/automotive-franchises" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
                     Automotive Franchises
                   </Link>
-                  <Link href="/education" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
+                  <Link href="/education" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
                     Education
                   </Link>
-                  <Link href="/csr" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
+                  <Link href="/csr" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
                     CSR
                   </Link>
-                  <Link href="/auto-parts" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
+                  <Link href="/auto-parts" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
                     Auto Parts
                   </Link>
-                  <Link href="/manufacture" className="block px-4 py-2 text-lg text-white hover:bg-gray-800">
+                  <Link href="/manufacture" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
                     Manufcture
                   </Link>
                 </div>
               </div>
               <Link
                 href="/career"
-                className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
+                className="text-base font-medium text-white hover:text-gray-300 transition-colors"
               >
                 Careers
               </Link>
               <Link
                 href="/contact-us"
-                className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
+                className="text-base font-medium text-white hover:text-gray-300 transition-colors"
               >
                 Contact Us
               </Link>
               <Link
                 href="/about-us"
-                className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
+                className="text-base font-medium text-white hover:text-gray-300 transition-colors"
               >
                 About Us
               </Link>
@@ -139,7 +157,7 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
             <Link
               href="/"
-              className="block px-3 py-2 text-lg font-medium text-white hover:bg-gray-800 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
@@ -147,7 +165,7 @@ export default function Navbar() {
             
             <div className="relative">
               <button
-                className="block w-full text-left px-3 py-2 text-lg font-medium text-white hover:bg-gray-800 rounded-md"
+                className="block w-full text-left px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
                 onClick={(e) => {
                   e.preventDefault();
                   const submenu = e.currentTarget.nextElementSibling;
@@ -159,28 +177,28 @@ export default function Navbar() {
               <div className="pl-4 hidden">
                 <Link
                   href="/automotive-franchises"
-                  className="block px-3 py-2 text-base text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Automotive Franchises
                 </Link>
                 <Link
                   href="/education"
-                  className="block px-3 py-2 text-base text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   education
                 </Link>
                 <Link
                   href="/business-3"
-                  className="block px-3 py-2 text-base text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Business 3
                 </Link>
                 <Link
                   href="/business-4"
-                  className="block px-3 py-2 text-base text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Business 4
@@ -190,21 +208,21 @@ export default function Navbar() {
             
             <Link
               href="/careers"
-              className="block px-3 py-2 text-lg font-medium text-white hover:bg-gray-800 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Careers
             </Link>
             <Link
               href="/contact"
-              className="block px-3 py-2 text-lg font-medium text-white hover:bg-gray-800 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Us
             </Link>
             <Link
               href="/about-us"
-              className="block px-3 py-2 text-lg font-medium text-white hover:bg-gray-800 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
