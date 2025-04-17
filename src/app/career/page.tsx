@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import Image from 'next/image'
 import frame1 from '../public/careers/frame1.jpg'
 import frame2 from '../public/careers/upload-icon.png'
+import frame3 from '../public/careers/mobilebg.png'
 
 export default function Page() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -48,8 +49,8 @@ export default function Page() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section with Background */}
       <section className="relative h-[105vh] md:h-[100vh] xl:h-[105vh]">
-        {/* Background Image with exact measurements to match design */}
-        <div className="absolute inset-0 h-[110vh] md:h-[105vh] lg:h-[110vh]">
+        {/* Desktop Background Image */}
+        <div className="absolute inset-0 h-[110vh] md:h-[105vh] lg:h-[110vh] hidden lg:block">
           <Image
             src={frame1}
             alt="Background"
@@ -59,10 +60,21 @@ export default function Page() {
           />
         </div>
 
-        {/* Hero Content - Preserved exact positioning */}
-        <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-12 lg:px-18 h-full flex flex-col justify-center">
-          <h1 className="font-['FONTSPRING DEMO - Roc Grotesk'] text-[50px] sm:text-[60px] md:text-[75px] lg:text-[85px] xl:text-[90px] text-[#646464] pb-5 md:pb-10">CAREERS</h1>
-          <p className="max-w-[550px] tracking-[.14em] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[21px] leading-[1.4] font-['FONTSPRING DEMO - Roc Grotesk'] text-justify">
+        {/* Mobile Background Image */}
+        <div className="absolute inset-0 h-[70vh] md:h-[100vh] block lg:hidden">
+          <Image
+            src={frame3}
+            alt="Mobile Background"
+            fill
+            className="object-fill"
+            priority
+          />
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-12 lg:px-12 xl:px-16 h-full flex flex-col justify-center">
+          <h1 className="font-['FONTSPRING DEMO - Roc Grotesk'] text-[45px] sm:text-[60px] md:text-[75px] lg:text-[85px] xl:text-[90px] text-[#646464] pb-5 md:pb-10 md:mt-48 lg:mt-0 text-center md:text-left">CAREERS</h1>
+          <p className="max-w-[550px] tracking-[.14em] text-[15px] sm:text-[18px] md:text-[20px] lg:text-[21px] leading-[1.4] font-['FONTSPRING DEMO - Roc Grotesk'] text-justify">
             The VST Group offers rewarding career opportunities across a range of disciplines and
             verticals. The Group is an equal opportunity workplace where results are encouraged and
             merit is rewarded, making it an ideal choice for a <span className="text-[#FDB813]">long term career path</span>.
@@ -71,8 +83,8 @@ export default function Page() {
       </section>
 
       {/* Form Section - Improved for consistent overlap across all screen sizes */}
-      <section className="relative z-20 -mt-10 sm:-mt-16 md:-mt-20 lg:-mt-24 xl:-mt-28 bg-transparent pb-10 md:pb-20">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-11">
+      <section className="relative z-20 -mt-36 sm:-mt-36 md:mt-0 lg:-mt-10 xl:-mt-24 bg-transparent pb-10 md:pb-20">
+        <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
           <div className="bg-[#3B3B3B] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-16 lg:px-28">
             <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-center mb-4 sm:mb-6 md:mb-8">Personal Details</h2>
