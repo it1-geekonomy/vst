@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import EducationIcon from '@/app/public/common/BusinessSectorIcons/EducationIcon';
-import FinanceIcon from '@/app/public/common/BusinessSectorIcons/FinanceIcon';
-import ManufacturingIcon from '@/app/public/common/BusinessSectorIcons/ManufacturingIcon';
+import EducationIcon from '@/app/public/common/BusinessSectorIcons/EducationIcon.png';
+import FinanceIcon from '@/app/public/common/BusinessSectorIcons/FinanceIcon.png';
+import ManufacturingIcon from '@/app/public/common/BusinessSectorIcons/ManufacturingIcon.png';
 
 const BusinessSectors = () => {
   return (
