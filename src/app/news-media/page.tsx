@@ -8,6 +8,8 @@ import imgcard3 from "@/app/public/news-and-media/frame7.png";
 
 import imgcard4 from "@/app/public/news-and-media/frame2.png";
 import imgcard5 from "@/app/public/news-and-media/frame4.png";
+import News from "@/components/News";
+import VideosSection from "@/components/VideosSection";
 
 export default function NewsMedia() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -71,6 +73,8 @@ export default function NewsMedia() {
           className="object-cover"
           priority
         />
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#2E2E2E] via-[#2E2E2E]/50 via-[#2E2E2E]/30 via-[#2E2E2E]/10 to-transparent z-10"></div>
+
         
         {/* Main Content with Popular This Week sidebar */}
         <div className="absolute inset-0 z-20">
@@ -203,6 +207,13 @@ export default function NewsMedia() {
           </div>
         </div>
       </section>
+      {/*  Section 2 */}
+      <section className="bg-[#2E2E2E]">
+        <News/>
+      </section>
+      
+      {/* Videos Section */}
+        <VideosSection />
     </main>
   );
 }
