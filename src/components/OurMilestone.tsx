@@ -26,12 +26,8 @@ function OurMilestone() {
       {/* Typography Section - Now stays on top for both mobile AND tablet */}
       <div className="w-full lg:w-1/4 mb-8 md:mb-10 lg:mb-0 lg:pr-6 text-center md:text-center lg:text-left">
         <div className="inline-block lg:w-full">
-          <div style={{ 
-            fontFamily: "Roc Grotesk",
-            fontSize: "40px", 
-            lineHeight: "1.1", 
-            letterSpacing: "0%"
-          }}>
+          <div className="text-4xl sm:text-5xl md:text-5xl text-white font-Roc relative z-10">
+          
             <div>Our</div>
             <div>Milestones</div>
           </div>
