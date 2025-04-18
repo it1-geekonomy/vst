@@ -25,6 +25,8 @@ export default function Initiatives() {
   const [currentImg, setCurrentImg] = useState(defaultImg);
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
+
+
   const handleMouseEnter = (section: 'education' | 'sustainability' | 'rural' | 'healthcare') => {
     setCurrentImg(imagesMap[section]);
     setActiveSection(section);
