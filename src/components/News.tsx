@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
-import post1 from "@/app/public/images/news/post1.png";
+import frame9 from "@/app/public/news-and-media/frame9.png";
 import post2 from "@/app/public/images/news/post2.png";
 import post3 from "@/app/public/images/news/post3.png";
 import post4 from "@/app/public/images/news/post4.png";
@@ -14,79 +14,87 @@ import post7 from "@/app/public/images/news/post7.png";
 import post8 from "@/app/public/images/news/post8.png";
 
 const newsData = [
-  { 
-    id: 1, 
-    image: post1,
+  {
+    id: 1,
+    image: frame9,
     title: 'A new beginning. The new Porsche Centre Bengaluru showroom getting its divine blessings',
-    tag: 'Parche', 
+    tag: 'Parche',
     location: 'Bangalore',
-    time: '3 Days Ago', 
-    route: '#' 
+    time: '3 Days Ago',
+    route: '#'
   },
-
-  { 
+  {
     id: 2,
     image: post2,
     title: 'V S T Titanium Motors Pvt Ltd in Okkiyam Thoraipakkam,Chennai - Best Car Dealers near me in Chennai',
     tag: 'Innovation',
     location: 'Bangalore',
     time: '3 Days Ago',
-    route: '#' 
-  },
-  { 
-    id: 3, 
-    image: post3, 
-    title: 'Felt good to be part of #Agritechnica2023 this week!', 
-    tag: 'Industry', 
-    location: 'Bangalore', 
-    time: '3 Days Ago', 
-    route: '#' 
+    route: '#'
   },
   {
-     id: 4, 
-     image: post4, 
-     title: 'Just wrapped up another amazing week at the Harvard Business School Executive Education', 
-     tag: 'Business', 
-     location: 'Harvard', 
-     time: '3 Days Ago', 
-     route: '#' 
-    },
-  { 
-    id: 5, 
-    image: post5, 
-    title: 'Top Vst Shakti Tractor Dealers in Bangalore -  Best Vst Shakti Tractor Dealers - Justdial', 
-    tag: 'Industry', 
-    location: 'Chennai', 
-    time: '3 Days Ago', 
-    route: '#' 
+    id: 3,
+    image: post3,
+    title: (
+      <>
+        Felt good to be part of <span className="underline">#Agritechnica2023</span> this week!
+      </>
+    ),
+    tag: 'Industry',
+    location: 'Bangalore',
+    time: '3 Days Ago',
+    route: '#'
   },
   {
-     id: 6, 
-     image: post6, 
-     title: 'The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz', 
-     tag: 'Innovation', 
-     location: 'Harvard', 
-     time: '3 Days Ago', 
-     route: '#' 
-    },
-  { 
-    id: 7, 
-    image: post7, 
-    title: 'Looking back at this memory with Ratan Tata—his leadership shaped so much of what we do today', 
-    tag: 'Inspiration', 
-    location: 'Bangalore', 
-    time: '3 Days Ago', 
-    route: '#' 
+    id: 4,
+    image: post4,
+    title: (
+      <>
+        Just wrapped up another amazing week at the{' '}
+        <span className="underline">Harvard Business School Executive Education</span>
+      </>
+    ),
+    tag: 'Business',
+    location: 'Harvard',
+    time: '3 Days Ago',
+    route: '#'
   },
   {
-     id: 8, 
-     image: post8, 
-     title: "VST Motors – TATA's star dealer gears up for growth phase to enter big league – Motorindia", 
-     tag: 'Industry', 
-     location: 'Bangalore', 
-     time: '3 Days Ago', 
-     route: '#' 
-    },
+    id: 5,
+    image: post5,
+    title: 'Top Vst Shakti Tractor Dealers in Bangalore -  Best Vst Shakti Tractor Dealers - Justdial',
+    tag: 'Industry',
+    location: 'Chennai',
+    time: '3 Days Ago',
+    route: '#'
+  },
+  {
+    id: 6,
+    image: post6,
+    title: 'The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz',
+    tag: 'Innovation',
+    location: 'Harvard',
+    time: '3 Days Ago',
+    route: '#'
+  },
+  {
+    id: 7,
+    image: post7,
+    title: 'Looking back at this memory with Ratan Tata—his leadership shaped so much of what we do today',
+    tag: 'Inspiration',
+    location: 'Bangalore',
+    time: '3 Days Ago',
+    route: '#'
+  },
+  {
+    id: 8,
+    image: post8,
+    title: "VST Motors – TATA's star dealer gears up for growth phase to enter big league – Motorindia",
+    tag: 'Industry',
+    location: 'Bangalore',
+    time: '3 Days Ago',
+    route: '#'
+  },
 ];
 
 const News = () => {
@@ -99,41 +107,36 @@ const News = () => {
   };
 
   return (
-    <div className="bg-black min-h-screen py-10 px-4 text-white flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-10 text-center">Our Latest Post</h1>
+    <div className="bg-zinc-800 min-h-screen py-10 px-6 sm:px-10 md:px-16 text-white">
+      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Our Latest Post</h1>
 
-      <div className="w-full max-w-7xl flex justify-center">
+      <div className="px-3.5 flex justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {newsData.map((item) => (
             <div
               key={item.id}
-              className="bg-[#2E2E32] w-[240px] min-h-[420px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col"
+              className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col"
               onClick={() => handleCardClick(item.id, item.route)}
             >
-              {/*  image */}
-              <div className="relative w-full aspect-[4/4]">
+              {/* Image */}
+              <div className="relative w-full h-[330px]">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt="news-image"
                   fill
                   className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 px-3 py-[6px] text-white text-xs font-medium bg-black/50 backdrop-blur-md">
+                <div className="absolute bottom-0 left-0 px-3 py-[6px] text-white text-xs font-medium bg-blend-lighten backdrop-blur">
                   {item.tag}
                 </div>
               </div>
 
-             
-              <div className="p-4 flex flex-col justify-between flex-grow">
-                <h2
-                  className={`mt-2 text-[18px] leading-[120%] tracking-wide font-bold font-[Mulish] transition-all ${
-                    activeId === item.id ? 'underline' : 'hover:underline'
-                  }`}
-                >
+              <div className="p-4 flex flex-col justify-between flex-grow bg-[#FFFFFF1A] backdrop-blur-[36.55px]">
+                <h2 className="mt-2 text-[23px] leading-[130%] tracking-wide font-bold font-[Mulish] transition-all">
                   {item.title}
                 </h2>
                 <div className="text-xs text-white mt-4">
-                  {item.location} &nbsp; &nbsp; {item.time}
+                  {item.location} &nbsp;&nbsp; {item.time}
                 </div>
               </div>
             </div>
@@ -141,11 +144,11 @@ const News = () => {
         </div>
       </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center mt-10 gap-4">
+      {/* it might be Pagination things there */}
+      {/* <div className="flex justify-center mt-10 gap-4">
         <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Previous</button>
         <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Next</button>
-      </div>
+      </div> */}
     </div>
   );
 };
