@@ -354,10 +354,7 @@ const CSR = () => {
                         </AnimatePresence>
                     </section>
                 </motion.div>
-                        </main>
-                        <div className='py-14 bg-black'>
-                            <Initiatives />
-            </div>
+            </main>
             <Footer />
         </div>
     );

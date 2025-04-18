@@ -6,9 +6,9 @@ import Facebook from "@/app/public/images/LifeAtVst/Footer/Facebook";
 import Instagram from "@/app/public/images/LifeAtVst/Footer/Instagram";
 import LinkedIn from "@/app/public/images/LifeAtVst/Footer/LinkedIn";
 
-const Footer = () => {
+const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }  ) => {
   return (
-    <footer className="bg-[#101010] text-white py-4 sm:py-6 md:py-7 lg:py-8">
+    <footer className={`bg-[#101010] text-white py-4 sm:py-6 md:py-7 lg:py-8 ${bgcolour}`}>
       <div className="container mx-auto px-3 sm:px-4 md:px-5 lg:px-8">
         <div className="flex flex-col lg:flex-row flex-wrap justify-between items-center lg:items-start gap-6 sm:gap-8 md:gap-6 lg:gap-6">
           {/* Logo Section */}
