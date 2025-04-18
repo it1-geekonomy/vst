@@ -173,7 +173,7 @@ export default function Page() {
         </div>
       </div>
 
-      <Footer />
+      <Footer bgcolour="bg-[#101010]" />
     </div>
   )
 }

@@ -285,8 +285,8 @@ const CSR = () => {
                     </section>
                 </motion.div>
             </main>
-            <Footer />
-        </div>
+            <Footer bgcolour="bg-[#101010]" />
+            </div>
     );
 };
 
