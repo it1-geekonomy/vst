@@ -12,6 +12,7 @@ interface CSRItemProps {
     description: string;
     year: string;
     images: string[];
+    currentIndex: number;
 }
 
 const poppins = Poppins({
@@ -73,7 +74,7 @@ const TimelineYear: React.FC<{ year: string; isActive: boolean; onClick: () => v
     );
 };
 
-const CSRItem: React.FC<CSRItemProps> = ({ title, description, images }) => {
+const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIndex }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -91,8 +92,8 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images }) => {
             exit={{ opacity: 0, y: -20 }}
             className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center px-4 sm:px-6 py-8 ${poppins.className}`}
         >
-            {/* Left side - Image */}
-            <div className="flex justify-center">
+            {/* Image Section */}
+            <div className={`flex justify-center ${currentIndex % 2 === 1 ? 'md:order-2' : 'md:order-1'}`}>
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-[80%] md:w-[85%] rounded-[2rem] overflow-hidden shadow-xl">
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -100,7 +101,10 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images }) => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.5 }}
+                            transition={{ 
+                                duration: 0.8,
+                                ease: "easeInOut"
+                            }}
                             className="absolute inset-0"
                         >
                             <Image
@@ -119,11 +123,11 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images }) => {
                 </div>
             </div>
 
-            {/* Right side - Content */}
-            <div className="relative space-y-6 md:mr-8">
-                <h3 className="text-2xl sm:text-3xl font-normal text-[#d7d1cd] text-center">{title}</h3>
+            {/* Content Section */}
+            <div className={`relative space-y-6 md:mr-8 ${currentIndex % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}>
+                <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{title}</h3>
                 <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
-                    <p className="text-sm sm:text-base text-gray-200 leading-relaxed text-[#d7d1cd]">
+                    <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
                         {description}
                     </p>
                 </div>
@@ -205,7 +209,7 @@ const CSR = () => {
                     </section>
 
                     {/* Timeline Section */}
-                    <section className="container mx-auto px-2 sm:px-4 py-4 sm:py-8 relative z-10">
+                    <section className="mx-auto px-2 sm:px-4 py-4 sm:py-8 relative z-10">
                         <div className="relative h-16 sm:h-20">
                             {/* Timeline Line */}
                             <div className="absolute h-[2px] bg-white w-full top-[20px] sm:top-[25px]" />
@@ -223,24 +227,60 @@ const CSR = () => {
 
                             {/* Moving Year */}
                             <motion.div
-                                className={`absolute right-0 top-[-12px] sm:top-[-15px] flex items-center cursor-pointer text-white z-10`}
+                                className={`absolute right-0 top-[-35px] sm:top-[-40px] flex flex-col items-center cursor-pointer text-white z-10`}
                                 animate={{ x: yearPosition }}
                                 transition={{ type: "spring", stiffness: 100 }}
                                 onClick={handleYearClick}
                             >
+                                <motion.div
+                                    animate={{ y: [0, 5, 0] }}
+                                    transition={{ 
+                                        duration: 1.5,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }}
+                                    className="mb-1"
+                                >
+                                    <svg 
+                                        width="20" 
+                                        height="20" 
+                                        viewBox="0 0 24 24" 
+                                        fill="none" 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path 
+                                            d="M7 10L12 15L17 10" 
+                                            stroke="white" 
+                                            strokeWidth="2" 
+                                            strokeLinecap="round" 
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
+                                </motion.div>
                                 <p className="text-lg sm:text-xl font-medium whitespace-nowrap">{currentData.year}</p>
                             </motion.div>
                         </div>
 
                         {/* Content Section */}
                         <AnimatePresence mode="wait">
-                            <CSRItem
+                            <motion.div
                                 key={currentData.year}
-                                title={currentData.title}
-                                description={currentData.description}
-                                year={currentData.year}
-                                images={currentData.images}
-                            />
+                                initial={{ opacity: 0, x: 50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -50 }}
+                                transition={{ 
+                                    duration: 0.8,
+                                    ease: "easeInOut"
+                                }}
+                            >
+                                <CSRItem
+                                    title={currentData.title}
+                                    description={currentData.description}
+                                    year={currentData.year}
+                                    images={currentData.images}
+                                    currentIndex={currentIndex}
+                                />
+                            </motion.div>
                         </AnimatePresence>
                     </section>
                 </motion.div>

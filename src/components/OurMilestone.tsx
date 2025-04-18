@@ -9,28 +9,26 @@ interface MilestoneItem {
   color: string
 }
 
-// Constants for bar dimensions based on interpretation
-const BAR_WIDTH_PX = 33
-const BAR_HEIGHT_PX = 127
-const SPACING_PX = 8 // Spacing between bar and digits
+// Reduced dimensions for smaller overall size
+const BAR_WIDTH_PX = 25
+const BAR_HEIGHT_PX = 100
 
 function OurMilestone() {
   const milestones: MilestoneItem[] = [
-    { value: 100, label: 'Years', suffix: '+', color: 'bg-purple-400' },
-    { value: 5000, label: 'Customers', suffix: '+', color: 'bg-blue-400' },
-    { value: 60, label: 'Brands', suffix: '+', color: 'bg-green-400' },
-    { value: 6, label: 'Locations', suffix: '+', color: 'bg-yellow-400' }
+    { value: 100, label: 'Years', suffix: '+', color: 'bg-[#B897FF]' },
+    { value: 5000, label: 'Customers', suffix: '+', color: 'bg-[#95C7FF]' },
+    { value: 60, label: 'Brands', suffix: '+', color: 'bg-[#50FFA0]' },
+    { value: 6, label: 'Locations', suffix: '+', color: 'bg-[#FEBF3D]' }
   ]
   
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center w-full bg-black text-white py-12 md:py-16 px-4 md:px-8">
-      {/* Typography Section */}
-      <div className="w-full lg:w-1/4 mb-12 lg:mb-0 lg:pr-8 text-center lg:text-left">
+    <div className="flex flex-col md:flex-col lg:flex-row justify-between items-center w-full bg-black text-white py-8 md:py-28 px-4 md:px-6">
+      {/* Typography Section - Now stays on top for both mobile AND tablet */}
+      <div className="w-full lg:w-1/4 mb-8 md:mb-10 lg:mb-0 lg:pr-6 text-center md:text-center lg:text-left">
         <div className="inline-block lg:w-full">
           <div style={{ 
             fontFamily: "Roc Grotesk",
-            fontWeight: 500,
-            fontSize: "57px", 
+            fontSize: "40px", 
             lineHeight: "1.1", 
             letterSpacing: "0%"
           }}>
@@ -41,7 +39,7 @@ function OurMilestone() {
       </div>
       
       {/* Counters Section */}
-      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-10 gap-y-16"> {/* Increased y-gap */}
+      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-12">
         {milestones.map((item, index) => (
           <CounterItem key={index} item={item} />
         ))}
@@ -51,7 +49,6 @@ function OurMilestone() {
 }
 
 function CounterItem({ item }: { item: MilestoneItem }) {
-  const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const counterRef = useRef<HTMLDivElement>(null)
   
@@ -77,71 +74,62 @@ function CounterItem({ item }: { item: MilestoneItem }) {
     }
   }, [])
   
-  useEffect(() => {
-    if (!isVisible) return
-    
-    let start = 0
-    const duration = 2000 // 2 seconds
-    const increment = item.value / (duration / 16)
-    let timer: NodeJS.Timeout
-    
-    const updateCounter = () => {
-      start += increment
-      if (start < item.value) {
-        setCount(Math.floor(start))
-        timer = setTimeout(updateCounter, 16)
-      } else {
-        setCount(item.value)
-      }
-    }
-    
-    updateCounter()
-    
-    return () => clearTimeout(timer)
-  }, [isVisible, item.value])
-
-  // Get first digit of the count
-  const firstDigit = count.toString()[0]
-  const restDigits = count.toString().slice(1)
+  // Get digits directly from the value
+  const valueStr = item.value.toString()
+  const firstDigit = valueStr[0]
+  const restDigits = valueStr.slice(1)
   
-  // Adjust the left offset to create overlap with the bar
-  const contentLeftOffset = `${BAR_WIDTH_PX - 20}px` // Reduced to create overlap
+  const contentLeftOffset = `${BAR_WIDTH_PX - 20}px`
 
   return (
-    <div ref={counterRef} className="flex flex-col items-start">
-      {/* Container for bar and positioned content */}
-      <div className="relative" style={{ minHeight: `${BAR_HEIGHT_PX + 40}px` }}> 
-        {/* Bar */}
+    <div ref={counterRef} className="flex flex-col items-start overflow-hidden">
+      <div 
+        className={`relative ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        style={{ 
+          minHeight: `${BAR_HEIGHT_PX + 30}px`,
+          transition: "transform 1s ease-out, opacity 1s ease-out",
+          transform: isVisible ? 'translateX(0)' : 'translateX(200px)'
+        }}
+      > 
         <div 
           className={`${item.color} absolute top-0 left-0`} 
           style={{ height: `${BAR_HEIGHT_PX}px`, width: `${BAR_WIDTH_PX}px` }}
         ></div>
         
-        {/* Absolute container for digits AND label */}
         <div 
-          className="absolute top-1/2 transform -translate-y-1/2 flex flex-col items-start" 
+          className="absolute top-1/3 transform -translate-y-1/2 flex flex-col items-start" 
           style={{ left: contentLeftOffset }} 
         >
-          {/* Digits container with first digit overlapping */}
-          <div className="flex items-baseline">
+          <div 
+            className="flex items-baseline relative"
+            style={{ bottom: "2px" }}
+          >
             <span 
-              className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk'] relative z-10" 
+              className="text-4xl sm:text-5xl md:text-5xl text-white font-['Roc_Grotesk'] relative z-10" 
               style={{
-                textShadow: '2px 2px 4px rgba(0,0,0,0.5)' // Optional: add shadow for better visibility
+                textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
+                marginRight: "-2px"
               }}
             >
               {firstDigit}
             </span> 
-            <span className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk']">
+            <span className="text-4xl sm:text-5xl md:text-5xl text-white font-['Roc_Grotesk']">
               {restDigits}
             </span>
-            <span className="text-5xl sm:text-6xl md:text-7xl text-white font-['Roc_Grotesk']">
-              {item.suffix}
+            <span 
+              className="text-4xl sm:text-5xl md:text-5xl text-white" 
+              style={{ 
+                fontFamily: 'Arial, sans-serif',
+                marginLeft: "0" 
+              }}
+            >
+              +
             </span>
           </div>
 
-          {/* Label with added padding-left */}
-          <div className="text-xl md:text-2xl lg:text-3xl text-gray-400 mt-0 font-['Roc_Grotesk'] text-left pl-8"> 
+          <div 
+            className="text-lg md:text-xl lg:text-2xl text-gray-400 mt-0 font-['Roc_Grotesk'] text-left pl-6"
+          > 
             {item.label}
           </div>
         </div>
