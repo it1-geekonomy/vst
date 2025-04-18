@@ -99,7 +99,7 @@ const News = () => {
   };
 
   return (
-    <div className="bg-black min-h-screen py-10 px-4 text-white flex flex-col items-center">
+    <div className="min-h-screen py-10 px-4 text-white flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-10 text-center">Our Latest Post</h1>
 
       <div className="w-full max-w-7xl flex justify-center">
