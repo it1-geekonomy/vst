@@ -5,7 +5,7 @@ import FranchiseSlider from "@/components/automotiveFranchises/franchiesMain";
 const CarPage = () => {
   return (
     <main className="relative min-h-screen bg-gradient-to-r from-[#1C1C1C] to-[#2C2535]">
-      {/* Hero Section */}
+      {/* Hero Sasaection */}
 
       {/* Franchise Slider Section */}
       <FranchiseSlider />
