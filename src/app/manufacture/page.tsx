@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import Tractor from '@/app/public/images/Manufacture/Tractor.png'
 import Image1 from '@/app/public/tillers/frame1.png'
@@ -6,6 +7,9 @@ import Image3 from '@/app/public/tillers/frame3.png'
 import Trusted1 from '@/app/public/tillers/Trusted1.png'
 import Timeless2 from '@/app/public/tillers/Timeless2.png'
 import Tough3 from '@/app/public/tillers/Tough3.png'
+import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
+
+
 
 const ManufacturePage = () => {
   return (
@@ -123,6 +127,9 @@ const ManufacturePage = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="mt-24">
+          <BusinessSectors />
         </div>
       </div>
     </div>
