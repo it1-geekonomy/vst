@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './Footer';
 import Initiatives from './Initiatives';
 import bg from '../app/public/makingdiff/bg.png';
-import flag from '../app/public/makingdiff/flag.svg';
+import flag from '../app/public/makingdiff/flag.png';
 import { Poppins } from 'next/font/google';
 
 interface CSRItemProps {
