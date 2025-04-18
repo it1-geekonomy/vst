@@ -5,13 +5,13 @@ import Image, { StaticImageData } from "next/image";
 import bg1 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (1).png";
 import bg2 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (2).png";
 import bg3 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 2 (1).png";
-import car1 from "@/app/public/faranchies/carpic/Mercedes 1 (1).png";
 import car2 from "@/app/public/faranchies/carpic/Benz Car 2 1.png";
 import car3 from "@/app/public/faranchies/carpic/land-rover car.png";
 import bg4 from "@/app/public/faranchies/bgpic/4carbg.png";
 import bg5 from "@/app/public/faranchies/bgpic/5carbg.png";
 import bg6 from "@/app/public/faranchies/bgpic/6carbg.png";
 import bg7 from "@/app/public/faranchies/bgpic/7carbg.png";
+import car1 from "@/app/public/faranchies/bgpic/car1.png";
 
 import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
 
