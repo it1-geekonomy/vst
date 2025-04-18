@@ -59,8 +59,8 @@ const VideosSection = () => {
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         {/* Main video - 60% width on desktop */}
-        <div className="w-full md:w-[60%]">
-          <div className="relative bg-[#1B1B1B] overflow-hidden rounded-lg cursor-pointer group h-full">
+        <div className="w-full md:w-[60%] bg-white/10 backdrop-blur-sm">
+          <div className="relative overflow-hidden rounded-lg cursor-pointer group h-full">
             <div className="relative w-full aspect-video">
               <Image
                 src={videoData[0].thumbnail}
@@ -103,7 +103,7 @@ const VideosSection = () => {
           {videoData.slice(1, 4).map((video) => (
             <div 
               key={video.id} 
-              className="flex bg-[#1B1B1B] rounded-lg overflow-hidden cursor-pointer group"
+              className="flex rounded-lg overflow-hidden cursor-pointer group bg-white/10 backdrop-blur-sm"
             >
               {/* Video thumbnail with play button */}
               <div className="relative w-[40%] aspect-square">
