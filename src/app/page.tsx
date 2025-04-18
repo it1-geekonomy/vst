@@ -39,7 +39,7 @@ export default function Home() {
       {/* Hero Section with Slider */}
       <Hero />
       <OurMilestone />
-      {/* Life at VST Section */}
+      {/* Life at VST Sectssssion */}
       <LifeAtVst />
       <EmpoweringScroll />
 

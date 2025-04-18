@@ -46,6 +46,8 @@ export default function Page() {
       const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
       const fileExtension = file.name.split('.').pop()?.toLowerCase();
       if (validTypes.includes(file.type) || ['doc', 'docx', 'pdf', 'txt'].includes(fileExtension || '')) {
+
+
         setSelectedFile(file);
         setFileError('');
       } else {
@@ -54,6 +56,7 @@ export default function Page() {
       }
     }
   };
+  
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -105,6 +108,7 @@ export default function Page() {
   };
   
   // Function to get file icon based on type
+
   const getFileIcon = (fileName: string) => {
     const extension = fileName.split('.').pop()?.toLowerCase();
     switch (extension) {
@@ -119,7 +123,7 @@ export default function Page() {
         return '📎';
     }
   };
-
+  
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section with Background */}

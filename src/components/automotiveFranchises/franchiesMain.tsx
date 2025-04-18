@@ -41,6 +41,8 @@ interface SlideData {
     to: string;
   };
   LogoComponent: React.ComponentType<{ className?: string }>;
+  description: string;
+  learnMoreLink: string;
 }
 
 const slides: SlideData[] = [
@@ -54,6 +56,8 @@ const slides: SlideData[] = [
       to: "rgba(120, 14, 38, 0.4)",
     },
     LogoComponent: PorscheIcon,
+    description: "The primary showroom is located in central Bangalore on Sankey road. The second showroom along with an adjoining workshop is located in Whitefield, an affluent neighborhood on the eastern side of the city. Since inception, the VST Porsche franchise has done exceptionally well in expanding the market for this niche premium segment in the state, winning the bronze performance award by Porsche Middle East for 2023.",
+    learnMoreLink: "https://www.porsche.com"
   },
   {
     id: 2,
@@ -65,6 +69,8 @@ const slides: SlideData[] = [
       to: "#5A6292",
     },
     LogoComponent: MercedesIcon,
+    description: "Mercedes-Benz at VST offers luxury vehicles with cutting-edge technology and unparalleled comfort. Our showroom showcases the latest models with expert sales consultants to guide customers through personalized experiences, ensuring they find the perfect Mercedes-Benz that matches their lifestyle and preferences.",
+    learnMoreLink: "https://www.mercedes-benz.com"
   },
   {
     id: 3,
@@ -76,6 +82,8 @@ const slides: SlideData[] = [
       to: "  rgba(220, 171, 119, 0.4)",
     },
     LogoComponent: LandRoverIcon,
+    description: "Our Land Rover franchise delivers premium off-road capability combined with refined luxury. With state-of-the-art service facilities and a team of specialized technicians, we provide comprehensive maintenance and support for these exceptional vehicles designed to conquer any terrain while maintaining superior comfort.",
+    learnMoreLink: "https://www.landrover.com"
   },
   {
     id: 4,
@@ -87,6 +95,8 @@ const slides: SlideData[] = [
       to: "#0F1F2A",
     },
     LogoComponent: MaseratiIcon,
+    description: "Maserati represents Italian craftsmanship at its finest, combining racing heritage with elegant design. Our dedicated showroom offers the complete lineup of these distinctive vehicles, each embodying the perfect balance of performance and luxury that has made Maserati a symbol of automotive excellence.",
+    learnMoreLink: "https://www.maserati.com"
   },
   {
     id: 5,
@@ -98,6 +108,8 @@ const slides: SlideData[] = [
       to: "rgba(111, 190, 255, 0.4);",
     },
     LogoComponent: KiaIcon,
+    description: "Our Kia franchise offers innovative vehicles with industry-leading warranties and advanced features. The showroom provides a modern shopping experience with interactive displays and knowledgeable staff ready to demonstrate the latest technologies that make Kia one of the fastest-growing automotive brands.",
+    learnMoreLink: "https://www.kia.com"
   },
   {
     id: 6,
@@ -109,6 +121,8 @@ const slides: SlideData[] = [
       to: "#0F1F2A",
     },
     LogoComponent: TataIcon,
+    description: "Tata Motors at VST brings reliable, innovative vehicles designed for Indian roads and conditions. Our franchise emphasizes value, durability, and safety across a diverse range of passenger and commercial vehicles, supported by comprehensive after-sales service and genuine parts availability.",
+    learnMoreLink: "https://www.tatamotors.com"
   },
   {
     id: 7,
@@ -120,6 +134,8 @@ const slides: SlideData[] = [
       to: "#0F1F2A",
     },
     LogoComponent: MahindraIcon,
+    description: "Mahindra vehicles combine rugged capability with modern design and technology. Our franchise showcases the full range of SUVs and commercial vehicles, backed by specialized service centers equipped to maintain these tough, versatile vehicles built to handle diverse driving conditions.",
+    learnMoreLink: "https://www.mahindra.com"
   },
   {
     id: 8,
@@ -131,6 +147,8 @@ const slides: SlideData[] = [
       to: "#0F1F2A",
     },
     LogoComponent: DucatiIcon,
+    description: "Ducati represents the pinnacle of Italian motorcycle engineering and design. Our dedicated showroom features these iconic motorcycles known for their performance, distinctive sound, and unmistakable style, with expert staff offering test rides and customization options for enthusiasts.",
+    learnMoreLink: "https://www.ducati.com"
   },
 ];
 
@@ -183,7 +201,7 @@ const FranchiseSlider = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen">
+    <div className="relative w-full min-h-screen  lg:mt-[-8rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none"
@@ -202,7 +220,7 @@ const FranchiseSlider = () => {
         transition={{ duration: 0.01 }}
       >
         {/* Car section */}
-        <div className="relative w-full h-auto sm:h-[90vh] lg:h-screen flex flex-col lg:flex-row">
+        <div className="relative w-full h-auto sm:h-[85vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1] lg:mb-[10rem] mb-[4rem]">
           {/* Left section with background and car */}
           <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full">
             <AnimatePresence mode="wait">
@@ -231,8 +249,8 @@ const FranchiseSlider = () => {
               />
               <div 
                 className="hidden lg:block absolute top-0 right-[2rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%]  rounded-br-full  
-    rounded-bl-none   
-    rounded-t-none " 
+                rounded-bl-none   
+                rounded-t-none " 
                 style={{ backgroundColor: slides[currentSlide].bgColor.from }}
               />
 
@@ -258,9 +276,9 @@ const FranchiseSlider = () => {
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-4 sm:px-6 lg:px-10 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
+          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-10 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
             {/* Title */}
-            <div className="flex-1 flex items-center justify-center">
+            <div className="flex-1 flex items-center justify-center sm:mb-[6rem] mb-[3rem]">
               <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-2xl sm:text-3xl lg:text-[4rem] xl:text-[5rem] tracking-[0.2em] text-center">
                 Our
                 <br />
@@ -361,20 +379,31 @@ const FranchiseSlider = () => {
           </div>
         </div>
 
-        {/* Description section */}
-        <div className="w-full py-1 sm:py-1 lg:py-10 px-4 sm:px-6 lg:px-24 flex justify-center pt-6 sm:pt-1 lg:pt-10 mt-[-1rem] sm:mt-[-2rem] lg:mt-0">
-          <p
-            className="text-white text-sm sm:text-base lg:text-[24px] text-center lg:text-justify 
-            font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
-            font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
-          >
-            The primary showroom is located in central Bangalore on Sankey road.
-            The second showroom along with an adjoining workshop is located in
-            Whitefield, an affluent neighborhood on the eastern side of the city.
-            Since inception, the VST Porsche franchise has done exceptionally well
-            in expanding the market for this niche premium segment in the state,
-            winning the bronze performance award by Porsche Middle East for 2023.
-          </p>
+        {/* Description section - moved back outside but made dynamic */}
+        <div className="w-full py-1 sm:py-2 md:py-4 lg:py-10 px-4 sm:px-6 lg:px-24 flex flex-col items-center pt-6 sm:pt-4  lg:pt-1 mt-[-10rem] sm:mt-[-2rem] lg:mt-[-6rem]">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8">
+            VST Supercars
+          </h2>
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={`description-${currentSlide}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="text-white text-sm sm:text-base lg:text-[24px] text-center lg:text-justify 
+              font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
+              font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
+            >
+              {slides[currentSlide].description}
+            </motion.p>
+          </AnimatePresence>
+          
+          <a href={slides[currentSlide].learnMoreLink} className="mt-6 sm:mt-8 lg:mt-10 inline-block w-auto" target="_blank" rel="noopener noreferrer">
+            <h3 className="border-2 border-[#DFAC4F] rounded-xl sm:rounded-2xl px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#DFAC4F] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F]/10 transition-colors">
+              Learn More
+            </h3>
+          </a>
         </div>
 
         <BusinessSectors />
