@@ -65,7 +65,7 @@ export default function Page() {
       [name as keyof FormData]: value,
     }));
   };
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
