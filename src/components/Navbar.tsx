@@ -124,7 +124,7 @@ export default function Navbar() {
                     Auto Parts
                   </Link>
                   <Link href="/manufacture" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
-                    Manufcture
+                    Manufacture
                   </Link>
                 </div>
               </div>
