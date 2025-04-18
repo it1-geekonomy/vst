@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './Footer';
+import Initiatives from './Initiatives';
 import bg from '../app/public/makingdiff/bg.png';
 import flag from '../app/public/makingdiff/flag.svg';
 import { Poppins } from 'next/font/google';
@@ -91,7 +92,7 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
     }, [images.length]);
 
     // Updated logic to handle image positioning for all years including 2018-2019
-    const isImageOnLeft = title === "Community Development" 
+    const isImageOnLeft = title === "Community Development"
         ? currentImageIndex === 0 || currentImageIndex === 2  // For 2018-2019
         : currentImageIndex === 0 || currentImageIndex === 2 || images[currentImageIndex].includes('image3.jpeg');  // For other years
 
@@ -103,7 +104,7 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
             className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center px-4 sm:px-6 py-8 ${poppins.className}`}
         >
             {/* Image Section */}
-            <motion.div 
+            <motion.div
                 className={`flex justify-center ${isImageOnLeft ? 'md:order-1' : 'md:order-2'}`}
                 layout
                 transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -115,7 +116,7 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ 
+                            transition={{
                                 duration: 0.4,
                                 ease: "easeInOut"
                             }}
@@ -138,7 +139,7 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
             </motion.div>
 
             {/* Content Section */}
-            <motion.div 
+            <motion.div
                 className={`relative space-y-6 md:mr-8 ${isImageOnLeft ? 'md:order-2' : 'md:order-1'}`}
                 layout
                 transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -261,25 +262,25 @@ const CSR = () => {
                             >
                                 <motion.div
                                     animate={{ y: [0, 5, 0] }}
-                                    transition={{ 
+                                    transition={{
                                         duration: 1.5,
                                         repeat: Infinity,
                                         ease: "easeInOut"
                                     }}
                                     className="mb-1"
                                 >
-                                    <svg 
-                                        width="20" 
-                                        height="20" 
-                                        viewBox="0 0 24 24" 
-                                        fill="none" 
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
-                                        <path 
-                                            d="M7 10L12 15L17 10" 
-                                            stroke="white" 
-                                            strokeWidth="2" 
-                                            strokeLinecap="round" 
+                                        <path
+                                            d="M7 10L12 15L17 10"
+                                            stroke="white"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
                                             strokeLinejoin="round"
                                         />
                                     </svg>
@@ -304,7 +305,7 @@ const CSR = () => {
                                     className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center px-4 sm:px-6 py-8 ${poppins.className}`}
                                 >
                                     {/* Image Section */}
-                                    <motion.div 
+                                    <motion.div
                                         className={`flex justify-center ${isImageOnLeft ? 'md:order-1' : 'md:order-2'}`}
                                         layout
                                         transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -336,7 +337,7 @@ const CSR = () => {
                                     </motion.div>
 
                                     {/* Content Section */}
-                                    <motion.div 
+                                    <motion.div
                                         className={`relative space-y-6 md:mr-8 ${isImageOnLeft ? 'md:order-2' : 'md:order-1'}`}
                                         layout
                                         transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -353,7 +354,10 @@ const CSR = () => {
                         </AnimatePresence>
                     </section>
                 </motion.div>
-            </main>
+                        </main>
+                        <div className='py-14 bg-black'>
+                            <Initiatives />
+            </div>
             <Footer />
         </div>
     );
