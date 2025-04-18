@@ -74,7 +74,7 @@ const LifeAtVst = () => {
 
       {/* Fixed Title Section with subtitle and description */}
       <div className="absolute top-6 md:top-10 left-1/2 transform -translate-x-1/2 md:left-auto md:transform-none md:right-[-19.5%] z-40 text-center w-full md:w-auto">
-        <h1 
+        <h1
 
           className="mb-2 text-white text-4xl md:text-6xl lg:text-7xl xl:text-[80px] font-rocWide"
           style={{
@@ -85,16 +85,16 @@ const LifeAtVst = () => {
         >
           Life At VST
         </h1>
-        
+
         {/* Container for horizontal line and white ball */}
         <div className="relative flex justify-center items-center mb-1 w-full">
           {/* White ball at the start of line */}
           <div className="w-3 h-3 md:w-4 md:h-4 bg-[#8CE0FF] rounded-full flex-shrink-0"></div>
-          
+
           {/* Horizontal line with gradient that extends to the right edge */}
           <div className="h-[2px] gradient-line flex-grow"></div>
         </div>
-        
+
         {/* Subtitle and description with more space on mobile */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -105,10 +105,10 @@ const LifeAtVst = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="px-4 md:px-4 w-full max-w-[100%] md:max-w-[320px] lg:max-w-[450px] xl:max-w-[600px] mx-auto h-[230px] md:h-auto overflow-y-auto md:overflow-visible"
           >
-            <h2 className="text-2xl md:text-xl lg:text-1xl xl:text-1xl font-semibold mb-3 text-center font-poppins">
+            <h2 className="text-2xl md:text-xl lg:text-1xl xl:text-1xl font-normal mb-3 text-start font-rocWide">
               {slides[currentSlide].subtitle}
             </h2>
-            <p className="text-base md:text-xs lg:text-base xl:text-base text-center font-poppins leading-relaxed md:leading-tight hyphens-auto " style={{ wordBreak: "break-word", textAlign: "justify", textJustify: "inter-word" }}>
+            <p className="text-base md:text-xs lg:text-base xl:text-base text-center font-poppins font-normal leading-relaxed md:leading-tight hyphens-auto " style={{ wordBreak: "break-word", textAlign: "justify", textJustify: "inter-word" }}>
               {slides[currentSlide].description}
             </p>
           </motion.div>
