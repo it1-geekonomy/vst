@@ -84,20 +84,20 @@ export default function NewsMedia() {
           <div className="container mx-auto h-full">
             <div className="flex h-full">
               {/* Left content - 60% */}
-              <div className="w-full lg:w-[60%] flex flex-col items-center">
-                <div className="w-full max-w-3xl px-8 h-full flex flex-col">
+              <div className="w-full lg:w-[55%] flex flex-col items-center">
+                <div className="w-full lg:max-w-3xl px-8 xl:px-24 h-full flex flex-col">
                   {/* Hero Title */}
-                  <div className="flex items-center pt-92 h-[200px]">
-                    <div className="relative h-full flex items-center">
+                  <div className="flex items-center pt-32 lg:pt-44 xl:pt-72 2xl:pt-56 h-[200px]">
+                    <div className="relative h-full flex items-center w-full">
                       {headlines.map((headline, index) => (
                         <h1 
                           key={index}
-                          className={`text-white text-5xl md:text-6xl lg:text-7xl font-bold max-w-lg leading-tight absolute transition-all duration-1000 ${
+                          className={`text-white lg:w-[35rem] w-full text-4xl sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-6xl leading-tight tracking-tight font-poppins font-bold absolute transition-all duration-1000 ${
                             currentIndex === index 
                               ? "opacity-100 translate-x-0" 
                               : index === (currentIndex + 1) % headlines.length || (currentIndex === headlines.length - 1 && index === 0)
-                                ? "opacity-0 translate-x-full" 
-                                : "opacity-0 -translate-x-full"
+                                ? "opacity-0" 
+                                : "opacity-0"
                           }`}
                         >
                           {headline}
@@ -107,7 +107,7 @@ export default function NewsMedia() {
                   </div>
                   
                   {/* News Cards - positioned at bottom with animation */}
-                  <div className="w-full mt-auto mb-16 relative overflow-hidden">
+                  <div className="w-full mt-auto mb-32 lg:mb-16 relative overflow-hidden">
                     <div className="relative h-[220px]">
                       {cards.map((card, index) => (
                         <div 
@@ -167,10 +167,10 @@ export default function NewsMedia() {
               </div>
               
               {/* Right sidebar - Popular This Week - 40% */}
-              <div className="hidden lg:flex w-[40%] flex-col justify-end ">
+              <div className="hidden lg:flex w-[45%] xl:w-[40%] flex-col justify-end pr-10 pb-18">
                 <div className="bg-black/70 h-[85vh] w-full overflow-hidden flex flex-col bg-white/10 backdrop-blur-sm">
                   <div className="flex flex-col h-full px-12 pt-16 pb-8">
-                    <h2 className="text-4xl font-bold mb-8 text-white">Popular this week</h2>
+                    <h2 className="text-4xl font-bold mb-8 text-white font-poppins">Popular this week</h2>
                     <div className="space-y-4 flex-grow overflow-y-auto hideScrollbar">
                       {cards.map((item, index) => (
                         <div key={index} className="flex gap-1 items-center justify-center h-28 transition-all duration-200 hover:bg-yellow-500/20 cursor-pointer rounded">
