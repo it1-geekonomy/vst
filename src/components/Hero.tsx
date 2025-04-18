@@ -77,18 +77,26 @@ const Hero = () => {
     }
   };
 
+  // Get correct width based on current index and screen size
+  const getWidth = (index: number) => {
+    return currentSlide === index ? "100%" : "w-20 sm:w-24 md:w-34";
+  };
+
   return (
     <section className="relative h-screen overflow-hidden">
-      <div className="relative h-full w-full flex flex-row">
+      <div 
+        className="relative h-full w-full flex flex-row"
+        style={{ willChange: "contents" }}
+      >
         {/* Navigation Strips */}
         {showImages.map((slide, index) => (
           <div
             key={slide.id}
-            className={`relative transition-all duration-700 ease-in-out ${
-              currentSlide === index
-                ? "w-full"
-                : "w-20 sm:w-24 md:w-34 cursor-pointer"
-            }`}
+            className={`relative ${currentSlide === index ? "w-full" : "w-20 sm:w-24 md:w-34 cursor-pointer"}`}
+            style={{
+              transition: "width 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+              willChange: "width",
+            }}
             onClick={() => handleSlideClick(index)}
           >
             {/* Background Image */}
@@ -97,34 +105,27 @@ const Hero = () => {
                 src={slide.image}
                 alt={slide.label}
                 fill
-                className={`object-cover transition-all duration-700 ${
-                  currentSlide === index
-                    ? "opacity-100 scale-100"
-                    : "opacity-90 scale-110 object-left"
-                }`}
                 style={{
+                  objectFit: "cover",
                   objectPosition: currentSlide === index ? "center" : "0% center",
+                  opacity: currentSlide === index ? 1 : 0.9,
+                  transform: `translate3d(0, 0, 0) scale(${currentSlide === index ? 1 : 1.1})`,
+                  transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                  willChange: "transform, opacity"
                 }}
                 priority={index === 0}
               />
-
-              {/* Colored overlay with gradient */}
-              {/* <div
-                  className={`absolute inset-0 w-full h-full transition-all duration-700 bg-gradient-to-b ${
-                    currentSlide === index
-                      ? "opacity-0"
-                      : `${slide.color} opacity-80`
-                  }`}
-                /> */}
             </div>
-
-            {/* Content */}
-          
 
             {/* Label for inactive slides */}
             {currentSlide !== index && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-white font-medium -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg">
+              <div className="absolute inset-0 flex items-center justify-center  border-2 border-red-500  bg-white/10 backdrop-blur-sm">
+                <span 
+                  className="text-white font-medium -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg"
+                  style={{
+                    transition: "opacity 900ms ease-in-out"
+                  }}
+                >
                   {slide.label}
                 </span>
               </div>
