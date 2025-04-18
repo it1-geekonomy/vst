@@ -10,6 +10,9 @@ import imgcard4 from "@/app/public/news-and-media/frame2.png";
 import imgcard5 from "@/app/public/news-and-media/frame4.png";
 import News from "@/components/News";
 import VideosSection from "@/components/VideosSection";
+import { Contact } from "lucide-react";
+import ContactUs from "@/components/GetInTouch";
+import Footer from "@/components/Footer";
 
 export default function NewsMedia() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -205,15 +208,20 @@ export default function NewsMedia() {
               </div>
             </div>
           </div>
+          
         </div>
       </section>
       {/*  Section 2 */}
       <section className="bg-[#2E2E2E]">
         <News/>
+        <VideosSection />
+        <div className="bg-[#2E2E2E]">
+          <ContactUs bgcolour="bg-[#2E2E2E]"/>
+          <Footer bgcolour="bg-[#2E2E2E]"/>
+        </div>
       </section>
       
       {/* Videos Section */}
-        <VideosSection />
     </main>
   );
 }
