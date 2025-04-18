@@ -27,8 +27,8 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start pt-[50px] lg:pt-0">
           <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
             <div className="w-full flex justify-end pr-10 sm:pr-16 md:pr-20 lg:pr-20">
-              <h1 
-                className="text-[#FEBF3D] text-3xl xs:text-4xl sm:text-5xl md:text-5xl font-roc font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8"
+              <h1
+                className="text-[#FEBF3D] text-3xl xs:text-4xl sm:text-5xl md:text-5xl font-rocWide font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8 "
               >
                 Get In Touch
               </h1>
@@ -49,11 +49,11 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
         <div className="w-full lg:w-1/2 mt-6 lg:mt-0 flex justify-center lg:justify-start">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8 w-full max-w-[450px] sm:max-w-[500px] md:max-w-[550px]"
+            className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8 w-full max-w-[450px] sm:max-w-[500px] md:max-w-[550px] font-rocWide font-medium"
           >
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 ">
               <div className="flex-1">
-                <label className="block text-white mb-1 font-roc sm:mb-2">First Name</label>
+                <label className="block text-white mb-1  sm:mb-2">First Name</label>
                 <input
                   {...register("firstName", { required: true })}
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
@@ -63,7 +63,7 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 )}
               </div>
               <div className="flex-1">
-                <label className="block text-white mb-1 font-roc sm:mb-2">Last Name</label>
+                <label className="block text-white mb-1  sm:mb-2">Last Name</label>
                 <input
                   {...register("lastName", { required: true })}
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
@@ -76,7 +76,7 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               <div className="flex-1">
-                <label className="block text-white mb-1 font-roc sm:mb-2">Email</label>
+                <label className="block text-white mb-1 sm:mb-2">Email</label>
                 <input
                   {...register("email", {
                     required: true,
@@ -94,7 +94,7 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 )}
               </div>
               <div className="flex-1">
-                <label className="block text-white mb-1 font-roc sm:mb-2">Phone Number</label>
+                <label className="block text-white mb-1 sm:mb-2">Phone Number</label>
                 <input
                   {...register("phone", { required: true })}
                   type="tel"
@@ -107,7 +107,7 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
             </div>
 
             <div>
-              <label className="block text-white mb-1 font-roc sm:mb-2">Message</label>
+              <label className="block text-white mb-1 sm:mb-2">Message</label>
               <textarea
                 {...register("message", { required: true })}
                 className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white min-h-[80px] xs:min-h-[100px] md:min-h-[120px]"
@@ -119,7 +119,7 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
 
             <button
               type="submit"
-              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg  font-poppins"
+              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-poppins font-medium"
             >
               Send Message
             </button>
