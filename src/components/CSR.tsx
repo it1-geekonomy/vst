@@ -76,14 +76,24 @@ const TimelineYear: React.FC<{ year: string; isActive: boolean; onClick: () => v
 
 const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIndex }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentImageIndex((prev) => (prev + 1) % images.length);
-        }, 3000); // Change every 3 seconds
+            setIsTransitioning(true);
+            setTimeout(() => {
+                setCurrentImageIndex((prev) => (prev + 1) % images.length);
+                setIsTransitioning(false);
+            }, 400);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [images.length]);
+
+    // Updated logic to handle image positioning for all years including 2018-2019
+    const isImageOnLeft = title === "Community Development" 
+        ? currentImageIndex === 0 || currentImageIndex === 2  // For 2018-2019
+        : currentImageIndex === 0 || currentImageIndex === 2 || images[currentImageIndex].includes('image3.jpeg');  // For other years
 
     return (
         <motion.div
@@ -93,7 +103,11 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
             className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center px-4 sm:px-6 py-8 ${poppins.className}`}
         >
             {/* Image Section */}
-            <div className={`flex justify-center ${currentIndex % 2 === 1 ? 'md:order-2' : 'md:order-1'}`}>
+            <motion.div 
+                className={`flex justify-center ${isImageOnLeft ? 'md:order-1' : 'md:order-2'}`}
+                layout
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-[80%] md:w-[85%] rounded-[2rem] overflow-hidden shadow-xl">
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -102,7 +116,7 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ 
-                                duration: 0.8,
+                                duration: 0.4,
                                 ease: "easeInOut"
                             }}
                             className="absolute inset-0"
@@ -121,17 +135,21 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
                         </motion.div>
                     </AnimatePresence>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Content Section */}
-            <div className={`relative space-y-6 md:mr-8 ${currentIndex % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}>
+            <motion.div 
+                className={`relative space-y-6 md:mr-8 ${isImageOnLeft ? 'md:order-2' : 'md:order-1'}`}
+                layout
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
                 <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{title}</h3>
                 <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
                     <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
                         {description}
                     </p>
                 </div>
-            </div>
+            </motion.div>
         </motion.div>
     );
 };
@@ -140,7 +158,16 @@ const CSR = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [yearPosition, setYearPosition] = useState(0);
     const [stepSize, setStepSize] = useState(200);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const maxSteps = timelineData.length;
+
+    // Add image rotation effect
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % 3);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
 
     // Adjust step size based on screen width
     useEffect(() => {
@@ -161,7 +188,6 @@ const CSR = () => {
 
     const handleYearClick = () => {
         const newPosition = yearPosition - stepSize;
-
         if (Math.abs(newPosition) >= stepSize * (maxSteps - 1)) {
             setYearPosition(0);
             setCurrentIndex(0);
@@ -172,6 +198,7 @@ const CSR = () => {
     };
 
     const currentData = timelineData[currentIndex];
+    const isImageOnLeft = currentImageIndex === 0 || currentImageIndex === 2 || currentData.images[currentImageIndex].includes('image3.jpeg');
 
     return (
         <div className={`flex flex-col min-h-screen ${poppins.className}`}>
@@ -268,18 +295,60 @@ const CSR = () => {
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -50 }}
-                                transition={{ 
-                                    duration: 0.8,
-                                    ease: "easeInOut"
-                                }}
+                                transition={{ duration: 0.8, ease: "easeInOut" }}
                             >
-                                <CSRItem
-                                    title={currentData.title}
-                                    description={currentData.description}
-                                    year={currentData.year}
-                                    images={currentData.images}
-                                    currentIndex={currentIndex}
-                                />
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center px-4 sm:px-6 py-8 ${poppins.className}`}
+                                >
+                                    {/* Image Section */}
+                                    <motion.div 
+                                        className={`flex justify-center ${isImageOnLeft ? 'md:order-1' : 'md:order-2'}`}
+                                        layout
+                                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                                    >
+                                        <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-[80%] md:w-[85%] rounded-[2rem] overflow-hidden shadow-xl">
+                                            <AnimatePresence mode="wait">
+                                                <motion.div
+                                                    key={currentImageIndex}
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 1 }}
+                                                    exit={{ opacity: 0 }}
+                                                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                                                    className="absolute inset-0"
+                                                >
+                                                    <Image
+                                                        src={currentData.images[currentImageIndex]}
+                                                        alt={`${currentData.title} - Image ${currentImageIndex + 1}`}
+                                                        fill
+                                                        sizes="(max-width: 640px) 80vw, (max-width: 768px) 90vw, 45vw"
+                                                        className="object-cover rounded-[2rem]"
+                                                        onError={(e) => {
+                                                            console.error(`Error loading image: ${currentData.images[currentImageIndex]}`);
+                                                            e.currentTarget.src = '/placeholder.jpg';
+                                                        }}
+                                                    />
+                                                </motion.div>
+                                            </AnimatePresence>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Content Section */}
+                                    <motion.div 
+                                        className={`relative space-y-6 md:mr-8 ${isImageOnLeft ? 'md:order-2' : 'md:order-1'}`}
+                                        layout
+                                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                                    >
+                                        <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{currentData.title}</h3>
+                                        <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
+                                            <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
+                                                {currentData.description}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                </motion.div>
                             </motion.div>
                         </AnimatePresence>
                     </section>
