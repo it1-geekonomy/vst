@@ -26,7 +26,7 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row justify-around items-start gap-6 xs:gap-8 md:gap-10 lg:gap-12">
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start pt-[50px] lg:pt-0">
           <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
-            <div className="w-full flex justify-end pr-10 sm:pr-16 md:pr-20 lg:pr-24">
+            <div className="w-full flex justify-end pr-10 sm:pr-16 md:pr-20 lg:pr-20">
               <h1 
                 className="text-[#FEBF3D] text-3xl xs:text-4xl sm:text-5xl md:text-5xl font-roc font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8"
               >

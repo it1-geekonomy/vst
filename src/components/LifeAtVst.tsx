@@ -132,12 +132,12 @@ const LifeAtVst = () => {
 
       {/* Digits component with flowing gradient animation */}
       <div className="hidden md:block absolute top-0 left-0 w-[80%] h-full z-20 md:left-[-2%]">
-        <div className="relative w-full h-full flex items-center justify-center sm:left-[-8%]">
-          <span className="text-[150px] lg:text-[200px] xl:text-[386px] font-roc text-white font-weight-200 absolute left-[35%] sm:left-[42%] lg:left-[36%] transform -translate-x-1/2">0</span>
+        <div className="relative w-full h-full flex items-center justify-center sm:left-[-20%] md:left-[-35%] sm:top-[15%]">
+          <span className="text-[150px] lg:text-[200px] xl:text-[300px] font-rocWide text-white font-weight-200 absolute left-[5%] sm:left-[55%] lg:left-[62%] transform -translate-x-1/2">0</span>
           <AnimatePresence mode="wait">
             <motion.span
               key={currentSlide}
-              className="text-[150px] lg:text-[200px] xl:text-[386px] font-roc animate-flowing-gradient absolute left-[calc(35%+150px)] lg:left-[calc(38%+180px)] xl:left-[calc(42%+220px)] transform -translate-x-1/2"
+              className="text-[150px] lg:text-[200px] xl:text-[300px] font-rocWide animate-flowing-gradient absolute left-[calc(55%+150px)] lg:left-[calc(58%+180px)] xl:left-[calc(62%+220px)] transform -translate-x-1/2"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
