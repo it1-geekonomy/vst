@@ -21,10 +21,10 @@ export default function InitiativesAni() {
     const [currentImg, setCurrentImg] = useState(defaultImg);
     const [activeSection, setActiveSection] = useState(null);
 
-    const handleMouseEnter = (section) => {
-        setCurrentImg(imagesMap[section]);
-        setActiveSection(section);
-    };
+    // const handleMouseEnter = (section) => {
+    //     setCurrentImg(imagesMap[section]);
+    //     setActiveSection(section);
+    // };
 
     const handleMouseLeave = () => {
         setCurrentImg(defaultImg);
