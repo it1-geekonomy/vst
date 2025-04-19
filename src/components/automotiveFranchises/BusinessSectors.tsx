@@ -1,11 +1,20 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import EducationIcon from '@/app/public/common/BusinessSectorIcons/EducationIcon.png';
 import Auto from '@/app/public/common/BusinessSectorIcons/Auto.png';
 import ManufacturingIcon from '@/app/public/common/BusinessSectorIcons/ManufacturingIcon.png';
-
+import Automobile from '@/app/public/common/BusinessSectorIcons/Automobile.png';
 const BusinessSectors = () => {
+  const pathname = usePathname();
+  const isAutomotiveFranchisesPage = pathname === '/automotive-franchises';
+  const isAutoPartsPage = pathname === '/auto-parts';
+  const isManufacturePage = pathname === '/manufacture';
+  const isEducationPage = pathname === '/education';
+  
   return (
     <div className="w-full flex justify-center items-center relative z-10 mt-28"> {/* Adjusted top margin */}
       <div
@@ -33,21 +42,33 @@ const BusinessSectors = () => {
             </svg>
           </button>
 
-          <div className="flex gap-8 sm:gap-12 md:gap-16 lg:gap-24 overflow-x-auto px-2 sm:px-4 md:px-6 lg:px-0 scrollbar-hide">
-            <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <Image src={Auto} alt="Auto" />
+          <div className="flex gap-8 sm:gap-12 md:gap-16 lg:gap-24 px-2 sm:px-4 md:px-6 lg:px-0">
+          {!isAutomotiveFranchisesPage && (
+            <Link href="/automotive-franchises" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
+              <Image src={Automobile} alt="Auto" />
               <span className="mt-2 text-xs sm:text-sm"></span>
             </Link>
+          )}
+            {!isAutoPartsPage && (
+              <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
+                <Image src={Auto} alt="Auto" />
+                <span className="mt-2 text-xs sm:text-sm"></span>
+              </Link>
+            )}
 
-            <Link href="/manufacture" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <Image src={ManufacturingIcon} alt="Manufacturing" />
-              <span className="mt-2 text-xs sm:text-sm"></span>
-            </Link>
+            {!isManufacturePage && (
+              <Link href="/manufacture" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
+                <Image src={ManufacturingIcon} alt="Manufacturing" />
+                <span className="mt-2 text-xs sm:text-sm"></span>
+              </Link>
+            )}
 
-            <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <Image src={EducationIcon} alt="Education" />
-              <span className="mt-2 text-xs sm:text-sm"></span>
-            </Link>
+            {!isEducationPage && (
+              <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
+                <Image src={EducationIcon} alt="Education" />
+                <span className="mt-2 text-xs sm:text-sm"></span>
+              </Link>
+            )}
           </div>
 
           <button className="text-white hidden md:block hover:opacity-80 transition-opacity">
