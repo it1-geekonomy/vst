@@ -85,7 +85,14 @@ export default function Page() {
             <div className="bg-transparent rounded-xl mx-auto overflow-hidden">
               <div className="flex flex-col md:flex-row">
                 {/* Left side - Contact Information */}
-                <div className="bg-black text-white p-8 md:p-10 md:w-2/5 relative rounded-l-xl z-3">
+                <div className="bg-black text-white p-8 md:p-10 md:w-2/5 relative rounded-l-xl z-3 overflow-hidden">
+                  {/* Updated decorative circles with adjusted mobile positioning */}
+                  <div className="absolute bottom-0 right-0 -z-0">
+                    {/* Large dark circle */}
+                    <div className="absolute bottom-[-100px] right-[-50px] w-[200px] h-[200px] md:bottom-[-150px] md:right-[-100px] md:w-[270px] md:h-[300px] rounded-full bg-[#1A1A1A]"></div>
+                    {/* Small semi-transparent circle */}
+                    <div className="absolute bottom-[30px] right-[30px] w-[80px] h-[80px] md:bottom-[50px] md:right-[60px] md:w-[120px] md:h-[120px] rounded-full bg-[#48484880]"></div>
+                  </div>
                   <div>
                     <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
                     <p className="text-gray-400 mb-12">Say something to start a live chat!</p>
@@ -121,8 +128,8 @@ export default function Page() {
                     </div>
                   </div>
                   
-                  {/* Repositioned social media icons for better mobile display */}
-                  <div className="pt-12 sm:pt-16 md:absolute md:bottom-10 md:left-10 flex space-x-4">
+                  {/* Repositioned social media icons with higher z-index */}
+                  <div className="pt-12 sm:pt-16 md:absolute md:bottom-10 md:left-10 flex space-x-4 relative z-10">
                     <a href="#" className="bg-[#1B1B1B] p-2 rounded-full transition-colors hover:bg-white group">
                       <Twitter />
                     </a>
