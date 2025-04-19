@@ -13,6 +13,7 @@ import { StaticImageData } from 'next/image';
 import EducationLogo from '../public/logos/educationlogo';
 import Logo from '../public/logos/Logo';
 import LocationSection from '../components/LocationSection';
+import BusinessSectors from '@/components/automotiveFranchises/BusinessSectors';
 
 type GalleryImage = {
   id: number;
@@ -231,6 +232,7 @@ export default function EducationPage() {
    
       {/* Our Location section */}
       <LocationSection />
+      <BusinessSectors/>
     </main>
   );
 }

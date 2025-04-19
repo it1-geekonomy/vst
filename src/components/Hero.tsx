@@ -222,7 +222,7 @@ const Hero = () => {
               transition: "width 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
               willChange: "width",
               boxShadow: currentSlide !== index ? 
-                "-2px 0 10px 3px rgba(0,0,0,0.3), -12px 0 25px 5px rgba(0,0,0,0.05), 0 0 40px 10px rgba(100, 100, 100, 0.8)" : 
+                "-8px 0 15px 5px rgba(0,0,0,0.3), -20px 0 30px 8px rgba(0,0,0,0.07), 0 0 50px 15px rgba(80, 80, 80, 0.8)" : 
                 "none",
             }}
             onClick={() => handleSlideClick(index)}
@@ -267,9 +267,9 @@ const Hero = () => {
 
             {/* Label for inactive slides */}
             {currentSlide !== index && (
-              <div className="absolute inset-0 flex items-center justify-center bg-white/10">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-60">
                 <span 
-                  className="text-white font-medium -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg"
+                  className="text-white font-bold -rotate-90 transform whitespace-nowrap text-base sm:text-lg md:text-xl lg:text-3xl drop-shadow-lg"
                   style={{
                     transition: "opacity 900ms ease-in-out"
                   }}
