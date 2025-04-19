@@ -179,6 +179,7 @@ export default function Page() {
                     value={formData.name}
                     onChange={handleChange}
                     name="name"
+                    required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none font-normal font-poppins"
                   />
                 </div>
@@ -189,6 +190,7 @@ export default function Page() {
                     value={formData.email}
                     onChange={handleChange}
                     name="email"
+                    required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
@@ -199,6 +201,7 @@ export default function Page() {
                     value={formData.mobile}
                     onChange={handleChange}
                     name="mobile"
+                    required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
@@ -210,6 +213,7 @@ export default function Page() {
                       value={formData.experience}
                       onChange={handleChange}
                       name="experience"
+                      required
                     >
                       <option value="">Select Experience</option>
                       <option value="0-1">0-1 Year</option>
@@ -228,6 +232,7 @@ export default function Page() {
                     value={formData.currentJobTitle}
                     onChange={handleChange}
                     name="currentJobTitle"
+                    required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
@@ -239,7 +244,8 @@ export default function Page() {
                         className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                         value={formData.preferredRole}
                         onChange={handleChange}
-                        name="preferredRole" // Ensure this matches the field name in your state
+                        name="preferredRole"
+                        required
                       >
                         <option value="">Select Role</option>
                         <option value="manager">Manager</option>
@@ -268,7 +274,8 @@ export default function Page() {
                       className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.industries}
                       onChange={handleChange}
-                      name="industries" // Make sure the name matches the field in the state
+                      name="industries"
+                      required
                     >
                       <option value="">Select Industries</option>
                       <option value="manager">Manager</option>
@@ -290,6 +297,7 @@ export default function Page() {
                       value={formData.startDate}
                       onChange={handleChange}
                       name="startDate"
+                      required
                       className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                     />
                     <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">📅</div>
@@ -302,7 +310,8 @@ export default function Page() {
                       className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.noticePeriod}
                       onChange={handleChange}
-                      name="noticePeriod" // Ensure the name matches the state field
+                      name="noticePeriod"
+                      required
                     >
                       <option value="">Select Notice Period</option>
                       <option value="immediate">Immediately</option>
@@ -323,7 +332,8 @@ export default function Page() {
                       className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.skills}
                       onChange={handleChange}
-                      name="skills" // Make sure to match this with the field in your state
+                      name="skills"
+                      required
                     >
                       <option value="">Select Skills</option>
                       <option value="management">Management Skills</option>
@@ -352,7 +362,7 @@ export default function Page() {
                       accept=".txt,.pdf,.doc,.docx"
                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                       onChange={handleFileChange}
-    
+                      required
                     />
                     {!selectedFile ? (
                       <>
