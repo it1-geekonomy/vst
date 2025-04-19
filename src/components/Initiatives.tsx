@@ -43,7 +43,7 @@ export default function Initiatives() {
         <div className="grid grid-cols-5 h-full">
           {/* Main Initiative */}
           <div className="col-span-2 border border-white relative group overflow-hidden">
-            <div className="absolute  m-10 my-12 border border-[#594B1D] overflow-hidden inset-0 transition-opacity duration-500 ease-in-out">
+            <div className="absolute  m-10 my-16 border border-[#594B1D] overflow-hidden inset-0 transition-opacity duration-500 ease-in-out">
               <Image
                 src={currentImg}
                 alt="Initiative background"
@@ -52,10 +52,10 @@ export default function Initiatives() {
               />
             </div>
             <div className=" h-[calc(100%-6rem)] flex flex-col justify-center p-12 relative z-10">
-              <h2 className="text-5xl text-white mb-6 font-bold">
+              <h2 className="text-5xl text-white mb-6 font-poppins font-semibold">
                 Our Initiatives
               </h2>
-              <p className="text-gray-300 text-xl leading-relaxed">
+              <p className="text-gray-300 text-xl leading-relaxed font-poppins font-light">
                 At VST Group, our Corporate Social Responsibility (CSR)
                 initiatives are rooted in a deep sense of purpose and commitment
                 to creating lasting, positive change. We believe that our
@@ -66,17 +66,17 @@ export default function Initiatives() {
           </div>
 
           {/* All other initiatives in a single grid */}
-          <div className="gallery border border-blue-500 col-span-3 h-full grid grid-cols-2 grid-rows-2">
+          <div className="gallery border  col-span-3 h-full grid grid-cols-2 grid-rows-2">
             <div className="gallery-item border border-white p-12 flex flex-col items-start justify-center relative group overflow-hidden"
               onMouseEnter={() => handleMouseEnter('education')}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-blue-500 font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-blue-500 text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full font-poppins font-semibold">
                 Education and Holistic Development
               </h3>
               <div className={`${activeSection === 'education' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'} 
                                         overflow-hidden transition-all duration-500 w-full`}>
-                <p className="text-white text-sm md:text-base text-left">
+                <p className="text-white text-sm md:text-base text-left font-poppins font-light">
                   The VST Group is committed to Corporate Social Responsibility through impactful rural development,
                   enhancing infrastructure and promoting sustainable agriculture. We are leading the transition to
                   renewable energy by powering our fuel outlets with solar panels, reducing CO2 emissions by 15% in 2022.
@@ -87,12 +87,12 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter('sustainability')}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white font-poppins font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Sustainability
               </h3>
               <div className={`${activeSection === 'sustainability' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'} 
                                         overflow-hidden transition-all duration-500 w-full`}>
-                <p className="text-white text-sm md:text-base text-left">
+                <p className="text-white text-sm md:text-base text-left font-poppins font-light">
                   VST Group is committed to sustainability through initiatives aimed at reducing its carbon footprint and promoting renewable energy.
                 </p>
               </div>
@@ -101,12 +101,12 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter('rural')}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white font-poppins font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Rural Development
               </h3>
               <div className={`${activeSection === 'rural' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'} 
                                         overflow-hidden transition-all duration-500 w-full`}>
-                <p className="text-white text-sm md:text-base text-left">
+                <p className="text-white text-sm md:text-base text-left font-poppins font-light">
                   The VST Group is committed to Corporate Social Responsibility through impactful rural development in underserved communities.
                 </p>
               </div>
@@ -115,12 +115,12 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter('healthcare')}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white font-poppins font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Healthcare
               </h3>
               <div className={`${activeSection === 'healthcare' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'} 
                                         overflow-hidden transition-all duration-500 w-full`}>
-                <p className="text-white text-sm md:text-base text-left">
+                <p className="text-white text-sm md:text-base text-left font-poppins font-light">
                   VST Group is dedicated to improving healthcare access in rural communities through mobile clinics and telemedicine initiatives.
                 </p>
               </div>
