@@ -6,6 +6,9 @@ import Image from 'next/image'
 import frame1 from '../public/careers/frame1.jpg'
 import frame2 from '../public/careers/upload-icon.png'
 import frame3 from '../public/careers/mobilebg.png'
+import frame4 from '../public/careers/Vector calender.png'
+import frame5 from '../public/careers/Vector.png'
+import { Toaster, toast } from 'react-hot-toast';
 
 interface FormData {
   name: string;
@@ -82,29 +85,34 @@ export default function Page() {
       if (selectedFile) {
         formDataToSend.append('resume', selectedFile);
       }
-      const sendEmailResponse = await axios.post('/api/sendEmail', formDataToSend, {
+      const response = await axios.post('/api/sendEmail', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      alert('Application submitted successfully!');
-      setFormData({
-        name: '',
-        email: '',
-        mobile: '',
-        experience: '',
-        currentJobTitle: '',
-        preferredRole: '',
-        skills: '',
-        industries: '',
-        startDate: '',
-        noticePeriod: '',
-        resume: null,
-      });
-      setSelectedFile(null);
-    } catch (err) {
+
+      if (response.status === 200) {
+        toast.success('Application submitted successfully');
+        setFormData({
+          name: '',
+          email: '',
+          mobile: '',
+          experience: '',
+          currentJobTitle: '',
+          preferredRole: '',
+          skills: '',
+          industries: '',
+          startDate: '',
+          noticePeriod: '',
+          resume: null,
+        });
+        setSelectedFile(null);
+      } else {
+        toast.error(response.data.message || 'Error submitting application.');
+      }
+    } catch (err: any) {
       console.error('Error sending application:', err);
-      alert('Error submitting application.');
+      toast.error(err.response?.data?.message || 'Error submitting application.');
     }
   };
   
@@ -127,6 +135,24 @@ export default function Page() {
   
   return (
     <div className="min-h-screen bg-black text-white">
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          success: {
+            icon: '✓',
+            style: {
+              background: '#4CAF50',
+              color: 'white',
+            },
+          },
+          error: {
+            style: {
+              background: '#ef4444',
+              color: 'white',
+            },
+          },
+        }}
+      />
       {/* Hero Section with Background */}
       <section className="relative h-[105vh] md:h-[100vh] xl:h-[105vh]">
         {/* Desktop Background Image */}
@@ -218,7 +244,13 @@ export default function Page() {
                       <option value="5-7">7-9 Years</option>
                       <option value="7-9">Other</option>
                     </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
+                        src={frame5} 
+                        alt="calendar" 
+                        width={12} 
+                        height={12} 
+                        className="cursor-pointer"
+                      /></div>
                   </div>
                 </div>
                 <div>
@@ -250,7 +282,13 @@ export default function Page() {
                         <option value="mechanics">Mechanics</option>
                         <option value="other">Other</option>
                       </select>
-                      <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                      <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
+                        src={frame5} 
+                        alt="calendar" 
+                        width={12} 
+                        height={12} 
+                        className="cursor-pointer"
+                      /></div>
                     </div>
                   </div>
                 </div>
@@ -279,20 +317,58 @@ export default function Page() {
                       <option value="mechanics">Mechanics</option>
                       <option value="other">Other</option>
                     </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
+                        src={frame5} 
+                        alt="calendar" 
+                        width={12} 
+                        height={12} 
+                        className="cursor-pointer"
+                      /></div>
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-poppins mb-1 md:mb-2 opacity-80 font-normal font-poppins">What's your earliest possible start date?</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-poppins mb-1 md:mb-2 opacity-80 font-normal font-poppins">
+                    What's your earliest possible start date?
+                  </label>
                   <div className="relative">
                     <input
                       type="date"
                       value={formData.startDate}
                       onChange={handleChange}
                       name="startDate"
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none cursor-pointer"
+                      style={{ 
+                        colorScheme: 'dark',
+                      }}
                     />
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">📅</div>
+                    <style jsx>{`
+                      input[type="date"]::-webkit-calendar-picker-indicator {
+                        display: none;
+                        -webkit-appearance: none;
+                      }
+                      input[type="date"]::-webkit-inner-spin-button,
+                      input[type="date"]::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                        display: none;
+                      }
+                    `}</style>
+                    <div 
+                      className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer z-10"
+                      onClick={() => {
+                        const dateInput = document.querySelector('input[type="date"][name="startDate"]');
+                        if (dateInput) {
+                          (dateInput as HTMLInputElement).showPicker();
+                        }
+                      }}
+                    >
+                      <Image 
+                        src={frame4} 
+                        alt="calendar" 
+                        width={20} 
+                        height={20} 
+                        className="cursor-pointer"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div>
@@ -312,7 +388,13 @@ export default function Page() {
                       <option value="90">90 days</option>
                       <option value="other">Other</option>
                     </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
+                        src={frame5} 
+                        alt="calendar" 
+                        width={12} 
+                        height={12} 
+                        className="cursor-pointer"
+                      /></div>
                   </div>
                 </div>
                 {/* Skills dropdown */}
@@ -335,7 +417,13 @@ export default function Page() {
                       <option value="technical">Technical Skills</option>
                       <option value="other">Other</option>
                     </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
+                        src={frame5} 
+                        alt="calendar" 
+                        width={12} 
+                        height={12} 
+                        className="cursor-pointer"
+                      /></div>
                   </div>
 
                 </div>
