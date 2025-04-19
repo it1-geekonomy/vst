@@ -206,7 +206,7 @@ export default function Page() {
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Years of Experience</label>
                   <div className="relative">
                     <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.experience}
                       onChange={handleChange}
                       name="experience"
@@ -218,7 +218,7 @@ export default function Page() {
                       <option value="5-7">7-9 Years</option>
                       <option value="7-9">Other</option>
                     </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813] pointer-events-none">▼</div>
                   </div>
                 </div>
                 <div>
@@ -236,7 +236,7 @@ export default function Page() {
                   <div>
                     <div className="relative">
                       <select
-                        className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                        className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                         value={formData.preferredRole}
                         onChange={handleChange}
                         name="preferredRole" // Ensure this matches the field name in your state
@@ -250,7 +250,7 @@ export default function Page() {
                         <option value="mechanics">Mechanics</option>
                         <option value="other">Other</option>
                       </select>
-                      <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                      <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813] pointer-events-none">▼</div>
                     </div>
                   </div>
                 </div>
@@ -265,7 +265,7 @@ export default function Page() {
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Which industries have you worked in?</label>
                   <div className="relative">
                     <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.industries}
                       onChange={handleChange}
                       name="industries" // Make sure the name matches the field in the state
@@ -279,7 +279,7 @@ export default function Page() {
                       <option value="mechanics">Mechanics</option>
                       <option value="other">Other</option>
                     </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813] pointer-events-none">▼</div>
                   </div>
                 </div>
                 <div>
@@ -299,7 +299,7 @@ export default function Page() {
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">How long is your notice period as per your contract?</label>
                   <div className="relative">
                     <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.noticePeriod}
                       onChange={handleChange}
                       name="noticePeriod" // Ensure the name matches the state field
@@ -312,7 +312,7 @@ export default function Page() {
                       <option value="90">90 days</option>
                       <option value="other">Other</option>
                     </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813] pointer-events-none">▼</div>
                   </div>
                 </div>
                 {/* Skills dropdown */}
@@ -320,7 +320,7 @@ export default function Page() {
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">What are the primary skills that define your expertise?</label>
                   <div className="relative">
                     <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.skills}
                       onChange={handleChange}
                       name="skills" // Make sure to match this with the field in your state
@@ -335,7 +335,7 @@ export default function Page() {
                       <option value="technical">Technical Skills</option>
                       <option value="other">Other</option>
                     </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]">▼</div>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813] pointer-events-none">▼</div>
                   </div>
 
                 </div>
