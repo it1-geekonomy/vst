@@ -142,7 +142,7 @@ const Hero = () => {
               {slides[currentSlide].type === 'video' ? (
                 <div className="absolute inset-0 flex items-center justify-center bg-black w-full h-full">
                   <video
-                    ref={el => videoRefs.current[slides[currentSlide].id] = el}
+                    ref={el => { videoRefs.current[slides[currentSlide].id] = el; }}
                     src={slides[currentSlide].videoSrc}
                     className="w-full h-full"
                     style={{
@@ -232,7 +232,7 @@ const Hero = () => {
               {slide.type === 'video' ? (
                 <div className="absolute inset-0 flex items-center justify-center bg-black w-full h-full">
                   <video
-                    ref={el => videoRefs.current[slide.id] = el}
+                    ref={el => { videoRefs.current[slide.id] = el; }}
                     src={slide.videoSrc}
                     className="w-full h-full"
                     style={{
