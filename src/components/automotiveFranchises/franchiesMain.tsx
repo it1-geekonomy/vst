@@ -204,7 +204,7 @@ const FranchiseSlider = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen  lg:mt-[-8rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen  lg:mt-[0rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
