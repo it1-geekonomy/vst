@@ -203,7 +203,7 @@ const Hero = () => {
 
             {/* Label for inactive slides */}
             {currentSlide !== index && (
-              <div className="absolute inset-0 flex items-center justify-center bg-white/10">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/10">
                 <span 
                   className="text-white font-medium -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg"
                   style={{
