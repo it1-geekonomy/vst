@@ -104,7 +104,7 @@ const slides: SlideData[] = [
   {
     id: 5,
     backgroundImage: bg4,
-    carImage: car5,
+    carImage: car6,
     brand: "maserati",
     bgColor: {
       from: "#FDC756",
@@ -117,7 +117,7 @@ const slides: SlideData[] = [
   {
     id: 6,
     backgroundImage: bg6,
-    carImage: car6,
+    carImage: car5,
     brand: "maserati",
     bgColor: {
       from: "#D6744E",
