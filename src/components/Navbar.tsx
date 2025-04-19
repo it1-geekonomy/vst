@@ -124,7 +124,10 @@ export default function Navbar() {
                     Auto Parts
                   </Link>
                   <Link href="/manufacture" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
-                    Manufcture
+                    Manufacture
+                  </Link>
+                  <Link href="/news-media" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
+                    News and Media
                   </Link>
                 </div>
               </div>
@@ -190,18 +193,32 @@ export default function Navbar() {
                   education
                 </Link>
                 <Link
-                  href="/business-3"
+                  href="/csr"
                   className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Business 3
+                  >
+                  CSR
                 </Link>
                 <Link
-                  href="/business-4"
+                  href="/auto-parts"
                   className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Business 4
+                    Auto Parts
+                </Link>
+                <Link
+                  href="/manufacture"
+                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Manufacture
+                </Link>
+                <Link
+                  href="/news-media"
+                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  News and Media
                 </Link>
               </div>
             </div>

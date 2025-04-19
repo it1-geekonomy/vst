@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // import slide1 from "@/app/public/slid1.png";
 // import slide2 from "@/app/public/slid 2.png";
@@ -57,6 +57,23 @@ const slides = [
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(4);
   const [showImages, setShowImages] = useState(slides);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if in mobile view
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleSlideClick = (index: number) => {
     if (currentSlide === index) {
@@ -77,18 +94,93 @@ const Hero = () => {
     }
   };
 
+  // Mobile slider functions
+  const goToNextSlide = () => {
+    const nextIndex = (currentSlide + 1) % slides.length;
+    setCurrentSlide(nextIndex);
+  };
+
+  const goToPrevSlide = () => {
+    const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+    setCurrentSlide(prevIndex);
+  };
+
+  // Mobile view render
+  if (isMobile) {
+    return (
+      <section className="relative h-[80vh] overflow-hidden bg-black/5">
+        <div className="relative h-full w-full flex items-center justify-center">
+          {/* Current slide */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative w-full h-[60vh]"> 
+              <Image
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].label}
+                fill
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                priority
+              />
+            </div>
+          </div>
+          
+          {/* Slide label */}
+          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10">
+            <span className="text-white font-medium text-lg">{slides[currentSlide].label}</span>
+          </div>
+          
+          {/* Navigation buttons */}
+          <div className="absolute inset-x-0 top-[30vh] flex items-center justify-between px-4 z-10">
+            <button 
+              className="bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition"
+              onClick={goToPrevSlide}
+            >
+              &#10094;
+            </button>
+            <button 
+              className="bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition"
+              onClick={goToNextSlide}
+            >
+              &#10095;
+            </button>
+          </div>
+          
+          {/* Slider indicators */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-white' : 'bg-white/50'}`}
+                onClick={() => setCurrentSlide(index)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop view - original implementation
   return (
     <section className="relative h-screen overflow-hidden">
-      <div className="relative h-full w-full flex flex-row">
+      <div 
+        className="relative h-full w-full flex flex-row"
+        style={{ willChange: "contents" }}
+      >
         {/* Navigation Strips */}
         {showImages.map((slide, index) => (
           <div
             key={slide.id}
-            className={`relative transition-all duration-700 ease-in-out ${
-              currentSlide === index
-                ? "w-full"
-                : "w-20 sm:w-24 md:w-34 cursor-pointer"
-            }`}
+            className={`relative ${currentSlide === index ? "w-full" : "w-15 sm:w-26 md:w-36 cursor-pointer"} shadow-2xl`}
+            style={{
+              transition: "width 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+              willChange: "width",
+              boxShadow: currentSlide !== index ? 
+                "-2px 0 10px 3px rgba(0,0,0,0.3), -12px 0 25px 5px rgba(0,0,0,0.05), 0 0 40px 10px rgba(100, 100, 100, 0.8)" : 
+                "none",
+            }}
             onClick={() => handleSlideClick(index)}
           >
             {/* Background Image */}
@@ -97,34 +189,27 @@ const Hero = () => {
                 src={slide.image}
                 alt={slide.label}
                 fill
-                className={`object-cover transition-all duration-700 ${
-                  currentSlide === index
-                    ? "opacity-100 scale-100"
-                    : "opacity-90 scale-110 object-left"
-                }`}
                 style={{
+                  objectFit: "cover",
                   objectPosition: currentSlide === index ? "center" : "0% center",
+                  opacity: currentSlide === index ? 1 : 0.9,
+                  transform: `translate3d(0, 0, 0) scale(${currentSlide === index ? 1 : 1.1})`,
+                  transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                  willChange: "transform, opacity"
                 }}
                 priority={index === 0}
               />
-
-              {/* Colored overlay with gradient */}
-              {/* <div
-                  className={`absolute inset-0 w-full h-full transition-all duration-700 bg-gradient-to-b ${
-                    currentSlide === index
-                      ? "opacity-0"
-                      : `${slide.color} opacity-80`
-                  }`}
-                /> */}
             </div>
-
-            {/* Content */}
-          
 
             {/* Label for inactive slides */}
             {currentSlide !== index && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-white font-medium -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg">
+              <div className="absolute inset-0 flex items-center justify-center bg-white/10">
+                <span 
+                  className="text-white font-medium -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg"
+                  style={{
+                    transition: "opacity 900ms ease-in-out"
+                  }}
+                >
                   {slide.label}
                 </span>
               </div>

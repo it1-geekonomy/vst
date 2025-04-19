@@ -56,9 +56,12 @@ const slides: SlideData[] = [
       to: "rgba(120, 14, 38, 0.4)",
     },
     LogoComponent: PorscheIcon,
-    description: "The primary showroom is located in central Bangalore on Sankey road. The second showroom along with an adjoining workshop is located in Whitefield, an affluent neighborhood on the eastern side of the city. Since inception, the VST Porsche franchise has done exceptionally well in expanding the market for this niche premium segment in the state, winning the bronze performance award by Porsche Middle East for 2023.",
-    learnMoreLink: "https://www.porsche.com"
+    description:
+    "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city’s Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group’s continued expansion in the luxury automotive space, it reflects the group’s enduring legacy and passion for excellence.",  
+      learnMoreLink: "https://www.porsche.com"
+    
   },
+
   {
     id: 2,
     backgroundImage: bg2,
@@ -69,7 +72,7 @@ const slides: SlideData[] = [
       to: "#5A6292",
     },
     LogoComponent: MercedesIcon,
-    description: "Mercedes-Benz at VST offers luxury vehicles with cutting-edge technology and unparalleled comfort. Our showroom showcases the latest models with expert sales consultants to guide customers through personalized experiences, ensuring they find the perfect Mercedes-Benz that matches their lifestyle and preferences.",
+    description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015,with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand’s legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar inluxury automotive ownership.",
     learnMoreLink: "https://www.mercedes-benz.com"
   },
   {
@@ -82,7 +85,7 @@ const slides: SlideData[] = [
       to: "  rgba(220, 171, 119, 0.4)",
     },
     LogoComponent: LandRoverIcon,
-    description: "Our Land Rover franchise delivers premium off-road capability combined with refined luxury. With state-of-the-art service facilities and a team of specialized technicians, we provide comprehensive maintenance and support for these exceptional vehicles designed to conquer any terrain while maintaining superior comfort.",
+    description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it’s highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service..",
     learnMoreLink: "https://www.landrover.com"
   },
   {
@@ -95,7 +98,7 @@ const slides: SlideData[] = [
       to: "#0F1F2A",
     },
     LogoComponent: MaseratiIcon,
-    description: "Maserati represents Italian craftsmanship at its finest, combining racing heritage with elegant design. Our dedicated showroom offers the complete lineup of these distinctive vehicles, each embodying the perfect balance of performance and luxury that has made Maserati a symbol of automotive excellence.",
+    description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore’s Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group’s premium portfolio reinforces its commitment to curating the world’s finest automobile experiences. Your Maserati journey begins here.",
     learnMoreLink: "https://www.maserati.com"
   },
   {
@@ -108,7 +111,7 @@ const slides: SlideData[] = [
       to: "rgba(111, 190, 255, 0.4);",
     },
     LogoComponent: KiaIcon,
-    description: "Our Kia franchise offers innovative vehicles with industry-leading warranties and advanced features. The showroom provides a modern shopping experience with interactive displays and knowledgeable staff ready to demonstrate the latest technologies that make Kia one of the fastest-growing automotive brands.",
+    description: "VST Central has been driving KIA’s journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
     learnMoreLink: "https://www.kia.com"
   },
   {
@@ -121,7 +124,7 @@ const slides: SlideData[] = [
       to: "#0F1F2A",
     },
     LogoComponent: TataIcon,
-    description: "Tata Motors at VST brings reliable, innovative vehicles designed for Indian roads and conditions. Our franchise emphasizes value, durability, and safety across a diverse range of passenger and commercial vehicles, supported by comprehensive after-sales service and genuine parts availability.",
+    description: "VST Motors, one of the group’s oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region’s automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family’s first showroom on Mount Road, Chennai, now a landmark that marked the group’s expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state..",
     learnMoreLink: "https://www.tatamotors.com"
   },
   {
@@ -134,7 +137,7 @@ const slides: SlideData[] = [
       to: "#0F1F2A",
     },
     LogoComponent: MahindraIcon,
-    description: "Mahindra vehicles combine rugged capability with modern design and technology. Our franchise showcases the full range of SUVs and commercial vehicles, backed by specialized service centers equipped to maintain these tough, versatile vehicles built to handle diverse driving conditions.",
+    description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction..",
     learnMoreLink: "https://www.mahindra.com"
   },
   {
@@ -147,7 +150,7 @@ const slides: SlideData[] = [
       to: "#0F1F2A",
     },
     LogoComponent: DucatiIcon,
-    description: "Ducati represents the pinnacle of Italian motorcycle engineering and design. Our dedicated showroom features these iconic motorcycles known for their performance, distinctive sound, and unmistakable style, with expert staff offering test rides and customization options for enthusiasts.",
+    description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we’re committed to delivering exceptional care throughout your ownership journey.",
     learnMoreLink: "https://www.ducati.com"
   },
 ];
@@ -201,7 +204,7 @@ const FranchiseSlider = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen  lg:mt-[-6rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen  lg:mt-[-8rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none"

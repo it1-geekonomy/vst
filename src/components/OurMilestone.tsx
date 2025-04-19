@@ -20,24 +20,22 @@ function OurMilestone() {
     { value: 60, label: 'Brands', suffix: '+', color: 'bg-[#50FFA0]' },
     { value: 6, label: 'Locations', suffix: '+', color: 'bg-[#FEBF3D]' }
   ]
-  
+
   return (
     <div className="flex flex-col md:flex-col lg:flex-row justify-between items-center w-full bg-black text-white py-8 md:py-28 px-4 md:px-6">
       {/* Typography Section - Now stays on top for both mobile AND tablet */}
       <div className="w-full lg:w-1/4 mb-8 md:mb-10 lg:mb-0 lg:pr-6 text-center md:text-center lg:text-left">
         <div className="inline-block lg:w-full">
-          <div style={{ 
-            fontFamily: "Roc Grotesk",
-            fontSize: "40px", 
-            lineHeight: "1.1", 
-            letterSpacing: "0%"
-          }}>
+
+          <div className="text-4xl sm:text-5xl md:text-5xl text-white font-Roc relative z-10">
+          
+
             <div>Our</div>
             <div>Milestones</div>
           </div>
         </div>
       </div>
-      
+
       {/* Counters Section */}
       <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-12">
         {milestones.map((item, index) => (
@@ -51,7 +49,7 @@ function OurMilestone() {
 function CounterItem({ item }: { item: MilestoneItem }) {
   const [isVisible, setIsVisible] = useState(false)
   const counterRef = useRef<HTMLDivElement>(null)
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -62,74 +60,74 @@ function CounterItem({ item }: { item: MilestoneItem }) {
       },
       { threshold: 0.1 }
     )
-    
+
     if (counterRef.current) {
       observer.observe(counterRef.current)
     }
-    
+
     return () => {
       if (counterRef.current) {
         observer.unobserve(counterRef.current)
       }
     }
   }, [])
-  
+
   // Get digits directly from the value
   const valueStr = item.value.toString()
   const firstDigit = valueStr[0]
   const restDigits = valueStr.slice(1)
-  
+
   const contentLeftOffset = `${BAR_WIDTH_PX - 20}px`
 
   return (
     <div ref={counterRef} className="flex flex-col items-start overflow-hidden">
-      <div 
+      <div
         className={`relative ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-        style={{ 
+        style={{
           minHeight: `${BAR_HEIGHT_PX + 30}px`,
           transition: "transform 1s ease-out, opacity 1s ease-out",
           transform: isVisible ? 'translateX(0)' : 'translateX(200px)'
         }}
-      > 
-        <div 
-          className={`${item.color} absolute top-0 left-0`} 
+      >
+        <div
+          className={`${item.color} absolute top-0 left-0`}
           style={{ height: `${BAR_HEIGHT_PX}px`, width: `${BAR_WIDTH_PX}px` }}
         ></div>
-        
-        <div 
-          className="absolute top-1/3 transform -translate-y-1/2 flex flex-col items-start" 
-          style={{ left: contentLeftOffset }} 
+
+        <div
+          className="absolute top-1/3 transform -translate-y-1/2 flex flex-col items-start"
+          style={{ left: contentLeftOffset }}
         >
-          <div 
+          <div
             className="flex items-baseline relative"
             style={{ bottom: "2px" }}
           >
-            <span 
-              className="text-4xl sm:text-5xl md:text-5xl text-white font-['Roc_Grotesk'] relative z-10" 
+            <span
+              className="text-4xl sm:text-5xl md:text-5xl text-white font-['Roc_Grotesk'] relative z-10"
               style={{
                 textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
                 marginRight: "-2px"
               }}
             >
               {firstDigit}
-            </span> 
+            </span>
             <span className="text-4xl sm:text-5xl md:text-5xl text-white font-['Roc_Grotesk']">
               {restDigits}
             </span>
-            <span 
-              className="text-4xl sm:text-5xl md:text-5xl text-white" 
-              style={{ 
+            <span
+              className="text-4xl sm:text-5xl md:text-5xl text-white"
+              style={{
                 fontFamily: 'Arial, sans-serif',
-                marginLeft: "0" 
+                marginLeft: "0"
               }}
             >
               +
             </span>
           </div>
 
-          <div 
+          <div
             className="text-lg md:text-xl lg:text-2xl text-gray-400 mt-0 font-['Roc_Grotesk'] text-left pl-6"
-          > 
+          >
             {item.label}
           </div>
         </div>
