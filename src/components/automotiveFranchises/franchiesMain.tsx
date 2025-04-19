@@ -57,9 +57,9 @@ const slides: SlideData[] = [
     },
     LogoComponent: PorscheIcon,
     description:
-    "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city’s Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group’s continued expansion in the luxury automotive space, it reflects the group’s enduring legacy and passion for excellence.",  
-      learnMoreLink: "https://www.porsche.com"
-    
+      "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city’s Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group’s continued expansion in the luxury automotive space, it reflects the group’s enduring legacy and passion for excellence.",
+    learnMoreLink: "https://www.porsche.com"
+
   },
 
   {
@@ -69,7 +69,7 @@ const slides: SlideData[] = [
     brand: "mercedes",
     bgColor: {
       from: "#B897FF",
-      to: "#5A6292",
+      to: "#5A6292"
     },
     LogoComponent: MercedesIcon,
     description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015,with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand’s legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar inluxury automotive ownership.",
@@ -82,7 +82,7 @@ const slides: SlideData[] = [
     brand: "landrover",
     bgColor: {
       from: "#DCAB77",
-      to: "  rgba(220, 171, 119, 0.4)",
+      to: "rgba(220, 171, 119, 0.4)",
     },
     LogoComponent: LandRoverIcon,
     description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it’s highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service..",
@@ -94,8 +94,8 @@ const slides: SlideData[] = [
     carImage: car4,
     brand: "maserati",
     bgColor: {
-      from: "rgba(223, 172, 79, 0.56)",
-      to: "#0F1F2A",
+      from: "#6FBEFF",
+      to: "rgba(111, 190, 255, 0.4)",
     },
     LogoComponent: MaseratiIcon,
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore’s Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group’s premium portfolio reinforces its commitment to curating the world’s finest automobile experiences. Your Maserati journey begins here.",
@@ -107,8 +107,8 @@ const slides: SlideData[] = [
     carImage: car5,
     brand: "maserati",
     bgColor: {
-      from: "#6FBEFF",
-      to: "rgba(111, 190, 255, 0.4);",
+      from: "#FDC756",
+      to: "rgba(253, 199, 86, 0.4)",
     },
     LogoComponent: KiaIcon,
     description: "VST Central has been driving KIA’s journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
@@ -120,8 +120,8 @@ const slides: SlideData[] = [
     carImage: car6,
     brand: "maserati",
     bgColor: {
-      from: "rgba(107, 7, 7, 0.56)",
-      to: "#0F1F2A",
+      from: "#D6744E",
+      to: "rgba(214, 116, 78, 0.4)",
     },
     LogoComponent: TataIcon,
     description: "VST Motors, one of the group’s oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region’s automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family’s first showroom on Mount Road, Chennai, now a landmark that marked the group’s expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state..",
@@ -133,8 +133,8 @@ const slides: SlideData[] = [
     carImage: car7,
     brand: "maserati",
     bgColor: {
-      from: "rgba(223, 172, 79, 0.56)",
-      to: "#0F1F2A",
+      from: "#05F1F2",
+      to: "rgba(5, 241, 242, 0.4)",
     },
     LogoComponent: MahindraIcon,
     description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction..",
@@ -146,8 +146,8 @@ const slides: SlideData[] = [
     carImage: bike,
     brand: "maserati",
     bgColor: {
-      from: "rgba(223, 172, 79, 0.56)",
-      to: "#0F1F2A",
+      from: "#E9354C",
+      to: "rgba(233, 53, 76, 0.4)",
     },
     LogoComponent: DucatiIcon,
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we’re committed to delivering exceptional care throughout your ownership journey.",
@@ -159,18 +159,18 @@ const FranchiseSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [screenWidth, setScreenWidth] = useState<number | null>(null);
-  
+
   useEffect(() => {
     setScreenWidth(window.innerWidth);
-  
+
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
-  
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
+
   const goToSlide = (brand: SlideData["brand"]) => {
     const index = slides.findIndex((slide) => slide.brand === brand);
     if (index !== -1) {
@@ -206,7 +206,7 @@ const FranchiseSlider = () => {
   return (
     <div className="relative w-full min-h-screen  lg:mt-[-8rem] mt-[1rem]">
       {/* Fixed background gradient */}
-      <div 
+      <div
         className="fixed inset-0 z-0 pointer-events-none"
         style={{
           background: `
@@ -246,14 +246,14 @@ const FranchiseSlider = () => {
               </motion.div>
 
               {/* Dynamic color accent bars - hidden on mobile */}
-              <div 
-                className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none" 
-                style={{ backgroundColor: slides[currentSlide].bgColor.to}}
+              <div
+                className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none"
+                style={{ backgroundColor: slides[currentSlide].bgColor.to }}
               />
-              <div 
+              <div
                 className="hidden lg:block absolute top-0 right-[2rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%]  rounded-br-full  
                 rounded-bl-none   
-                rounded-t-none " 
+                rounded-t-none "
                 style={{ backgroundColor: slides[currentSlide].bgColor.from }}
               />
 
@@ -316,9 +316,8 @@ const FranchiseSlider = () => {
                 <motion.div
                   className="flex items-center gap-3 sm:gap-5 lg:gap-16"
                   animate={{
-                    x: `-${
-                      scrollPosition * ((screenWidth ?? 1200) < 640 ? 212 : (screenWidth ?? 1200) < 1024 ? 220 : 264)
-                    }px`,
+                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 212 : (screenWidth ?? 1200) < 1024 ? 220 : 264)
+                      }px`,
                     translateX: (screenWidth ?? 1200) < 640 ? "9.43%" : (screenWidth ?? 1200) < 1024 ? "9.4%" : "-0.1%",
                   }}
                   transition={{
@@ -327,21 +326,20 @@ const FranchiseSlider = () => {
                   }}
                 >
                   {/* Create a large number of repeating logos for infinite scrolling */}
-                    {Array(10).fill(null).map((_, outerIndex) => 
+                  {Array(10).fill(null).map((_, outerIndex) =>
                     slides.map((slide, innerIndex) => {
                       const index = (outerIndex * slides.length) + innerIndex;
                       const realIndex = index % slides.length;
                       const isActive = realIndex === currentSlide;
-                        
+
                       return (
                         <motion.button
                           key={`slide-infinite-${index}`}
-                          onClick={isActive ? undefined : () => {}}
-                          className={`transition-opacity duration-300 flex-shrink-0 ${
-                            isActive ? "opacity-100" : "opacity-50 hover:opacity-75 pointer-events-none"
-                          }`}
+                          onClick={isActive ? undefined : () => { }}
+                          className={`transition-opacity duration-300 flex-shrink-0 ${isActive ? "opacity-100" : "opacity-50 hover:opacity-75 pointer-events-none"
+                            }`}
                           whileHover={isActive ? { scale: 1.05 } : undefined}
-                          animate={{ 
+                          animate={{
                             scale: isActive ? 1.10 : 0.80
                           }}
                           transition={{
@@ -354,7 +352,7 @@ const FranchiseSlider = () => {
                     })
                   )}
                 </motion.div>
-                
+
                 {/* 70% bottom border from right side */}
                 <div className="absolute bottom-0 right-0 w-[70%] h-[1px] bg-white bg-opacity-50"></div>
               </div>
@@ -401,7 +399,7 @@ const FranchiseSlider = () => {
               {slides[currentSlide].description}
             </motion.p>
           </AnimatePresence>
-          
+
           <a href={slides[currentSlide].learnMoreLink} className="mt-6 sm:mt-8 lg:mt-10 inline-block w-auto" target="_blank" rel="noopener noreferrer">
             <h3 className="border-2 border-[#DFAC4F] rounded-xl sm:rounded-2xl px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#DFAC4F] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F]/10 transition-colors">
               Learn More
