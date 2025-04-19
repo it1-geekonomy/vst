@@ -107,11 +107,11 @@ const News = () => {
   };
 
   return (
-    <div className="bg-[#2E2E2E] min-h-screen py-10 max-w-7xl mx-auto px-4 xl:px-0 text-white">
-      <h1 className="text-3xl font-bold py-10 font-mulish">Our Latest Post</h1>
+    <div className="bg-zinc-800 min-h-screen py-10 px-6 sm:px-10 md:px-16 text-white">
+      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Our Latest Post</h1>
 
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
+      <div className="px-3.5 flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {newsData.map((item) => (
             <div
               key={item.id}
@@ -132,7 +132,9 @@ const News = () => {
               </div>
 
               <div className="p-4 flex flex-col justify-between flex-grow bg-[#FFFFFF1A] backdrop-blur-[36.55px]">
+
                 <h2 className="mt-2 text-[23px] leading-[130%] tracking-wide font-normal font-mulish transition-all">
+
                   {item.title}
                 </h2>
                 <div className="text-xs text-white mt-4">
