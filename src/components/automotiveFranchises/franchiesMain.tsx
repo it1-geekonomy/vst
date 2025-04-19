@@ -57,7 +57,7 @@ const slides: SlideData[] = [
     },
     LogoComponent: PorscheIcon,
     description:
-      "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city’s Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group’s continued expansion in the luxury automotive space, it reflects the group’s enduring legacy and passion for excellence.",
+      "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
     learnMoreLink: "https://www.porsche.com"
 
   },
@@ -72,7 +72,7 @@ const slides: SlideData[] = [
       to: "#5A6292"
     },
     LogoComponent: MercedesIcon,
-    description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015,with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand’s legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar inluxury automotive ownership.",
+    description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015,with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar inluxury automotive ownership.",
     learnMoreLink: "https://www.mercedes-benz.com"
   },
   {
@@ -85,7 +85,7 @@ const slides: SlideData[] = [
       to: "rgba(220, 171, 119, 0.4)",
     },
     LogoComponent: LandRoverIcon,
-    description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it’s highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service..",
+    description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service..",
     learnMoreLink: "https://www.landrover.com"
   },
   {
@@ -98,7 +98,7 @@ const slides: SlideData[] = [
       to: "rgba(111, 190, 255, 0.4)",
     },
     LogoComponent: MaseratiIcon,
-    description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore’s Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group’s premium portfolio reinforces its commitment to curating the world’s finest automobile experiences. Your Maserati journey begins here.",
+    description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
     learnMoreLink: "https://www.maserati.com"
   },
   {
@@ -111,7 +111,7 @@ const slides: SlideData[] = [
       to: "rgba(253, 199, 86, 0.4)",
     },
     LogoComponent: KiaIcon,
-    description: "VST Central has been driving KIA’s journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
+    description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
     learnMoreLink: "https://www.kia.com"
   },
   {
@@ -124,7 +124,7 @@ const slides: SlideData[] = [
       to: "rgba(214, 116, 78, 0.4)",
     },
     LogoComponent: TataIcon,
-    description: "VST Motors, one of the group’s oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region’s automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family’s first showroom on Mount Road, Chennai, now a landmark that marked the group’s expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state..",
+    description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state..",
     learnMoreLink: "https://www.tatamotors.com"
   },
   {
@@ -150,7 +150,7 @@ const slides: SlideData[] = [
       to: "rgba(233, 53, 76, 0.4)",
     },
     LogoComponent: DucatiIcon,
-    description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we’re committed to delivering exceptional care throughout your ownership journey.",
+    description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
     learnMoreLink: "https://www.ducati.com"
   },
 ];
@@ -279,9 +279,9 @@ const FranchiseSlider = () => {
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-10 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
+          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
             {/* Title */}
-            <div className="flex-1 flex items-center justify-center sm:mb-[6rem] mb-[3rem]">
+            <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
               <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-2xl sm:text-3xl lg:text-[4rem] xl:text-[5rem] tracking-[0.2em] text-center">
                 Our
                 <br />
@@ -354,7 +354,7 @@ const FranchiseSlider = () => {
                 </motion.div>
 
                 {/* 70% bottom border from right side */}
-                <div className="absolute bottom-0 right-0 w-[70%] h-[1px] bg-white bg-opacity-50"></div>
+                <div className="absolute bottom-0 right-0 w-full lg:w-[70%] h-[1px] bg-white bg-opacity-50"></div>
               </div>
 
               {/* Down arrow */}
@@ -381,7 +381,7 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Description section - moved back outside but made dynamic */}
-        <div className="w-full py-1 sm:py-2 md:py-4 lg:py-10 px-4 sm:px-6 lg:px-24 flex flex-col items-center pt-6 sm:pt-4  lg:pt-1 mt-[-10rem] sm:mt-[-2rem] lg:mt-[-6rem]">
+        <div className="w-full py-1 sm:py-2 md:py-4 lg:py-10 px-4 sm:px-6 lg:px-24 flex flex-col items-center pt-6 sm:pt-4  lg:pt-1 mt-[-2rem] sm:mt-[-1rem] lg:mt-[-6rem]">
           <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8">
             VST Supercars
           </h2>
