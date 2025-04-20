@@ -5,6 +5,7 @@ import Image from "next/image";
 import Image1881 from "@/app/public/images/AboutUs/1881Image.png";
 import Image1920 from "@/app/public/images/AboutUs/1920Image.png";
 import Image1950 from "@/app/public/images/AboutUs/1950Image.png";
+import VideoPlayer from '@/components/VideoPlayer';
 
 function AboutUsPage() {
   const [selectedYear, setSelectedYear] = useState("1920");
@@ -385,13 +386,7 @@ function AboutUsPage() {
         <div className="mt-16 md:mt-32 flex items-center justify-center px-4">
           <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-              <video
-                src="/ContactUsLogo.mp4"
-                autoPlay
-                muted
-                loop
-                className="w-full h-full object-cover max-w-[400px] md:max-w-none"
-              />
+              <VideoPlayer src="/ContactUsLogo.mp4" />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left">

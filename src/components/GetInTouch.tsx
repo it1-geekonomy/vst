@@ -59,20 +59,20 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row justify-around items-start gap-6 xs:gap-8 md:gap-10 lg:gap-12">
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start pt-[50px] lg:pt-0">
           <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
-            <div className="w-full flex justify-end pr-10 sm:pr-16 md:pr-20 lg:pr-20">
+            <div className="w-full flex justify-center lg:justify-end pr-0 lg:pr-20">
               <h1
-                className="text-[#FEBF3D] text-3xl xs:text-4xl sm:text-5xl md:text-5xl font-rocWide font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8 "
+                className="text-[#FEBF3D] text-4xl xs:text-5xl sm:text-5xl md:text-5xl font-rocWide font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8"
               >
                 Get In Touch
               </h1>
             </div>
-            <div className="w-full h-[80px] xs:h-[180px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[450px] flex justify-center">
+            <div className="w-full h-[150px] xs:h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] flex justify-center items-center">
               <video
                 src="/ContactUsLogo.mp4"
                 autoPlay
                 muted
                 loop
-                className="w-[80%] h-[90%] md:object-cover"
+                className="w-[95%] h-[95%] object-contain"
                 playsInline
               />
             </div>

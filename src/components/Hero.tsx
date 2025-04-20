@@ -244,7 +244,7 @@ const Hero = () => {
   // Desktop view
   return (
     <section className="relative h-screen md:h-[109vh] overflow-hidden">
-      <style jsx>{`
+      <style >{`
         /* CSS variables for responsive sizing */
         .strips-container {
           --strip-width-sm: 3rem;

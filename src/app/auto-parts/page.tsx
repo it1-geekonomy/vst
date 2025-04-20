@@ -476,7 +476,7 @@ export default function Page() {
         </div>
 
         {/* Add custom CSS for the perspective effect and animations */}
-        <style jsx>{`
+        <style>{`
           .perspective-1000 {
             perspective: 1000px;
           }
