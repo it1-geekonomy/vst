@@ -10,6 +10,7 @@ import slide2 from "@/app/public/hero-section/Image 5.png";
 import slide3 from "@/app/public/hero-section/image 3.png";
 import slide4 from "@/app/public/hero-section/Image 4.png";
 import slide5 from "@/app/public/hero-section/Image 6.png";
+import slide6 from "@/app/public/hero-section/Image 7.png";
 
 
 
@@ -27,7 +28,7 @@ const slides = [
   },
   {
     id: 6,
-    image: slide5,
+    image: slide6,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "Premium Motors",
@@ -36,7 +37,7 @@ const slides = [
   },
   {
     id: 5,
-    image: slide5,
+    image: slide2,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "Premium Motors",
