@@ -15,6 +15,24 @@ import slide5 from "@/app/public/hero-section/Image 6.png";
 
 const slides = [
   {
+    id: 7,
+    image: slide5,
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "Premium Motors",
+    color: "from-green-600/80 to-green-800/80",
+    type: 'image',
+  },
+  {
+    id: 6,
+    image: slide5,
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "Premium Motors",
+    color: "from-green-600/80 to-green-800/80",
+    type: 'image',
+  },
+  {
     id: 5,
     image: slide5,
     // title: "LUXURY REDEFINED",
