@@ -6,23 +6,34 @@ import Facebook from "@/app/public/images/LifeAtVst/Footer/Facebook";
 import Instagram from "@/app/public/images/LifeAtVst/Footer/Instagram";
 import LinkedIn from "@/app/public/images/LifeAtVst/Footer/LinkedIn";
 
-const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }  ) => {
+const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
   return (
     <footer className={`bg-[#101010] text-white py-4 sm:py-6 md:py-7 lg:py-8 ${bgcolour}`}>
       <div className="container mx-auto px-3 sm:px-4 md:px-5 lg:px-8">
         <div className="flex flex-col lg:flex-row flex-wrap justify-between items-center lg:items-start gap-6 sm:gap-8 md:gap-6 lg:gap-6">
-          {/* Logo Section */}
-          <div className="w-full sm:w-3/4 lg:w-1/4 flex flex-col sm:flex-row items-center justify-center lg:justify-start mt-6 lg:mt-12">
-            <div className="h-16 lg:h-20">
-              <Logo />
+          {/* Logo Section - Horizontal alignment at all breakpoints */}
+          <div className="w-full sm:w-3/4 lg:w-1/4 flex justify-center lg:justify-start mt-6 lg:mt-12">
+            {/* Tablet and desktop view with horizontal layout */}
+            <div className="hidden sm:flex sm:flex-row sm:items-center">
+              <div className="flex items-center">
+                {/* Logo size adjusted per breakpoint */}
+                <Logo className="w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-26 lg:h-56" />
+              </div>
+              <div className="ml-3 lg:ml-4">
+                <span className="text-white text-xl md:text-2xl lg:text-3xl font-light tracking-wider">
+                  VST Group
+                </span>
+              </div>
             </div>
-            <span className="text-white text-2xl sm:text-3xl lg:text-4xl mt-3 sm:ml-3 sm:mt-0 lg:mt-20 font-light tracking-wider text-center sm:text-left">
+            
+            {/* Mobile only text */}
+            <span className="sm:hidden text-white text-2xl font-light tracking-wider text-center">
               VST Group
             </span>
           </div>
 
           {/* Map Section */}
-          <div className="w-full sm:w-3/4 lg:w-1/3 mt-6 lg:mt-3 flex justify-center lg:justify-start">
+          <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/3 mt-4 sm:mt-6 lg:mt-3 flex justify-center lg:justify-start">
             <div className="rounded-lg overflow-hidden w-full max-w-md mx-auto lg:mx-0">
               <iframe
                 title="VST Group Location"
@@ -39,7 +50,7 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }  ) => {
           </div>
 
           {/* Contact Information */}
-          <div className="w-full sm:w-3/4 lg:w-1/3 space-y-4 lg:space-y-6 mt-6 lg:mt-0 lg:pl-0 xl:pl-8">
+          <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/3 space-y-4 lg:space-y-6 mt-6 lg:mt-0 lg:pl-0 xl:pl-8">
             <div className="text-center lg:text-left">
               <h3 className="text-lg lg:text-xl font-medium text-white">Contact Us</h3>
             </div>
