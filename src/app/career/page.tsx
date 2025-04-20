@@ -24,6 +24,7 @@ interface FormData {
 export default function Page() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -68,6 +69,7 @@ export default function Page() {
   };
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       const formDataToSend = new FormData();
@@ -105,6 +107,8 @@ export default function Page() {
     } catch (err) {
       console.error('Error sending application:', err);
       alert('Error submitting application.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
   
@@ -424,9 +428,10 @@ export default function Page() {
               <div className="mt-6 md:mt-8 flex justify-center">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[#FDB813] text-black py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-poppins"
                 >
-                  Send
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>

@@ -1,24 +1,57 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import axios from "axios";
 
 interface IFormInputs {
   firstName: string;
   lastName: string;
   email: string;
-  phone: string;
+  phoneNumber: string;
   message: string;
 }
 
 const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{success: boolean, message: string} | null>(null);
+  
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<IFormInputs>();
 
-  const onSubmit: SubmitHandler<IFormInputs> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    try {
+      const formData = new FormData();
+      Object.keys(data).forEach(key => {
+        formData.append(key, data[key as keyof IFormInputs]);
+      });
+      
+      const response = await axios.post('/api/contactEmail', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      
+      setSubmitStatus({
+        success: true,
+        message: 'Your message has been sent successfully!'
+      });
+      reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus({
+        success: false,
+        message: 'There was an error sending your message. Please try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -51,6 +84,12 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
             onSubmit={handleSubmit(onSubmit)}
             className="space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8 w-full max-w-[450px] sm:max-w-[500px] md:max-w-[550px] font-rocWide font-medium"
           >
+            {submitStatus && (
+              <div className={`p-4 rounded-md mb-4 ${submitStatus.success ? 'bg-green-800 text-white' : 'bg-red-800 text-white'}`}>
+                {submitStatus.message}
+              </div>
+            )}
+            
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 ">
               <div className="flex-1">
                 <label className="block text-white mb-1  sm:mb-2">First Name</label>
@@ -96,11 +135,11 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
               <div className="flex-1">
                 <label className="block text-white mb-1 sm:mb-2">Phone Number</label>
                 <input
-                  {...register("phone", { required: true })}
+                  {...register("phoneNumber", { required: true })}
                   type="tel"
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
                 />
-                {errors.phone && (
+                {errors.phoneNumber && (
                   <span className="text-red-500 text-sm mt-1">Required field</span>
                 )}
               </div>
@@ -109,19 +148,17 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
             <div>
               <label className="block text-white mb-1 sm:mb-2">Message</label>
               <textarea
-                {...register("message", { required: true })}
+                {...register("message")}
                 className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white min-h-[80px] xs:min-h-[100px] md:min-h-[120px]"
               />
-              {errors.message && (
-                <span className="text-red-500 text-sm mt-1">Required field</span>
-              )}
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-poppins font-medium"
+              disabled={isSubmitting}
+              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-poppins font-medium disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
