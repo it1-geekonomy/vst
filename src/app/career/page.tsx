@@ -27,6 +27,7 @@ interface FormData {
 export default function Page() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -71,6 +72,7 @@ export default function Page() {
   };
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       const formDataToSend = new FormData();
@@ -113,6 +115,7 @@ export default function Page() {
     } catch (err: any) {
       console.error('Error sending application:', err);
       toast.error(err.response?.data?.message || 'Error submitting application.');
+
     }
   };
   
@@ -205,6 +208,7 @@ export default function Page() {
                     value={formData.name}
                     onChange={handleChange}
                     name="name"
+                    required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none font-normal font-poppins"
                   />
                 </div>
@@ -215,6 +219,7 @@ export default function Page() {
                     value={formData.email}
                     onChange={handleChange}
                     name="email"
+                    required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
@@ -225,6 +230,7 @@ export default function Page() {
                     value={formData.mobile}
                     onChange={handleChange}
                     name="mobile"
+                    required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
@@ -232,10 +238,11 @@ export default function Page() {
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Years of Experience</label>
                   <div className="relative">
                     <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.experience}
                       onChange={handleChange}
                       name="experience"
+                      required
                     >
                       <option value="">Select Experience</option>
                       <option value="0-1">0-1 Year</option>
@@ -251,6 +258,7 @@ export default function Page() {
                         height={12} 
                         className="cursor-pointer"
                       /></div>
+
                   </div>
                 </div>
                 <div>
@@ -260,6 +268,7 @@ export default function Page() {
                     value={formData.currentJobTitle}
                     onChange={handleChange}
                     name="currentJobTitle"
+                    required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
@@ -268,10 +277,11 @@ export default function Page() {
                   <div>
                     <div className="relative">
                       <select
-                        className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                        className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                         value={formData.preferredRole}
                         onChange={handleChange}
-                        name="preferredRole" // Ensure this matches the field name in your state
+                        name="preferredRole"
+                        required
                       >
                         <option value="">Select Role</option>
                         <option value="manager">Manager</option>
@@ -289,6 +299,7 @@ export default function Page() {
                         height={12} 
                         className="cursor-pointer"
                       /></div>
+
                     </div>
                   </div>
                 </div>
@@ -303,10 +314,11 @@ export default function Page() {
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Which industries have you worked in?</label>
                   <div className="relative">
                     <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.industries}
                       onChange={handleChange}
-                      name="industries" // Make sure the name matches the field in the state
+                      name="industries"
+                      required
                     >
                       <option value="">Select Industries</option>
                       <option value="manager">Manager</option>
@@ -324,6 +336,7 @@ export default function Page() {
                         height={12} 
                         className="cursor-pointer"
                       /></div>
+
                   </div>
                 </div>
                 <div>
@@ -340,6 +353,7 @@ export default function Page() {
                       style={{ 
                         colorScheme: 'dark',
                       }}
+
                     />
                     <style jsx>{`
                       input[type="date"]::-webkit-calendar-picker-indicator {
@@ -375,10 +389,11 @@ export default function Page() {
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">How long is your notice period as per your contract?</label>
                   <div className="relative">
                     <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.noticePeriod}
                       onChange={handleChange}
-                      name="noticePeriod" // Ensure the name matches the state field
+                      name="noticePeriod"
+                      required
                     >
                       <option value="">Select Notice Period</option>
                       <option value="immediate">Immediately</option>
@@ -395,6 +410,7 @@ export default function Page() {
                         height={12} 
                         className="cursor-pointer"
                       /></div>
+
                   </div>
                 </div>
                 {/* Skills dropdown */}
@@ -402,10 +418,11 @@ export default function Page() {
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">What are the primary skills that define your expertise?</label>
                   <div className="relative">
                     <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none"
+                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
                       value={formData.skills}
                       onChange={handleChange}
-                      name="skills" // Make sure to match this with the field in your state
+                      name="skills"
+                      required
                     >
                       <option value="">Select Skills</option>
                       <option value="management">Management Skills</option>
@@ -424,6 +441,7 @@ export default function Page() {
                         height={12} 
                         className="cursor-pointer"
                       /></div>
+
                   </div>
 
                 </div>
@@ -440,7 +458,7 @@ export default function Page() {
                       accept=".txt,.pdf,.doc,.docx"
                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                       onChange={handleFileChange}
-    
+                      required
                     />
                     {!selectedFile ? (
                       <>
@@ -502,9 +520,10 @@ export default function Page() {
               <div className="mt-6 md:mt-8 flex justify-center">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[#FDB813] text-black py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-poppins"
                 >
-                  Send
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>

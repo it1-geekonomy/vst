@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // import slide1 from "@/app/public/slid1.png";
 // import slide2 from "@/app/public/slid 2.png";
@@ -11,6 +11,8 @@ import slide3 from "@/app/public/hero-section/image 3.png";
 import slide4 from "@/app/public/hero-section/Image 4.png";
 import slide5 from "@/app/public/hero-section/Image 6.png";
 
+
+
 const slides = [
   {
     id: 5,
@@ -19,6 +21,7 @@ const slides = [
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "Premium Motors",
     color: "from-green-600/80 to-green-800/80",
+    type: 'image',
   },
   {
     id: 4,
@@ -27,6 +30,8 @@ const slides = [
     // subtitle: "PREMIUM MOBILITY SOLUTIONS",
     label: "Automotive Division",
     color: "from-blue-600/80 to-blue-800/80",
+    type: 'image',
+    // Using video from public directory
   },
   {
     id: 3,
@@ -35,14 +40,17 @@ const slides = [
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "Premium Motors",
     color: "from-green-600/80 to-green-800/80",
+    type: 'image',
   },
   {
     id: 2,
     image: slide2,
     // title: "AUTOMOTIVE EXCELLENCE",
     // subtitle: "PREMIUM MOBILITY SOLUTIONS",
-    label: "Automotive Division",
+    label: "Automotive Franchise",
     color: "from-blue-600/80 to-blue-800/80",
+    type: 'video',
+    videoSrc: "/CarVideo.mp4" 
   },
   {
     id: 1,
@@ -51,6 +59,7 @@ const slides = [
     // subtitle: "ON A CENTURY OF TRUST",
     label: "Mercedes-Benz",
     color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
+    type: 'image',
   },
 ];
 
@@ -58,6 +67,7 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(4);
   const [showImages, setShowImages] = useState(slides);
   const [isMobile, setIsMobile] = useState(false);
+  const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
 
   // Check if in mobile view
   useEffect(() => {
@@ -74,6 +84,22 @@ const Hero = () => {
     // Clean up
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  // Handle video playback when slide changes
+  useEffect(() => {
+    showImages.forEach((slide, index) => {
+      if (slide.type === 'video' && videoRefs.current[slide.id]) {
+        if (currentSlide === index) {
+          videoRefs.current[slide.id]?.play();
+        } else {
+          videoRefs.current[slide.id]?.pause();
+          if (videoRefs.current[slide.id]) {
+            videoRefs.current[slide.id]!.currentTime = 0;
+          }
+        }
+      }
+    });
+  }, [currentSlide, showImages]);
 
   const handleSlideClick = (index: number) => {
     if (currentSlide === index) {
@@ -112,17 +138,35 @@ const Hero = () => {
         <div className="relative h-full w-full flex items-center justify-center">
           {/* Current slide */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative w-full h-[60vh]"> 
-              <Image
-                src={slides[currentSlide].image}
-                alt={slides[currentSlide].label}
-                fill
-                style={{
-                  objectFit: "contain",
-                  objectPosition: "center",
-                }}
-                priority
-              />
+            <div className="relative w-full h-[60vh]">
+              {slides[currentSlide].type === 'video' ? (
+                <div className="absolute inset-0 flex items-center justify-center bg-black w-full h-full">
+                  <video
+                    ref={el => { videoRefs.current[slides[currentSlide].id] = el; }}
+                    src={slides[currentSlide].videoSrc}
+                    className="w-full h-full"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                    }}
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={slides[currentSlide].image}
+                  alt={slides[currentSlide].label}
+                  fill
+                  style={{
+                    objectFit: "contain",
+                    objectPosition: "center",
+                  }}
+                  priority
+                />
+              )}
             </div>
           </div>
           
@@ -162,9 +206,9 @@ const Hero = () => {
     );
   }
 
-  // Desktop view - original implementation
+  // Desktop view
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-[109vh] overflow-hidden">
       <div 
         className="relative h-full w-full flex flex-row"
         style={{ willChange: "contents" }}
@@ -178,34 +222,54 @@ const Hero = () => {
               transition: "width 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
               willChange: "width",
               boxShadow: currentSlide !== index ? 
-                "-2px 0 10px 3px rgba(0,0,0,0.3), -12px 0 25px 5px rgba(0,0,0,0.05), 0 0 40px 10px rgba(100, 100, 100, 0.8)" : 
+                "-8px 0 15px 5px rgba(0,0,0,0.3), -20px 0 30px 8px rgba(0,0,0,0.07), 0 0 50px 15px rgba(80, 80, 80, 0.8)" : 
                 "none",
             }}
             onClick={() => handleSlideClick(index)}
           >
-            {/* Background Image */}
+            {/* Background Content (Image or Video) */}
             <div className="absolute inset-0 overflow-hidden">
-              <Image
-                src={slide.image}
-                alt={slide.label}
-                fill
-                style={{
-                  objectFit: "cover",
-                  objectPosition: currentSlide === index ? "center" : "0% center",
-                  opacity: currentSlide === index ? 1 : 0.9,
-                  transform: `translate3d(0, 0, 0) scale(${currentSlide === index ? 1 : 1.1})`,
-                  transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
-                  willChange: "transform, opacity"
-                }}
-                priority={index === 0}
-              />
+              {slide.type === 'video' ? (
+                <div className="absolute inset-0 flex items-center justify-center bg-black w-full h-full">
+                  <video
+                    ref={el => { videoRefs.current[slide.id] = el; }}
+                    src={slide.videoSrc}
+                    className="w-full h-full"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      opacity: currentSlide === index ? 1 : 0.9,
+                      transform: `translate3d(0, 0, 0) scale(${currentSlide === index ? 1 : 1.1})`,
+                      transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                    }}
+                    muted
+                    loop
+                    playsInline
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={slide.image}
+                  alt={slide.label}
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: currentSlide === index ? "center" : "0% center",
+                    opacity: currentSlide === index ? 1 : 0.9,
+                    transform: `translate3d(0, 0, 0) scale(${currentSlide === index ? 1 : 1.1})`,
+                    transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                    willChange: "transform, opacity"
+                  }}
+                  priority={index === 0}
+                />
+              )}
             </div>
 
             {/* Label for inactive slides */}
             {currentSlide !== index && (
-              <div className="absolute inset-0 flex items-center justify-center bg-white/10">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-60">
                 <span 
-                  className="text-white font-medium -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl drop-shadow-lg"
+                  className="text-white font-bold -rotate-90 transform whitespace-nowrap text-base sm:text-lg md:text-xl lg:text-3xl drop-shadow-lg"
                   style={{
                     transition: "opacity 900ms ease-in-out"
                   }}
