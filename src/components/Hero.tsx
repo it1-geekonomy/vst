@@ -169,7 +169,7 @@ const Hero = () => {
   // Mobile view render
   if (isMobile) {
     return (
-      <section className="relative h-[80vh] overflow-hidden bg-black/5">
+      <section className="relative h-[52vh] overflow-hidden bg-black/5 mt-[-10vh]">
         <div className="relative h-full w-full flex items-center justify-center">
           {/* Current slide */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -206,12 +206,12 @@ const Hero = () => {
           </div>
           
           {/* Slide label */}
-          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10">
+          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10 mt-30">
             <span className="text-white font-medium text-lg">{slides[currentSlide].label}</span>
           </div>
           
           {/* Navigation buttons */}
-          <div className="absolute inset-x-0 top-[30vh] flex items-center justify-between px-4 z-10">
+          <div className="absolute inset-x-0 top-[23vh] flex items-center justify-between px-4 z-10">
             <button 
               className="bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition"
               onClick={goToPrevSlide}
