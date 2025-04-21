@@ -222,9 +222,9 @@ const CSR = () => {
                     transition={{ duration: 0.01 }}
                 >
                     {/* Hero Section */}
-                    <section className="relative h-[60vh] sm:h-[70vh] md:h-screen overflow-hidden z-10">
-                        <div className="relative h-full flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-8">
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-center mb-3 sm:mb-6">Making a Difference</h1>
+                    <section className="relative h-[50vh] sm:h-[60vh] md:h-[80vh] overflow-hidden z-10">
+                        <div className="relative h-full flex flex-col items-center justify-start text-white px-4 sm:px-6 md:px-8 pt-20 pb-20">
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-left mb-2 sm:mb-4">Making a Difference</h1>
                             <p className="text-sm sm:text-base md:text-lg text-center max-w-4xl mx-auto text-gray-200 leading-relaxed">
                                 Rooted in a legacy of responsibility and service, VST Group, through the V.S. Tiruvengadaswamy
                                 Mudaliar Memorial Trust, has consistently extended its hand to communities in need. From supporting
@@ -237,7 +237,7 @@ const CSR = () => {
                     </section>
 
                     {/* Timeline Section */}
-                    <section className="mx-auto px-2 sm:px-4 py-4 sm:py-8 relative z-10">
+                    <section className="mx-auto px-2 sm:px-4 py-0 sm:py-4 relative z-10">
                         <div className="relative h-16 sm:h-20">
                             {/* Timeline Line */}
                             <div className="absolute h-[2px] bg-white w-full top-[20px] sm:top-[25px]" />
@@ -354,9 +354,9 @@ const CSR = () => {
                         </AnimatePresence>
                     </section>
                 </motion.div>
-                        </main>
-                        <div className='py-14 bg-black'>
-                            <Initiatives />
+            </main>
+            <div className='py-14 bg-black'>
+                <Initiatives />
             </div>
             <Footer bgcolour="bg-black" />
         </div>
