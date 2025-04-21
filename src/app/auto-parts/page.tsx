@@ -1,12 +1,11 @@
 "use client";
 import { useState, useEffect, useRef, TouchEvent } from "react";
 import Image from "next/image";
-import img1 from "@/app/public/vst-auto-parts/frame1.jpg";
-import img2 from "@/app/public/vst-auto-parts/frame2.jpg";
-import img3 from "@/app/public/vst-auto-parts/frame3.jpg";
-import img4 from "@/app/public/vst-auto-parts/frame4.jpg";
-import img5 from "@/app/public/vst-auto-parts/frame5.jpg";
-import img6 from "@/app/public/vst-auto-parts/frame6.jpg";
+import img1 from "@/app/public/vst-auto-parts/frame1.png";
+import img2 from "@/app/public/vst-auto-parts/frame2.png";
+import img3 from "@/app/public/vst-auto-parts/frame3.png";
+import img4 from "@/app/public/vst-auto-parts/frame4.png";
+import img5 from "@/app/public/vst-auto-parts/frame5.png";
 import bgImage from "@/app/public/vst-auto-parts/bgimg.jpeg";
 import LocationSection from "../components/LocationSection";
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
@@ -28,7 +27,7 @@ export default function Page() {
   const mobileSliderRef = useRef<HTMLDivElement>(null);
   
   // Use the imported images
-  const images = [img1, img2, img3, img4, img5, img6];
+  const images = [img1, img4, img5, img3, img2];
 
   // Mobile and tablet swipe handlers
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
