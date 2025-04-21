@@ -9,8 +9,8 @@ import "@/styles/initiatives.css";
 import mainImg from "@/app/public/making-a-difference/frame2.png";
 import eduImg from "@/app/public/making-a-difference/Girl-image.jpeg";
 import sustainImg from "@/app/public/making-a-difference/Bulb-image.jpeg";
-import ruralImg from "@/app/public/making-a-difference/frame2.png";
-import healthImg from "@/app/public/making-a-difference/frame2.png";
+import ruralImg from "@/app/public/making-a-difference/rural-img.jpg";
+import healthImg from "@/app/public/making-a-difference/health-care.jpg";
 
 const defaultImg = mainImg;
 const imagesMap = {

@@ -1,10 +1,6 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-// import slide1 from "@/app/public/slid1.png";
-// import slide2 from "@/app/public/slid 2.png";
-// import slide3 from "@/app/public/slide.png";
-
 import slide1 from "@/app/public/hero-section/Image 1.png";
 import slide2 from "@/app/public/hero-section/Image 5.png";
 import slide3 from "@/app/public/hero-section/image 3.png";
@@ -12,75 +8,74 @@ import slide4 from "@/app/public/hero-section/Image 4.png";
 import slide5 from "@/app/public/hero-section/Image 6.png";
 import slide6 from "@/app/public/hero-section/Image 7.png";
 
-
-
-
+// Import SVG icons
+import Frame1 from "@/app/public/faranchies/Frame 1973341731.svg";
+import Frame2 from "@/app/public/faranchies/Frame 1973341732.svg";
+import Frame3 from "@/app/public/faranchies/Frame 1973341733.svg";
+import NewsIcon from "@/app/public/hero-section/NewsIcon";
+import CorporateIcon from "@/app/public/hero-section/CorporateIcon";
+import EducationIcon from "@/app/public/hero-section/EducationIcon";
+import OEPartsIcon from "@/app/public/hero-section/OEPartsIcon";
+import ManufacturingIcon from "@/app/public/hero-section/ManufacturingIcon";
+import AutomativeFranchiseIcon from "@/app/public/hero-section/AutomativeFranchiseIcon";
 
 const slides = [
   {
     id: 7,
     image: slide5,
-    // title: "LUXURY REDEFINED",
-    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
+    label: "News & Media",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
+    icon: NewsIcon,
   },
   {
     id: 6,
     image: slide6,
-    // title: "LUXURY REDEFINED",
-    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
+    label: "Corporate Philanthropy ",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
+    icon: CorporateIcon,
   },
   {
     id: 5,
     image: slide2,
-    // title: "LUXURY REDEFINED",
-    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
+    label: "Education",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
+    icon: EducationIcon,
   },
   {
     id: 4,
     image: slide4,
-    // title: "AUTOMOTIVE EXCELLENCE",
-    // subtitle: "PREMIUM MOBILITY SOLUTIONS",
-    label: "Automotive Division",
+    label: "OE Parts Distribution",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
-    // Using video from public directory
+    icon: OEPartsIcon,
   },
   {
     id: 3,
     image: slide3,
-    // title: "LUXURY REDEFINED",
-    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
+    label: "Manufacturing",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
+    icon: ManufacturingIcon,
   },
   {
     id: 2,
     image: slide2,
-    // title: "AUTOMOTIVE EXCELLENCE",
-    // subtitle: "PREMIUM MOBILITY SOLUTIONS",
     label: "Automotive Franchise",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
-    videoSrc: "/CarVideo.mp4" 
+    videoSrc: "/CarVideo.mp4",
+    icon: AutomativeFranchiseIcon,
   },
   {
     id: 1,
     image: slide1,
-    // title: "BUILDING TOMORROW",
-    // subtitle: "ON A CENTURY OF TRUST",
     label: "Mercedes-Benz",
-    color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
+    color: "from-red-600/80 to-red-800/80",
     type: 'image',
+    
   },
 ];
 
@@ -245,15 +240,15 @@ const Hero = () => {
   return (
     <section className="relative h-screen md:h-[109vh] overflow-hidden">
       <style >{`
-        /* CSS variables for responsive sizing */
-        .strips-container {
-          --strip-width-sm: 3rem;
-          --strip-width-md: 4rem;
-          --strip-width-lg: 5rem; 
-          --strip-width-xl: 6rem;
-          --strip-width-2xl: 7rem;
-          --strip-width: var(--strip-width-lg);
-        }
+   /* CSS variables for responsive sizing */
+      .strips-container {
+      --strip-width-sm: 2.5rem;  
+      --strip-width-md: 3rem;    
+      --strip-width-lg: 4rem;    
+      --strip-width-xl: 5rem;    
+      --strip-width-2xl: 6rem;   
+      --strip-width: var(--strip-width-lg); /* Default width */
+}
         
         /* Responsive breakpoints */
         @media (max-width: 639px) {
@@ -370,16 +365,36 @@ const Hero = () => {
 
               {/* Label for inactive slides */}
               {!isActive && (
-                <div className="absolute inset-0 flex items-center justify-center opacity-110"
-                     style={{ background: "linear-gradient(270deg, rgba(81, 156, 141, 0) 64.98%, rgba(3, 3, 3, 0.65) 110%)" }}>
-                  <span 
-                    className="text-white font-bold -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl"
-                    style={{
-                      transition: "opacity 900ms ease-in-out"
-                    }}
-                  >
-                    {slide.label}
-                  </span>
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-110"
+                     style={{ 
+                       background: slide.label === "Automotive Franchise" 
+                         ? "linear-gradient(270deg, rgba(111, 190, 255, 0.6) 91.82%, rgba(65, 148, 216, 0.6) 100%)"
+                         : "linear-gradient(270deg, rgba(81, 156, 141, 0) 64.98%, rgba(3, 3, 3, 0.65) 110%)" 
+                     }}>
+                  
+                  {/* Flex container with fixed width for consistent alignment */}
+                  <div className="-rotate-90 transform flex items-center justify-start" style={{ width: '240px' }}>
+                    {/* Icon placed at the beginning of text, counter-rotated to appear straight */}
+                    {slide.icon && (
+                      <div className="rotate-90 mr-6 w-8 flex justify-center">
+                        {React.createElement(slide.icon, {
+                          width: 24,
+                          height: 24,
+                          className: "opacity-90"
+                        })}
+                      </div>
+                    )}
+                    {/* Always keep space even if no icon */}
+                    {!slide.icon && <div className="w-8 mr-6"></div>}
+                    <span 
+                      className="text-white font-bold whitespace-nowrap text-lg sm:text-xl md:text-2xl lg:text-3xl"
+                      style={{
+                        transition: "opacity 900ms ease-in-out"
+                      }}
+                    >
+                      {slide.label}
+                    </span>
+                  </div>
                 </div>
               )}
             </div>
