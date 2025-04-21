@@ -274,7 +274,7 @@ const FranchiseSlider = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen h-[180vh]  lg:mt-[-5rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen h-[180vh] sm:mt-[-2rem] xl:mt-[-5rem] lg:mt-[-5rem] mt-[0rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
@@ -293,7 +293,7 @@ const FranchiseSlider = () => {
         transition={{ duration: 0.01 }}
       >
         {/* Car section */}
-        <div className="relative w-full h-auto sm:h-[85vh] lg:h-[90vh] flex flex-col lg:flex-row sm:mb-[1] lg:mb-[5rem] mb-[4rem]">
+        <div className="relative w-full h-auto sm:h-[85vh] lg:h-[90vh] flex flex-col lg:flex-row sm:mb-[0rem] lg:mb-[5rem] mb-[4rem]">
           {/* Left section with background and car */}
           <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full">
             <AnimatePresence mode="wait">
@@ -349,9 +349,9 @@ const FranchiseSlider = () => {
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20 mt-[1rem] lg:mt-[1rem]">
+          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-5 xl:py-10 pt-[1rem]  lg:pt-[5rem] xl:pt-[5rem]  mt-[1rem] lg:mt-[1rem]">
             {/* Title */}
-            <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
+            <div className="flex-1 flex items-center justify-center sm:mb-[0rem] mb-[3rem]">
               <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-2xl sm:text-3xl lg:text-[4rem] xl:text-[5rem] tracking-[0.2em] text-center">
                 Our
                 <br />
@@ -360,7 +360,7 @@ const FranchiseSlider = () => {
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-8 h-auto lg:h-[16rem] w-full mt-[0rem] lg:mt-[5rem]">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-6 xl:gap-8 h-auto lg:h-[16rem] w-full mt-[0rem] lg:mt-[5rem]">
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
@@ -388,7 +388,7 @@ const FranchiseSlider = () => {
                   animate={{
                     x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 212 : (screenWidth ?? 1200) < 1024 ? 220 : 264)
                       }px`,
-                    translateX: (screenWidth ?? 1200) < 640 ? "9.43%" : (screenWidth ?? 1200) < 1024 ? "9.4%" : "-0.1%",
+                    translateX: (screenWidth ?? 1200) < 640 ? "9.53%" : (screenWidth ?? 1200) < 1024 ? "9.51%" : "-0.1%",
                   }}
                   transition={{
                     duration: 0.5,
@@ -406,7 +406,7 @@ const FranchiseSlider = () => {
                         <motion.button
                           key={`slide-infinite-${index}`}
                           onClick={isActive ? undefined : () => { }}
-                          className={`transition-opacity duration-300 flex-shrink-0 ${isActive ? "opacity-100" : "opacity-50 hover:opacity-75 pointer-events-none"
+                          className={`transition-opacity duration-300 flex-shrink-0 ${isActive ? "opacity-120" : "opacity-30 hover:opacity-75 pointer-events-none"
                             }`}
                           whileHover={isActive ? { scale: 1.05 } : undefined}
                           animate={{
