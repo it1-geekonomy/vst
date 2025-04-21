@@ -10,13 +10,34 @@ import slide2 from "@/app/public/hero-section/Image 5.png";
 import slide3 from "@/app/public/hero-section/image 3.png";
 import slide4 from "@/app/public/hero-section/Image 4.png";
 import slide5 from "@/app/public/hero-section/Image 6.png";
+import slide6 from "@/app/public/hero-section/Image 7.png";
+
+
 
 
 
 const slides = [
   {
-    id: 5,
+    id: 7,
     image: slide5,
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "Premium Motors",
+    color: "from-green-600/80 to-green-800/80",
+    type: 'image',
+  },
+  {
+    id: 6,
+    image: slide6,
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "Premium Motors",
+    color: "from-green-600/80 to-green-800/80",
+    type: 'image',
+  },
+  {
+    id: 5,
+    image: slide2,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "Premium Motors",
@@ -64,7 +85,7 @@ const slides = [
 ];
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(4);
+  const [currentSlide, setCurrentSlide] = useState<number>(6);
   const [showImages, setShowImages] = useState(slides);
   const [isMobile, setIsMobile] = useState(false);
   const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
@@ -84,6 +105,20 @@ const Hero = () => {
     // Clean up
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  // Calculate responsive strip width
+  const getStripWidth = () => {
+    if (typeof window !== 'undefined') {
+      const width = window.innerWidth;
+      if (width < 640) return '3rem';  // sm
+      if (width < 768) return '4rem';  // md
+      if (width < 1024) return '4rem'; // lg
+      if (width < 1280) return '6rem'; // xl
+      if (width < 1536) return '8rem'; // 2xl
+      return '7rem'; // for largest screens
+    }
+    return '7rem'; // Default
+  };
 
   // Handle video playback when slide changes
   useEffect(() => {
@@ -134,7 +169,7 @@ const Hero = () => {
   // Mobile view render
   if (isMobile) {
     return (
-      <section className="relative h-[80vh] overflow-hidden bg-black/5">
+      <section className="relative h-[52vh] overflow-hidden bg-black/5 mt-[-10vh]">
         <div className="relative h-full w-full flex items-center justify-center">
           {/* Current slide */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -171,12 +206,12 @@ const Hero = () => {
           </div>
           
           {/* Slide label */}
-          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10">
+          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10 mt-30">
             <span className="text-white font-medium text-lg">{slides[currentSlide].label}</span>
           </div>
           
           {/* Navigation buttons */}
-          <div className="absolute inset-x-0 top-[30vh] flex items-center justify-between px-4 z-10">
+          <div className="absolute inset-x-0 top-[23vh] flex items-center justify-between px-4 z-10">
             <button 
               className="bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition"
               onClick={goToPrevSlide}
@@ -208,78 +243,148 @@ const Hero = () => {
 
   // Desktop view
   return (
-    <section className="relative h-[109vh] overflow-hidden">
+    <section className="relative h-screen md:h-[109vh] overflow-hidden">
+      <style >{`
+        /* CSS variables for responsive sizing */
+        .strips-container {
+          --strip-width-sm: 3rem;
+          --strip-width-md: 4rem;
+          --strip-width-lg: 5rem; 
+          --strip-width-xl: 6rem;
+          --strip-width-2xl: 7rem;
+          --strip-width: var(--strip-width-lg);
+        }
+        
+        /* Responsive breakpoints */
+        @media (max-width: 639px) {
+          .strips-container {
+            --strip-width: var(--strip-width-sm);
+          }
+        }
+        @media (min-width: 640px) and (max-width: 767px) {
+          .strips-container {
+            --strip-width: var(--strip-width-md);
+          }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .strips-container {
+            --strip-width: var(--strip-width-md);
+          }
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+          .strips-container {
+            --strip-width: var(--strip-width-lg);
+          }
+        }
+        @media (min-width: 1280px) and (max-width: 1535px) {
+          .strips-container {
+            --strip-width: var(--strip-width-xl);
+          }
+        }
+        @media (min-width: 1536px) {
+          .strips-container {
+            --strip-width: var(--strip-width-2xl);
+          }
+        }
+        
+        /* Active and inactive strip styling */
+        .strip {
+          transition: all 1300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+          will-change: width, transform;
+          transform-style: preserve-3d;
+          perspective: 1000px;
+        }
+        
+        .strip.inactive {
+          width: var(--strip-width);
+          min-width: var(--strip-width);
+          max-width: var(--strip-width);
+          flex-shrink: 0.3;
+          flex-grow: 0;
+          cursor: pointer;
+        }
+        
+        .strip.active {
+          flex-shrink: 0;
+          flex-grow: 1;
+          width: calc(100% - ((var(--strip-width)) * var(--strip-count)));
+          min-width: calc(100% - ((var(--strip-width)) * var(--strip-count)));
+          max-width: calc(100% - ((var(--strip-width)) * var(--strip-count)));
+        }
+      `}</style>
+      
       <div 
-        className="relative h-full w-full flex flex-row"
-        style={{ willChange: "contents" }}
+        className="strips-container relative h-full w-full flex flex-row"
+        style={{ 
+          willChange: "contents",
+          "--strip-count": showImages.length - 1 
+        } as React.CSSProperties}
       >
         {/* Navigation Strips */}
-        {showImages.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`relative ${currentSlide === index ? "w-full" : "w-15 sm:w-26 md:w-36 cursor-pointer"} shadow-2xl`}
-            style={{
-              transition: "width 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
-              willChange: "width",
-              boxShadow: currentSlide !== index ? 
-                "-8px 0 15px 5px rgba(0,0,0,0.3), -20px 0 30px 8px rgba(0,0,0,0.07), 0 0 50px 15px rgba(80, 80, 80, 0.8)" : 
-                "none",
-            }}
-            onClick={() => handleSlideClick(index)}
-          >
-            {/* Background Content (Image or Video) */}
-            <div className="absolute inset-0 overflow-hidden">
-              {slide.type === 'video' ? (
-                <div className="absolute inset-0 flex items-center justify-center bg-black w-full h-full">
-                  <video
-                    ref={el => { videoRefs.current[slide.id] = el; }}
-                    src={slide.videoSrc}
-                    className="w-full h-full"
+        {showImages.map((slide, index) => {
+          const isActive = currentSlide === index;
+          
+          return (
+            <div
+              key={slide.id}
+              className={`relative strip shadow-2xl ${isActive ? 'active' : 'inactive'}`}
+              onClick={() => handleSlideClick(index)}
+            >
+              {/* Background Content (Image or Video) */}
+              <div className={`absolute inset-0 overflow-hidden ${isActive ? "w-full" : ""}`}>
+                {slide.type === 'video' ? (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black w-full h-full">
+                    <video
+                      ref={el => { videoRefs.current[slide.id] = el; }}
+                      src={slide.videoSrc}
+                      className="w-full h-full"
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center",
+                        opacity: isActive ? 1 : 0.9,
+                        transform: `translate3d(0, 0, 0) scale(${isActive ? 1 : 1.1})`,
+                        transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                      }}
+                      muted
+                      loop
+                      playsInline
+                    />
+                  </div>
+                ) : (
+                  <Image
+                    src={slide.image}
+                    alt={slide.label}
+                    fill
                     style={{
                       objectFit: "cover",
-                      objectPosition: "center",
-                      opacity: currentSlide === index ? 1 : 0.9,
-                      transform: `translate3d(0, 0, 0) scale(${currentSlide === index ? 1 : 1.1})`,
+                      objectPosition: isActive ? "center" : "0% center",
+                      opacity: isActive ? 1 : 0.9,
+                      transform: `translate3d(0, 0, 0) scale(${isActive ? 1 : 1.1})`,
                       transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                      willChange: "transform, opacity"
                     }}
-                    muted
-                    loop
-                    playsInline
+                    priority={index === 0}
                   />
+                )}
+              </div>
+
+              {/* Label for inactive slides */}
+              {!isActive && (
+                <div className="absolute inset-0 flex items-center justify-center opacity-110"
+                     style={{ background: "linear-gradient(270deg, rgba(81, 156, 141, 0) 64.98%, rgba(3, 3, 3, 0.65) 110%)" }}>
+                  <span 
+                    className="text-white font-bold -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl"
+                    style={{
+                      transition: "opacity 900ms ease-in-out"
+                    }}
+                  >
+                    {slide.label}
+                  </span>
                 </div>
-              ) : (
-                <Image
-                  src={slide.image}
-                  alt={slide.label}
-                  fill
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: currentSlide === index ? "center" : "0% center",
-                    opacity: currentSlide === index ? 1 : 0.9,
-                    transform: `translate3d(0, 0, 0) scale(${currentSlide === index ? 1 : 1.1})`,
-                    transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
-                    willChange: "transform, opacity"
-                  }}
-                  priority={index === 0}
-                />
               )}
             </div>
-
-            {/* Label for inactive slides */}
-            {currentSlide !== index && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-60">
-                <span 
-                  className="text-white font-bold -rotate-90 transform whitespace-nowrap text-base sm:text-lg md:text-xl lg:text-3xl drop-shadow-lg"
-                  style={{
-                    transition: "opacity 900ms ease-in-out"
-                  }}
-                >
-                  {slide.label}
-                </span>
-              </div>
-            )}
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
