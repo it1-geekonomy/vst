@@ -6,6 +6,9 @@ import Footer from '@/components/Footer'
 import frame1 from '@/app/public/contact-us/frame1.jpg'
 import Twitter from '@/app/public/contact-us/Twitter'
 import Discord from '@/app/public/contact-us/Discord'
+import axios from 'axios'
+import { useState } from 'react'
+
 interface ContactFormInputs {
   firstName: string
   lastName: string
@@ -15,15 +18,46 @@ interface ContactFormInputs {
 }
 
 export default function Page() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{success: boolean, message: string} | null>(null)
+  
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm<ContactFormInputs>()
 
-  const onSubmit: SubmitHandler<ContactFormInputs> = data => {
-    console.log(data)
-    // Handle form submission here
+  const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+    
+    try {
+      const formData = new FormData()
+      Object.keys(data).forEach(key => {
+        formData.append(key, data[key as keyof ContactFormInputs])
+      })
+      
+      const response = await axios.post('/api/contactEmail', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
+      
+      setSubmitStatus({
+        success: true,
+        message: 'Your message has been sent successfully!'
+      })
+      reset()
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus({
+        success: false,
+        message: 'There was an error sending your message. Please try again.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -51,7 +85,14 @@ export default function Page() {
             <div className="bg-transparent rounded-xl mx-auto overflow-hidden">
               <div className="flex flex-col md:flex-row">
                 {/* Left side - Contact Information */}
-                <div className="bg-black text-white p-8 md:p-10 md:w-2/5 relative rounded-l-xl z-3">
+                <div className="bg-black text-white p-8 md:p-10 md:w-2/5 relative rounded-l-xl z-3 overflow-hidden">
+                  {/* Updated decorative circles with adjusted mobile positioning */}
+                  <div className="absolute bottom-0 right-0 -z-0">
+                    {/* Large dark circle */}
+                    <div className="absolute bottom-[-100px] right-[-50px] w-[200px] h-[200px] md:bottom-[-150px] md:right-[-100px] md:w-[270px] md:h-[300px] rounded-full bg-[#1A1A1A]"></div>
+                    {/* Small semi-transparent circle */}
+                    <div className="absolute bottom-[30px] right-[30px] w-[80px] h-[80px] md:bottom-[50px] md:right-[60px] md:w-[120px] md:h-[120px] rounded-full bg-[#48484880]"></div>
+                  </div>
                   <div>
                     <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
                     <p className="text-gray-400 mb-12">Say something to start a live chat!</p>
@@ -87,8 +128,8 @@ export default function Page() {
                     </div>
                   </div>
                   
-                  {/* Repositioned social media icons for better mobile display */}
-                  <div className="pt-12 sm:pt-16 md:absolute md:bottom-10 md:left-10 flex space-x-4">
+                  {/* Repositioned social media icons with higher z-index */}
+                  <div className="pt-12 sm:pt-16 md:absolute md:bottom-10 md:left-10 flex space-x-4 relative z-10">
                     <a href="#" className="bg-[#1B1B1B] p-2 rounded-full transition-colors hover:bg-white group">
                       <Twitter />
                     </a>
@@ -108,6 +149,12 @@ export default function Page() {
                 {/* Right side - Form */}
                 <div className="bg-[#606060] p-8 md:p-10 md:w-3/5 rounded-r-xl">
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                    {submitStatus && (
+                      <div className={`p-4 rounded-md mb-4 ${submitStatus.success ? 'bg-green-800 text-white' : 'bg-red-800 text-white'}`}>
+                        {submitStatus.message}
+                      </div>
+                    )}
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium mb-1 text-white">First Name</label>
@@ -115,6 +162,7 @@ export default function Page() {
                           {...register('firstName', { required: true })}
                           className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-white text-white"
                         />
+                        {errors.firstName && <span className="text-red-400 text-xs">First name is required</span>}
                       </div>
                       
                       <div>
@@ -123,6 +171,7 @@ export default function Page() {
                           {...register('lastName', { required: true })}
                           className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-white text-white"
                         />
+                        {errors.lastName && <span className="text-red-400 text-xs">Last name is required</span>}
                       </div>
                       
                       <div>
@@ -134,6 +183,7 @@ export default function Page() {
                           })}
                           className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-white text-white"
                         />
+                        {errors.email && <span className="text-red-400 text-xs">Valid email is required</span>}
                       </div>
                       
                       <div>
@@ -142,6 +192,7 @@ export default function Page() {
                           {...register('phoneNumber', { required: true })}
                           className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-white text-white"
                         />
+                        {errors.phoneNumber && <span className="text-red-400 text-xs">Phone number is required</span>}
                       </div>
                     </div>
                     
@@ -151,18 +202,19 @@ export default function Page() {
                         <textarea
                           {...register('message', { required: true })}
                           rows={4}
-                         
                           className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-white text-white"
                         />
+                        {errors.message && <span className="text-red-400 text-xs">Message is required</span>}
                       </div>
                     </div>
                     
                     <div className="text-right">
                       <button
                         type="submit"
-                        className="bg-[#FEBF3D] text-black px-6 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors"
+                        disabled={isSubmitting}
+                        className="bg-[#FEBF3D] text-black px-6 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        Send Message
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
                       </button>
                     </div>
                   </form>

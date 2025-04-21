@@ -5,6 +5,7 @@ import Image from "next/image";
 import Image1881 from "@/app/public/images/AboutUs/1881Image.png";
 import Image1920 from "@/app/public/images/AboutUs/1920Image.png";
 import Image1950 from "@/app/public/images/AboutUs/1950Image.png";
+import VideoPlayer from '@/components/VideoPlayer';
 
 function AboutUsPage() {
   const [selectedYear, setSelectedYear] = useState("1920");
@@ -145,7 +146,7 @@ function AboutUsPage() {
       ></div>
 
       {/* Layer 3: Content */}
-      <div className="relative z-10 p-4 md:p-8 pt-24 md:pt-32"> {/* Increased top padding */}
+      <div className="relative z-10 md:pb-5"> {/* Increased top padding */}
         {/* Timeline component */}
         <div className="flex flex-col lg:flex-row w-full  px-4 sm:px-6 md:px-8">
           {/* Timeline Years */}
@@ -332,51 +333,32 @@ function AboutUsPage() {
 
         {/* About Us Text Section */}
         <div className="mt-12 md:mt-16 px-4 md:px-32">
-          <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white">Our Legacy</h1>
+          <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-rocWide">Our Legacy</h1>
 
           <div className="flex flex-col">
-            <h2 className="text-lg md:text-xl mb-2 text-white">About VST Group</h2>
+            <h2 className="text-lg md:text-lg mb-2 text-white font-rocWide">About VST Group</h2>
             <div
-              style={{
-                fontFamily: "roc",
-                fontWeight: 400,
-                fontSize: "18px",
-                lineHeight: "150%",
-                letterSpacing: "0%",
-                color: "white",
-              }}
+              
             >
               <p
-                className="mb-4 text-justify hyphens-auto"
-                style={{
-                  wordSpacing: "0.1em",
-                  fontFamily:  "roc-grotesk",
-                  fontWeight: 400,
-                }}
+                className=" text-justify hyphens-auto font-rocWide font-light"
+                
               >
                 Established in 1911, VST Group is a distinguished 11 year old enterprise headquartered in Bangalore.
               </p>
               <p
-                className="mb-4 text-justify hyphens-auto"
-                style={{
-                  wordSpacing: "0.1em",
-                  fontFamily:  "roc-grotesk",
-                  fontWeight: 400,
-                }}
+                className=" text-justify hyphens-auto font-rocWide font-light"
+                
               >
                 It encompasses a wide array of luxury and mid variant car franchises, like Porsche, Maserati, Mercedes Benz, Jaguar, Land Rover, Ducati, Tata, Kia, Volkswagen, BYD Mahindra, Honda Scooters alongside a prominent manufacturing sector and significant interests in real estate, financial services and education industry. Under the leadership of its fourth generation, the Group has a turnover of Rs. 5,000 crores 570 million with sustainable growth, excellence, and innovation.
               </p>
               <p
-                className="mb-4 text-justify hyphens-auto"
-                style={{
-                  wordSpacing: "0.1em",
-                  fontFamily:  "roc-grotesk",
-                  fontWeight: 400,
-                }}
+                className=" text-justify hyphens-auto font-rocWide font-light"
+                
               >
-                VST Tractors & Tillers, a key division, is renowned for its innovative and reliable agricultural machinery, supporting farmers with high quality equipment to boost productivity and modernize farming techniques. Gove Finance Limited, the leader in Auto Finance services for more than 30 years, is a dynamic nonbanking finance company led by a team of specialists with proven track record. It finance cars, commercial vehicles, construction equipments, used vehicles, tractors and buses. Meanwhile, SKEI stands out for its commitment to holistic education, offering a range of academic and extracurricular programs in a supportive environment, enhanced by state of the art facilities and a dedicated faculty to foster intellectual and personal growth.
+                VST Tractors  Tillers, a key division, is renowned for its innovative and reliable agricultural machinery, supporting farmers with high quality equipment to boost productivity and modernize farming techniques. Gove Finance Limited, the leader in Auto Finance services for more than 30 years, is a dynamic nonbanking finance company led by a team of specialists with proven track record. It finance cars, commercial vehicles, construction equipments, used vehicles, tractors and buses. Meanwhile, SKEI stands out for its commitment to holistic education, offering a range of academic and extracurricular programs in a supportive environment, enhanced by state of the art facilities and a dedicated faculty to foster intellectual and personal growth.
               </p>
-              <p className="text-white font-medium">SINCE 1911</p>
+              <p className="text-white font-base font-rocWide">SINCE 1911</p>
             </div>
           </div>
         </div>
@@ -384,21 +366,15 @@ function AboutUsPage() {
         {/* Progress with Purpose Section */}
         <div className="mt-16 md:mt-32 flex items-center justify-center px-4">
           <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-              <video
-                src="/ContactUsLogo.mp4"
-                autoPlay
-                muted
-                loop
-                className="w-full h-full object-cover max-w-[400px] md:max-w-none"
-              />
+            <div className="w-full md:h-[500px] md:w-1/2 flex justify-center md:justify-end">
+              <VideoPlayer src="/ContactUsLogo.mp4" />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl text-white mb-2">
+              <h2 className="text-3xl md:text-4xl text-white mb-2 font-rocWide">
                 Progress with Purpose.
               </h2>
-              <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8">Impact with Vision</h3>
+              <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-rocWide">Impact with Vision</h3>
               <button className="bg-yellow-400 text-black px-6 md:px-8 py-2 md:py-3 rounded text-base md:text-lg font-medium">
                 Join Us
               </button>

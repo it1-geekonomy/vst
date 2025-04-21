@@ -4,8 +4,8 @@ const TataIcon = () => {
   return (
     <svg
      width="200"
-      height="75"
-      viewBox="0 0 200 75"
+      height="70"
+      viewBox="0 0 200 70"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -13,7 +13,7 @@ const TataIcon = () => {
       <rect
         y="0.00482178"
        width="200"
-        height="75"
+        height="70"
         fill="url(#pattern0_4756_4796)"
       />
       <defs>
