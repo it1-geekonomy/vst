@@ -52,7 +52,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button 
               onClick={toggleMobileMenu}
               className="text-white p-2 focus:outline-none"
@@ -83,13 +83,13 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="flex items-center space-x-6 lg:space-x-8">
-              <Link
-                href="/"
+            <Link
+                href="/about-us"
                 className="text-base font-medium text-white hover:text-gray-300 transition-colors"
               >
-                Home
+                About Us
               </Link>
               <div className="relative group">
                 <button
@@ -110,15 +110,12 @@ export default function Navbar() {
                     />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-40 bg-black rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <Link href="/automotive-franchises" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
+                <div className="absolute left-0 mt-2 w-42 bg-black rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <Link href="/automotive-franchises" className="block px-4 py-2 text-sm text-white hover:bg-gray-800 whitespace-nowrap">
                     Automotive Franchises
                   </Link>
                   <Link href="/education" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
                     Education
-                  </Link>
-                  <Link href="/csr" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
-                    CSR
                   </Link>
                   <Link href="/auto-parts" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
                     Auto Parts
@@ -126,11 +123,15 @@ export default function Navbar() {
                   <Link href="/manufacture" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
                     Manufacture
                   </Link>
-                  <Link href="/news-media" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
-                    News and Media
-                  </Link>
+                  
                 </div>
               </div>
+              <Link href="/csr" className="block px-4 py-2 text-sm text-white">
+                    CSR
+                  </Link>
+                  <Link href="/news-media" className="block px-4 py-2 text-sm text-white">
+                    News and Media
+                  </Link>
               <Link
                 href="/career"
                 className="text-base font-medium text-white hover:text-gray-300 transition-colors"
@@ -143,12 +144,7 @@ export default function Navbar() {
               >
                 Contact Us
               </Link>
-              <Link
-                href="/about-us"
-                className="text-base font-medium text-white hover:text-gray-300 transition-colors"
-              >
-                About Us
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -156,14 +152,14 @@ export default function Navbar() {
 
       {/* Mobile menu, show/hide based on menu state */}
       {isMobileMenuOpen && (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
-            <Link
-              href="/"
+          <Link
+              href="/about-us"
               className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Home
+              About Us
             </Link>
             
             <div className="relative">
@@ -193,13 +189,6 @@ export default function Navbar() {
                   education
                 </Link>
                 <Link
-                  href="/csr"
-                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                  CSR
-                </Link>
-                <Link
                   href="/auto-parts"
                   className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -213,16 +202,23 @@ export default function Navbar() {
                 >
                   Manufacture
                 </Link>
+                
+              </div>
+            </div>
+            <Link
+                  href="/csr"
+                  className="block px-3 py-2 text-sm text-white rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                  CSR
+                </Link>
                 <Link
                   href="/news-media"
-                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2 text-sm text-white rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   News and Media
                 </Link>
-              </div>
-            </div>
-            
             <Link
               href="/career"
               className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
@@ -237,13 +233,7 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
-            <Link
-              href="/about-us"
-              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              About Us
-            </Link>
+            
           </div>
         </div>
       )}

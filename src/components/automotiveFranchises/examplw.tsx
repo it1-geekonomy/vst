@@ -11,9 +11,6 @@ import bg4 from "@/app/public/faranchies/bgpic/4carbg.png";
 import bg5 from "@/app/public/faranchies/bgpic/5carbg.png";
 import bg6 from "@/app/public/faranchies/bgpic/6carbg.png";
 import bg7 from "@/app/public/faranchies/bgpic/7carbg.png";
-import bg8 from "@/app/public/faranchies/bgpic/Honda-bg.png";
-import bg9 from "@/app/public/faranchies/bgpic/volkswagen-bg.png";
-import bg10 from "@/app/public/faranchies/bgpic/byd-bg.png";
 import car1 from "@/app/public/faranchies/bgpic/car1.png";
 
 import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
@@ -23,10 +20,6 @@ import car5 from "@/app/public/faranchies/carpic/5car.png";
 import car6 from "@/app/public/faranchies/carpic/6car.png";
 import car7 from "@/app/public/faranchies/carpic/7car.png";
 import bike from "@/app/public/faranchies/carpic/bike.png";
-import hondabike from "@/app/public/faranchies/carpic/Honda-bike.png";
-import volkswagen from "@/app/public/faranchies/carpic/volkswagen-car.png";
-import byd from "@/app/public/faranchies/carpic/byd-car.png";
-
 import MercedesIcon from "@/app/public/faranchies/MercedesIcon";
 import LandRoverIcon from "@/app/public/faranchies/LandRoverIcon";
 import PorscheIcon from "@/app/public/faranchies/PorscheIcon";
@@ -34,9 +27,6 @@ import MaseratiIcon from "@/app/public/faranchies/MaseratiIcon";
 import MahindraIcon from "@/app/public/faranchies/MahindraIcon";
 import KiaIcon from "@/app/public/faranchies/KiaIcon";
 import DucatiIcon from "@/app/public/faranchies/DucatiIcon";
-import HondaLogo from "@/app/public/faranchies/HondaLogo";
-import VolkswagenLogo from "@/app/public/faranchies/VolkswagenLogo";
-import BydLogo from "@/app/public/faranchies/BydLogo";
 import TataIcon from "@/app/public/faranchies/TataIcon";
 import BusinessSectors from "./BusinessSectors";
 import Logo from "@/app/public/logos/Logo";
@@ -45,13 +35,12 @@ interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
   carImage: StaticImageData;
-  brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD";
+  brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati";
   bgColor: {
     from: string;
     to: string;
   };
   LogoComponent: React.ComponentType<{ className?: string }>;
-  header: string,
   description: string;
   learnMoreLink: string;
 }
@@ -67,7 +56,6 @@ const slides: SlideData[] = [
       to: "rgba(120, 14, 38, 0.4)",
     },
     LogoComponent: PorscheIcon,
-    header: "VST Supercars",
     description:
       "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
     learnMoreLink: "https://www.porsche.com"
@@ -84,9 +72,7 @@ const slides: SlideData[] = [
       to: "#5A6292"
     },
     LogoComponent: MercedesIcon,
-    header: "VST Titanium ",
     description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015,with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar inluxury automotive ownership.",
-
     learnMoreLink: "https://www.mercedes-benz.com"
   },
   {
@@ -99,9 +85,7 @@ const slides: SlideData[] = [
       to: "rgba(220, 171, 119, 0.4)",
     },
     LogoComponent: LandRoverIcon,
-    header: "VST Grandeur",
     description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service..",
-
     learnMoreLink: "https://www.landrover.com"
   },
   {
@@ -114,40 +98,33 @@ const slides: SlideData[] = [
       to: "rgba(111, 190, 255, 0.4)",
     },
     LogoComponent: MaseratiIcon,
-    header:"VST Avventura",
-
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
-
     learnMoreLink: "https://www.maserati.com"
   },
   {
     id: 5,
     backgroundImage: bg4,
-    carImage: car6,
+    carImage: car5,
     brand: "maserati",
     bgColor: {
       from: "#FDC756",
       to: "rgba(253, 199, 86, 0.4)",
     },
     LogoComponent: KiaIcon,
-    header: "VST Central",
     description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
-
     learnMoreLink: "https://www.kia.com"
   },
   {
     id: 6,
     backgroundImage: bg6,
-    carImage: car5,
+    carImage: car6,
     brand: "maserati",
     bgColor: {
       from: "#D6744E",
       to: "rgba(214, 116, 78, 0.4)",
     },
     LogoComponent: TataIcon,
-    header: "VST Motors",
     description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state..",
-
     learnMoreLink: "https://www.tatamotors.com"
   },
   {
@@ -160,7 +137,6 @@ const slides: SlideData[] = [
       to: "rgba(5, 241, 242, 0.4)",
     },
     LogoComponent: MahindraIcon,
-    header: "India Garage",
     description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction..",
     learnMoreLink: "https://www.mahindra.com"
   },
@@ -174,56 +150,8 @@ const slides: SlideData[] = [
       to: "rgba(233, 53, 76, 0.4)",
     },
     LogoComponent: DucatiIcon,
-    header: "VST Ducati",
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
-
     learnMoreLink: "https://www.ducati.com"
-  },
-  {
-    id: 9,
-    backgroundImage: bg8,
-    carImage: hondabike,
-    brand: "honda",
-    bgColor: {
-      from: "#E9354C",
-      to: "rgba(233, 53, 76, 0.4)",
-    },
-    LogoComponent: HondaLogo,
-    header:"City Honda",
-    description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence.",
-
-
-    learnMoreLink: "#"
-  },
-  {
-    id: 9,
-    backgroundImage: bg9,
-    carImage: volkswagen,
-    brand: "volkswagen",
-    bgColor: {
-      from: "#E9354C",
-      to: "rgba(233, 53, 76, 0.4)",
-    },
-    LogoComponent: VolkswagenLogo,
-    header: "Bangalore Motors",
-    description: "In 2009, the Group brought the best of German engineering to Bangalore's automobile market with the opening of Volkswagen Palace Cross. This is a prestigious, plush sales location on Bangalore's Palace Cross Road that mirrors the excellence and up-to-the-minute technology of the outstanding automobiles it deals in.",
-
-    learnMoreLink: "#"
-  },
-  {
-    id: 10,
-    backgroundImage: bg10,
-    carImage: byd,
-    brand: "BYD",
-    bgColor: {
-      from: "#E9354C",
-      to: "rgba(233, 53, 76, 0.4)",
-    },
-    LogoComponent: BydLogo,
-    header: "VST BYD",
-    description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD’s cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
-
-    learnMoreLink: "#"
   },
 ];
 
@@ -282,9 +210,9 @@ const FranchiseSlider = () => {
         className="fixed inset-0 z-0 pointer-events-none"
         style={{
           background: `
-          radial-gradient(33.31% 35.31% at 91.72% 2.91%, ${gradientColor} 0%, transparent 100%),
-          linear-gradient(348.88deg, rgba(0, 0, 0, 09) 2.12%, rgba(65, 148, 216, 0.6) 82.2%)
-        `
+            radial-gradient(33.31% 35.31% at 91.72% 2.91%, ${gradientColor} 0%, transparent 100%),
+            linear-gradient(348.88deg, rgba(0, 0, 0, 09) 2.12%, rgba(65, 148, 216, 0.6) 82.2%)
+          `
         }}
       />
 
@@ -297,7 +225,7 @@ const FranchiseSlider = () => {
         {/* Car section */}
         <div className="relative w-full h-auto sm:h-[85vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1] lg:mb-[10rem] mb-[4rem]">
           {/* Left section with background and car */}
-          <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full xl:h-[90vh]">
+          <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`bg-${currentSlide}`}
@@ -324,8 +252,8 @@ const FranchiseSlider = () => {
               />
               <div
                 className="hidden lg:block absolute top-0 right-[2rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%]  rounded-br-full  
-              rounded-bl-none   
-              rounded-t-none "
+                rounded-bl-none   
+                rounded-t-none "
                 style={{ backgroundColor: slides[currentSlide].bgColor.from }}
               />
 
@@ -362,7 +290,7 @@ const FranchiseSlider = () => {
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-8 h-auto lg:h-[16rem] translate-y-[-20%] w-full">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-8 h-auto lg:h-[16rem] w-full">
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
@@ -455,18 +383,7 @@ const FranchiseSlider = () => {
         {/* Description section - moved back outside but made dynamic */}
         <div className="w-full py-1 sm:py-2 md:py-4 lg:py-10 px-4 sm:px-6 lg:px-24 flex flex-col items-center pt-6 sm:pt-4  lg:pt-1 mt-[-2rem] sm:mt-[-1rem] lg:mt-[-6rem]">
           <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8">
-            <AnimatePresence mode="wait">
-              <motion.h2
-                key={`header-${currentSlide}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8"
-              >
-                {slides[currentSlide].header}
-              </motion.h2>
-            </AnimatePresence>
+            VST Supercars
           </h2>
           <AnimatePresence mode="wait">
             <motion.p
@@ -476,8 +393,8 @@ const FranchiseSlider = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
               className="text-white text-sm sm:text-base lg:text-[24px] text-center lg:text-justify 
-            font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
-            font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
+              font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
+              font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
             >
               {slides[currentSlide].description}
             </motion.p>

@@ -1,10 +1,6 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-// import slide1 from "@/app/public/slid1.png";
-// import slide2 from "@/app/public/slid 2.png";
-// import slide3 from "@/app/public/slide.png";
-
 import slide1 from "@/app/public/hero-section/Image 1.png";
 import slide2 from "@/app/public/hero-section/Image 5.png";
 import slide3 from "@/app/public/hero-section/image 3.png";
@@ -12,9 +8,16 @@ import slide4 from "@/app/public/hero-section/Image 4.png";
 import slide5 from "@/app/public/hero-section/Image 6.png";
 import slide6 from "@/app/public/hero-section/Image 7.png";
 
-
-
-
+// Import SVG icons
+import Frame1 from "@/app/public/faranchies/Frame 1973341731.svg";
+import Frame2 from "@/app/public/faranchies/Frame 1973341732.svg";
+import Frame3 from "@/app/public/faranchies/Frame 1973341733.svg";
+import NewsIcon from "@/app/public/hero-section/NewsIcon";
+import CorporateIcon from "@/app/public/hero-section/CorporateIcon";
+import EducationIcon from "@/app/public/hero-section/EducationIcon";
+import OEPartsIcon from "@/app/public/hero-section/OEPartsIcon";
+import ManufacturingIcon from "@/app/public/hero-section/ManufacturingIcon";
+import AutomativeFranchiseIcon from "@/app/public/hero-section/AutomativeFranchiseIcon";
 
 const slides = [
   {
@@ -370,16 +373,36 @@ const Hero = () => {
 
               {/* Label for inactive slides */}
               {!isActive && (
-                <div className="absolute inset-0 flex items-center justify-center opacity-110"
-                     style={{ background: "linear-gradient(270deg, rgba(81, 156, 141, 0) 64.98%, rgba(3, 3, 3, 0.65) 110%)" }}>
-                <span 
-                    className="text-white font-bold -rotate-90 transform whitespace-nowrap text-lg sm:text-xl md:text-2xl lg:text-3xl"
-                    style={{
-                    transition: "opacity 900ms ease-in-out"
-                }}
-              >
-                    {slide.label}
-                  </span>
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-110"
+                     style={{ 
+                       background: slide.label === "Automotive Franchise" 
+                         ? "linear-gradient(270deg, rgba(111, 190, 255, 0.6) 91.82%, rgba(65, 148, 216, 0.6) 100%)"
+                         : "linear-gradient(270deg, rgba(81, 156, 141, 0) 64.98%, rgba(3, 3, 3, 0.65) 110%)" 
+                     }}>
+                  
+                  {/* Flex container with fixed width for consistent alignment */}
+                  <div className="-rotate-90 transform flex items-center justify-start" style={{ width: '240px' }}>
+                    {/* Icon placed at the beginning of text, counter-rotated to appear straight */}
+                    {slide.icon && (
+                      <div className="rotate-90 mr-6 w-8 flex justify-center">
+                        {React.createElement(slide.icon, {
+                          width: 24,
+                          height: 24,
+                          className: "opacity-90"
+                        })}
+                      </div>
+                    )}
+                    {/* Always keep space even if no icon */}
+                    {!slide.icon && <div className="w-8 mr-6"></div>}
+                    <span 
+                      className="text-white font-bold whitespace-nowrap text-lg sm:text-xl md:text-2xl lg:text-3xl"
+                      style={{
+                        transition: "opacity 900ms ease-in-out"
+                      }}
+                    >
+                      {slide.label}
+                    </span>
+                  </div>
                 </div>
               )}
             </div>

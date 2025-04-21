@@ -2,6 +2,9 @@
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
+import gif from "@/app/public/news-and-media/VST logo 120 fps.gif"
+import Image from "next/image";
+
 
 interface IFormInputs {
   firstName: string;
@@ -55,25 +58,22 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
   };
 
   return (
-    <div className={`flex justify-around p-3 xs:p-4 sm:p-6 md:p-10 ${bgcolour} text-white min-h-screen overflow-x-hidden`}>
+    <div className={`flex justify-around p-3 xs:p-4 sm:p-6 md:p-10 ${bgcolour} text-white min-h-[80vh] overflow-x-hidden`}>
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row justify-around items-start gap-6 xs:gap-8 md:gap-10 lg:gap-12">
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start pt-[50px] lg:pt-0">
           <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
             <div className="w-full flex justify-center lg:justify-end pr-0 lg:pr-20">
               <h1
-                className="text-[#FEBF3D] text-4xl xs:text-5xl sm:text-5xl md:text-5xl font-rocWide font-normal mb-3 xs:mb-4 md:mb-6 lg:mb-8"
+                className="text-[#FEBF3D] text-4xl xs:text-5xl sm:text-5xl md:text-5xl font-rocWide font-normal mb-3 xs:mb-4 md:mb-4 lg:mb-4"
               >
                 Get In Touch
               </h1>
             </div>
-            <div className="w-full h-[150px] xs:h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] flex justify-center items-center">
-              <video
-                src="/ContactUsLogo.mp4"
-                autoPlay
-                muted
-                loop
-                className="w-[95%] h-[95%] object-contain"
-                playsInline
+            <div className="w-full h-[300px] lg:h-[350px] xl:h-[450px] flex justify-center items-center">
+              <Image
+                src={gif}
+                alt="VST Logo Animation"
+                className="w-[100%] h-[100%] object-contain"
               />
             </div>
           </div>
