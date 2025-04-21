@@ -16,16 +16,16 @@ export default function Page() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
-  const [previousPositions, setPreviousPositions] = useState<{[key: number]: string}>({});
-  
+  const [previousPositions, setPreviousPositions] = useState<{ [key: number]: string }>({});
+
   // Touch swipe handling for mobile/tablet
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const touchSensitivity = 50; // Minimum swipe distance
-  
+
   // Refs for mobile slider
   const mobileSliderRef = useRef<HTMLDivElement>(null);
-  
+
   // Use the imported images
   const images = [img1, img4, img5, img3, img2];
 
@@ -41,10 +41,10 @@ export default function Page() {
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isSwipe = Math.abs(distance) > touchSensitivity;
-    
+
     if (isSwipe && !isTransitioning) {
       if (distance > 0) {
         // Swipe left, go to next slide
@@ -54,7 +54,7 @@ export default function Page() {
         goToPrevSlide();
       }
     }
-    
+
     // Reset touch values
     setTouchStart(null);
     setTouchEnd(null);
@@ -62,26 +62,26 @@ export default function Page() {
 
   const handleImageClick = (index: number) => {
     if (isTransitioning) return;
-    
+
     // Store previous positions before changing activeIndex
-    const prevPositions: {[key: number]: string} = {};
+    const prevPositions: { [key: number]: string } = {};
     images.forEach((_, imgIndex) => {
       prevPositions[imgIndex] = getPositionClass(imgIndex);
     });
     setPreviousPositions(prevPositions);
-    
+
     // Determine direction
     const currentPos = activeIndex;
     const clickedPos = index;
-    
+
     // Determine if we should go next or prev
     const distForward = (clickedPos - currentPos + images.length) % images.length;
     const distBackward = (currentPos - clickedPos + images.length) % images.length;
-    
+
     setDirection(distForward <= distBackward ? 'next' : 'prev');
     setIsTransitioning(true);
     setActiveIndex(index);
-    
+
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
@@ -90,18 +90,18 @@ export default function Page() {
 
   const goToPrevSlide = () => {
     if (isTransitioning) return;
-    
+
     // Store previous positions before changing activeIndex
-    const prevPositions: {[key: number]: string} = {};
+    const prevPositions: { [key: number]: string } = {};
     images.forEach((_, imgIndex) => {
       prevPositions[imgIndex] = getPositionClass(imgIndex);
     });
     setPreviousPositions(prevPositions);
-    
+
     setDirection('prev');
     setIsTransitioning(true);
     setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    
+
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
@@ -110,18 +110,18 @@ export default function Page() {
 
   const goToNextSlide = () => {
     if (isTransitioning) return;
-    
+
     // Store previous positions before changing activeIndex
-    const prevPositions: {[key: number]: string} = {};
+    const prevPositions: { [key: number]: string } = {};
     images.forEach((_, imgIndex) => {
       prevPositions[imgIndex] = getPositionClass(imgIndex);
     });
     setPreviousPositions(prevPositions);
-    
+
     setDirection('next');
     setIsTransitioning(true);
     setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    
+
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
@@ -132,7 +132,7 @@ export default function Page() {
   const getPositionClass = (index: number) => {
     // Calculate the relative position to the active index
     const position = (index - activeIndex + images.length) % images.length;
-    
+
     if (position === 0) return "center"; // Center/active image
     if (position === 1) return "right-1"; // First image on the right
     if (position === 2) return "right-2"; // Second image on the right
@@ -145,9 +145,9 @@ export default function Page() {
   const getAnimationClass = (index: number) => {
     const currentPosition = getPositionClass(index);
     const previousPosition = previousPositions[index];
-    
+
     if (!isTransitioning || !previousPosition) return '';
-    
+
     // For "next" direction (carousel moves left)
     if (direction === 'next') {
       // If moving from right-2 to hidden (going off-screen to the right)
@@ -159,7 +159,7 @@ export default function Page() {
         return 'enter-left';
       }
     }
-    
+
     // For "prev" direction (carousel moves right)
     if (direction === 'prev') {
       // If moving from left-2 to hidden (going off-screen to the left)
@@ -171,7 +171,7 @@ export default function Page() {
         return 'enter-right';
       }
     }
-    
+
     return '';
   };
 
@@ -180,20 +180,20 @@ export default function Page() {
     const position = getPositionClass(index);
     const animationClass = getAnimationClass(index);
     const previousPosition = previousPositions[index];
-    
+
     const isWrapping = animationClass !== '';
-    
+
     // Different timing for different transitions
     let transitionDuration = isWrapping ? "1200ms" : "600ms";
-    
+
     // Customize timing function based on the transition type
-    let transitionTimingFunction = isWrapping 
+    let transitionTimingFunction = isWrapping
       ? "cubic-bezier(0.42, 0.0, 0.58, 1.0)" // Enhanced easing for wrapping transitions
       : "cubic-bezier(0.455, 0.030, 0.515, 0.955)"; // Regular easing
-    
+
     // For specific animation cases, we'll use the keyframe animations instead
     const useKeyframeAnimation = animationClass !== '';
-    
+
     return {
       transitionDuration,
       transitionTimingFunction,
@@ -207,27 +207,27 @@ export default function Page() {
     // If it's desktop view (lg and above) or not mobile view, use original desktop settings
     if (!isMobileView) {
       return {
-        zIndex: positionClass === 'center' ? 90 : 
-                 positionClass === 'left-1' || positionClass === 'right-1' ? 80 :
-                 positionClass === 'left-2' || positionClass === 'right-2' ? 30 : 1,
+        zIndex: positionClass === 'center' ? 90 :
+          positionClass === 'left-1' || positionClass === 'right-1' ? 80 :
+            positionClass === 'left-2' || positionClass === 'right-2' ? 30 : 1,
         width: positionClass === 'center' ? '40%' : '30%',
         height: positionClass === 'center' ? '80%' : '70%',
         transform: positionClass === 'center' ? 'translate(-50%, -50%) scale(1) rotateY(0)' :
-                   positionClass === 'left-1' ? 'translate(-140%, -50%) scale(1) rotateY(45deg)' :
-                   positionClass === 'right-1' ? 'translate(40%, -50%) scale(1) rotateY(-45deg)' :
-                   positionClass === 'left-2' ? 'translate(-205%, -50%) scale(0.9) rotateY(65deg)' :
-                   positionClass === 'right-2' ? 'translate(105%, -50%) scale(0.9) rotateY(-65deg)' :
-                   'translate(-50%, -50%) scale(0.5) rotateY(0)',
+          positionClass === 'left-1' ? 'translate(-140%, -50%) scale(1) rotateY(45deg)' :
+            positionClass === 'right-1' ? 'translate(40%, -50%) scale(1) rotateY(-45deg)' :
+              positionClass === 'left-2' ? 'translate(-205%, -50%) scale(0.9) rotateY(65deg)' :
+                positionClass === 'right-2' ? 'translate(105%, -50%) scale(0.9) rotateY(-65deg)' :
+                  'translate(-50%, -50%) scale(0.5) rotateY(0)',
         opacity: positionClass === 'hidden' ? 0 : 1,
         filter: positionClass === 'center' ? 'none' : 'brightness(0.7)',
       };
     }
-    
+
     // Mobile and tablet specific styles
     const baseStyles = {
-      zIndex: positionClass === 'center' ? 90 : 
-              positionClass === 'left-1' || positionClass === 'right-1' ? 80 :
-              positionClass === 'left-2' || positionClass === 'right-2' ? 30 : 1,
+      zIndex: positionClass === 'center' ? 90 :
+        positionClass === 'left-1' || positionClass === 'right-1' ? 80 :
+          positionClass === 'left-2' || positionClass === 'right-2' ? 30 : 1,
       opacity: positionClass === 'hidden' ? 0 : 1,
       filter: positionClass === 'center' ? 'none' : 'brightness(0.7)',
     };
@@ -253,7 +253,7 @@ export default function Page() {
     } else if (positionClass === 'left-2' || positionClass === 'right-2') {
       width = '0'; // Hide far side images on small screens
       height = '0';
-      transform = positionClass === 'left-2' 
+      transform = positionClass === 'left-2'
         ? 'translate(-180%, -50%) scale(0.7) rotateY(65deg)'
         : 'translate(80%, -50%) scale(0.7) rotateY(-65deg)';
     } else {
@@ -274,132 +274,81 @@ export default function Page() {
   useEffect(() => {
     if (mobileSliderRef.current) {
       const slider = mobileSliderRef.current;
-      
+
       // Set initial position
       slider.style.transition = 'none';
       slider.style.transform = `translateX(-${activeIndex * 100}%)`;
-      
+
       // Force reflow to apply the initial style before adding transition
       slider.offsetHeight;
-      
+
       // Add transition for smooth slide effect
       slider.style.transition = 'transform 0.5s ease-in-out';
       slider.style.transform = `translateX(-${activeIndex * 100}%)`;
     }
   }, [activeIndex]);
 
-    return (
-      <div className="relative w-full min-h-screen mt-16">
-        {/* Main section with background image */}
-        <div className="relative min-h-[50vh] lg:h-screen">
-          {/* Background image only for main section */}
-          <div className="absolute inset-0 z-0 pointer-events-none">
-            <div className="absolute inset-0 opacity-100">
-              <Image 
-                src={bgImage} 
-                alt="Auto parts background" 
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-[rgba(241,233,146,1.7)] to-transparent"></div>
+  return (
+    <div className="relative w-full min-h-screen mt-16">
+      {/* Main section with background image */}
+      <div className="relative min-h-[50vh] lg:h-screen">
+        {/* Background image only for main section */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute inset-0 opacity-100">
+            <Image
+              src={bgImage}
+              alt="Auto parts background"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
-          
-          {/* VST AUTO PARTS Title */}
-          <div className="relative z-10 pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-8 text-center">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider text-black">VST AUTO PARTS</h1>
-          </div>
+          <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-[rgba(241,233,146,1.7)] to-transparent"></div>
+        </div>
 
-          {/* Responsive Carousel Slider */}
-          <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-5xl xl:max-w-7xl mx-auto px-4 mb-8 sm:mb-12 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[700px]">
-            {/* Desktop 3D Carousel - only visible on large screens */}
-            <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
-              <div className="carousel-container relative w-full h-full">
-                {images.map((img, index) => {
-                  const positionClass = getPositionClass(index);
-                  const {transitionDuration, transitionTimingFunction, useKeyframeAnimation, animationClass} = getTransitionStyle(index);
-                  const responsiveStyle = getResponsiveItemStyle(positionClass, false); // Always use desktop styles
-                  
-                  return (
-                    <div
-                      key={index}
-                      className={`carousel-item absolute top-0 left-0 cursor-pointer ${positionClass} ${animationClass}`}
-                      onClick={() => handleImageClick(index)}
-                      style={{
-                        zIndex: responsiveStyle.zIndex,
-                        width: responsiveStyle.width,
-                        height: responsiveStyle.height,
-                        top: '50%',
-                        left: '50%',
-                        transform: responsiveStyle.transform,
-                        opacity: responsiveStyle.opacity,
-                        filter: responsiveStyle.filter,
-                        aspectRatio: positionClass === 'center' ? '1/1' : 'auto',
-                        transition: !useKeyframeAnimation ? 
-                          `transform ${transitionDuration} ${transitionTimingFunction}, 
+        {/* VST AUTO PARTS Title */}
+        <div className="relative z-10 pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-8 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider text-black">VST AUTO PARTS</h1>
+        </div>
+
+        {/* Responsive Carousel Slider */}
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 mb-8 sm:mb-12 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[550px]">
+          {/* Desktop 3D Carousel - only visible on large screens */}
+          <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
+            <div className="carousel-container relative w-full h-full">
+              {images.map((img, index) => {
+                const positionClass = getPositionClass(index);
+                const { transitionDuration, transitionTimingFunction, useKeyframeAnimation, animationClass } = getTransitionStyle(index);
+                const responsiveStyle = getResponsiveItemStyle(positionClass, false); // Always use desktop styles
+
+                return (
+                  <div
+                    key={index}
+                    className={`carousel-item absolute top-0 left-0 cursor-pointer ${positionClass} ${animationClass}`}
+                    onClick={() => handleImageClick(index)}
+                    style={{
+                      zIndex: responsiveStyle.zIndex,
+                      width: responsiveStyle.width,
+                      height: responsiveStyle.height,
+                      top: '50%',
+                      left: '50%',
+                      transform: responsiveStyle.transform,
+                      opacity: responsiveStyle.opacity,
+                      filter: responsiveStyle.filter,
+                      aspectRatio: positionClass === 'center' ? '1/1' : 'auto',
+                      transition: !useKeyframeAnimation ?
+                        `transform ${transitionDuration} ${transitionTimingFunction}, 
                            opacity ${transitionDuration} ${transitionTimingFunction}, 
                            filter ${transitionDuration} ${transitionTimingFunction},
                            width ${transitionDuration} ${transitionTimingFunction},
                            height ${transitionDuration} ${transitionTimingFunction}` : 'none',
-                        animationDuration: useKeyframeAnimation ? transitionDuration : undefined,
-                        animationTimingFunction: useKeyframeAnimation ? transitionTimingFunction : undefined,
-                        animationFillMode: 'forwards'
-                      }}
-                    >
-                      <div className="w-full h-full relative rounded-4xl overflow-hidden shadow-xl">
-                        <Image 
-                          src={img}
-                          alt={`Auto parts image ${index + 1}`}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              
-              {/* Desktop Navigation Arrows */}
-              <button 
-                className="absolute left-[5%] top-1/2 -translate-y-1/2 z-50 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full disabled:opacity-50"
-                onClick={goToPrevSlide}
-                disabled={isTransitioning}
-              >
-                ←
-              </button>
-              <button 
-                className="absolute right-[5%] top-1/2 -translate-y-1/2 z-50 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full disabled:opacity-50"
-                onClick={goToNextSlide}
-                disabled={isTransitioning}
-              >
-                →
-              </button>
-            </div>
-
-            {/* Mobile & Tablet slider - simplified swipeable version for small to medium screens */}
-            <div 
-              className="lg:hidden w-full h-full relative overflow-hidden"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
-              {/* Mobile slider track that moves horizontally */}
-              <div 
-                ref={mobileSliderRef}
-                className="flex w-full h-full transition-transform duration-500 ease-in-out"
-                style={{ 
-                  width: `${images.length * 100}%`,
-                  transform: `translateX(-${activeIndex * (100 / images.length)}%)`
-                }}
-              >
-                {images.map((img, index) => (
-                  <div 
-                    key={index} 
-                    className="relative w-full h-full flex-shrink-0 px-2"
+                      animationDuration: useKeyframeAnimation ? transitionDuration : undefined,
+                      animationTimingFunction: useKeyframeAnimation ? transitionTimingFunction : undefined,
+                      animationFillMode: 'forwards'
+                    }}
                   >
-                    <div className="relative w-full h-full rounded-xl overflow-hidden">
-                      <Image 
+                    <div className="w-full h-full relative rounded-4xl overflow-hidden shadow-xl">
+                      <Image
                         src={img}
                         alt={`Auto parts image ${index + 1}`}
                         fill
@@ -407,75 +356,125 @@ export default function Page() {
                       />
                     </div>
                   </div>
-                ))}
-              </div>
-              
-              {/* Mobile/Tablet Navigation Arrows */}
-              <button 
-                className="absolute left-2 top-1/2 -translate-y-1/2 z-50 bg-black/30 hover:bg-black/50 text-white p-2 sm:p-3 rounded-full disabled:opacity-50 text-sm sm:text-base"
-                onClick={goToPrevSlide}
-                disabled={isTransitioning}
-              >
-                ←
-              </button>
-              <button 
-                className="absolute right-2 top-1/2 -translate-y-1/2 z-50 bg-black/30 hover:bg-black/50 text-white p-2 sm:p-3 rounded-full disabled:opacity-50 text-sm sm:text-base"
-                onClick={goToNextSlide}
-                disabled={isTransitioning}
-              >
-                →
-              </button>
+                );
+              })}
             </div>
 
-            {/* Pagination Dots */}
-            <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-1 sm:space-x-2">
-              {images.map((_, index) => (
-                <button
+            {/* Desktop Navigation Arrows */}
+            <button
+              className="absolute left-[5%] top-1/2 -translate-y-1/2 z-50 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full disabled:opacity-50"
+              onClick={goToPrevSlide}
+              disabled={isTransitioning}
+            >
+              ←
+            </button>
+            <button
+              className="absolute right-[5%] top-1/2 -translate-y-1/2 z-50 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full disabled:opacity-50"
+              onClick={goToNextSlide}
+              disabled={isTransitioning}
+            >
+              →
+            </button>
+          </div>
+
+          {/* Mobile & Tablet slider - simplified swipeable version for small to medium screens */}
+          <div
+            className="lg:hidden w-full h-full relative overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            {/* Mobile slider track that moves horizontally */}
+            <div
+              ref={mobileSliderRef}
+              className="flex w-full h-full transition-transform duration-500 ease-in-out"
+              style={{
+                width: `${images.length * 100}%`,
+                transform: `translateX(-${activeIndex * (100 / images.length)}%)`
+              }}
+            >
+              {images.map((img, index) => (
+                <div
                   key={index}
-                  onClick={() => handleImageClick(index)}
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
-                    activeIndex === index ? "bg-black" : "bg-white/50"
-                  }`}
-                  disabled={isTransitioning}
-                />
+                  className="relative w-full h-full flex-shrink-0 px-2"
+                >
+                  <div className="relative w-full h-full rounded-xl overflow-hidden">
+                    <Image
+                      src={img}
+                      alt={`Auto parts image ${index + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
               ))}
             </div>
+
+            {/* Mobile/Tablet Navigation Arrows */}
+            <button
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-50 bg-black/30 hover:bg-black/50 text-white p-2 sm:p-3 rounded-full disabled:opacity-50 text-sm sm:text-base"
+              onClick={goToPrevSlide}
+              disabled={isTransitioning}
+            >
+              ←
+            </button>
+            <button
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-50 bg-black/30 hover:bg-black/50 text-white p-2 sm:p-3 rounded-full disabled:opacity-50 text-sm sm:text-base"
+              onClick={goToNextSlide}
+              disabled={isTransitioning}
+            >
+              →
+            </button>
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-1 sm:space-x-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleImageClick(index)}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${activeIndex === index ? "bg-black" : "bg-white/50"
+                  }`}
+                disabled={isTransitioning}
+              />
+            ))}
           </div>
         </div>
-        
-        {/* Location section with its own gradient background */}
-        <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px]">
-          {/* Gradient background for location section */}
-          <div 
-            className="absolute inset-0 z-0"
-            style={{
-              background: `
+      </div>
+
+      {/* Location section with its own gradient background */}
+      <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px]">
+        {/* Gradient background for location section */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background: `
                 linear-gradient(161.25deg, rgba(241, 233, 146, 1) 50.56%, rgba(241, 233, 146, 0) 107.23%)
                 `,
-            }}
-          />
-          <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 py-2 sm:py-15 lg:py-28">
-            {/* Company information section */}
-            <div className="mb-6 sm:mb-8 lg:mb-10 text-black w-full text-">
-              <p className="text-base sm:text-lg lg:text-2xl ">
-                Founded in 2005, VST Auto Parts enables Tata dealers to go the extra mile in providing effective, timely after-sales service with quick access to original spare parts.
-              </p>
-              <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-2xl">
-                VST Auto Parts supply Tata Motors parts across Tamil Nadu, with the central warehouse spanning 15,000 square feet in Poonamallee, Chennai. This the central supply centre for a network of 2 warehouses located in Vellore and Cuddalore. The network supplies over 3300 line items to more than 1200 retailers in the state. VST Auto Parts has registered a steady annual growth rate of 20% since its inception.
-              </p>
-            </div>
-          </div>
-          <LocationSection />
-          <div className="relative z-10 w-full overflow-visible">
-            <BusinessSectors/>
-          </div>
-          <div className="w-full flex justify-center py-6 sm:py-8 md:py-12 lg:py-20">
-            <Logo />
+          }}
+        />
+        <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 py-2 sm:py-15 lg:py-24">
+          {/* Company information section */}
+          <div className="mb-6 sm:mb-8 lg:mb-10 text-black w-full text-justify">
+            <p className="text-base sm:text-lg lg:text-xl leading-[1.6]">
+              Founded in 2005, VST Auto Parts enables Tata dealers to go the extra mile in providing effective, timely after-sales service with quick access to original spare parts.
+            </p>
+            <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-xl leading-[1.6]">
+              VST Auto Parts supply Tata Motors parts across Tamil Nadu, with the central warehouse spanning 15,000 square feet in Poonamallee, Chennai. This the central supply centre for a network of 2 warehouses located in Vellore and Cuddalore. The network supplies over 3300 line items to more than 1200 retailers in the state. VST Auto Parts has registered a steady annual growth rate of 20% since its inception.
+            </p>
           </div>
         </div>
+        <LocationSection />
+        <div className="relative z-10 w-full overflow-visible">
+          <BusinessSectors />
+        </div>
+        <div className="w-full flex justify-center py-6 sm:py-8 md:py-12 lg:py-20">
+          <Logo />
+        </div>
+      </div>
 
-        {/* Add custom CSS for the perspective effect and animations */}
-        <style>{`
+      {/* Add custom CSS for the perspective effect and animations */}
+      <style>{`
           .perspective-1000 {
             perspective: 1000px;
           }
@@ -550,7 +549,6 @@ export default function Page() {
             animation-name: enter-right;
           }
         `}</style>
-      </div>
-    );
+    </div>
+  );
 }
-  

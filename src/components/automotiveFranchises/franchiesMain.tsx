@@ -114,7 +114,7 @@ const slides: SlideData[] = [
       to: "rgba(111, 190, 255, 0.4)",
     },
     LogoComponent: MaseratiIcon,
-    header:"VST Supercars",
+    header: "VST Supercars",
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
 
     learnMoreLink: "https://www.maserati.com"
@@ -129,7 +129,7 @@ const slides: SlideData[] = [
       to: "rgba(253, 199, 86, 0.4)",
     },
     LogoComponent: KiaIcon,
-    header:"VST Central",
+    header: "VST Central",
     description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
 
     learnMoreLink: "https://www.kia.com"
@@ -144,7 +144,7 @@ const slides: SlideData[] = [
       to: "rgba(214, 116, 78, 0.4)",
     },
     LogoComponent: TataIcon,
-    header:"VST Motors",
+    header: "VST Motors",
     description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state..",
 
     learnMoreLink: "https://www.tatamotors.com"
@@ -159,7 +159,7 @@ const slides: SlideData[] = [
       to: "rgba(5, 241, 242, 0.4)",
     },
     LogoComponent: MahindraIcon,
-    header:"India Garage",
+    header: "India Garage",
     description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction..",
     learnMoreLink: "https://www.mahindra.com"
   },
@@ -173,7 +173,7 @@ const slides: SlideData[] = [
       to: "rgba(233, 53, 76, 0.4)",
     },
     LogoComponent: DucatiIcon,
-    header:"VST Ducati",
+    header: "VST Ducati",
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
 
     learnMoreLink: "https://www.ducati.com"
@@ -188,7 +188,7 @@ const slides: SlideData[] = [
       to: "rgba(233, 53, 76, 0.4)",
     },
     LogoComponent: HondaLogo,
-    header:"City Honda",
+    header: "City Honda",
     description: "Covering 4 cities in Tamil Nadu, and having won the best national dealer award for the year 2023, this franchise has been a flagship entity for the group. VST operates Chennai's largest Kia showroom among seven showrooms and four other dealers groups. VST Central Kia TN ranks second in sales volume among the eight dealer groups in Tamil Nadu.",
 
     learnMoreLink: "#"
@@ -203,7 +203,7 @@ const slides: SlideData[] = [
       to: "rgba(233, 53, 76, 0.4)",
     },
     LogoComponent: VolkswagenLogo,
-    header:"Bangalore Motors",
+    header: "Bangalore Motors",
     description: "In 2009, the Group brought the best of German engineering to Bangalore's automobile market with the opening of Volkswagen Palace Cross. This is a prestigious, plush sales location on Bangalore's Palace Cross Road that mirrors the excellence and up-to-the-minute technology of the outstanding automobiles it deals in.",
 
     learnMoreLink: "#"
@@ -218,7 +218,7 @@ const slides: SlideData[] = [
       to: "rgba(233, 53, 76, 0.4)",
     },
     LogoComponent: BydLogo,
-    header:"VST BYD",
+    header: "VST BYD",
     description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD’s cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
 
     learnMoreLink: "#"
@@ -275,216 +275,227 @@ const FranchiseSlider = () => {
 
   return (
     <div className="relative w-full min-h-screen  lg:mt-[0rem] mt-[1rem]">
-    {/* Fixed background gradient */}
-    <div
-      className="fixed inset-0 z-0 pointer-events-none"
-      style={{
-        background: `
+      {/* Fixed background gradient */}
+      <div
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          background: `
           radial-gradient(33.31% 35.31% at 91.72% 2.91%, ${gradientColor} 0%, transparent 100%),
           linear-gradient(348.88deg, rgba(0, 0, 0, 09) 2.12%, rgba(65, 148, 216, 0.6) 82.2%)
         `
-      }}
-    />
+        }}
+      />
 
-    {/* Content */}
-    <motion.div
-      className="relative w-full min-h-screen overflow-x-hidden z-10"
-      initial={false}
-      transition={{ duration: 0.01 }}
-    >
-      {/* Car section */}
-      <div className="relative w-full h-auto sm:h-[85vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1] lg:mb-[10rem] mb-[4rem]">
-        {/* Left section with background and car */}
-        <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`bg-${currentSlide}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="absolute left-0 lg:left-[20%] w-full lg:w-[55%] h-[90%]"
-            >
-              <Image
-                src={slides[currentSlide].backgroundImage}
-                alt="Background"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 55vw"
-              />
-            </motion.div>
-
-            {/* Dynamic color accent bars - hidden on mobile */}
-            <div
-              className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none"
-              style={{ backgroundColor: slides[currentSlide].bgColor.to }}
-            />
-            <div
-              className="hidden lg:block absolute top-0 right-[2rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%]  rounded-br-full  
-              rounded-bl-none   
-              rounded-t-none "
-              style={{ backgroundColor: slides[currentSlide].bgColor.from }}
-            />
-
-            <motion.div
-              key={`car-${currentSlide}`}
-              initial={{ x: 300, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -300, opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="absolute bottom-0 sm:bottom-[-10%] lg:bottom-[-10%] w-full lg:w-screen h-[35vh] sm:h-[40vh] lg:h-[70vh] z-[1002] pointer-events-none"
-            >
-              <Image
-                src={slides[currentSlide].carImage}
-                alt="Luxury Car"
-                width={2000}
-                height={700}
-                className="w-full lg:w-[60%] h-full object-contain scale-[0.65] sm:scale-75 lg:scale-85 lg:left-[10%]"
-                priority
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 60vw"
-              />
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Right section */}
-        <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
-          {/* Title */}
-          <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
-            <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-2xl sm:text-3xl lg:text-[4rem] xl:text-[5rem] tracking-[0.2em] text-center">
-              Our
-              <br />
-              Franchises
-            </h2>
-          </div>
-
-          {/* Navigation and logos */}
-          <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-8 h-auto lg:h-[16rem] w-full">
-            {/* Up arrow */}
-            <button
-              onClick={prevSlide}
-              className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mb-0 sm:mb-1 lg:mb-0"
-            >
-              <svg
-                className="w-5 sm:w-6 lg:w-12 h-5 sm:h-6 lg:h-12"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 15l7-7 7 7"
-                />
-              </svg>
-            </button>
-
-            {/* Brand logos - infinite loop implementation */}
-            <div className="w-full flex justify-center lg:justify-start overflow-hidden py-0 sm:py-1 lg:py-[2rem] lg:pl-[3rem] relative">
+      {/* Content */}
+      <motion.div
+        className="relative w-full min-h-screen overflow-x-hidden z-10"
+        initial={false}
+        transition={{ duration: 0.01 }}
+      >
+        {/* Car section */}
+        <div className="relative w-full h-auto sm:h-[85vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1] lg:mb-[10rem] mb-[4rem]">
+          {/* Left section with background and car */}
+          <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full xl:h-[90vh]">
+            <AnimatePresence mode="wait">
               <motion.div
-                className="flex items-center gap-3 sm:gap-5 lg:gap-16"
-                animate={{
-                  x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 212 : (screenWidth ?? 1200) < 1024 ? 220 : 264)
-                    }px`,
-                  translateX: (screenWidth ?? 1200) < 640 ? "9.43%" : (screenWidth ?? 1200) < 1024 ? "9.4%" : "-0.1%",
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                }}
+                key={`bg-${currentSlide}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="absolute left-0 lg:left-[20%] w-full lg:w-[55%] h-[90%]"
               >
-                {/* Create a large number of repeating logos for infinite scrolling */}
-                {Array(10).fill(null).map((_, outerIndex) =>
-                  slides.map((slide, innerIndex) => {
-                    const index = (outerIndex * slides.length) + innerIndex;
-                    const realIndex = index % slides.length;
-                    const isActive = realIndex === currentSlide;
-
-                    return (
-                      <motion.button
-                        key={`slide-infinite-${index}`}
-                        onClick={isActive ? undefined : () => { }}
-                        className={`transition-opacity duration-300 flex-shrink-0 ${isActive ? "opacity-100" : "opacity-50 hover:opacity-75 pointer-events-none"
-                          }`}
-                        whileHover={isActive ? { scale: 1.05 } : undefined}
-                        animate={{
-                          scale: isActive ? 1.10 : 0.80
-                        }}
-                        transition={{
-                          scale: { duration: 0.3 }
-                        }}
-                      >
-                        <slide.LogoComponent />
-                      </motion.button>
-                    );
-                  })
-                )}
+                <Image
+                  src={slides[currentSlide].backgroundImage}
+                  alt="Background"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 55vw"
+                />
               </motion.div>
 
-              {/* 70% bottom border from right side */}
-              <div className="absolute bottom-0 right-0 w-full lg:w-[70%] h-[1px] bg-white bg-opacity-50"></div>
+              {/* Dynamic color accent bars - hidden on mobile */}
+              <div
+                className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none"
+                style={{ backgroundColor: slides[currentSlide].bgColor.to }}
+              />
+              <div
+                className="hidden lg:block absolute top-0 right-[2rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%]  rounded-br-full  
+              rounded-bl-none   
+              rounded-t-none "
+                style={{ backgroundColor: slides[currentSlide].bgColor.from }}
+              />
+
+              <motion.div
+                key={`car-${currentSlide}`}
+                initial={{ x: 300, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -300, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="absolute bottom-0 sm:bottom-[-10%] lg:bottom-[-10%] w-full lg:w-screen h-[35vh] sm:h-[40vh] lg:h-[70vh] z-[1002] pointer-events-none"
+              >
+                <Image
+                  src={slides[currentSlide].carImage}
+                  alt="Luxury Car"
+                  width={2000}
+                  height={700}
+                  className="w-full lg:w-[60%] h-full object-contain scale-[0.65] sm:scale-75 lg:scale-85 lg:left-[10%]"
+                  priority
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 60vw"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right section */}
+          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
+            {/* Title */}
+            <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
+              <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-2xl sm:text-3xl lg:text-[4rem] xl:text-[5rem] tracking-[0.2em] text-center">
+                Our
+                <br />
+                Franchises
+              </h2>
             </div>
 
-            {/* Down arrow */}
-            <button
-              onClick={nextSlide}
-              className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mt-0 sm:mt-1 lg:mt-0"
-            >
-              <svg
-                className="w-5 sm:w-6 lg:w-12 h-5 sm:h-6 lg:h-12"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            {/* Navigation and logos */}
+            <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-8 h-auto lg:h-[16rem] translate-y-[-20%] w-full">
+              {/* Up arrow */}
+              <button
+                onClick={prevSlide}
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mb-0 sm:mb-1 lg:mb-0"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
+                <svg
+                  className="w-5 sm:w-6 lg:w-12 h-5 sm:h-6 lg:h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 15l7-7 7 7"
+                  />
+                </svg>
+              </button>
+
+              {/* Brand logos - infinite loop implementation */}
+              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-0 sm:py-1 lg:py-[2rem] lg:pl-[3rem] relative">
+                <motion.div
+                  className="flex items-center gap-3 sm:gap-5 lg:gap-16"
+                  animate={{
+                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 212 : (screenWidth ?? 1200) < 1024 ? 220 : 264)
+                      }px`,
+                    translateX: (screenWidth ?? 1200) < 640 ? "9.43%" : (screenWidth ?? 1200) < 1024 ? "9.4%" : "-0.1%",
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                >
+                  {/* Create a large number of repeating logos for infinite scrolling */}
+                  {Array(10).fill(null).map((_, outerIndex) =>
+                    slides.map((slide, innerIndex) => {
+                      const index = (outerIndex * slides.length) + innerIndex;
+                      const realIndex = index % slides.length;
+                      const isActive = realIndex === currentSlide;
+
+                      return (
+                        <motion.button
+                          key={`slide-infinite-${index}`}
+                          onClick={isActive ? undefined : () => { }}
+                          className={`transition-opacity duration-300 flex-shrink-0 ${isActive ? "opacity-100" : "opacity-50 hover:opacity-75 pointer-events-none"
+                            }`}
+                          whileHover={isActive ? { scale: 1.05 } : undefined}
+                          animate={{
+                            scale: isActive ? 1.10 : 0.80
+                          }}
+                          transition={{
+                            scale: { duration: 0.3 }
+                          }}
+                        >
+                          <slide.LogoComponent />
+                        </motion.button>
+                      );
+                    })
+                  )}
+                </motion.div>
+
+                {/* 70% bottom border from right side */}
+                <div className="absolute bottom-0 right-0 w-full lg:w-[70%] h-[1px] bg-white bg-opacity-50"></div>
+              </div>
+
+              {/* Down arrow */}
+              <button
+                onClick={nextSlide}
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mt-0 sm:mt-1 lg:mt-0"
+              >
+                <svg
+                  className="w-5 sm:w-6 lg:w-12 h-5 sm:h-6 lg:h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Description section - moved back outside but made dynamic */}
-      <div className="w-full py-1 sm:py-2 md:py-4 lg:py-10 px-4 sm:px-6 lg:px-24 flex flex-col items-center pt-6 sm:pt-4  lg:pt-1 mt-[-2rem] sm:mt-[-1rem] lg:mt-[-6rem]">
-        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8">
-          VST Supercars
-        </h2>
-        <AnimatePresence mode="wait">
-          <motion.p
-            key={`description-${currentSlide}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="text-white text-sm sm:text-base lg:text-[24px] text-center lg:text-justify 
+        {/* Description section - moved back outside but made dynamic */}
+        <div className="w-full py-1 sm:py-2 md:py-4 lg:py-10 px-4 sm:px-6 lg:px-24 flex flex-col items-center pt-6 sm:pt-4  lg:pt-1 mt-[-2rem] sm:mt-[-1rem] lg:mt-[-6rem]">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8">
+            <AnimatePresence mode="wait">
+              <motion.h2
+                key={`header-${currentSlide}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8"
+              >
+                {slides[currentSlide].header}
+              </motion.h2>
+            </AnimatePresence>
+          </h2>
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={`description-${currentSlide}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="text-white text-sm sm:text-base lg:text-[24px] text-center lg:text-justify 
             font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
             font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
-          >
-            {slides[currentSlide].description}
-          </motion.p>
-        </AnimatePresence>
+            >
+              {slides[currentSlide].description}
+            </motion.p>
+          </AnimatePresence>
 
-        <a href={slides[currentSlide].learnMoreLink} className="mt-6 sm:mt-8 lg:mt-10 inline-block w-auto" target="_blank" rel="noopener noreferrer">
-          <h3 className="border-2 border-[#DFAC4F] rounded-xl sm:rounded-2xl px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#DFAC4F] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F]/10 transition-colors">
-            Learn More
-          </h3>
-        </a>
-      </div>
+          <a href={slides[currentSlide].learnMoreLink} className="mt-6 sm:mt-8 lg:mt-10 inline-block w-auto" target="_blank" rel="noopener noreferrer">
+            <h3 className="border-2 border-[#DFAC4F] rounded-xl sm:rounded-2xl px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#DFAC4F] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F]/10 transition-colors">
+              Learn More
+            </h3>
+          </a>
+        </div>
 
-      <BusinessSectors />
+        <BusinessSectors />
 
-      {/* Logo section */}
-      <div className="w-full flex justify-center py-8 sm:py-12 lg:py-20">
-        <Logo />
-      </div>
-    </motion.div>
-  </div>
+        {/* Logo section */}
+        <div className="w-full flex justify-center py-8 sm:py-12 lg:py-20">
+          <Logo />
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
