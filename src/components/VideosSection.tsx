@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 
 // Sample image for demo - you'll need to replace with actual video thumbnails
-import tractorImg from "@/app/public/vst-auto-parts/frame1.jpg";
+import tractorImg from "@/app/public/vst-auto-parts/frame1.png";
 
 // Video data structure
 const videoData = [
