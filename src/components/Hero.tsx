@@ -22,7 +22,7 @@ const slides = [
     image: slide5,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "News & Media",
+    label: "NEWS & MEDIA",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
   },
@@ -31,7 +31,7 @@ const slides = [
     image: slide6,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Corporate Philanthropy ",
+    label: "CORPORATE PHILANTHROPY",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
   },
@@ -40,7 +40,7 @@ const slides = [
     image: slide2,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Education",
+    label: "EDUCATION",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
   },
@@ -49,7 +49,7 @@ const slides = [
     image: slide4,
     // title: "AUTOMOTIVE EXCELLENCE",
     // subtitle: "PREMIUM MOBILITY SOLUTIONS",
-    label: "OE Parts Distribution",
+    label: "OE PARTS DISTRIBUTION",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
     // Using video from public directory
@@ -59,7 +59,7 @@ const slides = [
     image: slide3,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Manufacturing",
+    label: "MANUFACTURING",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
   },
@@ -68,7 +68,7 @@ const slides = [
     image: slide2,
     // title: "AUTOMOTIVE EXCELLENCE",
     // subtitle: "PREMIUM MOBILITY SOLUTIONS",
-    label: "Automotive Franchise",
+    label: "AUTOMOTIVE FRANCHISE",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
     videoSrc: "/CarVideo.mp4" 
@@ -78,7 +78,7 @@ const slides = [
     image: slide1,
     // title: "BUILDING TOMORROW",
     // subtitle: "ON A CENTURY OF TRUST",
-    label: "Mercedes-Benz",
+    label: "MERCEDES-BENZ",
     color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
     type: 'image',
   },
@@ -207,7 +207,7 @@ const Hero = () => {
           
           {/* Slide label */}
           <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10 mt-30">
-            <span className="text-white font-medium text-lg">{slides[currentSlide].label}</span>
+            <span className="text-white font-medium text-md">{slides[currentSlide].label}</span>
           </div>
           
           {/* Navigation buttons */}
