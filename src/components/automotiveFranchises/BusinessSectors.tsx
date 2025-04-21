@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import EducationIcon from '@/app/public/common/BusinessSectorIcons/EducationIcon.png';
 import Auto from '@/app/public/common/BusinessSectorIcons/Auto.png';
 import ManufacturingIcon from '@/app/public/common/BusinessSectorIcons/ManufacturingIcon.png';
-import Automobile from '@/app/public/common/BusinessSectorIcons/Automobile.png';
+import Automobile from '@/app/public/common/BusinessSectorIcons/Frame 1973341796.png';
 const BusinessSectors = () => {
   const pathname = usePathname();
   const isAutomotiveFranchisesPage = pathname === '/automotive-franchises';
