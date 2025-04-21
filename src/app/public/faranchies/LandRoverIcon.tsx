@@ -4,8 +4,8 @@ const LandRoverIcon = () => {
   return (
     <svg
       width="200"
-      height="75"
-      viewBox="0 0 200 75"
+      height="72"
+      viewBox="0 0 200 72"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -14,7 +14,7 @@ const LandRoverIcon = () => {
         x="0.257812"
         y="0.5"
         width="200"
-        height="75"
+        height="72"
         fill="url(#pattern0_4508_5237)"
       />
       <defs>

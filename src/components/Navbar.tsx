@@ -224,14 +224,14 @@ export default function Navbar() {
             </div>
             
             <Link
-              href="/careers"
+              href="/career"
               className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Careers
             </Link>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >

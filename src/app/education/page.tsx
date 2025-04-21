@@ -13,6 +13,7 @@ import { StaticImageData } from 'next/image';
 import EducationLogo from '../public/logos/educationlogo';
 import Logo from '../public/logos/Logo';
 import LocationSection from '../components/LocationSection';
+import BusinessSectors from '@/components/automotiveFranchises/BusinessSectors';
 
 type GalleryImage = {
   id: number;
@@ -50,8 +51,8 @@ export default function EducationPage() {
     <main className="flex min-h-screen flex-col items-center bg-black text-white relative overflow-hidden">
       <div className='w-full'>
       {/* Hero section with logo */}
-      <section className="w-full py-8 md:py-12 lg:py-14 flex justify-center items-center z-10 relative">
-        <div className="w-72 h-64 md:w-80 md:h-72 lg:w-3/4 lg:h-3/4 relative md:py-10 lg:pt-20">
+      <section className="w-full flex justify-center items-center z-10 relative">
+        <div className="w-52 md:w-72 md:h-52 lg:w-80 xl:w-94 relative">
           <div className="w-full h-full flex justify-center items-center">
             <EducationLogo className="w-full h-full" />
           </div>
@@ -231,6 +232,7 @@ export default function EducationPage() {
    
       {/* Our Location section */}
       <LocationSection />
+      <BusinessSectors/>
     </main>
   );
 }
