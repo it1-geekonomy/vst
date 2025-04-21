@@ -5,15 +5,15 @@ const MercedesIcon = () => {
     <svg
       width="200"
       height="75"
-      viewBox="0 0 200 80"
+      viewBox="-2 0 200 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <rect
         y="0.77832"
-        width="200"
-        height="76"
+        width="180"
+        height="70"
         fill="url(#pattern0_4756_4438)"
       />
       <defs>

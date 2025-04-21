@@ -349,7 +349,7 @@ const FranchiseSlider = () => {
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
+          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20 mt-[1rem] lg:mt-[1rem]">
             {/* Title */}
             <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
               <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-2xl sm:text-3xl lg:text-[4rem] xl:text-[5rem] tracking-[0.2em] text-center">
@@ -360,7 +360,7 @@ const FranchiseSlider = () => {
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-8 h-auto lg:h-[16rem] w-full">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-8 h-auto lg:h-[16rem] w-full mt-[0rem] lg:mt-[5rem]">
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
