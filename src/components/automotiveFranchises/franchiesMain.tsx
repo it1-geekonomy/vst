@@ -99,7 +99,7 @@ const slides: SlideData[] = [
       to: "rgba(220, 171, 119, 0.4)",
     },
     LogoComponent: LandRoverIcon,
-    header: "VST Supercars",
+    header: "VST Grandeur",
     description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service..",
 
     learnMoreLink: "https://www.landrover.com"
@@ -114,7 +114,7 @@ const slides: SlideData[] = [
       to: "rgba(111, 190, 255, 0.4)",
     },
     LogoComponent: MaseratiIcon,
-    header:"VST Supercars",
+    header:"VST Avventura",
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
 
     learnMoreLink: "https://www.maserati.com"
@@ -189,7 +189,7 @@ const slides: SlideData[] = [
     },
     LogoComponent: HondaLogo,
     header:"City Honda",
-    description: "Covering 4 cities in Tamil Nadu, and having won the best national dealer award for the year 2023, this franchise has been a flagship entity for the group. VST operates Chennai's largest Kia showroom among seven showrooms and four other dealers groups. VST Central Kia TN ranks second in sales volume among the eight dealer groups in Tamil Nadu.",
+    description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence.",
 
     learnMoreLink: "#"
   },
