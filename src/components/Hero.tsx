@@ -22,7 +22,7 @@ const slides = [
     image: slide5,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
+    label: "News & Media",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
   },
@@ -31,7 +31,7 @@ const slides = [
     image: slide6,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
+    label: "Corporate Philanthropy ",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
   },
@@ -40,7 +40,7 @@ const slides = [
     image: slide2,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
+    label: "Education",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
   },
@@ -49,7 +49,7 @@ const slides = [
     image: slide4,
     // title: "AUTOMOTIVE EXCELLENCE",
     // subtitle: "PREMIUM MOBILITY SOLUTIONS",
-    label: "Automotive Division",
+    label: "OE Parts Distribution",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
     // Using video from public directory
@@ -59,7 +59,7 @@ const slides = [
     image: slide3,
     // title: "LUXURY REDEFINED",
     // subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "Premium Motors",
+    label: "Manufacturing",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
   },
@@ -245,15 +245,15 @@ const Hero = () => {
   return (
     <section className="relative h-screen md:h-[109vh] overflow-hidden">
       <style >{`
-        /* CSS variables for responsive sizing */
-        .strips-container {
-          --strip-width-sm: 3rem;
-          --strip-width-md: 4rem;
-          --strip-width-lg: 5rem; 
-          --strip-width-xl: 6rem;
-          --strip-width-2xl: 7rem;
-          --strip-width: var(--strip-width-lg);
-        }
+   /* CSS variables for responsive sizing */
+      .strips-container {
+      --strip-width-sm: 2.5rem;  
+      --strip-width-md: 3rem;    
+      --strip-width-lg: 4rem;    
+      --strip-width-xl: 5rem;    
+      --strip-width-2xl: 6rem;   
+      --strip-width: var(--strip-width-lg); /* Default width */
+}
         
         /* Responsive breakpoints */
         @media (max-width: 639px) {
@@ -372,12 +372,12 @@ const Hero = () => {
               {!isActive && (
                 <div className="absolute inset-0 flex items-center justify-center opacity-110"
                      style={{ background: "linear-gradient(270deg, rgba(81, 156, 141, 0) 64.98%, rgba(3, 3, 3, 0.65) 110%)" }}>
-                  <span 
-                    className="text-white font-bold -rotate-90 transform whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl"
+                <span 
+                    className="text-white font-bold -rotate-90 transform whitespace-nowrap text-lg sm:text-xl md:text-2xl lg:text-3xl"
                     style={{
-                      transition: "opacity 900ms ease-in-out"
-                    }}
-                  >
+                    transition: "opacity 900ms ease-in-out"
+                }}
+              >
                     {slide.label}
                   </span>
                 </div>
