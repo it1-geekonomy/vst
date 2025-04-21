@@ -15,7 +15,7 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }  ) => {
           <div className="w-full sm:w-3/4 lg:w-1/4 flex flex-col sm:flex-row items-center justify-center lg:justify-start mt-20 sm:mt-20 lg:mt-0">
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
               <div className="h-16 lg:h-20 flex items-center">
-                <Logo />
+                <Logo  className="w-35 h-35 sm:w-40 sm:h-40 md:w-42 md:h-42 lg:w-26 lg:h-56"/>
               </div>
               <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-light tracking-wider text-center sm:text-left">
                 VST Group
