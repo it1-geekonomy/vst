@@ -46,7 +46,7 @@ const BusinessSectors = () => {
           {!isAutomotiveFranchisesPage && (
             <Link href="/automotive-franchises" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
               <Image src={Automobile} alt="Auto" />
-              <span className="mt-2 text-xs sm:text-sm"></span>
+              <span className="mt-0 text-xs sm:text-sm"></span>
             </Link>
           )}
             {!isAutoPartsPage && (
