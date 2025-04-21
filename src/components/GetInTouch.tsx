@@ -64,12 +64,12 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
           <div className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
             <div className="w-full flex justify-center lg:justify-end pr-0 lg:pr-20">
               <h1
-                className="text-[#FEBF3D] text-4xl xs:text-5xl sm:text-5xl md:text-5xl font-rocWide font-normal mb-1 xs:mb-2 md:mb-2 lg:mb-2"
+                className="text-[#FEBF3D] text-4xl xs:text-5xl sm:text-5xl md:text-5xl font-rocWide font-normal mb-3 xs:mb-4 md:mb-4 lg:mb-4"
               >
                 Get In Touch
               </h1>
             </div>
-            <div className="w-full h-[300px] flex justify-center items-center">
+            <div className="w-full h-[300px] lg:h-[350px] xl:h-[450px] flex justify-center items-center">
               <Image
                 src={gif}
                 alt="VST Logo Animation"
