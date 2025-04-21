@@ -11,6 +11,9 @@ import bg4 from "@/app/public/faranchies/bgpic/4carbg.png";
 import bg5 from "@/app/public/faranchies/bgpic/5carbg.png";
 import bg6 from "@/app/public/faranchies/bgpic/6carbg.png";
 import bg7 from "@/app/public/faranchies/bgpic/7carbg.png";
+import bg8 from "@/app/public/faranchies/bgpic/Honda-bg.png";
+import bg9 from "@/app/public/faranchies/bgpic/volkswagen-bg.png";
+import bg10 from "@/app/public/faranchies/bgpic/byd-bg.png";
 import car1 from "@/app/public/faranchies/bgpic/car1.png";
 
 import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
@@ -20,6 +23,10 @@ import car5 from "@/app/public/faranchies/carpic/5car.png";
 import car6 from "@/app/public/faranchies/carpic/6car.png";
 import car7 from "@/app/public/faranchies/carpic/7car.png";
 import bike from "@/app/public/faranchies/carpic/bike.png";
+import hondabike from "@/app/public/faranchies/carpic/Honda-bike.png";
+import volkswagen from "@/app/public/faranchies/carpic/volkswagen-car.png";
+import byd from "@/app/public/faranchies/carpic/byd-car.png";
+
 import MercedesIcon from "@/app/public/faranchies/MercedesIcon";
 import LandRoverIcon from "@/app/public/faranchies/LandRoverIcon";
 import PorscheIcon from "@/app/public/faranchies/PorscheIcon";
@@ -27,6 +34,9 @@ import MaseratiIcon from "@/app/public/faranchies/MaseratiIcon";
 import MahindraIcon from "@/app/public/faranchies/MahindraIcon";
 import KiaIcon from "@/app/public/faranchies/KiaIcon";
 import DucatiIcon from "@/app/public/faranchies/DucatiIcon";
+import HondaLogo from "@/app/public/faranchies/HondaLogo";
+import VolkswagenLogo from "@/app/public/faranchies/VolkswagenLogo";
+import BydLogo from "@/app/public/faranchies/BydLogo";
 import TataIcon from "@/app/public/faranchies/TataIcon";
 import BusinessSectors from "./BusinessSectors";
 import Logo from "@/app/public/logos/Logo";
@@ -35,7 +45,7 @@ interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
   carImage: StaticImageData;
-  brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati";
+  brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD";
   bgColor: {
     from: string;
     to: string;
@@ -167,6 +177,51 @@ const slides: SlideData[] = [
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we’re committed to delivering exceptional care throughout your ownership journey.",
 
     learnMoreLink: "https://www.ducati.com"
+  },
+  {
+    id: 9,
+    backgroundImage: bg8,
+    carImage: hondabike,
+    brand: "honda",
+    bgColor: {
+      from: "#E9354C",
+      to: "rgba(233, 53, 76, 0.4)",
+    },
+    LogoComponent: HondaLogo,
+    header:"City Honda",
+    description: "Covering 4 cities in Tamil Nadu, and having won the best national dealer award for the year 2023, this franchise has been a flagship entity for the group. VST operates Chennai's largest Kia showroom among seven showrooms and four other dealers groups. VST Central Kia TN ranks second in sales volume among the eight dealer groups in Tamil Nadu.",
+
+    learnMoreLink: "#"
+  },
+  {
+    id: 9,
+    backgroundImage: bg9,
+    carImage: volkswagen,
+    brand: "volkswagen",
+    bgColor: {
+      from: "#E9354C",
+      to: "rgba(233, 53, 76, 0.4)",
+    },
+    LogoComponent: VolkswagenLogo,
+    header:"Bangalore Motors",
+    description: "In 2009, the Group brought the best of German engineering to Bangalore's automobile market with the opening of Volkswagen Palace Cross. This is a prestigious, plush sales location on Bangalore's Palace Cross Road that mirrors the excellence and up-to-the-minute technology of the outstanding automobiles it deals in.",
+
+    learnMoreLink: "#"
+  },
+  {
+    id: 10,
+    backgroundImage: bg10,
+    carImage: byd,
+    brand: "BYD",
+    bgColor: {
+      from: "#E9354C",
+      to: "rgba(233, 53, 76, 0.4)",
+    },
+    LogoComponent: BydLogo,
+    header:"VST BYD",
+    description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD’s cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
+
+    learnMoreLink: "#"
   },
 ];
 
