@@ -14,8 +14,8 @@ import bg7 from "@/app/public/faranchies/bgpic/7carbg.png";
 import bg8 from "@/app/public/faranchies/bgpic/Honda-bg.png";
 import bg9 from "@/app/public/faranchies/bgpic/volkswagen-bg.png";
 import bg10 from "@/app/public/faranchies/bgpic/byd-bg.png";
-import car1 from "@/app/public/faranchies/bgpic/car1.png";
-import carfin from "@/app/public/faranchies/carpic/ferrari Car new.png";
+// import car1 from "@/app/public/faranchies/bgpic/car1.png";
+ import ferrari from "@/app/public/faranchies/bgpic/ferrari.png";
 
 
 
@@ -63,7 +63,8 @@ const slides: SlideData[] = [
   {
     id: 1,
     backgroundImage: bg1,
-    carImage: carfin,
+    carImage: ferrari,
+
     brand: "porsche",
     bgColor: {
       from: "#780E26",
