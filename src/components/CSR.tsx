@@ -169,7 +169,7 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
                 layout
                 transition={{ duration: 0.4, ease: "easeInOut" }}
             >
-                <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{currentImageData.title}</h3>
+                <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-left">{currentImageData.title}</h3>
                 <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
                     <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
                         {currentImageData.description}
@@ -183,7 +183,7 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
 const CSR = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [yearPosition, setYearPosition] = useState(0);
-    const [stepSize, setStepSize] = useState(200);
+    const [stepSize, setStepSize] = useState(400);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const maxSteps = timelineData.length;
 
@@ -199,11 +199,11 @@ const CSR = () => {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 640) {
-                setStepSize(150);
+                setStepSize(350);
             } else if (window.innerWidth < 768) {
-                setStepSize(175);
+                setStepSize(375);
             } else {
-                setStepSize(200);
+                setStepSize(400);
             }
         };
 
@@ -213,13 +213,22 @@ const CSR = () => {
     }, []);
 
     const handleYearClick = () => {
+        // Reset image index when changing years
+        setCurrentImageIndex(0);
+        
+        // Calculate the next index
+        const nextIndex = (currentIndex + 1) % timelineData.length;
+        
+        // Calculate the new position
         const newPosition = yearPosition - stepSize;
-        if (Math.abs(newPosition) >= stepSize * (maxSteps - 1)) {
+        
+        // If we've reached the end of the timeline, reset to the beginning
+        if (nextIndex === 0) {
             setYearPosition(0);
             setCurrentIndex(0);
         } else {
             setYearPosition(newPosition);
-            setCurrentIndex((currentIndex + 1) % timelineData.length);
+            setCurrentIndex(nextIndex);
         }
     };
 
@@ -367,7 +376,7 @@ const CSR = () => {
                                         layout
                                         transition={{ duration: 0.4, ease: "easeInOut" }}
                                     >
-                                        <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{(currentData.images[currentImageIndex] as ImageData).title}</h3>
+                                        <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-left">{(currentData.images[currentImageIndex] as ImageData).title}</h3>
                                         <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
                                             <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
                                                 {(currentData.images[currentImageIndex] as ImageData).description}
