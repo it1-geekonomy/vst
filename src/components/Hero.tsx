@@ -23,59 +23,67 @@ const slides = [
   {
     id: 7,
     image: slide5,
-    label: "News & Media",
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "NEWS & MEDIA",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: NewsIcon,
   },
   {
     id: 6,
     image: slide6,
-    label: "Corporate Philanthropy ",
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "CORPORATE PHILANTHROPY",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: CorporateIcon,
   },
   {
     id: 5,
     image: slide2,
-    label: "Education",
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "EDUCATION",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: EducationIcon,
   },
   {
     id: 4,
     image: slide4,
-    label: "OE Parts Distribution",
+    // title: "AUTOMOTIVE EXCELLENCE",
+    // subtitle: "PREMIUM MOBILITY SOLUTIONS",
+    label: "OE PARTS DISTRIBUTION",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
-    icon: OEPartsIcon,
+    // Using video from public directory
   },
   {
     id: 3,
     image: slide3,
-    label: "Manufacturing",
+    // title: "LUXURY REDEFINED",
+    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    label: "MANUFACTURING",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: ManufacturingIcon,
   },
   {
     id: 2,
     image: slide2,
-    label: "Automotive Franchise",
+    // title: "AUTOMOTIVE EXCELLENCE",
+    // subtitle: "PREMIUM MOBILITY SOLUTIONS",
+    label: "AUTOMOTIVE FRANCHISE",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
-    videoSrc: "/CarVideo.mp4",
-    icon: AutomativeFranchiseIcon,
+    videoSrc: "/CarVideo.mp4" 
   },
   {
     id: 1,
     image: slide1,
-    label: "Mercedes-Benz",
-    color: "from-red-600/80 to-red-800/80",
+    // title: "BUILDING TOMORROW",
+    // subtitle: "ON A CENTURY OF TRUST",
+    label: "MERCEDES-BENZ",
+    color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
     type: 'image',
-    
   },
 ];
 
@@ -202,7 +210,7 @@ const Hero = () => {
           
           {/* Slide label */}
           <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10 mt-30">
-            <span className="text-white font-medium text-lg">{slides[currentSlide].label}</span>
+            <span className="text-white font-medium text-md">{slides[currentSlide].label}</span>
           </div>
           
           {/* Navigation buttons */}
