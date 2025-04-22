@@ -54,6 +54,20 @@ html {
   font-family: 'Roc Grotesk wide', sans-serif;
 }
 
+.font-roc {
+  font-family: 'Roc Grotesk', sans-serif;
+}
+
 .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
+
+.text-clamp-230 {
+  font-size: clamp(50px, 10.625vw, 230px);
+}
+
+.text-clamp-24 {
+  font-size: clamp(15px, 1.25vw, 24px);
+}
+
+

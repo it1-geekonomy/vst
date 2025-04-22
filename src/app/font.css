@@ -44,4 +44,10 @@
   font-style: normal;
 }
 
-/* Add more weights as needed */ 
+/* Regular */
+@font-face {
+  font-family: 'Roc Grotesk';
+  src: url('/Roc-Grotesk/Fontspring-DEMO-rocgrotesk-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}

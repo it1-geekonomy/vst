@@ -335,30 +335,30 @@ function AboutUsPage() {
         <div className="mt-12 md:mt-16 px-4 md:px-32">
           <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-rocWide">Our Legacy</h1>
 
-          <div className="flex flex-col">
-            <h2 className="text-lg md:text-lg mb-2 text-white font-rocWide">About VST Group</h2>
+          <div className="flex flex-col font-roc font-normal text-clamp-24">
+            <h2 className=" mb-2 text-white">About VST Group</h2>
             <div
               
             >
               <p
-                className=" text-justify hyphens-auto font-rocWide font-light"
+                className=" text-justify hyphens-auto"
                 
               >
                 Established in 1911, VST Group is a distinguished 11 year old enterprise headquartered in Bangalore.
               </p>
               <p
-                className=" text-justify hyphens-auto font-rocWide font-light"
+                className=" text-justify hyphens-auto "
                 
               >
                 It encompasses a wide array of luxury and mid variant car franchises, like Porsche, Maserati, Mercedes Benz, Jaguar, Land Rover, Ducati, Tata, Kia, Volkswagen, BYD Mahindra, Honda Scooters alongside a prominent manufacturing sector and significant interests in real estate, financial services and education industry. Under the leadership of its fourth generation, the Group has a turnover of Rs. 5,000 crores 570 million with sustainable growth, excellence, and innovation.
               </p>
               <p
-                className=" text-justify hyphens-auto font-rocWide font-light"
+                className=" text-justify hyphens-auto "
                 
               >
                 VST Tractors  Tillers, a key division, is renowned for its innovative and reliable agricultural machinery, supporting farmers with high quality equipment to boost productivity and modernize farming techniques. Gove Finance Limited, the leader in Auto Finance services for more than 30 years, is a dynamic nonbanking finance company led by a team of specialists with proven track record. It finance cars, commercial vehicles, construction equipments, used vehicles, tractors and buses. Meanwhile, SKEI stands out for its commitment to holistic education, offering a range of academic and extracurricular programs in a supportive environment, enhanced by state of the art facilities and a dedicated faculty to foster intellectual and personal growth.
               </p>
-              <p className="text-white font-base font-rocWide">SINCE 1911</p>
+              <p className="text-white font-base">SINCE 1911</p>
             </div>
           </div>
         </div>
