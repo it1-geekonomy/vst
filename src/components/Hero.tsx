@@ -79,7 +79,8 @@ const slides = [
     label: "AUTOMOTIVE FRANCHISE",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
-    videoSrc: "/CarVideo.mp4" 
+    videoSrc: "/CarVideo.mp4",
+    icon: AutomativeFranchiseIcon, 
   },
   {
     id: 1,
@@ -89,7 +90,7 @@ const slides = [
     label: "MERCEDES-BENZ",
     color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
     type: 'image',
-    icon: AutomativeFranchiseIcon,
+    
   },
 ];
 
