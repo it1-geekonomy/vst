@@ -12,8 +12,15 @@ interface CSRItemProps {
     title: string;
     description: string;
     year: string;
-    images: string[];
+    images: ImageData[];
     currentIndex: number;
+}
+
+// New interface for image data with title and description
+interface ImageData {
+    src: string;
+    title: string;
+    description: string;
 }
 
 const poppins = Poppins({
@@ -22,43 +29,58 @@ const poppins = Poppins({
     variable: '--font-poppins',
 });
 
+// Updated timeline data structure with titles and descriptions for each image
 const timelineData = [
     {
         year: "2015-2016",
-        title: "Anugraha Charitable Trust",
-        description: "Facilitating good health, Education, Food and shelter to the sufferings of the needy Sheila Kothavala Inst. For Deaf to build confidence, empower and mainstream members of the hearing impaired",
-        images: ["/makingdiff/imagesanime/image1.jpeg", "/makingdiff/imagesanime/image2.jpeg", "/makingdiff/imagesanime/image3.jpeg"]
+        images: [
+            {
+                src: "/makingdiff/imagesanime/image1.jpeg",
+                title: "Anugraha Charitable Trust",
+                description: "Facilitating good health, Education, Food and shelter to the sufferings of the needy Sheila Kothavala Inst. For Deaf to build confidence, empower and mainstream members of the hearing impaired"
+            },
+            {
+                src: "/makingdiff/imagesanime/image2.jpeg",
+                title: "Chennai - Food relief fund",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+            }
+        ]
     },
     {
         year: "2016-2017",
-        title: "Education Initiative",
-        description: "Supporting educational programs and providing resources to underprivileged students through various initiatives and partnerships",
-        images: ["/makingdiff/imagesanime/image4.jpeg", "/makingdiff/imagesanime/image5.jpeg", "/makingdiff/imagesanime/image6.jpeg"]
+        images: [
+            {
+                src: "/makingdiff/imagesanime/image3.jpeg",
+                title: "Wild Life First",
+                description: "Wildlife conservation in India"
+            },
+            {
+                src: "/makingdiff/imagesanime/image4.jpeg",
+                title: "National Association of Blind",
+                description: "Druven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
+            },
+        ]
     },
     {
         year: "2017-2018",
-        title: "Healthcare Programs",
-        description: "Facilitating good health, Education, Food and shelter to the sufferings of the needy Sheila Kothavala Inst.For Deaf to build confidence, empower and mainstream members of the hearing impaired",
-        images: ["/makingdiff/imagesanime/image7.jpeg", "/makingdiff/imagesanime/image8.jpeg", "/makingdiff/imagesanime/image1.jpeg"]
+        images: [
+            {
+                src: "/makingdiff/imagesanime/image5.jpeg",
+                title: "Rotary Orchards Chaitanya Senior",
+                description: "Citizens Home Trust old age home"
+            },
+            {
+                src: "/makingdiff/imagesanime/image6.jpeg",
+                title: "SMT. KAMALA BAI EDUCATIONAL INSTITUTION, BANGALORE ",
+                description: "This institution was the result of Mr. Mudaliar's desire to further the dual causes of education for girls in India and the creation of an educational environment that would be imbued with Indian cultural values. Named after his wife, the institution was founded in 1931. Today, it boasts a large, well-appointed campus of around 8 acres and includes Primary & High School, Pre-Universiy College, and Degree College."
+            },
+            {
+                src: "/makingdiff/imagesanime/image7.jpeg",
+                title: "Ramakrishna Matt- Halasur",
+                description: "Religious Trust Ramakrishna Matt- Bangalore religious Trust Ramakrishna Mission-Shivanahalli, religious Trust Ramakrishna Ashrama-Mysore, Religious Trust Ramakrishna Saradashrama-Ponnampet.",
+            }
+        ]
     },
-    {
-        year: "2018-2019",
-        title: "Community Development",
-        description: "Focusing on sustainable community development through various social welfare programs and infrastructure support",
-        images: ["/makingdiff/imagesanime/image2.jpeg", "/makingdiff/imagesanime/image3.jpeg", "/makingdiff/imagesanime/image4.jpeg"]
-    },
-    {
-        year: "2020-2021",
-        title: "COVID-19 Relief Efforts",
-        description: "Providing emergency relief, medical supplies, and support to communities affected by the pandemic",
-        images: ["/makingdiff/imagesanime/image5.jpeg", "/makingdiff/imagesanime/image6.jpeg", "/makingdiff/imagesanime/image7.jpeg"]
-    },
-    {
-        year: "2021-2022",
-        title: "Digital Education",
-        description: "Bridging the digital divide by providing technology access and digital literacy programs to underserved communities",
-        images: ["/makingdiff/imagesanime/image8.jpeg", "/makingdiff/imagesanime/image1.jpeg", "/makingdiff/imagesanime/image2.jpeg"]
-    }
 ];
 
 const TimelineYear: React.FC<{ year: string; isActive: boolean; onClick: () => void; position: number }> = ({ year, isActive, onClick, position }) => {
@@ -94,7 +116,10 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
     // Updated logic to handle image positioning for all years including 2018-2019
     const isImageOnLeft = title === "Community Development"
         ? currentImageIndex === 0 || currentImageIndex === 2  // For 2018-2019
-        : currentImageIndex === 0 || currentImageIndex === 2 || images[currentImageIndex].includes('image3.jpeg');  // For other years
+        : currentImageIndex === 0 || currentImageIndex === 2 || images[currentImageIndex].src.includes('image3.jpeg');  // For other years
+
+    // Get the current image data
+    const currentImageData = images[currentImageIndex] as ImageData;
 
     return (
         <motion.div
@@ -123,13 +148,13 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
                             className="absolute inset-0"
                         >
                             <Image
-                                src={images[currentImageIndex]}
-                                alt={`${title} - Image ${currentImageIndex + 1}`}
+                                src={currentImageData.src}
+                                alt={`${currentImageData.title} - Image ${currentImageIndex + 1}`}
                                 fill
                                 sizes="(max-width: 640px) 80vw, (max-width: 768px) 90vw, 45vw"
                                 className="object-cover rounded-[2rem]"
                                 onError={(e) => {
-                                    console.error(`Error loading image: ${images[currentImageIndex]}`);
+                                    console.error(`Error loading image: ${currentImageData.src}`);
                                     e.currentTarget.src = '/placeholder.jpg';
                                 }}
                             />
@@ -144,10 +169,10 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
                 layout
                 transition={{ duration: 0.4, ease: "easeInOut" }}
             >
-                <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{title}</h3>
+                <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{currentImageData.title}</h3>
                 <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
                     <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
-                        {description}
+                        {currentImageData.description}
                     </p>
                 </div>
             </motion.div>
@@ -165,10 +190,10 @@ const CSR = () => {
     // Add image rotation effect
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentImageIndex((prev) => (prev + 1) % 3);
+            setCurrentImageIndex((prev) => (prev + 1) % timelineData[currentIndex].images.length);
         }, 3000);
         return () => clearInterval(interval);
-    }, []);
+    }, [currentIndex]);
 
     // Adjust step size based on screen width
     useEffect(() => {
@@ -199,7 +224,7 @@ const CSR = () => {
     };
 
     const currentData = timelineData[currentIndex];
-    const isImageOnLeft = currentImageIndex === 0 || currentImageIndex === 2 || currentData.images[currentImageIndex].includes('image3.jpeg');
+    const isImageOnLeft = currentImageIndex === 0 || currentImageIndex === 2 || (currentData.images[currentImageIndex] as ImageData).src.includes('image3.jpeg');
 
     return (
         <div className={`flex flex-col min-h-screen ${poppins.className}`}>
@@ -321,13 +346,13 @@ const CSR = () => {
                                                     className="absolute inset-0"
                                                 >
                                                     <Image
-                                                        src={currentData.images[currentImageIndex]}
-                                                        alt={`${currentData.title} - Image ${currentImageIndex + 1}`}
+                                                        src={(currentData.images[currentImageIndex] as ImageData).src}
+                                                        alt={`${(currentData.images[currentImageIndex] as ImageData).title} - Image ${currentImageIndex + 1}`}
                                                         fill
                                                         sizes="(max-width: 640px) 80vw, (max-width: 768px) 90vw, 45vw"
                                                         className="object-cover rounded-[2rem]"
                                                         onError={(e) => {
-                                                            console.error(`Error loading image: ${currentData.images[currentImageIndex]}`);
+                                                            console.error(`Error loading image: ${(currentData.images[currentImageIndex] as ImageData).src}`);
                                                             e.currentTarget.src = '/placeholder.jpg';
                                                         }}
                                                     />
@@ -342,10 +367,10 @@ const CSR = () => {
                                         layout
                                         transition={{ duration: 0.4, ease: "easeInOut" }}
                                     >
-                                        <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{currentData.title}</h3>
+                                        <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{(currentData.images[currentImageIndex] as ImageData).title}</h3>
                                         <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
                                             <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
-                                                {currentData.description}
+                                                {(currentData.images[currentImageIndex] as ImageData).description}
                                             </p>
                                         </div>
                                     </motion.div>

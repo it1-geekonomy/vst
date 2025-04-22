@@ -28,7 +28,7 @@ const slides = [
     label: "NEWS & MEDIA",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: NewsIcon,
+    icon: NewsIcon
   },
   {
     id: 6,
@@ -38,7 +38,7 @@ const slides = [
     label: "CORPORATE PHILANTHROPY",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: CorporateIcon,
+    icon: CorporateIcon
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const slides = [
     label: "EDUCATION",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: EducationIcon,
+    icon: EducationIcon
   },
   {
     id: 4,
@@ -58,8 +58,7 @@ const slides = [
     label: "OE PARTS DISTRIBUTION",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
-    icon: OEPartsIcon,
-    // Using video from public directory
+    icon: OEPartsIcon
   },
   {
     id: 3,
@@ -69,7 +68,7 @@ const slides = [
     label: "MANUFACTURING",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: ManufacturingIcon,
+    icon: ManufacturingIcon
   },
   {
     id: 2,
@@ -80,7 +79,7 @@ const slides = [
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
     videoSrc: "/CarVideo.mp4",
-    icon: AutomativeFranchiseIcon, 
+    icon: AutomativeFranchiseIcon
   },
   {
     id: 1,
@@ -90,7 +89,7 @@ const slides = [
     label: "MERCEDES-BENZ",
     color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
     type: 'image',
-    
+    icon: undefined
   },
 ];
 
