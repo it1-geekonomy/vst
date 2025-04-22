@@ -26,10 +26,7 @@ function OurMilestone() {
       {/* Typography Section - Now stays on top for both mobile AND tablet */}
       <div className="w-full lg:w-1/4 mb-8 md:mb-10 lg:mb-0 lg:pr-6 text-center md:text-center lg:text-left">
         <div className="inline-block lg:w-full">
-
           <div className="text-4xl sm:text-5xl md:text-5xl text-white font-Roc relative z-10">
-          
-
             <div>Our</div>
             <div>Milestones</div>
           </div>
@@ -48,7 +45,9 @@ function OurMilestone() {
 
 function CounterItem({ item }: { item: MilestoneItem }) {
   const [isVisible, setIsVisible] = useState(false)
+  const [count, setCount] = useState(0)
   const counterRef = useRef<HTMLDivElement>(null)
+  const animationRef = useRef<number | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -72,9 +71,42 @@ function CounterItem({ item }: { item: MilestoneItem }) {
     }
   }, [])
 
-  // Get digits directly from the value
-  const valueStr = item.value.toString()
-  const firstDigit = valueStr[0]
+  useEffect(() => {
+    if (isVisible) {
+      let startTime: number | null = null
+      const duration = 2000 // 2 seconds animation
+      const targetValue = item.value
+
+      const animateCount = (timestamp: number) => {
+        if (!startTime) startTime = timestamp
+        const progress = timestamp - startTime
+        const percentage = Math.min(progress / duration, 1)
+        
+        // Ease out cubic function for smoother end of animation
+        const easeOutCubic = 1 - Math.pow(1 - percentage, 3)
+        const currentCount = Math.floor(easeOutCubic * targetValue)
+        
+        setCount(currentCount)
+
+        if (percentage < 1) {
+          animationRef.current = requestAnimationFrame(animateCount)
+        } else {
+          setCount(targetValue)
+        }
+      }
+
+      animationRef.current = requestAnimationFrame(animateCount)
+
+      return () => {
+        if (animationRef.current) {
+          cancelAnimationFrame(animationRef.current)
+        }
+      }
+    }
+  }, [isVisible, item.value])
+
+  const valueStr = count.toString()
+  const firstDigit = valueStr[0] || '0'
   const restDigits = valueStr.slice(1)
 
   const contentLeftOffset = `${BAR_WIDTH_PX - 20}px`
@@ -85,8 +117,7 @@ function CounterItem({ item }: { item: MilestoneItem }) {
         className={`relative ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         style={{
           minHeight: `${BAR_HEIGHT_PX + 30}px`,
-          transition: "transform 1s ease-out, opacity 1s ease-out",
-          transform: isVisible ? 'translateX(0)' : 'translateX(200px)'
+          transition: "opacity 1s ease-out"
         }}
       >
         <div
