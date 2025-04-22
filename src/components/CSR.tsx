@@ -169,7 +169,7 @@ const CSRItem: React.FC<CSRItemProps> = ({ title, description, images, currentIn
                 layout
                 transition={{ duration: 0.4, ease: "easeInOut" }}
             >
-                <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{currentImageData.title}</h3>
+                <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-left">{currentImageData.title}</h3>
                 <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
                     <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
                         {currentImageData.description}
@@ -376,7 +376,7 @@ const CSR = () => {
                                         layout
                                         transition={{ duration: 0.4, ease: "easeInOut" }}
                                     >
-                                        <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-center">{(currentData.images[currentImageIndex] as ImageData).title}</h3>
+                                        <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-left">{(currentData.images[currentImageIndex] as ImageData).title}</h3>
                                         <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
                                             <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
                                                 {(currentData.images[currentImageIndex] as ImageData).description}
