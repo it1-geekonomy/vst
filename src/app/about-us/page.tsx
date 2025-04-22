@@ -335,7 +335,7 @@ function AboutUsPage() {
         <div className="mt-12 md:mt-16 px-4 md:px-32">
           <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-rocWide">Our Legacy</h1>
 
-          <div className="flex flex-col font-roc font-normal text-clamp-24">
+          <div className="flex flex-col font-normal text-clamp-24">
             <h2 className="text-xl md:text-2xl text-white mt-6 mb-3">About Us</h2>
             <div>
               <p className="text-justify hyphens-auto">
@@ -345,14 +345,14 @@ function AboutUsPage() {
               </p>
               <ul className="list-disc pl-6 mt-3 mb-4 space-y-1">
                 <li>Automotive Franchise</li>
-                <li>Manufacturing</li>
+                <li>Manufacturing</li> 
                 <li>OE Parts Distribution</li>
                 <li>Education</li>
               </ul>
               
               <h3 className="text-xl md:text-2xl text-white mt-6 mb-3">A Legacy of Trust and Innovation:</h3>
               <p className="text-justify hyphens-auto">
-                With an annual turnover exceeding ₹5,000 crores ($570 million), VST Group stands as a powerhouse
+                With an annual turnover exceeding ₹5,000 crores ($570 million) , VST Group stands as a powerhouse
                 in India's business landscape. Under the visionary leadership of its fourth generation, the group
                 continues to set new benchmarks in service excellence, technological advancement, and customer
                 satisfaction.
