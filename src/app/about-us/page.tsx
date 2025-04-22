@@ -336,29 +336,32 @@ function AboutUsPage() {
           <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-rocWide">Our Legacy</h1>
 
           <div className="flex flex-col font-roc font-normal text-clamp-24">
-            <h2 className=" mb-2 text-white">About VST Group</h2>
-            <div
+            <h2 className="text-xl md:text-2xl text-white mt-6 mb-3">About Us</h2>
+            <div>
+              <p className="text-justify hyphens-auto">
+                Founded in 1911, VST Group is a leading conglomerate headquartered in Bangalore, known for
+                its enduring legacy of excellence, innovation, and sustainable growth. The group has been
+                growing ever since, expanding its presence across four core verticals:
+              </p>
+              <ul className="list-disc pl-6 mt-3 mb-4 space-y-1">
+                <li>Automotive Franchise</li>
+                <li>Manufacturing</li>
+                <li>OE Parts Distribution</li>
+                <li>Education</li>
+              </ul>
               
-            >
-              <p
-                className=" text-justify hyphens-auto"
-                
-              >
-                Established in 1911, VST Group is a distinguished 11 year old enterprise headquartered in Bangalore.
+              <h3 className="text-xl md:text-2xl text-white mt-6 mb-3">A Legacy of Trust and Innovation:</h3>
+              <p className="text-justify hyphens-auto">
+                With an annual turnover exceeding ₹5,000 crores ($570 million), VST Group stands as a powerhouse
+                in India's business landscape. Under the visionary leadership of its fourth generation, the group
+                continues to set new benchmarks in service excellence, technological advancement, and customer
+                satisfaction.
               </p>
-              <p
-                className=" text-justify hyphens-auto "
-                
-              >
-                It encompasses a wide array of luxury and mid variant car franchises, like Porsche, Maserati, Mercedes Benz, Jaguar, Land Rover, Ducati, Tata, Kia, Volkswagen, BYD Mahindra, Honda Scooters alongside a prominent manufacturing sector and significant interests in real estate, financial services and education industry. Under the leadership of its fourth generation, the Group has a turnover of Rs. 5,000 crores 570 million with sustainable growth, excellence, and innovation.
+              <p className="text-justify hyphens-auto mt-3">
+                By blending a rich legacy with a forward-looking approach to innovation, VST Group remains
+                committed to delivering value, building trust, and driving growth for generations to come.
               </p>
-              <p
-                className=" text-justify hyphens-auto "
-                
-              >
-                VST Tractors  Tillers, a key division, is renowned for its innovative and reliable agricultural machinery, supporting farmers with high quality equipment to boost productivity and modernize farming techniques. Gove Finance Limited, the leader in Auto Finance services for more than 30 years, is a dynamic nonbanking finance company led by a team of specialists with proven track record. It finance cars, commercial vehicles, construction equipments, used vehicles, tractors and buses. Meanwhile, SKEI stands out for its commitment to holistic education, offering a range of academic and extracurricular programs in a supportive environment, enhanced by state of the art facilities and a dedicated faculty to foster intellectual and personal growth.
-              </p>
-              <p className="text-white font-base">SINCE 1911</p>
+              
             </div>
           </div>
         </div>
