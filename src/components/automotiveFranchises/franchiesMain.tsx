@@ -15,6 +15,9 @@ import bg8 from "@/app/public/faranchies/bgpic/Honda-bg.png";
 import bg9 from "@/app/public/faranchies/bgpic/volkswagen-bg.png";
 import bg10 from "@/app/public/faranchies/bgpic/byd-bg.png";
 import car1 from "@/app/public/faranchies/bgpic/car1.png";
+import carfin from "@/app/public/faranchies/carpic/ferrari Car new.png";
+
+
 
 import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
 
@@ -60,7 +63,7 @@ const slides: SlideData[] = [
   {
     id: 1,
     backgroundImage: bg1,
-    carImage: car1,
+    carImage: carfin,
     brand: "porsche",
     bgColor: {
       from: "#780E26",
@@ -71,6 +74,7 @@ const slides: SlideData[] = [
     description:
       "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
     learnMoreLink: "https://www.porsche.com"
+    
 
   },
 
