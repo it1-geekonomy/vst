@@ -257,7 +257,7 @@ const CSR = () => {
                 >
                     {/* Hero Section */}
                     <section className="relative h-[50vh] sm:h-[60vh] md:h-[80vh] overflow-hidden z-10">
-                        <div className="relative h-full flex flex-col items-center justify-start text-white px-4 sm:px-6 md:px-8 pt-20 pb-20">
+                        <div className="relative h-full flex flex-col items-center justify-start text-white px-4 sm:px-6 md:px-8  sm:pt-20 pb-20">
                             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-left mb-2 sm:mb-4">Making a Difference</h1>
                             <p className="text-sm sm:text-base md:text-lg text-center max-w-5xl mx-auto text-gray-200 leading-relaxed text-justify px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 bg-black/30 rounded-lg mb-16 sm:mb-20 md:mb-24">
                                 Rooted in a legacy of responsibility and service, VST Group, through the V.S. Tiruvengadaswamy
