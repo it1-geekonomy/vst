@@ -11,10 +11,7 @@ function EmpoweringScroll() {
     
     const marqueeText = scrollContainer.children[0] as HTMLElement
     const textWidth = marqueeText.offsetWidth
-    
-    // Clone the text for seamless scrolling
-    const cloneText = marqueeText.cloneNode(true) as HTMLElement
-    scrollContainer.appendChild(cloneText)
+    const windowWidth = window.innerWidth
     
     let animationId: number
     let startTime: number | null = null
@@ -22,10 +19,19 @@ function EmpoweringScroll() {
     
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp
-      const progress = ((timestamp - startTime) % duration) / duration
+      const elapsed = (timestamp - startTime) % duration
       
-      const translateX = -(progress * textWidth)
+      // Calculate the scroll position
+      const progress = elapsed / duration
+      const totalDistance = textWidth + windowWidth
+      const translateX = windowWidth - (progress * totalDistance)
+      
       scrollContainer.style.transform = `translateX(${translateX}px)`
+      
+      // When text is about to scroll off completely, reset it to the right edge
+      if (progress >= 1) {
+        startTime = timestamp // Reset the animation
+      }
       
       animationId = requestAnimationFrame(step)
     }
@@ -48,11 +54,10 @@ function EmpoweringScroll() {
           }}
         >
           <h2 
-            className="whitespace-nowrap"
+            className="whitespace-nowrap font-rocWide"
             style={{ 
-              fontFamily: "FONTSPRING DEMO - Roc Grotesk Wide",
               fontWeight: 400,
-              fontSize: "180px",
+              fontSize: "150px",
               lineHeight: "120%",
               letterSpacing: "0%",
               backgroundImage: 'linear-gradient(90deg, #1776A2 0%, #28AF70 30.67%, #E7AE33 70.67%, #FF4FC2 100%)',
@@ -61,7 +66,7 @@ function EmpoweringScroll() {
               backgroundClip: 'text',
             }}
           >
-            Empowering growth through constant innovation
+            Empowering growth through constant innovation                 
           </h2>
         </div>
       </div>

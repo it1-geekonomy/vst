@@ -79,7 +79,7 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
               <Link href="#" className="text-white hover:text-[#C4A462] transition-colors duration-200">
                 <Instagram />
               </Link>
-              <Link href="#" className="text-white hover:text-[#C4A462] transition-colors duration-200">
+              <Link href="https://www.linkedin.com/company/vst-motors-ltd/" className="text-white hover:text-[#C4A462] transition-colors duration-200">
                 <LinkedIn />
               </Link>
             </div>
