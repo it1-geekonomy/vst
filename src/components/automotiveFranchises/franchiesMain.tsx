@@ -359,7 +359,7 @@ const FranchiseSlider = () => {
           <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
             {/* Title */}
             <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
-              <h2 className="text-white font-['Roc_Grotesk'] font-extralight text-2xl sm:text-3xl lg:text-[4rem] xl:text-[5rem] tracking-[0.2em] text-center">
+              <h2 className="text-white font-rocWide font-light text-clamp-67 tracking-[0.2em] text-center">
                 Our
                 <br />
                 Franchises
