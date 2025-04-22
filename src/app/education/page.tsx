@@ -106,7 +106,6 @@ export default function EducationPage() {
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent py-2">
-                  <p className="text-white text-xs sm:text-sm text-center">{image.alt}</p>
                 </div>
               </div>
             ))}
