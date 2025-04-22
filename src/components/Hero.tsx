@@ -59,7 +59,6 @@ const slides = [
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
     icon: OEPartsIcon
-    // Using video from public directory
   },
   {
     id: 3,
@@ -217,7 +216,6 @@ const Hero = () => {
           
           {/* Slide label */}
           <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10 mt-30">
-            <span className="text-white font-medium text-md">{slides[currentSlide].label}</span>
           </div>
           
           {/* Navigation buttons */}

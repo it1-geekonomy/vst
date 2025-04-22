@@ -126,10 +126,10 @@ export default function Navbar() {
                   
                 </div>
               </div>
-              <Link href="/csr" className="block px-4 py-2 text-sm text-white">
+              <Link href="/csr" className="block px-4 py-2 text-base font-medium hover:text-gray-300 transition-colors text-white">
                     CSR
                   </Link>
-                  <Link href="/news-media" className="block px-4 py-2 text-sm text-white">
+                  <Link href="/news-media" className="block px-4 py-2 text-base font-medium hover:text-gray-300 transition-colors text-white">
                     News and Media
                   </Link>
               <Link
@@ -207,14 +207,14 @@ export default function Navbar() {
             </div>
             <Link
                   href="/csr"
-                  className="block px-3 py-2 text-sm text-white rounded-md"
+                  className="block px-3 py-2 text-base font-medium text-white rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                   >
                   CSR
                 </Link>
                 <Link
                   href="/news-media"
-                  className="block px-3 py-2 text-sm text-white rounded-md"
+                  className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   News and Media
