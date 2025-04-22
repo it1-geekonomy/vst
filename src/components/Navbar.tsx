@@ -186,7 +186,7 @@ export default function Navbar() {
                   className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  education
+                  Education
                 </Link>
                 <Link
                   href="/auto-parts"
