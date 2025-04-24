@@ -70,4 +70,8 @@ html {
   font-size: clamp(15px, 1.25vw, 24px);
 }
 
+.text-clamp-67 {
+  font-size: clamp(36px, 3.49vw, 67px);
+}
+
 
