@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Scurve from '../education/Frame 1973341729.png';
 import img1 from '../public/education/Frame 6.jpg';
-import img2 from '../public/education/Frame 7.jpg';
+import img2 from '../public/education/Image 1.jpg';
 import img3 from '../public/education/Frame 8.jpg';
 import img4 from '../public/education/Frame 9.jpg';
 import img5 from '../public/education/Frame 10.jpg';
-import img6 from '../public/education/Frame11.jpeg';
-import img7 from '../public/education/Frame12.jpeg';
-import { StaticImageData } from 'next/image';
+import img6 from '../public/education/Frame11.jpg';
+import img7 from '../public/education/Frame 12.jpg';
+import { StaticImageData } from 'next/image'; 
 import EducationLogo from '../public/logos/educationlogo';
 import Logo from '../public/logos/Logo';
 import LocationSection from '../components/LocationSection';
@@ -28,13 +28,13 @@ export default function EducationPage() {
 
   // Gallery images with varying heights
   const galleryImages: GalleryImage[] = [
-    { id: 1, src: img1, alt: 'Teacher interacting with students', height: '100%' },
-    { id: 2, src: img2, alt: 'Student learning', height: '95%' },
-    { id: 3, src: img3, alt: 'School building', height: '93%' },
-    { id: 4, src: img4, alt: 'Robotics project', height: '94%' },
-    { id: 5, src: img5, alt: 'Students on stairs', height: '97%' },
-     { id: 6, src: img6, alt: 'Students in uniform', height: '100%' },
-     { id: 7, src: img7, alt: 'Students outdoors', height: '88%' },
+    { id: 1, src: img2, alt: 'Student learning', height: '95%' },
+    { id: 2, src: img7, alt: 'Students outdoors', height: '88%' },
+    { id: 3, src: img5, alt: 'Students on stairs', height: '90%' },
+    { id: 4, src: img3, alt: 'School building', height: '88%' },
+    { id: 5, src: img4, alt: 'Robotics project', height: '97%' },
+    { id: 6, src: img1, alt: 'Teacher interacting with students', height: '88%' },
+    { id: 7, src: img6, alt: 'Students in uniform', height: '97%' },
   ];
 
   // Function to navigate to the next image
@@ -48,7 +48,7 @@ export default function EducationPage() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-black text-white relative overflow-hidden">
+    <main className="flex min-h-screen flex-col items-center bg-[#FFAED7] text-black relative overflow-hidden">
       <div className='w-full'>
       {/* Hero section with logo */}
       <section className="w-full flex justify-center items-center z-10 relative">
@@ -101,8 +101,9 @@ export default function EducationPage() {
                     alt={image.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw"
-                    className="object-contain"
+                    className="object-cover object-center"
                     priority
+                    style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent py-2">
@@ -173,7 +174,7 @@ export default function EducationPage() {
         
         {/* Desktop Layout - Expandable strips */}
         <div className="hidden md:flex w-full h-[90%] items-end gap-4 md:gap-8 lg:gap-14 relative z-10">
-          {galleryImages.map((image) => (
+          {galleryImages.map((image, index) => (
             <div 
               key={image.id} 
               className="flex-[0.5] relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out hover:flex-[35] group"
@@ -187,6 +188,7 @@ export default function EducationPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                   className="object-cover object-center"
                   priority
+                  style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
                 />
                 {/* Hover overlay with full image display */}
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-1000 flex items-center justify-center">
@@ -197,8 +199,9 @@ export default function EducationPage() {
                         alt={image.alt}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-fill w-[100%] h-[100%]"
+                        className="object-cover object-center w-[100%] h-[100%]"
                         priority
+                        style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
                       />
                     </div>
                   </div>
@@ -212,18 +215,17 @@ export default function EducationPage() {
       {/* Description section */}
       <section className="w-full px-4 md:px-8 lg:px-24 pb-12 md:pb-16 lg:pb-24 z-10 relative mx-auto">
         <div className="text-center max-w-7xl mx-auto">
-          <p 
-            className="text-base sm:text-lg md:text-xl lg:text-2xl font-light"
-            style={{
-              fontFamily: "'FONTSPRING DEMO - Roc Grotesk', sans-serif",
-              fontWeight: 350,
-              lineHeight: "150%",
-              letterSpacing: "0%",
-            }}
-          >
-            SKEI, Bangalore is a renowned CBSE institution committed to providing a holistic and innovative education. With a focus 
-            on 21st&#8209;century skills, the school&apos;s mission is to empower students with the knowledge and skills needed to excel in a 
-            global context, emphasizing values, leadership, and a passion for lifelong learning.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light" style={{ 
+            fontFamily: 'Roc Grotesk, sans-serif', 
+            fontWeight: 400, 
+            fontSize: '24px', 
+            lineHeight: '40px', 
+            letterSpacing: '0%', 
+            textAlign: 'justify', 
+            verticalAlign: 'middle' 
+          }}>
+            <span style={{ color: '#000', fontWeight: 500 }}>At SKEI, we believe</span> that every child is unique, talented and has the inherent ability to learn. Our educational philosophy emphasises a learner-centric approach wherein we cater to the diverse learning needs of students. Guided by the principles of Rabindranath Tagore and Benjamin Bloom, our school's approach to learning includes differentiated learning, inquiry-based learning, project based learning, collaborative learning and hands-on learning. These approaches, combined with our unique teaching methodologies, help in developing the 21st century skills in students as laid down by NEP 2020. We focus on a deep understanding of our children from their young age. Through this 'whole-child' approach, each child is carefully nurtured and their learning experiences individually personalized which ignites the spark of learning. It inspires them to be aware, be free of conditioned thoughts and most importantly be responsible for themselves, to nature and to society. It ensures our children chase excellence in whichever fields they choose to excel in.<br/><br/>
+            Founded in 1931, SKEI is strategically located in Edward road, off Queens Road in close proximity to Cubbon Park Metro Station and Cantonment Railway Station. Established by the founders of the VST Group, which is now a 110 year old business conglomerate with Premium Automobile Dealerships, Finance, Real Estate, and is a leading manufacturer of Agricultural Machinery, our children are assured of access to education of the highest quality, the best of teachers and state-of-the-art facilities that enables them to thrive as students with a thirst for and the confidence to take on challenges and make a difference in their lives.
           </p>
         </div>
       </section>
@@ -232,6 +234,7 @@ export default function EducationPage() {
       {/* Our Location section */}
       <LocationSection />
       <BusinessSectors/>
+    <Logo/>
     </main>
   );
 }
