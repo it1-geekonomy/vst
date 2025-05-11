@@ -10,10 +10,9 @@ import img5 from '../public/education/Frame 10.jpg';
 import img6 from '../public/education/Frame11.jpg';
 import img7 from '../public/education/Frame 12.jpg';
 import { StaticImageData } from 'next/image'; 
-import EducationLogo from '../public/logos/educationlogo';
-import Logo from '../public/logos/Logo';
-import LocationSection from '../components/LocationSection';
-import BusinessSectors from '@/components/automotiveFranchises/BusinessSectors';
+import EducationLogo from '@/app/public/education/educational logo.png';
+import BusinessSectorsUpdated from '@/components/automotiveFranchises/BusinessSectorsUpdated';
+import gif from "@/app/public/education/vst logo gif.gif"
 
 type GalleryImage = {
   id: number;
@@ -49,12 +48,16 @@ export default function EducationPage() {
 
   return (
     <main className="flex min-h-screen flex-col items-center bg-[#FFAED7] text-black relative overflow-hidden">
-      <div className='w-full'>
+      <div className='w-full'>  
       {/* Hero section with logo */}
       <section className="w-full flex justify-center items-center z-10 relative">
-        <div className="w-52 md:w-72 md:h-52 lg:w-80 xl:w-94 relative">
+        <div className="w-50 h-40 sm:w-60 sm:h-48 md:w-72 md:h-52 lg:w-80 xl:w-94 relative">
           <div className="w-full h-full flex justify-center items-center">
-            <EducationLogo className="w-full h-full" />
+            <Image 
+              src={EducationLogo}
+              alt="Education Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
       </section>
@@ -71,10 +74,10 @@ export default function EducationPage() {
             className="object-cover"
             style={{ 
               objectPosition: 'center',
-              transform: 'scale(1.7)',
+              transform: 'scale(2.2)',
               width: '100%',
               height: '100%',
-              filter: 'hue-rotate(4deg)'
+              filter: 'hue-rotate(5deg)'
             }}
             quality={100}
           />
@@ -229,12 +232,136 @@ export default function EducationPage() {
           </p>
         </div>
       </section>
+
+      <div className="w-full px-4 md:px-8 lg:px-24 mb-12 -mt-10">
+        <button
+          style={{
+            width: 300,
+            height: 50,
+            borderRadius: 5,
+            background: '#FEBF3D',
+            padding: '12px 32px',
+            fontSize: 20,
+            fontWeight: 400,
+            fontFamily: 'Roc Grotesk, sans-serif',
+            color: '#000',
+            letterSpacing: 1,
+            boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
+            transition: 'background 0.2s',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+          className="hover:bg-[#FFD84D] active:scale-95"
+        >
+          Learn More
+        </button>
+      </div>
       </div>
    
-      {/* Our Location section */}
-      <LocationSection />
-      <BusinessSectors/>
-    <Logo/>
+      {/* Our Location section - custom */}
+      <section className="w-full flex flex-col md:flex-row items-center justify-center px-4 md:px-8 lg:px-24 mt-4">
+        <div className="flex flex-col items-center">
+          <h2
+            className="text-[#2B0B1F] -ml-10"
+            style={{
+              fontFamily: 'Roc Grotesk, sans-serif',
+              fontSize: '60px',
+              lineHeight: '80px',
+              letterSpacing: '-2px',
+              marginBottom: '32px',
+            }}
+          >
+            Our Location
+          </h2>
+          <div className="relative w-[180px] h-[160px] md:w-[400px] md:h-[320px] lg:w-[400px] lg:h-[300px]">
+            {/* Map image */}
+            <Image
+              src={require('@/app/public/education/educational location.png')}
+              alt="School Location Map"
+              fill
+              className="object-cover rounded-lg shadow-lg"
+              priority
+            />
+            {/* Location icon */}
+            <a
+              href="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute left-[33.6%] top-[25%] w-6 h-5 md:w-8 md:h-15 cursor-pointer z-20"
+              title="Open in Google Maps"
+            >
+              <Image
+                src={require('@/app/public/education/location icon.png')}
+                alt="Location Icon"
+                fill
+                className="object-contain"
+                priority
+              />
+            </a>
+          </div>
+        </div>
+        {/* Right: Address and Phone Numbers in a row */}
+        <div className="mt-8 md:mt-0 md:ml-20 flex flex-row items-center justify-center space-x-2">
+          {/* Address */}
+          <div className="mr-10 min-w-[220px] mt-25">
+            <p
+              className="text-black"
+              style={{
+                fontFamily: 'Roc Grotesk',
+                fontSize: '28px',
+                lineHeight: '40px',
+                fontWeight: 500,
+              }}
+            >
+              Edward Road,<br />
+              Off Queens Road,<br />
+              Bangalore - 560 001, Karnataka.
+            </p>
+          </div>
+          {/* Phone Numbers */}
+          <div className="flex flex-col space-y-1 mt-20">
+            {[
+              '+91 80 2234 1011',
+              '+91 80 2226 3022',
+              '+91 99807 97527'
+            ].map((phone, idx) => (
+              <a 
+                key={phone} 
+                href={`tel:${phone.replace(/\s+/g, '')}`}
+                className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
+              >
+                {/* Telephone icon - SVG */}
+                <span className="mr-3 flex-shrink-0">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.2 14.85c-.45 0-.89-.07-1.31-.2-.41-.13-.85-.32-1.31-.57-.45-.25-.89-.54-1.31-.87-.42-.33-.8-.67-1.13-1.03-.33-.36-.62-.7-.87-1.13-.25-.42-.44-.86-.57-1.31-.13-.42-.2-.86-.2-1.31 0-.28.09-.51.27-.69l1.13-1.13c.18-.18.41-.27.69-.27.14 0 .27.02.39.07.12.05.23.13.33.23l.77.77c.1.1.17.21.23.33.05.12.07.25.07.39 0 .13-.02.25-.07.37-.05.12-.13.23-.23.33l-.37.37c.18.32.39.62.63.9.24.28.5.54.78.78.28.24.58.45.9.63l.37-.37c.1-.1.21-.17.33-.23.12-.05.24-.07.37-.07.14 0 .27.02.39.07.12.05.23.13.33.23l.77.77c.1.1.17.21.23.33.05.12.07.25.07.39 0 .28-.09.51-.27.69l-1.13 1.13c-.18.18-.41.27-.69.27z" fill="#2B0B1F"/>
+                  </svg>
+                </span>
+                <span
+                  className="text-black"
+                  style={{
+                    fontFamily: 'Roc Grotesk',
+                    fontSize: '22px',
+                    lineHeight: '36px'
+                  }}
+                >
+                  {phone}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+        <div className="-mt-15">
+          <BusinessSectorsUpdated/>
+        </div>
+   <div className="w-full h-[300px] lg:h-[300px] xl:h-[400px] flex justify-center items-center -mt-15">
+                <Image
+                  src={gif}
+                  alt="VST Logo Animation"
+                  className="w-[100%] h-[100%] object-contain"
+                />
+              </div>
     </main>
   );
 }
