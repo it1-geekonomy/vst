@@ -1,9 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import Image1 from "@/app/public/images/LifeAtVst/Image1.png"
-import Image2 from "@/app/public/images/LifeAtVst/Image2.png"
-import Image3 from "@/app/public/images/LifeAtVst/Image3.png"
+import Image1 from "@/app/public/images/LifeAtVst/Image1.jpg"
+import Image2 from "@/app/public/images/LifeAtVst/Image2.jpg"
+import Image3 from "@/app/public/images/LifeAtVst/Image3.jpg"
 
 const LifeAtVst = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -72,79 +72,83 @@ const LifeAtVst = () => {
         }
       `}</style>
 
-      {/* Fixed Title Section with subtitle and description */}
-      <div className="absolute top-6 md:top-10 left-1/2 transform -translate-x-1/2 md:left-auto md:transform-none md:right-[-19.5%] z-40 text-center w-full md:w-auto">
-        <h1
-
-          className="mb-2 text-white text-4xl md:text-6xl lg:text-7xl xl:text-[80px] font-rocWide"
-          style={{
-            fontWeight: 300,
-            lineHeight: "90%",
-            letterSpacing: "0.09em"
-          }}
-        >
-          Life At VST
-        </h1>
-
-        {/* Container for horizontal line and white ball */}
-        <div className="relative flex justify-center items-center mb-1 w-full">
-          {/* White ball at the start of line */}
-          <div className="w-3 h-3 md:w-4 md:h-4 bg-[#8CE0FF] rounded-full flex-shrink-0"></div>
-
-          {/* Horizontal line with gradient that extends to the right edge */}
-          <div className="h-[2px] gradient-line flex-grow"></div>
+      {/* Create a flex container to divide the screen into two halves */}
+      <div className="flex flex-col md:flex-row h-568px">
+        {/* Left half - Image container */}
+        <div className="relative w-full md:w-1/2 h-462px">
+          <Image
+            src={slides[currentSlide].image}
+            alt={`Life at VST ${currentSlide + 1}`}
+            layout="fill"
+            objectFit="cover"
+            className="opacity-100"
+          />
+          
+          
         </div>
 
-        {/* Subtitle and description with more space on mobile */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="px-4 md:px-4 w-full max-w-[100%] md:max-w-[320px] lg:max-w-[450px] xl:max-w-[600px] mx-auto h-[230px] md:h-auto overflow-y-auto md:overflow-visible"
-          >
-            <h2 className="text-2xl md:text-xl lg:text-1xl xl:text-1xl font-normal mb-3 text-start font-rocWide">
-              {slides[currentSlide].subtitle}
-            </h2>
-            <p className="text-base md:text-xs lg:text-base xl:text-base text-center font-poppins font-normal leading-relaxed md:leading-tight hyphens-auto " style={{ wordBreak: "break-word", textAlign: "justify", textJustify: "inter-word" }}>
-              {slides[currentSlide].description}
-            </p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+        {/* Right half - Text content */}
+        <div className="relative w-full md:w-1/2 h-full bg-black  px-4 md:px-8">
+          {/* Heading with digits on same line */}
+          {/* Heading with digits on same line */}
+          <div className="flex items-center justify-center w-full">
+            <div className="flex items-baseline justify-center">
+              <div className="flex items-baseline mr-2 md:mr-4">
+                <span className="text-[60px] md:text-[70px] lg:text-[90px] xl:text-[70px] font-rocWide text-white font-weight-200">0</span>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentSlide}
+                    className="text-[60px] md:text-[70px] lg:text-[90px] xl:text-[70px] font-rocWide animate-flowing-gradient"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    {(currentSlide + 1).toString()}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+              
+              <h1
+                className="text-white text-4xl md:text-5xl xl:text-[60px] font-roc"
+                style={{
+                  fontWeight: 300,
+                  lineHeight: "90%",
+                  letterSpacing: "0.09em"
+                }}
+              >
+                Life At VST
+              </h1>
+            </div>
+          </div>
 
-      {/* Background Image Container */}
-      <div className="absolute left-0 w-full md:w-[85%] lg:w-[80%] xl:w-[75%] h-full">
-        <Image
-          src={slides[currentSlide].image}
-          alt={`Life at VST ${currentSlide + 1}`}
-          layout="fill"
-          objectFit="cover"
-          className="opacity-70"
-        />
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-black to-transparent" />
-      </div>
+          {/* Container for horizontal line and white ball */}
+          <div className="flex justify-center items-center mb-1 w-full">
+            {/* White ball at the start of line */}
+            <div className="w-3 h-3 md:w-4 md:h-4 bg-[#8CE0FF] rounded-full flex-shrink-0"></div>
 
-      {/* Black background div - visible from md breakpoint */}
-      <div className="absolute right-0 top-0 w-[15%] md:w-[20%] lg:w-[25%] h-full bg-black hidden md:block" />
+            {/* Horizontal line with gradient that extends to the right edge */}
+            <div className="h-[2px] gradient-line flex-grow"></div>
+          </div>
 
-      {/* Digits component with flowing gradient animation */}
-      <div className="hidden md:block absolute top-0 left-0 w-[80%] h-full z-20 md:left-[-2%]">
-        <div className="relative w-full h-full flex items-center justify-center sm:left-[-20%] md:left-[-35%] sm:top-[15%]">
-          <span className="text-[150px] lg:text-[200px] xl:text-[300px] font-rocWide text-white font-weight-200 absolute left-[5%] sm:left-[55%] lg:left-[62%] transform -translate-x-1/2">0</span>
+          {/* Subtitle and description */}
           <AnimatePresence mode="wait">
-            <motion.span
+            <motion.div
               key={currentSlide}
-              className="text-[150px] lg:text-[200px] xl:text-[300px] font-rocWide animate-flowing-gradient absolute left-[calc(55%+150px)] lg:left-[calc(58%+180px)] xl:left-[calc(62%+220px)] transform -translate-x-1/2"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="w-full max-w-[75%] mx-auto h-[230px] md:h-[300px] pl-6 md:pl-8 overflow-y-auto"
             >
-              {(currentSlide + 1).toString()}
-            </motion.span>
+              <h2 className="text-xl md:text-lg lg:text-lg xl:text-lg font-normal mb-3 text-start font-rocWide">
+                {slides[currentSlide].subtitle}
+              </h2>
+              <p className="text-base md:text-sm lg:text-base xl:text-base font-poppins font-normal leading-relaxed hyphens-auto" 
+                 style={{ wordBreak: "break-word", textAlign: "justify", textJustify: "inter-word" }}>
+                {slides[currentSlide].description}
+              </p>
+            </motion.div>
           </AnimatePresence>
         </div>
       </div>

@@ -16,7 +16,7 @@ const BAR_HEIGHT_PX = 100
 function OurMilestone() {
   const milestones: MilestoneItem[] = [
     { value: 100, label: 'Years', suffix: '+', color: 'bg-[#B897FF]' },
-    { value: 5000, label: 'Customers', suffix: '+', color: 'bg-[#95C7FF]' },
+    { value: 10000, label: 'Customers', suffix: '+', color: 'bg-[#95C7FF]' },
     { value: 60, label: 'Brands', suffix: '+', color: 'bg-[#50FFA0]' },
     { value: 6, label: 'Locations', suffix: '+', color: 'bg-[#FEBF3D]' }
   ]
