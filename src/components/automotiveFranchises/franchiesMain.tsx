@@ -21,14 +21,14 @@ import bg10 from "@/app/public/faranchies/bgpic/byd-bg.png";
 
 import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
 
-import car4 from "@/app/public/faranchies/carpic/4car.png";
-import car5 from "@/app/public/faranchies/carpic/5car.png";
-import car6 from "@/app/public/faranchies/carpic/6car.png";
-import car7 from "@/app/public/faranchies/carpic/7car.png";
-import bike from "@/app/public/faranchies/carpic/bike.png";
-import hondabike from "@/app/public/faranchies/carpic/Honda-bike.png";
-import volkswagen from "@/app/public/faranchies/carpic/volkswagen-car.png";
-import byd from "@/app/public/faranchies/carpic/byd-car.png";
+// import car4 from "@/app/public/faranchies/carpic/4car.png";
+// import car5 from "@/app/public/faranchies/carpic/5car.png";
+// import car6 from "@/app/public/faranchies/carpic/6car.png";
+// import car7 from "@/app/public/faranchies/carpic/7car.png";
+// import bike from "@/app/public/faranchies/carpic/bike.png";
+// import hondabike from "@/app/public/faranchies/carpic/Honda-bike.png";
+// import volkswagen from "@/app/public/faranchies/carpic/volkswagen-car.png";
+// import byd from "@/app/public/faranchies/carpic/byd-car.png";
 
 import MercedesIcon from "@/app/public/faranchies/MercedesIcon";
 import LandRoverIcon from "@/app/public/faranchies/LandRoverIcon";
@@ -47,7 +47,6 @@ import Logo from "@/app/public/logos/Logo";
 interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
-  carImage: StaticImageData;
   brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD";
   bgColor: {
     from: string;
@@ -57,14 +56,28 @@ interface SlideData {
   header: string,
   description: string;
   learnMoreLink: string;
+  locations?: {
+    [key: string]: {
+      sales: Array<{
+        address: string;
+        phone: string;
+        email: string;
+        map: string;
+      }>;
+      service?: Array<{
+        address: string;
+        phone: string;
+        email: string;
+        map: string;
+      }>;
+    };
+  };
 }
 
 const slides: SlideData[] = [
   {
     id: 1,
     backgroundImage: bg1,
-    carImage: ferrari,
-
     brand: "porsche",
     bgColor: {
       from: "#780E26",
@@ -74,15 +87,60 @@ const slides: SlideData[] = [
     header: "VST Supercars",
     description:
       "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
-    learnMoreLink: "https://www.porsche.com"
-    
-
+    learnMoreLink: "https://www.porsche.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+            {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
 
   {
     id: 2,
     backgroundImage: bg2,
-    carImage: car2,
     brand: "mercedes",
     bgColor: {
       from: "#B897FF",
@@ -92,12 +150,12 @@ const slides: SlideData[] = [
     header: "VST Titanium ",
     description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015,with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar inluxury automotive ownership.",
 
-    learnMoreLink: "https://www.mercedes-benz.com"
+    learnMoreLink: "https://www.mercedes-benz.com",
+    
   },
   {
     id: 3,
     backgroundImage: bg3,
-    carImage: car3,
     brand: "landrover",
     bgColor: {
       from: "#DCAB77",
@@ -107,12 +165,34 @@ const slides: SlideData[] = [
     header: "VST Grandeur",
     description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service..",
 
-    learnMoreLink: "https://www.landrover.com"
+    learnMoreLink: "https://www.landrover.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      
+    }
   },
   {
     id: 4,
     backgroundImage: bg4,
-    carImage: car4,
     brand: "maserati",
     bgColor: {
       from: "#6FBEFF",
@@ -123,12 +203,53 @@ const slides: SlideData[] = [
 
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
 
-    learnMoreLink: "https://www.maserati.com"
+    learnMoreLink: "https://www.maserati.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
   {
     id: 5,
     backgroundImage: bg4,
-    carImage: car6,
     brand: "maserati",
     bgColor: {
       from: "#FDC756",
@@ -138,12 +259,53 @@ const slides: SlideData[] = [
     header: "VST Central",
     description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
 
-    learnMoreLink: "https://www.kia.com"
+    learnMoreLink: "https://www.kia.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
   {
     id: 6,
     backgroundImage: bg6,
-    carImage: car5,
     brand: "maserati",
     bgColor: {
       from: "#D6744E",
@@ -153,12 +315,53 @@ const slides: SlideData[] = [
     header: "VST Motors",
     description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state..",
 
-    learnMoreLink: "https://www.tatamotors.com"
+    learnMoreLink: "https://www.tatamotors.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
   {
     id: 7,
     backgroundImage: bg7,
-    carImage: car7,
     brand: "maserati",
     bgColor: {
       from: "#05F1F2",
@@ -167,12 +370,53 @@ const slides: SlideData[] = [
     LogoComponent: MahindraIcon,
     header: "India Garage",
     description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction..",
-    learnMoreLink: "https://www.mahindra.com"
+    learnMoreLink: "https://www.mahindra.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, ssssssChennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
   {
     id: 8,
     backgroundImage: bikebg,
-    carImage: bike,
     brand: "maserati",
     bgColor: {
       from: "#E9354C",
@@ -182,12 +426,53 @@ const slides: SlideData[] = [
     header: "VST Ducati",
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
 
-    learnMoreLink: "https://www.ducati.com"
+    learnMoreLink: "https://www.ducati.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
   {
     id: 9,
     backgroundImage: bg8,
-    carImage: hondabike,
     brand: "honda",
     bgColor: {
       from: "#E9354C",
@@ -198,12 +483,53 @@ const slides: SlideData[] = [
     description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence.",
 
 
-    learnMoreLink: "#"
+    learnMoreLink: "#",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
   {
     id: 9,
     backgroundImage: bg9,
-    carImage: volkswagen,
     brand: "volkswagen",
     bgColor: {
       from: "#E9354C",
@@ -213,12 +539,53 @@ const slides: SlideData[] = [
     header: "Bangalore Motors",
     description: "In 2009, the Group brought the best of German engineering to Bangalore's automobile market with the opening of Volkswagen Palace Cross. This is a prestigious, plush sales location on Bangalore's Palace Cross Road that mirrors the excellence and up-to-the-minute technology of the outstanding automobiles it deals in.",
 
-    learnMoreLink: "#"
+    learnMoreLink: "#",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
   {
     id: 10,
     backgroundImage: bg10,
-    carImage: byd,
     brand: "BYD",
     bgColor: {
       from: "#E9354C",
@@ -226,16 +593,62 @@ const slides: SlideData[] = [
     },
     LogoComponent: BydLogo,
     header: "VST BYD",
-    description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD’s cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
+    description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD's cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
 
-    learnMoreLink: "#"
+    learnMoreLink: "#",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
   },
 ];
+
+// Get the type of the current slide's locations
+type LocationKeys = keyof typeof slides[number]['locations'];
 
 const FranchiseSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [screenWidth, setScreenWidth] = useState<number | null>(null);
+  const [activeLocation, setActiveLocation] = useState<string | null>(null);
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -247,6 +660,18 @@ const FranchiseSlider = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    const currentSlideData = slides[currentSlide];
+    if (currentSlideData.locations) {
+      const locationKeys = Object.keys(currentSlideData.locations);
+      if (locationKeys.length > 0) {
+        setActiveLocation(locationKeys[0]);
+      }
+    } else {
+      setActiveLocation(null);
+    }
+  }, [currentSlide]);
 
   const goToSlide = (brand: SlideData["brand"]) => {
     const index = slides.findIndex((slide) => slide.brand === brand);
@@ -280,16 +705,15 @@ const FranchiseSlider = () => {
     setScrollPosition((prev) => prev + 1);
   };
 
+  const currentLocations = slides[currentSlide].locations;
+
   return (
     <div className="relative w-full min-h-screen  lg:mt-[0rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
         style={{
-          background: `
-          radial-gradient(33.31% 35.31% at 91.72% 2.91%, ${gradientColor} 0%, transparent 100%),
-          linear-gradient(348.88deg, rgba(0, 0, 0, 09) 2.12%, rgba(65, 148, 216, 0.6) 82.2%)
-        `
+          background: "linear-gradient(180deg, #225a8c 20%, #4194D8 90%)"
         }}
       />
 
@@ -310,13 +734,13 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 lg:left-[20%] w-full lg:w-[55%] h-[90%]"
+                className="absolute left-0 w-[50%] lg:w-[92%] h-[90%] rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
                   alt="Background"
                   fill
-                  className="object-cover"
+                  className="object-cover "
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 55vw"
                 />
@@ -328,30 +752,11 @@ const FranchiseSlider = () => {
                 style={{ backgroundColor: slides[currentSlide].bgColor.to }}
               />
               <div
-                className="hidden lg:block absolute top-0 right-[2rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%]  rounded-br-full  
+                className="hidden lg:block absolute top-0 right-[4rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%]  rounded-br-full  
               rounded-bl-none   
               rounded-t-none "
                 style={{ backgroundColor: slides[currentSlide].bgColor.from }}
               />
-
-              <motion.div
-                key={`car-${currentSlide}`}
-                initial={{ x: 300, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -300, opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="absolute bottom-0 sm:bottom-[-10%] lg:bottom-[-10%] w-full lg:w-screen h-[35vh] sm:h-[40vh] lg:h-[70vh] z-[1002] pointer-events-none"
-              >
-                <Image
-                  src={slides[currentSlide].carImage}
-                  alt="Luxury Car"
-                  width={2000}
-                  height={700}
-                  className="w-full lg:w-[60%] h-full object-contain scale-[0.65] sm:scale-75 lg:scale-85 lg:left-[10%]"
-                  priority
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 60vw"
-                />
-              </motion.div>
             </AnimatePresence>
           </div>
 
@@ -458,41 +863,146 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Description section - moved back outside but made dynamic */}
-        <div className="w-full py-1 sm:py-2 md:py-4 lg:py-10 px-4 sm:px-6 lg:px-24 flex flex-col items-center pt-6 sm:pt-4  lg:pt-1 mt-[-2rem] sm:mt-[-1rem] lg:mt-[-6rem]">
-          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8">
+        <div className="w-full flex flex-col lg:flex-row py-10 px-4 sm:px-6 lg:px-24 items-start gap-8">
+          {/* Left: Description */}
+          <div className="w-full lg:w-3/5 flex flex-col items-start">
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8 text-left">
+              <AnimatePresence mode="wait">
+                <motion.h2
+                  key={`header-${currentSlide}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8"
+                >
+                  {slides[currentSlide].header}
+                </motion.h2>
+              </AnimatePresence>
+            </h2>
             <AnimatePresence mode="wait">
-              <motion.h2
-                key={`header-${currentSlide}`}
+              <motion.p
+                key={`description-${currentSlide}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8"
+                className="text-white text-sm sm:text-base lg:text-[24px] text-left 
+              font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
+              font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
               >
-                {slides[currentSlide].header}
-              </motion.h2>
+                {slides[currentSlide].description}
+              </motion.p>
             </AnimatePresence>
-          </h2>
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={`description-${currentSlide}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="text-white text-sm sm:text-base lg:text-[24px] text-center lg:text-justify 
-            font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
-            font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
-            >
-              {slides[currentSlide].description}
-            </motion.p>
-          </AnimatePresence>
 
-          <a href={slides[currentSlide].learnMoreLink} className="mt-6 sm:mt-8 lg:mt-10 inline-block w-auto" target="_blank" rel="noopener noreferrer">
-            <h3 className="border-2 border-[#DFAC4F] rounded-xl sm:rounded-2xl px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#DFAC4F] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F]/10 transition-colors">
-              Learn More
-            </h3>
-          </a>
+            <a href={slides[currentSlide].learnMoreLink} className="mt-6 sm:mt-8 lg:mt-10 inline-block w-auto" target="_blank" rel="noopener noreferrer">
+              <h3 className="border-2 border-[#DFAC4F] rounded-xl sm:rounded-2xl px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#DFAC4F] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F]/10 transition-colors">
+                Learn More
+              </h3>
+            </a>
+          </div>
+
+          {/* Right: Switchable Location Tabs */}
+          <div className="w-full lg:w-2/5 flex flex-col gap-4 mt-8 lg:mt-0">
+            {slides[currentSlide].locations && (
+              <>
+                {/* Only show tabs if there are multiple locations */}
+                {Object.keys(slides[currentSlide].locations!).length > 1 && (
+                  <div className="flex gap-4 mb-2 w-full">
+                    {Object.keys(slides[currentSlide].locations!).map((loc) => (
+                      <button
+                        key={loc}
+                        onClick={() => setActiveLocation(loc)}
+                        className={`flex-1 px-4 py-2 rounded-t-lg font-semibold text-lg border-b-2 transition-colors
+                          ${activeLocation === loc
+                            ? 'border-b-4 border-[#DFAC4F] text-white'
+                            : 'border-b-2 border-white/30 text-white'}
+                        `}
+                      >
+                        {loc}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                {/* Location Card */}
+                <div
+                  className="border-l border-r border-white p-6 flex flex-col gap-6 min-w-0 max-h-[700px] overflow-y-auto"
+                  style={{ background: "transparent", scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                  <style>{`
+                    .hide-scrollbar::-webkit-scrollbar { display: none; }
+                  `}</style>
+                  {/* If only one location, use that directly */}
+                  {(() => {
+                    const locationKey = Object.keys(slides[currentSlide].locations!).length === 1 
+                      ? Object.keys(slides[currentSlide].locations!)[0]
+                      : activeLocation;
+                    
+                    if (!locationKey) return null;
+
+                    return (
+                      <>
+                        {/* Sales */}
+                        <div className="hide-scrollbar">
+                          {slides[currentSlide].locations![locationKey].sales.map((sale, idx) => (
+                            <div key={idx} className="mb-6">
+                              <div className="text-white font-bold text-xl mb-2">Sales {slides[currentSlide].locations![locationKey].sales.length > 1 ? `#${idx + 1}` : ''}:</div>
+                              <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                                {sale.address}<br />
+                                <span className="inline-block mt-2">📞 {sale.phone}</span><br />
+                                <span className="inline-block">✉️ {sale.email}</span>
+                              </div>
+                              <div className="rounded-lg overflow-hidden w-full">
+                                <iframe
+                                  title={`Sales Location Map ${idx + 1}`}
+                                  src={sale.map}
+                                  width="100%"
+                                  height="280"
+                                  className="rounded-lg w-full"
+                                  style={{ border: 0 }}
+                                  allowFullScreen={true}
+                                  loading="lazy"
+                                  referrerPolicy="no-referrer-when-downgrade"
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        {/* Service */}
+                        {Array.isArray(slides[currentSlide].locations![locationKey].service) &&
+                          slides[currentSlide].locations![locationKey].service.length > 0 &&
+                          slides[currentSlide].locations![locationKey].service.map((service, idx) => (
+                            <div key={idx} className="hide-scrollbar mb-6">
+                              <div className="text-white font-bold text-xl mb-2">
+                                Service {slides[currentSlide].locations![locationKey].service!.length > 1 ? `#${idx + 1}` : ''}:
+                              </div>
+                              <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                                {service.address}<br />
+                                <span className="inline-block mt-2">📞 {service.phone}</span><br />
+                                <span className="inline-block">✉️ {service.email}</span>
+                              </div>
+                              <div className="rounded-lg overflow-hidden w-full">
+                                <iframe
+                                  title={`Service Location Map ${idx + 1}`}
+                                  src={service.map}
+                                  width="100%"
+                                  height="280"
+                                  className="rounded-lg w-full"
+                                  style={{ border: 0 }}
+                                  allowFullScreen={true}
+                                  loading="lazy"
+                                  referrerPolicy="no-referrer-when-downgrade"
+                                />
+                              </div>
+                            </div>
+                          ))}
+                      </>
+                    );
+                  })()}
+                </div>
+              </>
+            )}
+          </div>
         </div>
 
         <BusinessSectors />
