@@ -34,7 +34,7 @@ function OurMilestone() {
       </div>
 
       {/* Counters Section */}
-      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-12">
+      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-12 font-rocWide">
         {milestones.map((item, index) => (
           <CounterItem key={index} item={item} />
         ))}
