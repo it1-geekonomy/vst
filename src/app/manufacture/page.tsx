@@ -9,6 +9,7 @@ import Trusted1 from '@/app/public/tillers/Trusted1.png'
 import Timeless2 from '@/app/public/tillers/Timeless2.png'
 import Tough3 from '@/app/public/tillers/Tough3.png'
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors"
+import Logo from '@/app/public/logos/Logo'
 
 const ManufacturePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -55,6 +56,11 @@ const ManufacturePage = () => {
   return (
     <div className="xl:pt-12 bg-[linear-gradient(180deg,#02231C_0%,#04473F_50%,#066C5E_100%)]">
       <div className="mx-auto px-0 md:px-12 pb-12 flex flex-col justify-around">
+        {/* Tillers & Tractors Heading */}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal my-8 md:my-12 text-white text-center font-roc ">
+          VST Tillers & Tractors
+        </h1>
+        
         {/* Desktop view - Image Grid Section */}
         <div className="hidden md:flex justify-center items-start space-x-8 mb-16">
           {images.map((image, index) => (
@@ -209,6 +215,11 @@ const ManufacturePage = () => {
           </div>
           <div className="mt-16 md:mt-24">
             <BusinessSectors />
+          </div>
+
+          {/* Added Logo section at the end */}
+          <div className="flex justify-center items-center py-16">
+            <Logo className="w-24 h-36 md:w-32 md:h-48" />
           </div>
         </div>
       </div>
