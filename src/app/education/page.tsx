@@ -3,17 +3,16 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Scurve from '../education/Frame 1973341729.png';
 import img1 from '../public/education/Frame 6.jpg';
-import img2 from '../public/education/Frame 7.jpg';
+import img2 from '../public/education/Image 1.jpg';
 import img3 from '../public/education/Frame 8.jpg';
 import img4 from '../public/education/Frame 9.jpg';
 import img5 from '../public/education/Frame 10.jpg';
-import img6 from '../public/education/Frame11.jpeg';
-import img7 from '../public/education/Frame12.jpeg';
-import { StaticImageData } from 'next/image';
-import EducationLogo from '../public/logos/educationlogo';
-import Logo from '../public/logos/Logo';
-import LocationSection from '../components/LocationSection';
-import BusinessSectors from '@/components/automotiveFranchises/BusinessSectors';
+import img6 from '../public/education/Frame11.jpg';
+import img7 from '../public/education/Frame 12.jpg';
+import { StaticImageData } from 'next/image'; 
+import EducationLogo from '@/app/public/education/educational logo.png';
+import BusinessSectorsUpdated from '@/components/automotiveFranchises/BusinessSectorsUpdated';
+import gif from "@/app/public/education/vst logo gif.gif"
 
 type GalleryImage = {
   id: number;
@@ -28,13 +27,13 @@ export default function EducationPage() {
 
   // Gallery images with varying heights
   const galleryImages: GalleryImage[] = [
-    { id: 1, src: img1, alt: 'Teacher interacting with students', height: '100%' },
-    { id: 2, src: img2, alt: 'Student learning', height: '95%' },
-    { id: 3, src: img3, alt: 'School building', height: '93%' },
-    { id: 4, src: img4, alt: 'Robotics project', height: '94%' },
-    { id: 5, src: img5, alt: 'Students on stairs', height: '97%' },
-     { id: 6, src: img6, alt: 'Students in uniform', height: '100%' },
-     { id: 7, src: img7, alt: 'Students outdoors', height: '88%' },
+    { id: 1, src: img2, alt: 'Student learning', height: '95%' },
+    { id: 2, src: img7, alt: 'Students outdoors', height: '88%' },
+    { id: 3, src: img5, alt: 'Students on stairs', height: '90%' },
+    { id: 4, src: img3, alt: 'School building', height: '88%' },
+    { id: 5, src: img4, alt: 'Robotics project', height: '97%' },
+    { id: 6, src: img1, alt: 'Teacher interacting with students', height: '88%' },
+    { id: 7, src: img6, alt: 'Students in uniform', height: '97%' },
   ];
 
   // Function to navigate to the next image
@@ -48,13 +47,17 @@ export default function EducationPage() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-black text-white relative overflow-hidden">
-      <div className='w-full'>
+    <main className="flex min-h-screen flex-col items-center bg-[#FFAED7] text-black relative overflow-hidden">
+      <div className='w-full'>  
       {/* Hero section with logo */}
       <section className="w-full flex justify-center items-center z-10 relative">
-        <div className="w-52 md:w-72 md:h-52 lg:w-80 xl:w-94 relative">
+        <div className="w-50 h-40 sm:w-60 sm:h-48 md:w-72 md:h-52 lg:w-80 xl:w-94 relative">
           <div className="w-full h-full flex justify-center items-center">
-            <EducationLogo className="w-full h-full" />
+            <Image 
+              src={EducationLogo}
+              alt="Education Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
       </section>
@@ -71,10 +74,10 @@ export default function EducationPage() {
             className="object-cover"
             style={{ 
               objectPosition: 'center',
-              transform: 'scale(1.7)',
+              transform: 'scale(2.2)',
               width: '100%',
               height: '100%',
-              filter: 'hue-rotate(4deg)'
+              filter: 'hue-rotate(5deg)'
             }}
             quality={100}
           />
@@ -101,8 +104,9 @@ export default function EducationPage() {
                     alt={image.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw"
-                    className="object-contain"
+                    className="object-cover object-center"
                     priority
+                    style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent py-2">
@@ -173,7 +177,7 @@ export default function EducationPage() {
         
         {/* Desktop Layout - Expandable strips */}
         <div className="hidden md:flex w-full h-[90%] items-end gap-4 md:gap-8 lg:gap-14 relative z-10">
-          {galleryImages.map((image) => (
+          {galleryImages.map((image, index) => (
             <div 
               key={image.id} 
               className="flex-[0.5] relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out hover:flex-[35] group"
@@ -187,6 +191,7 @@ export default function EducationPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                   className="object-cover object-center"
                   priority
+                  style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
                 />
                 {/* Hover overlay with full image display */}
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-1000 flex items-center justify-center">
@@ -197,8 +202,9 @@ export default function EducationPage() {
                         alt={image.alt}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-fill w-[100%] h-[100%]"
+                        className="object-cover object-center w-[100%] h-[100%]"
                         priority
+                        style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
                       />
                     </div>
                   </div>
@@ -212,24 +218,151 @@ export default function EducationPage() {
       {/* Description section */}
       <section className="w-full px-4 md:px-8 lg:px-24 pb-12 md:pb-16 lg:pb-24 z-10 relative mx-auto">
         <div className="text-center max-w-7xl mx-auto">
-          <p 
-            className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal font-roc"
-            style={{
-              lineHeight: "150%",
-              letterSpacing: "0%",
-            }}
-          >
-            SKEI, Bangalore is a renowned CBSE institution committed to providing a holistic and innovative education. With a focus 
-            on 21st&#8209;century skills, the school&apos;s mission is to empower students with the knowledge and skills needed to excel in a 
-            global context, emphasizing values, leadership, and a passion for lifelong learning.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light" style={{ 
+            fontFamily: 'Roc Grotesk, sans-serif', 
+            fontWeight: 400, 
+            fontSize: '24px', 
+            lineHeight: '40px', 
+            letterSpacing: '0%', 
+            textAlign: 'justify', 
+            verticalAlign: 'middle' 
+          }}>
+            <span style={{ color: '#000', fontWeight: 500 }}>At SKEI, we believe</span> that every child is unique, talented and has the inherent ability to learn. Our educational philosophy emphasises a learner-centric approach wherein we cater to the diverse learning needs of students. Guided by the principles of Rabindranath Tagore and Benjamin Bloom, our school's approach to learning includes differentiated learning, inquiry-based learning, project based learning, collaborative learning and hands-on learning. These approaches, combined with our unique teaching methodologies, help in developing the 21st century skills in students as laid down by NEP 2020. We focus on a deep understanding of our children from their young age. Through this 'whole-child' approach, each child is carefully nurtured and their learning experiences individually personalized which ignites the spark of learning. It inspires them to be aware, be free of conditioned thoughts and most importantly be responsible for themselves, to nature and to society. It ensures our children chase excellence in whichever fields they choose to excel in.<br/><br/>
+            Founded in 1931, SKEI is strategically located in Edward road, off Queens Road in close proximity to Cubbon Park Metro Station and Cantonment Railway Station. Established by the founders of the VST Group, which is now a 110 year old business conglomerate with Premium Automobile Dealerships, Finance, Real Estate, and is a leading manufacturer of Agricultural Machinery, our children are assured of access to education of the highest quality, the best of teachers and state-of-the-art facilities that enables them to thrive as students with a thirst for and the confidence to take on challenges and make a difference in their lives.
+
           </p>
         </div>
       </section>
+
+      <div className="w-full px-4 md:px-8 lg:px-24 mb-12 -mt-10">
+        <button
+          style={{
+            width: 300,
+            height: 50,
+            borderRadius: 5,
+            background: '#FEBF3D',
+            padding: '12px 32px',
+            fontSize: 20,
+            fontWeight: 400,
+            fontFamily: 'Roc Grotesk, sans-serif',
+            color: '#000',
+            letterSpacing: 1,
+            boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
+            transition: 'background 0.2s',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+          className="hover:bg-[#FFD84D] active:scale-95"
+        >
+          Learn More
+        </button>
+      </div>
       </div>
    
-      {/* Our Location section */}
-      <LocationSection />
-      <BusinessSectors/>
+      {/* Our Location section - custom */}
+      <section className="w-full flex flex-col md:flex-row items-center justify-center px-4 md:px-8 lg:px-24 mt-4">
+        <div className="flex flex-col items-center">
+          <h2
+            className="text-[#2B0B1F] -ml-10"
+            style={{
+              fontFamily: 'Roc Grotesk, sans-serif',
+              fontSize: '60px',
+              lineHeight: '80px',
+              letterSpacing: '-2px',
+              marginBottom: '32px',
+            }}
+          >
+            Our Location
+          </h2>
+          <div className="relative w-[180px] h-[160px] md:w-[400px] md:h-[320px] lg:w-[400px] lg:h-[300px]">
+            {/* Map image */}
+            <Image
+              src={require('@/app/public/education/educational location.png')}
+              alt="School Location Map"
+              fill
+              className="object-cover rounded-lg shadow-lg"
+              priority
+            />
+            {/* Location icon */}
+            <a
+              href="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute left-[33.6%] top-[25%] w-6 h-5 md:w-8 md:h-15 cursor-pointer z-20"
+              title="Open in Google Maps"
+            >
+              <Image
+                src={require('@/app/public/education/location icon.png')}
+                alt="Location Icon"
+                fill
+                className="object-contain"
+                priority
+              />
+            </a>
+          </div>
+        </div>
+        {/* Right: Address and Phone Numbers in a row */}
+        <div className="mt-8 md:mt-0 md:ml-20 flex flex-row items-center justify-center space-x-2">
+          {/* Address */}
+          <div className="mr-10 min-w-[220px] mt-25">
+            <p
+              className="text-black"
+              style={{
+                fontFamily: 'Roc Grotesk',
+                fontSize: '28px',
+                lineHeight: '40px',
+                fontWeight: 500,
+              }}
+            >
+              Edward Road,<br />
+              Off Queens Road,<br />
+              Bangalore - 560 001, Karnataka.
+            </p>
+          </div>
+          {/* Phone Numbers */}
+          <div className="flex flex-col space-y-1 mt-20">
+            {[
+              '+91 80 2234 1011',
+              '+91 80 2226 3022',
+              '+91 99807 97527'
+            ].map((phone, idx) => (
+              <a 
+                key={phone} 
+                href={`tel:${phone.replace(/\s+/g, '')}`}
+                className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
+              >
+                {/* Telephone icon - SVG */}
+                <span className="mr-3 flex-shrink-0">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.2 14.85c-.45 0-.89-.07-1.31-.2-.41-.13-.85-.32-1.31-.57-.45-.25-.89-.54-1.31-.87-.42-.33-.8-.67-1.13-1.03-.33-.36-.62-.7-.87-1.13-.25-.42-.44-.86-.57-1.31-.13-.42-.2-.86-.2-1.31 0-.28.09-.51.27-.69l1.13-1.13c.18-.18.41-.27.69-.27.14 0 .27.02.39.07.12.05.23.13.33.23l.77.77c.1.1.17.21.23.33.05.12.07.25.07.39 0 .13-.02.25-.07.37-.05.12-.13.23-.23.33l-.37.37c.18.32.39.62.63.9.24.28.5.54.78.78.28.24.58.45.9.63l.37-.37c.1-.1.21-.17.33-.23.12-.05.24-.07.37-.07.14 0 .27.02.39.07.12.05.23.13.33.23l.77.77c.1.1.17.21.23.33.05.12.07.25.07.39 0 .28-.09.51-.27.69l-1.13 1.13c-.18.18-.41.27-.69.27z" fill="#2B0B1F"/>
+                  </svg>
+                </span>
+                <span
+                  className="text-black"
+                  style={{
+                    fontFamily: 'Roc Grotesk',
+                    fontSize: '22px',
+                    lineHeight: '36px'
+                  }}
+                >
+                  {phone}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+        <div className="-mt-15">
+          <BusinessSectorsUpdated/>
+        </div>
+   <div className="w-full h-[300px] lg:h-[300px] xl:h-[400px] flex justify-center items-center -mt-15">
+                <Image
+                  src={gif}
+                  alt="VST Logo Animation"
+                  className="w-[100%] h-[100%] object-contain"
+                />
+              </div>
     </main>
   );
 }
