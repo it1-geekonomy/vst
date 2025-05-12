@@ -394,7 +394,7 @@ const FranchiseSlider = () => {
               transition={{ duration: 0.5 }}
               className="text-white text-sm sm:text-base lg:text-[24px] text-center lg:text-justify 
               font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
-              font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
+              font-roc"
             >
               {slides[currentSlide].description}
             </motion.p>

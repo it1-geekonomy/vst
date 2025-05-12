@@ -1003,6 +1003,7 @@ const FranchiseSlider = () => {
               </>
             )}
           </div>
+ 
         </div>
 
         <BusinessSectors />

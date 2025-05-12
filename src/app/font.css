@@ -1,7 +1,7 @@
 /* Bold */
 @font-face {
   font-family: 'Roc Grotesk wide';
-  src: url('/Roc-Grotesk/Fontspring-DEMO-rocgroteskwide-bold.otf') format('opentype');
+  src: url('/Roc-Grotesk/Kostic - Roc Grotesk Wide Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 /* Regular */
 @font-face {
   font-family: 'Roc Grotesk wide';
-  src: url('/Roc-Grotesk/Fontspring-DEMO-rocgroteskwide-regular.otf') format('opentype');
+  src: url('/Roc-Grotesk/Kostic - Roc Grotesk Wide.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 /* Thin */
 @font-face {
   font-family: 'Roc Grotesk wide';
-  src: url('/Roc-Grotesk/Fontspring-DEMO-rocgroteskcond-thin.otf') format('opentype');
+  src: url('/Roc-Grotesk/Kostic - Roc Grotesk Wide Thin.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
 }
@@ -25,21 +25,21 @@
 /* Add these additional weights that might be useful */
 @font-face {
   font-family: 'Roc Grotesk wide';
-  src: url('/Roc-Grotesk/Fontspring-DEMO-rocgroteskwide-light.otf') format('opentype');
+  src: url('/Roc-Grotesk/Kostic - Roc Grotesk Wide Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roc Grotesk wide';
-  src: url('/Roc-Grotesk/Fontspring-DEMO-rocgrotesk-medium.otf') format('opentype');
+  src: url('/Roc-Grotesk/Kostic - Roc Grotesk Wide Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roc Grotesk wide';
-  src: url('/Roc-Grotesk/Fontspring-DEMO-rocgroteskwide-black.otf') format('opentype');
+  src: url('/Roc-Grotesk/Kostic - Roc Grotesk Wide Black.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
 }
@@ -47,7 +47,7 @@
 /* Regular */
 @font-face {
   font-family: 'Roc Grotesk';
-  src: url('/Roc-Grotesk/Fontspring-DEMO-rocgrotesk-regular.otf') format('opentype');
+  src: url('/Roc-Grotesk/Kostic - Roc Grotesk Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
