@@ -25,10 +25,10 @@ export default function EducationPage() {
   // State for mobile gallery active image
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   // State for desktop gallery active image
-  const [activeDesktopImage, setActiveDesktopImage] = useState(0);
+  const [activeDesktopImage, setActiveDesktopImage] = useState(-1); // Start with no active image
   // State for resetting the desktop gallery
   const [resetting, setResetting] = useState(false);
-  const [showAllImages, setShowAllImages] = useState(false);
+  const [showAllImages, setShowAllImages] = useState(true); // Start with all images shown
 
   // Gallery images with varying heights
   const galleryImages: GalleryImage[] = [
@@ -53,6 +53,12 @@ export default function EducationPage() {
 
   // Add useEffect for automatic slideshow
   useEffect(() => {
+    // Initial delay before starting animation
+    const startDelay = setTimeout(() => {
+      setShowAllImages(false);
+      setActiveDesktopImage(0);
+    }, 1000);
+
     const interval = setInterval(() => {
       if (showAllImages) {
         setShowAllImages(false);
@@ -69,7 +75,10 @@ export default function EducationPage() {
       });
     }, 3000); // Change image every 3 seconds
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(startDelay);
+    };
   }, [showAllImages]);
 
   // Handle reset state
