@@ -6,6 +6,7 @@ import Image1881 from "@/app/public/images/AboutUs/1881Image.png";
 import Image1920 from "@/app/public/images/AboutUs/1920Image.png";
 import Image1950 from "@/app/public/images/AboutUs/1950Image.png";
 import VideoPlayer from '@/components/VideoPlayer';
+import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 
 function AboutUsPage() {
   const [selectedYear, setSelectedYear] = useState("1920");
@@ -16,7 +17,7 @@ function AboutUsPage() {
   
   const timelineData = [
     {
-      year: "1881",
+      year: "1991",
       image: Image1881,
     },
     {
@@ -44,7 +45,7 @@ function AboutUsPage() {
   }, [isTransitioning]);
 
   const getPosition = (year: string) => {
-    const years = ["1881", "1920", "1950"];
+    const years = ["1991", "1920", "1950"];
     const selectedIndex = years.indexOf(selectedYear);
     const currentIndex = years.indexOf(year);
 
@@ -99,54 +100,23 @@ function AboutUsPage() {
   };
 
   return (
-    <div className="min-h-screen text-white relative" style={{ background: "#000000" }}>
-      {/* Layer 1: Top gradient with blur effect AND fade-in mask */}
+    <div 
+      className="min-h-screen text-white relative bg-cover bg-center bg-no-repeat"
+      style={{ 
+        backgroundImage: `url(${BackgroundImage.src})`,
+      }}
+    >
+      {/* Layer 1: Vignette overlay */}
       <div
-        className="absolute left-0 right-0 w-full" // Positioned below navbar
+        className="absolute inset-0 pointer-events-none"
         style={{
-          top: '4rem', // Starts 64px (h-16) from the top (adjust if needed)
-          height: 'calc(60% - 4rem)', // Extend height slightly to ensure fade is covered
-          background: "linear-gradient(132.98deg, rgba(47, 129, 174, 0.6) 28.43%, rgba(92, 62, 188, 0.6) 110.85%)",
-          pointerEvents: "none",
-          backdropFilter: "blur(720px)",
-          WebkitBackdropFilter: "blur(720px)",
-          opacity: 0.8,
-          mixBlendMode: "screen", // Keep screen blend mode for color interaction
-          // Mask to fade IN from the top edge of *this div*
-          maskImage: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%)", // Fade over 20% of this div's height
-          WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%)",
-          zIndex: 1 // Base layer for top effect
+          background: "radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.6) 100%)",
+          zIndex: 1
         }}
       ></div>
 
-      {/* Layer 2: Combined Vertical Fade (In & Out) + Vignette */}
-      <div
-        className="absolute inset-0 pointer-events-none" // Covers entire page
-        style={{
-          // Combined gradient:
-          // - Fade IN from dark just below navbar
-          // - Transparent middle
-          // - Fade OUT to dark starting around 50%
-          // - Radial gradient for vignette layered on top
-          background: `
-            linear-gradient(to bottom,
-              transparent 0%, /* Transparent at very top */
-              transparent calc(4rem - 1px), /* Stay transparent until navbar bottom */
-              rgba(0,0,0,0.6) calc(4rem + 1px), /* Start fading IN dark overlay */
-              transparent calc(4rem + 20vh), /* Fade to transparent below navbar */
-              transparent 45vh, /* Stay transparent through middle */
-              rgba(0,0,0,0.7) 65vh, /* Start fading OUT to dark */
-              #000000 85vh /* Fully black towards bottom */
-            ),
-            radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.7) 100%) /* Vignette */
-          `,
-          // Multiple backgrounds blend by default (vignette over linear fade)
-          zIndex: 2 // On top of the blur layer, below content
-        }}
-      ></div>
-
-      {/* Layer 3: Content */}
-      <div className="relative z-10 md:pb-5"> {/* Increased top padding */}
+      {/* Layer 2: Content */}
+      <div className="relative z-10 md:pb-5">
         {/* Timeline component */}
         <div className="flex flex-col lg:flex-row w-full  px-4 sm:px-6 md:px-8">
           {/* Timeline Years */}
