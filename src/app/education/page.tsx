@@ -213,10 +213,8 @@ export default function EducationPage() {
       <section className="w-full px-4 md:px-8 lg:px-24 pb-12 md:pb-16 lg:pb-24 z-10 relative mx-auto">
         <div className="text-center max-w-7xl mx-auto">
           <p 
-            className="text-base sm:text-lg md:text-xl lg:text-2xl font-light"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal font-roc"
             style={{
-              fontFamily: "'FONTSPRING DEMO - Roc Grotesk', sans-serif",
-              fontWeight: 350,
               lineHeight: "150%",
               letterSpacing: "0%",
             }}
