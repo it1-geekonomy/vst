@@ -23,73 +23,80 @@ const slides = [
   {
     id: 7,
     image: slide5,
-    // title: "LUXURY REDEFINED",
-    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    title: "LUXURY REDEFINED",
+    subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "NEWS & MEDIA",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: NewsIcon
+    icon: NewsIcon,
+    link: "/dummy-link"
   },
   {
     id: 6,
     image: slide6,
-    // title: "LUXURY REDEFINED",
-    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    title: "LUXURY REDEFINED",
+    subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "CORPORATE PHILANTHROPY",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: CorporateIcon
+    icon: CorporateIcon,
+    link: "/dummy-link"
   },
   {
     id: 5,
     image: slide2,
-    // title: "LUXURY REDEFINED",
-    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    title: "LUXURY REDEFINED",
+    subtitle: "EXPERIENCE THE EXTRAORDINARY",
     label: "EDUCATION",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: EducationIcon
+    icon: EducationIcon,
+    link: "/dummy-link"
   },
   {
     id: 4,
     image: slide4,
-    // title: "AUTOMOTIVE EXCELLENCE",
-    // subtitle: "PREMIUM MOBILITY SOLUTIONS",
+    title: "AUTOMOTIVE EXCELLENCE",
+    subtitle: "PREMIUM MOBILITY SOLUTIONS",
     label: "OE PARTS DISTRIBUTION",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
-    icon: OEPartsIcon
+    icon: OEPartsIcon,
+    link: "/dummy-link"
   },
   {
     id: 3,
     image: slide3,
-    // title: "LUXURY REDEFINED",
-    // subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    title: "MANUFACTURING",
+    subtitle: "VST Tillers Tractors Ltd. is making a significant impact in global markets with innovative, high-quality machinery, driven by a futuristic approach.",
     label: "MANUFACTURING",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
-    icon: ManufacturingIcon
+    icon: ManufacturingIcon,
+    link: "/dummy-link"
   },
   {
     id: 2,
     image: slide2,
-    // title: "AUTOMOTIVE EXCELLENCE",
-    // subtitle: "PREMIUM MOBILITY SOLUTIONS",
+    title: "AUTOMOTIVE EXCELLENCE",
+    subtitle: "PREMIUM MOBILITY SOLUTIONS",
     label: "AUTOMOTIVE FRANCHISE",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
     videoSrc: "/CarVideo.mp4",
-    icon: AutomativeFranchiseIcon
+    icon: AutomativeFranchiseIcon,
+    link: "/dummy-link"
   },
   {
     id: 1,
     image: slide1,
-    // title: "BUILDING TOMORROW",
-    // subtitle: "ON A CENTURY OF TRUST",
+    title: "BUILDING TOMORROW",
+    subtitle: "ON A CENTURY OF TRUST",
     label: "MERCEDES-BENZ",
     color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
     type: 'image',
-    icon: undefined
+    icon: undefined,
+    link: "/dummy-link"
   },
 ];
 
@@ -407,6 +414,30 @@ const Hero = () => {
                     >
                       {slide.label}
                     </span>
+                  </div>
+                </div>
+              )}
+
+              {isActive && (
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="bg-black/70 rounded-lg px-6 sm:px-10 py-10 text-center w-[90%] max-w-[700px] mx-auto">
+                    {slide.title && (
+                      <h2 className="text-4xl font-bold text-white mb-4">
+                        <span className="border-b-4 border-yellow-400 pb-1">{slide.title}</span>
+                      </h2>
+                    )}
+                    {slide.subtitle && (
+                      <p className="text-lg text-white mb-6">{slide.subtitle}</p>
+                    )}
+                    {slide.link && (
+                      <a
+                        href={slide.link}
+                        className="inline-flex items-center text-yellow-400 text-xl font-semibold hover:underline transition"
+                      >
+                        View more
+                        <span className="ml-2">&#8594;</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               )}
