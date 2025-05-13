@@ -532,7 +532,7 @@ const slides: SlideData[] = [
 
     learnMoreLink: "#",
     locations: {
-      India: {
+      sales: {
         sales: [
           {
             address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
@@ -550,7 +550,7 @@ const slides: SlideData[] = [
           }
         ]
       },
-      Pakistan: {
+      service: {
         sales: [
           {
             address: "Karachi Business District, Karachi, Pakistan",
