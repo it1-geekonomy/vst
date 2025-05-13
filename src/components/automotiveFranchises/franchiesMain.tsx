@@ -5,17 +5,17 @@ import Image, { StaticImageData } from "next/image";
 import bg1 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (1).png";
 import bg2 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (2).png";
 import bg3 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 2 (1).png";
-import car2 from "@/app/public/faranchies/carpic/Benz Car 2 1.png";
-import car3 from "@/app/public/faranchies/carpic/land-rover car.png";
-import bg4 from "@/app/public/faranchies/bgpic/4carbg.png";
-import bg5 from "@/app/public/faranchies/bgpic/5carbg.png";
-import bg6 from "@/app/public/faranchies/bgpic/6carbg.png";
-import bg7 from "@/app/public/faranchies/bgpic/7carbg.png";
-import bg8 from "@/app/public/faranchies/bgpic/Honda-bg.png";
-import bg9 from "@/app/public/faranchies/bgpic/volkswagen-bg.png";
-import bg10 from "@/app/public/faranchies/bgpic/byd-bg.png";
+// import car2 from "@/app/public/faranchies/carpic/Benz Car 2 1.png";
+// import car3 from "@/app/public/faranchies/carpic/land-rover car.png";
+// import bg4 from "@/app/public/faranchies/bgpic/4carbg.png";
+// import bg5 from "@/app/public/faranchies/bgpic/5carbg.png";
+// import bg6 from "@/app/public/faranchies/bgpic/6carbg.png";
+// import bg7 from "@/app/public/faranchies/bgpic/7carbg.png";
+// import bg8 from "@/app/public/faranchies/bgpic/Honda-bg.png";
+// import bg9 from "@/app/public/faranchies/bgpic/volkswagen-bg.png";
+// import bg10 from "@/app/public/faranchies/bgpic/byd-bg.png";
 // import car1 from "@/app/public/faranchies/bgpic/car1.png";
- import ferrari from "@/app/public/faranchies/bgpic/ferrari.png";
+//  import ferrari from "@/app/public/faranchies/bgpic/ferrari.png";
 
 
 
@@ -29,6 +29,23 @@ import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
 // import hondabike from "@/app/public/faranchies/carpic/Honda-bike.png";
 // import volkswagen from "@/app/public/faranchies/carpic/volkswagen-car.png";
 // import byd from "@/app/public/faranchies/carpic/byd-car.png";
+ import porsche from "@/app/public/faranchies/newcarpics/porsche4.png";
+ import benzs from "@/app/public/faranchies/newcarpics/benz1.png";
+import jaguar from "@/app/public/faranchies/newcarpics/jaguar2.png";
+import landrover from "@/app/public/faranchies/newcarpics/landrover3.png";
+import maserati from "@/app/public/faranchies/newcarpics/maserati5.png";
+import honda from "@/app/public/faranchies/newcarpics/honda12.png";
+import tata from "@/app/public/faranchies/newcarpics/tata8.png";
+import kia from "@/app/public/faranchies/newcarpics/kia7.png";
+import ducati from "@/app/public/faranchies/newcarpics/ducati6.png";
+ import mahindra from "@/app/public/faranchies/newcarpics/mahindra9.png";
+  import byd from "@/app/public/faranchies/newcarpics/byd11.png";
+   import wagen from "@/app/public/faranchies/newcarpics/wagen10.png";
+
+
+
+
+
 
 import MercedesIcon from "@/app/public/faranchies/MercedesIcon";
 import LandRoverIcon from "@/app/public/faranchies/LandRoverIcon";
@@ -77,14 +94,14 @@ interface SlideData {
 const slides: SlideData[] = [
   {
     id: 1,
-    backgroundImage: bg1,
+    backgroundImage: porsche,
     brand: "porsche",
     bgColor: {
       from: "#780E26",
       to: "rgba(120, 14, 38, 0.4)",
     },
     LogoComponent: PorscheIcon,
-    header: "VST Supercars",
+    header: "VST Supercars - Porsche",
     description:
       "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
     learnMoreLink: "https://www.porsche.com",
@@ -92,78 +109,53 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            address: "VST Supercars Private Limited #22, Sankey Road, Opp, BDA Office Bengaluru  560051. ",
+            phone: "+91 63641 02911",
+            email: "info@porsche-bengaluru.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
           // more sales if needed
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            address: "#2E3, Dyavasandra 1st Phase, Whitefield Road, Mahadevapura Post, Bengaluru 560 048",
+            phone: "6361 02911",
+            email: "info@porsche-bengaluru.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           },
           // more services if needed
         ]
       },
-      "Tamil Nadu": {
-        sales: [
-          {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-          // more sales if needed
-        ],
-        service: [
-          {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-            {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-          // more services if needed
-        ]
-      }
+      
     }
   },
 
   {
     id: 2,
-    backgroundImage: bg2,
+    backgroundImage: benzs,
     brand: "mercedes",
     bgColor: {
       from: "#B897FF",
       to: "#5A6292"
     },
     LogoComponent: MercedesIcon,
-    header: "VST Titanium ",
+    header: "VST Titanium - Mercedes Benz ",
     description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015,with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar inluxury automotive ownership.",
 
     learnMoreLink: "https://www.mercedes-benz.com",
     
-  },
+    },
   {
     id: 3,
-    backgroundImage: bg3,
+    backgroundImage: landrover,
     brand: "landrover",
     bgColor: {
       from: "#DCAB77",
       to: "rgba(220, 171, 119, 0.4)",
     },
     LogoComponent: LandRoverIcon,
-    header: "VST Grandeur",
-    description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service..",
+    header: "VST Grandeur - Land Rover",
+    description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service.",
 
     learnMoreLink: "https://www.landrover.com",
     locations: {
@@ -192,14 +184,14 @@ const slides: SlideData[] = [
   },
   {
     id: 4,
-    backgroundImage: bg4,
+    backgroundImage: maserati,
     brand: "maserati",
     bgColor: {
       from: "#6FBEFF",
       to: "rgba(111, 190, 255, 0.4)",
     },
     LogoComponent: MaseratiIcon,
-    header:"VST Avventura",
+    header:"VST Avventura - Maserati",
 
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
 
@@ -249,14 +241,14 @@ const slides: SlideData[] = [
   },
   {
     id: 5,
-    backgroundImage: bg4,
+    backgroundImage: kia,
     brand: "maserati",
     bgColor: {
       from: "#FDC756",
       to: "rgba(253, 199, 86, 0.4)",
     },
     LogoComponent: KiaIcon,
-    header: "VST Central",
+    header: "VST Central - KIA",
     description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
 
     learnMoreLink: "https://www.kia.com",
@@ -305,15 +297,15 @@ const slides: SlideData[] = [
   },
   {
     id: 6,
-    backgroundImage: bg6,
+    backgroundImage: tata,
     brand: "maserati",
     bgColor: {
       from: "#D6744E",
       to: "rgba(214, 116, 78, 0.4)",
     },
     LogoComponent: TataIcon,
-    header: "VST Motors",
-    description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state..",
+    header: "VST Motors -TATA",
+    description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state.",
 
     learnMoreLink: "https://www.tatamotors.com",
     locations: {
@@ -361,15 +353,15 @@ const slides: SlideData[] = [
   },
   {
     id: 7,
-    backgroundImage: bg7,
+    backgroundImage: mahindra,
     brand: "maserati",
     bgColor: {
       from: "#05F1F2",
       to: "rgba(5, 241, 242, 0.4)",
     },
     LogoComponent: MahindraIcon,
-    header: "India Garage",
-    description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction..",
+    header: "India Garage - Mahindra",
+    description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction.",
     learnMoreLink: "https://www.mahindra.com",
     locations: {
       Bangalore: {
@@ -416,7 +408,64 @@ const slides: SlideData[] = [
   },
   {
     id: 8,
-    backgroundImage: bg8,
+
+    backgroundImage: ducati,
+    brand: "maserati",
+    bgColor: {
+      from: "#E9354C",
+      to: "rgba(233, 53, 76, 0.4)",
+    },
+    LogoComponent: DucatiIcon,
+    header: "VST & Sons - Ducati",
+    description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
+
+    learnMoreLink: "https://www.ducati.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 80-2334 4090, +91 96069 88123",
+            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            phone: "+91 96066 33425",
+            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+        ]
+      },
+      "Tamil Nadu": {
+        sales: [
+          {
+            address: "#199, Anna Salai, Chennai-600 002",
+            phone: "+91 44-6649 8080",
+            email: "info.citysales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+          },
+          // more services if needed
+        ]
+      }
+    }
+  },
+  {
+    id: 9,
+    backgroundImage: honda,
     brand: "honda",
     bgColor: {
       from: "#E9354C",
@@ -424,7 +473,10 @@ const slides: SlideData[] = [
     },
     LogoComponent: HondaLogo,
     header:"City Honda",
-    description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence.",
+
+    description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence. With two centrally located showrooms in Bangalore and workshops across the city and Chikmagalur, City Honda delivers a complete 4S experience - Sales, Service, Spares, and Safety Riding under one roof. Backed by a knowledgeable sales team and expert service technicians, the brand ensures every customer enjoys a smooth and dependable ownership journey. Rooted in trust and powered by performance, City Honda continues to be a preferred destination for two-wheeler enthusiasts.",
+
+
     learnMoreLink: "#",
     locations: {
       Bangalore: {
@@ -438,7 +490,11 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta 
+            
+            
+            
+          Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
@@ -467,15 +523,17 @@ const slides: SlideData[] = [
   },
   {
     id: 9,
-    backgroundImage: bg9,
+    backgroundImage: wagen,
     brand: "volkswagen",
     bgColor: {
       from: "#E9354C",
       to: "rgba(233, 53, 76, 0.4)",
     },
     LogoComponent: VolkswagenLogo,
-    header: "Bangalore Motors",
-    description: "In 2009, the Group brought the best of German engineering to Bangalore's automobile market with the opening of Volkswagen Palace Cross. This is a prestigious, plush sales location on Bangalore's Palace Cross Road that mirrors the excellence and up-to-the-minute technology of the outstanding automobiles it deals in.",
+
+    header: "Bangalore Motors - Volkswagen",
+    description: "In 2009, Volkswagen Palace Cross, part of the VST Group’s longstanding legacy in the Indian automotive space, became a premier destination for automotive excellence in Bengaluru. Located on Palace Cross Road, the showroom offers a refined buying experience, customer-first service, and a deep understanding of what Indian customers seek in a global brand. Bringing the best of German engineering to the city, it showcases the complete Volkswagen lineup, from stylish hatchbacks to robust SUVs in an elegant and welcoming environment. With a focus on trust, transparency, and attention to detail, Volkswagen Palace Cross continues to set benchmarks in customer satisfaction. Blending heritage with modernity, it remains the preferred destination for Volkswagen enthusiasts across the region.",
+
     learnMoreLink: "#",
     locations: {
       India: {
@@ -518,7 +576,7 @@ const slides: SlideData[] = [
   },
   {
     id: 10,
-    backgroundImage: bg10,
+    backgroundImage: byd,
     brand: "BYD",
     bgColor: {
       from: "#E9354C",
@@ -694,6 +752,8 @@ const FranchiseSlider = () => {
             <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
               <h2 className="text-white font-rocWide font-light text-clamp-67 tracking-[0.2em] text-center">
                 Our
+                <br />
+                Automative
                 <br />
                 Franchises
               </h2>
