@@ -9,7 +9,7 @@ import img4 from '../public/education/Frame 9.jpg';
 import img5 from '../public/education/Frame 10.jpg';
 import img6 from '../public/education/Frame11.jpg';
 import img7 from '../public/education/Frame 12.jpg';
-import { StaticImageData } from 'next/image'; 
+import { StaticImageData } from 'next/image';
 import EducationLogo from '@/app/public/education/educational logo.png';
 import BusinessSectorsUpdated from '@/components/automotiveFranchises/BusinessSectorsUpdated';
 import gif from "@/app/public/education/vst logo gif.gif"
@@ -98,234 +98,219 @@ export default function EducationPage() {
 
   return (
     <main className="flex min-h-screen flex-col items-center bg-[#FFAED7] text-black relative overflow-hidden">
-      <div className='w-full'>  
-      {/* Hero section with logo */}
-      <section className="w-full flex justify-center items-center z-10 relative mb-0">
-        <div className="w-40 h-32 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 xl:w-72 relative">
-          <div className="w-full h-full flex justify-center items-center">
-            <Image 
-              src={EducationLogo}
-              alt="Education Logo"
-              className="w-full h-full object-contain"
+      <div className='w-full'>
+        {/* Hero section with logo */}
+        <section className="w-full flex justify-center items-center z-10 relative mb-0">
+          <div className="w-40 h-32 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 xl:w-72 relative">
+            <div className="w-full h-full flex justify-center items-center">
+              <Image
+                src={EducationLogo}
+                alt="Education Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery section with varying height strips */}
+        <section className="w-full px-4 sm:px-6 md:px-8 lg:px-24 h-auto md:h-[400px] lg:h-[450px] xl:h-[500px] mb-2 md:mb-2 lg:mb-2 z-10 relative mx-auto -mt-12">
+          {/* Background image with light orange glow - ONLY in this section */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+            <Image
+              src={Scurve}
+              alt="Background orange glow"
+              fill
+              priority
+              className="object-cover"
+              style={{
+                objectPosition: 'center',
+                transform: 'scale(1.5)',
+                width: '100%',
+                height: '100%',
+                filter: 'hue-rotate(5deg)'
+              }}
+              quality={100}
             />
           </div>
-        </div>
-      </section>
 
-      {/* Gallery section with varying height strips */}
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-24 h-auto md:h-[400px] lg:h-[450px] xl:h-[500px] mb-2 md:mb-2 lg:mb-2 z-10 relative mx-auto -mt-12">
-        {/* Background image with light orange glow - ONLY in this section */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <Image 
-            src={Scurve} 
-            alt="Background orange glow" 
-            fill 
-            priority
-            className="object-cover"
-            style={{ 
-              objectPosition: 'center',
-              transform: 'scale(1.5)',
-              width: '100%',
-              height: '100%',
-              filter: 'hue-rotate(5deg)'
-            }}
-            quality={100}
-          />
-        </div>
-        
-        {/* Improved Mobile Gallery - Card Swipe Animation */}
-        <div className="block md:hidden w-full aspect-[5/3] max-h-[300px] sm:max-h-[400px] relative z-10">
-          {/* Main featured image */}
-          <div className="relative w-full h-full overflow-hidden shadow-xl flex items-center justify-center bg-black/20">
-            {galleryImages.map((image, index) => (
-              <div 
-                key={image.id}
-                className={`absolute inset-0 w-full h-full transition-all duration-500 ease-in-out transform ${
-                  index === activeImageIndex 
-                    ? 'opacity-100 scale-100 translate-x-0' 
-                    : index < activeImageIndex 
-                      ? 'opacity-0 -translate-x-full' 
+          {/* Improved Mobile Gallery - Card Swipe Animation */}
+          <div className="block md:hidden w-full aspect-[5/3] max-h-[300px] sm:max-h-[400px] relative z-10">
+            {/* Main featured image */}
+            <div className="relative w-full h-full overflow-hidden shadow-xl flex items-center justify-center bg-black/20">
+              {galleryImages.map((image, index) => (
+                <div
+                  key={image.id}
+                  className={`absolute inset-0 w-full h-full transition-all duration-500 ease-in-out transform ${index === activeImageIndex
+                    ? 'opacity-100 scale-100 translate-x-0'
+                    : index < activeImageIndex
+                      ? 'opacity-0 -translate-x-full'
                       : 'opacity-0 translate-x-full'
-                }`}
-              >
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image 
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw"
-                    className="object-cover object-center"
-                    priority
-                    style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent py-2">
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Navigation buttons */}
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 z-20">
-            <button 
-              onClick={prevImage}
-              className="bg-black/50 text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70 active:scale-95 transition-all"
-              aria-label="Previous image"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button 
-              onClick={nextImage}
-              className="bg-black/50 text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70 active:scale-95 transition-all"
-              aria-label="Next image"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-          
-          {/* Indicator dots - moved up from bottom */}
-          <div className="absolute inset-x-0 bottom-[30px] flex justify-center space-x-2 z-20">
-            {galleryImages.map((_, index) => (
-              <button 
-                key={index} 
-                onClick={() => setActiveImageIndex(index)}
-                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all ${
-                  index === activeImageIndex ? 'bg-[#FEBF3D] w-3 sm:w-4' : 'bg-white/50'
-                }`}
-                aria-label={`Go to image ${index + 1}`}
-              />
-            ))}
-          </div>
-          
-          {/* Swipe overlay for touch gestures */}
-          <div 
-            className="absolute inset-0 z-10"
-            onTouchStart={(e) => {
-              const touchStartX = e.touches[0].clientX;
-              const handleTouchEnd = (e: TouchEvent) => {
-                const touchEndX = e.changedTouches[0].clientX;
-                const diff = touchStartX - touchEndX;
-                
-                if (diff > 50) {
-                  nextImage();
-                } else if (diff < -50) {
-                  prevImage();
-                }
-                
-                document.removeEventListener('touchend', handleTouchEnd);
-              };
-              
-              document.addEventListener('touchend', handleTouchEnd);
-            }}
-          />
-        </div>
-        
-        {/* Desktop Layout - Accordion Gallery */}
-        <div className="hidden md:flex w-full h-[85%] items-end gap-2 md:gap-3 lg:gap-4 relative z-10">
-          {galleryImages.map((image, index) => (
-            <div 
-              key={image.id} 
-              className={`relative overflow-hidden transition-all duration-1000 ease-in-out ${
-                showAllImages ? 'flex-[3]' : index === activeDesktopImage ? 'flex-[35]' : 'flex-[3]'
-              }`}
-              style={{ 
-                height: showAllImages ? image.height : index === activeDesktopImage ? '86%' : image.height,
-                transition: 'all 1s ease-in-out'
-              }}
-            >
-              <div className="w-full h-full relative">
-                <Image 
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
-                  className="object-cover object-center"
-                  priority
-                  style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
-                />
-                {/* Full image display for active image */}
-                <div className={`absolute inset-0 bg-black transition-opacity duration-1000 flex items-center justify-center ${
-                  showAllImages ? 'opacity-0' : index === activeDesktopImage ? 'opacity-100' : 'opacity-0'
-                }`}>
-                  <div className="w-full h-full relative">
-                    <Image 
+                    }`}
+                >
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <Image
                       src={image.src}
                       alt={image.alt}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw"
                       className="object-cover object-center"
                       priority
                       style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
                     />
                   </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent py-2">
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation buttons */}
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 z-20">
+              <button
+                onClick={prevImage}
+                className="bg-black/50 text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70 active:scale-95 transition-all"
+                aria-label="Previous image"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <button
+                onClick={nextImage}
+                className="bg-black/50 text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70 active:scale-95 transition-all"
+                aria-label="Next image"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Indicator dots - moved up from bottom */}
+            <div className="absolute inset-x-0 bottom-[30px] flex justify-center space-x-2 z-20">
+              {galleryImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveImageIndex(index)}
+                  className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all ${index === activeImageIndex ? 'bg-[#FEBF3D] w-3 sm:w-4' : 'bg-white/50'
+                    }`}
+                  aria-label={`Go to image ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Swipe overlay for touch gestures */}
+            <div
+              className="absolute inset-0 z-10"
+              onTouchStart={(e) => {
+                const touchStartX = e.touches[0].clientX;
+                const handleTouchEnd = (e: TouchEvent) => {
+                  const touchEndX = e.changedTouches[0].clientX;
+                  const diff = touchStartX - touchEndX;
+
+                  if (diff > 50) {
+                    nextImage();
+                  } else if (diff < -50) {
+                    prevImage();
+                  }
+
+                  document.removeEventListener('touchend', handleTouchEnd);
+                };
+
+                document.addEventListener('touchend', handleTouchEnd);
+              }}
+            />
+          </div>
+
+          {/* Desktop Layout - Accordion Gallery */}
+          <div className="hidden md:flex w-full h-[85%] items-end gap-2 md:gap-3 lg:gap-4 relative z-10">
+            {galleryImages.map((image, index) => (
+              <div
+                key={image.id}
+                className={`relative overflow-hidden transition-all duration-1000 ease-in-out ${showAllImages ? 'flex-[3]' : index === activeDesktopImage ? 'flex-[35]' : 'flex-[3]'
+                  }`}
+                style={{
+                  height: showAllImages ? image.height : index === activeDesktopImage ? '86%' : image.height,
+                  transition: 'all 1s ease-in-out'
+                }}
+              >
+                <div className="w-full h-full relative">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                    className="object-cover object-center"
+                    priority
+                    style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
+                  />
+                  {/* Full image display for active image */}
+                  <div className={`absolute inset-0 bg-black transition-opacity duration-1000 flex items-center justify-center ${showAllImages ? 'opacity-0' : index === activeDesktopImage ? 'opacity-100' : 'opacity-0'
+                    }`}>
+                    <div className="w-full h-full relative">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover object-center"
+                        priority
+                        style={index === 0 ? { objectPosition: '80% center' } : { objectPosition: 'center' }}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* Description section */}
-      <section className="w-full px-4 md:px-8 lg:px-24 pb-2 md:pb-2 lg:pb-2 z-10 relative mx-auto">
-        <div className="text-center max-w-5xl mx-auto">
-          <p className="text-sm sm:text-lg md:text-xl lg:text-xl font-normal font-roc" style={{ 
-            fontWeight: 400, 
-            fontSize: 'clamp(14px, 2.9vw, 19.5px)', 
-            lineHeight: '1.6',
-            letterSpacing: '0%', 
-            textAlign: 'justify', 
-            verticalAlign: 'middle',
-            wordSpacing: '0px',
-            whiteSpace: 'pre-wrap',
-            wordBreak: 'normal',
-            hyphens: 'auto'
-          }}>
-            <span style={{ color: '#000', fontWeight: 500 }}>At SKEI, we believe</span> that every child is unique, talented and has the inherent ability to learn. Our educational philosophy emphasises a learner-centric approach wherein we cater to the diverse learning needs of students. Guided by the principles of Rabindranath Tagore and Benjamin Bloom, our school's approach to learning includes differentiated learning, inquiry-based learning, project based learning, collaborative learning and hands-on learning. These approaches, combined with our unique teaching methodologies, help in developing the 21st century skills in students as laid down by NEP 2020. We focus on a deep understanding of our children from their young age. Through this 'whole-child' approach, each child is carefully nurtured and their learning experiences individually personalized which ignites the spark of learning. It inspires them to be aware, be free of conditioned thoughts and most importantly be responsible for themselves, to nature and to society. It ensures our children chase excellence in whichever fields they choose to excel in.{'\n\n'}
-            Founded in 1931, SKEI is strategically located in Edward road, off Queens Road in close proximity to Cubbon Park Metro Station and Cantonment Railway Station. Established by the founders of the VST Group, which is now a 110 year old business conglomerate with Premium Automobile Dealerships, Finance, Real Estate, and is a leading manufacturer of Agricultural Machinery, our children are assured of access to education of the highest quality, the best of teachers and state-of-the-art facilities that enables them to thrive as students with a thirst for and the confidence to take on challenges and make a difference in their lives.
-          </p>
-        </div>
-      </section>
+        {/* Description section */}
+        <section className="w-full px-4 md:px-8 lg:px-32 pb-2 md:pb-2 lg:pb-2 z-10  mx-auto">
+          <div className="text-center mx-auto">
+            <p className="text-clamp-28 font-normal font-roc text-justify whitespace-pre-wrap">
+              At SKEI, we believe that every child is unique, talented and has the inherent ability to learn. Our educational philosophy emphasises a learner-centric approach wherein we cater to the diverse learning needs of students. Guided by the principles of Rabindranath Tagore and Benjamin Bloom, our school's approach to learning includes differentiated learning, inquiry-based learning, project based learning, collaborative learning and hands-on learning. These approaches, combined with our unique teaching methodologies, help in developing the 21st century skills in students as laid down by NEP 2020. We focus on a deep understanding of our children from their young age. Through this 'whole-child' approach, each child is carefully nurtured and their learning experiences individually personalized which ignites the spark of learning. It inspires them to be aware, be free of conditioned thoughts and most importantly be responsible for themselves, to nature and to society. It ensures our children chase excellence in whichever fields they choose to excel in.{'\n\n'}
+              Founded in 1931, SKEI is strategically located in Edward road, off Queens Road in close proximity to Cubbon Park Metro Station and Cantonment Railway Station. Established by the founders of the VST Group, which is now a 110 year old business conglomerate with Premium Automobile Dealerships, Finance, Real Estate, and is a leading manufacturer of Agricultural Machinery, our children are assured of access to education of the highest quality, the best of teachers and state-of-the-art facilities that enables them to thrive as students with a thirst for and the confidence to take on challenges and make a difference in their lives.
+            </p>
+          </div>
+        </section>
 
- <div className="w-full px-4 md:px-8 lg:px-30 mb-12 mt-8">
-        <div
-          style={{
-            width: 300,
-            height: 50,
-            borderRadius: 5,
-            background: '#FEBF3D',
-            padding: '12px 32px',
-            fontSize: 20,
-            fontWeight: 400,
-            fontFamily: 'Roc Grotesk, sans-serif',
-            color: '#000',
-            letterSpacing: 1,
-            boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
-            transition: 'all 0.3s ease',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer'
-          }}
-          className="hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
-        >
-          <a
-            href="https://www.skei.edu.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full h-full flex items-center justify-center text-black no-underline"
+        <div className="w-full px-4 md:px-8 lg:px-30 mb-12 mt-8">
+          <div
+            style={{
+              width: 300,
+              height: 50,
+              borderRadius: 5,
+              background: '#FEBF3D',
+              padding: '12px 32px',
+              fontSize: 20,
+              fontWeight: 400,
+              fontFamily: 'Roc Grotesk, sans-serif',
+              color: '#000',
+              letterSpacing: 1,
+              boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
+              transition: 'all 0.3s ease',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer'
+            }}
+            className="hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
           >
-            Learn More
-          </a>
+            <a
+              href="https://www.skei.edu.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-full flex items-center justify-center text-black no-underline"
+            >
+              Learn More
+            </a>
           </div>
         </div>
       </div>
-      
-   
+
+
       {/* Our Location section - using the new component */}
       <LocationSection
         locationImage="education/educational location.png"
@@ -342,16 +327,16 @@ export default function EducationPage() {
         ]}
         googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
       />
-        <div className="-mt-20">
-          <BusinessSectorsUpdated/>
-        </div>
-   <div className="w-full h-[250px] lg:h-[250px] xl:h-[300px] flex justify-center items-center -mt-50">
-                <Image
-                  src={gif}
-                  alt="VST Logo Animation"
-                  className="w-[100%] h-[100%] object-contain"
-                />
-              </div>
+      <div className="-mt-20">
+        <BusinessSectorsUpdated />
+      </div>
+      <div className="w-full h-[250px] lg:h-[250px] xl:h-[300px] flex justify-center items-center -mt-50">
+        <Image
+          src={gif}
+          alt="VST Logo Animation"
+          className="w-[100%] h-[100%] object-contain"
+        />
+      </div>
     </main>
   );
 }
