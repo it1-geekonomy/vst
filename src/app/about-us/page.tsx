@@ -10,7 +10,7 @@ import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
 
 function AboutUsPage() {
-  const [selectedYear, setSelectedYear] = useState("1920");
+  const [selectedYear, setSelectedYear] = useState("1911");
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [imageOpacity, setImageOpacity] = useState(1);
   const [blurAmount, setBlurAmount] = useState(0);
@@ -18,15 +18,15 @@ function AboutUsPage() {
   
   const timelineData = [
     {
-      year: "1991",
+      year: "1960",
       image: Image1881,
     },
     {
-      year: "1920",
+      year: "1930",
       image: Image1920,
     },
     {
-      year: "1950",
+      year: "1911",
       image: Image1950,
     },
   ];
@@ -46,7 +46,7 @@ function AboutUsPage() {
   }, [isTransitioning]);
 
   const getPosition = (year: string) => {
-    const years = ["1991", "1920", "1950"];
+    const years = ["1960", "1930", "1911"];
     const selectedIndex = years.indexOf(selectedYear);
     const currentIndex = years.indexOf(year);
 
@@ -184,16 +184,16 @@ function AboutUsPage() {
                     scale = 1.25;
                   }
                   
-                  return (
+                   return (
                     <button
                       key={item.year}
                       onClick={() => handleYearClick(item.year)}
-                      className="absolute lg:absolute left-1/2 top-1/2 text-3xl sm:text-4xl lg:text-5xl font-bold"
+                      className={`absolute lg:absolute left-1/2 top-1/2 ${isSelected ? 'text-clamp-96' : 'text-clamp-67'} font-normal font-roc`}
                       style={{
-                        transform: `translate(-50%, -50%) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${scale})`,
+                        transform: `translate(-50%, -50%) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${isSelected ? 1.2 : 1.2})`,
                         opacity: opacity,
-                        color: isSelected ? "#FCD34D" : "#373737",
-                        filter: isSelected ? "none" : "blur(1px)",
+                        color: isSelected ? "rgba(254, 191, 61, 1)" : "rgba(61, 117, 193, 1)",
+                        filter: "none", // <- remove blur entirely
                         transformStyle: "preserve-3d",
                         backfaceVisibility: "hidden",
                         transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"

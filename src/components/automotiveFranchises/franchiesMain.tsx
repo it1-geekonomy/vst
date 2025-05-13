@@ -728,7 +728,7 @@ const FranchiseSlider = () => {
                 />
               </motion.div>
 
-              {/* Single color accent bars - hidden on mobile */}
+              {/* Static blue accent bars - hidden on mobile */}
               <div
                 className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none"
                 style={{ backgroundColor: "#2676A6" }}
@@ -744,7 +744,7 @@ const FranchiseSlider = () => {
           <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
             {/* Title */}
             <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
-              <h2 className="text-white font-rocWide font-light text-clamp-67 tracking-[0.2em] text-center">
+              <h2 className="text-white font-rocWide font-light text-clamp-67  text-start">
                 Our
                 <br />
                 Automative
