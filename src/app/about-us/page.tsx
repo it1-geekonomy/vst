@@ -10,7 +10,7 @@ import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
 
 function AboutUsPage() {
-  const [selectedYear, setSelectedYear] = useState("1920");
+  const [selectedYear, setSelectedYear] = useState("1911");
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [imageOpacity, setImageOpacity] = useState(1);
   const [blurAmount, setBlurAmount] = useState(0);
@@ -18,15 +18,15 @@ function AboutUsPage() {
   
   const timelineData = [
     {
-      year: "1991",
+      year: "1960",
       image: Image1881,
     },
     {
-      year: "1920",
+      year: "1930",
       image: Image1920,
     },
     {
-      year: "1950",
+      year: "1911",
       image: Image1950,
     },
   ];
@@ -46,7 +46,7 @@ function AboutUsPage() {
   }, [isTransitioning]);
 
   const getPosition = (year: string) => {
-    const years = ["1991", "1920", "1950"];
+    const years = ["1960", "1930", "1911"];
     const selectedIndex = years.indexOf(selectedYear);
     const currentIndex = years.indexOf(year);
 
