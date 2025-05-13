@@ -12,7 +12,7 @@ import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
 import Logo from "../public/logos/Logo";
 
 export default function Page() {
-  const gradientColor = "rgba(223, 172, 79, 0.56)";
+  const gradientColor = "rgba(255, 185, 34, 1)";
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
@@ -303,7 +303,7 @@ export default function Page() {
               priority
             />
           </div>
-          <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-[rgba(241,233,146,1.7)] to-transparent"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-[#FFB922] to-transparent"></div>
         </div>
 
         {/* VST AUTO PARTS Title */}
@@ -324,7 +324,7 @@ export default function Page() {
                 return (
                   <div
                     key={index}
-                    className={`carousel-item absolute top-0 left-0 cursor-pointer ${positionClass} ${animationClass}`}
+                    className={`carousel-item absolute top-0 left-0 w-full h-full cursor-pointer ${positionClass} ${animationClass}`}
                     onClick={() => handleImageClick(index)}
                     style={{
                       zIndex: responsiveStyle.zIndex,
@@ -449,7 +449,7 @@ export default function Page() {
           className="absolute inset-0 z-0"
           style={{
             background: `
-                linear-gradient(161.25deg, rgba(241, 233, 146, 1) 50.56%, rgba(241, 233, 146, 0) 107.23%)
+                linear-gradient(161.25deg, rgba(255, 185, 34, 1) 50.56%, rgba(241, 233, 146, 0) 107.23%)
                 `,
           }}
         />
