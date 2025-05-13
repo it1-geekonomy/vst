@@ -490,11 +490,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta 
-            
-            
-            
-          Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta  Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
