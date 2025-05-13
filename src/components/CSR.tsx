@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "./Footer";
 import Initiatives from "./Initiatives";
-import bg from "../app/public/makingdiff/bg.png";
+import bg from "../app/public/makingdiff/orange-bg.png";
 import flag from "../app/public/makingdiff/flag.png";
 import { Poppins } from "next/font/google";
 
@@ -42,9 +42,7 @@ const timelineData = [
       },
       {
         src: "/makingdiff/imagesanime/image2.jpeg",
-        title: "Chennai - Food relief fund",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        title: "Chennai - Flood relief fund",
       },
     ],
   },
@@ -58,9 +56,9 @@ const timelineData = [
       },
       {
         src: "/makingdiff/imagesanime/image4.jpeg",
-        title: "National Association of Blind",
+        title: "National Association for the Blind, Karnataka",
         description:
-          "Druven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
+          "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
       },
     ],
   },
@@ -70,19 +68,25 @@ const timelineData = [
       {
         src: "/makingdiff/imagesanime/image5.jpeg",
         title: "Rotary Orchards Chaitanya Senior",
-        description: "Citizens Home Trust old age home",
+        description: "Citizens Home Trust old age homes",
       },
       {
         src: "/makingdiff/imagesanime/image6.jpeg",
-        title: "SMT. KAMALA BAI EDUCATIONAL INSTITUTION, BANGALORE ",
+        title: "The Deaf Aid Society",
         description:
-          "This institution was the result of Mr. Mudaliar's desire to further the dual causes of education for girls in India and the creation of an educational environment that would be imbued with Indian cultural values. Named after his wife, the institution was founded in 1931. Today, it boasts a large, well-appointed campus of around 8 acres and includes Primary & High School, Pre-Universiy College, and Degree College.",
+          "Helping the hearing impaired children mostly from economically weaker section.",
       },
       {
         src: "/makingdiff/imagesanime/image7.jpeg",
+        title: "SMT. KAMALA BAI EDUCATIONAL INSTITUTION, BANGALORE ",
+        description:
+          "This institution was the result of Mr. Mudaliar's desire to further the dual causes of education for girls in India and the creation of an educational environment that would be imbued with Indian cultural values. Named after his wife, the Institution was founded in 1931. Today, it boasts a large, well-appointed campus of around 8 acres and includes Primary & High School, Pre-University College, and Degree College.",
+      },
+      {
+        src: "/makingdiff/imagesanime/image8.jpeg",
         title: "Ramakrishna Matt- Halasur",
         description:
-          "Religious Trust Ramakrishna Matt- Bangalore religious Trust Ramakrishna Mission-Shivanahalli, religious Trust Ramakrishna Ashrama-Mysore, Religious Trust Ramakrishna Saradashrama-Ponnampet.",
+          "Religious Trust Ramakrishna Matt - Bangalore religious Trust Ramakrishna Mission-Shivanahalli, religious Trust Ramakrishna Ashrama-Mysore, Religious Trust Ramakrishna Saradashrama-Ponnampet",
       },
     ],
   },
@@ -194,11 +198,13 @@ const CSRItem: React.FC<CSRItemProps> = ({
         <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-left">
           {currentImageData.title}
         </h3>
-        <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
-          <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
-            {currentImageData.description}
-          </p>
-        </div>
+        {currentImageData.description && (
+          <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
+            <p className="text-sm sm:text-lg text-gray-200 leading-relaxed text-[#d7d1cd]">
+              {currentImageData.description}
+            </p>
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );
@@ -210,6 +216,9 @@ const CSR = () => {
   const [stepSize, setStepSize] = useState(400);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const maxSteps = timelineData.length;
+  const [currentImageData, setCurrentImageData] = useState<ImageData | null>(
+    null
+  );
 
   // Add image rotation effect
   useEffect(() => {
@@ -237,6 +246,21 @@ const CSR = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // ADD THIS useEffect to keep currentImageData state in sync
+  useEffect(() => {
+    const dataForYear = timelineData[currentIndex]; // currentData is already defined below, can use that
+    if (
+      dataForYear &&
+      dataForYear.images &&
+      dataForYear.images.length > 0 &&
+      currentImageIndex < dataForYear.images.length
+    ) {
+      setCurrentImageData(dataForYear.images[currentImageIndex] as ImageData);
+    } else {
+      setCurrentImageData(null);
+    }
+  }, [currentIndex, currentImageIndex]); // Add timelineData if it can change, though it's usually constant
 
   // Move to the next year
   const handleNextYearClick = () => {
@@ -287,17 +311,17 @@ const CSR = () => {
 
   return (
     <div className={`flex flex-col min-h-screen ${poppins.className}`}>
-      <main className="relative flex-grow overflow-x-hidden bg-[#C77D4B]">
+      <main className="relative flex-grow overflow-x-hidden">
         {/* Background Image */}
-        {/* <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0">
           <Image
             src={bg}
             alt="Background Pattern"
             fill
-            className="object-cover w-full h-full"
+            className="object-fill w-full h-full"
             priority
           />
-        </div> */}
+        </div>
         {/* Content */}
         <motion.div
           className="relative w-full z-10"
@@ -307,10 +331,10 @@ const CSR = () => {
           {/* Hero Section */}
           <section className="relative h-[50vh] sm:h-[60vh] md:h-[80vh] overflow-hidden z-10">
             <div className="relative h-full flex flex-col items-center justify-start text-white px-4 sm:px-6 md:px-8  sm:pt-20 pb-20">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[5.5rem] font-light text-left mb-2 sm:mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[5.5rem] font-light font-roc text-left mb-2 sm:mb-4">
                 Making a Difference
               </h1>
-              <p className="text-sm sm:text-base md:text-[22px] text-center max-w-6xl mx-auto text-gray-200 leading-relaxed text-justify px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 bg-[#C77D4B] rounded-lg mb-16 sm:mb-20 md:mb-24">
+              <p className="text-sm sm:text-base md:text-[22px] text-center max-w-6xl mx-auto text-gray-200 leading-relaxed text-justify px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8rounded-lg mb-16 sm:mb-20 md:mb-24 font-normal font-roc">
                 Rooted in a legacy of responsibility and service, VST Group,
                 through the V.S. Tiruvengadaswamy Mudaliar Memorial Trust, has
                 consistently extended its hand to communities in need. From
@@ -324,7 +348,7 @@ const CSR = () => {
               </p>
             </div>
           </section>
-          <div className="py-14 bg-[#C77D4B]">
+          <div className="py-14">
             <Initiatives />
           </div>
 
@@ -380,7 +404,7 @@ const CSR = () => {
                 </motion.div>
 
                 {/* Year text */}
-                <p className="text-lg sm:text-xl font-medium whitespace-nowrap text-white">
+                <p className="text-lg sm:text-xl font-medium whitespace-nowrap text-white font-poppins font-normal">
                   {currentData.year}
                 </p>
 
@@ -477,20 +501,21 @@ const CSR = () => {
                     layout
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                   >
-                    <h3 className="text-2xl sm:text-4xl font-normal text-[#d7d1cd] text-left">
-                      {
-                        (currentData.images[currentImageIndex] as ImageData)
-                          .title
-                      }
+                    <h3 className="text-2xl sm:text-4xl font-normal font-poppins text-[#d7d1cd] text-left">
+                      {/* Use currentImageData if it's reliably set, or continue direct access */}
+                      {currentImageData
+                        ? currentImageData.title
+                        : (currentData.images[currentImageIndex] as ImageData)
+                            ?.title}
                     </h3>
-                    <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4">
-                      <p className="text-sm sm:text-lg leading-relaxed text-[#d7d1cd]">
-                        {
-                          (currentData.images[currentImageIndex] as ImageData)
-                            .description
-                        }
-                      </p>
-                    </div>
+                    {currentImageData &&
+                      currentImageData.description?.trim() && (
+                        <div className="backdrop-blur-md bg-white/10 rounded-[2rem] p-4 shadow-lg">
+                          <p className="text-sm sm:text-lg leading-relaxed text-[#d7d1cd] font-normal font-roc">
+                            {currentImageData.description}
+                          </p>
+                        </div>
+                      )}
                   </motion.div>
                 </motion.div>
               </motion.div>

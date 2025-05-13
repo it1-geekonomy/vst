@@ -6,11 +6,11 @@ import education1 from "@/app/public/Rectangle 6530.svg";
 import education2 from "@/app/public/Rectangle 6531.svg";
 import education3 from "@/app/public/page-8-vst 1.png";
 import "@/styles/initiatives.css";
-import mainImg from "@/app/public/making-a-difference/frame2.png";
-import eduImg from "@/app/public/making-a-difference/Girl-image.jpeg";
-import sustainImg from "@/app/public/making-a-difference/Bulb-image.jpeg";
-import ruralImg from "@/app/public/making-a-difference/rural-img.jpg";
-import healthImg from "@/app/public/making-a-difference/health-care.jpg";
+import mainImg from "@/app/public/making-a-difference/frame2.jpg";
+import eduImg from "@/app/public/making-a-difference/Girl-image.png";
+import sustainImg from "@/app/public/making-a-difference/Bulb-image.png";
+import ruralImg from "@/app/public/making-a-difference/rural-img.png";
+import healthImg from "@/app/public/making-a-difference/health-care.png";
 
 const defaultImg = mainImg;
 const imagesMap = {
@@ -23,31 +23,31 @@ const imagesMap = {
 const initiativeData = [
   {
     id: "education",
-    title: "Education and Holistic Development",
+    title: "Education",
     color: "blue-500",
     description:
-      "The VST Group is committed to Corporate Social Responsibility through impactful rural development, enhancing infrastructure and promoting sustainable agriculture. We are leading the transition to renewable energy by powering our fuel outlets with solar panels, reducing CO2 emissions by 15% in 2022.",
+      "As part of our Corporate Social Responsibility (CSR) initiatives, we dedicated INR 1.74 crores to the cause of promoting education in the city. By channeling resources into education, we aim to foster a highly educated workforce capable of effectively confronting the challenges that lie ahead.",
   },
   {
     id: "sustainability",
     title: "Sustainability",
     color: "green-400",
     description:
-      "VST Group is committed to sustainability through initiatives aimed at reducing its carbon footprint and promoting renewable energy.",
+      "Our sustainability journey reflects a deep commitment to environmental responsibility—recycling 50% of water, generating 22% of energy from renewable sources, installing 1100 KW of solar capacity, planting over 1,000 trees, recycling 470 MT of waste, and implementing 46 stacks to reduce air pollution—driving meaningful and measurable impact across operations.",
   },
   {
     id: "rural",
     title: "Rural Development",
     color: "yellow-400",
     description:
-      "The VST Group is committed to Corporate Social Responsibility through impactful rural development in underserved communities.",
+      "The VST Group upholds its commitment to Corporate Social Responsibility by driving meaningful rural development, strengthening infrastructure, and supporting sustainable agricultural practices that uplift communities and foster long-term growth.",
   },
   {
     id: "healthcare",
     title: "Healthcare",
     color: "red-400",
     description:
-      "VST Group is dedicated to improving healthcare access in rural communities through mobile clinics and telemedicine initiatives.",
+      "Established in 1948, this facility has been dedicated to offering affordable care to underserved communities. Over the years, it has grown and is now managed by the city of Bangalore. In 1960, a generous land donation helped expand the facility's mission, enabling a nonprofit organization to support over 10,000 individuals annually through rehabilitation and awareness programs across the region.",
   },
 ];
 export default function Initiatives() {
@@ -103,7 +103,7 @@ export default function Initiatives() {
 
   // Desktop View
   const DesktopView = () => (
-    <section className="w-full bg-[#C77D4B] h-screen flex items-center p-6">
+    <section className="w-full h-screen flex items-center p-6">
       <div className="max-w-[1900px] mr-20 w-full h-[110vh]">
         <div className="grid grid-cols-5 h-full">
           {/* Main Initiative */}
@@ -159,28 +159,39 @@ export default function Initiatives() {
                 fill
                 className="object-cover "
               />
-              {/* Top-to-bottom warm gradient overlay */}
-              <div
-                className="absolute inset-0 z-10"
-                style={{
-                  background:
-                    "linear-gradient(180deg, #C17846 40%, #00000000 100%)",
-                }}
-              />
             </div>
             {/* Text content with white gradient and shadow */}
             <div className="h-[calc(100%-15rem)] flex flex-col justify-center p-12 relative z-20">
               <div className="p-6">
-                <h2 className="text-[2.5rem] text-[#fff] mb-6 font-poppins font-semibold">
-                  Our Initiatives
-                </h2>
-                <p className="text-[#fff] text-[17px] leading-relaxed font-poppins font-light text-justify">
-                  At VST Group, our Corporate Social Responsibility (CSR)
-                  initiatives are rooted in a deep sense of purpose and
-                  commitment to creating lasting, positive change. We believe
-                  that our success is intertwined with the well-being of the
-                  communities we serve.
-                </p>
+                {activeSection === null ? (
+                  <>
+                    <h2 className="text-[2.5rem] text-[#fff] mb-6 font-poppins font-semibold">
+                      Our Initiatives
+                    </h2>
+                    <p className="text-[#fff] text-[17px] leading-relaxed font-roc font-normal text-justify">
+                      At VST Group, our Corporate Social Responsibility (CSR)
+                      initiatives are rooted in a deep sense of purpose and
+                      commitment to creating lasting, positive change. We
+                      believe that our success is intertwined with the
+                      well-being of the communities we serve.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <h2 className="text-[2.5rem] text-[#fff] mb-6 font-poppins font-semibold">
+                      {
+                        initiativeData.find((item) => item.id === activeSection)
+                          ?.title
+                      }
+                    </h2>
+                    <p className="text-[#fff] text-[17px] leading-relaxed font-roc font-normal text-justify">
+                      {
+                        initiativeData.find((item) => item.id === activeSection)
+                          ?.description
+                      }
+                    </p>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -192,17 +203,9 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter("education")}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full font-poppins font-semibold">
+              <h3 className="text-3xl text-white text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full font-poppins font-semibold">
                 Education and Holistic Development
               </h3>
-
-              <p className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out text-white text-sm md:text-base text-left font-poppins font-light overflow-hidden pt-10">
-                The VST Group is committed to Corporate Social Responsibility
-                through impactful rural development, enhancing infrastructure
-                and promoting sustainable agriculture. We are leading the
-                transition to renewable energy by powering our fuel outlets with
-                solar panels, reducing CO2 emissions by 15% in 2022.
-              </p>
             </div>
 
             <div
@@ -210,40 +213,27 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter("sustainability")}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white00 font-poppins font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white00 font-poppins font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Sustainability
               </h3>
-              <p className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out text-white text-sm md:text-base text-left font-poppins font-light overflow-hidden pt-10">
-                VST Group is committed to sustainability through initiatives
-                aimed at reducing its carbon footprint and promoting renewable
-                energy.
-              </p>
             </div>
             <div
               className="gallery-item border border-white p-12 flex flex-col items-start justify-center relative group overflow-hidden"
               onMouseEnter={() => handleMouseEnter("rural")}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white400 font-poppins font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white400 font-poppins font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Rural Development
               </h3>
-              <p className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out text-white text-sm md:text-base text-left font-poppins font-light overflow-hidden pt-10">
-                The VST Group is committed to Corporate Social Responsibility
-                through impactful rural development in underserved communities.
-              </p>
             </div>
             <div
               className="gallery-item border border-white p-12 flex flex-col items-start justify-center relative group overflow-hidden"
               onMouseEnter={() => handleMouseEnter("healthcare")}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white font-poppins font-semibold text-left relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white font-poppins font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Healthcare
               </h3>
-              <p className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 ease-in-out text-white text-sm md:text-base text-left font-poppins font-light overflow-hidden pt-10">
-                VST Group is dedicated to improving healthcare access in rural
-                communities through mobile clinics and telemedicine initiatives.
-              </p>
             </div>
           </div>
         </div>
@@ -262,13 +252,15 @@ export default function Initiatives() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center p-6">
+        <div className="absolute inset-0 flex flex-col justify-center p-6">
           <h2 className="text-3xl text-white font-poppins font-semibold mb-2">
             Our Initiatives
           </h2>
           <p className="text-gray-200 text-sm font-poppins font-light">
-            At VST Group, our CSR initiatives are rooted in creating lasting,
-            positive change.
+            At VST Group, our Corporate Social Responsibility (CSR) initiatives
+            are rooted in a deep sense of purpose and commitment to creating
+            lasting, positive change. We believe that our success is intertwined
+            with the well-being of the communities we serve.
           </p>
         </div>
       </div>
@@ -330,7 +322,7 @@ export default function Initiatives() {
   );
 
   return (
-    <section className="w-full bg-black min-h-screen flex items-center">
+    <section className="w-full min-h-screen flex items-center">
       {isMobile ? <MobileView /> : <DesktopView />}
     </section>
   );
