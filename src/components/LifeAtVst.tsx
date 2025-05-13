@@ -7,6 +7,7 @@ import Image3 from "@/app/public/images/LifeAtVst/Image3.jpg"
 
 const LifeAtVst = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
 
   const slides = [
     {
@@ -36,12 +37,14 @@ const LifeAtVst = () => {
   ]
 
   useEffect(() => {
+    if (isHovered) return
+    
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 3000)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [isHovered])
 
   return (
     <div className="relative w-full h-[360px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden pb-10">
@@ -73,23 +76,34 @@ const LifeAtVst = () => {
       `}</style>
 
       {/* Create a flex container to divide the screen into two halves */}
-      <div className="flex flex-col md:flex-row h-568px">
+      <div className="flex flex-col md:flex-row h-568px"
+           onMouseEnter={() => setIsHovered(true)}
+           onMouseLeave={() => setIsHovered(false)}>
         {/* Left half - Image container */}
         <div className="relative w-full md:w-1/2 h-462px">
-          <Image
-            src={slides[currentSlide].image}
-            alt={`Life at VST ${currentSlide + 1}`}
-            layout="fill"
-            objectFit="cover"
-            className="opacity-100"
-          />
-          
-          
+          {slides.map((slide, index) => (
+            <motion.div
+              key={index}
+              className="absolute inset-0 w-full h-full"
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: currentSlide === index ? 1 : 0,
+                zIndex: currentSlide === index ? 1 : 0
+              }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
+              <Image
+                src={slide.image}
+                alt={`Life at VST ${index + 1}`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </motion.div>
+          ))}
         </div>
 
         {/* Right half - Text content */}
-        <div className="relative w-full md:w-1/2 h-full bg-black  px-4 md:px-8">
-          {/* Heading with digits on same line */}
+        <div className="relative w-full md:w-1/2 h-full bg-black px-4 md:px-8">
           {/* Heading with digits on same line */}
           <div className="flex items-center justify-center w-full">
             <div className="flex items-baseline justify-center">
