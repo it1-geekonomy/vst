@@ -214,7 +214,6 @@ export default function NewsMedia() {
       {/*  Section 2 */}
       <section className="bg-[#2E2E2E]">
         <News/>
-        <VideosSection />
         <div className="bg-[#2E2E2E]">
           <ContactUs bgcolour="bg-[#2E2E2E]"/>
           <Footer bgcolour="bg-[#2E2E2E]"/>
