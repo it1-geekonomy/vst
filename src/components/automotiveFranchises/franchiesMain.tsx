@@ -416,62 +416,6 @@ const slides: SlideData[] = [
   },
   {
     id: 8,
-    backgroundImage: bikebg,
-    brand: "maserati",
-    bgColor: {
-      from: "#E9354C",
-      to: "rgba(233, 53, 76, 0.4)",
-    },
-    LogoComponent: DucatiIcon,
-    header: "VST Ducati",
-    description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
-
-    learnMoreLink: "https://www.ducati.com",
-    locations: {
-      Bangalore: {
-        sales: [
-          {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
-          },
-          // more sales if needed
-        ],
-        service: [
-          {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          },
-          // more services if needed
-        ]
-      },
-      "Tamil Nadu": {
-        sales: [
-          {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-          // more sales if needed
-        ],
-        service: [
-          {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-          // more services if needed
-        ]
-      }
-    }
-  },
-  {
-    id: 9,
     backgroundImage: bg8,
     brand: "honda",
     bgColor: {
@@ -481,8 +425,6 @@ const slides: SlideData[] = [
     LogoComponent: HondaLogo,
     header:"City Honda",
     description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence.",
-
-
     learnMoreLink: "#",
     locations: {
       Bangalore: {
@@ -492,8 +434,7 @@ const slides: SlideData[] = [
             phone: "+91 80-2334 4090, +91 96069 88123",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
-          },
-          // more sales if needed
+          }
         ],
         service: [
           {
@@ -501,8 +442,7 @@ const slides: SlideData[] = [
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          },
-          // more services if needed
+          }
         ]
       },
       "Tamil Nadu": {
@@ -512,8 +452,7 @@ const slides: SlideData[] = [
             phone: "+91 44-6649 8080",
             email: "info.citysales@titaniummotors.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-          // more sales if needed
+          }
         ],
         service: [
           {
@@ -521,8 +460,7 @@ const slides: SlideData[] = [
             phone: "+91 44-6649 8181",
             email: "info.chennaisales@titaniummotors.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-          // more services if needed
+          }
         ]
       }
     }
@@ -538,18 +476,16 @@ const slides: SlideData[] = [
     LogoComponent: VolkswagenLogo,
     header: "Bangalore Motors",
     description: "In 2009, the Group brought the best of German engineering to Bangalore's automobile market with the opening of Volkswagen Palace Cross. This is a prestigious, plush sales location on Bangalore's Palace Cross Road that mirrors the excellence and up-to-the-minute technology of the outstanding automobiles it deals in.",
-
     learnMoreLink: "#",
     locations: {
-      Bangalore: {
+      India: {
         sales: [
           {
             address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
             phone: "+91 80-2334 4090, +91 96069 88123",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
-          },
-          // more sales if needed
+          }
         ],
         service: [
           {
@@ -557,28 +493,25 @@ const slides: SlideData[] = [
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          },
-          // more services if needed
+          }
         ]
       },
-      "Tamil Nadu": {
+      Pakistan: {
         sales: [
           {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-          // more sales if needed
+            address: "Karachi Business District, Karachi, Pakistan",
+            phone: "+92 21-1234567",
+            email: "sales.karachi@volkswagen.pk",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Karachi+Business+District,+Karachi&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CKarachi+Business+District,+Karachi"
+          }
         ],
         service: [
           {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-          // more services if needed
+            address: "Industrial Area, Karachi, Pakistan",
+            phone: "+92 21-7654321",
+            email: "service.karachi@volkswagen.pk",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Industrial+Area,+Karachi&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CIndustrial+Area,+Karachi"
+          }
         ]
       }
     }
@@ -594,18 +527,16 @@ const slides: SlideData[] = [
     LogoComponent: BydLogo,
     header: "VST BYD",
     description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD's cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
-
     learnMoreLink: "#",
     locations: {
-      Bangalore: {
+      India: {
         sales: [
           {
             address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
             phone: "+91 80-2334 4090, +91 96069 88123",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
-          },
-          // more sales if needed
+          }
         ],
         service: [
           {
@@ -613,28 +544,25 @@ const slides: SlideData[] = [
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          },
-          // more services if needed
+          }
         ]
       },
-      "Tamil Nadu": {
+      Pakistan: {
         sales: [
           {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-          // more sales if needed
+            address: "Lahore Business Hub, Lahore, Pakistan",
+            phone: "+92 42-9876543",
+            email: "sales.lahore@byd.pk",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Lahore+Business+Hub,+Lahore&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CLahore+Business+Hub,+Lahore"
+          }
         ],
         service: [
           {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-          // more services if needed
+            address: "Lahore Industrial Zone, Lahore, Pakistan",
+            phone: "+92 42-1234567",
+            email: "service.lahore@byd.pk",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Lahore+Industrial+Zone,+Lahore&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CLahore+Industrial+Zone,+Lahore"
+          }
         ]
       }
     }
@@ -663,7 +591,7 @@ const FranchiseSlider = () => {
 
   useEffect(() => {
     const currentSlideData = slides[currentSlide];
-    if (currentSlideData.locations) {
+    if (currentSlideData?.locations) {
       const locationKeys = Object.keys(currentSlideData.locations);
       if (locationKeys.length > 0) {
         setActiveLocation(locationKeys[0]);
@@ -862,7 +790,7 @@ const FranchiseSlider = () => {
           </div>
         </div>
 
-        {/* Description section - moved back outside but made dynamic */}
+        {/* Description section */}
         <div className="w-full flex flex-col lg:flex-row py-10 px-4 sm:px-6 lg:px-24 items-start gap-8">
           {/* Left: Description */}
           <div className="w-full lg:w-3/5 flex flex-col items-start">
@@ -904,14 +832,14 @@ const FranchiseSlider = () => {
 
           {/* Right: Switchable Location Tabs */}
           <div className="w-full lg:w-2/5 flex flex-col gap-4 mt-8 lg:mt-0">
-            {slides[currentSlide].locations && (
+            {slides[currentSlide]?.locations && (
               <>
                 {/* Only show tabs if there are multiple locations */}
-                {Object.keys(slides[currentSlide].locations!).length > 1 && (
+                {Object.keys(slides[currentSlide].locations).length > 1 && (
                   <div className="flex gap-4 mb-2 w-full">
-                    {Object.keys(slides[currentSlide].locations!).map((loc) => (
+                    {Object.keys(slides[currentSlide].locations).map((loc) => (
                       <button
-                        key={loc}
+                        key={`${currentSlide}-${loc}`}
                         onClick={() => setActiveLocation(loc)}
                         className={`flex-1 px-4 py-2 rounded-t-lg font-semibold text-lg border-b-2 transition-colors
                           ${activeLocation === loc
@@ -934,68 +862,72 @@ const FranchiseSlider = () => {
                   `}</style>
                   {/* If only one location, use that directly */}
                   {(() => {
-                    const locationKey = Object.keys(slides[currentSlide].locations!).length === 1 
-                      ? Object.keys(slides[currentSlide].locations!)[0]
+                    const locationKey = Object.keys(slides[currentSlide].locations).length === 1 
+                      ? Object.keys(slides[currentSlide].locations)[0]
                       : activeLocation;
                     
-                    if (!locationKey) return null;
+                    if (!locationKey || !slides[currentSlide].locations[locationKey]) return null;
 
+                    const location = slides[currentSlide].locations[locationKey];
+                    
                     return (
                       <>
                         {/* Sales */}
-                        <div className="hide-scrollbar">
-                          {slides[currentSlide].locations![locationKey].sales.map((sale, idx) => (
-                            <div key={idx} className="mb-6">
-                              <div className="text-white font-bold text-xl mb-2">Sales {slides[currentSlide].locations![locationKey].sales.length > 1 ? `#${idx + 1}` : ''}:</div>
-                              <div className="text-white text-lg leading-relaxed mb-4 font-medium">
-                                {sale.address}<br />
-                                <span className="inline-block mt-2">📞 {sale.phone}</span><br />
-                                <span className="inline-block">✉️ {sale.email}</span>
+                        {location.sales && location.sales.length > 0 && (
+                          <div className="hide-scrollbar">
+                            {location.sales.map((sale, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-sales-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl mb-2">
+                                  Sales {location.sales.length > 1 ? `#${idx + 1}` : ''}:
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                                  {sale.address}<br />
+                                  <span className="inline-block mt-2">📞 {sale.phone}</span><br />
+                                  <span className="inline-block">✉️ {sale.email}</span>
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales Location Map ${idx + 1}`}
+                                    src={sale.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
                               </div>
-                              <div className="rounded-lg overflow-hidden w-full">
-                                <iframe
-                                  title={`Sales Location Map ${idx + 1}`}
-                                  src={sale.map}
-                                  width="100%"
-                                  height="280"
-                                  className="rounded-lg w-full"
-                                  style={{ border: 0 }}
-                                  allowFullScreen={true}
-                                  loading="lazy"
-                                  referrerPolicy="no-referrer-when-downgrade"
-                                />
-                              </div>
-                            </div>
-                          ))}
-                        </div>
+                            ))}
+                          </div>
+                        )}
                         {/* Service */}
-                        {Array.isArray(slides[currentSlide].locations![locationKey].service) &&
-                          slides[currentSlide].locations![locationKey].service.length > 0 &&
-                          slides[currentSlide].locations![locationKey].service.map((service, idx) => (
-                            <div key={idx} className="hide-scrollbar mb-6">
-                              <div className="text-white font-bold text-xl mb-2">
-                                Service {slides[currentSlide].locations![locationKey].service!.length > 1 ? `#${idx + 1}` : ''}:
-                              </div>
-                              <div className="text-white text-lg leading-relaxed mb-4 font-medium">
-                                {service.address}<br />
-                                <span className="inline-block mt-2">📞 {service.phone}</span><br />
-                                <span className="inline-block">✉️ {service.email}</span>
-                              </div>
-                              <div className="rounded-lg overflow-hidden w-full">
-                                <iframe
-                                  title={`Service Location Map ${idx + 1}`}
-                                  src={service.map}
-                                  width="100%"
-                                  height="280"
-                                  className="rounded-lg w-full"
-                                  style={{ border: 0 }}
-                                  allowFullScreen={true}
-                                  loading="lazy"
-                                  referrerPolicy="no-referrer-when-downgrade"
-                                />
-                              </div>
+                        {location.service && location.service.length > 0 && location.service.map((service, idx) => (
+                          <div key={`${currentSlide}-${locationKey}-service-${idx}`} className="hide-scrollbar mb-6">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Service {Array.isArray(location.service) && location.service.length > 1 ? `#${idx + 1}` : ''}:
                             </div>
-                          ))}
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                              {service.address}<br />
+                              <span className="inline-block mt-2">📞 {service.phone}</span><br />
+                              <span className="inline-block">✉️ {service.email}</span>
+                            </div>
+                            <div className="rounded-lg overflow-hidden w-full">
+                              <iframe
+                                title={`Service Location Map ${idx + 1}`}
+                                src={service.map}
+                                width="100%"
+                                height="280"
+                                className="rounded-lg w-full"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                              />
+                            </div>
+                          </div>
+                        ))}
                       </>
                     );
                   })()}
@@ -1003,7 +935,6 @@ const FranchiseSlider = () => {
               </>
             )}
           </div>
- 
         </div>
 
         <BusinessSectors />
