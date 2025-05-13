@@ -401,71 +401,64 @@ const Hero = () => {
                       }}
                       priority={index === 0}
                     />
-                    {/* Add background overlay for slide6 */}
+                    {/* Background overlays for both active and inactive states */}
                     {slide.id === 6 && (
                       <div 
                         className="absolute inset-0 transition-all duration-1500 ease-in-out"
                         style={{
-                          backgroundColor: isActive ? '#F1B892CC' : '#DB5B0599',
-                          opacity: isActive ? 0.8 : 0.7,
+                          background: isActive 
+                            ? '#F1B892CC'
+                            : 'linear-gradient(270deg, rgba(219, 91, 5, 0.85) 0%, rgba(219, 91, 5, 0.65) 100%)',
+                          opacity: isActive ? 0.8 : 0.9,
                           transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
                         }}
                       />
                     )}
-                    {/* Add background overlay for slide5 (Image 5) */}
                     {slide.id === 5 && (
                       <div 
                         className="absolute inset-0 transition-all duration-1500 ease-in-out"
                         style={{
                           background: isActive 
                             ? '#F1A0C1BF'
-                            : 'linear-gradient(270.95deg, rgba(244, 122, 172, 0) 0%, rgba(250, 113, 169, 0.75) 100%)',
-                          backgroundColor: isActive ? '#F1A0C1BF' : 'transparent',
+                            : 'linear-gradient(270deg, rgba(244, 122, 172, 0.85) 0%, rgba(250, 113, 169, 0.65) 100%)',
+                          opacity: isActive ? 0.8 : 0.9,
                           transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
                         }}
                       />
                     )}
-                    {/* Add background overlay for slide4 (Image 4) */}
                     {slide.id === 4 && (
                       <div 
                         className="absolute inset-0 transition-all duration-1500 ease-in-out"
                         style={{
                           background: isActive 
                             ? '#F1E992BF'
-                            : 'rgba(255, 185, 34, 0.85)',
-                          backgroundColor: isActive ? '#F1E992BF' : 'rgba(255, 185, 34, 0.85)',
-                          opacity: isActive ? 0.75 : 1,
+                            : 'linear-gradient(270deg, rgba(255, 185, 34, 0.85) 0%, rgba(255, 185, 34, 0.65) 100%)',
+                          opacity: isActive ? 0.75 : 0.9,
                           transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
                         }}
                       />
                     )}
-                    {/* Add background overlay for slide3 (Image 3) */}
                     {slide.id === 3 && (
                       <div 
                         className="absolute inset-0 transition-all duration-1500 ease-in-out"
                         style={{
                           background: isActive 
                             ? '#83FFE599'
-                            : 'linear-gradient(270deg, rgba(81, 156, 141, 0) 84.98%, rgba(40, 120, 100, 0.9) 100%)',
-                          backgroundColor: isActive ? '#83FFE599' : 'transparent',
-                          opacity: isActive ? 0.6 : 1,
+                            : 'linear-gradient(270deg, rgba(81, 156, 141, 0.85) 0%, rgba(40, 120, 100, 0.65) 100%)',
+                          opacity: isActive ? 0.6 : 0.9,
                           transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
                         }}
                       />
                     )}
-                    {/* Add background overlay for slide2 (AUTOMOTIVE FRANCHISE) */}
-                    {slide.id === 2 && !isActive && (
+                    {slide.id === 2 && (
                       <div 
-                        className="absolute inset-0 z-10"
+                        className="absolute inset-0 transition-all duration-1500 ease-in-out"
                         style={{
-                          background: '#F47AAC',
-                          backgroundColor: '#F47AAC',
-                          position: 'fixed',
-                          inset: 0,
-                          width: '100vw',
-                          height: '100vh',
-                          zIndex: 10,
-                          opacity: 1
+                          background: isActive 
+                            ? 'transparent'
+                            : 'linear-gradient(270deg, rgba(111, 190, 255, 0.85) 0%, rgba(65, 148, 216, 0.65) 100%)',
+                          opacity: isActive ? 1 : 0.9,
+                          transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
                         }}
                       />
                     )}
@@ -477,9 +470,7 @@ const Hero = () => {
               {!isActive && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-110"
                      style={{ 
-                       background: slide.label === "Automotive Franchise" 
-                         ? "linear-gradient(270deg, rgba(111, 190, 255, 0.6) 91.82%, rgba(65, 148, 216, 0.6) 100%)"
-                         : "linear-gradient(270deg, rgba(81, 156, 141, 0) 64.98%, rgba(3, 3, 3, 0.65) 110%)" 
+                       background: "linear-gradient(270deg, rgba(0, 0, 0, 0) 54.98%, rgba(3, 3, 3, 0.65) 110%)"
                      }}>
                   
                   {/* Flex container with fixed width for consistent alignment */}
@@ -490,15 +481,17 @@ const Hero = () => {
                         {React.createElement(slide.icon, {
                           width: 20,
                           height: 20,
-                          className: "opacity-90"
+                          className: "opacity-100"
                         })}
                       </div>
                     )}
                     {!slide.icon && <div className="w-6 mr-3"></div>}
                     <span 
+
                       className="text-white font-poppins font-semibold whitespace-nowrap text-clamp-36"
                       style={{
-                        transition: "opacity 900ms ease-in-out"
+                        transition: "opacity 900ms ease-in-out",
+                        textShadow: "0px 2px 4px rgba(0, 0, 0, 0.3)"
                       }}
                     >
                       {slide.label}
