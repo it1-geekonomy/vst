@@ -25,7 +25,7 @@ const slides = [
     image: slide5,
     title: "LUXURY REDEFINED",
     subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "NEWS & MEDIA",
+    label: "News & Media",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: NewsIcon,
@@ -36,7 +36,7 @@ const slides = [
     image: slide6,
     title: "LUXURY REDEFINED",
     subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "CORPORATE PHILANTHROPY",
+    label: "Corporate Philanthropy",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: CorporateIcon,
@@ -47,7 +47,7 @@ const slides = [
     image: slide2,
     title: "LUXURY REDEFINED",
     subtitle: "EXPERIENCE THE EXTRAORDINARY",
-    label: "EDUCATION",
+    label: "Education",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: EducationIcon,
@@ -58,7 +58,7 @@ const slides = [
     image: slide4,
     title: "AUTOMOTIVE EXCELLENCE",
     subtitle: "PREMIUM MOBILITY SOLUTIONS",
-    label: "OE PARTS DISTRIBUTION",
+    label: "OE Parts Distribution",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
     icon: OEPartsIcon,
@@ -69,7 +69,7 @@ const slides = [
     image: slide3,
     title: "MANUFACTURING",
     subtitle: "VST Tillers Tractors Ltd. is making a significant impact in global markets with innovative, high-quality machinery, driven by a futuristic approach.",
-    label: "MANUFACTURING",
+    label: "Manufacturing",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: ManufacturingIcon,
@@ -80,7 +80,7 @@ const slides = [
     image: slide2,
     title: "AUTOMOTIVE EXCELLENCE",
     subtitle: "PREMIUM MOBILITY SOLUTIONS",
-    label: "AUTOMOTIVE FRANCHISE",
+    label: "Automotive Franchise",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
     videoSrc: "/CarVideo.mp4",
@@ -407,7 +407,7 @@ const Hero = () => {
                     {/* Always keep space even if no icon */}
                     {!slide.icon && <div className="w-8 mr-6"></div>}
                     <span 
-                      className="text-white font-bold whitespace-nowrap text-lg sm:text-xl md:text-2xl lg:text-3xl"
+                      className="text-white font-poppins font-semibold whitespace-nowrap text-clamp-36"
                       style={{
                         transition: "opacity 900ms ease-in-out"
                       }}
@@ -423,11 +423,11 @@ const Hero = () => {
                   <div className="bg-black/70 rounded-lg px-6 sm:px-10 py-10 text-center w-[90%] max-w-[700px] mx-auto">
                     {slide.title && (
                       <h2 className="text-4xl font-bold text-white mb-4">
-                        <span className="border-b-4 border-yellow-400 pb-1">{slide.title}</span>
+                        <span className="border-b-4 border-yellow-400 pb-1 font-poppins">{slide.title}</span>
                       </h2>
                     )}
                     {slide.subtitle && (
-                      <p className="text-lg text-white mb-6">{slide.subtitle}</p>
+                      <p className="text-lg text-white mb-6 font-poppins">{slide.subtitle}</p>
                     )}
                     {slide.link && (
                       <a
