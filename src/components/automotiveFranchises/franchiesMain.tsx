@@ -44,9 +44,6 @@ import ducati from "@/app/public/faranchies/newcarpics/ducati6.png";
 
 
 
-
-
-
 import MercedesIcon from "@/app/public/faranchies/MercedesIcon";
 import LandRoverIcon from "@/app/public/faranchies/LandRoverIcon";
 import PorscheIcon from "@/app/public/faranchies/PorscheIcon";
@@ -143,10 +140,79 @@ const slides: SlideData[] = [
     description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015,with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar inluxury automotive ownership.",
 
     learnMoreLink: "https://www.mercedes-benz.com",
-    
-    },
-  {
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "1. #199, Anna Salai, Chennai-600 002. ",
+            phone: "+91 63641 02911",
+            email: "info@porsche-bengaluru.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          {
+            address: "2. #148, K, Old Mahabalipuram Road,Okkiyam, Thoraipakkam, Chennai-600 096",
+            phone: "+91 44-6649 8181",
+            email: "info.chennaisales@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        service: [
+          {
+            address: "Plot #115, Industrial Estate(EEII),Perungudi, Chennai-600 096.",
+            phone: "+91 44-4610 8282",
+            email: "info.service@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+          
+        ],
+     },
+   }
+ },
+
+    {
+      //jaguar added.. icon not yet added
     id: 3,
+    backgroundImage: jaguar,
+    brand: "jaguar",
+    bgColor: {
+      from: "#780E26",
+      to: "rgba(120, 14, 38, 0.4)",
+    },
+    LogoComponent:PorscheIcon,
+    header: "VST Grandeur - Jaguar",
+    description:
+      "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it’s highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalised service.",
+    learnMoreLink: "https://www.porsche.com",
+    locations: {
+      Chennai: {
+        sales: [
+          {
+            address: "Old #182, New #237,VST Emerald Anna Salai, Chennai 600006.",
+            phone: "+91 96000 53000",
+            email: " info@vstgrandeur.com",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+          // more sales if needed
+        ],
+        //here sales & services
+        service: [
+          {
+            address: "#2E3, Dyavasandra 1st Phase, Whitefield Road, Mahadevapura Post, Bengaluru 560 048",
+            phone: "6361 02911",
+            email: "info@porsche-bengaluru.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          // more services if needed
+          // here Coimbatore - Sales & services
+        ]
+      },
+      
+    }
+  },
+  {
+    id: 4,
     backgroundImage: landrover,
     brand: "landrover",
     bgColor: {
@@ -159,16 +225,16 @@ const slides: SlideData[] = [
 
     learnMoreLink: "https://www.landrover.com",
     locations: {
-      Bangalore: {
+      Chennai: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            address: "Old #182, New #237,VST Emerald Anna Salai,Chennai 600006",
+            phone: "+91 96000 53000",
+            email: " info@vstgrandeur.com",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
           // more sales if needed
-        ],
+        ],//Sales and Services  here
         service: [
           {
             address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
@@ -177,13 +243,14 @@ const slides: SlideData[] = [
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           },
           // more services if needed
+          // here Coimbatore - Sales & services
         ]
       },
       
     }
   },
   {
-    id: 4,
+    id: 5,
     backgroundImage: maserati,
     brand: "maserati",
     bgColor: {
@@ -200,47 +267,27 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
+            phone: "+91 99024 88899",
+            email: " info@vst-maserati.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
           // more sales if needed
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
+            phone: " +91 99024 88899",
+            email: " info@vstavventura.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           },
           // more services if needed
         ]
       },
-      "Tamil Nadu": {
-        sales: [
-          {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-          // more sales if needed
-        ],
-        service: [
-          {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-          // more services if needed
-        ]
-      }
     }
   },
   {
-    id: 5,
+    id: 6,
     backgroundImage: kia,
     brand: "maserati",
     bgColor: {
@@ -276,27 +323,49 @@ const slides: SlideData[] = [
       "Tamil Nadu": {
         sales: [
           {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
+            address: "Old #182, New #237, Anna Salai, Chennai 600 006",
+            phone: "+91 90872 11113",
+            email: " salesmanagerch@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+
+         {
+            address: "#204/187, GR Plaza, North Usman Road, T. Nagar, Chennai 600 017",
+            phone: "+91 99400 92010",
+            email: "salesmanagertn@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+
+          {
+            address: "#155, Swamith Ashithanar Nagar, GNT Road, Thandalkalani, Pulicat, Chennai 600 066",
+            phone: " +91 73050 32085",
+            email: " salesmanagerthk@vstcentral-kia.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+          },
+
+         {
+            address: "#548/6, Kattukottai, Nattamangalam, Salem 636 010",
+            phone: "+91 93848 77744",
+            email: "salesmanagerslm@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
           },
           // more sales if needed
         ],
         service: [
           {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
+            address: " #57, Arcot Road, Virugavayapuram, Bharani Colony, Saligramam, Chennai 600 093",
+            phone: " +91 90872 11113 , +91 89255 03894",
+            email: "servicemanagerch@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
           },
           // more services if needed
         ]
+        //Sales, Services here
       }
     }
   },
   {
-    id: 6,
+    id: 7,
     backgroundImage: tata,
     brand: "maserati",
     bgColor: {
@@ -312,9 +381,9 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            address: "#1049, Poonamallee High Road, Arumbakkam, Chennai 600 106",
+            phone: " +91 73389 77522 , +91 93840 58820",
+            email: "ace.ambkm@vstmotors.com",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
           // more sales if needed
@@ -352,7 +421,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 7,
+    id: 8,
     backgroundImage: mahindra,
     brand: "maserati",
     bgColor: {
@@ -367,8 +436,8 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
+            address: "Head Office, #1, VST Vistas, Palace Cross Rd, Chakravarthy Layout, Jayamahal, Bengaluru 560 020",
+            phone: " +91 88844 98957",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
@@ -407,7 +476,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 8,
+    id: 9,
 
     backgroundImage: ducati,
     brand: "maserati",
@@ -424,47 +493,28 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
+            phone: "+91 72598 36655",
+            email: "info@vstducati.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
           // more sales if needed
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            address: "#459, Dhanalakshmi Building, Cottenpet, Bengaluru 560 053",
+            phone: "+91 72598 36655",
+            email: "info@vstducati.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           },
           // more services if needed
         ]
       },
-      "Tamil Nadu": {
-        sales: [
-          {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-          // more sales if needed
-        ],
-        service: [
-          {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-          // more services if needed
-        ]
-      }
+      
     }
   },
   {
-    id: 9,
+    id: 10,
     backgroundImage: honda,
     brand: "honda",
     bgColor: {
@@ -475,16 +525,28 @@ const slides: SlideData[] = [
     header:"City Honda",
 
     description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence. With two centrally located showrooms in Bangalore and workshops across the city and Chikmagalur, City Honda delivers a complete 4S experience - Sales, Service, Spares, and Safety Riding under one roof. Backed by a knowledgeable sales team and expert service technicians, the brand ensures every customer enjoys a smooth and dependable ownership journey. Rooted in trust and powered by performance, City Honda continues to be a preferred destination for two-wheeler enthusiasts.",
-
-
     learnMoreLink: "#",
     locations: {
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            address: "1.  #6, St. John's Road, Ulsoor, Bengaluru 560 042",
+            phone: "+91 80 2559 1999, +91 94498 07080",
+            email: "sales.ho@cityhonda.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+
+          {
+            address: "2. #202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru 560 043",
+            phone: "+91 80 2542 2810, +91 80 2542 2811 ,+91 94498 07080",
+            email: "sales.hrbr@cityhonda.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
+
+           {
+            address: "3. #143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru 560 043",
+            phone: "+91 80 4333 3330, +91 88844 34200",
+            email: "sales.lbg@cityhonda.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           }
         ],
@@ -497,28 +559,10 @@ const slides: SlideData[] = [
           }
         ]
       },
-      "Tamil Nadu": {
-        sales: [
-          {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          }
-        ],
-        service: [
-          {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          }
-        ]
-      }
-    }
+   }
   },
   {
-    id: 9,
+    id: 11,
     backgroundImage: wagen,
     brand: "volkswagen",
     bgColor: {
@@ -535,20 +579,20 @@ const slides: SlideData[] = [
       sales: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            address: "VW Palace Cross #1, Palace Cross Road, Bengaluru 560 020",
+            phone: "+91 96866 01249",
+            email: "crhead@vw-bangaloremotors.co.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           }
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            address: "VW Rajajinagar, #1/1 Kodi Street, 4th Main Rajajinagar, Next to Venus Int School, Bengaluru 560 010",
+            phone: "+91 96866 01249",
+            email: "crhead@vw-bangaloremotors.co.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           }
-        ]
+        ],
       },
       service: {
         sales: [
@@ -571,7 +615,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 10,
+    id: 12,
     backgroundImage: byd,
     brand: "BYD",
     bgColor: {
@@ -586,12 +630,20 @@ const slides: SlideData[] = [
       India: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
-            email: "salesmanagerpcr.blr@vstcentral-kia.in",
+            address: "#8, KSCMF Building, Cunningham Road Bengaluru 560 058",
+            phone: "+91 96060 74777",
+            email: "info@vstbyd.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
-          }
+          },
+
+          {
+            address: "GKS Tower #40 & 41, sy:33, Hosur Main Road, Hongasandra Metro Rail Stn, Bommanahalli, Bengaluru 560 058",
+            phone: "+91 96060 74777",
+            email: "info@vstbyd.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+          },
         ],
+        //Sales here
         service: [
           {
             address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
@@ -601,26 +653,10 @@ const slides: SlideData[] = [
           }
         ]
       },
-      Pakistan: {
-        sales: [
-          {
-            address: "Lahore Business Hub, Lahore, Pakistan",
-            phone: "+92 42-9876543",
-            email: "sales.lahore@byd.pk",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Lahore+Business+Hub,+Lahore&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CLahore+Business+Hub,+Lahore"
-          }
-        ],
-        service: [
-          {
-            address: "Lahore Industrial Zone, Lahore, Pakistan",
-            phone: "+92 42-1234567",
-            email: "service.lahore@byd.pk",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Lahore+Industrial+Zone,+Lahore&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CLahore+Industrial+Zone,+Lahore"
-          }
-        ]
-      }
     }
   },
+
+  
 ];
 
 // Get the type of the current slide's locations
