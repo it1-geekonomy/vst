@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
+import gif from "@/app/public/education/vst logo gif.gif"
+
 import bg1 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (1).png";
 import bg2 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (2).png";
 import bg3 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 2 (1).png";
@@ -995,7 +997,12 @@ const FranchiseSlider = () => {
 
         {/* Logo section */}
         <div className="w-full flex justify-center py-8 sm:py-12 lg:py-20">
-          <Logo />
+        <Image
+          src={gif}
+          alt="VST Logo Animation"
+          className="w-[50%] h-[50%] object-contain"
+        />
+      
         </div>
       </motion.div>
     </div>
