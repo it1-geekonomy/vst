@@ -5,8 +5,9 @@ import Image from "next/image";
 import Image1881 from "@/app/public/images/AboutUs/1881Image.png";
 import Image1920 from "@/app/public/images/AboutUs/1920Image.png";
 import Image1950 from "@/app/public/images/AboutUs/1950Image.png";
-import VideoPlayer from '@/components/VideoPlayer';
+
 import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
+import gif from "@/app/public/education/vst logo gif.gif"
 
 function AboutUsPage() {
   const [selectedYear, setSelectedYear] = useState("1920");
@@ -303,34 +304,32 @@ function AboutUsPage() {
 
         {/* About Us Text Section */}
         <div className="mt-12 md:mt-16 px-4 md:px-32">
-          <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-rocWide">Our Legacy</h1>
+          <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-roc">Our Legacy</h1>
 
           <div className="flex flex-col font-normal text-clamp-24">
-            <h2 className="text-xl md:text-2xl text-white mt-6 mb-3">About Us</h2>
+            
             <div>
-              <p className="text-justify hyphens-auto">
+              <p className="text-justify hyphens-auto font-roc text-sm md:text-base">
                 Founded in 1911, VST Group is a leading conglomerate headquartered in Bangalore, known for
                 its enduring legacy of excellence, innovation, and sustainable growth. The group has been
                 growing ever since, expanding its presence across four core verticals:
               </p>
-              <ul className="list-disc pl-6 mt-3 mb-4 space-y-1">
+              <ul className="list-disc pl-6 mt-3 mb-4 space-y-1 font-roc text-sm md:text-base">
                 <li>Automotive Franchise</li>
                 <li>Manufacturing</li> 
                 <li>OE Parts Distribution</li>
                 <li>Education</li>
               </ul>
               
-              <h3 className="text-xl md:text-2xl text-white mt-6 mb-3">A Legacy of Trust and Innovation:</h3>
-              <p className="text-justify hyphens-auto">
+              <h3 className="text-xl md:text-2xl text-white py-8 mb-3 font-roc">A Legacy of Trust and Innovation:</h3>
+              <p className="text-justify hyphens-auto font-roc text-sm md:text-base">
                 With an annual turnover exceeding ₹5,000 crores ($570 million) , VST Group stands as a powerhouse
                 in India's business landscape. Under the visionary leadership of its fourth generation, the group
                 continues to set new benchmarks in service excellence, technological advancement, and customer
-                satisfaction.
-              </p>
-              <p className="text-justify hyphens-auto mt-3">
-                By blending a rich legacy with a forward-looking approach to innovation, VST Group remains
+                satisfaction. By blending a rich legacy with a forward-looking approach to innovation, VST Group remains
                 committed to delivering value, building trust, and driving growth for generations to come.
               </p>
+              
               
             </div>
           </div>
@@ -338,12 +337,16 @@ function AboutUsPage() {
 
         {/* Progress with Purpose Section */}
         <div className="mt-16 md:mt-32 flex items-center justify-center px-4">
-          <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+          <div className="flex flex-col md:flex-row items-center space-y-0 md:space-y-0 ">
             <div className="w-full md:h-[500px] md:w-1/2 flex justify-center md:justify-end">
-              <VideoPlayer src="/ContactUsLogo.mp4" />
+            <Image
+                  src={gif}
+                  alt="VST Logo Animation"
+                  className="w-[90%] h-[90%] object-cover"
+                />
             </div>
 
-            <div className="w-full md:w-1/2 text-center md:text-left">
+            <div className="w-full md:w-1/2 text-center md:text-left mb-5">
               <h2 className="text-3xl md:text-4xl text-white mb-2 font-rocWide">
                 Progress with Purpose.
               </h2>
