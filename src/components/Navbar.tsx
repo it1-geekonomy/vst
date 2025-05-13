@@ -127,13 +127,13 @@ export default function Navbar() {
                     href="/auto-parts"
                     className="block px-4 py-2 text-sm text-white hover:bg-gray-800"
                   >
-                    Auto Parts
+                    OE Parts Distribution
                   </Link>
                   <Link
                     href="/manufacture"
                     className="block px-4 py-2 text-sm text-white hover:bg-gray-800"
                   >
-                    Manufacture
+                    Manufacturing
                   </Link>
                 </div>
               </div>
