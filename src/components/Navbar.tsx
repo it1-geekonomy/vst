@@ -13,7 +13,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Show navbar when scrolling up or at the top of the page
       if (currentScrollY < lastScrollY || currentScrollY < 10) {
         setIsVisible(true);
@@ -21,10 +21,10 @@ export default function Navbar() {
         // Hide navbar when scrolling down
         setIsVisible(false);
       }
-      
+
       // Update last scroll position
       setLastScrollY(currentScrollY);
-      
+
       // Update scrolled state for styling changes
       setIsScrolled(currentScrollY > 0);
     };
@@ -38,9 +38,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed w-full z-50 bg-[#000000] transition-transform duration-300 ${
-      isVisible ? 'translate-y-0' : 'translate-y-[-100%]'
-    }`}>
+    <nav
+      className={`fixed w-full z-50 bg-[#000000] transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "translate-y-[-100%]"
+      }`}
+    >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 w-[90%]">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -53,29 +55,29 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button 
+            <button
               onClick={toggleMobileMenu}
               className="text-white p-2 focus:outline-none"
             >
-              <svg 
-                className="h-6 w-6" 
-                fill="none" 
-                viewBox="0 0 24 24" 
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 {isMobileMenuOpen ? (
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M6 18L18 6M6 6l12 12" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
                   />
                 ) : (
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M4 6h16M4 12h16M4 18h16" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
                   />
                 )}
               </svg>
@@ -85,16 +87,14 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:block">
             <div className="flex items-center space-x-6 lg:space-x-8">
-            <Link
+              <Link
                 href="/about-us"
                 className="text-base font-medium text-white hover:text-gray-300 transition-colors"
               >
                 About Us
               </Link>
               <div className="relative group">
-                <button
-                  className="text-base font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1"
-                >
+                <button className="text-base font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1">
                   Our Businesses
                   <svg
                     className="w-3 h-3 text-white"
@@ -111,27 +111,44 @@ export default function Navbar() {
                   </svg>
                 </button>
                 <div className="absolute left-0 mt-2 w-42 bg-black rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <Link href="/automotive-franchises" className="block px-4 py-2 text-sm text-white hover:bg-gray-800 whitespace-nowrap">
+                  <Link
+                    href="/automotive-franchises"
+                    className="block px-4 py-2 text-sm text-white hover:bg-gray-800 whitespace-nowrap"
+                  >
                     Automotive Franchises
                   </Link>
-                  <Link href="/education" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
+                  <Link
+                    href="/education"
+                    className="block px-4 py-2 text-sm text-white hover:bg-gray-800"
+                  >
                     Education
                   </Link>
-                  <Link href="/auto-parts" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
+                  <Link
+                    href="/auto-parts"
+                    className="block px-4 py-2 text-sm text-white hover:bg-gray-800"
+                  >
                     Auto Parts
                   </Link>
-                  <Link href="/manufacture" className="block px-4 py-2 text-sm text-white hover:bg-gray-800">
+                  <Link
+                    href="/manufacture"
+                    className="block px-4 py-2 text-sm text-white hover:bg-gray-800"
+                  >
                     Manufacture
                   </Link>
-                  
                 </div>
               </div>
-              <Link href="/csr" className="block px-4 py-2 text-base font-medium hover:text-gray-300 transition-colors text-white">
-                    CSR
-                  </Link>
-                  <Link href="/news-media" className="block px-4 py-2 text-base font-medium hover:text-gray-300 transition-colors text-white">
-                    News and Media
-                  </Link>
+              <Link
+                href="/Corporate-philanthropy"
+                className="block px-4 py-2 text-base font-medium hover:text-gray-300 transition-colors text-white"
+              >
+                Corporate Philanthropy
+              </Link>
+              <Link
+                href="/news-media"
+                className="block px-4 py-2 text-base font-medium hover:text-gray-300 transition-colors text-white"
+              >
+                News and Media
+              </Link>
               <Link
                 href="/career"
                 className="text-base font-medium text-white hover:text-gray-300 transition-colors"
@@ -144,7 +161,6 @@ export default function Navbar() {
               >
                 Contact Us
               </Link>
-              
             </div>
           </div>
         </div>
@@ -154,21 +170,21 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
-          <Link
+            <Link
               href="/about-us"
               className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
             </Link>
-            
+
             <div className="relative">
               <button
                 className="block w-full text-left px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
                 onClick={(e) => {
                   e.preventDefault();
                   const submenu = e.currentTarget.nextElementSibling;
-                  submenu?.classList.toggle('hidden');
+                  submenu?.classList.toggle("hidden");
                 }}
               >
                 Our Businesses
@@ -193,7 +209,7 @@ export default function Navbar() {
                   className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                    Auto Parts
+                  Auto Parts
                 </Link>
                 <Link
                   href="/manufacture"
@@ -202,23 +218,22 @@ export default function Navbar() {
                 >
                   Manufacture
                 </Link>
-                
               </div>
             </div>
             <Link
-                  href="/csr"
-                  className="block px-3 py-2 text-base font-medium text-white rounded-md"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                  CSR
-                </Link>
-                <Link
-                  href="/news-media"
-                  className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  News and Media
-                </Link>
+              href="/Corporate-philanthropy"
+              className="block px-3 py-2 text-base font-medium text-white rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Corporate Philanthropy
+            </Link>
+            <Link
+              href="/news-media"
+              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              News and Media
+            </Link>
             <Link
               href="/career"
               className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
@@ -233,7 +248,6 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
-            
           </div>
         </div>
       )}
