@@ -184,16 +184,16 @@ function AboutUsPage() {
                     scale = 1.25;
                   }
                   
-                  return (
+                   return (
                     <button
                       key={item.year}
                       onClick={() => handleYearClick(item.year)}
-                      className="absolute lg:absolute left-1/2 top-1/2 text-3xl sm:text-4xl lg:text-5xl font-bold"
+                      className={`absolute lg:absolute left-1/2 top-1/2 ${isSelected ? 'text-clamp-96' : 'text-clamp-67'} font-normal font-roc`}
                       style={{
-                        transform: `translate(-50%, -50%) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${scale})`,
+                        transform: `translate(-50%, -50%) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${isSelected ? 1.2 : 1.2})`,
                         opacity: opacity,
-                        color: isSelected ? "#FCD34D" : "#373737",
-                        filter: isSelected ? "none" : "blur(1px)",
+                        color: isSelected ? "rgba(254, 191, 61, 1)" : "rgba(61, 117, 193, 1)",
+                        filter: "none", // <- remove blur entirely
                         transformStyle: "preserve-3d",
                         backfaceVisibility: "hidden",
                         transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"
