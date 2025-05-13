@@ -276,7 +276,7 @@ export default function EducationPage() {
           </div>
         </section>
 
-        <div className="w-full px-4 md:px-8 lg:px-30 mb-12 mt-8">
+        <div className="w-full px-4 md:px-8 lg:px-30 mb-12 mt-8 font-normal font-roc text-justify">
           <div
             style={{
               width: 300,
@@ -285,8 +285,6 @@ export default function EducationPage() {
               background: '#FEBF3D',
               padding: '12px 32px',
               fontSize: 20,
-              fontWeight: 400,
-              fontFamily: 'Roc Grotesk, sans-serif',
               color: '#000',
               letterSpacing: 1,
               boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
@@ -315,10 +313,11 @@ export default function EducationPage() {
       <LocationSection
         locationImage="education/educational location.png"
         address={{
-          street: "Edward Road, Off Queens Road",
-          city: "Bangalore",
-          state: "Karnataka",
-          pincode: "560 001"
+          street: "Edward Road,",
+          street2: "Off Queens Road,",
+          city: "Bangalore-560 001",
+          state: "Karnataka.",
+          pincode: ""       
         }}
         phoneNumbers={[
           '+91 80 2234 1011',

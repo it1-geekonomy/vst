@@ -5,6 +5,7 @@ interface LocationSectionProps {
   locationImage: string;
   address: {
     street: string;
+    street2?: string;
     city: string;
     state: string;
     pincode: string;
@@ -20,37 +21,35 @@ const LocationSection: React.FC<LocationSectionProps> = ({
   googleMapsUrl
 }) => {
   return (
-    <section className="w-full flex flex-col md:flex-row items-center justify-center px-4 md:px-8 lg:px-30 mt-4">
-      <div className="flex flex-row items-center w-full">
-        <div className="flex flex-col">
+    <section className="w-full px-4 md:px-8 lg:px-30 flex flex-col md:flex-row items-center justify-center z-10 relative mx-auto">
+      <div className="flex flex-col md:flex-row items-center w-full gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+        {/* Left section with title and image */}
+        <div className="flex flex-col items-center md:items-start">
           <h2
-            className="text-[#2B0B1F]"
+            className="text-[#2B0B1F] text-center md:text-left mb-4 sm:mb-6 md:mb-8 font-roc"
             style={{
-              fontFamily: 'Roc Grotesk, sans-serif',
-              fontSize: '50px',
-              lineHeight: '70px',
+              fontSize: 'clamp(28px, 4vw, 50px)',
+              lineHeight: '1.2',
               letterSpacing: '-2px',
-              marginBottom: '40px',
             }}
           >
             Our Location
           </h2>
-          <div className="relative w-[150px] h-[130px] md:w-[250px] md:h-[260px] lg:w-[350px] lg:h-[200px] overflow-hidden rounded-lg">
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative w-[220px] h-[200px] sm:w-[280px] sm:h-[240px] md:w-[200px] md:h-[220px] lg:w-[280px] lg:h-[180px] overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          >
             <Image
               src={require(`@/app/public/${locationImage}`)}
               alt="Location Map"
               fill
-              className="object-cover shadow-lg"
-              style={{ clipPath: 'inset(0 30px 0 0)' }}
+              className="object-cover hover:scale-105 transition-transform duration-300"
               priority
             />
-            <a
-              href={googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute left-[37.5%] top-[30%] w-5 h-4 md:w-6 md:h-5 cursor-pointer z-20"
-              title="Open in Google Maps"
-            >
+            {/* Location icon overlay */}
+            <div className="absolute left-[35%] top-[30%] w-5 h-4 sm:w-6 sm:h-5 pointer-events-none">
               <Image
                 src={require('@/app/public/education/location icon.png')}
                 alt="Location Icon"
@@ -58,40 +57,44 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                 className="object-contain"
                 priority
               />
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
-        {/* Right: Address and Phone Numbers in a row */}
-        <div className="md:ml-10 mt-30 flex flex-row justify-center space-x-7">
+
+        {/* Right section with address and phone numbers */}
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-12 lg:gap-16 w-full md:w-auto mt-16 md:mt-24">
           {/* Address */}
-          <div className="mr-8 min-w-[150px] md:min-w-[200px]">
+          <div className="text-center md:text-left">
             <p
-              className="text-black"
+              className="text-black font-roc"
               style={{
-                fontFamily: 'Roc Grotesk',
-                fontSize: '24px',
-                lineHeight: '36px',
+                fontSize: 'clamp(16px, 2.5vw, 24px)',
+                lineHeight: '1.5',
                 fontWeight: 500,
               }}
             >
-              {address.street},<br />
-              {address.city},<br />
-              {address.state} - {address.pincode}
+              {address.street}
+              {address.street2 && <><br />{address.street2}</>}
+              <br />
+              {address.city}
+              {!address.city.includes(address.pincode) && address.pincode && <>, {address.pincode}</>}
+              <br />
+              {address.state}
             </p>
           </div>
+
           {/* Phone Numbers */}
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-3 items-center md:items-start mt-8 md:mt-0">
             {phoneNumbers.map((phone, idx) => (
               <a 
                 key={phone} 
                 href={`tel:${phone.replace(/\s+/g, '')}`}
                 className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
               >
-                {/* Telephone icon - SVG */}
-                <span className="mr-2 flex-shrink-0">
+                <span className="mr-3">
                   <svg 
-                    width="24" 
-                    height="24" 
+                    width="28" 
+                    height="28" 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     xmlns="http://www.w3.org/2000/svg"
@@ -103,11 +106,10 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                   </svg>
                 </span>
                 <span
-                  className="text-black"
+                  className="text-black font-roc"
                   style={{
-                    fontFamily: 'Roc Grotesk',
-                    fontSize: '20px',
-                    lineHeight: '32px'
+                    fontSize: 'clamp(14px, 2vw, 20px)',
+                    lineHeight: '1.6'
                   }}
                 >
                   {phone}
