@@ -21,9 +21,10 @@ const BusinessSectorsUpdated = () => {
         className="w-full max-w-[1920px] py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24"
         style={{ height: '454px' }}
       >
-        <h2 className="font-roc font-medium text-[40px] leading-[100%] tracking-[0%] text-center text-#230715">
-          Explore Our Other Business Sectors
-        </h2>     
+       <h2 className="font-roc font-semibold text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
+  Explore Our Other Business Sectors
+</h2>
+     
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-12 lg:gap-24">
           {/* Left arrow - shown on md and above */}
           <button className="text-white hidden md:block hover:opacity-80 transition-opacity md:mr-20 lg:mr-32">
