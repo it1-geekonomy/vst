@@ -528,7 +528,7 @@ const slides: SlideData[] = [
     LogoComponent: VolkswagenLogo,
 
     header: "Bangalore Motors - Volkswagen",
-    description: "In 2009, Volkswagen Palace Cross, part of the VST Group's longstanding legacy in the Indian automotive space, became a premier destination for automotive excellence in Bengaluru. Located on Palace Cross Road, the showroom offers a refined buying experience, customer-first service, and a deep understanding of what Indian customers seek in a global brand. Bringing the best of German engineering to the city, it showcases the complete Volkswagen lineup, from stylish hatchbacks to robust SUVs in an elegant and welcoming environment. With a focus on trust, transparency, and attention to detail, Volkswagen Palace Cross continues to set benchmarks in customer satisfaction. Blending heritage with modernity, it remains the preferred destination for Volkswagen enthusiasts across the region.",
+    description: "In 2009, Volkswagen Palace Cross, part of the VST Group’s longstanding legacy in the Indian automotive space, became a premier destination for automotive excellence in Bengaluru. Located on Palace Cross Road, the showroom offers a refined buying experience, customer-first service, and a deep understanding of what Indian customers seek in a global brand. Bringing the best of German engineering to the city, it showcases the complete Volkswagen lineup, from stylish hatchbacks to robust SUVs in an elegant and welcoming environment. With a focus on trust, transparency, and attention to detail, Volkswagen Palace Cross continues to set benchmarks in customer satisfaction. Blending heritage with modernity, it remains the preferred destination for Volkswagen enthusiasts across the region.",
 
     learnMoreLink: "#",
     locations: {
@@ -708,7 +708,7 @@ const FranchiseSlider = () => {
         {/* Car section */}
         <div className="relative w-full h-auto sm:h-[85vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1] lg:mb-[10rem] mb-[4rem]">
           {/* Left section with background and car */}
-          <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full xl:h-[100vh]">
+          <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full xl:h-[90vh]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`bg-${currentSlide}`}
@@ -728,14 +728,16 @@ const FranchiseSlider = () => {
                 />
               </motion.div>
 
-              {/* Single color accent bars - hidden on mobile */}
+              {/* Dynamic color accent bars - hidden on mobile */}
               <div
                 className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none"
-                style={{ backgroundColor: "#2676A6" }}
+                style={{ backgroundColor: slides[currentSlide].bgColor.to }}
               />
               <div
-                className="hidden lg:block absolute top-0 right-[4rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%] rounded-br-full rounded-bl-none rounded-t-none"
-                style={{ backgroundColor: "#3C92C6" }}
+                className="hidden lg:block absolute top-0 right-[4rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%]  rounded-br-full  
+              rounded-bl-none   
+              rounded-t-none "
+                style={{ backgroundColor: slides[currentSlide].bgColor.from }}
               />
             </AnimatePresence>
           </div>
@@ -744,7 +746,7 @@ const FranchiseSlider = () => {
           <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
             {/* Title */}
             <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
-              <h2 className="text-white font-rocWide font-light text-clamp-67 tracking-[0.2em] text-center">
+              <h2 className="text-white font-rocWide font-light text-clamp-67  text-start">
                 Our
                 <br />
                 Automative
