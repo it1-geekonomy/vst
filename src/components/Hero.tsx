@@ -91,7 +91,7 @@ const slides = [
   {
     id: 1,
     image: slide1,
-    title: "BUILDING TOMORROW",
+    title: "Building Tomorrow on a Century of Trust.",
     subtitle: "ON A CENTURY OF TRUST",
     label: "MERCEDES-BENZ",
     color: "from-red-600/80 to-red-800/80", // Gradient colors for strips
@@ -186,7 +186,7 @@ const Hero = () => {
   // Mobile view render
   if (isMobile) {
     return (
-      <section className="relative h-[52vh] overflow-hidden bg-black/5 mt-[-10vh]">
+      <section className="relative h-screen overflow-hidden bg-black/5 mt-[-10vh]">
         <div className="relative h-full w-full flex items-center justify-center">
           {/* Current slide */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -264,15 +264,15 @@ const Hero = () => {
 
   // Desktop view
   return (
-    <section className="relative h-screen md:h-[109vh] overflow-hidden">
+    <section className="relative h-[90vh] overflow-hidden">
       <style >{`
    /* CSS variables for responsive sizing */
       .strips-container {
-      --strip-width-sm: 2.5rem;  
-      --strip-width-md: 3rem;    
-      --strip-width-lg: 4rem;    
-      --strip-width-xl: 5rem;    
-      --strip-width-2xl: 6rem;   
+      --strip-width-sm: 4rem;    /* Increased from 2.5rem */
+      --strip-width-md: 5rem;    /* Increased from 3rem */
+      --strip-width-lg: 6rem;    /* Increased from 4rem */
+      --strip-width-xl: 7rem;    /* Increased from 5rem */
+      --strip-width-2xl: 8rem;   /* Increased from 6rem */
       --strip-width: var(--strip-width-lg); /* Default width */
 }
         
@@ -502,23 +502,27 @@ const Hero = () => {
 
               {isActive && (
                 <div className="absolute inset-0 flex items-center justify-center z-20">
-                  <div className="bg-black/70 rounded-lg px-6 sm:px-10 py-10 text-center w-[90%] max-w-[700px] mx-auto">
+                  <div className="bg-black/70 rounded-lg px-6 sm:px-10 py-10 text-left w-[90%] max-w-[900px] ml-8">
+                    {/* Yellow line above the title */}
+                    <div className="w-[40%] h-1 bg-yellow-400 mb-4"></div>
                     {slide.title && (
-                      <h2 className="text-4xl font-bold text-white mb-4">
-                        <span className="border-b-4 border-yellow-400 pb-1 font-poppins">{slide.title}</span>
+                      <h2 className="text-4xl font-bold text-white mb-4 font-poppins">
+                        {slide.title}
                       </h2>
                     )}
                     {slide.subtitle && (
                       <p className="text-lg text-white mb-6 font-poppins">{slide.subtitle}</p>
                     )}
                     {slide.link && (
-                      <a
-                        href={slide.link}
-                        className="inline-flex items-center text-yellow-400 text-xl font-semibold hover:underline transition"
-                      >
-                        View more
-                        <span className="ml-2">&#8594;</span>
-                      </a>
+                      <div className="flex justify-center w-full mt-2">
+                        <a
+                          href={slide.link}
+                          className="inline-flex items-center text-yellow-400 text-xl font-semibold hover:underline transition"
+                        >
+                          View more
+                          <span className="ml-2">&#8594;</span>
+                        </a>
+                      </div>
                     )}
                   </div>
                 </div>
