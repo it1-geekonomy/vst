@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-import slide1 from "@/app/public/hero-section/Image 1.png";
-import slide2 from "@/app/public/hero-section/Image 5.png";
+import slide1 from "@/app/public/hero-section/Image 1.jpg";
+import slide2 from "@/app/public/hero-section/Image 5.jpg";
 import slide3 from "@/app/public/hero-section/image 3.png";
-import slide4 from "@/app/public/hero-section/Image 4.png";
+import slide4 from "@/app/public/hero-section/Image 4.jpg";
 import slide5 from "@/app/public/hero-section/Image 6.png";
-import slide6 from "@/app/public/hero-section/Image 7.png";
+import slide6 from "@/app/public/hero-section/Image 7.jpg";
+import groupImage from "@/app/public/hero-section/Group Image.png";
 
 // Import SVG icons
 import Frame1 from "@/app/public/faranchies/Frame 1973341731.svg";
@@ -29,7 +30,7 @@ const slides = [
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: NewsIcon,
-    link: "/dummy-link"
+    link: "/news-media"
   },
   {
     id: 6,
@@ -51,7 +52,7 @@ const slides = [
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: EducationIcon,
-    link: "/dummy-link"
+    link: "/education"
   },
   {
     id: 4,
@@ -62,7 +63,7 @@ const slides = [
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
     icon: OEPartsIcon,
-    link: "/dummy-link"
+    link: "/auto-parts"
   },
   {
     id: 3,
@@ -73,7 +74,7 @@ const slides = [
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: ManufacturingIcon,
-    link: "/dummy-link"
+    link: "/manufacture"
   },
   {
     id: 2,
@@ -85,7 +86,7 @@ const slides = [
     type: 'video',
     videoSrc: "/CarVideo.mp4",
     icon: AutomativeFranchiseIcon,
-    link: "/dummy-link"
+    link: "/automotive-franchises"
   },
   {
     id: 1,
@@ -195,10 +196,15 @@ const Hero = () => {
                   <video
                     ref={el => { videoRefs.current[slides[currentSlide].id] = el; }}
                     src={slides[currentSlide].videoSrc}
-                    className="w-full h-full"
+                    className="w-full h-full object-cover"
                     style={{
                       objectFit: "cover",
                       objectPosition: "center",
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      top: 0,
+                      left: 0
                     }}
                     muted
                     loop
@@ -352,34 +358,118 @@ const Hero = () => {
                     <video
                       ref={el => { videoRefs.current[slide.id] = el; }}
                       src={slide.videoSrc}
-                      className="w-full h-full"
+                      className="w-full h-full object-cover"
                       style={{
                         objectFit: "cover",
                         objectPosition: "center",
                         opacity: isActive ? 1 : 0.9,
                         transform: `translate3d(0, 0, 0) scale(${isActive ? 1 : 1.1})`,
                         transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                        width: "100%",
+                        height: "100%",
+                        position: "absolute",
+                        top: 0,
+                        left: 0
                       }}
                       muted
                       loop
                       playsInline
                     />
+                    {slide.id === 2 && !isActive && (
+                      <div 
+                        className="absolute inset-0 transition-all duration-1500 ease-in-out"
+                        style={{
+                          background: 'linear-gradient(270deg, rgba(65, 148, 216, 0.6) 91.82%, rgba(65, 148, 216, 0.6) 100%)',
+                          transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
+                        }}
+                      />
+                    )}
                   </div>
                 ) : (
-                  <Image
-                    src={slide.image}
-                    alt={slide.label}
-                    fill
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: isActive ? "center" : "0% center",
-                      opacity: isActive ? 1 : 0.9,
-                      transform: `translate3d(0, 0, 0) scale(${isActive ? 1 : 1.1})`,
-                      transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
-                      willChange: "transform, opacity"
-                    }}
-                    priority={index === 0}
-                  />
+                  <>
+                    <Image
+                      src={slide.image}
+                      alt={slide.label}
+                      fill
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: isActive ? "center" : "0% center",
+                        opacity: isActive ? 1 : 0.9,
+                        transform: `translate3d(0, 0, 0) scale(${isActive ? 1 : 1.1})`,
+                        transition: "all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+                        willChange: "transform, opacity"
+                      }}
+                      priority={index === 0}
+                    />
+                    {/* Add background overlay for slide6 */}
+                    {slide.id === 6 && (
+                      <div 
+                        className="absolute inset-0 transition-all duration-1500 ease-in-out"
+                        style={{
+                          backgroundColor: isActive ? '#F1B892CC' : '#DB5B0599',
+                          opacity: isActive ? 0.8 : 0.7,
+                          transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
+                        }}
+                      />
+                    )}
+                    {/* Add background overlay for slide5 (Image 5) */}
+                    {slide.id === 5 && (
+                      <div 
+                        className="absolute inset-0 transition-all duration-1500 ease-in-out"
+                        style={{
+                          background: isActive 
+                            ? '#F1A0C1BF'
+                            : 'linear-gradient(270.95deg, rgba(244, 122, 172, 0) 0%, rgba(250, 113, 169, 0.75) 100%)',
+                          backgroundColor: isActive ? '#F1A0C1BF' : 'transparent',
+                          transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
+                        }}
+                      />
+                    )}
+                    {/* Add background overlay for slide4 (Image 4) */}
+                    {slide.id === 4 && (
+                      <div 
+                        className="absolute inset-0 transition-all duration-1500 ease-in-out"
+                        style={{
+                          background: isActive 
+                            ? '#F1E992BF'
+                            : 'rgba(255, 185, 34, 0.85)',
+                          backgroundColor: isActive ? '#F1E992BF' : 'rgba(255, 185, 34, 0.85)',
+                          opacity: isActive ? 0.75 : 1,
+                          transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
+                        }}
+                      />
+                    )}
+                    {/* Add background overlay for slide3 (Image 3) */}
+                    {slide.id === 3 && (
+                      <div 
+                        className="absolute inset-0 transition-all duration-1500 ease-in-out"
+                        style={{
+                          background: isActive 
+                            ? '#83FFE599'
+                            : 'linear-gradient(270deg, rgba(81, 156, 141, 0) 84.98%, rgba(40, 120, 100, 0.9) 100%)',
+                          backgroundColor: isActive ? '#83FFE599' : 'transparent',
+                          opacity: isActive ? 0.6 : 1,
+                          transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
+                        }}
+                      />
+                    )}
+                    {/* Add background overlay for slide2 (AUTOMOTIVE FRANCHISE) */}
+                    {slide.id === 2 && !isActive && (
+                      <div 
+                        className="absolute inset-0 z-10"
+                        style={{
+                          background: '#F47AAC',
+                          backgroundColor: '#F47AAC',
+                          position: 'fixed',
+                          inset: 0,
+                          width: '100vw',
+                          height: '100vh',
+                          zIndex: 10,
+                          opacity: 1
+                        }}
+                      />
+                    )}
+                  </>
                 )}
               </div>
 
@@ -393,19 +483,18 @@ const Hero = () => {
                      }}>
                   
                   {/* Flex container with fixed width for consistent alignment */}
-                  <div className="-rotate-90 transform flex items-center justify-start" style={{ width: '240px' }}>
+                  <div className="-rotate-90 transform flex items-center justify-start" style={{ width: '320px' }}>
                     {/* Icon placed at the beginning of text, counter-rotated to appear straight */}
                     {slide.icon && (
-                      <div className="rotate-90 mr-6 w-8 flex justify-center">
+                      <div className="rotate-90 mr-3 w-6 flex justify-center">
                         {React.createElement(slide.icon, {
-                          width: 24,
-                          height: 24,
+                          width: 20,
+                          height: 20,
                           className: "opacity-90"
                         })}
                       </div>
                     )}
-                    {/* Always keep space even if no icon */}
-                    {!slide.icon && <div className="w-8 mr-6"></div>}
+                    {!slide.icon && <div className="w-6 mr-3"></div>}
                     <span 
                       className="text-white font-poppins font-semibold whitespace-nowrap text-clamp-36"
                       style={{
