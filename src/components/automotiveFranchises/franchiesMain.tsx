@@ -899,7 +899,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 w-[50%] lg:w-[92%] h-full rounded-br-[120px] overflow-hidden"
+                className="absolute left-0 w-[50%] lg:w-[92%] h-[95%] rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
