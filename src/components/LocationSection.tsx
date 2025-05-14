@@ -31,7 +31,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
   iconColor = 'black'
 }) => {
   return (
-    <section className="w-full px-4 md:px-8 lg:px-30 flex flex-col md:flex-row items-center justify-center z-10 relative mx-auto">
+    <section className="w-full px-4 md:px-8 lg:px-30 2xl:px-60 flex flex-col md:flex-row items-center justify-center z-10 relative mx-auto">
       <div className="flex flex-col md:flex-row items-center w-full gap-4 sm:gap-6 md:gap-8 lg:gap-12">
         {/* Left section with title and image */}
         <div className="flex flex-col items-center md:items-start">
