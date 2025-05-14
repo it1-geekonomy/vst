@@ -104,6 +104,12 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
+      "service and parts"?: Array<{
+        address: string;
+        phone: string | string[];
+        email: string | string[];
+        map: string;
+      }>;
     };
   };
 }
@@ -536,39 +542,35 @@ const slides: SlideData[] = [
       sales: {
         sales: [
           {
-            address: "VW Palace Cross #1, Palace Cross Road, Bengaluru 560 020",
+            address: "VW Palace Cross #1, Palace Cross Road, Bengaluru - 560 020.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
-          }
+            map: "https://maps.app.goo.gl/QsRziu9kARGoKPv9A"
+          },
         ],
         service: [
           {
-            address: "VW Rajajinagar, #1/1 Kodi Street, 4th Main Rajajinagar, Next to Venus Int School, Bengaluru 560 010",
+            address: "VW Rajajinagar, #1/1 Kodi Street, 4th Main Rajajinagar, Next to Venus Int School, Bengaluru - 560 010.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/8JC9XjCqNZe49Gqh6"
+          },
+          {
+            address: "VW Palace Cross, #69/2, Begalagunte, Hesarghatta Main Road, 8th Mile, T.Dasarahalli, Bengaluru - 560 057.",
+            phone: "+91 96866 01249",
+            email: "crhhsrg@vw-bangaloremotors.co.in",
+            map: "https://maps.app.goo.gl/mV3vjmrb8522QwDr5"
+          },
+        ],
+        "sales and service": [
+          {
+            address: "VW Mysore Road, #26/2 & 27/2, Kenchanahalli Village, Kengeri Hobli, Mysore Road, Bengaluru - 560 057.",
+            phone: "+91 96866 01249",
+            email: "crhead@vw-bangaloremotors.co.in",
+            map: "https://maps.app.goo.gl/pN74JK5NA9HLAwgY8"
           }
         ],
       },
-      service: {
-        sales: [
-          {
-            address: "Karachi Business District, Karachi, Pakistan",
-            phone: "+92 21-1234567",
-            email: "sales.karachi@volkswagen.pk",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Karachi+Business+District,+Karachi&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CKarachi+Business+District,+Karachi"
-          }
-        ],
-        service: [
-          {
-            address: "Industrial Area, Karachi, Pakistan",
-            phone: "+92 21-7654321",
-            email: "service.karachi@volkswagen.pk",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Industrial+Area,+Karachi&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CIndustrial+Area,+Karachi"
-          }
-        ]
-      }
     }
   },
   {
@@ -587,26 +589,24 @@ const slides: SlideData[] = [
       India: {
         sales: [
           {
-            address: "#8, KSCMF Building, Cunningham Road Bengaluru 560 058",
+            address: "#8, KSCMF Building, Cunningham Road Bengaluru - 560 058.",
             phone: "+91 96060 74777",
-            email: "info@vstbyd.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            email: " info@vstbyd.in",
+            map: "https://maps.app.goo.gl/pERfrK5nV1yRh7DM7"
           },
           {
-            address: "GKS Tower #40 & 41, sy:33, Hosur Main Road, Hongasandra Metro Rail Stn, Bommanahalli, Bengaluru 560 058",
-            phone: "+91 96060 74777",
+            address: "GKS Tower #40 & 41, sy:33, Hosur Main Road, Hongasandra Metro Rail Stn, Bommanahalli, Bengaluru - 560 058.",
+            phone: "+91 96060 74777.",
             email: "info@vstbyd.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/kS3zKBKVSaJL6zuz8"
           },
-        ],
-        service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            address: "#38/5A Hyland Industrial Estate, 11th KM, Hosur Road, Bommanahalli,Bengaluru - 560 068.",
+            phone: "+91 96060 74777.",
+            email: "info@vstbyd.in",
+            map: "https://maps.app.goo.gl/DaWgugug4uE9NL3S9"
           }
-        ]
+        ],
       },
     }
   },
@@ -626,22 +626,22 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "1.  #6, St. John's Road, Ulsoor, Bengaluru 560 042",
+            address: "#6, St. John's Road, Ulsoor, Bengaluru - 560 042.",
             phone: "+91 80 2559 1999, +91 94498 07080",
             email: "sales.ho@cityhonda.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/vp9HXEYzQnyUyfeM8"
           },
           {
-            address: "2. #202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru 560 043",
-            phone: "+91 80 2542 2810, +91 80 2542 2811 ,+91 94498 07080",
+            address: "#202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru - 560 043.",
+            phone: "+91 80 2542 2810, +91 80 2542 2811, +91 94498 07080",
             email: "sales.hrbr@cityhonda.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/F53ewUG1bYxKJxqU6"
           },
           {
-            address: "3. #143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru 560 043",
+            address: "#143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru - 560 043.",
             phone: "+91 80 4333 3330, +91 88844 34200",
             email: "sales.lbg@cityhonda.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/Gz6HNUYy414G3QSe9"
           }
         ],
         service: [
@@ -650,6 +650,38 @@ const slides: SlideData[] = [
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          }
+        ],
+        "service and parts": [
+          {
+            address: "#113, 1sr Main Road, Lingarajapuram, Bengaluru - 560 084.",
+            phone: "+91 80 2549 6561, +91 94808 12384",
+            email: "service.lrp@cityhonda.in",
+            map: "https://maps.app.goo.gl/gt7DQkNyAm4dJGpYA"
+          },
+          {
+            address: "Head Workshop, No.6, St. John’s Road, Ulsoor,  Bengaluru - 560 042.",
+            phone: "+91 80 2513 9199, +91 94498 67080",
+            email: "service.ho@cityhonda.in",
+            map: "https://maps.app.goo.gl/WkS8iBtP7VkeAjEBA"
+          },
+          {
+            address: "No. 24, 25, 30 and 31, 40 Ft Road, PNS Layout, Subbannapalya, Kalyan Nagar, Bengalur - 560 043.",
+            phone: "+91 80 2542 2813, +91 76193 95014",
+            email: "service.hrbr@cityhonda.in",
+            map: "https://maps.app.goo.gl/NG4n4fitRpwXGvHY8"
+          },
+          {
+            address: "#143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru - 560 027.",
+            phone: "+91 80 4333 3330, +91 94808 12380",
+            email: "service.ibg@cityhonda.in",
+            map: "https://maps.app.goo.gl/Cff7i3pMVt16Xrwi7"
+          },
+          {
+            address: "#42/2, Ramamurthynagar Main Road, Ramamurthy Nagar, Bengaluru - 560 016.",
+            phone: "+91 80 4094 4950, +91 94808 12390",
+            email: "service.rmn@cityhonda.in",
+            map: "https://maps.app.goo.gl/PmWoMVPm7R3jz2qj7"
           }
         ]
       },
@@ -1142,6 +1174,44 @@ const FranchiseSlider = () => {
                               <iframe
                                 title={`Pre-Owned Cars Map ${idx + 1}`}
                                 src={preOwned.map}
+                                width="100%"
+                                height="280"
+                                className="rounded-lg w-full"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                              />
+                            </div>
+                          </div>
+                        ))}
+                        {/* Service and Parts */}
+                        {location["service and parts"] && (location["service and parts"]?.length ?? 0) > 0 && location["service and parts"].map((serviceParts, idx) => (
+                          <div key={`${currentSlide}-${locationKey}-serviceparts-${idx}`} className="hide-scrollbar mb-6">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Service, Parts {(location["service and parts"]?.length ?? 0) > 1 ? `#${idx + 1}` : ''}:
+                            </div>
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                              {serviceParts.address}<br />
+                              {Array.isArray(serviceParts.phone) ? (
+                                serviceParts.phone.map((p, i) => (
+                                  <div key={i} className="mt-1">📞 {p}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">📞 {serviceParts.phone}</div>
+                              )}
+                              {Array.isArray(serviceParts.email) ? (
+                                serviceParts.email.map((e, i) => (
+                                  <div key={i} className="mt-1">✉️ {e}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">✉️ {serviceParts.email}</div>
+                              )}
+                            </div>
+                            <div className="rounded-lg overflow-hidden w-full">
+                              <iframe
+                                title={`Service and Parts Map ${idx + 1}`}
+                                src={serviceParts.map}
                                 width="100%"
                                 height="280"
                                 className="rounded-lg w-full"
