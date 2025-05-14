@@ -105,6 +105,9 @@ html {
 .text-clamp-67 {
   font-size: clamp(20px, 4vw, 67px);
 }
+.text-clamp-57 {
+  font-size: clamp(30px, 3.5vw, 57px);
+}
 
 
 .text-clamp-96 {

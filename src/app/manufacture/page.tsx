@@ -58,7 +58,7 @@ const ManufacturePage = () => {
     <div className="xl:pt-12 bg-[linear-gradient(180deg,#02231C_0%,#04473F_50%,#066C5E_100%)]">
       <div className="mx-auto px-0 md:px-12 pb-12 flex flex-col justify-around">
         {/* Tillers & Tractors Heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal my-8 md:my-12 text-white text-center font-roc ">
+        <h1 className="text-clamp-120 font-normal my-8 md:my-12 text-white text-center font-roc ">
           VST Tillers & Tractors
         </h1>
         
@@ -157,24 +157,24 @@ const ManufacturePage = () => {
         </div>
 
         <div className="px-4 md:px-0">
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
+          <h1 className="text-clamp-57  mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
             Empowering Farmers With Efficiency, Affordability And Reliability
           </h1>
           
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             <div className="flex-1 text-white" style={{ maxWidth: "567px" }}>
-              <div className="text-xl mb-8 font-roc" style={{ lineHeight: "1.8" }}>
-                <p >
-                  VST Tillers Tractors was incorporated in the 
-                  year 1967 with Mitsubishi Heavy Industries Ltd. 
-                  and Mitsubishi Corporation of Japan as Joint 
-                  Venture Partners for the manufacture of Power 
-                  Tillers. The factory was established on a 20 acre 
-                  plot on the Whitefield Road. Power Tillers are 
-                  used by small and medium farmers primarily for 
-                  paddy cultivation. This machine has increased 
-                  productivity and encouraged multiple cropping 
-                  system for rice.
+              <div className="mb-8">
+                <p className="text-clamp-18 font-roc text-justify" style={{ 
+                  lineHeight: 1.8,
+                  maxWidth: "100%",
+                  hyphens: "auto",
+                  wordSpacing: "-0.5px",
+                  letterSpacing: "0.02em"
+                }}>
+                 VST Tillers Tractors Ltd., a flagship company of VST Group, was incorporated in 1967 as a joint
+venture with Mitsubishi Heavy Industries Ltd. and Mitsubishi Corporation of Japan. The company
+revolutionized agricultural mechanization in India by manufacturing Power Tillers-essential for paddy
+cultivation by small and medium-scale farmers.
                 </p>
               </div>
 

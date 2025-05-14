@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import bg from "@/app/public/news-and-media/bgnews.jpeg";
+import bg from "@/app/public/news-and-media/bgnews.jpg";
 import { useState, useEffect } from "react";
 import imgcard1 from "@/app/public/news-and-media/frame6.png";
 import imgcard2 from "@/app/public/news-and-media/frame9.png";
@@ -18,7 +18,7 @@ export default function NewsMedia() {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const headlines = [
-    "Lorem ipsum dolor sit amet consectetur.",
+    "Exciting! Our new Porsche showroom is now in Whitefield!",
     "Experience the luxury of German engineering.",
     "Visit us today to explore the latest models."
   ];
@@ -28,7 +28,7 @@ export default function NewsMedia() {
       image: imgcard1,
       alt: "Porsche Showroom Opening",
       title: "We Are Now Open",
-      text: "Exciting times ahead! Introducing our stunning new Porsche showroom in Whitefield."
+      text: "Exciting! Our new Porsche showroom is now in Whitefield!."
     },
     {
       image: imgcard2,
@@ -65,10 +65,15 @@ export default function NewsMedia() {
   }, []);
 
   return (
-    <main className="relative min-h-screen bg-white overflow-x-hidden">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#2E2E2E]">
+      <div className="absolute top-0 left-0 w-full h-[80px] bg-gradient-to-b from-[#2E2E2E] via-[#2E2E2E]/80 to-transparent flex items-center justify-center z-30 pointer-events-none pt-20">
+        <h1 className="text-white text-5xl md:text-6xl font-bold font-poppins drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
+      </div>
       {/* Hero Section */}
-      <section className="relative w-full h-[100vh]">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <section className="relative w-full h-[110vh] pt-[10px] mt-[40px]">
+        {/* Top blend gradient for seamless transition */}
+        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-t from-transparent to-[#2E2E2E] z-20 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
         <Image 
           src={bg} 
           alt="News Background" 

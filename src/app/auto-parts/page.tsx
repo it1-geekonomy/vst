@@ -9,7 +9,8 @@ import img5 from "@/app/public/vst-auto-parts/frame5.png";
 import bgImage from "@/app/public/vst-auto-parts/bgimg.jpeg";
 import LocationSection from '@/components/LocationSection';
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
-import Logo from "../public/logos/Logo";
+import gif from "@/app/public/education/vst logo gif.gif"
+
 
 export default function Page() {
   const gradientColor = "rgba(255, 185, 34, 1)";
@@ -486,8 +487,13 @@ export default function Page() {
           <BusinessSectors />
         </div>
         <div className="w-full flex justify-center py-6 sm:py-8 md:py-12 lg:py-20">
-          <Logo />
-        </div>
+
+        <Image
+          src={gif}
+          alt="VST Logo Animation"
+          className="w-[50%] h-[50%] object-contain"
+        />        
+      </div>
       </div>
 
       {/* Add custom CSS for the perspective effect and animations */}
