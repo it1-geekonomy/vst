@@ -93,7 +93,7 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
-      "sales and distribution"?: Array<{
+      "Sales, Service & Parts distribution"?: Array<{
         address: string;
         phone: string | string[];
         email: string | string[];
@@ -132,15 +132,17 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "1. #199, Anna Salai, Chennai-600 002. ",
+            address: "#199, Anna Salai, Chennai-600 002. ",
             phone: "+91 63641 02911",
-            email: ["info@porsche-bengaluru.in","ss@gmail.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"           },
+            email: ["info.citysales@titaniummotors.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62186.793014227944!2d80.2065924!3d13.056375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526617129cac13%3A0x3684f8447a03532e!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747217306800!5m2!1sen!2sin"
+          },
+
           {
-            address: "2. #148, K, Old Mahabalipuram Road,Okkiyam, Thoraipakkam, Chennai-600 096",
+            address: "#148 K, Old Mahabalipuram Road,Okkiyam, Thoraipakkam, Chennai-600 096",
             phone: "+91 44-6649 8181",
             email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747217481341!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -148,16 +150,16 @@ const slides: SlideData[] = [
             address: "Plot #115, Industrial Estate(EEII),Perungudi, Chennai-600 096.",
             phone: "+91 44-4610 8282",
             email: "info.service@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Perungudi,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CPerungudi,+Chennai"
-          },    
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d243.0144022068351!2d80.2484338!3d12.9571013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d10b409895b%3A0xb14f9ec23ada69d8!2sV.S.T%20Titanium%20Motors%20Private%20Limited%20Mercedes%20Benz!5e0!3m2!1sen!2sin!4v1747217696418!5m2!1sen!2sin"
+          }
         ],
 
-        "sales and distribution": [
+        "Sales, Service & Parts distribution": [
           {
-            address: "Plot #115, Industrial Estate(EEII),Perungudi, Chennai-600 096.",
-            phone: "+91 44-4610 8282",
-            email: "info.service@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Perungudi,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CPerungudi,+Chennai"
+            address: "#A9 & A10, Thiru-Vi-Ka Industrial Estate, Guindy, Chennai - 600032.",
+            phone: "+91 90030 26789, +91 90036 93555, +91 96000 67911",
+            email: "info.guindy@titaniummotors.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d971.849043901052!2d80.2094384!3d13.0104245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526774a3022697%3A0xe1ba2886b8f8e5ec!2sVST%20TITANIUM%20MOTORS%20(PARTS%20TRADING%20FOR%20MERCEDES%20BENZ)!5e0!3m2!1sen!2sin!4v1747217731579!5m2!1sen!2sin"
           }
         ]
       },
@@ -179,21 +181,31 @@ const slides: SlideData[] = [
       Chennai: {
         sales: [
           {
-            address: "Old #182, New #237,VST Emerald Anna Salai, Chennai 600006.",
+            address: "Old #182, New #237,VST Emerald, Anna Salai, Chennai - 600 006.",
             phone: "+91 96000 53000",
             email: " info@vstgrandeur.com",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217780062!5m2!1sen!2sin"
           },
         ],
-        service: [
+        "sales and service": [
           {
-            address: "#2E3, Dyavasandra 1st Phase, Whitefield Road, Mahadevapura Post, Bengaluru 560 048",
-            phone: "6361 02911",
-            email: "info@porsche-bengaluru.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            address: " #267/2, By-Pass Road, Poonamalle, Chennai - 600 056.",
+            phone: "+91 44-6636 1373, +91 44-6636 1363",
+            email: "crs.chn@vstgrandeur.com",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217817663!5m2!1sen!2sin"
           },
         ]
       },
+      Coimbatore: {
+        "sales and service": [
+          {
+            address: "#145-1C1, L&T By-pass Road,Oddar Palayam, Ondipudur , Coimbatore - 641 016.",
+            phone: "+91 422-452 4444",
+            email: " info.cbe@vstgrandeur.com, workshop.cbe@vstgrandeur.com",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217854171!5m2!1sen!2sin"
+          },
+        ]
+      }
     }
   },
   {
@@ -212,21 +224,31 @@ const slides: SlideData[] = [
       Chennai: {
         sales: [
           {
-            address: "Old #182, New #237,VST Emerald Anna Salai,Chennai 600006",
+            address: "Old #182, New #237,VST Emerald Anna Salai, Chennai - 600 006.",
             phone: "+91 96000 53000",
             email: " info@vstgrandeur.com",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217925445!5m2!1sen!2sin"
           },
         ],
-        service: [
+        "sales and service": [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            address: " #267/2, By-Pass Road, Poonamalle, Chennai - 600 056.",
+            phone: "+91 44-6636 1373, +91 44-6636 1363",
+            email: "crs.chn@vstgrandeur.com",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217959401!5m2!1sen!2sin"
           },
         ]
       },
+      Coimbatore: {
+        "sales and service": [
+          {
+            address: "#145-1C1, L&T By-pass Road, Oddar Palayam, Ondipudur , Coimbatore - 641 016.",
+            phone: "+91 422-452 4444",
+            email: " info.cbe@vstgrandeur.com, workshop.cbe@vstgrandeur.com", 
+            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217999025!5m2!1sen!2sin"
+          },
+        ]
+      }
     }
   },
   {
@@ -245,18 +267,18 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Supercars Private Limited #22, Sankey Road, Opp, BDA Office Bengaluru  560051. ",
+            address: "VST Supercars Private Limited #22, Sankey Road, Opp. BDA Office, Bengaluru - 560 051. ",
             phone: "+91 63641 02911",
             email: "info@porsche-bengaluru.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6105688613943!2d77.5848628!3d12.9967417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17fe9bf1e903%3A0x1e8042f60610fb34!2sPorsche%20Showroom%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218092398!5m2!1sen!2sin"
           },
         ],
         service: [
           {
             address: "#2E3, Dyavasandra 1st Phase, Whitefield Road, Mahadevapura Post, Bengaluru 560 048",
-            phone: "6361 02911",
+            phone: "+91 63641 02911",
             email: "info@porsche-bengaluru.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6234932445195!2d77.7013255!3d12.995916399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1581493fbbc5%3A0xf725d431b45ab6f7!2sPorsche%20Centre%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218158568!5m2!1sen!2sin"
           },
         ]
       },
@@ -1110,10 +1132,10 @@ const FranchiseSlider = () => {
                           </div>
                         ))}
                         {/* Sales and Distribution */}
-                        {location["sales and distribution"] && location["sales and distribution"].length > 0 && location["sales and distribution"].map((salesDist, idx) => (
+                        {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
                           <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales, Distribution {location["sales and distribution"] && location["sales and distribution"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales, Service & Parts Distribution {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 1 ? `#${idx + 1}` : ''}:
                             </div>
                             <div className="text-white text-lg leading-relaxed mb-4 font-medium">
                               {salesDist.address}<br />
