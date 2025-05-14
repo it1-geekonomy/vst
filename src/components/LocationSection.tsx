@@ -31,8 +31,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
   iconColor = 'black'
 }) => {
   return (
-    <section className="w-full px-4 md:px-8 lg:px-30 xl:px-0 2xl:px-64 flex flex-col md:flex-row items-center justify-center z-10 relative mx-auto">
-      <div className="flex flex-col md:flex-row items-center w-full gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+    <section className="w-full px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32 flex flex-col md:flex-row items-center justify-center z-10 relative mx-auto">
+      <div className="flex flex-col md:flex-row items-center 2xl:justify-center  w-full gap-4 sm:gap-6 md:gap-8 lg:gap-7 xl:gap-20 2xl:gap-20">
         {/* Left section with title and image */}
         <div className="flex flex-col items-center md:items-start">
           <h2
@@ -62,9 +62,9 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-12 lg:gap-16 w-full md:w-auto mt-16 md:mt-24">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-12 lg:gap-10 xl:gap-20 2xl:gap-28 w-full md:w-auto mt-16 md:mt-24">
           {/* Address */}
-          <div className="text-center md:text-left mb-8 md:mb-0 md:mr-8">
+          <div className="text-center md:text-left mb-8">
             <p
               className={`font-roc font-normal ${className}`}
               style={{
@@ -72,12 +72,14 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                 lineHeight: '1.5',
               }}
             >
-              <div className="whitespace-nowrap">{address.street}</div>
-              {address.street2 && <div className="whitespace-nowrap">{address.street2}</div>}
-              {address.street3 && <div className="whitespace-nowrap">{address.street3}</div>}
-              <div className="whitespace-nowrap">{address.city}</div>
-              {!address.city.includes(address.pincode) && address.pincode && <div className="whitespace-nowrap">{address.pincode}</div>}
-              <div className="whitespace-nowrap">{address.state}</div>
+              {address.street}
+              {address.street2 && <><br />{address.street2}</>}
+              {address.street3 && <><br />{address.street3}</>}
+              <br />
+              {address.city}
+              {!address.city.includes(address.pincode) && address.pincode && <>, {address.pincode}</>}
+              <br />
+              {address.state}
             </p>
           </div>
 
@@ -109,7 +111,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     className={`font-roc font-normal ${className}`}
                     style={{
                       fontSize: 'clamp(16px, 2.5vw, 24px)',
-                      lineHeight: '1.5',
+                      lineHeight: '1.7',
                     }}
                   >
                     {phone.replace('📞 ', '')}
