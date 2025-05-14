@@ -336,7 +336,7 @@ const slides: SlideData[] = [
             address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747218927920!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747251086612!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -344,7 +344,7 @@ const slides: SlideData[] = [
             address: "#459, Dhanalakshmi Building, Cottenpet, Bengaluru 560 053",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747250831535!5m2!1sen!2sin"
           },
         ]
       },
