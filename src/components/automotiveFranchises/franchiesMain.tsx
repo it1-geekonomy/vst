@@ -393,7 +393,7 @@ const slides: SlideData[] = [
             address: "VST Central Kia-CPO, CPS Tower Building, #145, Kempegowda Layout, Laggere Ring Road, Near Dhanushri Cycles, Bengaluru 560 058",
             phone: "+91 96069 88134",
             email: ["managercpo.bly@vstcentral-kia.in", "servicemanager.vrl@vstcentral-kia.in"],
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df363fe3c01%3A0x6cd47089f0ab9064!2sVST%20CENTRAL%20KIA%20CERTIFIED%20PRE%20-%20OWNED%20CARS!5e0!3m2!1sen!2sin!4v1747223390388!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df363fe3c01%3A0x6cd47089f0ab9064!2sVST%20CENTRAL%20KIA%20CERTIFIED%20PRE%20-%20OWNED%20CARS!5e0!3m2!1sen!2sin!4v1747223390388!5m2!1sen!2sin"
           }
         ]
       },
@@ -403,7 +403,7 @@ const slides: SlideData[] = [
             address: "Old #182, New #237, Anna Salai, Chennai 600 006",
             phone: "+91 90872 11113",
             email: "salesmanagerch@vstcentral-kia.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31093.718074797078!2d80.2325632!3d13.0538196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b9e01bc651%3A0xb1106c2bec1384e2!2sKIA%20Showroom%20Chennai%20-%20VST%20Central!5e0!3m2!1sen!2sin!4v1747223435630!5m2!1sen!2sin" 
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31093.718074797078!2d80.2325632!3d13.0538196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b9e01bc651%3A0xb1106c2bec1384e2!2sKIA%20Showroom%20Chennai%20-%20VST%20Central!5e0!3m2!1sen!2sin!4v1747223435630!5m2!1sen!2sin"
           },
           {
             address: "#204/187, GR Plaza, North Usman Road, T. Nagar, Chennai 600 017",
@@ -754,7 +754,7 @@ const slides: SlideData[] = [
             address: "#6, St. John's Road, Ulsoor, Bengaluru - 560 042.",
             phone: "+91 80 2559 1999, +91 94498 07080",
             email: "sales.ho@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John&#39;s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747228078632!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John%27s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747248446606!5m2!1sen!2sin"
           },
           {
             address: "#202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru - 560 043.",
@@ -1364,5 +1364,5 @@ const FranchiseSlider = () => {
     </div>
   );
 };
-       
+
 export default FranchiseSlider;
