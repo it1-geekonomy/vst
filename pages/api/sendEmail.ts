@@ -23,61 +23,41 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name: fields.name?.[0] || '',
       email: fields.email?.[0] || '',
       mobile: fields.mobile?.[0] || '',
-      experience: fields.experience?.[0] || '',
-      currentJobTitle: fields.currentJobTitle?.[0] || '',
-      preferredRole: fields.preferredRole?.[0] || '',
-      skills: fields.skills?.[0] || '',
-      industries: fields.industries?.[0] || '',
-      startDate: fields.startDate?.[0] || '',
-      noticePeriod: fields.noticePeriod?.[0] || '',
+      aboutYourself: fields.aboutYourself?.[0] || '',
     };
 
     const html = `
-    <div style="max-width: 600px; margin: auto; padding: 20px; font-family: 'Segoe UI', sans-serif; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #f9f9f9;">
-      <h2 style="text-align: center; color: #333;">New Career Form Submission</h2>
-      <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold; width: 40%;">Name:</td>
-          <td style="padding: 8px 0;">${formData.name}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Email:</td>
-          <td style="padding: 8px 0;">${formData.email}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Mobile:</td>
-          <td style="padding: 8px 0;">${formData.mobile}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Experience:</td>
-          <td style="padding: 8px 0;">${formData.experience} Years</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Current Job Title:</td>
-          <td style="padding: 8px 0;">${formData.currentJobTitle}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Preferred Role:</td>
-          <td style="padding: 8px 0;">${formData.preferredRole}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Skills:</td>
-          <td style="padding: 8px 0;">${formData.skills}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Industries:</td>
-          <td style="padding: 8px 0;">${formData.industries}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Start Date:</td>
-          <td style="padding: 8px 0;">${formData.startDate}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; font-weight: bold;">Notice Period:</td>
-          <td style="padding: 8px 0;">${formData.noticePeriod}</td>
-        </tr>
-      </table>
-      <p style="margin-top: 20px; text-align: center; font-size: 13px; color: #888;">Submitted via Career Form • VST</p>
+    <div style="max-width: 600px; margin: auto; padding: 30px; font-family: 'Segoe UI', Arial, sans-serif; border: 1px solid #e0e0e0; border-radius: 12px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h1 style="color: #2c3e50; margin: 0; font-size: 24px; font-weight: 600;">New Career Application</h1>
+        <p style="color: #7f8c8d; margin: 10px 0 0; font-size: 16px;">A new candidate has submitted their application</p>
+      </div>
+
+      <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 25px;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 15px; color: #2c3e50;">
+          <tr>
+            <td style="padding: 12px 0; font-weight: 600; width: 40%; border-bottom: 1px solid #e9ecef;">Full Name</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">${formData.name}</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 0; font-weight: 600; border-bottom: 1px solid #e9ecef;">Email Address</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">${formData.email}</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 0; font-weight: 600; border-bottom: 1px solid #e9ecef;">Mobile Number</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">${formData.mobile}</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 0; font-weight: 600;">About Candidate</td>
+            <td style="padding: 12px 0;">${formData.aboutYourself}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="text-align: center; padding-top: 20px; border-top: 1px solid #e9ecef;">
+        <p style="margin: 0; font-size: 13px; color: #95a5a6;">This is an message from VST Careers Portal</p>
+        <p style="margin: 5px 0 0; font-size: 12px; color: #bdc3c7;">© ${new Date().getFullYear()} VST.</p>
+      </div>
     </div>
   `;
     const msg: any = {
