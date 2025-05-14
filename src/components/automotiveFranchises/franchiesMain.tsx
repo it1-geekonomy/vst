@@ -873,7 +873,7 @@ const FranchiseSlider = () => {
   const currentLocations = slides[currentSlide].locations;
 
   return (
-    <div className="relative w-full min-h-screen  lg:mt-[0rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen  lg:mt-[-3rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
@@ -899,7 +899,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 w-[50%] lg:w-[92%] h-[90%] rounded-br-[120px] overflow-hidden"
+                className="absolute left-0 w-[50%] lg:w-[92%] h-full rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
