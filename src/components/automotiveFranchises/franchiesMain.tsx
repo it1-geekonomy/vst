@@ -1372,5 +1372,5 @@ const FranchiseSlider = () => {
     </div>
   );
 };
-        
-export de fault FranchiseSlider;
+         
+export default FranchiseSlider;
