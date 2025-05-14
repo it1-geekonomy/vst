@@ -380,39 +380,22 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "#1049, Poonamallee High Road, Arumbakkam, Chennai 600 106",
-            phone: " +91 73389 77522 , +91 93840 58820",
-            email: "ace.ambkm@vstmotors.com",
+            address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
+            phone: "+91 99024 88899",
+            email: " info@vst-maserati.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
+            phone: "+91 99024 88899",
+            email: "info@vstavventura.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           },
         ]
       },
-      "Tamil Nadu": {
-        sales: [
-          {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-        ],
-        service: [
-          {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-        ]
-      }
+    
     }
   },
   {
@@ -727,7 +710,7 @@ const FranchiseSlider = () => {
               <h2 className="text-white font-rocWide font-light text-clamp-67  text-start">
                 Our
                 <br />
-                Automative
+                Automotive
                 <br />
                 Franchises
               </h2>
