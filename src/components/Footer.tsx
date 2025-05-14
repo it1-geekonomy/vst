@@ -59,7 +59,7 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                   Chennai Office
                 </h4>
                 <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left whitespace-normal">#199, Annasalai,</p>
-                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Chennai-600 002.</p>
+                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Chennai - 600 002.</p>
               </div>
             </div>
           </div>
