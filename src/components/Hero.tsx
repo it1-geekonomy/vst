@@ -476,17 +476,16 @@ const Hero = () => {
                   {/* Flex container with fixed width for consistent alignment */}
                   <div className="-rotate-90 transform flex items-center justify-start" style={{ width: '320px' }}>
                     {/* Icon placed at the beginning of text, counter-rotated to appear straight */}
-                                       {/* Icon placed at the beginning of text, counter-rotated to appear straight */}
-                                       {slide.icon && (
-                      <div className="rotate-90 mr-3 w-8 flex justify-center">
+                    {slide.icon && (
+                      <div className="rotate-90 mr-3 w-12 flex justify-center">
                         {React.createElement(slide.icon, {
-                          width: 30,
-                          height: 30,
+                          width: 60,
+                          height: 60,
                           className: "opacity-100"
                         })}
                       </div>
                     )}
-                    {!slide.icon && <div className="w-8 mr-3"></div>}
+                    {!slide.icon && <div className="w-12 mr-3"></div>}
                     <span 
 
                       className="text-white font-roc font-semibold whitespace-nowrap text-clamp-36"
