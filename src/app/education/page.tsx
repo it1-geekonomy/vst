@@ -33,13 +33,13 @@ export default function EducationPage() {
 
   // Gallery images with varying heights
   const galleryImages: GalleryImage[] = [
-    { id: 1, src: img2, alt: 'Student learning', height: '86%' },
-    { id: 2, src: img7, alt: 'Students outdoors', height: '81%' },
-    { id: 3, src: img5, alt: 'Students on stairs', height: '83%' },
-    { id: 4, src: img3, alt: 'School building', height: '81%' },
-    { id: 5, src: img4, alt: 'Robotics project', height: '88%' },
-    { id: 6, src: img1, alt: 'Teacher interacting with students', height: '81%' },
-    { id: 7, src: img6, alt: 'Students in uniform', height: '88%' },
+    { id: 1, src: img2, alt: 'Student learning', height: '92%' },
+    { id: 2, src: img7, alt: 'Students outdoors', height: '88%' },
+    { id: 3, src: img5, alt: 'Students on stairs', height: '90%' },
+    { id: 4, src: img3, alt: 'School building', height: '88%' },
+    { id: 5, src: img4, alt: 'Robotics project', height: '94%' },
+    { id: 6, src: img1, alt: 'Teacher interacting with students', height: '88%' },
+    { id: 7, src: img6, alt: 'Students in uniform', height: '94%' },
   ];
 
   // Function to navigate to the next image
@@ -101,7 +101,7 @@ export default function EducationPage() {
       <div className='w-full'>
         {/* Hero section with logo */}
         <section className="w-full flex justify-center items-center z-10 relative mb-0">
-          <div className="w-40 h-32 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 xl:w-72 relative">
+          <div className="w-56 h-48 sm:w-64 sm:h-56 md:w-72 md:h-64 lg:w-80 xl:w-96 relative">
             <div className="w-full h-full flex justify-center items-center">
               <Image
                 src={EducationLogo}
@@ -231,7 +231,7 @@ export default function EducationPage() {
                 className={`relative overflow-hidden transition-all duration-1000 ease-in-out ${showAllImages ? 'flex-[3]' : index === activeDesktopImage ? 'flex-[35]' : 'flex-[3]'
                   }`}
                 style={{
-                  height: showAllImages ? image.height : index === activeDesktopImage ? '86%' : image.height,
+                  height: showAllImages ? image.height : index === activeDesktopImage ? '94%' : image.height,
                   transition: 'all 1s ease-in-out'
                 }}
               >
@@ -270,8 +270,8 @@ export default function EducationPage() {
         <section className="w-full px-4 md:px-8 lg:px-32 pb-2 md:pb-2 lg:pb-2 z-10  mx-auto">
           <div className="text-center mx-auto">
             <p className="text-clamp-28 font-normal font-roc text-justify whitespace-pre-wrap">
-              At SKEI, we believe that every child is unique, talented and has the inherent ability to learn. Our educational philosophy emphasises a learner-centric approach wherein we cater to the diverse learning needs of students. Guided by the principles of Rabindranath Tagore and Benjamin Bloom, our school's approach to learning includes differentiated learning, inquiry-based learning, project based learning, collaborative learning and hands-on learning. These approaches, combined with our unique teaching methodologies, help in developing the 21st century skills in students as laid down by NEP 2020. We focus on a deep understanding of our children from their young age. Through this 'whole-child' approach, each child is carefully nurtured and their learning experiences individually personalized which ignites the spark of learning. It inspires them to be aware, be free of conditioned thoughts and most importantly be responsible for themselves, to nature and to society. It ensures our children chase excellence in whichever fields they choose to excel in.{'\n\n'}
-              Founded in 1931, SKEI is strategically located in Edward road, off Queens Road in close proximity to Cubbon Park Metro Station and Cantonment Railway Station. Established by the founders of the VST Group, which is now a 110 year old business conglomerate with Premium Automobile Dealerships, Finance, Real Estate, and is a leading manufacturer of Agricultural Machinery, our children are assured of access to education of the highest quality, the best of teachers and state-of-the-art facilities that enables them to thrive as students with a thirst for and the confidence to take on challenges and make a difference in their lives.
+              SKEI School is a heritage institution with a legacy of over 100 years, founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar - a visionary entrepreneur and philanthropist who established the school after facing challenges in securing education for his daughters. Rooted in a learner-centric philosophy, SKEI blends tradition with transformation, offering a nurturing environment that encourages both critical and creative thinking. Our century-old campus stands as a symbol of inclusive, values-driven education where academic excellence goes hand-in-hand with empathy, integrity, and leadership.{'\n\n'}
+              As envisioned by our founder, SKEI continues to be "a sacred place from which girls and boys shall take the highest aspirations to lead better, grander, and more fulfilling lives."
             </p>
           </div>
         </section>
@@ -279,12 +279,12 @@ export default function EducationPage() {
         <div className="w-full px-4 md:px-8 lg:px-30 mb-12 mt-8 font-normal font-roc text-justify">
           <div
             style={{
-              width: 300,
-              height: 50,
+              width: 360,
+              height: 60,
               borderRadius: 5,
               background: '#FEBF3D',
-              padding: '12px 32px',
-              fontSize: 20,
+              padding: '16px 40px',
+              fontSize: 24,
               color: '#000',
               letterSpacing: 1,
               boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
@@ -308,26 +308,25 @@ export default function EducationPage() {
         </div>
       </div>
 
-
       {/* Our Location section - using the new component */}
-      <div className="-ml-80 sm:-ml-[28rem] md:-ml-[36rem] lg:-ml-[44rem]">
-      <LocationSection
-        locationImage="education/educational location.png"
-        address={{
-          street: "Edward Road,",
-          street2: "Off Queens Road,",
-          city: "Bangalore-560 001",
-          state: "Karnataka.",
-          pincode: ""       
-        }}
-        phoneNumbers={[
-          '+91 80 2234 1011',
-          '+91 80 2226 3022',
-          '+91 99807 97527'
-        ]}
-        googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-      />
-        </div>
+      <div className="w-full px-4 md:px-4 lg:px-4">
+        <LocationSection
+          locationImage="education/educational location.png"
+          address={{
+            street: "Edward Road,",
+            street2: "Off Queens Road,",
+            city: "Bangalore-560 001",
+            state: "Karnataka.",
+            pincode: ""       
+          }}
+          phoneNumbers={[
+            '+91 80 2234 1011',
+            '+91 80 2226 3022',
+            '+91 99807 97527'
+          ]}
+          googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+        />
+      </div>
       <div className="-mt-20">
         <div className="transform scale-110">
           <BusinessSectorsUpdated />
