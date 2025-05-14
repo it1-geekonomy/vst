@@ -358,12 +358,12 @@ function AboutUsPage() {
           <div className="flex flex-col font-normal ">
             
             <div>
-              <p className="text-justify hyphens-auto font-roc text-sm md:text-base text-clamp-24">
+              <p className="text-justify hyphens-auto font-roc font-normal text-sm md:text-base text-clamp-24">
                 Founded in 1911, VST Group is a leading conglomerate headquartered in Bangalore, known for
                 its enduring legacy of excellence, innovation, and sustainable growth. The group has been
                 growing ever since, expanding its presence across four core verticals:
               </p>
-              <ul className="list-disc pl-6 mt-3 mb-4 space-y-1 font-roc text-sm md:text-base text-clamp-24">
+              <ul className="list-disc pl-6 mt-3 mb-4 space-y-1 text-sm md:text-base text-clamp-24">
                 <li>Automotive Franchise</li>
                 <li>Manufacturing</li> 
                 <li>OE Parts Distribution</li>
@@ -396,11 +396,11 @@ function AboutUsPage() {
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left mb-5">
-              <h2 className="text-3xl md:text-4xl text-white mb-2 font-rocWide">
+              <h2 className="text-3xl md:text-4xl text-white mb-2 font-roc">
                 Progress with Purpose.
               </h2>
-              <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-rocWide">Impact with Vision</h3>
-              <button className="bg-yellow-400 text-black px-6 md:px-8 py-2 md:py-3 rounded text-base md:text-lg font-medium">
+              <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-roc">Impact with Vision</h3>
+              <button className="bg-yellow-400 text-black px-6 md:px-8 py-2 md:py-3 rounded text-base md:text-lg ">
                 Join Us
               </button>
             </div>
