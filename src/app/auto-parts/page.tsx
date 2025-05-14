@@ -8,8 +8,8 @@ import img4 from "@/app/public/vst-auto-parts/frame4.png";
 import img5 from "@/app/public/vst-auto-parts/frame5.png";
 import bgImage from "@/app/public/vst-auto-parts/bgimg.jpeg";
 import LocationSection from '@/components/LocationSection';
-import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
 import gif from "@/app/public/education/vst logo gif.gif";
+import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 
 export default function Page() {
   const gradientColor = "rgba(255, 185, 34, 1)";
@@ -480,6 +480,7 @@ export default function Page() {
                 `,
           }}
         />
+        
         <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-24">
           {/* Company information section */}
           <div className="mb-6 sm:mb-8 lg:mb-10 text-black w-full text-justify">
@@ -488,7 +489,7 @@ export default function Page() {
               extra mile in providing effective, timely after-sales service with
               quick access to original spare parts.
             </p>
-            <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-xl leading-[1.6]">
+            <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-xl 2xl:text-[30px] leading-[1.6]">
               VST Auto Parts supply Tata Motors parts across Tamil Nadu, with
               the central warehouse spanning 15,000 square feet in Poonamallee,
               Chennai. This the central supply centre for a network of 2
@@ -517,10 +518,10 @@ export default function Page() {
                googleMapsUrl="https://www.google.com/maps/place/VST+Motors/@13.0626463,80.2615032,17z/data=!3m1!5s0x3a52661712800ddd:0x9763c5b415119093!4m14!1m7!3m6!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!2sVST+Motors!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7!3m5!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
              />
           </div>
-        <div className="relative z-10 w-full overflow-visible">
-          <BusinessSectors />
+        <div className="relative z-10 w-full overflow-visible -mt-20">
+          <BusinessSectorsUpdated/>
         </div>
-        <div className="relative w-full flex justify-center py-6 sm:py-8 md:py-12 lg:py-20 z-20">
+        <div className="relative w-full flex justify-center z-20 -mt-40">
           <Image
             src={gif}
             alt="VST Logo Animation"
