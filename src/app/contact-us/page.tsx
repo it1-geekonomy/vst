@@ -146,7 +146,7 @@ export default function Page() {
                 <label className="text-white font-roc mb-4 block">Message</label>
                 <input
                   {...register('message', { required: true })}
-                  placeholder="Write your message in 500 words.."
+                  placeholder="Write your message in 400 words.."
                   className="w-full bg-transparent border-b border-white pb-2 focus:outline-none text-white"
                 />
                 {errors.message && (
