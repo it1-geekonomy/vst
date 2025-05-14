@@ -480,8 +480,8 @@ const Hero = () => {
                                        {slide.icon && (
                       <div className="rotate-90 mr-3 w-8 flex justify-center">
                         {React.createElement(slide.icon, {
-                          width: 28,
-                          height: 28,
+                          width: 30,
+                          height: 30,
                           className: "opacity-100"
                         })}
                       </div>
