@@ -115,7 +115,7 @@ export default function EducationPage() {
         {/* Gallery section with varying height strips */}
         <section className="w-full px-4 sm:px-6 md:px-8 lg:px-24 h-auto md:h-[400px] lg:h-[450px] xl:h-[500px] mb-2 md:mb-2 lg:mb-2 z-10 relative mx-auto -mt-12">
           {/* Background image with light orange glow - ONLY in this section */}
-          <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ isolation: 'isolate', zIndex: -1 }}>
+          <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ isolation: 'isolate', zIndex: 0 }}>
             <Image
               src={Scurve}
               alt="Background orange glow"
@@ -127,14 +127,14 @@ export default function EducationPage() {
                 transform: 'scale(1.4)',
                 width: '100%',
                 height: '100%',
-                filter: 'hue-rotate(5deg) brightness(1.2) opacity(0.7)',
+                filter: 'hue-rotate(5deg) brightness(1.0) opacity(0.3)',
               }}
               quality={100}
             />
           </div>
 
           {/* Improved Mobile Gallery - Card Swipe Animation */}
-          <div className="block md:hidden w-full aspect-[5/3] max-h-[300px] sm:max-h-[400px] relative z-10">
+          <div className="block md:hidden w-full aspect-[5/3] max-h-[300px] sm:max-h-[400px] relative z-20">
             {/* Main featured image */}
             <div className="relative w-full h-full overflow-hidden shadow-xl flex items-center justify-center bg-black/20">
               {galleryImages.map((image, index) => (
@@ -224,7 +224,7 @@ export default function EducationPage() {
           </div>
 
           {/* Desktop Layout - Accordion Gallery */}
-          <div className="hidden md:flex w-full h-[85%] items-end gap-2 md:gap-3 lg:gap-4 relative z-10">
+          <div className="hidden md:flex w-full h-[85%] items-end gap-2 md:gap-3 lg:gap-4 relative z-20">
             {galleryImages.map((image, index) => (
               <div
                 key={image.id}
@@ -270,8 +270,9 @@ export default function EducationPage() {
         <section className="w-full px-4 md:px-8 lg:px-32 pb-2 md:pb-2 lg:pb-2 z-10  mx-auto">
           <div className="text-center mx-auto">
             <p className="text-clamp-28 font-normal font-roc text-justify whitespace-pre-wrap">
-              SKEI School is a heritage institution with a legacy of over 100 years, founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar - a visionary entrepreneur and philanthropist who established the school after facing challenges in securing education for his daughters. Rooted in a learner-centric philosophy, SKEI blends tradition with transformation, offering a nurturing environment that encourages both critical and creative thinking. Our century-old campus stands as a symbol of inclusive, values-driven education where academic excellence goes hand-in-hand with empathy, integrity, and leadership.{'\n\n'}
-              As envisioned by our founder, SKEI continues to be "a sacred place from which girls and boys shall take the highest aspirations to lead better, grander, and more fulfilling lives."
+              SKEI, Bangalore is a renowned CBSE institution with a rich legacy of over 100 years, committed to providing a holistic and innovative education. Founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar—a visionary entrepreneur and philanthropist—the school was born out of a mission to address the lack of educational opportunities for girls, including his own daughters.{'\n\n'}
+              Rooted in a learner-centric philosophy, SKEI blends tradition with transformation, offering a nurturing environment that fosters both critical and creative thinking. The school's mission is to empower students with 21st-century skills, preparing them to excel in a global context while emphasizing values, leadership, and a passion for lifelong learning.{'\n\n'}
+              Our century-old campus stands as a symbol of inclusive, values-driven education, where academic excellence goes hand-in-hand with empathy, integrity, and leadership. As envisioned by our founder, SKEI continues to be "a sacred place from which girls and boys shall take the highest aspirations to lead better, grander, and more fulfilling lives."
             </p>
           </div>
         </section>
@@ -303,8 +304,8 @@ export default function EducationPage() {
               pincode: ""       
             }}
             phoneNumbers={[
-              '+91 80 2234 1011',
-              '+91 80 2226 3022',
+              '+91 80-2234 1011',
+              '+91 80-2226 3022',
               '+91 99807 97527'
             ]}
             googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
