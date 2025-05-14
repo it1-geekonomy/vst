@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import EducationIcon from '@/app/public/common/BusinessSectorIcons/EducationIcon.png';
+import EducationIcon from '@/app/public/education/Education.png';
 import Auto from '@/app/public/education/Auto Parts.png';
 import ManufacturingIcon from '@/app/public/education/Manufacturing.png';
 import Automobile from '@/app/public/education/Auto mobile.png';
@@ -37,8 +37,8 @@ const BusinessSectorsUpdated = () => {
             )}
             {!isManufacturePage && (
               <Link href="/manufacture" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-                <div className="flex items-end justify-center h-[120px] w-[120px]">
-                  <Image src={ManufacturingIcon} alt="Manufacturing" width={120} height={120} className="object-contain" />
+                <div className="flex items-end justify-center h-[130px] w-[130px] -mt-3">
+                  <Image src={ManufacturingIcon} alt="Manufacturing" width={135} height={135} className="object-contain" />
                 </div>
               </Link>
             )}
@@ -51,8 +51,9 @@ const BusinessSectorsUpdated = () => {
             )}
             {!isEducationPage && (
               <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-                <Image src={EducationIcon} alt="Education" />
-                <span className="mt-2 text-xs sm:text-sm"></span>
+                <div className="flex items-end justify-center h-[100px] w-[100px] pt-30">
+                  <Image src={EducationIcon} alt="Education" width={100} height={100} className="object-contain" />
+                </div>
               </Link>
             )}
           </div>
@@ -72,8 +73,8 @@ const BusinessSectorsUpdated = () => {
               {!isManufacturePage && (
                 <Link href="/manufacture" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity snap-center w-[80vw]">
                   <div className="w-full flex justify-center">
-                    <div className="flex items-end justify-center h-[120px] w-[120px]">
-                      <Image src={ManufacturingIcon} alt="Manufacturing" width={120} height={120} className="object-contain" />
+                    <div className="flex items-end justify-center h-[130px] w-[130px] -mt-3">
+                      <Image src={ManufacturingIcon} alt="Manufacturing" width={135} height={135} className="object-contain" />
                     </div>
                   </div>
                 </Link>
@@ -90,9 +91,10 @@ const BusinessSectorsUpdated = () => {
               {!isEducationPage && (
                 <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity snap-center w-[80vw]">
                   <div className="w-full flex justify-center">
-                    <Image src={EducationIcon} alt="Education" />
+                    <div className="flex items-end justify-center h-[100px] w-[100px] pt-30">
+                      <Image src={EducationIcon} alt="Education" width={100} height={100} className="object-contain" />
+                    </div>
                   </div>
-                  <span className="mt-2 text-xs sm:text-sm"></span>
                 </Link>
               )}
             </div>
