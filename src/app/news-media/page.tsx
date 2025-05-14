@@ -67,7 +67,7 @@ export default function NewsMedia() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#2E2E2E]">
       <div className="absolute top-0 left-0 w-full h-[80px] bg-gradient-to-b from-[#2E2E2E] via-[#2E2E2E]/80 to-transparent flex items-center justify-center z-30 pointer-events-none pt-20">
-        <h1 className="text-white text-5xl md:text-6xl font-bold font-poppins drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
+        <h1 className="text-white text-5xl md:text-6xl font-bold font-roc drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
       </div>
       {/* Hero Section */}
       <section className="relative w-full h-[110vh] pt-[10px] mt-[40px]">
@@ -97,7 +97,7 @@ export default function NewsMedia() {
                       {headlines.map((headline, index) => (
                         <h1 
                           key={index}
-                          className={`text-white lg:w-[35rem] w-full text-4xl sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-6xl leading-tight tracking-tight font-poppins font-bold absolute transition-all duration-1000 ${
+                          className={`text-white lg:w-[35rem] w-full text-4xl sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-6xl leading-tight tracking-tight font-roc font-bold absolute transition-all duration-1000 ${
                             currentIndex === index 
                               ? "opacity-100 translate-x-0" 
                               : index === (currentIndex + 1) % headlines.length || (currentIndex === headlines.length - 1 && index === 0)
@@ -175,7 +175,7 @@ export default function NewsMedia() {
               <div className="hidden lg:flex w-[45%] xl:w-[40%] flex-col justify-end pr-10 pb-18">
                 <div className="bg-black/70 h-[85vh] w-full overflow-hidden flex flex-col bg-white/10 backdrop-blur-sm">
                   <div className="flex flex-col h-full px-12 pt-16 pb-8">
-                    <h2 className="text-4xl font-bold mb-8 text-white font-poppins">Popular this week</h2>
+                    <h2 className="text-4xl font-bold mb-8 text-white font-roc">Popular this week</h2>
                     <div className="space-y-4 flex-grow overflow-y-auto hideScrollbar">
                       {cards.map((item, index) => (
                         <div key={index} className="flex gap-1 items-center justify-center h-28 transition-all duration-200 hover:bg-yellow-500/20 cursor-pointer rounded">

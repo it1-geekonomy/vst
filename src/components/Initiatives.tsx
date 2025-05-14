@@ -256,7 +256,7 @@ export default function Initiatives() {
           <h2 className="text-3xl text-white font-roc font-semibold mb-2">
             Our Initiatives
           </h2>
-          <p className="text-gray-200 text-sm font-poppins font-light">
+          <p className="text-gray-200 text-sm font-roc font-light">
             At VST Group, our Corporate Social Responsibility (CSR) initiatives
             are rooted in a deep sense of purpose and commitment to creating
             lasting, positive change. We believe that our success is intertwined
@@ -284,7 +284,7 @@ export default function Initiatives() {
                 )
               }
             >
-              <h3 className={`text-xl text-white font-poppins font-medium`}>
+              <h3 className={`text-xl text-white font-roc font-medium`}>
                 {initiative.title}
               </h3>
               <span className="text-white text-2xl">
@@ -310,7 +310,7 @@ export default function Initiatives() {
                     className="object-cover"
                   />
                 </div>
-                <p className="text-white text-sm font-poppins font-light">
+                <p className="text-white text-sm font-roc font-light">
                   {initiative.description}
                 </p>
               </div>
