@@ -489,7 +489,7 @@ export default function Page() {
               extra mile in providing effective, timely after-sales service with
               quick access to original spare parts.
             </p>
-            <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-xl leading-[1.6]">
+            <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-xl 2xl:text-[30px] leading-[1.6]">
               VST Auto Parts supply Tata Motors parts across Tamil Nadu, with
               the central warehouse spanning 15,000 square feet in Poonamallee,
               Chennai. This the central supply centre for a network of 2
