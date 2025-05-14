@@ -673,7 +673,7 @@ const slides: SlideData[] = [
       sales: {
         sales: [
           {
-            address: "VW Palace Cross #1, Palace Cross Road, Bengaluru - 560 020.",
+            address: "VW Palace Cross #1, Palace Cross Road, \nBengaluru - 560 020.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.600293612716!2d77.5856699!3d12.9973978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16471a670e77%3A0xa3b3b7d52a5f3498!2sVolkswagen%20Palace%20Cross%20Bangalore%20-%20Showroom!5e0!3m2!1sen!2sin!4v1747227805300!5m2!1sen!2sin"
@@ -681,13 +681,13 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "VW Rajajinagar, #1/1 Kodi Street, 4th Main Rajajinagar, Next to Venus Int School, Bengaluru - 560 010.",
+            address: "VW Rajajinagar, #1/1 Kodi Street, 4th \nMain Rajajinagar, Next to Venus Int \nSchool, Bengaluru - 560 010.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8569045788895!2d77.5604245!3d12.981002799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df640156a91%3A0x325ed398bf8b8612!2sVolkswagen%20Palace%20Cross%20-%20Rajajinager!5e0!3m2!1sen!2sin!4v1747227847236!5m2!1sen!2sin"
           },
           {
-            address: "VW Palace Cross, #69/2, Begalagunte, Hesarghatta Main Road, 8th Mile, T.Dasarahalli, Bengaluru - 560 057.",
+            address: "VW Palace Cross, #69/2, Begalagunte, \nHesarghatta Main Road, 8th Mile, \nT.Dasarahalli, Bengaluru - 560 057.",
             phone: "+91 96866 01249",
             email: "crhhsrg@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.720216998035!2d77.5078525!3d13.053472600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae232cd37c0e0d%3A0x1a89d7aeb69240c1!2sVolkswagen%20Palace%20Cross%20Hesargatta%20-%20Volkswagen!5e0!3m2!1sen!2sin!4v1747227892497!5m2!1sen!2sin"
@@ -695,7 +695,7 @@ const slides: SlideData[] = [
         ],
         "sales & service": [
           {
-            address: "VW Mysore Road, #26/2 & 27/2, Kenchanahalli Village, Kengeri Hobli, Mysore Road, Bengaluru - 560 057.",
+            address: "VW Mysore Road, #26/2 & 27/2, \nKenchanahalli Village, Kengeri Hobli, \nMysore Road, Bengaluru - 560 057.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.3333016634388!2d77.5030693!3d12.9291368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ef00026b7f3%3A0xc01a322d21f9de9b!2sVolkswagen%20Mysore%20Road%20-%20Sales%20%26%20Service!5e0!3m2!1sen!2sin!4v1747227650015!5m2!1sen!2sin"
