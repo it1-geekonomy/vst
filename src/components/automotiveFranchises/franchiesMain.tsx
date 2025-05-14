@@ -336,7 +336,7 @@ const slides: SlideData[] = [
             address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747218927920!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747251086612!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -344,7 +344,7 @@ const slides: SlideData[] = [
             address: "#459, Dhanalakshmi Building, Cottenpet, Bengaluru 560 053",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747250831535!5m2!1sen!2sin"
           },
         ]
       },
@@ -1157,48 +1157,52 @@ const FranchiseSlider = () => {
                           </div>
                         )}
                         {/* Service */}
-                        {location.service && location.service.length > 0 && location.service.map((service, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-service-${idx}`} className="hide-scrollbar mb-6">
+                        {location.service && location.service.length > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Service {Array.isArray(location.service) && location.service.length > 1 ? `#${idx + 1}` : ''}:
+                              Service:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {service.address}<br />
-                              {Array.isArray(service.phone) ? (
-                                service.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {service.phone}</div>
-                              )}
-                              {Array.isArray(service.email) ? (
-                                service.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {service.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Service Location Map ${idx + 1}`}
-                                src={service.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location.service.map((service, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-service-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {service.address}<br />
+                                  {Array.isArray(service.phone) ? (
+                                    service.phone.map((p, i) => (
+                                      <div key={i} className="mt-1">📞 {p}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">📞 {service.phone}</div>
+                                  )}
+                                  {Array.isArray(service.email) ? (
+                                    service.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {service.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Service Location Map ${idx + 1}`}
+                                    src={service.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        )}
                         {/* Sales and Service */}
                         {location["sales & service"] && location["sales & service"].length > 0 && location["sales & service"].map((salesService, idx) => (
                           <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales & Service {location["sales & service"] && location["sales & service"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales & Service:
                             </div>
                             <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                               {salesService.address}<br />
@@ -1271,81 +1275,89 @@ const FranchiseSlider = () => {
                           </div>
                         ))}
                         {/* Pre-Owned Cars */}
-                        {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 0 && location["Pre-Owned Cars"].map((preOwned, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-preowned-${idx}`} className="hide-scrollbar mb-6">
+                        {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Pre-Owned Cars {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 1 ? `#${idx + 1}` : ''}:
+                              Pre-Owned Cars:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {preOwned.address}<br />
-                              {Array.isArray(preOwned.phone) ? (
-                                preOwned.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {preOwned.phone}</div>
-                              )}
-                              {Array.isArray(preOwned.email) ? (
-                                preOwned.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {preOwned.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Pre-Owned Cars Map ${idx + 1}`}
-                                src={preOwned.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location["Pre-Owned Cars"].map((preOwned, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-preowned-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {preOwned.address}<br />
+                                  {Array.isArray(preOwned.phone) ? (
+                                    preOwned.phone.map((p, i) => (
+                                      <div key={i} className="mt-1">📞 {p}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">📞 {preOwned.phone}</div>
+                                  )}
+                                  {Array.isArray(preOwned.email) ? (
+                                    preOwned.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {preOwned.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Pre-Owned Cars Map ${idx + 1}`}
+                                    src={preOwned.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        )}
                         {/* Service and Parts */}
-                        {location["service and parts"] && (location["service and parts"]?.length ?? 0) > 0 && location["service and parts"].map((serviceParts, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-serviceparts-${idx}`} className="hide-scrollbar mb-6">
+                        {location["service and parts"] && (location["service and parts"]?.length ?? 0) > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Service, Parts {(location["service and parts"]?.length ?? 0) > 1 ? `#${idx + 1}` : ''}:
+                              Service, Parts:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {serviceParts.address}<br />
-                              {Array.isArray(serviceParts.phone) ? (
-                                serviceParts.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {serviceParts.phone}</div>
-                              )}
-                              {Array.isArray(serviceParts.email) ? (
-                                serviceParts.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {serviceParts.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Service and Parts Map ${idx + 1}`}
-                                src={serviceParts.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location["service and parts"].map((serviceParts, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-serviceparts-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {serviceParts.address}<br />
+                                  {Array.isArray(serviceParts.phone) ? (
+                                    serviceParts.phone.map((p, i) => (
+                                      <div key={i} className="mt-1">📞 {p}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">📞 {serviceParts.phone}</div>
+                                  )}
+                                  {Array.isArray(serviceParts.email) ? (
+                                    serviceParts.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {serviceParts.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Service and Parts Map ${idx + 1}`}
+                                    src={serviceParts.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        )}
                       </>
                     );
                   })()}

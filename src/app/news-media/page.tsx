@@ -49,7 +49,7 @@ export default function NewsMedia() {
     },
     {
       image: hcard2,
-      alt: "Latest Models",
+      alt: "Latesaat Models",
       // title: "We Are Now Open",
       text: "A special moment from our Chennai Finance Team, who surprised our Chairman, Arun Surendra, with a thoughtful token of appreciation.",
       link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
