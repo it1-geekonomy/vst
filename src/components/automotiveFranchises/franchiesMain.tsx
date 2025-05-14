@@ -244,8 +244,8 @@ const slides: SlideData[] = [
           {
             address: "#145-1C1, L&T By-pass Road, Oddar Palayam, Ondipudur , Coimbatore - 641 016.",
             phone: "+91 422-452 4444",
-            email: " info.cbe@vstgrandeur.com, workshop.cbe@vstgrandeur.com", 
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217999025!5m2!1sen!2sin"
+            email: " info.cbe@vstgrandeur.com, workshop.cbe@vstgrandeur.com",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217999025!5m2!1sen!2sin"
           },
         ]
       }
@@ -278,7 +278,7 @@ const slides: SlideData[] = [
             address: "#2E3, Dyavasandra 1st Phase, Whitefield Road, Mahadevapura Post, Bengaluru 560 048",
             phone: "+91 63641 02911",
             email: "info@porsche-bengaluru.in",
-            map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6234932445195!2d77.7013255!3d12.995916399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1581493fbbc5%3A0xf725d431b45ab6f7!2sPorsche%20Centre%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218158568!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6234932445195!2d77.7013255!3d12.995916399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1581493fbbc5%3A0xf725d431b45ab6f7!2sPorsche%20Centre%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218158568!5m2!1sen!2sin"
           },
         ]
       },
@@ -515,13 +515,13 @@ const slides: SlideData[] = [
           {
             address: "Head Office, #1, VST Vistas, Palace Cross Rd, Chakravarthy Layout, Jayamahal, Bengaluru - 560 020.",
             phone: "+91 88844 98957",
-            email: "asm@india-garage.in, jeevanprasad@india-garage.in, kalyankumarp@india-garage.in",
+            email: ["asm@india-garage.in", "jeevanprasad@india-garage.in", "kalyankumarp@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae163883f74f7d%3A0x4385e2cd7037dce4!2sMahindra%20India%20Garage%20-%20Palace%20Cross%20Road!5e0!3m2!1sen!2sin!4v1747211520843!5m2!1sen!2sin"
           },
           {
             address: "#110/110/10, Lalbagh Main Road, Near Urvasi Theatre, Bengaluru - 560 043.",
             phone: "+91 80502 90512",
-            email: "sm.lalbagh@india-garage.in, karthiks@india-garage.in",
+            email: ["sm.lalbagh@india-garage.in", "karthiks@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e77446713f%3A0x859a28fb0fd3f809!2sMahindra%20India%20Garage%20-%20Lal%20Bagh%20Road!5e0!3m2!1sen!2sin!4v1747211878143!5m2!1sen!2sin"
           },
           {
@@ -599,7 +599,7 @@ const slides: SlideData[] = [
 
           {
             address: "#53/10, Madanayakanahalli Village, Dasanapura Hobli, Bangalore - 562 162.",
-            phone: " +91 98423 19820 , +91 98424 10847",
+            phone: ["+91 98423 19820", "+91 98424 10847"],
             email: "tryevdsales@vstmotors.com",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7773.1723952034945!2d77.4508649!3d13.061991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae24a8f3ae6a4b%3A0x5714d99795576775!2sMahindra%20India%20Garage%20-%20Madanayakanahalli%20Workshop!5e0!3m2!1sen!2sin!4v1747213844410!5m2!1sen!2sin"
           },
@@ -611,7 +611,7 @@ const slides: SlideData[] = [
           }, {
             address: "#427/1A, Hebbal Ind. Area, Metagalli Post, Mysuru - 570 016.",
             phone: "+91 91485 89147",
-            email: "smhebbal@india-garage.in  bodyshopmanager@india-garage.in",
+            email: ["smhebbal@india-garage.in", "bodyshopmanager@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.265546858863!2d76.6155936!3d12.3651366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7a3d00d7608b%3A0x260b9f18e163c5a8!2sMahindra%20India%20Garage%20%E2%80%93Workshop!5e0!3m2!1sen!2sin!4v1747214083462!5m2!1sen!2sin"
           },
 
@@ -620,31 +620,31 @@ const slides: SlideData[] = [
           {
             address: "1st Phase, Plot #2E4, Whitefield Main Road, Behind Decathlon, Mahadevapura, Bengaluru - 560 048.",
             phone: "+91 97855 51333",
-            email: "smvrwf@india-garage.in, chandrasekharnm@india-garage.in, sales.wf@india-garage.in",
+            email: ["smvrwf@india-garage.in", "chandrasekharnm@india-garage.in", "sales.wf@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.252573845026!2d77.69879!3d12.995738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747215691087!5m2!1sen!2sin"
           },
           {
             address: "Old B.M Road, Gutturur village, Kottathi hobli, Belur Grampanchayat, Malavalli - 571 403.",
             phone: "+91 88844 98959",
-            email: "igmandya@india-garage.in, mandyaservice@india-garage.in",
+            email: ["igmandya@india-garage.in", "mandyaservice@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62313.99311644604!2d76.8699647!3d12.541012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747215798047!5m2!1sen!2sin"
           },
           {
             address: "#292/10, Block #23, Sampige Katte Road, Madikeri - 571 201.",
             phone: "+91 88844 98959",
-            email: "sales.madikeri@india-garage.in, service.madikeri@india-garage.in",
+            email: ["sales.madikeri@india-garage.in", "service.madikeri@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.2574093870294!2d75.75174919999999!3d12.432562299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5aa9e27787899%3A0x9014a3a231e9653d!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747215901473!5m2!1sen!2sin"
           },
           {
             address: "State Highway 90, Ponnampet, Road Jodubetti, Gonikoppal - 571 213.",
             phone: "+91 88844 98959",
-            email: "mailto:sales.gonikoppal@india-garage.in, service.gonikoppal@india-garage.in",
+            email: ["mailto:sales.gonikoppal@india-garage.in", "service.gonikoppal@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.360701638476!2d75.939742!3d12.1558282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5ba3786b87fad%3A0xc4dcb9f89be834c9!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747216063691!5m2!1sen!2sin"
           },
           {
             address: "Mysore Road, Near LIC Opp Simha Theatre, Chamrajnagar - 571 313.",
             phone: "+91 88844 98959",
-            email: "mailto:ig.changar@india-garage.in, service.changar@india-garage.in",
+            email: ["mailto:ig.changar@india-garage.in", "service.changar@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.63656126204!2d76.933995!3d11.9303616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe93a3dc03%3A0x2b3ece5b81cda608!2sMahindra%20India%20Garage%20Mysore%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747216165799!5m2!1sen!2sin"
           },
         ]
@@ -1372,5 +1372,5 @@ const FranchiseSlider = () => {
     </div>
   );
 };
- 
-export default FranchiseSlider;
+       
+export de fault FranchiseSlider;
