@@ -59,6 +59,7 @@ import BydLogo from "@/app/public/faranchies/BydLogo";
 import TataIcon from "@/app/public/faranchies/TataIcon";
 import BusinessSectors from "./BusinessSectors";
 import Logo from "@/app/public/logos/Logo";
+import JaguarIcon from "@/app/public/faranchies/jaguarIcon";
 
 interface SlideData {
   id: number;
@@ -104,6 +105,12 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
+      "service and parts"?: Array<{
+        address: string;
+        phone: string | string[];
+        email: string | string[];
+        map: string;
+      }>;
     };
   };
 }
@@ -130,6 +137,7 @@ const slides: SlideData[] = [
             email: ["info.citysales@titaniummotors.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62186.793014227944!2d80.2065924!3d13.056375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526617129cac13%3A0x3684f8447a03532e!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747217306800!5m2!1sen!2sin"
           },
+
           {
             address: "#148 K, Old Mahabalipuram Road,Okkiyam, Thoraipakkam, Chennai-600 096",
             phone: "+91 44-6649 8181",
@@ -165,7 +173,7 @@ const slides: SlideData[] = [
       from: "#780E26",
       to: "rgba(120, 14, 38, 0.4)",
     },
-    LogoComponent: PorscheIcon,
+    LogoComponent: JaguarIcon,
     header: "VST Grandeur - Jaguar",
     description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalised service.",
     learnMoreLink: "https://www.porsche.com",
@@ -295,7 +303,7 @@ const slides: SlideData[] = [
             address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
-            map: "https://maps.app.goo.gl/r8X1xhN14py4YGGG9"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -303,7 +311,7 @@ const slides: SlideData[] = [
             address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
             phone: "+91 99024 88899",
             email: "info@vstavventura.in",
-            map: "https://maps.app.goo.gl/W6PtAteJxxLLhXXQ6"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62201.86504418537!2d77.635414!3d12.9963588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747218674781!5m2!1sen!2sin"
           }
         ]
       },
@@ -320,7 +328,7 @@ const slides: SlideData[] = [
     LogoComponent: DucatiIcon,
     header: "VST & Sons - Ducati",
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
-    learnMoreLink: "https://www.ducati.com",
+    learnMoreLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747218886328!5m2!1sen!2sin",
     locations: {
       Bangalore: {
         sales: [
@@ -328,7 +336,7 @@ const slides: SlideData[] = [
             address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
-            map: "https://maps.app.goo.gl/T4UVqm7LgFixzaBG8"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747218927920!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -361,7 +369,7 @@ const slides: SlideData[] = [
             address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
             phone: "+91 80-2334 4090, +91 96069 88123",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/cKbXZ3tR9niDQ2By8"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62194.590892308755!2d77.5057122!3d13.0253581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17efe70fb545%3A0x90e3a1c2447e9a93!2sVST%20CENTRAL%20KIA%20-%20PALACE%20CROSS%20ROAD!5e0!3m2!1sen!2sin!4v1747219026615!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -556,39 +564,35 @@ const slides: SlideData[] = [
       sales: {
         sales: [
           {
-            address: "VW Palace Cross #1, Palace Cross Road, Bengaluru 560 020",
+            address: "VW Palace Cross #1, Palace Cross Road, Bengaluru - 560 020.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
-          }
+            map: "https://maps.app.goo.gl/QsRziu9kARGoKPv9A"
+          },
         ],
         service: [
           {
-            address: "VW Rajajinagar, #1/1 Kodi Street, 4th Main Rajajinagar, Next to Venus Int School, Bengaluru 560 010",
+            address: "VW Rajajinagar, #1/1 Kodi Street, 4th Main Rajajinagar, Next to Venus Int School, Bengaluru - 560 010.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/8JC9XjCqNZe49Gqh6"
+          },
+          {
+            address: "VW Palace Cross, #69/2, Begalagunte, Hesarghatta Main Road, 8th Mile, T.Dasarahalli, Bengaluru - 560 057.",
+            phone: "+91 96866 01249",
+            email: "crhhsrg@vw-bangaloremotors.co.in",
+            map: "https://maps.app.goo.gl/mV3vjmrb8522QwDr5"
+          },
+        ],
+        "sales and service": [
+          {
+            address: "VW Mysore Road, #26/2 & 27/2, Kenchanahalli Village, Kengeri Hobli, Mysore Road, Bengaluru - 560 057.",
+            phone: "+91 96866 01249",
+            email: "crhead@vw-bangaloremotors.co.in",
+            map: "https://maps.app.goo.gl/pN74JK5NA9HLAwgY8"
           }
         ],
       },
-      service: {
-        sales: [
-          {
-            address: "Karachi Business District, Karachi, Pakistan",
-            phone: "+92 21-1234567",
-            email: "sales.karachi@volkswagen.pk",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Karachi+Business+District,+Karachi&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CKarachi+Business+District,+Karachi"
-          }
-        ],
-        service: [
-          {
-            address: "Industrial Area, Karachi, Pakistan",
-            phone: "+92 21-7654321",
-            email: "service.karachi@volkswagen.pk",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Industrial+Area,+Karachi&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CIndustrial+Area,+Karachi"
-          }
-        ]
-      }
     }
   },
   {
@@ -607,26 +611,24 @@ const slides: SlideData[] = [
       India: {
         sales: [
           {
-            address: "#8, KSCMF Building, Cunningham Road Bengaluru 560 058",
+            address: "#8, KSCMF Building, Cunningham Road Bengaluru - 560 058.",
             phone: "+91 96060 74777",
-            email: "info@vstbyd.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            email: " info@vstbyd.in",
+            map: "https://maps.app.goo.gl/pERfrK5nV1yRh7DM7"
           },
           {
-            address: "GKS Tower #40 & 41, sy:33, Hosur Main Road, Hongasandra Metro Rail Stn, Bommanahalli, Bengaluru 560 058",
-            phone: "+91 96060 74777",
+            address: "GKS Tower #40 & 41, sy:33, Hosur Main Road, Hongasandra Metro Rail Stn, Bommanahalli, Bengaluru - 560 058.",
+            phone: "+91 96060 74777.",
             email: "info@vstbyd.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/kS3zKBKVSaJL6zuz8"
           },
-        ],
-        service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            address: "#38/5A Hyland Industrial Estate, 11th KM, Hosur Road, Bommanahalli,Bengaluru - 560 068.",
+            phone: "+91 96060 74777.",
+            email: "info@vstbyd.in",
+            map: "https://maps.app.goo.gl/DaWgugug4uE9NL3S9"
           }
-        ]
+        ],
       },
     }
   },
@@ -646,22 +648,22 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "1.  #6, St. John's Road, Ulsoor, Bengaluru 560 042",
+            address: "#6, St. John's Road, Ulsoor, Bengaluru - 560 042.",
             phone: "+91 80 2559 1999, +91 94498 07080",
             email: "sales.ho@cityhonda.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/vp9HXEYzQnyUyfeM8"
           },
           {
-            address: "2. #202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru 560 043",
-            phone: "+91 80 2542 2810, +91 80 2542 2811 ,+91 94498 07080",
+            address: "#202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru - 560 043.",
+            phone: "+91 80 2542 2810, +91 80 2542 2811, +91 94498 07080",
             email: "sales.hrbr@cityhonda.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/F53ewUG1bYxKJxqU6"
           },
           {
-            address: "3. #143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru 560 043",
+            address: "#143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru - 560 043.",
             phone: "+91 80 4333 3330, +91 88844 34200",
             email: "sales.lbg@cityhonda.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/Gz6HNUYy414G3QSe9"
           }
         ],
         service: [
@@ -670,6 +672,38 @@ const slides: SlideData[] = [
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          }
+        ],
+        "service and parts": [
+          {
+            address: "#113, 1sr Main Road, Lingarajapuram, Bengaluru - 560 084.",
+            phone: "+91 80 2549 6561, +91 94808 12384",
+            email: "service.lrp@cityhonda.in",
+            map: "https://maps.app.goo.gl/gt7DQkNyAm4dJGpYA"
+          },
+          {
+            address: "Head Workshop, No.6, St. John’s Road, Ulsoor,  Bengaluru - 560 042.",
+            phone: "+91 80 2513 9199, +91 94498 67080",
+            email: "service.ho@cityhonda.in",
+            map: "https://maps.app.goo.gl/WkS8iBtP7VkeAjEBA"
+          },
+          {
+            address: "No. 24, 25, 30 and 31, 40 Ft Road, PNS Layout, Subbannapalya, Kalyan Nagar, Bengalur - 560 043.",
+            phone: "+91 80 2542 2813, +91 76193 95014",
+            email: "service.hrbr@cityhonda.in",
+            map: "https://maps.app.goo.gl/NG4n4fitRpwXGvHY8"
+          },
+          {
+            address: "#143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru - 560 027.",
+            phone: "+91 80 4333 3330, +91 94808 12380",
+            email: "service.ibg@cityhonda.in",
+            map: "https://maps.app.goo.gl/Cff7i3pMVt16Xrwi7"
+          },
+          {
+            address: "#42/2, Ramamurthynagar Main Road, Ramamurthy Nagar, Bengaluru - 560 016.",
+            phone: "+91 80 4094 4950, +91 94808 12390",
+            email: "service.rmn@cityhonda.in",
+            map: "https://maps.app.goo.gl/PmWoMVPm7R3jz2qj7"
           }
         ]
       },
@@ -1162,6 +1196,44 @@ const FranchiseSlider = () => {
                               <iframe
                                 title={`Pre-Owned Cars Map ${idx + 1}`}
                                 src={preOwned.map}
+                                width="100%"
+                                height="280"
+                                className="rounded-lg w-full"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                              />
+                            </div>
+                          </div>
+                        ))}
+                        {/* Service and Parts */}
+                        {location["service and parts"] && (location["service and parts"]?.length ?? 0) > 0 && location["service and parts"].map((serviceParts, idx) => (
+                          <div key={`${currentSlide}-${locationKey}-serviceparts-${idx}`} className="hide-scrollbar mb-6">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Service, Parts {(location["service and parts"]?.length ?? 0) > 1 ? `#${idx + 1}` : ''}:
+                            </div>
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                              {serviceParts.address}<br />
+                              {Array.isArray(serviceParts.phone) ? (
+                                serviceParts.phone.map((p, i) => (
+                                  <div key={i} className="mt-1">📞 {p}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">📞 {serviceParts.phone}</div>
+                              )}
+                              {Array.isArray(serviceParts.email) ? (
+                                serviceParts.email.map((e, i) => (
+                                  <div key={i} className="mt-1">✉️ {e}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">✉️ {serviceParts.email}</div>
+                              )}
+                            </div>
+                            <div className="rounded-lg overflow-hidden w-full">
+                              <iframe
+                                title={`Service and Parts Map ${idx + 1}`}
+                                src={serviceParts.map}
                                 width="100%"
                                 height="280"
                                 className="rounded-lg w-full"
