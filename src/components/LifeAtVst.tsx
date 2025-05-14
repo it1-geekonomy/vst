@@ -105,9 +105,9 @@ const LifeAtVst = () => {
         {/* Right half - Text content */}
         <div className="relative w-full md:w-1/2 h-full bg-black px-4 md:px-8">
           {/* Heading with digits on same line */}
-          <div className="flex items-center justify-center w-full">
-            <div className="flex items-baseline justify-center">
-              <div className="flex items-baseline mr-2 md:mr-4">
+          <div className="flex items-center justify-center w-full pr-35 ">
+            <div className="flex items-baseline justify-center ">
+              <div className="flex items-baseline mr-2 md:mr-4 ">
                 <span className="text-[60px] md:text-[70px] lg:text-[90px] xl:text-[70px] font-rocWide text-white font-weight-200">0</span>
                 <AnimatePresence mode="wait">
                   <motion.span
@@ -146,6 +146,7 @@ const LifeAtVst = () => {
           </div>
 
           {/* Subtitle and description */}
+          
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -153,7 +154,7 @@ const LifeAtVst = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="w-full max-w-[75%] mx-auto h-[230px] md:h-[300px] pl-6 md:pl-8 overflow-y-auto"
+              className="w-full max-w-[75%] mx-auto h-[230px] md:h-[300px] pl-6 overflow-y-auto"
             >
               <h2 className="text-xl md:text-lg lg:text-lg xl:text-lg font-normal mb-3 text-start font-rocWide">
                 {slides[currentSlide].subtitle}
@@ -164,6 +165,7 @@ const LifeAtVst = () => {
               </p>
             </motion.div>
           </AnimatePresence>
+          
         </div>
       </div>
     </div>
