@@ -46,7 +46,7 @@ const slides = [
   {
     id: 5,
     image: slide2,
-    title: "LUXURY REDEFINED",
+    title: "Education",
     subtitle: "Our educational philosophy emphasises a learner-centric approach wherein we cater to the diverse learning needs of students.",
     label: "Education",
     color: "from-green-600/80 to-green-800/80",
@@ -57,7 +57,7 @@ const slides = [
   {
     id: 4,
     image: slide4,
-    title: "AUTOMOTIVE EXCELLENCE",
+    title: "OE Parts Distribution",
     subtitle: "Founded in 2005, VST Auto Parts enables Tata dealers to go the extra mile in providing effective, timely after-sales services with quick access to original spare parts.",
     label: "OE Parts Distribution",
     color: "from-blue-600/80 to-blue-800/80",
