@@ -26,25 +26,6 @@ const BusinessSectorsUpdated = () => {
 </h2>
      
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-12 lg:gap-24">
-          {/* Left arrow - shown on md and above */}
-          <button className="text-white hidden md:block hover:opacity-80 transition-opacity md:mr-20 lg:mr-32">
-            <svg
-              className="w-8 h-12 sm:w-10 sm:h-16 md:w-12 md:h-20 lg:w-14 lg:h-24"
-              fill="none"
-              stroke="#230715"
-              strokeWidth={0.6}
-              strokeOpacity={0.6}
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-
           {/* Desktop view - hidden on mobile */}
           <div className="hidden md:flex gap-8 sm:gap-12 md:gap-16 lg:gap-24 px-2 sm:px-4 md:px-6 lg:px-0">
             {!isAutomotiveFranchisesPage && (
@@ -116,26 +97,7 @@ const BusinessSectorsUpdated = () => {
               )}
             </div>
           </div>
-
-          <button className="text-white hidden md:block hover:opacity-80 transition-opacity md:ml-20 lg:ml-32">
-            <svg
-              className="w-8 h-12 sm:w-10 sm:h-16 md:w-12 md:h-20 lg:w-14 lg:h-24"
-              fill="none"
-              stroke="#230715"
-              strokeWidth={0.6}
-              strokeOpacity={0.6}
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
         </div>
-        {/* Mobile arrows container removed */}
       </div>
     </div>
   );
