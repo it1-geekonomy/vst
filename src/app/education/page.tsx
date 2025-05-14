@@ -115,7 +115,7 @@ export default function EducationPage() {
         {/* Gallery section with varying height strips */}
         <section className="w-full px-4 sm:px-6 md:px-8 lg:px-24 h-auto md:h-[400px] lg:h-[450px] xl:h-[500px] mb-2 md:mb-2 lg:mb-2 z-10 relative mx-auto -mt-12">
           {/* Background image with light orange glow - ONLY in this section */}
-          <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ isolation: 'isolate', zIndex: -1 }}>
             <Image
               src={Scurve}
               alt="Background orange glow"
@@ -127,7 +127,7 @@ export default function EducationPage() {
                 transform: 'scale(1.4)',
                 width: '100%',
                 height: '100%',
-                filter: 'hue-rotate(5deg)'
+                filter: 'hue-rotate(5deg) brightness(1.2) opacity(0.7)',
               }}
               quality={100}
             />

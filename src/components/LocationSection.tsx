@@ -66,11 +66,10 @@ const LocationSection: React.FC<LocationSectionProps> = ({
           {/* Address */}
           <div className="text-center md:text-left mb-8">
             <p
-              className={`font-roc ${className}`}
+              className={`font-roc font-normal ${className}`}
               style={{
                 fontSize: 'clamp(16px, 2.5vw, 24px)',
                 lineHeight: '1.5',
-                fontWeight: 500,
               }}
             >
               {address.street}
@@ -109,11 +108,10 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     />
                   </svg>
                   <span
-                    className={`font-roc ${className}`}
+                    className={`font-roc font-normal ${className}`}
                     style={{
                       fontSize: 'clamp(16px, 2.5vw, 24px)',
                       lineHeight: '1.5',
-                      fontWeight: 500
                     }}
                   >
                     {phone.replace('📞 ', '')}
