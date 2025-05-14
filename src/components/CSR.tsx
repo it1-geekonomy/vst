@@ -403,7 +403,7 @@ const CSR = () => {
             </div>
           </section>
           {/* Initiatives Section */}
-          <div className="w-full py-6 sm:py-4 md:py-6 lg:py-8 pl-0 sm:pl-0 md:pl-15 lg:pl-20 xl:pl-[10rem] h-[1080px]:pl-0">
+          <div className="w-full py-6 sm:py-4 md:py-6 lg:py-8 pl-0 sm:pl-0 ">
             <Initiatives />
           </div>
 
