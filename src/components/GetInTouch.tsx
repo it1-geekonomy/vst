@@ -156,7 +156,7 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-poppins font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#FEBF3D] text-black py-2.5 xs:py-3 md:py-3 rounded-md hover:bg-[#f4c430] transition-colors mt-4 xs:mt-6 md:mt-8 text-sm sm:text-base md:text-lg font-roc font-medium disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>

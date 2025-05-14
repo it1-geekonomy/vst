@@ -196,24 +196,24 @@ export default function Page() {
         <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
           <div className="bg-[#3B3B3B] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-16 lg:px-28">
-            <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-center mb-4 sm:mb-6 md:mb-8 font-poppins font-normal">Personal Details</h2>
+            <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-center mb-4 sm:mb-6 md:mb-8 font-roc font-normal">Personal Details</h2>
 
             <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
                 {/* Personal Details Section - Preserved styling */}
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-poppins mb-1 md:mb-2 opacity-80 font-normal font-poppins">Name</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-roc mb-1 md:mb-2 opacity-80 font-normal font-roc">Name</label>
                   <input
                     type="text"
                     value={formData.name}
                     onChange={handleChange}
                     name="name"
                     required
-                    className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none font-normal font-poppins"
+                    className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none font-normal font-roc"
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-normal font-poppins mb-1 md:mb-2 opacity-80 ">Email</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-normal font-roc mb-1 md:mb-2 opacity-80 ">Email</label>
                   <input
                     type="email"
                     value={formData.email}
@@ -224,7 +224,7 @@ export default function Page() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Mobile number</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Mobile number</label>
                   <input
                     type="tel"
                     value={formData.mobile}
@@ -235,7 +235,7 @@ export default function Page() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Years of Experience</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Years of Experience</label>
                   <div className="relative">
                     <select
                       className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
@@ -262,7 +262,7 @@ export default function Page() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Current Job Title & Company</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Current Job Title & Company</label>
                   <input
                     type="text"
                     value={formData.currentJobTitle}
@@ -273,7 +273,7 @@ export default function Page() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Preferred Job Role at VST Group</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Preferred Job Role at VST Group</label>
                   <div>
                     <div className="relative">
                       <select
@@ -306,12 +306,12 @@ export default function Page() {
               </div>
 
               {/* Skills & Expertise Section */}
-              <h2 className="text-xl sm:text-xl md:text-2xl text-center mt-8 md:mt-12 mb-4 md:mb-8 font-poppins font-normal">Skills & Expertise</h2>
+              <h2 className="text-xl sm:text-xl md:text-2xl text-center mt-8 md:mt-12 mb-4 md:mb-8 font-roc font-normal">Skills & Expertise</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
                 {/* Industries dropdown */}
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Which industries have you worked in?</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Which industries have you worked in?</label>
                   <div className="relative">
                     <select
                       className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
@@ -340,7 +340,7 @@ export default function Page() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-poppins mb-1 md:mb-2 opacity-80 font-normal font-poppins">
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-roc mb-1 md:mb-2 opacity-80 font-normal font-roc">
                     What's your earliest possible start date?
                   </label>
                   <div className="relative">
@@ -386,7 +386,7 @@ export default function Page() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">How long is your notice period as per your contract?</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">How long is your notice period as per your contract?</label>
                   <div className="relative">
                     <select
                       className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
@@ -415,7 +415,7 @@ export default function Page() {
                 </div>
                 {/* Skills dropdown */}
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">What are the primary skills that define your expertise?</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">What are the primary skills that define your expertise?</label>
                   <div className="relative">
                     <select
                       className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
@@ -449,7 +449,7 @@ export default function Page() {
 
               {/* Upload Resume Section - Enhanced with responsive sizing */}
               <div className="mt-6 md:mt-8">
-                <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-poppins mb-1 md:mb-2 opacity-80">Upload resume</label>
+                <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Upload resume</label>
                 <div className={`bg-[#666666] rounded-lg p-8 sm:p-10 md:p-12 lg:p-16 text-center cursor-pointer relative h-[150px] sm:h-[170px] md:h-[200px] transition-all duration-300 ${selectedFile ? 'border-2 border-[#FDB813]' : ''}`}>
                   <div className="flex flex-col items-center justify-center h-full relative">
                     <input
@@ -470,7 +470,7 @@ export default function Page() {
                           className="object-contain pointer-events-none sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px]"
                           priority
                         />
-                        <p className="mt-2 text-sm md:text-base text-white opacity-70 font-normal font-poppins">
+                        <p className="mt-2 text-sm md:text-base text-white opacity-70 font-normal font-roc">
                           Click to upload your resume
                         </p>
                       </>
@@ -498,7 +498,7 @@ export default function Page() {
                             ✕
                           </button>
                         </div>
-                        <p className="mt-3 text-sm text-[#FDB813] font-normal font-poppins">
+                        <p className="mt-3 text-sm text-[#FDB813] font-normal font-roc">
                           Click again to change file
                         </p>
                       </div>
@@ -506,11 +506,11 @@ export default function Page() {
                   </div>
                 </div>
                 {fileError ? (
-                  <p className="text-xs sm:text-sm text-red-400 font-normal font-poppins mt-1 md:mt-2">
+                  <p className="text-xs sm:text-sm text-red-400 font-normal font-roc mt-1 md:mt-2">
                     {fileError}
                   </p>
                 ) : (
-                  <p className="text-xs sm:text-sm text-[#FDB813] font-normal font-poppins mt-1 md:mt-2">
+                  <p className="text-xs sm:text-sm text-[#FDB813] font-normal font-roc mt-1 md:mt-2">
                     File types accepted: TXT, PDF or Word Doc
                   </p>
                 )}
@@ -521,7 +521,7 @@ export default function Page() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[#FDB813] text-black py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-poppins"
+                  className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[#FDB813] text-black py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-roc"
                 >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>

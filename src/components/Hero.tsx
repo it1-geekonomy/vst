@@ -488,7 +488,7 @@ const Hero = () => {
                     {!slide.icon && <div className="w-6 mr-3"></div>}
                     <span 
 
-                      className="text-white font-poppins font-semibold whitespace-nowrap text-clamp-36"
+                      className="text-white font-roc font-semibold whitespace-nowrap text-clamp-36"
                       style={{
                         transition: "opacity 900ms ease-in-out",
                         textShadow: "0px 2px 4px rgba(0, 0, 0, 0.3)"
@@ -506,12 +506,12 @@ const Hero = () => {
                     {/* Yellow line above the title */}
                     <div className="w-[40%] h-1 bg-yellow-400 mb-4"></div>
                     {slide.title && (
-                      <h2 className="text-4xl font-bold text-white mb-4 font-poppins">
+                      <h2 className="text-4xl font-bold text-white mb-4 font-roc">
                         {slide.title}
                       </h2>
                     )}
                     {slide.subtitle && (
-                      <p className="text-lg text-white mb-6 font-poppins">{slide.subtitle}</p>
+                      <p className="text-lg text-white mb-6 font-roc">{slide.subtitle}</p>
                     )}
                     {slide.link && (
                       <div className="flex justify-center w-full mt-2">
