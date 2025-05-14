@@ -300,7 +300,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
+            address: "VST Avventura Private Limited, #73/1,\n Millers Road, Bengaluru 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"
@@ -308,7 +308,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
+            address: "VST Avventura Private Limited, \n1st Phase Plot #2E4, Whitefield Main Road, \nDevasandra Industrial Estate, Mahadevapura, \nBengaluru 560 048",
             phone: "+91 99024 88899",
             email: "info@vstavventura.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62201.86504418537!2d77.635414!3d12.9963588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747218674781!5m2!1sen!2sin"
@@ -333,7 +333,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
+            address: "#22, Sankey Road, Opp. BDA Office, \nBengaluru 560 051",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747251086612!5m2!1sen!2sin"
@@ -341,7 +341,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "#459, Dhanalakshmi Building, Cottenpet, Bengaluru 560 053",
+            address: "#459, Dhanalakshmi Building, \nCottenpet, Bengaluru 560 053",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747250831535!5m2!1sen!2sin"
@@ -760,7 +760,8 @@ const slides: SlideData[] = [
             address: "#6, St. John's Road, \nUlsoor, Bengaluru - 560 042.",
             phone: ["+91 80 2559 1999", "+91 94498 07080"],
             email: "sales.ho@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John%27s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747248446606!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John&#39;s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747249559104!5m2!1sen!2sin"
+
           },
           {
             address: "#202,7th Main, HRBR Layout, Kalyan \nNagar, Bengaluru - 560 043.",
@@ -879,7 +880,7 @@ const FranchiseSlider = () => {
   const currentLocations = slides[currentSlide].locations;
 
   return (
-    <div className="relative w-full min-h-screen  lg:mt-[0rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen  lg:mt-[-3rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
@@ -905,7 +906,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 w-[50%] lg:w-[92%] h-[90%] rounded-br-[120px] overflow-hidden"
+                className="absolute left-0 w-[50%] lg:w-[92%] h-[95%] rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
