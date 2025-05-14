@@ -1,7 +1,4 @@
-import React from 'react';
-const EducationIcon = () => {
-    return (
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_7655_14072)">
 <g filter="url(#filter1_d_7655_14072)">
 <path d="M25.8887 25.2842C24.7631 25.2842 23.6376 25.1174 22.5537 24.8256L13.2158 22.0326V28.4107C13.2158 29.5779 13.9662 30.5784 15.0917 30.9119L19.1771 32.1208C23.6792 33.4548 28.4316 33.4548 32.9338 32.1208L37.0191 30.9119C38.1446 30.5784 38.895 29.5779 38.895 28.4107V21.9492L29.2236 24.8256C28.1398 25.1591 27.0142 25.2842 25.8887 25.2842Z" fill="white"/>
@@ -31,7 +28,3 @@ const EducationIcon = () => {
 </filter>
 </defs>
 </svg>
-    );
-};
-
-export default EducationIcon;
