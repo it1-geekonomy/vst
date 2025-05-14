@@ -300,7 +300,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
+            address: "VST Avventura Private Limited, #73/1,\n Millers Road, Bengaluru 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"
@@ -308,7 +308,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
+            address: "VST Avventura Private Limited, \n1st Phase Plot #2E4, Whitefield Main Road, \nDevasandra Industrial Estate, Mahadevapura, \nBengaluru 560 048",
             phone: "+91 99024 88899",
             email: "info@vstavventura.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62201.86504418537!2d77.635414!3d12.9963588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747218674781!5m2!1sen!2sin"
@@ -333,7 +333,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
+            address: "#22, Sankey Road, Opp. BDA Office, \nBengaluru 560 051",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747251086612!5m2!1sen!2sin"
@@ -341,7 +341,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "#459, Dhanalakshmi Building, Cottenpet, Bengaluru 560 053",
+            address: "#459, Dhanalakshmi Building, \nCottenpet, Bengaluru 560 053",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747250831535!5m2!1sen!2sin"
@@ -366,7 +366,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
+            address: "VST Vistas, #1, Palace Cross Road,\n Bengaluru 560 020",
             phone: "+91 80-2334 4090, +91 96069 88123",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62194.590892308755!2d77.5057122!3d13.0253581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17efe70fb545%3A0x90e3a1c2447e9a93!2sVST%20CENTRAL%20KIA%20-%20PALACE%20CROSS%20ROAD!5e0!3m2!1sen!2sin!4v1747219026615!5m2!1sen!2sin"
@@ -374,7 +374,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            address: "Survey #69/2, Mallasandra Village, \nBagalagunte, Hesaraghatta Main Road, \n8th Mile, T. Dasarahalli, \nBengaluru 560 057",
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62187.55965849731!2d77.442047!3d13.0533288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d9f9c73cbf5%3A0x8e59bd0957a66f2e!2sKia%20Car%20Service%20-%20Vst%20Central%20Kia%20-%20Hesaraghatta!5e0!3m2!1sen!2sin!4v1747223252452!5m2!1sen!2sin"
@@ -382,7 +382,7 @@ const slides: SlideData[] = [
         ],
         "sales & service": [
           {
-            address: "#48, Industrial Suburb, Opp. Yeshwantpur Railway Station, Bengaluru 560 022",
+            address: "#48, Industrial Suburb, Opp.\n Yeshwantpur Railway Station, \nBengaluru 560 022",
             phone: "+91 96069 88123",
             email: ["salesheadypr.bly@vstcentral-kia.in", "servicemanager.slm@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d3c841e2cb3%3A0x89f4847827ee7596!2sVST%20CENTRAL%20KIA%20-%20YESHWANTHPUR!5e0!3m2!1sen!2sin!4v1747223315800!5m2!1sen!2sin"
@@ -390,7 +390,7 @@ const slides: SlideData[] = [
         ],
         "Pre-Owned Cars": [
           {
-            address: "VST Central Kia-CPO, CPS Tower Building, #145, Kempegowda Layout, Laggere Ring Road, Near Dhanushri Cycles, Bengaluru 560 058",
+            address: "VST Central Kia-CPO, CPS Tower Building,\n #145, Kempegowda Layout, Laggere Ring\n Road, Near Dhanushri Cycles, Bengaluru 560 058",
             phone: "+91 96069 88134",
             email: ["managercpo.bly@vstcentral-kia.in", "servicemanager.vrl@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df363fe3c01%3A0x6cd47089f0ab9064!2sVST%20CENTRAL%20KIA%20CERTIFIED%20PRE%20-%20OWNED%20CARS!5e0!3m2!1sen!2sin!4v1747223390388!5m2!1sen!2sin"
@@ -400,25 +400,25 @@ const slides: SlideData[] = [
       "Chennai": {
         sales: [
           {
-            address: "Old #182, New #237, Anna Salai, Chennai 600 006",
+            address: "Old #182, New #237, Anna Salai,\n Chennai 600 006",
             phone: "+91 90872 11113",
             email: "salesmanagerch@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31093.718074797078!2d80.2325632!3d13.0538196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b9e01bc651%3A0xb1106c2bec1384e2!2sKIA%20Showroom%20Chennai%20-%20VST%20Central!5e0!3m2!1sen!2sin!4v1747223435630!5m2!1sen!2sin"
           },
           {
-            address: "#204/187, GR Plaza, North Usman Road, T. Nagar, Chennai 600 017",
+            address: "#204/187, GR Plaza, North Usman Road,\n T. Nagar, Chennai 600 017",
             phone: "+91 99400 92010",
             email: "salesmanagertn@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.3750756576278!2d80.232498!3d13.0515692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670023549f87%3A0xd1302492f99f3c74!2sKia%20Showroom%20T%20Nagar%20-%20VST%20Kia!5e0!3m2!1sen!2sin!4v1747223565704!5m2!1sen!2sin"
           },
           {
-            address: "#155, Swamith Ashithanar Nagar, GNT Road, Thandalkalani, Pulicat, Chennai 600 066",
+            address: "#155, Swamith Ashithanar Nagar, \nGNT Road, Thandalkalani, Pulicat, \nChennai 600 066",
             phone: "+91 73050 32085",
             email: "salesmanagerthk@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1942.4034805389128!2d80.1949667!3d13.1745681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527b573076743f%3A0x4df8fecc75acdc92!2sVST%20CENTRAL%20-%20KIA%20REDHILLS%20SHOWROOM!5e0!3m2!1sen!2sin!4v1747223606109!5m2!1sen!2sin"
           },
           {
-            address: "#548/6, Kattukottai, Nattamangalam, Salem 636 010",
+            address: "#548/6, Kattukottai, Nattamangalam,\n Salem 636 010",
             phone: "+91 93848 77744",
             email: "salesmanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747233866731!5m2!1sen!2sin"
@@ -426,7 +426,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "#57, Arcot Road, Virugavayapuram, Bharani Colony, Saligramam, Chennai 600 093",
+            address: "#57, Arcot Road, Virugavayapuram, \nBharani Colony, Saligramam, \nChennai 600 093",
             phone: "+91 90872 11113, +91 89255 03894",
             email: "servicemanagerch@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124378.72962695648!2d80.0696671!3d13.0461534!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526720103596eb%3A0x89ee02c1c5997cb0!2sKia%20Car%20Service%20-%20VST%20Central%2C%20Chennai!5e0!3m2!1sen!2sin!4v1747234107357!5m2!1sen!2sin"
@@ -434,19 +434,19 @@ const slides: SlideData[] = [
         ],
         "sales & service": [
           {
-            address: "#250-2, Meyyanur Road, Ashokapuram Post, Salem 636 004",
+            address: "#250-2, Meyyanur Road, Ashokapuram \nPost, Salem 636 004",
             phone: "+91 81488 11113, +91 93848 77744, +91 93840 84430",
             email: "servicemanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31258.594118025143!2d78.0997807!3d11.6714159!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf06a1e618371%3A0xd149fb0b495752ca!2sKia%20Car%20Showroom%20-%20Vst%20Kia%2C%20Meyyanur%20Main%20Road!5e0!3m2!1sen!2sin!4v1747234237365!5m2!1sen!2sin"
           },
           {
-            address: "#177, Kodipali, Thoppali Agrahara Village, Hosur 635 109",
+            address: "#177, Kodipali, Thoppali Agrahara Village,\n Hosur 635 109",
             phone: "+91 93449 04681, +91 78458 05068, +91 78458 05069",
             email: "salesmanagerhsr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.934187484988!2d77.8746835!3d12.717716399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae776f63338a5b%3A0xaf507e08bea31c5!2sKia%20Car%20Showroom%20-%20Vst%20Central%2C%20Kumudepalli!5e0!3m2!1sen!2sin!4v1747234328566!5m2!1sen!2sin"
           },
           {
-            address: "No. 43, Katpadi Road, Gandhinagar, Vellore 632 006",
+            address: "No. 43, Katpadi Road, Gandhinagar,\n Vellore 632 006",
             phone: "+91 90872 11113, +91 93840 96077",
             email: ["servicemanagervlr@vstcentral-kia.in", "salesmanagervlr@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.318270535633!2d79.1367769!3d12.9514746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad393de10f1b39%3A0xee4f088f339b7d95!2sVST%20CENTRAL%20-%20KIA%20SHOWROOM%20%26%20WORKSHOP!5e0!3m2!1sen!2sin!4v1747234422327!5m2!1sen!2sin"
@@ -760,7 +760,8 @@ const slides: SlideData[] = [
             address: "#6, St. John's Road, Ulsoor, Bengaluru - 560 042.",
             phone: "+91 80 2559 1999, +91 94498 07080",
             email: "sales.ho@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John%27s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747248446606!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John&#39;s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747249559104!5m2!1sen!2sin"
+
           },
           {
             address: "#202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru - 560 043.",
@@ -879,7 +880,7 @@ const FranchiseSlider = () => {
   const currentLocations = slides[currentSlide].locations;
 
   return (
-    <div className="relative w-full min-h-screen  lg:mt-[0rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen  lg:mt-[-3rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
@@ -905,7 +906,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 w-[50%] lg:w-[92%] h-[90%] rounded-br-[120px] overflow-hidden"
+                className="absolute left-0 w-[50%] lg:w-[92%] h-[95%] rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
