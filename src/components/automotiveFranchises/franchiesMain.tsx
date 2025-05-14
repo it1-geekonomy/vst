@@ -1373,4 +1373,4 @@ const FranchiseSlider = () => {
   );
 };
        
-export de fault FranchiseSlider;
+export default FranchiseSlider;
