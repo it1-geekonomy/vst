@@ -98,6 +98,12 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
+      "Pre-Owned Cars"?: Array<{
+        address: string;
+        phone: string | string[];
+        email: string | string[];
+        map: string;
+      }>;
     };
   };
 }
@@ -269,7 +275,7 @@ const slides: SlideData[] = [
             address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/r8X1xhN14py4YGGG9"
           },
         ],
         service: [
@@ -277,7 +283,7 @@ const slides: SlideData[] = [
             address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
             phone: "+91 99024 88899",
             email: "info@vstavventura.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/W6PtAteJxxLLhXXQ6"
           }
         ]
       },
@@ -302,7 +308,7 @@ const slides: SlideData[] = [
             address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/T4UVqm7LgFixzaBG8"
           },
         ],
         service: [
@@ -335,7 +341,7 @@ const slides: SlideData[] = [
             address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
             phone: "+91 80-2334 4090, +91 96069 88123",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/cKbXZ3tR9niDQ2By8"
           },
         ],
         service: [
@@ -343,44 +349,80 @@ const slides: SlideData[] = [
             address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://maps.app.goo.gl/ZwynUvbfz2RSiJwv7"
           },
+        ],
+        "sales and service": [
+          {
+            address: "#48, Industrial Suburb, Opp. Yeshwantpur Railway Station, Bengaluru 560 022",
+            phone: "+91 96069 88123",
+            email: ["salesheadypr.bly@vstcentral-kia.in", "servicemanager.slm@vstcentral-kia.in"],
+            map: "https://maps.app.goo.gl/PcSztz8f4hnNnw2x9"
+          }
+        ],
+        "Pre-Owned Cars": [
+          {
+            address: "VST Central Kia-CPO, CPS Tower Building, #145, Kempegowda Layout, Laggere Ring Road, Near Dhanushri Cycles, Bengaluru 560 058",
+            phone: "+91 96069 88134",
+            email: ["managercpo.bly@vstcentral-kia.in", "servicemanager.vrl@vstcentral-kia.in"],
+            map: "https://maps.app.goo.gl/W6PtAteJxxLLhXXQ6"
+          }
         ]
       },
-      "Tamil Nadu": {
+      "Chennai": {
         sales: [
           {
             address: "Old #182, New #237, Anna Salai, Chennai 600 006",
             phone: "+91 90872 11113",
-            email: " salesmanagerch@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+            email: "salesmanagerch@vstcentral-kia.in",
+            map: "https://maps.app.goo.gl/i3PfBRZSibvvKmYWA"
           },
           {
             address: "#204/187, GR Plaza, North Usman Road, T. Nagar, Chennai 600 017",
             phone: "+91 99400 92010",
             email: "salesmanagertn@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+            map: "https://maps.app.goo.gl/iPCAEyi2MdCJHaai9"
           },
           {
             address: "#155, Swamith Ashithanar Nagar, GNT Road, Thandalkalani, Pulicat, Chennai 600 066",
-            phone: " +91 73050 32085",
-            email: " salesmanagerthk@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+            phone: "+91 73050 32085",
+            email: "salesmanagerthk@vstcentral-kia.in",
+            map: "https://maps.app.goo.gl/ZFbnN3VRL1fzktUQ9"
           },
           {
             address: "#548/6, Kattukottai, Nattamangalam, Salem 636 010",
             phone: "+91 93848 77744",
             email: "salesmanagerslm@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
+            map: "https://maps.app.goo.gl/chxsKUbSxu4kCcPr9"
           },
         ],
         service: [
           {
-            address: " #57, Arcot Road, Virugavayapuram, Bharani Colony, Saligramam, Chennai 600 093",
-            phone: " +91 90872 11113 , +91 89255 03894",
+            address: "#57, Arcot Road, Virugavayapuram, Bharani Colony, Saligramam, Chennai 600 093",
+            phone: "+91 90872 11113, +91 89255 03894",
             email: "servicemanagerch@vstcentral-kia.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
+            map: "https://maps.app.goo.gl/uJvruQRX4msV2qBV6"
           },
+        ],
+        "sales and service": [
+          {
+            address: "#250-2, Meyyanur Road, Ashokapuram Post, Salem 636 004",
+            phone: "+91 81488 11113, +91 93848 77744, +91 93840 84430",
+            email: "servicemanagerslm@vstcentral-kia.in",
+            map: "https://maps.app.goo.gl/uJvruQRX4msV2qBV6"
+          },
+          {
+            address: "#177, Kodipali, Thoppali Agrahara Village, Hosur 635 109",
+            phone: "+91 93449 04681, +91 78458 05068, +91 78458 05069",
+            email: "salesmanagerhsr@vstcentral-kia.in",
+            map: "https://maps.app.goo.gl/pKRzfSUY2J9bGAtd8"
+          },
+          {
+            address: "No. 43, Katpadi Road, Gandhinagar, Vellore 632 006",
+            phone: "+91 90872 11113, +91 93840 96077",
+            email: ["servicemanagervlr@vstcentral-kia.in", "salesmanagervlr@vstcentral-kia.in"],
+            map: "https://maps.app.goo.gl/87pZbaWDZaPiUKvGA"
+          }
         ]
       }
     }
@@ -1001,7 +1043,7 @@ const FranchiseSlider = () => {
                         {location["sales and service"] && location["sales and service"].length > 0 && location["sales and service"].map((salesService, idx) => (
                           <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales & Service {location["sales and service"] && location["sales and service"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales, Services {location["sales and service"] && location["sales and service"].length > 1 ? `#${idx + 1}` : ''}:
                             </div>
                             <div className="text-white text-lg leading-relaxed mb-4 font-medium">
                               {salesService.address}<br />
@@ -1039,7 +1081,7 @@ const FranchiseSlider = () => {
                         {location["sales and distribution"] && location["sales and distribution"].length > 0 && location["sales and distribution"].map((salesDist, idx) => (
                           <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales & Distribution {location["sales and distribution"] && location["sales and distribution"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales, Distribution {location["sales and distribution"] && location["sales and distribution"].length > 1 ? `#${idx + 1}` : ''}:
                             </div>
                             <div className="text-white text-lg leading-relaxed mb-4 font-medium">
                               {salesDist.address}<br />
@@ -1062,6 +1104,44 @@ const FranchiseSlider = () => {
                               <iframe
                                 title={`Sales & Distribution Location Map ${idx + 1}`}
                                 src={salesDist.map}
+                                width="100%"
+                                height="280"
+                                className="rounded-lg w-full"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                              />
+                            </div>
+                          </div>
+                        ))}
+                        {/* Pre-Owned Cars */}
+                        {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 0 && location["Pre-Owned Cars"].map((preOwned, idx) => (
+                          <div key={`${currentSlide}-${locationKey}-preowned-${idx}`} className="hide-scrollbar mb-6">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Pre-Owned Cars {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 1 ? `#${idx + 1}` : ''}:
+                            </div>
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                              {preOwned.address}<br />
+                              {Array.isArray(preOwned.phone) ? (
+                                preOwned.phone.map((p, i) => (
+                                  <div key={i} className="mt-1">📞 {p}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">📞 {preOwned.phone}</div>
+                              )}
+                              {Array.isArray(preOwned.email) ? (
+                                preOwned.email.map((e, i) => (
+                                  <div key={i} className="mt-1">✉️ {e}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">✉️ {preOwned.email}</div>
+                              )}
+                            </div>
+                            <div className="rounded-lg overflow-hidden w-full">
+                              <iframe
+                                title={`Pre-Owned Cars Map ${idx + 1}`}
+                                src={preOwned.map}
                                 width="100%"
                                 height="280"
                                 className="rounded-lg w-full"
