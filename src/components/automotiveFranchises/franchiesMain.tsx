@@ -421,7 +421,7 @@ const slides: SlideData[] = [
             address: "#548/6, Kattukottai, Nattamangalam, Salem 636 010",
             phone: "+91 93848 77744",
             email: "salesmanagerslm@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/chxsKUbSxu4kCcPr9"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747233866731!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -429,7 +429,7 @@ const slides: SlideData[] = [
             address: "#57, Arcot Road, Virugavayapuram, Bharani Colony, Saligramam, Chennai 600 093",
             phone: "+91 90872 11113, +91 89255 03894",
             email: "servicemanagerch@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/uJvruQRX4msV2qBV6"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124378.72962695648!2d80.0696671!3d13.0461534!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526720103596eb%3A0x89ee02c1c5997cb0!2sKia%20Car%20Service%20-%20VST%20Central%2C%20Chennai!5e0!3m2!1sen!2sin!4v1747234107357!5m2!1sen!2sin"
           },
         ],
         "sales & service": [
@@ -437,19 +437,19 @@ const slides: SlideData[] = [
             address: "#250-2, Meyyanur Road, Ashokapuram Post, Salem 636 004",
             phone: "+91 81488 11113, +91 93848 77744, +91 93840 84430",
             email: "servicemanagerslm@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/uJvruQRX4msV2qBV6"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31258.594118025143!2d78.0997807!3d11.6714159!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf06a1e618371%3A0xd149fb0b495752ca!2sKia%20Car%20Showroom%20-%20Vst%20Kia%2C%20Meyyanur%20Main%20Road!5e0!3m2!1sen!2sin!4v1747234237365!5m2!1sen!2sin"
           },
           {
             address: "#177, Kodipali, Thoppali Agrahara Village, Hosur 635 109",
             phone: "+91 93449 04681, +91 78458 05068, +91 78458 05069",
             email: "salesmanagerhsr@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/pKRzfSUY2J9bGAtd8"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.934187484988!2d77.8746835!3d12.717716399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae776f63338a5b%3A0xaf507e08bea31c5!2sKia%20Car%20Showroom%20-%20Vst%20Central%2C%20Kumudepalli!5e0!3m2!1sen!2sin!4v1747234328566!5m2!1sen!2sin"
           },
           {
             address: "No. 43, Katpadi Road, Gandhinagar, Vellore 632 006",
             phone: "+91 90872 11113, +91 93840 96077",
             email: ["servicemanagervlr@vstcentral-kia.in", "salesmanagervlr@vstcentral-kia.in"],
-            map: "https://maps.app.goo.gl/87pZbaWDZaPiUKvGA"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.318270535633!2d79.1367769!3d12.9514746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad393de10f1b39%3A0xee4f088f339b7d95!2sVST%20CENTRAL%20-%20KIA%20SHOWROOM%20%26%20WORKSHOP!5e0!3m2!1sen!2sin!4v1747234422327!5m2!1sen!2sin"
           }
         ]
       }
