@@ -170,13 +170,6 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
-            <Link
-              href="/about-us"
-              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              About Us
-            </Link>
 
             <div className="relative">
               <button
@@ -247,6 +240,14 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Us
+            </Link>
+
+            <Link
+              href="/about-us"
+              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About Us
             </Link>
           </div>
         </div>
