@@ -338,7 +338,7 @@ export default function Page() {
         </div>
 
         {/* Responsive Carousel Slider */}
-        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 mb-8 sm:mb-12 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[550px]">
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 mb-8 sm:mb-12 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[550px] 2xl:h-[750px]">
           {/* Desktop 3D Carousel - only visible on large screens */}
           <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
             <div className="carousel-container relative w-full h-full">
@@ -480,7 +480,7 @@ export default function Page() {
                 `,
           }}
         />
-        <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 py-2 sm:py-15 lg:py-24">
+        <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-24">
           {/* Company information section */}
           <div className="mb-6 sm:mb-8 lg:mb-10 text-black w-full text-justify">
             <p className="text-base sm:text-lg lg:text-xl leading-[1.6]">
@@ -499,7 +499,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-          <div className="ml-12 sm:ml-20 md:ml-36 lg:ml-44">
+          <div className="ml-12 sm:ml-20 md:ml-36 lg:ml-44 text-black">
             <LocationSection
                locationImage="vst-auto-parts/location img.png"
                address={{
