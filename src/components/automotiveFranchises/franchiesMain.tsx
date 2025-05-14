@@ -1068,7 +1068,7 @@ const FranchiseSlider = () => {
             </AnimatePresence>
 
             <a href={slides[currentSlide].learnMoreLink} className="mt-6 sm:mt-8 lg:mt-10 inline-block w-auto" target="_blank" rel="noopener noreferrer">
-              <h3 className="bg-white rounded-xl sm:rounded-2xl px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#DFAC4F] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors">
+              <h3 className="bg-white px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#0f0f0e] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors">
                 Learn More
               </h3>
             </a>
