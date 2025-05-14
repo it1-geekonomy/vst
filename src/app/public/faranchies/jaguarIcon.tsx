@@ -3,7 +3,7 @@ import React from "react";
 const JaguarIcon = () => {
   return (
     <svg
-      width="192"
+      width="197"
       height="68"
       viewBox="0 0 192 68"
       fill="none"
