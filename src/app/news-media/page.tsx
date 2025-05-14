@@ -57,7 +57,7 @@ export default function NewsMedia() {
     },
     {
       image: hcard3,
-      alt: "Latest Models",
+      alt: "Latestaa Models",
       // title: "We Are Now Open",
       text: "As a long-standing Ducati dealer partner at VST Group",
       link: "https://www.linkedin.com/posts/vst-motors-ltd_ducatiindia-ducaticommunity-vstgroup-activity-7201814884903235585-li-1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE",
