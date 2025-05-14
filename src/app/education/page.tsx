@@ -124,7 +124,7 @@ export default function EducationPage() {
               className="object-cover"
               style={{
                 objectPosition: 'center',
-                transform: 'scale(1.5)',
+                transform: 'scale(1.4)',
                 width: '100%',
                 height: '100%',
                 filter: 'hue-rotate(5deg)'
@@ -276,7 +276,7 @@ export default function EducationPage() {
           </div>
         </section>
 
-        <div className="w-full px-4 md:px-8 lg:px-30 mb-12 mt-8">
+        <div className="w-full px-4 md:px-8 lg:px-30 mb-12 mt-8 font-normal font-roc text-justify">
           <div
             style={{
               width: 300,
@@ -285,8 +285,6 @@ export default function EducationPage() {
               background: '#FEBF3D',
               padding: '12px 32px',
               fontSize: 20,
-              fontWeight: 400,
-              fontFamily: 'Roc Grotesk, sans-serif',
               color: '#000',
               letterSpacing: 1,
               boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
@@ -312,13 +310,15 @@ export default function EducationPage() {
 
 
       {/* Our Location section - using the new component */}
+      <div className="-ml-80 sm:-ml-[28rem] md:-ml-[36rem] lg:-ml-[44rem]">
       <LocationSection
         locationImage="education/educational location.png"
         address={{
-          street: "Edward Road, Off Queens Road",
-          city: "Bangalore",
-          state: "Karnataka",
-          pincode: "560 001"
+          street: "Edward Road,",
+          street2: "Off Queens Road,",
+          city: "Bangalore-560 001",
+          state: "Karnataka.",
+          pincode: ""       
         }}
         phoneNumbers={[
           '+91 80 2234 1011',
@@ -327,8 +327,11 @@ export default function EducationPage() {
         ]}
         googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
       />
+        </div>
       <div className="-mt-20">
-        <BusinessSectorsUpdated />
+        <div className="transform scale-110">
+          <BusinessSectorsUpdated />
+        </div>
       </div>
       <div className="w-full h-[250px] lg:h-[250px] xl:h-[300px] flex justify-center items-center -mt-50">
         <Image

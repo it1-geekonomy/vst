@@ -7,7 +7,7 @@ import img3 from "@/app/public/vst-auto-parts/frame3.png";
 import img4 from "@/app/public/vst-auto-parts/frame4.png";
 import img5 from "@/app/public/vst-auto-parts/frame5.png";
 import bgImage from "@/app/public/vst-auto-parts/bgimg.jpeg";
-import LocationSection from "../components/LocationSection";
+import LocationSection from '@/components/LocationSection';
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
 import gif from "@/app/public/education/vst logo gif.gif"
 
@@ -465,7 +465,24 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <LocationSection />
+          <div className="ml-12 sm:ml-20 md:ml-36 lg:ml-44">
+            <LocationSection
+               locationImage="vst-auto-parts/location img.png"
+               address={{
+                 street: "Old No 144, New No 199",
+                 street2: "(1st Floor) Anna Salai ,Chennai,",
+                 state: "",
+                 city: "Tamil Nadu 600 002.",
+                 pincode: ""       
+               }}
+               phoneNumbers={[
+                 '+91-44-28602485',
+                 '+91-44-28602486',
+                 '+91-44-28602487'
+               ]}
+               googleMapsUrl="https://www.google.com/maps/place/VST+Motors/@13.0626463,80.2615032,17z/data=!3m1!5s0x3a52661712800ddd:0x9763c5b415119093!4m14!1m7!3m6!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!2sVST+Motors!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7!3m5!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+             />
+          </div>
         <div className="relative z-10 w-full overflow-visible">
           <BusinessSectors />
         </div>

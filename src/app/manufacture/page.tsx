@@ -10,6 +10,7 @@ import Timeless2 from '@/app/public/tillers/Timeless2.png'
 import Tough3 from '@/app/public/tillers/Tough3.png'
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors"
 import Logo from '@/app/public/logos/Logo'
+import LocationSection from '@/components/LocationSection'
 
 const ManufacturePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -197,21 +198,28 @@ cultivation by small and medium-scale farmers.
           </div>
 
           {/* Location Section */}
-          <div className="mt-12 md:mt-16 w-full flex flex-col items-center">
-            <h2 className="text-[#FDB813] text-3xl md:text-5xl font-bold mb-6 md:mb-8 self-start">Our Location</h2>
-            <div className="w-full flex justify-center">
-              <div className="w-full rounded-lg overflow-hidden shadow-lg" style={{ maxWidth: "1614px" }}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0167881117726!2d77.57254827475243!3d12.989645014917816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1651b4dd2399%3A0x9c4cbf3e1c014d1b!2s1%2C%20Palace%20Cross%20Rd%2C%20Bengaluru%2C%20Karnataka%20560020!5e0!3m2!1sen!2sin!4v1709534844025!5m2!1sen!2sin"
-                  width="100%"
-                  height="450"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            </div>
+          <div className="ml-10 sm:ml-8 md:ml-30 lg:ml-26 mt-32 md:mt-40 font-roc font-normal">
+            <LocationSection
+               locationImage="tillers/Group 1000001966.png"
+               address={{
+                 street: "Regd. Office:Plot No.1,",
+                street2:"Dyavasandra Industrial Layout,",
+                 street3: "Whitefield Road, Mahadevapura Post,",
+                 city: "Bengaluru - 560 048",
+                 state: "India",
+                 pincode: ""       
+               }}
+               phoneNumbers={[
+                 '1800-419-0136'
+               ]}
+               googleMapsUrl="https://www.google.com/maps/place/VST+TILLERS+TRACTORS+LTD/@12.9947235,77.6974669,17z/data=!4m14!1m7!3m6!1s0x3bae11a00d70e90d:0x5a90ab36eeaad4fc!2sVST+TILLERS+TRACTORS+LTD!8m2!3d12.9947235!4d77.7000418!16s%2Fg%2F1tjtgq78!3m5!1s0x3bae11a00d70e90d:0x5a90ab36eeaad4fc!8m2!3d12.9947235!4d77.7000418!16s%2Fg%2F1tjtgq78?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+               emails={{
+                 info: "info@vsttractors.com",
+                 globalConnect: "connect@vsttractors.com"
+               }}
+               className="text-white"
+               iconColor="white"
+             />
           </div>
           <div className="mt-16 md:mt-24">
             <BusinessSectors />

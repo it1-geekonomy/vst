@@ -41,7 +41,7 @@ const slides = [
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: CorporateIcon,
-    link: "/dummy-link"
+    link: "/Corporate-philanthropy"
   },
   {
     id: 5,
