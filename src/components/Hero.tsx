@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-import slide1 from "@/app/public/hero-section/Image 1.jpg";
+import slide1 from "@/app/public/hero-section/Image 1.png";
 import slide2 from "@/app/public/hero-section/Image 5.jpg";
 import slide3 from "@/app/public/hero-section/image 3.png";
 import slide4 from "@/app/public/hero-section/Image 4.jpg";
@@ -500,7 +500,7 @@ const Hero = () => {
                 </div>
               )}
 
-              {isActive && (
+              {isActive && slide.id !== 1 && (
                 <div className="absolute inset-0 flex items-center justify-center z-20">
                   <div className="bg-black/70 rounded-lg px-6 sm:px-10 py-10 text-left w-[90%] max-w-[900px] ml-8">
                     {/* Yellow line above the title */}
