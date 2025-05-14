@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-import slide1 from "@/app/public/hero-section/Image 1.png";
+import slide1 from "@/app/public/hero-section/Homepage-hero section.jpg";
 import slide2 from "@/app/public/hero-section/Image 5.jpg";
 import slide3 from "@/app/public/hero-section/image 3.png";
 import slide4 from "@/app/public/hero-section/Image 4.jpg";
@@ -477,15 +477,15 @@ const Hero = () => {
                   <div className="-rotate-90 transform flex items-center justify-start" style={{ width: '320px' }}>
                     {/* Icon placed at the beginning of text, counter-rotated to appear straight */}
                     {slide.icon && (
-                      <div className="rotate-90 mr-3 w-6 flex justify-center">
+                      <div className="rotate-90 mr-3 w-12 flex justify-center">
                         {React.createElement(slide.icon, {
-                          width: 20,
-                          height: 20,
+                          width: 60,
+                          height: 60,
                           className: "opacity-100"
                         })}
                       </div>
                     )}
-                    {!slide.icon && <div className="w-6 mr-3"></div>}
+                    {!slide.icon && <div className="w-12 mr-3"></div>}
                     <span 
 
                       className="text-white font-roc font-semibold whitespace-nowrap text-clamp-36"

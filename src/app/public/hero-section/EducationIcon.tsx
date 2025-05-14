@@ -1,7 +1,7 @@
 import React from 'react';
 const EducationIcon = () => {
     return (
-        <svg width="68" height="60" viewBox="0 0 68 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="80" height="70" viewBox="0 0 68 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_6329_63)">
 <g clip-path="url(#clip0_6329_63)">
 <g filter="url(#filter1_d_6329_63)">
