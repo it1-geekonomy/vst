@@ -377,7 +377,7 @@ const slides: SlideData[] = [
             address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/ZwynUvbfz2RSiJwv7"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62187.55965849731!2d77.442047!3d13.0533288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d9f9c73cbf5%3A0x8e59bd0957a66f2e!2sKia%20Car%20Service%20-%20Vst%20Central%20Kia%20-%20Hesaraghatta!5e0!3m2!1sen!2sin!4v1747223252452!5m2!1sen!2sin"
           },
         ],
         "sales and service": [
@@ -385,7 +385,7 @@ const slides: SlideData[] = [
             address: "#48, Industrial Suburb, Opp. Yeshwantpur Railway Station, Bengaluru 560 022",
             phone: "+91 96069 88123",
             email: ["salesheadypr.bly@vstcentral-kia.in", "servicemanager.slm@vstcentral-kia.in"],
-            map: "https://maps.app.goo.gl/PcSztz8f4hnNnw2x9"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d3c841e2cb3%3A0x89f4847827ee7596!2sVST%20CENTRAL%20KIA%20-%20YESHWANTHPUR!5e0!3m2!1sen!2sin!4v1747223315800!5m2!1sen!2sin"
           }
         ],
         "Pre-Owned Cars": [
@@ -393,7 +393,7 @@ const slides: SlideData[] = [
             address: "VST Central Kia-CPO, CPS Tower Building, #145, Kempegowda Layout, Laggere Ring Road, Near Dhanushri Cycles, Bengaluru 560 058",
             phone: "+91 96069 88134",
             email: ["managercpo.bly@vstcentral-kia.in", "servicemanager.vrl@vstcentral-kia.in"],
-            map: "https://maps.app.goo.gl/W6PtAteJxxLLhXXQ6"
+            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df363fe3c01%3A0x6cd47089f0ab9064!2sVST%20CENTRAL%20KIA%20CERTIFIED%20PRE%20-%20OWNED%20CARS!5e0!3m2!1sen!2sin!4v1747223390388!5m2!1sen!2sin"
           }
         ]
       },
@@ -403,19 +403,19 @@ const slides: SlideData[] = [
             address: "Old #182, New #237, Anna Salai, Chennai 600 006",
             phone: "+91 90872 11113",
             email: "salesmanagerch@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/i3PfBRZSibvvKmYWA"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31093.718074797078!2d80.2325632!3d13.0538196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b9e01bc651%3A0xb1106c2bec1384e2!2sKIA%20Showroom%20Chennai%20-%20VST%20Central!5e0!3m2!1sen!2sin!4v1747223435630!5m2!1sen!2sin" 
           },
           {
             address: "#204/187, GR Plaza, North Usman Road, T. Nagar, Chennai 600 017",
             phone: "+91 99400 92010",
             email: "salesmanagertn@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/iPCAEyi2MdCJHaai9"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.3750756576278!2d80.232498!3d13.0515692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670023549f87%3A0xd1302492f99f3c74!2sKia%20Showroom%20T%20Nagar%20-%20VST%20Kia!5e0!3m2!1sen!2sin!4v1747223565704!5m2!1sen!2sin"
           },
           {
             address: "#155, Swamith Ashithanar Nagar, GNT Road, Thandalkalani, Pulicat, Chennai 600 066",
             phone: "+91 73050 32085",
             email: "salesmanagerthk@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/ZFbnN3VRL1fzktUQ9"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1942.4034805389128!2d80.1949667!3d13.1745681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527b573076743f%3A0x4df8fecc75acdc92!2sVST%20CENTRAL%20-%20KIA%20REDHILLS%20SHOWROOM!5e0!3m2!1sen!2sin!4v1747223606109!5m2!1sen!2sin"
           },
           {
             address: "#548/6, Kattukottai, Nattamangalam, Salem 636 010",
