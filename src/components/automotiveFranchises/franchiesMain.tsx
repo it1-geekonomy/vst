@@ -519,7 +519,7 @@ const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae163883f74f7d%3A0x4385e2cd7037dce4!2sMahindra%20India%20Garage%20-%20Palace%20Cross%20Road!5e0!3m2!1sen!2sin!4v1747211520843!5m2!1sen!2sin"
           },
           {
-            address: "#110/110/10, Lalbagh Main Road, Near Urvasi Theatre, Bengaluru - 560 043.",
+            address: "#110/110/10, Lalbagh Main Road, Near Urvashi Theatre, Bengaluru - 560 043.",
             phone: "+91 80502 90512",
             email: ["sm.lalbagh@india-garage.in", "karthiks@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e77446713f%3A0x859a28fb0fd3f809!2sMahindra%20India%20Garage%20-%20Lal%20Bagh%20Road!5e0!3m2!1sen!2sin!4v1747211878143!5m2!1sen!2sin"
@@ -586,7 +586,7 @@ const slides: SlideData[] = [
             address: "No.1-4-35B, Two Shutter Ground Floor, Jayanagara, K R Pete, Mandya - 571 426.",
             phone: "+91 88844 98959",
             email: "sales.krpete@india-garage.in",
-            map: "abc"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31157.027815071415!2d76.9194856!3d12.5407536!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747223757472!5m2!1sen!2sin"
           },
         ],
         service: [

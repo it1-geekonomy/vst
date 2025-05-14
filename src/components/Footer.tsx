@@ -52,8 +52,8 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 <h4 className="text-[#FEBF3D] text-clamp-18 font-roc mb-6">
                   Corporate Office
                 </h4>
-                <p className="text-white text-clamp-18 font-roc whitespace-nowrap">1, Palace Cross Road,</p>
-                <p className="text-white text-clamp-18 font-roc">Bangalore - 560 020.</p>
+                <p className="text-white text-clamp-18 font-roc whitespace-nowrap">#1, Palace Cross Road,</p>
+                <p className="text-white text-clamp-18 font-roc">Bengaluru- 560 020.</p>
               
               </div>
 
@@ -62,8 +62,8 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 <h4 className="text-[#FEBF3D] text-clamp-18 font-roc mb-6">
                   Chennai Office
                 </h4>
-                <p className="text-white text-clamp-18 font-roc">199, Annasalai,</p>
-                <p className="text-white text-clamp-18 font-roc">Chennai-600 002.</p>
+                <p className="text-white text-clamp-18 font-roc">#199, Anna Salai,</p>
+                <p className="text-white text-clamp-18 font-roc">Chennai - 600 002.</p>
                 
               </div>
             </div>

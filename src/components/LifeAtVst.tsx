@@ -156,10 +156,10 @@ const LifeAtVst = () => {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="w-full max-w-[75%] mx-auto h-[230px] md:h-[300px] pl-6 overflow-y-auto"
             >
-              <h2 className="text-xl md:text-lg lg:text-lg xl:text-lg font-normal mb-3 text-start font-rocWide">
+              <h2 className="text-xl md:text-lg lg:text-lg xl:text-lg font-normal mb-3 text-start font-roc">
                 {slides[currentSlide].subtitle}
               </h2>
-              <p className="text-base md:text-sm lg:text-base xl:text-base font-roc font-normal leading-relaxed hyphens-auto" 
+              <p className="text-base md:text-sm lg:text-base xl:text-base font-normal leading-relaxed hyphens-auto" 
                  style={{ wordBreak: "break-word", textAlign: "justify", textJustify: "inter-word" }}>
                 {slides[currentSlide].description}
               </p>
