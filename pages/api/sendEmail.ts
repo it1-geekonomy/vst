@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       </div>
 
       <div style="text-align: center; padding-top: 20px; border-top: 1px solid #e9ecef;">
-        <p style="margin: 0; font-size: 13px; color: #95a5a6;">This is an automated message from VST Careers Portal</p>
+        <p style="margin: 0; font-size: 13px; color: #95a5a6;">This is an message from VST Careers Portal</p>
         <p style="margin: 5px 0 0; font-size: 12px; color: #bdc3c7;">© ${new Date().getFullYear()} VST.</p>
       </div>
     </div>
