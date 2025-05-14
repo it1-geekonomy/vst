@@ -39,9 +39,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 bg-[#000000] transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "translate-y-[-100%]"
-      }`}
+      className={`fixed w-full z-50 bg-[#000000] transition-transform duration-300 ${isVisible ? "translate-y-0" : "translate-y-[-100%]"
+        }`}
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 w-[90%]">
         <div className="flex justify-between items-center h-20">
@@ -87,12 +86,7 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:block">
             <div className="flex items-center space-x-6 lg:space-x-8">
-              <Link
-                href="/about-us"
-                className="text-base font-medium text-white hover:text-gray-300 transition-colors"
-              >
-                About Us
-              </Link>
+
               <div className="relative group">
                 <button className="text-base font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1">
                   Our Businesses
@@ -161,6 +155,12 @@ export default function Navbar() {
               >
                 Contact Us
               </Link>
+              <Link
+                href="/about-us"
+                className="text-base font-medium text-white hover:text-gray-300 transition-colors"
+              >
+                About Us
+              </Link>
             </div>
           </div>
         </div>
@@ -170,13 +170,6 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
-            <Link
-              href="/about-us"
-              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              About Us
-            </Link>
 
             <div className="relative">
               <button
@@ -247,6 +240,14 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Us
+            </Link>
+
+            <Link
+              href="/about-us"
+              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About Us
             </Link>
           </div>
         </div>

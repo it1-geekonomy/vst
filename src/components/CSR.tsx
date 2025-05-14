@@ -363,7 +363,7 @@ const CSR = () => {
 
           {/* Timeline Section - IMPROVED RESPONSIVENESS */}
           <section className="xl:mx-18 lg:mx-12 px-2 sm:px-4 py-0 sm:py-4 relative z-10 mt-12 sm:mt-16 md:mt-20">
-            <div className="relative h-16 sm:h-20">
+            <div className="relative h-16 sm:h-20 2xl:mt-32">
               {/* Timeline Line */}
               <div className="absolute h-[2px] bg-[white] w-full top-[20px] sm:top-[25px]" />
 

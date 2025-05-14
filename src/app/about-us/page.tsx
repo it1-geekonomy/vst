@@ -119,9 +119,9 @@ function AboutUsPage() {
       {/* Layer 2: Content */}
       <div className="relative z-10 md:pb-5">
         {/* Timeline component */}
-        <div className="flex flex-col lg:flex-row w-full  px-4 sm:px-6 md:px-8">
+        <div className="flex flex-col lg:flex-row w-full px-4 sm:px-6 md:px-8 items-center ">
           {/* Timeline Years */}
-          <div className="w-full lg:w-1/4 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative">
+          <div className="w-full lg:w-1/3 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative lg:pr-0">
             {/* Up arrow - Moves timeline up (previous year) */}
             <button
               onClick={() => {
@@ -129,11 +129,11 @@ function AboutUsPage() {
                 const prevIndex = (currentIndex - 1 + timelineData.length) % timelineData.length
                 handleYearClick(timelineData[prevIndex].year)
               }}
-              className="text-gray-400 hover:text-yellow-300 transition-colors"
+              className="text-gray-400 hover:text-yellow-300 transition-colors "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 hidden lg:block"
+                className="h-12 w-12 sm:h-16 sm:w-16 lg:h-16 lg:w-16 hidden lg:block"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -152,7 +152,7 @@ function AboutUsPage() {
             </button>
 
             {/* Timeline Years - 3D circular carousel effect without axis */}
-            <div className="relative h-[240px] w-full flex items-center justify-center lg:block" 
+            <div className="relative h-[400px] w-full flex items-center justify-center lg:block" 
                 style={{ perspective: "1000px" }}>
               {/* 3D carousel container */}
               <div className="w-full h-full relative flex flex-row lg:block" style={{ transformStyle: "preserve-3d" }}>
@@ -163,23 +163,27 @@ function AboutUsPage() {
                   // Calculate 3D rotation and z position
                   let rotateX = 0;
                   let translateZ = 0;
+                  let translateY = 0;
                   let opacity = 1;
                   let scale = 1;
                   
                   if (position === -1) {
-                    rotateX = -60; // Rotated upward
+                    rotateX = 0; // Rotated upward
                     translateZ = -100; // Behind
+                    translateY = -160; // Increased vertical spacing
                     opacity = 0.7;
                     scale = 0.85;
                   } else if (position === 1) {
-                    rotateX = 60; // Rotated downward
+                    rotateX = 0; // Rotated downward
                     translateZ = -100; // Behind
+                    translateY = 160; // Increased vertical spacing
                     opacity = 0.7;
                     scale = 0.85;
                   } else {
                     // Center position
                     rotateX = 0;
                     translateZ = 0;
+                    translateY = 0;
                     opacity = 1;
                     scale = 1.25;
                   }
@@ -190,7 +194,7 @@ function AboutUsPage() {
                       onClick={() => handleYearClick(item.year)}
                       className={`absolute lg:absolute left-1/2 top-1/2 ${isSelected ? 'text-clamp-96' : 'text-clamp-67'} font-normal font-roc`}
                       style={{
-                        transform: `translate(-50%, -50%) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${isSelected ? 1.2 : 1.2})`,
+                        transform: `translate(-50%, calc(-50% + ${translateY}px)) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${isSelected ? 1.2 : 1.2})`,
                         opacity: opacity,
                         color: isSelected ? "rgba(254, 191, 61, 1)" : "rgba(61, 117, 193, 1)",
                         filter: "none", // <- remove blur entirely
@@ -217,7 +221,7 @@ function AboutUsPage() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 hidden lg:block"
+                className="h-12 w-12 sm:h-16 sm:w-16 lg:h-16 lg:w-16 hidden lg:block"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -237,7 +241,7 @@ function AboutUsPage() {
           </div>
 
           {/* Timeline Images */}
-          <div className="w-full lg:w-3/4 flex items-center justify-center lg:mt-0">
+          <div className="w-full lg:w-2/3 flex items-center justify-center lg:justify-start lg:pl-0 lg:-ml-12">
             <div className="flex items-center justify-center">
               <div className="flex flex-row items-center justify-center
                 -space-x-4 sm:-space-x-8 md:-space-x-12 lg:-space-x-16">
@@ -256,18 +260,18 @@ function AboutUsPage() {
                         className="relative flex items-center"
                         style={{
                           zIndex: isMainImage ? 30 : 20 - index,
-                          transition: "all 400ms cubic-bezier(0.4, 0.0, 0.2, 1)", // Faster transition
-                          willChange: "transform, opacity", // Performance optimization
+                          transition: "all 400ms cubic-bezier(0.4, 0.0, 0.2, 1)", 
+                          willChange: "transform, opacity", 
                         }}
                       >
                         {/* Image container with enhanced transition */}
                         <div
                           className={`relative rounded-full overflow-hidden
                             ${isMainImage
-                              ? 'w-[160px] h-[160px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[420px] lg:h-[420px]'
+                              ? 'w-[200px] h-[200px] sm:w-[330px] sm:h-[330px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]'
                               : index === 1
-                              ? 'w-[120px] h-[120px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[340px] lg:h-[340px]'
-                              : 'w-[100px] h-[100px] sm:w-[180px] sm:h-[180px] md:w-[240px] md:h-[240px] lg:w-[300px] lg:h-[300px]'}`}
+                              ? 'w-[150px] h-[150px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px]'
+                              : 'w-[120px] h-[120px] sm:w-[210px] sm:h-[210px] md:w-[280px] md:h-[280px] lg:w-[350px] lg:h-[350px]'}`}
                           style={{
                             transition: "width 400ms cubic-bezier(0.4, 0.0, 0.2, 1), height 400ms cubic-bezier(0.4, 0.0, 0.2, 1)",
                             transform: isMainImage ? `scale(${scale})` : 'scale(1)', 
@@ -287,10 +291,10 @@ function AboutUsPage() {
                               transition: "opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 180ms cubic-bezier(0.4, 0.0, 0.2, 1)",
                               objectFit: "cover"
                             }}
-                            sizes="(max-width: 640px) 160px,
-                                   (max-width: 768px) 280px,
-                                   (max-width: 1024px) 340px,
-                                   420px"
+                            sizes="(max-width: 640px) 200px,
+                                   (max-width: 768px) 330px,
+                                   (max-width: 1024px) 400px,
+                                   500px"
                             priority={isMainImage}
                           />
                         </div>
@@ -303,26 +307,26 @@ function AboutUsPage() {
         </div>
 
         {/* About Us Text Section */}
-        <div className="mt-12 md:mt-16 px-4 md:px-32">
-          <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-roc">Our Legacy</h1>
+        <div className="mt-12 md:mt-16 px-4 md:px-52">
+          <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-roc text-clamp-40">Our Legacy</h1>
 
-          <div className="flex flex-col font-normal text-clamp-24">
+          <div className="flex flex-col font-normal ">
             
             <div>
-              <p className="text-justify hyphens-auto font-roc text-sm md:text-base">
+              <p className="text-justify hyphens-auto font-roc text-sm md:text-base text-clamp-24">
                 Founded in 1911, VST Group is a leading conglomerate headquartered in Bangalore, known for
                 its enduring legacy of excellence, innovation, and sustainable growth. The group has been
                 growing ever since, expanding its presence across four core verticals:
               </p>
-              <ul className="list-disc pl-6 mt-3 mb-4 space-y-1 font-roc text-sm md:text-base">
+              <ul className="list-disc pl-6 mt-3 mb-4 space-y-1 font-roc text-sm md:text-base text-clamp-24">
                 <li>Automotive Franchise</li>
                 <li>Manufacturing</li> 
                 <li>OE Parts Distribution</li>
                 <li>Education</li>
               </ul>
               
-              <h3 className="text-xl md:text-2xl text-white py-8 mb-3 font-roc">A Legacy of Trust and Innovation:</h3>
-              <p className="text-justify hyphens-auto font-roc text-sm md:text-base">
+              <h3 className="text-xl md:text-2xl text-white py-8 mb-3 font-roc text-clamp-40">A Legacy of Trust and Innovation:</h3>
+              <p className="text-justify hyphens-auto font-roc text-sm md:text-base text-clamp-24">
                 With an annual turnover exceeding ₹5,000 crores ($570 million) , VST Group stands as a powerhouse
                 in India's business landscape. Under the visionary leadership of its fourth generation, the group
                 continues to set new benchmarks in service excellence, technological advancement, and customer

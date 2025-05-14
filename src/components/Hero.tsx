@@ -24,8 +24,8 @@ const slides = [
   {
     id: 7,
     image: slide5,
-    title: "LUXURY REDEFINED",
-    subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    title: "News and media",
+    subtitle: "Stay updated with the latest news, events, and milestones from VST group",
     label: "News & Media",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
@@ -35,8 +35,8 @@ const slides = [
   {
     id: 6,
     image: slide6,
-    title: "LUXURY REDEFINED",
-    subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    title: "Corporate Philanthropy",
+    subtitle: "Driven by empathy and purpose, our efforts aim to create a lasting impact through compassion and collective upliftment.",
     label: "Corporate Philanthropy",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
@@ -46,8 +46,8 @@ const slides = [
   {
     id: 5,
     image: slide2,
-    title: "LUXURY REDEFINED",
-    subtitle: "EXPERIENCE THE EXTRAORDINARY",
+    title: "Education",
+    subtitle: "Our educational philosophy emphasises a learner-centric approach wherein we cater to the diverse learning needs of students.",
     label: "Education",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
@@ -57,8 +57,8 @@ const slides = [
   {
     id: 4,
     image: slide4,
-    title: "AUTOMOTIVE EXCELLENCE",
-    subtitle: "PREMIUM MOBILITY SOLUTIONS",
+    title: "OE Parts Distribution",
+    subtitle: "Founded in 2005, VST Auto Parts enables Tata dealers to go the extra mile in providing effective, timely after-sales services with quick access to original spare parts.",
     label: "OE Parts Distribution",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',

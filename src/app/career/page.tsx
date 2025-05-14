@@ -14,31 +14,20 @@ interface FormData {
   name: string;
   email: string;
   mobile: string;
-  experience: string;
-  currentJobTitle: string;
-  preferredRole: string;
-  skills: string;
-  industries: string;
-  startDate: string;
-  noticePeriod: string;
+  aboutYourself: string;
   resume: File | null;
 }
 
 export default function Page() {
+  const MAX_ABOUT_CHARS = 400;
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState('');
-    const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     mobile: '',
-    experience: '',
-    currentJobTitle: '',
-    preferredRole: '',
-    skills: '',
-    industries: '',
-    startDate: '',
-    noticePeriod: '',
+    aboutYourself: '',
     resume: null,
   });
 
@@ -51,8 +40,6 @@ export default function Page() {
       const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
       const fileExtension = file.name.split('.').pop()?.toLowerCase();
       if (validTypes.includes(file.type) || ['doc', 'docx', 'pdf', 'txt'].includes(fileExtension || '')) {
-
-
         setSelectedFile(file);
         setFileError('');
       } else {
@@ -62,15 +49,21 @@ export default function Page() {
     }
   };
   
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    
+    // If this is the aboutYourself field, limit to max characters
+    if (name === 'aboutYourself' && value.length > MAX_ABOUT_CHARS) {
+      return;
+    }
+    
     setFormData((prev) => ({
       ...prev,
-      [name as keyof FormData]: value,
+      [name]: value,
     }));
   };
-  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -99,13 +92,7 @@ export default function Page() {
           name: '',
           email: '',
           mobile: '',
-          experience: '',
-          currentJobTitle: '',
-          preferredRole: '',
-          skills: '',
-          industries: '',
-          startDate: '',
-          noticePeriod: '',
+          aboutYourself: '',
           resume: null,
         });
         setSelectedFile(null);
@@ -115,12 +102,12 @@ export default function Page() {
     } catch (err: any) {
       console.error('Error sending application:', err);
       toast.error(err.response?.data?.message || 'Error submitting application.');
-
+    } finally {
+      setIsSubmitting(false);
     }
   };
   
   // Function to get file icon based on type
-
   const getFileIcon = (fileName: string) => {
     const extension = fileName.split('.').pop()?.toLowerCase();
     switch (extension) {
@@ -135,6 +122,10 @@ export default function Page() {
         return '📎';
     }
   };
+  
+  // Calculate remaining characters
+  const remainingChars = MAX_ABOUT_CHARS - formData.aboutYourself.length;
+  const charCountColor = remainingChars <= 50 ? 'text-yellow-500' : remainingChars <= 20 ? 'text-red-500' : 'text-gray-400';
   
   return (
     <div className="min-h-screen bg-black text-white">
@@ -199,7 +190,7 @@ export default function Page() {
             <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-center mb-4 sm:mb-6 md:mb-8 font-roc font-normal">Personal Details</h2>
 
             <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-4 md:gap-6 lg:gap-8">
                 {/* Personal Details Section - Preserved styling */}
                 <div>
                   <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-roc mb-1 md:mb-2 opacity-80 font-normal font-roc">Name</label>
@@ -210,17 +201,6 @@ export default function Page() {
                     name="name"
                     required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none font-normal font-roc"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-normal font-roc mb-1 md:mb-2 opacity-80 ">Email</label>
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    name="email"
-                    required
-                    className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -235,222 +215,55 @@ export default function Page() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Years of Experience</label>
-                  <div className="relative">
-                    <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
-                      value={formData.experience}
-                      onChange={handleChange}
-                      name="experience"
-                      required
-                    >
-                      <option value="">Select Experience</option>
-                      <option value="0-1">0-1 Year</option>
-                      <option value="1-3">1-3 Years</option>
-                      <option value="3-5">3-5 Years</option>
-                      <option value="5-7">7-9 Years</option>
-                      <option value="7-9">Other</option>
-                    </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
-                        src={frame5} 
-                        alt="calendar" 
-                        width={12} 
-                        height={12} 
-                        className="cursor-pointer"
-                      /></div>
-
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Current Job Title & Company</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80 ">Email</label>
                   <input
-                    type="text"
-                    value={formData.currentJobTitle}
+                    type="email"
+                    value={formData.email}
                     onChange={handleChange}
-                    name="currentJobTitle"
+                    name="email"
                     required
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
+                
+                {/* About Yourself Section - NEW */}
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Preferred Job Role at VST Group</label>
-                  <div>
-                    <div className="relative">
-                      <select
-                        className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
-                        value={formData.preferredRole}
-                        onChange={handleChange}
-                        name="preferredRole"
-                        required
-                      >
-                        <option value="">Select Role</option>
-                        <option value="manager">Manager</option>
-                        <option value="managing">Managing</option>
-                        <option value="management-hr">Management HR</option>
-                        <option value="hr">HR</option>
-                        <option value="sales">Sales</option>
-                        <option value="mechanics">Mechanics</option>
-                        <option value="other">Other</option>
-                      </select>
-                      <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
-                        src={frame5} 
-                        alt="calendar" 
-                        width={12} 
-                        height={12} 
-                        className="cursor-pointer"
-                      /></div>
-
-                    </div>
+                  <div className="flex justify-between items-center">
+                    <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
+                      Tell us about yourself and why you want this job.
+                    </label>
+                    <span className={`text-xs ${charCountColor}`}>
+                      {remainingChars} chars left
+                    </span>
                   </div>
-                </div>
-              </div>
-
-              {/* Skills & Expertise Section */}
-              <h2 className="text-xl sm:text-xl md:text-2xl text-center mt-8 md:mt-12 mb-4 md:mb-8 font-roc font-normal">Skills & Expertise</h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-                {/* Industries dropdown */}
-                <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Which industries have you worked in?</label>
-                  <div className="relative">
-                    <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
-                      value={formData.industries}
-                      onChange={handleChange}
-                      name="industries"
-                      required
-                    >
-                      <option value="">Select Industries</option>
-                      <option value="manager">Manager</option>
-                      <option value="managing">Managing</option>
-                      <option value="management-hr">Management HR</option>
-                      <option value="hr">HR</option>
-                      <option value="sales">Sales</option>
-                      <option value="mechanics">Mechanics</option>
-                      <option value="other">Other</option>
-                    </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
-                        src={frame5} 
-                        alt="calendar" 
-                        width={12} 
-                        height={12} 
-                        className="cursor-pointer"
-                      /></div>
-
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-roc mb-1 md:mb-2 opacity-80 font-normal font-roc">
-                    What's your earliest possible start date?
-                  </label>
-                  <div className="relative">
-                    <input
-                      type="date"
-                      value={formData.startDate}
-                      onChange={handleChange}
-                      name="startDate"
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none cursor-pointer"
-                      style={{ 
-                        colorScheme: 'dark',
-                      }}
-
-                    />
-                    <style jsx>{`
-                      input[type="date"]::-webkit-calendar-picker-indicator {
-                        display: none;
-                        -webkit-appearance: none;
-                      }
-                      input[type="date"]::-webkit-inner-spin-button,
-                      input[type="date"]::-webkit-outer-spin-button {
-                        -webkit-appearance: none;
-                        display: none;
-                      }
-                    `}</style>
+                  <textarea
+                    value={formData.aboutYourself}
+                    onChange={handleChange}
+                    name="aboutYourself"
+                    required
+                    rows={4}
+                    maxLength={MAX_ABOUT_CHARS}
+                    className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none resize-none"
+                  />
+                  <div className="w-full h-1 mt-1 rounded-full overflow-hidden">
                     <div 
-                      className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer z-10"
-                      onClick={() => {
-                        const dateInput = document.querySelector('input[type="date"][name="startDate"]');
-                        if (dateInput) {
-                          (dateInput as HTMLInputElement).showPicker();
-                        }
-                      }}
-                    >
-                      <Image 
-                        src={frame4} 
-                        alt="calendar" 
-                        width={20} 
-                        height={20} 
-                        className="cursor-pointer"
-                      />
-                    </div>
+                      className={`h-full ${
+                        formData.aboutYourself.length > MAX_ABOUT_CHARS * 0.8 
+                          ? formData.aboutYourself.length > MAX_ABOUT_CHARS * 0.95 
+                            ? 'bg-red-500' 
+                            : 'bg-yellow-500'
+                          : 'bg-green-500'
+                      }`}
+                      style={{ width: `${Math.min(formData.aboutYourself.length / MAX_ABOUT_CHARS * 100, 100)}%` }}
+                    ></div>
                   </div>
-                </div>
-                <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">How long is your notice period as per your contract?</label>
-                  <div className="relative">
-                    <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
-                      value={formData.noticePeriod}
-                      onChange={handleChange}
-                      name="noticePeriod"
-                      required
-                    >
-                      <option value="">Select Notice Period</option>
-                      <option value="immediate">Immediately</option>
-                      <option value="15">15 days</option>
-                      <option value="30">30 days</option>
-                      <option value="60">60 days</option>
-                      <option value="90">90 days</option>
-                      <option value="other">Other</option>
-                    </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
-                        src={frame5} 
-                        alt="calendar" 
-                        width={12} 
-                        height={12} 
-                        className="cursor-pointer"
-                      /></div>
-
-                  </div>
-                </div>
-                {/* Skills dropdown */}
-                <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">What are the primary skills that define your expertise?</label>
-                  <div className="relative">
-                    <select
-                      className="w-full bg-[#666666] rounded p-2 md:p-2.5 appearance-none focus:outline-none cursor-pointer"
-                      value={formData.skills}
-                      onChange={handleChange}
-                      name="skills"
-                      required
-                    >
-                      <option value="">Select Skills</option>
-                      <option value="management">Management Skills</option>
-                      <option value="hr-skills">HR Management</option>
-                      <option value="sales-skills">Sales & Marketing</option>
-                      <option value="mechanical">Mechanical Skills</option>
-                      <option value="leadership">Leadership</option>
-                      <option value="communication">Communication</option>
-                      <option value="technical">Technical Skills</option>
-                      <option value="other">Other</option>
-                    </select>
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#FDB813]"><Image 
-                        src={frame5} 
-                        alt="calendar" 
-                        width={12} 
-                        height={12} 
-                        className="cursor-pointer"
-                      /></div>
-
-                  </div>
-
                 </div>
               </div>
 
               {/* Upload Resume Section - Enhanced with responsive sizing */}
               <div className="mt-6 md:mt-8">
                 <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Upload resume</label>
-                <div className={`bg-[#666666] rounded-lg p-8 sm:p-10 md:p-12 lg:p-16 text-center cursor-pointer relative h-[150px] sm:h-[170px] md:h-[200px] transition-all duration-300 ${selectedFile ? 'border-2 border-[#FDB813]' : ''}`}>
+                <div className={`bg-[#666666] rounded-lg p-8 sm:p-10 md:p-12 lg:p-16 text-center cursor-pointer relative transition-all duration-300 ${selectedFile ? 'border-2 border-[#FDB813]' : ''}`}>
                   <div className="flex flex-col items-center justify-center h-full relative">
                     <input
                       type="file"
@@ -523,7 +336,7 @@ export default function Page() {
                   disabled={isSubmitting}
                   className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[#FDB813] text-black py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-roc"
                 >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>
