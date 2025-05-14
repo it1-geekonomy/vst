@@ -1192,7 +1192,7 @@ const FranchiseSlider = () => {
                         {location["sales & service"] && location["sales & service"].length > 0 && location["sales & service"].map((salesService, idx) => (
                           <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales & Service {location["sales & service"] && location["sales & service"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales & Service:
                             </div>
                             <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                               {salesService.address}<br />
