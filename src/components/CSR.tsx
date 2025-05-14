@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Initiatives from "./Initiatives";
 import bg from "../app/public/makingdiff/orange-bg.png";
 import flag from "../app/public/makingdiff/flag.png";
-import { Poppins } from "next/font/google";
+import gif from "@/app/public/education/vst logo gif.gif"
 
 interface CSRItemProps {
   title: string;
@@ -23,11 +23,7 @@ interface ImageData {
   description: string;
 }
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-  variable: "--font-poppins",
-});
+
 
 // Updated timeline data structure with titles and descriptions for each image
 const timelineData = [
@@ -100,14 +96,14 @@ const TimelineYear: React.FC<{
 }> = ({ year, isActive, onClick, position }) => {
   return (
     <motion.div
-      className={`cursor-pointer absolute right-0 flex items-center gap-2 sm:gap-4 ${isActive ? "text-red-500" : "text-white"} ${poppins.className}`}
+      className={`cursor-pointer absolute right-0 flex items-center gap-2 sm:gap-4 ${isActive ? "text-red-500" : "text-white"} font-roc font-normal`}
       animate={{ x: position }}
       transition={{ type: "spring", stiffness: 100 }}
       onClick={onClick}
     >
       <div className="h-3 w-3 sm:h-4 sm:w-4 rounded-full bg-red-500" />
       <div className="flex items-center space-x-3">
-        <span className="text-white text-2xl font-poppins font-semibold">
+        <span className="text-white text-2xl font-roc font-normal">
           {year}
         </span>
       </div>
@@ -152,7 +148,7 @@ const CSRItem: React.FC<CSRItemProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center px-4 sm:px-6 py-8 ${poppins.className}`}
+      className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center px-4 sm:px-6 py-8 font-roc font-normal`}
     >
       {/* Image Section */}
       <motion.div
@@ -230,26 +226,38 @@ const CSR = () => {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-  // Adjust step size based on screen width
+  // Adjust step size based on screen width - IMPROVED RESPONSIVENESS
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setStepSize(350);
+      // More granular breakpoints for better responsiveness
+      if (window.innerWidth < 480) {
+        setStepSize(200); // Very small screens
+      } else if (window.innerWidth < 640) {
+        setStepSize(250); // Small mobile screens
       } else if (window.innerWidth < 768) {
-        setStepSize(375);
+        setStepSize(300); // Mobile screens
+      } else if (window.innerWidth < 1024) {
+        setStepSize(320); // Tablet screens
+      } else if (window.innerWidth < 1280) {
+        setStepSize(320); // Small desktop screens
       } else {
-        setStepSize(400);
+        setStepSize(400); // Large desktop screens
       }
     };
 
+    // Initial setup
     handleResize();
+    
+    // Add event listener
     window.addEventListener("resize", handleResize);
+    
+    // Cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // ADD THIS useEffect to keep currentImageData state in sync
+  // Keep currentImageData state in sync
   useEffect(() => {
-    const dataForYear = timelineData[currentIndex]; // currentData is already defined below, can use that
+    const dataForYear = timelineData[currentIndex];
     if (
       dataForYear &&
       dataForYear.images &&
@@ -260,7 +268,7 @@ const CSR = () => {
     } else {
       setCurrentImageData(null);
     }
-  }, [currentIndex, currentImageIndex]); // Add timelineData if it can change, though it's usually constant
+  }, [currentIndex, currentImageIndex]);
 
   // Move to the next year
   const handleNextYearClick = () => {
@@ -310,7 +318,7 @@ const CSR = () => {
     );
 
   return (
-    <div className={`flex flex-col min-h-screen ${poppins.className}`}>
+    <div className={`flex flex-col min-h-screen font-roc font-normal`}>
       <main className="relative flex-grow overflow-x-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -329,12 +337,12 @@ const CSR = () => {
           transition={{ duration: 0.01 }}
         >
           {/* Hero Section */}
-          <section className="relative h-[50vh] sm:h-[60vh] md:h-[80vh] overflow-hidden z-10">
+          <section className="relative h-[50vh] sm:h-[60vh] md:h-[75vh] 2xl:h-[60vh] overflow-hidden z-10">
             <div className="relative h-full flex flex-col items-center justify-start text-white px-4 sm:px-6 md:px-8  sm:pt-20 pb-20">
               <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[5.5rem] font-light font-roc text-left mb-2 sm:mb-4">
                 Making a Difference
               </h1>
-              <p className="text-sm sm:text-base md:text-[22px] text-center max-w-6xl mx-auto text-gray-200 leading-relaxed text-justify px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8rounded-lg mb-16 sm:mb-20 md:mb-24 font-normal font-roc">
+              <p className="text-sm sm:text-base md:text-[22px] text-center max-w-6xl 2xl:max-w-7xl mx-auto text-gray-200 leading-relaxed text-justify px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8rounded-lg mb-16 sm:mb-20 md:mb-18 font-normal font-roc">
                 Rooted in a legacy of responsibility and service, VST Group,
                 through the V.S. Tiruvengadaswamy Mudaliar Memorial Trust, has
                 consistently extended its hand to communities in need. From
@@ -353,8 +361,8 @@ const CSR = () => {
             <Initiatives />
           </div>
 
-          {/* Timeline Section */}
-          <section className="mx-18 px-2 sm:px-4 py-0 sm:py-4 relative z-10 mt-12 sm:mt-16 md:mt-20">
+          {/* Timeline Section - IMPROVED RESPONSIVENESS */}
+          <section className="xl:mx-18 lg:mx-12 px-2 sm:px-4 py-0 sm:py-4 relative z-10 mt-12 sm:mt-16 md:mt-20">
             <div className="relative h-16 sm:h-20">
               {/* Timeline Line */}
               <div className="absolute h-[2px] bg-[white] w-full top-[20px] sm:top-[25px]" />
@@ -370,47 +378,14 @@ const CSR = () => {
                 />
               </div>
 
-              {/* Year display with navigation arrows */}
-              <motion.div
-                className={`absolute right-0 top-[-35px] sm:top-[-30px] flex gap-5 items-center z-10`}
-                animate={{ x: yearPosition }}
-                transition={{ type: "spring", stiffness: 100 }}
-              >
-                {/* Left Arrow (Next) - Always visible */}
+              {/* Year display with navigation arrows - IMPROVED FOR RESPONSIVENESS */}
+              <div className="absolute right-0 w-full flex justify-end top-[-35px] sm:top-[-30px]">
                 <motion.div
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="mb-1 cursor-pointer"
-                  onClick={handleNextYearClick}
+                  className="flex gap-2 sm:gap-5 items-center z-10"
+                  animate={{ x: yearPosition }}
+                  transition={{ type: "spring", stiffness: 50, damping: 14 }}
                 >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 6L4 12M4 12L10 18M4 12H20"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </motion.div>
-
-                {/* Year text */}
-                <p className="text-lg sm:text-xl font-medium whitespace-nowrap text-white font-poppins font-normal">
-                  {currentData.year}
-                </p>
-
-                {/* Right Arrow (Previous) - Only show if not at first year */}
-                {currentIndex > 0 && (
+                  {/* Left Arrow (Next) - Always visible */}
                   <motion.div
                     animate={{ y: [0, 5, 0] }}
                     transition={{
@@ -418,8 +393,8 @@ const CSR = () => {
                       repeat: Infinity,
                       ease: "easeInOut",
                     }}
-                    className="mb-1 cursor-pointer"
-                    onClick={handlePrevYearClick}
+                    className="mb-1 cursor-pointer flex-shrink-0"
+                    onClick={handleNextYearClick}
                   >
                     <svg
                       width="24"
@@ -427,9 +402,10 @@ const CSR = () => {
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="w-5 h-5 sm:w-6 sm:h-6"
                     >
                       <path
-                        d="M14 6L20 12M20 12L14 18M20 12H4"
+                        d="M10 6L4 12M4 12L10 18M4 12H20"
                         stroke="white"
                         strokeWidth="2"
                         strokeLinecap="round"
@@ -437,8 +413,44 @@ const CSR = () => {
                       />
                     </svg>
                   </motion.div>
-                )}
-              </motion.div>
+
+                  {/* Year text */}
+                  <p className="text-base sm:text-lg md:text-xl whitespace-nowrap text-white font-roc font-normal">
+                    {currentData.year}
+                  </p>
+
+                  {/* Right Arrow (Previous) - Only show if not at first year */}
+                  {currentIndex > 0 && (
+                    <motion.div
+                      animate={{ y: [0, 5, 0] }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      className="mb-1 cursor-pointer flex-shrink-0"
+                      onClick={handlePrevYearClick}
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-5 h-5 sm:w-6 sm:h-6"
+                      >
+                        <path
+                          d="M14 6L20 12M20 12L14 18M20 12H4"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </motion.div>
+                  )}
+                </motion.div>
+              </div>
             </div>
 
             {/* Content Section */}
@@ -454,7 +466,7 @@ const CSR = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center sm:px-6 py-8 ${poppins.className}`}
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center py-8 font-roc font-normal`}
                 >
                   {/* Image Section */}
                   <motion.div
@@ -498,11 +510,11 @@ const CSR = () => {
 
                   {/* Content Section */}
                   <motion.div
-                    className={`relative space-y-6 md:mr-8 ${isImageOnLeft ? "md:order-2" : "md:order-1"}`}
+                    className={`relative space-y-6 md:mr-6 ${isImageOnLeft ? "md:order-2" : "md:order-1"}`}
                     layout
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                   >
-                    <h3 className="text-2xl sm:text-4xl font-normal font-poppins text-[#d7d1cd] text-left">
+                    <h3 className="text-2xl sm:text-4xl font-roc font-normal text-[#d7d1cd] text-left">
                       {/* Use currentImageData if it's reliably set, or continue direct access */}
                       {currentImageData
                         ? currentImageData.title
@@ -523,6 +535,13 @@ const CSR = () => {
             </AnimatePresence>
           </section>
         </motion.div>
+        <div className="relative w-full flex justify-center py-8 sm:py-12 lg:py-20">
+        <Image
+          src={gif}
+          alt="VST Logo Animation"
+          className="w-[50%] h-[50%] object-contain"
+        />
+        </div>
       </main>
       <Footer bgcolour="bg-black" />
     </div>
