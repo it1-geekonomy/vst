@@ -165,7 +165,7 @@ export default function Initiatives() {
               <div className="p-6">
                 {activeSection === null ? (
                   <>
-                    <h2 className="text-[2.5rem] text-[#fff] mb-6 font-poppins font-semibold">
+                    <h2 className="text-[2.5rem] text-[#fff] mb-6 font-roc font-semibold">
                       Our Initiatives
                     </h2>
                     <p className="text-[#fff] text-[17px] leading-relaxed font-roc font-normal text-justify">
@@ -178,7 +178,7 @@ export default function Initiatives() {
                   </>
                 ) : (
                   <>
-                    <h2 className="text-[2.5rem] text-[#fff] mb-6 font-poppins font-semibold">
+                    <h2 className="text-[2.5rem] text-[#fff] mb-6 font-roc font-semibold">
                       {
                         initiativeData.find((item) => item.id === activeSection)
                           ?.title
@@ -203,7 +203,7 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter("education")}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full font-poppins font-semibold">
+              <h3 className="text-3xl text-white text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full font-roc font-semibold">
                 Education and Holistic Development
               </h3>
             </div>
@@ -213,7 +213,7 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter("sustainability")}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white00 font-poppins font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white00 font-roc font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Sustainability
               </h3>
             </div>
@@ -222,7 +222,7 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter("rural")}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white400 font-poppins font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white400 font-roc font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Rural Development
               </h3>
             </div>
@@ -231,7 +231,7 @@ export default function Initiatives() {
               onMouseEnter={() => handleMouseEnter("healthcare")}
               onMouseLeave={handleMouseLeave}
             >
-              <h3 className="text-3xl text-white font-poppins font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
+              <h3 className="text-3xl text-white font-roc font-semibold text-center relative z-10 group-hover:scale-105 transition-transform duration-500 w-full">
                 Healthcare
               </h3>
             </div>
@@ -253,7 +253,7 @@ export default function Initiatives() {
           className="object-cover"
         />
         <div className="absolute inset-0 flex flex-col justify-center p-6">
-          <h2 className="text-3xl text-white font-poppins font-semibold mb-2">
+          <h2 className="text-3xl text-white font-roc font-semibold mb-2">
             Our Initiatives
           </h2>
           <p className="text-gray-200 text-sm font-poppins font-light">
