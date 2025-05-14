@@ -9,6 +9,7 @@ import Image2000 from "@/app/public/images/AboutUs/2000Image.png";
 
 import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
+import { useRouter } from "next/navigation";
 
 function AboutUsPage() {
   const [selectedYear, setSelectedYear] = useState("1911");
@@ -16,7 +17,7 @@ function AboutUsPage() {
   const [imageOpacity, setImageOpacity] = useState(1);
   const [blurAmount, setBlurAmount] = useState(0);
   const [scale, setScale] = useState(1);
-  
+  const router = useRouter();
   // All timeline data
   const allTimelineData = [
     {
@@ -400,7 +401,7 @@ function AboutUsPage() {
                 Progress with Purpose.
               </h2>
               <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-roc">Impact with Vision</h3>
-              <button className="bg-yellow-400 text-black px-6 md:px-8 py-2 md:py-3 rounded text-base md:text-lg ">
+              <button onClick={() => router.push("/career")} className="bg-yellow-400 text-black px-6 md:px-8 py-2 md:py-3 rounded text-base md:text-lg font-medium">
                 Join Us
               </button>
             </div>
