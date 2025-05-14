@@ -332,13 +332,13 @@ export default function Page() {
 
         {/* VST AUTO PARTS Title */}
         <div className="relative z-10 pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-0 text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-[60px] 2xl:text-[100px] font-normal tracking-wider text-black">
+          <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal tracking-wider text-black">
             VST AUTO PARTS
           </h1>
         </div>
 
         {/* Responsive Carousel Slider */}
-        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 mb-8 sm:mb-12 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[550px] 2xl:h-[750px]">
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto px-4 mb-8 sm:mb-12 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
           {/* Desktop 3D Carousel - only visible on large screens */}
           <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
             <div className="carousel-container relative w-full h-full">
@@ -481,15 +481,15 @@ export default function Page() {
           }}
         />
         
-        <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-24">
+        <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-12 xl:py-0 2xl:py-18 3xl:py-0">
           {/* Company information section */}
           <div className="mb-6 sm:mb-8 lg:mb-10 text-black w-full text-justify">
-            <p className="text-base sm:text-lg lg:text-xl 2xl:text-[30px] leading-[1.6]">
+            <p className="text-base sm:text-lg lg:text-xl xl:text-[25px] 2xl:text-[26px] 3xl:text-[30px] leading-[1.6]">
               Founded in 2005, VST Auto Parts enables Tata dealers to go the
               extra mile in providing effective, timely after-sales service with
               quick access to original spare parts.
             </p>
-            <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-xl 2xl:text-[30px] leading-[1.6]">
+            <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-xl xl:text-[25px] 2xl:text-[26px] 3xl:text-[30px]  leading-[1.6]">
               VST Auto Parts supply Tata Motors parts across Tamil Nadu, with
               the central warehouse spanning 15,000 square feet in Poonamallee,
               Chennai. This the central supply centre for a network of 2
@@ -500,7 +500,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-          <div className="ml-12 sm:ml-20 md:ml-36 lg:ml-44 text-black">
+          <div className="text-black">
             <LocationSection
                locationImage="vst-auto-parts/location img.png"
                address={{
