@@ -29,6 +29,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Roc Grotesk', sans-serif;
+  font-weight: 400;
   position: relative;
   width: 100%;
 }
