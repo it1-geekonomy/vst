@@ -147,7 +147,7 @@ const CSRItem: React.FC<CSRItemProps> = ({
       ? currentImageIndex === 0 || currentImageIndex === 2 // For 2018-2019
       : currentImageIndex === 0 ||
         currentImageIndex === 2 ||
-        images[currentImageIndex].src.includes("image3.jpeg"); // For other years
+        images[currentImageIndex].src.includes("image.jpeg"); // For other years
 
   // Get the current image data
   const currentImageData = images[currentImageIndex] as ImageData;
@@ -186,7 +186,7 @@ const CSRItem: React.FC<CSRItemProps> = ({
                 className="object-cover rounded-[2rem]"
                 onError={(e) => {
                   console.error(`Error loading image: ${currentImageData.src}`);
-                  e.currentTarget.src = "/placeholder.jpg";
+                  e.currentTarget.src = "/placeholder.jpeg";
                 }}
               />
             </motion.div>
@@ -251,7 +251,9 @@ const CSR = () => {
         setStepSize(310); // Small desktop screens
       } else if (window.innerWidth < 1536) {
         setStepSize(400);
-      } else {
+      }else if (window.innerWidth < 1900) {
+        setStepSize(520);
+      }else {
         setStepSize(740); // Large desktop screens
       }
     };
