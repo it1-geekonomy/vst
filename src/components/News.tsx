@@ -194,9 +194,6 @@ const News = () => {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute bottom-0 left-0 px-3 py-[6px] text-white text-xs font-medium bg-blend-lighten backdrop-blur">
-                  {item.tag}
-                </div>
               </div>
 
               <div className="p-4 flex flex-col justify-between flex-grow bg-[#FFFFFF1A] backdrop-blur-[36.55px]">
