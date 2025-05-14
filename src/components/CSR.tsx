@@ -8,6 +8,7 @@ import bg from "../app/public/makingdiff/orange-bg.png";
 import flag from "../app/public/makingdiff/flag.png";
 import gif from "@/app/public/education/vst logo gif.gif";
 
+
 interface CSRItemProps {
   title: string;
   description: string;
@@ -54,11 +55,6 @@ const timelineData = [
         description:
           "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
       },
-    ],
-  },
-  {
-    year: "2017-2018",
-    images: [
       {
         src: "/makingdiff/imagesanime/image5.jpeg",
         title: "Rotary Orchards Chaitanya Senior",
@@ -70,6 +66,11 @@ const timelineData = [
         description:
           "Helping the hearing impaired children mostly from economically weaker section.",
       },
+    ],
+  },
+  {
+    year: "2017-2018",
+    images: [
       {
         src: "/makingdiff/imagesanime/image7.jpeg",
         title: "SMT. KAMALA BAI EDUCATIONAL INSTITUTION, BANGALORE ",
@@ -82,53 +83,17 @@ const timelineData = [
         description:
           "Religious Trust Ramakrishna Matt - Bangalore religious Trust Ramakrishna Mission-Shivanahalli, religious Trust Ramakrishna Ashrama-Mysore, Religious Trust Ramakrishna Saradashrama-Ponnampet",
       },
-    ],
-  },
-  {
-    year: "2000-2011",
-    images: [
       {
-        src: "/makingdiff/imagesanime/image3.jpeg",
-        title: "Wild Life First",
-        description: "Wildlife conservation in India",
-      },
-      {
-        src: "/makingdiff/imagesanime/image4.jpeg",
-        title: "National Association for the Blind, Karnataka",
+        src: "/makingdiff/imagesanime/image9.jpeg",
+        title: "The Deaf Aid Society",
         description:
-          "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
-      },
-    ],
-  },
-  {
-    year: "1995-2011",
-    images: [
-      {
-        src: "/makingdiff/imagesanime/image3.jpeg",
-        title: "Wild Life First",
-        description: "Wildlife conservation in India",
+          "Helping the hearing impaired children mostly from economically weaker section.",
       },
       {
-        src: "/makingdiff/imagesanime/image4.jpeg",
-        title: "National Association for the Blind, Karnataka",
+        src: "/makingdiff/imagesanime/image10.jpeg",
+        title: "The National Association for the Blind, Karnataka",
         description:
-          "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
-      },
-    ],
-  },
-  {
-    year: "1990-2011",
-    images: [
-      {
-        src: "/makingdiff/imagesanime/image3.jpeg",
-        title: "Wild Life First",
-        description: "Wildlife conservation in India",
-      },
-      {
-        src: "/makingdiff/imagesanime/image4.jpeg",
-        title: "National Association for the Blind, Karnataka",
-        description:
-          "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
+          "Screening camps, eye camps, surgery & medicines",
       },
     ],
   },
@@ -283,11 +248,11 @@ const CSR = () => {
       } else if (window.innerWidth < 1024) {
         setStepSize(320); // Tablet screens
       } else if (window.innerWidth < 1280) {
-        setStepSize(125); // Small desktop screens
+        setStepSize(310); // Small desktop screens
       } else if (window.innerWidth < 1536) {
-        setStepSize(165);
+        setStepSize(400);
       } else {
-        setStepSize(330); // Large desktop screens
+        setStepSize(740); // Large desktop screens
       }
     };
 
