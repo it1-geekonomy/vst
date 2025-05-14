@@ -586,7 +586,7 @@ const slides: SlideData[] = [
             address: "No.1-4-35B, Two Shutter Ground Floor, Jayanagara, K R Pete, Mandya - 571 426.",
             phone: "+91 88844 98959",
             email: "sales.krpete@india-garage.in",
-            map: "abc"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31157.027815071415!2d76.9194856!3d12.5407536!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747223757472!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -1372,5 +1372,5 @@ const FranchiseSlider = () => {
     </div>
   );
 };
-       
-export default FranchiseSlider;
+        
+export de fault FranchiseSlider;
