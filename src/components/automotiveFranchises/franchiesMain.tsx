@@ -31,8 +31,8 @@ import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
 // import hondabike from "@/app/public/faranchies/carpic/Honda-bike.png";
 // import volkswagen from "@/app/public/faranchies/carpic/volkswagen-car.png";
 // import byd from "@/app/public/faranchies/carpic/byd-car.png";
- import porsche from "@/app/public/faranchies/newcarpics/porsche4.png";
- import benzs from "@/app/public/faranchies/newcarpics/benz1.png";
+import porsche from "@/app/public/faranchies/newcarpics/porsche4.png";
+import benzs from "@/app/public/faranchies/newcarpics/benz1.png";
 import jaguar from "@/app/public/faranchies/newcarpics/jaguar2.png";
 import landrover from "@/app/public/faranchies/newcarpics/landrover3.png";
 import maserati from "@/app/public/faranchies/newcarpics/maserati5.png";
@@ -40,9 +40,9 @@ import honda from "@/app/public/faranchies/newcarpics/honda12.png";
 import tata from "@/app/public/faranchies/newcarpics/tata8.png";
 import kia from "@/app/public/faranchies/newcarpics/kia7.png";
 import ducati from "@/app/public/faranchies/newcarpics/ducati6.png";
- import mahindra from "@/app/public/faranchies/newcarpics/mahindra9.png";
-  import byd from "@/app/public/faranchies/newcarpics/byd11.png";
-   import wagen from "@/app/public/faranchies/newcarpics/wagen10.png";
+import mahindra from "@/app/public/faranchies/newcarpics/mahindra9.png";
+import byd from "@/app/public/faranchies/newcarpics/byd11.png";
+import wagen from "@/app/public/faranchies/newcarpics/wagen10.png";
 
 
 
@@ -139,6 +139,7 @@ const slides: SlideData[] = [
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Perungudi,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CPerungudi,+Chennai"
           },    
         ],
+
         "sales and distribution": [
           {
             address: "Plot #115, Industrial Estate(EEII),Perungudi, Chennai-600 096.",
@@ -442,8 +443,8 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "Head Office, #1, VST Vistas, Palace Cross Rd, Chakravarthy Layout, Jayamahal, Bengaluru 560 020",
-            phone: " +91 88844 98957",
+            address: "Head Office, #1, VST Vistas, Palace Cross Rd, Chakravarthy Layout, Jayamahal, Bengaluru - 560 020.",
+            phone: "+91 88844 98957",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
@@ -861,8 +862,7 @@ const FranchiseSlider = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
                 className="text-white text-sm sm:text-base lg:text-[24px] text-left 
-              font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl
-              font-['FONTSPRING_DEMO_-_Roc_Grotesk']"
+              font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl"
               >
                 {slides[currentSlide].description}
               </motion.p>
@@ -907,14 +907,14 @@ const FranchiseSlider = () => {
                   `}</style>
                   {/* If only one location, use that directly */}
                   {(() => {
-                    const locationKey = Object.keys(slides[currentSlide].locations).length === 1 
+                    const locationKey = Object.keys(slides[currentSlide].locations).length === 1
                       ? Object.keys(slides[currentSlide].locations)[0]
                       : activeLocation;
-                    
+
                     if (!locationKey || !slides[currentSlide].locations[locationKey]) return null;
 
                     const location = slides[currentSlide].locations[locationKey];
-                    
+
                     return (
                       <>
                         {/* Sales */}
@@ -1086,12 +1086,12 @@ const FranchiseSlider = () => {
 
         {/* Logo section */}
         <div className="w-full flex justify-center py-8 sm:py-12 lg:py-20">
-        <Image
-          src={gif}
-          alt="VST Logo Animation"
-          className="w-[50%] h-[50%] object-contain"
-        />
-      
+          <Image
+            src={gif}
+            alt="VST Logo Animation"
+            className="w-[50%] h-[50%] object-contain"
+          />
+
         </div>
       </motion.div>
     </div>
