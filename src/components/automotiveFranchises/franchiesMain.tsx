@@ -75,7 +75,7 @@ interface SlideData {
   learnMoreLink: string;
   locations?: {
     [key: string]: {
-      sales: Array<{
+      sales?: Array<{
         address: string;
         phone: string | string[];
         email: string | string[];
@@ -785,7 +785,7 @@ const slides: SlideData[] = [
             map: "https://maps.app.goo.gl/gt7DQkNyAm4dJGpYA"
           },
           {
-            address: "Head Workshop, No.6, St. John’s Road, Ulsoor,  Bengaluru - 560 042.",
+            address: "Head Workshop, No.6, St. John's Road, Ulsoor,  Bengaluru - 560 042.",
             phone: "+91 80 2513 9199, +91 94498 67080",
             email: "service.ho@cityhonda.in",
             map: "https://maps.app.goo.gl/WkS8iBtP7VkeAjEBA"
