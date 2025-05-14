@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Image1881 from "@/app/public/images/AboutUs/1881Image.png";
-import Image1920 from "@/app/public/images/AboutUs/1920Image.png";
-import Image1950 from "@/app/public/images/AboutUs/1950Image.png";
+import Image1911 from "@/app/public/images/AboutUs/1911Image.png";
+import Image1930 from "@/app/public/images/AboutUs/1930Image.png";
+import Image1960 from "@/app/public/images/AboutUs/1960Image.png";
+import Image2000 from "@/app/public/images/AboutUs/2000Image.png";
 
 import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
@@ -16,20 +17,45 @@ function AboutUsPage() {
   const [blurAmount, setBlurAmount] = useState(0);
   const [scale, setScale] = useState(1);
   
-  const timelineData = [
+  // All timeline data
+  const allTimelineData = [
     {
-      year: "1960",
-      image: Image1881,
+      year: "1911",
+      image: Image1911,
     },
     {
       year: "1930",
-      image: Image1920,
+      image: Image1930,
     },
     {
-      year: "1911",
-      image: Image1950,
+      year: "1960",
+      image: Image1960,
+    },
+    {
+      year: "2000",
+      image: Image2000,
     },
   ];
+
+  // Get current visible timeline data - always exactly 3 items
+  const getVisibleTimelineData = () => {
+    const allYears = allTimelineData.map(item => item.year);
+    const selectedIndex = allYears.indexOf(selectedYear);
+    
+    // Get previous and next indices with wrap-around
+    const prevIndex = (selectedIndex - 1 + allYears.length) % allYears.length;
+    const nextIndex = (selectedIndex + 1) % allYears.length;
+    
+    // Return only the visible 3 items
+    return [
+      allTimelineData[prevIndex],
+      allTimelineData[selectedIndex],
+      allTimelineData[nextIndex]
+    ];
+  };
+  
+  // Currently visible timeline data
+  const timelineData = getVisibleTimelineData();
 
   // Apply subtle zoom effect to the selected image
   useEffect(() => {
@@ -46,18 +72,25 @@ function AboutUsPage() {
   }, [isTransitioning]);
 
   const getPosition = (year: string) => {
-    const years = ["1960", "1930", "1911"];
-    const selectedIndex = years.indexOf(selectedYear);
-    const currentIndex = years.indexOf(year);
-
-    // Calculate relative position (-1 for above, 0 for center, 1 for below)
-    let position = currentIndex - selectedIndex;
-
-    // Adjust for circular motion
-    if (position === 2) position = -1;
-    if (position === -2) position = 1;
-
-    return position;
+    // For the 3 visible items, determine their position
+    if (year === selectedYear) return 0; // center
+    
+    const allYears = allTimelineData.map(item => item.year);
+    const selectedIndex = allYears.indexOf(selectedYear);
+    const yearIndex = allYears.indexOf(year);
+    
+    // Previous year (above)
+    if (yearIndex === (selectedIndex - 1 + allYears.length) % allYears.length) {
+      return -1;
+    }
+    
+    // Next year (below)
+    if (yearIndex === (selectedIndex + 1) % allYears.length) {
+      return 1;
+    }
+    
+    // Not visible
+    return null;
   };
 
   // Enhanced transition with faster fadeout
@@ -100,6 +133,26 @@ function AboutUsPage() {
     }, 150);
   };
 
+  // Handle previous year
+  const handlePrevClick = () => {
+    if (isTransitioning) return;
+    
+    const allYears = allTimelineData.map(item => item.year);
+    const currentIndex = allYears.indexOf(selectedYear);
+    const prevIndex = (currentIndex - 1 + allYears.length) % allYears.length;
+    handleYearClick(allYears[prevIndex]);
+  };
+
+  // Handle next year
+  const handleNextClick = () => {
+    if (isTransitioning) return;
+    
+    const allYears = allTimelineData.map(item => item.year);
+    const currentIndex = allYears.indexOf(selectedYear);
+    const nextIndex = (currentIndex + 1) % allYears.length;
+    handleYearClick(allYears[nextIndex]);
+  };
+
   return (
     <div 
       className="min-h-screen text-white relative bg-cover bg-center bg-no-repeat"
@@ -124,11 +177,7 @@ function AboutUsPage() {
           <div className="w-full lg:w-1/3 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative lg:pr-0">
             {/* Up arrow - Moves timeline up (previous year) */}
             <button
-              onClick={() => {
-                const currentIndex = timelineData.findIndex((item) => item.year === selectedYear)
-                const prevIndex = (currentIndex - 1 + timelineData.length) % timelineData.length
-                handleYearClick(timelineData[prevIndex].year)
-              }}
+              onClick={handlePrevClick}
               className="text-gray-400 hover:text-yellow-300 transition-colors "
             >
               <svg
@@ -212,11 +261,7 @@ function AboutUsPage() {
 
             {/* Down arrow - Moves timeline down (next year) */}
             <button
-              onClick={() => {
-                const currentIndex = timelineData.findIndex((item) => item.year === selectedYear)
-                const nextIndex = (currentIndex + 1) % timelineData.length
-                handleYearClick(timelineData[nextIndex].year)
-              }}
+              onClick={handleNextClick}
               className="text-gray-400 hover:text-yellow-300 transition-colors"
             >
               <svg
