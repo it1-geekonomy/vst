@@ -54,7 +54,7 @@ const newsData = [
     //   </>
     // ),
     tag: 'Porche',
-    location: 'Bangalore',
+    location: 'Bengaluru',
     time: '3 Days Ago',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_vstgroup-automotive-kia-activity-7219620766533791744-W2H4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
@@ -63,7 +63,7 @@ const newsData = [
     image: card2,
     title: "Your support fuels our drive for success, and we're grateful for your ongoing partnership.",
     tag: 'Innovation',
-    location: 'Bangalore',
+    location: 'Bengaluru',
     time: '3 Days Ago',
     route: 'https://www.linkedin.com/posts/tanvi-gupta-09b07455_bangladeshexpo-agriculture-expo-activity-7206191159939919872-LHrH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
@@ -88,7 +88,7 @@ const newsData = [
     title: " Congratulations to the Porsche Centre Bengaluru team for achieving yet another extraordinary success.",
     
     tag: 'Industry',
-    location: 'Bangalore',
+    location: 'Bengaluru',
     time: '3 Days Ago',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_globalporschemomentaward-porsche-globalrecognition-activity-7313130881051697152-J3cW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
@@ -97,7 +97,7 @@ const newsData = [
     image: post4New,
     title: "South and Best Performance in Most Active User - Fleet Edge - South, reaffirming our commitment to outstanding service.",
     tag: 'Business',
-    location: 'Bangalore',
+    location: 'Bengaluru',
     time: '3 Days Ago',
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
   },
@@ -106,7 +106,7 @@ const newsData = [
     image: card5,
     title: "Happy to inaugurate Maserati's pop-up showroom in Bengaluru! ",
     tag: 'Industry',
-    location: 'Chennai',
+    location: 'Bengaluru',
     time: '3 Days Ago',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
@@ -116,7 +116,7 @@ const newsData = [
     title: 'The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz',
     // title:"The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz India's Concept CLA-Class, Porsche India's all-electric Macan, Kia India’s Syros and BYD India Private Limited's SEALION 7. As partners, it’s great to see these brands driving change in mobility.",
     tag: 'Innovation',
-    location: 'Harvard',
+    location: 'Bengaluru',
     time: '3 Days Ago',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_bharatmobility2025-mercedesbenzindia-porscheindia-activity-7287775917416792067-Eaki?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
@@ -125,7 +125,7 @@ const newsData = [
     image:card7new,
     title: "A proud moment for the VST family! VST Central (KIA), Salem has been presented with the 'Global Best Dealer'",
     tag: 'Inspiration',
-    location: 'Bangalore',
+    location: 'Bengaluru',
     time: '3 Days Ago',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_kiaplatinumprestige-kia-kiaindia-activity-7288807665202339842-OSvJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE'
   },
@@ -159,7 +159,7 @@ const newsData = [
     // ),
     
     tag: 'Industry',
-    location: 'Bangalore',
+    location: 'Bengaluru',
     time: '3 Days Ago',
     route: 'https://www.linkedin.com/posts/cmv360_vstzetor-tractorinnovation-agriculturaltechnology-activity-7193513168457875456-ZPkw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },  
