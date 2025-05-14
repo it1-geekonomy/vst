@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Initiatives from "./Initiatives";
 import bg from "../app/public/makingdiff/orange-bg.png";
 import flag from "../app/public/makingdiff/flag.png";
-import gif from "@/app/public/education/vst logo gif.gif"
+import gif from "@/app/public/education/vst logo gif.gif";
 
 interface CSRItemProps {
   title: string;
@@ -22,8 +22,6 @@ interface ImageData {
   title: string;
   description: string;
 }
-
-
 
 // Updated timeline data structure with titles and descriptions for each image
 const timelineData = [
@@ -86,6 +84,54 @@ const timelineData = [
       },
     ],
   },
+  {
+    year: "2000-2011",
+    images: [
+      {
+        src: "/makingdiff/imagesanime/image3.jpeg",
+        title: "Wild Life First",
+        description: "Wildlife conservation in India",
+      },
+      {
+        src: "/makingdiff/imagesanime/image4.jpeg",
+        title: "National Association for the Blind, Karnataka",
+        description:
+          "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
+      },
+    ],
+  },
+  {
+    year: "1995-2011",
+    images: [
+      {
+        src: "/makingdiff/imagesanime/image3.jpeg",
+        title: "Wild Life First",
+        description: "Wildlife conservation in India",
+      },
+      {
+        src: "/makingdiff/imagesanime/image4.jpeg",
+        title: "National Association for the Blind, Karnataka",
+        description:
+          "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
+      },
+    ],
+  },
+  {
+    year: "1990-2011",
+    images: [
+      {
+        src: "/makingdiff/imagesanime/image3.jpeg",
+        title: "Wild Life First",
+        description: "Wildlife conservation in India",
+      },
+      {
+        src: "/makingdiff/imagesanime/image4.jpeg",
+        title: "National Association for the Blind, Karnataka",
+        description:
+          "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
+      },
+    ],
+  },
 ];
 
 const TimelineYear: React.FC<{
@@ -103,9 +149,7 @@ const TimelineYear: React.FC<{
     >
       <div className="h-3 w-3 sm:h-4 sm:w-4 rounded-full bg-red-500" />
       <div className="flex items-center space-x-3">
-        <span className="text-white text-2xl font-roc font-normal">
-          {year}
-        </span>
+        <span className="text-white text-2xl font-roc font-normal">{year}</span>
       </div>
     </motion.div>
   );
@@ -239,18 +283,20 @@ const CSR = () => {
       } else if (window.innerWidth < 1024) {
         setStepSize(320); // Tablet screens
       } else if (window.innerWidth < 1280) {
-        setStepSize(320); // Small desktop screens
+        setStepSize(125); // Small desktop screens
+      } else if (window.innerWidth < 1536) {
+        setStepSize(165);
       } else {
-        setStepSize(400); // Large desktop screens
+        setStepSize(330); // Large desktop screens
       }
     };
 
     // Initial setup
     handleResize();
-    
+
     // Add event listener
     window.addEventListener("resize", handleResize);
-    
+
     // Cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -536,11 +582,11 @@ const CSR = () => {
           </section>
         </motion.div>
         <div className="relative w-full flex justify-center py-8 sm:py-12 lg:py-20">
-        <Image
-          src={gif}
-          alt="VST Logo Animation"
-          className="w-[50%] h-[50%] object-contain"
-        />
+          <Image
+            src={gif}
+            alt="VST Logo Animation"
+            className="w-[50%] h-[50%] object-contain"
+          />
         </div>
       </main>
       <Footer bgcolour="bg-black" />
