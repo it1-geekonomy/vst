@@ -52,10 +52,9 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 <h4 className="text-[#FEBF3D] text-clamp-18 font-roc mb-6">
                   Corporate Office
                 </h4>
-                <p className="text-white text-clamp-18 font-roc whitespace-nowrap">#1, Palace Cross Road,</p>
+                <p className="text-white text-clamp-18 font-roc whitespace-nowrap">1, Palace Cross Road,</p>
                 <p className="text-white text-clamp-18 font-roc">Bangalore - 560 020.</p>
-                <p className="text-white text-clamp-18 font-roc ">+91 80 2346 8548</p>
-                <p className="text-white text-clamp-18 font-roc ">mdoffice@vstsons.in</p>
+              
               </div>
 
               {/* Chennai Office */}
@@ -63,23 +62,14 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 <h4 className="text-[#FEBF3D] text-clamp-18 font-roc mb-6">
                   Chennai Office
                 </h4>
-                <p className="text-white text-clamp-18 font-roc">#199, Annasalai,</p>
-                <p className="text-white text-clamp-18 font-roc">Chennai-600 002,</p>
-                <p className="text-white text-clamp-18 font-roc whitespace-nowrap">+91 44 2860 2485/86/87</p>
-                <p className="text-white text-clamp-18 font-roc ">mdoffice@vstgroup.co.in</p>
+                <p className="text-white text-clamp-18 font-roc">199, Annasalai,</p>
+                <p className="text-white text-clamp-18 font-roc">Chennai-600 002.</p>
+                
               </div>
             </div>
 
             {/* Social Media Links */}
-            <div className="flex space-x-8 justify-center lg:justify-center mt-10 sm:mt-12 lg:mt-6 lg:pl-28 ">
-              
-              <Link href="#" className="text-white hover:text-[#C4A462] transition-colors duration-200">
-                <Instagram />
-              </Link>
-              <Link href="https://www.linkedin.com/company/vst-motors-ltd/" className="text-white hover:text-[#C4A462] transition-colors duration-200">
-                <LinkedIn />
-              </Link>
-            </div>
+           
           </div>
         </div>
 
