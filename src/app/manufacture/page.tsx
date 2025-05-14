@@ -10,7 +10,7 @@ import Timeless2 from '@/app/public/tillers/Timeless2.png'
 import Tough3 from '@/app/public/tillers/Tough3.png'
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors"
 import Logo from '@/app/public/logos/Logo'
-import LocationSection from '@/components/LocationSection'
+import LocationSectionUpdated from '@/components/LocationSectionUpdated'
 
 const ManufacturePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -179,9 +179,14 @@ cultivation by small and medium-scale farmers.
               </div>
 
               <div className="w-full flex justify-start">
-                <button className="bg-[#FDB813] text-black px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg font-medium hover:bg-[#FDC833] transition-colors w-full md:w-[400px]">
+                <a 
+                  href="https://www.vsttractors.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#FDB813] text-black px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg font-medium hover:bg-[#FDC833] transition-colors w-full md:w-[400px] text-center"
+                >
                   Explore More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -198,15 +203,15 @@ cultivation by small and medium-scale farmers.
           </div>
 
           {/* Location Section */}
-          <div className="ml-10 sm:ml-8 md:ml-30 lg:ml-26 mt-32 md:mt-40 font-roc font-normal">
-            <LocationSection
+          <div className="-ml-8 sm:-ml-10 md:-ml-12 lg:-ml-16 mt-32 md:mt-40 font-roc font-normal">
+            <LocationSectionUpdated
                locationImage="tillers/Group 1000001966.png"
                address={{
-                 street: "Regd. Office:Plot No.1,",
-                street2:"Dyavasandra Industrial Layout,",
+                 street: "Regd. Office: Plot No.1, Hale",
+                 street2: "Dyavasandra Industrial Layout,",
                  street3: "Whitefield Road, Mahadevapura Post,",
                  city: "Bengaluru - 560 048",
-                 state: "India",
+                 state: "India.",
                  pincode: ""       
                }}
                phoneNumbers={[
@@ -219,6 +224,7 @@ cultivation by small and medium-scale farmers.
                }}
                className="text-white"
                iconColor="white"
+               showEmailIcon={true}
              />
           </div>
           <div className="mt-16 md:mt-24">
