@@ -500,7 +500,7 @@ const Hero = () => {
                 </div>
               )}
 
-              {isActive && (
+              {isActive && slide.id !== 1 && (
                 <div className="absolute inset-0 flex items-center justify-center z-20">
                   <div className="bg-black/70 rounded-lg px-6 sm:px-10 py-10 text-left w-[90%] max-w-[900px] ml-8">
                     {/* Yellow line above the title */}
