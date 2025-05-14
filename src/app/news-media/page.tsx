@@ -8,53 +8,77 @@ import imgcard3 from "@/app/public/news-and-media/frame7.png";
 
 import imgcard4 from "@/app/public/news-and-media/frame2.png";
 import imgcard5 from "@/app/public/news-and-media/frame4.png";
+import imgcar from "@/app/public/news-and-media/frame14.png";
+import card5 from "@/app/public/images/news/card5.png";
+import imcard12 from "@/app/public/news-and-media/frame12.png";
+import Frame5 from "@/app/public/news-and-media/frame5.png";
+import mahindra1 from "@/app/public/news-and-media/mahindra1.png";
+
+
+
+
 import News from "@/components/News";
 import VideosSection from "@/components/VideosSection";
 import { Contact } from "lucide-react";
 import ContactUs from "@/components/GetInTouch";
 import Footer from "@/components/Footer";
+import { frame } from "framer-motion";
 
 export default function NewsMedia() {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const headlines = [
     "Exciting! Our new Porsche showroom is now in Whitefield!",
-    "Experience the luxury of German engineering.",
-    "Visit us today to explore the latest models."
+    "A special moment from our Chennai Finance Team",
+    "As a long-standing Ducati dealer partner at VST Group."
   ];
   
   const cards = [
     {
-      image: imgcard1,
+      image: card5,
       alt: "Porsche Showroom Opening",
-      title: "We Are Now Open",
-      text: "Exciting! Our new Porsche showroom is now in Whitefield!."
+      // title: "We Are Now Open",
+      text: "Happy to inaugurate Maserati's pop-up showroom in Bengaluru.",
+      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     {
-      image: imgcard2,
+      image: imgcar,
       alt: "Team Photo",
       title: "Meet Our Team",
-      text: "Experience the luxury of German engineering with our expert team of professionals"
+      text: "The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz",
+      link: "https://www.linkedin.com/posts/vst-motors-ltd_bharatmobility2025-mercedesbenzindia-porscheindia-activity-7287775917416792067-Eaki?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     {
-      image: imgcard3,
+      image: imcard12,
       alt: "Latest Models",
       title: "New Arrivals",
-      text: "Visit our showroom today to explore the latest models and exciting offers"
+      text: "Just wrapped up another amazing week at the Harvard Business School Executive Education ",
+      link: "https://www.linkedin.com/posts/arunsurendra_harvardbusinessschool-backtoschool-activity-7286330643519545344-QLyB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     {
-      image: imgcard4,
+      image: Frame5,
       alt: "Latest Models",
       title: "New Arrivals",
-      text: "Visit our showroom today to explore the latest models and exciting offers"
+      text: "VST Supercars Pvt Ltd, the official dealer for Porsche in Karnataka, has opened another showroom in Whitefield, Bengaluru.",
+      link: "https://www.linkedin.com/posts/motoring-trends_vstsupercars-porsche-porscheshowroom-activity-7307824403147321344-H_QF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     {
-      image: imgcard5,
+      image: mahindra1,
       alt: "Latest Models",
       title: "New Arrivals",
-      text: "Visit our showroom today to explore the latest models and exciting offers"
+      text: "Celebrating our India Garage - VST Group - Mahindra team",
+      link: "https://www.linkedin.com/posts/vst-motors-ltd_serviceawards-teamrecognition-milestone-activity-7260522846341193728-gRCJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      target: "_blank",
+      rel: "noopener noreferrer"
     }
-
   ];
 
   useEffect(() => {
@@ -178,27 +202,35 @@ export default function NewsMedia() {
                     <h2 className="text-4xl font-bold mb-8 text-white font-roc">Popular this week</h2>
                     <div className="space-y-4 flex-grow overflow-y-auto hideScrollbar">
                       {cards.map((item, index) => (
-                        <div key={index} className="flex gap-1 items-center justify-center h-28 transition-all duration-200 hover:bg-yellow-500/20 cursor-pointer rounded">
-                          <div className="w-5/12 relative h-full">
-                            <Image 
-                              src={item.image} 
-                              alt={item.alt} 
-                              width={100}
-                              height={80}
-                              className="w-full h-full object-cover"
-                            />
-                            {index === 0 && (
-                              <div className="absolute flex justify-center items-center bottom-0 left-0 bg-black text-white text-xs py-1 px-2">
-                                {item.title}
-                              </div>
-                            )}
+                        <a 
+                          key={index}
+                          href={item.link}
+                          target={item.target}
+                          rel={item.rel}
+                          className="block"
+                        >
+                          <div className="flex gap-1 items-center justify-center h-28 transition-all duration-200 hover:bg-yellow-500/20 cursor-pointer rounded">
+                            <div className="w-5/12 relative h-full">
+                              <Image 
+                                src={item.image} 
+                                alt={item.alt} 
+                                width={100}
+                                height={80}
+                                className="w-full h-full object-cover"
+                              />
+                              {index === 0 && (
+                                <div className="absolute flex justify-center items-center bottom-0 left-0 bg-black text-white text-xs py-1 px-2">
+                                  {item.title}
+                                </div>
+                              )}
+                            </div>
+                            <div className="w-7/12 h-full flex items-center justify-center">
+                              <p className="text-base font-semibold text-white leading-tight text-start w-full px-2">
+                                {item.text}
+                              </p>
+                            </div>
                           </div>
-                          <div className="w-7/12 h-full flex items-center justify-center">
-                            <p className="text-base font-semibold text-white leading-tight text-center w-full px-2">
-                              {item.text}
-                            </p>
-                          </div>
-                        </div>
+                        </a>
                       ))}
                     </div>
                     <div className="flex justify-center items-end mt-1">

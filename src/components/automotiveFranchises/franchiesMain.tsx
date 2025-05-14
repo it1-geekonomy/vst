@@ -76,14 +76,26 @@ interface SlideData {
     [key: string]: {
       sales: Array<{
         address: string;
-        phone: string;
-        email: string;
+        phone: string | string[];
+        email: string | string[];
         map: string;
       }>;
       service?: Array<{
         address: string;
-        phone: string;
-        email: string;
+        phone: string | string[];
+        email: string | string[];
+        map: string;
+      }>;
+      "sales and service"?: Array<{
+        address: string;
+        phone: string | string[];
+        email: string | string[];
+        map: string;
+      }>;
+      "sales and distribution"?: Array<{
+        address: string;
+        phone: string | string[];
+        email: string | string[];
         map: string;
       }>;
     };
@@ -109,7 +121,7 @@ const slides: SlideData[] = [
           {
             address: "1. #199, Anna Salai, Chennai-600 002. ",
             phone: "+91 63641 02911",
-            email: "info@porsche-bengaluru.in",
+            email: ["info@porsche-bengaluru.in","ss@gmail.com"],
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
           {
@@ -124,9 +136,18 @@ const slides: SlideData[] = [
             address: "Plot #115, Industrial Estate(EEII),Perungudi, Chennai-600 096.",
             phone: "+91 44-4610 8282",
             email: "info.service@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          },
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Perungudi,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CPerungudi,+Chennai"
+          },    
         ],
+
+        "sales and distribution": [
+          {
+            address: "Plot #115, Industrial Estate(EEII),Perungudi, Chennai-600 096.",
+            phone: "+91 44-4610 8282",
+            email: "info.service@titaniummotors.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Perungudi,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CPerungudi,+Chennai"
+          }
+        ]
       },
     }
   },
@@ -254,10 +275,10 @@ const slides: SlideData[] = [
         service: [
           {
             address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
-            phone: " +91 99024 88899",
-            email: " info@vstavventura.in",
+            phone: "+91 99024 88899",
+            email: "info@vstavventura.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          },
+          }
         ]
       },
     }
@@ -380,39 +401,30 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "#1049, Poonamallee High Road, Arumbakkam, Chennai 600 106",
-            phone: " +91 73389 77522 , +91 93840 58820",
-            email: "ace.ambkm@vstmotors.com",
+            address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
+            phone: "+91 99024 88899",
+            email: " info@vst-maserati.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
           },
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
-            phone: "+91 96066 33425",
-            email: "servicemanagerhsrg.blr@vstcentral-kia.in",
+            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
+            phone: "+91 99024 88899",
+            email: "info@vstavventura.in",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          },
+          }
+        ],
+        "sales and service": [
+          {
+            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
+            phone: "+91 99024 88899",
+            email: "info@vstavventura.in",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          }
         ]
       },
-      "Tamil Nadu": {
-        sales: [
-          {
-            address: "#199, Anna Salai, Chennai-600 002",
-            phone: "+91 44-6649 8080",
-            email: "info.citysales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Anna+Salai,+Chennai&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CAnna+Salai,+Chennai"
-          },
-        ],
-        service: [
-          {
-            address: "#148, K, Old Mahabalipuram Road, Okkiyam, Thoraipakkam, Chennai-600 096",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Old+Mahabalipuram+Road,+Chennai&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7COld+Mahabalipuram+Road,+Chennai"
-          },
-        ]
-      }
+    
     }
   },
   {
@@ -727,7 +739,7 @@ const FranchiseSlider = () => {
               <h2 className="text-white font-rocWide font-light text-clamp-67  text-start">
                 Our
                 <br />
-                Automative
+                Automotive
                 <br />
                 Franchises
               </h2>
@@ -908,15 +920,27 @@ const FranchiseSlider = () => {
                         {/* Sales */}
                         {location.sales && location.sales.length > 0 && (
                           <div className="hide-scrollbar">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Sales:
+                            </div>
                             {location.sales.map((sale, idx) => (
                               <div key={`${currentSlide}-${locationKey}-sales-${idx}`} className="mb-6">
-                                <div className="text-white font-bold text-xl mb-2">
-                                  Sales {location.sales.length > 1 ? `#${idx + 1}` : ''}:
-                                </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium">
                                   {sale.address}<br />
-                                  <span className="inline-block mt-2">📞 {sale.phone}</span><br />
-                                  <span className="inline-block">✉️ {sale.email}</span>
+                                  {Array.isArray(sale.phone) ? (
+                                    sale.phone.map((p, i) => (
+                                      <div key={i} className="mt-1">📞 {p}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">📞 {sale.phone}</div>
+                                  )}
+                                  {Array.isArray(sale.email) ? (
+                                    sale.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {sale.email}</div>
+                                  )}
                                 </div>
                                 <div className="rounded-lg overflow-hidden w-full">
                                   <iframe
@@ -943,13 +967,101 @@ const FranchiseSlider = () => {
                             </div>
                             <div className="text-white text-lg leading-relaxed mb-4 font-medium">
                               {service.address}<br />
-                              <span className="inline-block mt-2">📞 {service.phone}</span><br />
-                              <span className="inline-block">✉️ {service.email}</span>
+                              {Array.isArray(service.phone) ? (
+                                service.phone.map((p, i) => (
+                                  <div key={i} className="mt-1">📞 {p}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">📞 {service.phone}</div>
+                              )}
+                              {Array.isArray(service.email) ? (
+                                service.email.map((e, i) => (
+                                  <div key={i} className="mt-1">✉️ {e}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">✉️ {service.email}</div>
+                              )}
                             </div>
                             <div className="rounded-lg overflow-hidden w-full">
                               <iframe
                                 title={`Service Location Map ${idx + 1}`}
                                 src={service.map}
+                                width="100%"
+                                height="280"
+                                className="rounded-lg w-full"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                              />
+                            </div>
+                          </div>
+                        ))}
+                        {/* Sales and Service */}
+                        {location["sales and service"] && location["sales and service"].length > 0 && location["sales and service"].map((salesService, idx) => (
+                          <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="hide-scrollbar mb-6">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Sales & Service {location["sales and service"] && location["sales and service"].length > 1 ? `#${idx + 1}` : ''}:
+                            </div>
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                              {salesService.address}<br />
+                              {Array.isArray(salesService.phone) ? (
+                                salesService.phone.map((p, i) => (
+                                  <div key={i} className="mt-1">📞 {p}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">📞 {salesService.phone}</div>
+                              )}
+                              {Array.isArray(salesService.email) ? (
+                                salesService.email.map((e, i) => (
+                                  <div key={i} className="mt-1">✉️ {e}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">✉️ {salesService.email}</div>
+                              )}
+                            </div>
+                            <div className="rounded-lg overflow-hidden w-full">
+                              <iframe
+                                title={`Sales & Service Location Map ${idx + 1}`}
+                                src={salesService.map}
+                                width="100%"
+                                height="280"
+                                className="rounded-lg w-full"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                              />
+                            </div>
+                          </div>
+                        ))}
+                        {/* Sales and Distribution */}
+                        {location["sales and distribution"] && location["sales and distribution"].length > 0 && location["sales and distribution"].map((salesDist, idx) => (
+                          <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="hide-scrollbar mb-6">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Sales & Distribution {location["sales and distribution"] && location["sales and distribution"].length > 1 ? `#${idx + 1}` : ''}:
+                            </div>
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                              {salesDist.address}<br />
+                              {Array.isArray(salesDist.phone) ? (
+                                salesDist.phone.map((p, i) => (
+                                  <div key={i} className="mt-1">📞 {p}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">📞 {salesDist.phone}</div>
+                              )}
+                              {Array.isArray(salesDist.email) ? (
+                                salesDist.email.map((e, i) => (
+                                  <div key={i} className="mt-1">✉️ {e}</div>
+                                ))
+                              ) : (
+                                <div className="mt-1">✉️ {salesDist.email}</div>
+                              )}
+                            </div>
+                            <div className="rounded-lg overflow-hidden w-full">
+                              <iframe
+                                title={`Sales & Distribution Location Map ${idx + 1}`}
+                                src={salesDist.map}
                                 width="100%"
                                 height="280"
                                 className="rounded-lg w-full"
