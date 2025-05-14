@@ -55,7 +55,7 @@ const newsData = [
     // ),
     tag: 'Porche',
     location: 'Bengaluru',
-    time: '3 Days Ago',
+    time: '',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_vstgroup-automotive-kia-activity-7219620766533791744-W2H4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
   {
@@ -64,7 +64,7 @@ const newsData = [
     title: "Your support fuels our drive for success, and we're grateful for your ongoing partnership.",
     tag: 'Innovation',
     location: 'Bengaluru',
-    time: '3 Days Ago',
+    time: '',
     route: 'https://www.linkedin.com/posts/tanvi-gupta-09b07455_bangladeshexpo-agriculture-expo-activity-7206191159939919872-LHrH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
   {
@@ -89,7 +89,7 @@ const newsData = [
     
     tag: 'Industry',
     location: 'Bengaluru',
-    time: '3 Days Ago',
+    time: '',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_globalporschemomentaward-porsche-globalrecognition-activity-7313130881051697152-J3cW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
   {
@@ -98,7 +98,7 @@ const newsData = [
     title: "South and Best Performance in Most Active User - Fleet Edge - South, reaffirming our commitment to outstanding service.",
     tag: 'Business',
     location: 'Bengaluru',
-    time: '3 Days Ago',
+    time: '',
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
   },
   {
@@ -107,17 +107,17 @@ const newsData = [
     title: "Happy to inaugurate Maserati's pop-up showroom in Bengaluru! ",
     tag: 'Industry',
     location: 'Bengaluru',
-    time: '3 Days Ago',
+    time: '',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
   {
     id: 6,
     image: post6,
     title: 'The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz',
-    // title:"The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz India's Concept CLA-Class, Porsche India's all-electric Macan, Kia India’s Syros and BYD India Private Limited's SEALION 7. As partners, it’s great to see these brands driving change in mobility.",
+    // title:"The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz India's Concept CLA-Class, Porsche India's all-electric Macan, Kia India's Syros and BYD India Private Limited's SEALION 7. As partners, it's great to see these brands driving change in mobility.",
     tag: 'Innovation',
     location: 'Bengaluru',
-    time: '3 Days Ago',
+    time: '',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_bharatmobility2025-mercedesbenzindia-porscheindia-activity-7287775917416792067-Eaki?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
   {
@@ -126,7 +126,7 @@ const newsData = [
     title: "A proud moment for the VST family! VST Central (KIA), Salem has been presented with the 'Global Best Dealer'",
     tag: 'Inspiration',
     location: 'Bengaluru',
-    time: '3 Days Ago',
+    time: '',
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_kiaplatinumprestige-kia-kiaindia-activity-7288807665202339842-OSvJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE'
   },
   {
@@ -160,7 +160,7 @@ const newsData = [
     
     tag: 'Industry',
     location: 'Bengaluru',
-    time: '3 Days Ago',
+    time: '',
     route: 'https://www.linkedin.com/posts/cmv360_vstzetor-tractorinnovation-agriculturaltechnology-activity-7193513168457875456-ZPkw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },  
 ];
@@ -200,14 +200,9 @@ const News = () => {
               </div>
 
               <div className="p-4 flex flex-col justify-between flex-grow bg-[#FFFFFF1A] backdrop-blur-[36.55px]">
-
                 <h2 className="mt-2 text-[23px] leading-[130%] tracking-wide font-normal font-roc transition-all">
-
                   {item.title}
                 </h2>
-                <div className="text-xs text-white mt-4">
-                  {item.location} &nbsp;&nbsp; {item.time}
-                </div>
               </div>
             </div>
           ))}

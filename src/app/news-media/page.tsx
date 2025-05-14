@@ -15,6 +15,11 @@ import Frame5 from "@/app/public/news-and-media/frame5.png";
 import mahindra1 from "@/app/public/news-and-media/mahindra1.png";
 
 
+import hcard1 from "@/app/public/news-and-media/Image Placeholder 1.jpg";
+import hcard2 from "@/app/public/news-and-media/Image Placeholder 2.jpg";
+import hcard3 from "@/app/public/news-and-media/Image Placeholder 3.jpg";
+import hcard4 from "@/app/public/news-and-media/Image Placeholder 4.jpg";
+
 
 
 import News from "@/components/News";
@@ -31,6 +36,44 @@ export default function NewsMedia() {
     "Exciting! Our new Porsche showroom is now in Whitefield!",
     "A special moment from our Chennai Finance Team",
     "As a long-standing Ducati dealer partner at VST Group."
+  ];
+  const headlines2 = [
+    {
+      image: hcard1,
+      alt: "Latest Models",
+
+      // title: "We Are Now Open",
+      text: "Exciting times ahead! Introducing our stunning new Porsche showroom in Whitefield.",
+      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+     
+    },
+    {
+      image: hcard2,
+      alt: "Latest Models",
+      // title: "We Are Now Open",
+      text: "A special moment from our Chennai Finance Team, who surprised our Chairman, Arun Surendra, with a thoughtful token of appreciation.",
+      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+     
+    },
+    {
+      image: hcard3,
+      alt: "Latest Models",
+      // title: "We Are Now Open",
+      text: "As a long-standing Ducati dealer partner at VST Group",
+      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+     
+    },
+    {
+      image: hcard4,
+      alt: "Latest Models",
+      // title: "We Are Now Open",
+      text: "Another milestone on the road to excellence!",
+      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+     
+    },
+
+
+
   ];
   
   const cards = [
@@ -84,7 +127,7 @@ export default function NewsMedia() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % headlines.length);
-    }, 3000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -138,20 +181,25 @@ export default function NewsMedia() {
                   {/* News Cards - positioned at bottom with animation */}
                   <div className="w-full mt-auto mb-32 lg:mb-16 relative overflow-hidden">
                     <div className="relative h-[220px]">
-                      {cards.map((card, index) => (
+                      {headlines2.map((card, index) => (
                         <div 
                           key={index} 
-                          className={`absolute top-0 left-0 w-full grid grid-cols-1 md:grid-cols-2 gap-4 transition-all duration-1000 ${
+                          className={`absolute top-0 left-0 w-full grid grid-cols-1 md:grid-cols-2 gap-4 transition-all duration-1500 ${
                             currentIndex === index 
                               ? "opacity-100 translate-x-0" 
-                              : index === (currentIndex + 1) % cards.length || (currentIndex === cards.length - 1 && index === 0)
+                              : index === (currentIndex + 1) % headlines2.length || (currentIndex === headlines2.length - 1 && index === 0)
                                 ? "opacity-0 translate-x-full" 
                                 : "opacity-0 -translate-x-full"
                           }`}
                         >
                           {/* Featured News Card with orange left border */}
-                          <div className="relative border-l-4 border-yellow-500 bg-white/10 backdrop-blur-sm min-h-[220px] overflow-hidden">
-                            <div className="flex flex-col h-full px-4 py-6 ">
+                          <a 
+                            href={card.link}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="relative border-l-4 border-yellow-500 bg-white/10 backdrop-blur-sm min-h-[220px] overflow-hidden hover:bg-white/20 transition-colors"
+                          >
+                            <div className="flex flex-col h-full px-4 py-6">
                               <div className="w-full h-22 relative">
                                 <Image 
                                   src={card.image} 
@@ -159,35 +207,38 @@ export default function NewsMedia() {
                                   fill
                                   className="object-cover pr-38 py-1"
                                 />
-                                
-                              </div>
-                              <div className="w-full pt-3 {card.text}">
-                              <p className="text-medium font-semibold text-white leading-tight text-center w-full px-2">
-                              {card.text}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Second News Card */}
-                          <div className="relative  backdrop-blur-sm min-h-[220px] overflow-hidden">
-                            <div className="flex flex-col h-full px-4 py-6 ">
-                              <div className="w-full h-22 relative">
-                                <Image 
-                                  src={cards[(index + 1) % cards.length].image} 
-                                  alt={cards[(index + 1) % cards.length].alt} 
-                                  fill
-                                  className="object-cover pr-38 py-1  "
-                                />
-                               
                               </div>
                               <div className="w-full pt-3">
-                              <p className="text-medium font-semibold text-white leading-tight text-center w-full px-2">
-                              {cards[(index + 1) % cards.length].text}
+                                <p className="text-medium font-semibold text-white leading-tight text-center w-full px-2">
+                                  {card.text}
                                 </p>
                               </div>
                             </div>
-                          </div>
+                          </a>
+
+                          {/* Second News Card */}
+                          <a 
+                            href={headlines2[(index + 1) % headlines2.length].link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative backdrop-blur-sm min-h-[220px] overflow-hidden hover:bg-white/20 transition-colors"
+                          >
+                            <div className="flex flex-col h-full px-4 py-6">
+                              <div className="w-full h-22 relative">
+                                <Image 
+                                  src={headlines2[(index + 1) % headlines2.length].image} 
+                                  alt={headlines2[(index + 1) % headlines2.length].alt} 
+                                  fill
+                                  className="object-cover pr-38 py-1"
+                                />
+                              </div>
+                              <div className="w-full pt-3">
+                                <p className="text-medium font-semibold text-white leading-tight text-center w-full px-2">
+                                  {headlines2[(index + 1) % headlines2.length].text}
+                                </p>
+                              </div>
+                            </div>
+                          </a>
                         </div>
                       ))}
                     </div>
