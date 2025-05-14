@@ -59,6 +59,7 @@ import BydLogo from "@/app/public/faranchies/BydLogo";
 import TataIcon from "@/app/public/faranchies/TataIcon";
 import BusinessSectors from "./BusinessSectors";
 import Logo from "@/app/public/logos/Logo";
+import JaguarIcon from "@/app/public/faranchies/jaguarIcon";
 
 interface SlideData {
   id: number;
@@ -128,8 +129,7 @@ const slides: SlideData[] = [
             address: "1. #199, Anna Salai, Chennai-600 002. ",
             phone: "+91 63641 02911",
             email: ["info@porsche-bengaluru.in","ss@gmail.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
-          },
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"           },
           {
             address: "2. #148, K, Old Mahabalipuram Road,Okkiyam, Thoraipakkam, Chennai-600 096",
             phone: "+91 44-6649 8181",
@@ -165,7 +165,7 @@ const slides: SlideData[] = [
       from: "#780E26",
       to: "rgba(120, 14, 38, 0.4)",
     },
-    LogoComponent: PorscheIcon,
+    LogoComponent: JaguarIcon,
     header: "VST Grandeur - Jaguar",
     description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalised service.",
     learnMoreLink: "https://www.porsche.com",
@@ -275,7 +275,7 @@ const slides: SlideData[] = [
             address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
-            map: "https://maps.app.goo.gl/r8X1xhN14py4YGGG9"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -283,7 +283,7 @@ const slides: SlideData[] = [
             address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
             phone: "+91 99024 88899",
             email: "info@vstavventura.in",
-            map: "https://maps.app.goo.gl/W6PtAteJxxLLhXXQ6"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62201.86504418537!2d77.635414!3d12.9963588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747218674781!5m2!1sen!2sin"
           }
         ]
       },
@@ -300,7 +300,7 @@ const slides: SlideData[] = [
     LogoComponent: DucatiIcon,
     header: "VST & Sons - Ducati",
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
-    learnMoreLink: "https://www.ducati.com",
+    learnMoreLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747218886328!5m2!1sen!2sin",
     locations: {
       Bangalore: {
         sales: [
@@ -308,7 +308,7 @@ const slides: SlideData[] = [
             address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
-            map: "https://maps.app.goo.gl/T4UVqm7LgFixzaBG8"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747218927920!5m2!1sen!2sin"
           },
         ],
         service: [
@@ -341,7 +341,7 @@ const slides: SlideData[] = [
             address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
             phone: "+91 80-2334 4090, +91 96069 88123",
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
-            map: "https://maps.app.goo.gl/cKbXZ3tR9niDQ2By8"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62194.590892308755!2d77.5057122!3d13.0253581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17efe70fb545%3A0x90e3a1c2447e9a93!2sVST%20CENTRAL%20KIA%20-%20PALACE%20CROSS%20ROAD!5e0!3m2!1sen!2sin!4v1747219026615!5m2!1sen!2sin"
           },
         ],
         service: [
