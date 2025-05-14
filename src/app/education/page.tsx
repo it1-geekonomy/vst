@@ -101,7 +101,7 @@ export default function EducationPage() {
       <div className='w-full'>
         {/* Hero section with logo */}
         <section className="w-full flex justify-center items-center z-10 relative mb-0">
-          <div className="w-56 h-48 sm:w-64 sm:h-56 md:w-72 md:h-64 lg:w-80 xl:w-96 relative">
+          <div className="w-56 h-40 sm:w-64 sm:h-48 md:w-72 md:h-56 lg:w-80 xl:w-96 relative">
             <div className="w-full h-full flex justify-center items-center">
               <Image
                 src={EducationLogo}
@@ -276,25 +276,9 @@ export default function EducationPage() {
           </div>
         </section>
 
-        <div className="w-full px-4 md:px-8 lg:px-30 mb-12 mt-8 font-normal font-roc text-justify">
+        <div className="w-full px-4 md:px-8 lg:px-30 mb-20 mt-4 font-normal font-roc text-justify">
           <div
-            style={{
-              width: 360,
-              height: 60,
-              borderRadius: 5,
-              background: '#FEBF3D',
-              padding: '16px 40px',
-              fontSize: 24,
-              color: '#000',
-              letterSpacing: 1,
-              boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
-              transition: 'all 0.3s ease',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer'
-            }}
-            className="hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
+            className="w-[300px] h-[50px] rounded-[5px] bg-[#FEBF3D] px-10 py-4 text-2xl text-black tracking-wider shadow-[0_2px_8px_rgba(0,0,0,0.07)] transition-all duration-300 ease-in-out flex items-center justify-center cursor-pointer hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
           >
             <a
               href="https://www.skei.edu.in/"
@@ -306,30 +290,31 @@ export default function EducationPage() {
             </a>
           </div>
         </div>
-      </div>
 
-      {/* Our Location section - using the new component */}
-      <div className="w-full px-4 md:px-4 lg:px-4">
-        <LocationSection
-          locationImage="education/educational location.png"
-          address={{
-            street: "Edward Road,",
-            street2: "Off Queens Road,",
-            city: "Bangalore-560 001",
-            state: "Karnataka.",
-            pincode: ""       
-          }}
-          phoneNumbers={[
-            '+91 80 2234 1011',
-            '+91 80 2226 3022',
-            '+91 99807 97527'
-          ]}
-          googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-        />
-      </div>
-      <div className="-mt-20">
-        <div className="transform scale-110">
-          <BusinessSectorsUpdated />
+        {/* Our Location section - using the new component */}
+        <div className="w-full px-4 md:px-8 lg:px-32 mb-1">
+          <LocationSection
+            locationImage="education/educational location.png"
+            address={{
+              street: "Edward Road,",
+              street2: "Off Queens Road,",
+              city: "Bangalore-560 001",
+              state: "Karnataka.",
+              pincode: ""       
+            }}
+            phoneNumbers={[
+              '+91 80 2234 1011',
+              '+91 80 2226 3022',
+              '+91 99807 97527'
+            ]}
+            googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+          />
+        </div>
+
+        <div className="w-full -mt-12">
+          <div className="transform scale-110">
+            <BusinessSectorsUpdated />
+          </div>
         </div>
       </div>
       <div className="w-full h-[250px] lg:h-[250px] xl:h-[300px] flex justify-center items-center -mt-50">
