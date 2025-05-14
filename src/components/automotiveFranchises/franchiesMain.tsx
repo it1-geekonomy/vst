@@ -87,7 +87,7 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
-      "sales and service"?: Array<{
+      "sales & service"?: Array<{
         address: string;
         phone: string | string[];
         email: string | string[];
@@ -139,7 +139,7 @@ const slides: SlideData[] = [
           },
 
           {
-            address: "#148 K, Old Mahabalipuram Road,Okkiyam, Thoraipakkam, Chennai-600 096",
+            address: "#148 K, Old Mahabalipuram Road,\nOkkiyam, Thoraipakkam, \n Chennai-600 096",
             phone: "+91 44-6649 8181",
             email: "info.chennaisales@titaniummotors.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747217481341!5m2!1sen!2sin"
@@ -147,7 +147,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "Plot #115, Industrial Estate(EEII),Perungudi, Chennai-600 096.",
+            address: "Plot #115, Industrial Estate(EEII), \nPerungudi, Chennai-600 096.",
             phone: "+91 44-4610 8282",
             email: "info.service@titaniummotors.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d243.0144022068351!2d80.2484338!3d12.9571013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d10b409895b%3A0xb14f9ec23ada69d8!2sV.S.T%20Titanium%20Motors%20Private%20Limited%20Mercedes%20Benz!5e0!3m2!1sen!2sin!4v1747217696418!5m2!1sen!2sin"
@@ -156,8 +156,8 @@ const slides: SlideData[] = [
 
         "Sales, Service & Parts distribution": [
           {
-            address: "#A9 & A10, Thiru-Vi-Ka Industrial Estate, Guindy, Chennai - 600 032.",
-            phone: "+91 90030 26789, +91 90036 93555, +91 96000 67911",
+            address: "#A9 & A10, Thiru-Vi-Ka Industrial \n Estate, Guindy, Chennai - 600 032.",
+            phone: ["+91 90030 26789", "+91 90036 93555", "+91 96000 67911"],
             email: "info.guindy@titaniummotors.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d971.849043901052!2d80.2094384!3d13.0104245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526774a3022697%3A0xe1ba2886b8f8e5ec!2sVST%20TITANIUM%20MOTORS%20(PARTS%20TRADING%20FOR%20MERCEDES%20BENZ)!5e0!3m2!1sen!2sin!4v1747217731579!5m2!1sen!2sin"
           }
@@ -181,15 +181,15 @@ const slides: SlideData[] = [
       Chennai: {
         sales: [
           {
-            address: "Old #182, New #237,VST Emerald, Anna Salai, Chennai - 600 006.",
+            address: "Old #182, New #237,VST Emerald,\n Anna Salai, Chennai - 600 006.",
             phone: "+91 96000 53000",
             email: " info@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217780062!5m2!1sen!2sin"
           },
         ],
-        "sales and service": [
+        "sales & service": [
           {
-            address: " #267/2, By-Pass Road, Poonamalle, Chennai - 600 056.",
+            address: " #267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056.",
             phone: "+91 44-6636 1373, +91 44-6636 1363",
             email: "crs.chn@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217817663!5m2!1sen!2sin"
@@ -197,11 +197,11 @@ const slides: SlideData[] = [
         ]
       },
       Coimbatore: {
-        "sales and service": [
+        "sales & service": [
           {
-            address: "#145-1C1, L&T By-pass Road,Oddar Palayam, Ondipudur , Coimbatore - 641 016.",
+            address: "#145-1C1, L&T By-pass Road,\n Oddar Palayam, Ondipudur ,\n Coimbatore - 641 016.",
             phone: "+91 422-452 4444",
-            email: " info.cbe@vstgrandeur.com, workshop.cbe@vstgrandeur.com",
+            email: ["info.cbe@vstgrandeur.com", "workshop.cbe@vstgrandeur.com"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217854171!5m2!1sen!2sin"
           },
         ]
@@ -224,15 +224,15 @@ const slides: SlideData[] = [
       Chennai: {
         sales: [
           {
-            address: "Old #182, New #237,VST Emerald Anna Salai, Chennai - 600 006.",
+            address: "Old #182, New #237,VST Emerald\n Anna Salai, Chennai - 600 006.",
             phone: "+91 96000 53000",
             email: " info@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217925445!5m2!1sen!2sin"
           },
         ],
-        "sales and service": [
+        "sales & service": [
           {
-            address: " #267/2, By-Pass Road, Poonamalle, Chennai - 600 056.",
+            address: " #267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056.",
             phone: "+91 44-6636 1373, +91 44-6636 1363",
             email: "crs.chn@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217959401!5m2!1sen!2sin"
@@ -240,11 +240,11 @@ const slides: SlideData[] = [
         ]
       },
       Coimbatore: {
-        "sales and service": [
+        "sales & service": [
           {
-            address: "#145-1C1, L&T By-pass Road, Oddar Palayam, Ondipudur , Coimbatore - 641 016.",
+            address: "#145-1C1, L&T By-pass Road,\n Oddar Palayam, Ondipudur ,\n Coimbatore - 641 016.",
             phone: "+91 422-452 4444",
-            email: " info.cbe@vstgrandeur.com, workshop.cbe@vstgrandeur.com",
+            email: [" info.cbe@vstgrandeur.com", "workshop.cbe@vstgrandeur.com"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217999025!5m2!1sen!2sin"
           },
         ]
@@ -267,7 +267,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Supercars Private Limited #22, Sankey Road, Opp. BDA Office, Bengaluru - 560 051. ",
+            address: "VST Supercars Private Limited\n #22, Sankey Road, Opp. BDA Office,\n Bengaluru - 560 051. ",
             phone: "+91 63641 02911",
             email: "info@porsche-bengaluru.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6105688613943!2d77.5848628!3d12.9967417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17fe9bf1e903%3A0x1e8042f60610fb34!2sPorsche%20Showroom%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218092398!5m2!1sen!2sin"
@@ -275,7 +275,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "#2E3, Dyavasandra 1st Phase, Whitefield Road, Mahadevapura Post, Bengaluru 560 048",
+            address: "#2E3, Dyavasandra 1st Phase, Whitefield\n Road, Mahadevapura Post,\n Bengaluru 560 048",
             phone: "+91 63641 02911",
             email: "info@porsche-bengaluru.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6234932445195!2d77.7013255!3d12.995916399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1581493fbbc5%3A0xf725d431b45ab6f7!2sPorsche%20Centre%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218158568!5m2!1sen!2sin"
@@ -380,7 +380,7 @@ const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62187.55965849731!2d77.442047!3d13.0533288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d9f9c73cbf5%3A0x8e59bd0957a66f2e!2sKia%20Car%20Service%20-%20Vst%20Central%20Kia%20-%20Hesaraghatta!5e0!3m2!1sen!2sin!4v1747223252452!5m2!1sen!2sin"
           },
         ],
-        "sales and service": [
+        "sales & service": [
           {
             address: "#48, Industrial Suburb, Opp. Yeshwantpur Railway Station, Bengaluru 560 022",
             phone: "+91 96069 88123",
@@ -432,7 +432,7 @@ const slides: SlideData[] = [
             map: "https://maps.app.goo.gl/uJvruQRX4msV2qBV6"
           },
         ],
-        "sales and service": [
+        "sales & service": [
           {
             address: "#250-2, Meyyanur Road, Ashokapuram Post, Salem 636 004",
             phone: "+91 81488 11113, +91 93848 77744, +91 93840 84430",
@@ -485,7 +485,7 @@ const slides: SlideData[] = [
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           }
         ],
-        "sales and service": [
+        "sales & service": [
           {
             address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
             phone: "+91 99024 88899",
@@ -616,7 +616,7 @@ const slides: SlideData[] = [
           },
 
         ],
-        "sales and service": [
+        "sales & service": [
           {
             address: "1st Phase, Plot #2E4, Whitefield Main Road, Behind Decathlon, Mahadevapura, Bengaluru - 560 048.",
             phone: "+91 97855 51333",
@@ -687,7 +687,7 @@ const slides: SlideData[] = [
             map: "https://maps.app.goo.gl/mV3vjmrb8522QwDr5"
           },
         ],
-        "sales and service": [
+        "sales & service": [
           {
             address: "VW Mysore Road, #26/2 & 27/2, Kenchanahalli Village, Kengeri Hobli, Mysore Road, Bengaluru - 560 057.",
             phone: "+91 96866 01249",
@@ -1124,7 +1124,7 @@ const FranchiseSlider = () => {
                             </div>
                             {location.sales.map((sale, idx) => (
                               <div key={`${currentSlide}-${locationKey}-sales-${idx}`} className="mb-6">
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                                   {sale.address}<br />
                                   {Array.isArray(sale.phone) ? (
                                     sale.phone.map((p, i) => (
@@ -1164,7 +1164,7 @@ const FranchiseSlider = () => {
                             <div className="text-white font-bold text-xl mb-2">
                               Service {Array.isArray(location.service) && location.service.length > 1 ? `#${idx + 1}` : ''}:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                               {service.address}<br />
                               {Array.isArray(service.phone) ? (
                                 service.phone.map((p, i) => (
@@ -1197,12 +1197,12 @@ const FranchiseSlider = () => {
                           </div>
                         ))}
                         {/* Sales and Service */}
-                        {location["sales and service"] && location["sales and service"].length > 0 && location["sales and service"].map((salesService, idx) => (
+                        {location["sales & service"] && location["sales & service"].length > 0 && location["sales & service"].map((salesService, idx) => (
                           <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales, Services {location["sales and service"] && location["sales and service"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales & Service {location["sales & service"] && location["sales & service"].length > 1 ? `#${idx + 1}` : ''}:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                               {salesService.address}<br />
                               {Array.isArray(salesService.phone) ? (
                                 salesService.phone.map((p, i) => (
@@ -1240,7 +1240,7 @@ const FranchiseSlider = () => {
                             <div className="text-white font-bold text-xl mb-2">
                               Sales, Service & Parts Distribution {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 1 ? `#${idx + 1}` : ''}:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                               {salesDist.address}<br />
                               {Array.isArray(salesDist.phone) ? (
                                 salesDist.phone.map((p, i) => (
@@ -1278,7 +1278,7 @@ const FranchiseSlider = () => {
                             <div className="text-white font-bold text-xl mb-2">
                               Pre-Owned Cars {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 1 ? `#${idx + 1}` : ''}:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                               {preOwned.address}<br />
                               {Array.isArray(preOwned.phone) ? (
                                 preOwned.phone.map((p, i) => (
@@ -1316,7 +1316,7 @@ const FranchiseSlider = () => {
                             <div className="text-white font-bold text-xl mb-2">
                               Service, Parts {(location["service and parts"]?.length ?? 0) > 1 ? `#${idx + 1}` : ''}:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium">
+                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                               {serviceParts.address}<br />
                               {Array.isArray(serviceParts.phone) ? (
                                 serviceParts.phone.map((p, i) => (
