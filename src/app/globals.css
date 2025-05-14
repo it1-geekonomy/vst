@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 @import "tailwindcss";
 @import "./font.css";
 
@@ -58,10 +56,6 @@ html {
   font-family: 'Roc Grotesk', sans-serif;
 }
 
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
-}
-
 .text-clamp-12 {
   font-size: clamp(10px, 0.8vw, 12px);
 }
@@ -105,6 +99,7 @@ html {
 .text-clamp-67 {
   font-size: clamp(20px, 4vw, 67px);
 }
+
 .text-clamp-57 {
   font-size: clamp(30px, 3.5vw, 57px);
 }
