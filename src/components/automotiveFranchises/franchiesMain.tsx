@@ -111,6 +111,12 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
+      "spares & distribution"?: Array<{
+        address: string;
+        phone: string | string[];
+        email: string | string[];
+        map: string;
+      }>;
     };
   };
 }
@@ -480,7 +486,7 @@ const slides: SlideData[] = [
             address: "#2D, Dindigul Road, Trichy - 620 001.",
             phone: "+91 98423 19820 , +91 98424 10847",
             email: " trycvdsales@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3551153647277!2d80.2061238!3d13.076666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a11dafd219%3A0x908e7f8c925d6c45!2s1049%2C%20Poonamallee%20High%20Rd%2C%20Amaravathi%20Nagar%2C%20Arumbakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600106!5e0!3m2!1sen!2sin!4v1747254535176!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2206779968324!2d78.6797484!3d10.794403299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf515569addf1%3A0xdcd00c0fc03eabe8!2sTata%20Motors%20Commercial%20Vehicle%20Dealer%20-%20V%20S%20T%20Motors%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1747280248764!5m2!1sen!2sin"
           },
         ],
         // service: [
@@ -497,6 +503,12 @@ const slides: SlideData[] = [
             phone: " +91 98403 76339 , +91 73974 92943 , +91 89259 95593 , +91 98401 54057",
             email: "  cvd.pnmi@vstmotors.com",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          {
+            address: "#43, Katpadi Road, Gandhinagar, Vellore - 632 006.",
+            phone: " +91 98423 15740, +91 98423 45530, +91 98424 10825",
+            email: "  vlr@vstmotors.com",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.316786294946!2d79.1369261!3d12.9515697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad4761940a1a59%3A0xf7813b55f7eaa1a2!2sTata%20Motors%20Commercial%20Vehicle%20Dealer%20-%20V%20S%20T%20Motors%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1747280810427!5m2!1sen!2sin"
           },
           {
             address: "#10/3, Anai Goudampatti, Opp to Govt. Engineering College, Omalur Taluk, Salem - 636 011.",
@@ -522,23 +534,25 @@ const slides: SlideData[] = [
             email: [" hosur@vstmotors.com" , "wm.hosur@vstmotors.com"],
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           },
+        ],
+         "spares & distribution": [
           {
             address: "#235/1, Bypass Road, Poonamallee, Chennai - 600 056.",
             phone: "+91 89255 20999 , +91 73388 59276",
             email: "autoparts.pme@vstmotors.com",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124372.9908796914!2d79.9641057!3d13.0575572!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528bf72c7cf71d%3A0x775c66b74dcbbb9f!2sVST%20MOTORS%20P%20LTD%20PARTS%20DIVISION!5e0!3m2!1sen!2sin!4v1747282146552!5m2!1sen!2sin"
           },
           {
             address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
             phone: "  +91 90039 32034 , +91 73584 44125",
             email: "autopartssm.cud@vstmotors.com",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747281880853!5m2!1sen!2sin"
           },
           {
             address: "#3/1, New By-pass Road, Chennai-Bengaluru Highway, Shenbakkam, Vellore - 632 008.",
             phone: "+91 99406 00442 , +91 73584 44125",
             email: "autopartssm.vlr@vstmotors.com",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747281880853!5m2!1sen!2sin"
           },
         ]
       },
@@ -1393,6 +1407,48 @@ const FranchiseSlider = () => {
                                   <iframe
                                     title={`Service and Parts Map ${idx + 1}`}
                                     src={serviceParts.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {/* Spares & Distribution */}
+                        {location["spares & distribution"] && location["spares & distribution"].length > 0 && (
+                          <div className="hide-scrollbar mb-6">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Spares & Distribution:
+                            </div>
+                            {location["spares & distribution"].map((sparesDist, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-sparesdist-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {sparesDist.address}<br />
+                                  {Array.isArray(sparesDist.phone) ? (
+                                    sparesDist.phone.map((p, i) => (
+                                      <div key={i} className="mt-1">📞 {p}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">📞 {sparesDist.phone}</div>
+                                  )}
+                                  {Array.isArray(sparesDist.email) ? (
+                                    sparesDist.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {sparesDist.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Spares & Distribution Map ${idx + 1}`}
+                                    src={sparesDist.map}
                                     width="100%"
                                     height="280"
                                     className="rounded-lg w-full"
