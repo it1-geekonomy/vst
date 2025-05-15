@@ -476,6 +476,12 @@ const slides: SlideData[] = [
             email: "ace.ambkm@vstmotors.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3551153647277!2d80.2061238!3d13.076666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a11dafd219%3A0x908e7f8c925d6c45!2s1049%2C%20Poonamallee%20High%20Rd%2C%20Amaravathi%20Nagar%2C%20Arumbakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600106!5e0!3m2!1sen!2sin!4v1747254535176!5m2!1sen!2sin"
           },
+           {
+            address: "#2D, Dindigul Road, Trichy - 620 001.",
+            phone: "+91 98423 19820 , +91 98424 10847",
+            email: " trycvdsales@vstmotors.com",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3551153647277!2d80.2061238!3d13.076666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a11dafd219%3A0x908e7f8c925d6c45!2s1049%2C%20Poonamallee%20High%20Rd%2C%20Amaravathi%20Nagar%2C%20Arumbakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600106!5e0!3m2!1sen!2sin!4v1747254535176!5m2!1sen!2sin"
+          },
         ],
         // service: [
         //   {
@@ -491,7 +497,49 @@ const slides: SlideData[] = [
             phone: " +91 98403 76339 , +91 73974 92943 , +91 89259 95593 , +91 98401 54057",
             email: "  cvd.pnmi@vstmotors.com",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          }
+          },
+          {
+            address: "#10/3, Anai Goudampatti, Opp to Govt. Engineering College, Omalur Taluk, Salem - 636 011.",
+            phone: "+91 80560 90333, +91 94432 39806, +91 73581 09129",
+            email: ["slm@vstmotors.com", "wm.slm@vstmotors.com"],
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          {
+            address: "#42, Mambalapattu Road, Villupuram - 605 602.",
+            phone: "+91 98424 10813 , +91 81487 11014",
+            email: ["wm.vpm@vstmotors.com", "acetl.vpm@vstmotors.com"],
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          {
+            address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
+            phone: "+91 98424 10813 , +91 99943 67350, +91 96007 99947 , +91 99943 67310",
+            email: ["comm.cud@vstmotors.com", "cudserv@vstmotors.com"],
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          {
+            address: "#524/1, 525/1A, O. Karapalli Village, Onnalvadi Post, Hosur - 635 109",
+            phone: " +91 94437 47392 , +91 73581 09129 , +91 81488 54889 , +91 98424 10825",
+            email: [" hosur@vstmotors.com" , "wm.hosur@vstmotors.com"],
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          {
+            address: "#235/1, Bypass Road, Poonamallee, Chennai - 600 056.",
+            phone: "+91 89255 20999 , +91 73388 59276",
+            email: "autoparts.pme@vstmotors.com",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          {
+            address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
+            phone: "  +91 90039 32034 , +91 73584 44125",
+            email: "autopartssm.cud@vstmotors.com",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
+          {
+            address: "#3/1, New By-pass Road, Chennai-Bengaluru Highway, Shenbakkam, Vellore - 632 008.",
+            phone: "+91 99406 00442 , +91 73584 44125",
+            email: "autopartssm.vlr@vstmotors.com",
+            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+          },
         ]
       },
 
