@@ -58,7 +58,7 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 <h4 className="text-[#FEBF3D] text-clamp-18 font-roc mb-3 inline-block">
                   Chennai Office
                 </h4>
-                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left whitespace-normal">#199, Anna salai,</p>
+                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left whitespace-normal">#199, Anna Salai,</p>
                 <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Chennai - 600 002.</p>
               </div>
             </div>
