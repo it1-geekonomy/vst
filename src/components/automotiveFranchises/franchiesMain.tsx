@@ -508,25 +508,25 @@ const slides: SlideData[] = [
             address: "#10/3, Anai Goudampatti, Opp to Govt. Engineering College, Omalur Taluk, Salem - 636 011.",
             phone: "+91 80560 90333, +91 94432 39806, +91 73581 09129",
             email: ["slm@vstmotors.com", "wm.slm@vstmotors.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747280383602!5m2!1sen!2sin"
           },
           {
             address: "#42, Mambalapattu Road, Villupuram - 605 602.",
             phone: "+91 98424 10813 , +91 81487 11014",
             email: ["wm.vpm@vstmotors.com", "acetl.vpm@vstmotors.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+      map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747280383602!5m2!1sen!2sin"
           },
           {
             address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
             phone: "+91 98424 10813 , +91 99943 67350, +91 96007 99947 , +91 99943 67310",
             email: ["comm.cud@vstmotors.com", "cudserv@vstmotors.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3903.5280666491453!2d79.4756295!3d11.9378961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a535700220f15e3%3A0xea410901d283e890!2sTATA%20MOTORS%20PVT%20LTD%20%26VST!5e0!3m2!1sen!2sin!4v1747280567993!5m2!1sen!2sin"
           },
           {
             address: "#524/1, 525/1A, O. Karapalli Village, Onnalvadi Post, Hosur - 635 109",
             phone: " +91 94437 47392 , +91 73581 09129 , +91 81488 54889 , +91 98424 10825",
             email: [" hosur@vstmotors.com" , "wm.hosur@vstmotors.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747280645745!5m2!1sen!2sin"
           },
           {
             address: "#235/1, Bypass Road, Poonamallee, Chennai - 600 056.",
