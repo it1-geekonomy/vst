@@ -1261,81 +1261,89 @@ const FranchiseSlider = () => {
                           </div>
                         )}
                         {/* Sales and Service */}
-                        {location["sales & service"] && location["sales & service"].length > 0 && location["sales & service"].map((salesService, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="hide-scrollbar mb-6">
+                        {location["sales & service"] && location["sales & service"].length > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
                               Sales & Service:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {salesService.address}<br />
-                              {Array.isArray(salesService.phone) ? (
-                                salesService.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {salesService.phone}</div>
-                              )}
-                              {Array.isArray(salesService.email) ? (
-                                salesService.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {salesService.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Sales & Service Location Map ${idx + 1}`}
-                                src={salesService.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location["sales & service"].map((salesService, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {salesService.address}<br />
+                                  {Array.isArray(salesService.phone) ? (
+                                    salesService.phone.map((p, i) => (
+                                      <div key={i} className="mt-1">📞 {p}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">📞 {salesService.phone}</div>
+                                  )}
+                                  {Array.isArray(salesService.email) ? (
+                                    salesService.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {salesService.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales & Service Location Map ${idx + 1}`}
+                                    src={salesService.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
-                        {/* Sales and Distribution */}
-                        {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="hide-scrollbar mb-6">
+                        )}
+                        {/* Sales, Service & Parts distribution */}
+                        {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales, Service & Parts Distribution {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales, Service & Parts Distribution:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {salesDist.address}<br />
-                              {Array.isArray(salesDist.phone) ? (
-                                salesDist.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {salesDist.phone}</div>
-                              )}
-                              {Array.isArray(salesDist.email) ? (
-                                salesDist.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {salesDist.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Sales & Distribution Location Map ${idx + 1}`}
-                                src={salesDist.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {salesDist.address}<br />
+                                  {Array.isArray(salesDist.phone) ? (
+                                    salesDist.phone.map((p, i) => (
+                                      <div key={i} className="mt-1">📞 {p}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">📞 {salesDist.phone}</div>
+                                  )}
+                                  {Array.isArray(salesDist.email) ? (
+                                    salesDist.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {salesDist.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales & Distribution Location Map ${idx + 1}`}
+                                    src={salesDist.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        )}
                         {/* Pre-Owned Cars */}
                         {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 0 && (
                           <div className="hide-scrollbar mb-6">
