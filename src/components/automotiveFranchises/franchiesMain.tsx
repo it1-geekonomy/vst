@@ -111,6 +111,7 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
+
       "spares warehouse"?: Array<{
         address: string;
         phone: string | string[];
@@ -482,6 +483,12 @@ const slides: SlideData[] = [
             email: "ace.ambkm@vstmotors.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3551153647277!2d80.2061238!3d13.076666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a11dafd219%3A0x908e7f8c925d6c45!2s1049%2C%20Poonamallee%20High%20Rd%2C%20Amaravathi%20Nagar%2C%20Arumbakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600106!5e0!3m2!1sen!2sin!4v1747254535176!5m2!1sen!2sin"
           },
+           {
+            address: "#2D, Dindigul Road, Trichy - 620 001.",
+            phone: "+91 98423 19820 , +91 98424 10847",
+            email: " trycvdsales@vstmotors.com",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2206779968324!2d78.6797484!3d10.794403299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf515569addf1%3A0xdcd00c0fc03eabe8!2sTata%20Motors%20Commercial%20Vehicle%20Dealer%20-%20V%20S%20T%20Motors%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1747280248764!5m2!1sen!2sin"
+          },
         ],
         // service: [
         //   {
@@ -496,8 +503,58 @@ const slides: SlideData[] = [
             address: "By-Pass Road, Poonamallee, Chennai - 600 056.",
             phone: " +91 98403 76339 , +91 73974 92943 , +91 89259 95593 , +91 98401 54057",
             email: "  cvd.pnmi@vstmotors.com",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          }
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747282040407!5m2!1sen!2sin"
+          },
+          {
+            address: "#43, Katpadi Road, Gandhinagar, Vellore - 632 006.",
+            phone: " +91 98423 15740, +91 98423 45530, +91 98424 10825",
+            email: "  vlr@vstmotors.com",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.316786294946!2d79.1369261!3d12.9515697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad4761940a1a59%3A0xf7813b55f7eaa1a2!2sTata%20Motors%20Commercial%20Vehicle%20Dealer%20-%20V%20S%20T%20Motors%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1747280810427!5m2!1sen!2sin"
+          },
+          {
+            address: "#10/3, Anai Goudampatti, Opp to Govt. Engineering College, Omalur Taluk, Salem - 636 011.",
+            phone: "+91 80560 90333, +91 94432 39806, +91 73581 09129",
+            email: ["slm@vstmotors.com", "wm.slm@vstmotors.com"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747280383602!5m2!1sen!2sin"
+          },
+          {
+            address: "#42, Mambalapattu Road, Villupuram - 605 602.",
+            phone: "+91 98424 10813 , +91 81487 11014",
+            email: ["wm.vpm@vstmotors.com", "acetl.vpm@vstmotors.com"],
+      map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747280383602!5m2!1sen!2sin"
+          },
+          {
+            address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
+            phone: "+91 98424 10813 , +91 99943 67350, +91 96007 99947 , +91 99943 67310",
+            email: ["comm.cud@vstmotors.com", "cudserv@vstmotors.com"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3903.5280666491453!2d79.4756295!3d11.9378961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a535700220f15e3%3A0xea410901d283e890!2sTATA%20MOTORS%20PVT%20LTD%20%26VST!5e0!3m2!1sen!2sin!4v1747280567993!5m2!1sen!2sin"
+          },
+          {
+            address: "#524/1, 525/1A, O. Karapalli Village, Onnalvadi Post, Hosur - 635 109",
+            phone: " +91 94437 47392 , +91 73581 09129 , +91 81488 54889 , +91 98424 10825",
+            email: [" hosur@vstmotors.com" , "wm.hosur@vstmotors.com"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747280645745!5m2!1sen!2sin"
+          },
+        ],
+         "Sales, Service & Parts distribution": [
+          {
+            address: "#235/1, Bypass Road, Poonamallee, Chennai - 600 056.",
+            phone: "+91 89255 20999 , +91 73388 59276",
+            email: "autoparts.pme@vstmotors.com",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124372.9908796914!2d79.9641057!3d13.0575572!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528bf72c7cf71d%3A0x775c66b74dcbbb9f!2sVST%20MOTORS%20P%20LTD%20PARTS%20DIVISION!5e0!3m2!1sen!2sin!4v1747282146552!5m2!1sen!2sin"
+          },
+          {
+            address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
+            phone: "  +91 90039 32034 , +91 73584 44125",
+            email: "autopartssm.cud@vstmotors.com",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747281880853!5m2!1sen!2sin"
+          },
+          {
+            address: "#3/1, New By-pass Road, Chennai-Bengaluru Highway, Shenbakkam, Vellore - 632 008.",
+            phone: "+91 99406 00442 , +91 73584 44125",
+            email: "autopartssm.vlr@vstmotors.com",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747281880853!5m2!1sen!2sin"
+          },
         ]
       },
 
@@ -549,7 +606,7 @@ const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15522.874073908808!2d77.7208083!3d13.4297424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e5593eb46f03%3A0x9ee339a0dd9e6ee1!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747250842932!5m2!1sen!2sin"
           },
           {
-            address: "#344/60, Chikkagollarahatti, \nNear Embosy School, Magadi Main Road, \nBengaluru - 560 091.",
+            address: "#344/60, Chikkagollarahatti, \nNear Embassy School, Magadi Main Road, \nBengaluru - 560 091.",
             phone: "+91 88844 98958",
             email: "sales.mgd@india-garage.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62203.047345636965!2d77.3926228!3d12.9916394!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3bc02d8ac7a7%3A0x67a3e32fa9009175!2sMahindra%20India%20Garage%20-%20Commercial%2C%20Magadi%20Road!5e0!3m2!1sen!2sin!4v1747212402454!5m2!1sen!2sin"
@@ -1140,10 +1197,20 @@ const FranchiseSlider = () => {
                                   {sale.address}<br />
                                   {Array.isArray(sale.phone) ? (
                                     sale.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {sale.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {sale.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(sale.email) ? (
                                     sale.email.map((e, i) => (
@@ -1182,10 +1249,20 @@ const FranchiseSlider = () => {
                                   {service.address}<br />
                                   {Array.isArray(service.phone) ? (
                                     service.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {service.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {service.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(service.email) ? (
                                     service.email.map((e, i) => (
@@ -1213,81 +1290,109 @@ const FranchiseSlider = () => {
                           </div>
                         )}
                         {/* Sales and Service */}
-                        {location["sales & service"] && location["sales & service"].length > 0 && location["sales & service"].map((salesService, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="hide-scrollbar mb-6">
+                        {location["sales & service"] && location["sales & service"].length > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
                               Sales & Service:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {salesService.address}<br />
-                              {Array.isArray(salesService.phone) ? (
-                                salesService.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {salesService.phone}</div>
-                              )}
-                              {Array.isArray(salesService.email) ? (
-                                salesService.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {salesService.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Sales & Service Location Map ${idx + 1}`}
-                                src={salesService.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location["sales & service"].map((salesService, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {salesService.address}<br />
+                                  {Array.isArray(salesService.phone) ? (
+                                    salesService.phone.map((p, i) => (
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {salesService.phone}
+                                    </div>
+                                  )}
+                                  {Array.isArray(salesService.email) ? (
+                                    salesService.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {salesService.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales & Service Location Map ${idx + 1}`}
+                                    src={salesService.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
-                        {/* Sales and Distribution */}
-                        {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="hide-scrollbar mb-6">
+                        )}
+                        {/* Sales, Service & Parts distribution */}
+                        {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales, Service & Parts Distribution {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales, Service & Parts Distribution:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {salesDist.address}<br />
-                              {Array.isArray(salesDist.phone) ? (
-                                salesDist.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {salesDist.phone}</div>
-                              )}
-                              {Array.isArray(salesDist.email) ? (
-                                salesDist.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {salesDist.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Sales & Distribution Location Map ${idx + 1}`}
-                                src={salesDist.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {salesDist.address}<br />
+                                  {Array.isArray(salesDist.phone) ? (
+                                    salesDist.phone.map((p, i) => (
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {salesDist.phone}
+                                    </div>
+                                  )}
+                                  {Array.isArray(salesDist.email) ? (
+                                    salesDist.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {salesDist.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales & Distribution Location Map ${idx + 1}`}
+                                    src={salesDist.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        )}
                         {/* Pre-Owned Cars */}
                         {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 0 && (
                           <div className="hide-scrollbar mb-6">
@@ -1300,10 +1405,20 @@ const FranchiseSlider = () => {
                                   {preOwned.address}<br />
                                   {Array.isArray(preOwned.phone) ? (
                                     preOwned.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {preOwned.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {preOwned.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(preOwned.email) ? (
                                     preOwned.email.map((e, i) => (
@@ -1342,10 +1457,20 @@ const FranchiseSlider = () => {
                                   {serviceParts.address}<br />
                                   {Array.isArray(serviceParts.phone) ? (
                                     serviceParts.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {serviceParts.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {serviceParts.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(serviceParts.email) ? (
                                     serviceParts.email.map((e, i) => (
@@ -1372,6 +1497,7 @@ const FranchiseSlider = () => {
                             ))}
                           </div>
                         )}
+
                         {/* Spares Warehouse */}
                         {location["spares warehouse"] && (location["spares warehouse"]?.length ?? 0) > 0 && (
                           <div className="hide-scrollbar mb-6">
@@ -1384,10 +1510,20 @@ const FranchiseSlider = () => {
                                   {spares.address}<br />
                                   {Array.isArray(spares.phone) ? (
                                     spares.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {spares.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {spares.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(spares.email) ? (
                                     spares.email.map((e, i) => (
@@ -1399,6 +1535,7 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="rounded-lg overflow-hidden w-full">
                                   <iframe
+
                                     title={`Spares Warehouse Map ${idx + 1}`}
                                     src={spares.map}
                                     width="100%"

@@ -88,7 +88,7 @@ export default function NewsMedia() {
     },
     {
       image: imgcar,
-      alt: "Team Photo",
+      alt: "Teams Photo",
       title: "Meet Our Team",
       text: "The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz",
       link: "https://www.linkedin.com/posts/vst-motors-ltd_bharatmobility2025-mercedesbenzindia-porscheindia-activity-7287775917416792067-Eaki?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
