@@ -111,6 +111,12 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
+      "spares warehouse"?: Array<{
+        address: string;
+        phone: string | string[];
+        email: string | string[];
+        map: string;
+      }>;
     };
   };
 }
@@ -386,7 +392,7 @@ const slides: SlideData[] = [
             phone: "+91 96069 88123",
             email: ["salesheadypr.bly@vstcentral-kia.in", "servicemanager.slm@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d3c841e2cb3%3A0x89f4847827ee7596!2sVST%20CENTRAL%20KIA%20-%20YESHWANTHPUR!5e0!3m2!1sen!2sin!4v1747223315800!5m2!1sen!2sin"
-          }
+          },
         ],
         "Pre-Owned Cars": [
           {
@@ -854,6 +860,14 @@ const slides: SlideData[] = [
             email: "service.rmn@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.357387289643!2d77.66433099999999!3d13.012898499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae112887e697bf%3A0x46b5e5388f798533!2sCity%20Honda%20Service%20Ramamurthy%20Nagar!5e0!3m2!1sen!2sin!4v1747228592460!5m2!1sen!2sin"
           }
+        ],
+        "spares warehouse": [
+          {
+            address: "#113, 1st Main Road, Lingarajpuram, \nBengaluru - 560 084.",
+            phone: "+91 80 2549 6561, +91 94483 97794",
+            email: ["warehouse@cityhonda.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.4260254411024!2d77.6207003!3d13.0085203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16e7556e6ef3%3A0xf689f35e9637d316!2sCity%20Honda%20Service%20Lingarajapuram!5e0!3m2!1sen!2sin!4v1747278984074!5m2!1sen!2sin"
+          },
         ]
       },
     }
@@ -1393,6 +1407,48 @@ const FranchiseSlider = () => {
                                   <iframe
                                     title={`Service and Parts Map ${idx + 1}`}
                                     src={serviceParts.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {/* Spares Warehouse */}
+                        {location["spares warehouse"] && (location["spares warehouse"]?.length ?? 0) > 0 && (
+                          <div className="hide-scrollbar mb-6">
+                            <div className="text-white font-bold text-xl mb-2">
+                              Spares Warehouse:
+                            </div>
+                            {location["spares warehouse"].map((spares, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-spareswarehouse-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {spares.address}<br />
+                                  {Array.isArray(spares.phone) ? (
+                                    spares.phone.map((p, i) => (
+                                      <div key={i} className="mt-1">📞 {p}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">📞 {spares.phone}</div>
+                                  )}
+                                  {Array.isArray(spares.email) ? (
+                                    spares.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {spares.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Spares Warehouse Map ${idx + 1}`}
+                                    src={spares.map}
                                     width="100%"
                                     height="280"
                                     className="rounded-lg w-full"
