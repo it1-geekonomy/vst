@@ -103,8 +103,8 @@ export default function Initiatives() {
 
   // Desktop View
   const DesktopView = () => (
-    <section className="w-full h-screen flex items-center p-6">
-      <div className="max-w-[1900px] pl-32 w-full h-[110vh]">
+    <section className="w-full h-screen flex items-center container mx-auto p-6">
+      <div className="max-w-[1900px] w-full h-[110vh]">
         <div className="grid grid-cols-5 h-full">
           {/* Main Initiative */}
           <div className="col-span-2 border border-white relative group overflow-hidden">
