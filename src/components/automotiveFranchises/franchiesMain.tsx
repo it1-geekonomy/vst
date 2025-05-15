@@ -502,7 +502,7 @@ const slides: SlideData[] = [
             address: "By-Pass Road, Poonamallee, Chennai - 600 056.",
             phone: " +91 98403 76339 , +91 73974 92943 , +91 89259 95593 , +91 98401 54057",
             email: "  cvd.pnmi@vstmotors.com",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747282040407!5m2!1sen!2sin"
           },
           {
             address: "#10/3, Anai Goudampatti, Opp to Govt. Engineering College, Omalur Taluk, Salem - 636 011.",
