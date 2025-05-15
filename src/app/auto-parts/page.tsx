@@ -511,9 +511,9 @@ export default function Page() {
                  pincode: ""       
                }}
                phoneNumbers={[
-                 '+91-44-28602485',
-                 '+91-44-28602486',
-                 '+91-44-28602487'
+                 '+91-44-2860 2485',
+                 '+91-44-2860 2486',
+                 '+91-44-2860 2487'
                ]}
                googleMapsUrl="https://www.google.com/maps/place/VST+Motors/@13.0626463,80.2615032,17z/data=!3m1!5s0x3a52661712800ddd:0x9763c5b415119093!4m14!1m7!3m6!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!2sVST+Motors!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7!3m5!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
              />
