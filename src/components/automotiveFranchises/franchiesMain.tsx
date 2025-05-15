@@ -1188,10 +1188,20 @@ const FranchiseSlider = () => {
                                   {sale.address}<br />
                                   {Array.isArray(sale.phone) ? (
                                     sale.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {sale.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {sale.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(sale.email) ? (
                                     sale.email.map((e, i) => (
@@ -1230,10 +1240,20 @@ const FranchiseSlider = () => {
                                   {service.address}<br />
                                   {Array.isArray(service.phone) ? (
                                     service.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {service.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {service.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(service.email) ? (
                                     service.email.map((e, i) => (
@@ -1272,10 +1292,20 @@ const FranchiseSlider = () => {
                                   {salesService.address}<br />
                                   {Array.isArray(salesService.phone) ? (
                                     salesService.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {salesService.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {salesService.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(salesService.email) ? (
                                     salesService.email.map((e, i) => (
@@ -1314,10 +1344,20 @@ const FranchiseSlider = () => {
                                   {salesDist.address}<br />
                                   {Array.isArray(salesDist.phone) ? (
                                     salesDist.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {salesDist.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {salesDist.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(salesDist.email) ? (
                                     salesDist.email.map((e, i) => (
@@ -1356,10 +1396,20 @@ const FranchiseSlider = () => {
                                   {preOwned.address}<br />
                                   {Array.isArray(preOwned.phone) ? (
                                     preOwned.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {preOwned.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {preOwned.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(preOwned.email) ? (
                                     preOwned.email.map((e, i) => (
@@ -1398,10 +1448,20 @@ const FranchiseSlider = () => {
                                   {serviceParts.address}<br />
                                   {Array.isArray(serviceParts.phone) ? (
                                     serviceParts.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {serviceParts.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {serviceParts.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(serviceParts.email) ? (
                                     serviceParts.email.map((e, i) => (
@@ -1440,10 +1500,20 @@ const FranchiseSlider = () => {
                                   {spares.address}<br />
                                   {Array.isArray(spares.phone) ? (
                                     spares.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {spares.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {spares.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(spares.email) ? (
                                     spares.email.map((e, i) => (
