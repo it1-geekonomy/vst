@@ -34,7 +34,7 @@ export default function NewsMedia() {
   
   const headlines = [
     "Exciting! Our new Porsche showroom is now in Whitefield!",
-    "A special moment from our Chennai Finance Team",
+    "A special moment from our Chennai finance team",
     "As a long-standing Ducati dealer partner at VST Group."
   ];
   const headlines2 = [

@@ -230,7 +230,7 @@ export default function Page() {
                 <div>
                   <div className="flex justify-between items-center">
                     <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
-                      Tell us about yourself and why you want this job.
+                      Tell us about yourself
                     </label>
                     <span className={`text-xs ${charCountColor}`}>
                       {remainingChars} chars left
