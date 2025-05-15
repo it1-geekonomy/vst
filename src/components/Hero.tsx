@@ -79,7 +79,8 @@ const slides = [
   {
     id: 2,
     image: slide2,
-    title: "AUTOMOTIVE FRANCHISE",
+    title: "AUTOMOTIVE FRANCHISES",
+
     subtitle: "Where innovation meets craftsmanship—experience the future of mobility.",
     label: "Automotive Franchise",
     color: "from-blue-600/80 to-blue-800/80",
