@@ -536,7 +536,7 @@ const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747280645745!5m2!1sen!2sin"
           },
         ],
-         "spares & distribution": [
+         "Sales, Service & Parts distribution": [
           {
             address: "#235/1, Bypass Road, Poonamallee, Chennai - 600 056.",
             phone: "+91 89255 20999 , +91 73388 59276",
