@@ -458,7 +458,7 @@ const slides: SlideData[] = [
   {
     id: 8,
     backgroundImage: tata,
-    brand: "maserati",
+    brand: "tata",
     bgColor: {
       from: "#D6744E",
       to: "rgba(214, 116, 78, 0.4)",
@@ -471,25 +471,25 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
-            phone: "+91 99024 88899",
-            email: " info@vst-maserati.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=VST+Vistas,+Palace+Cross+Road,+Bengaluru&zoom=15&size=300x120&markers=color:red%7Clabel:S%7CVST+Vistas,+Palace+Cross+Road,+Bengaluru"
+            address: "#1049, Poonamallee High Road, Arumbakkam, Chennai - 600 106.",
+            phone: "+91 73389 77522 , +91 93840 58820",
+            email: "ace.ambkm@vstmotors.com",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3551153647277!2d80.2061238!3d13.076666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a11dafd219%3A0x908e7f8c925d6c45!2s1049%2C%20Poonamallee%20High%20Rd%2C%20Amaravathi%20Nagar%2C%20Arumbakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600106!5e0!3m2!1sen!2sin!4v1747254535176!5m2!1sen!2sin"
           },
         ],
-        service: [
-          {
-            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
-            phone: "+91 99024 88899",
-            email: "info@vstavventura.in",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
-          }
-        ],
+        // service: [
+        //   {
+        //     address: "By-Pass Road, Poonamallee, Chennai - 600 056.",
+        //     phone: " +91 98403 76339 , +91 73974 92943 , +91 89259 95593 , +91 98401 5405",
+        //     email: "  cvd.pnmi@vstmotors.com",
+        //     map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+        //   }
+        // ],
         "sales & service": [
           {
-            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
-            phone: "+91 99024 88899",
-            email: "info@vstavventura.in",
+            address: "By-Pass Road, Poonamallee, Chennai - 600 056.",
+            phone: " +91 98403 76339 , +91 73974 92943 , +91 89259 95593 , +91 98401 54057",
+            email: "  cvd.pnmi@vstmotors.com",
             map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
           }
         ]
