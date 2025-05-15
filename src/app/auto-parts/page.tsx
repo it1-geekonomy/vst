@@ -505,7 +505,7 @@ export default function Page() {
                locationImage="vst-auto-parts/location img.png"
                address={{
                  street: "Old No 144, New No 199",
-                 street2: "(1st Floor) Anna Salai ,Chennai,",
+                 street2: "1st Floor, Anna Salai ,Chennai,",
                  state: "",
                  city: "Tamil Nadu 600 002.",
                  pincode: ""       
