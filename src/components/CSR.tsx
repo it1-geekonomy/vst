@@ -60,12 +60,12 @@ const timelineData = [
         title: "Rotary Orchards Chaitanya Senior",
         description: "Citizens Home Trust old age homes",
       },
-      {
-        src: "/makingdiff/imagesanime/image6.jpeg",
-        title: "The Deaf Aid Society",
-        description:
-          "Helping the hearing impaired children mostly from economically weaker section.",
-      },
+      // {
+      //   src: "/makingdiff/imagesanime/image6.jpeg",
+      //   title: "The Deaf Aid Society",
+      //   description:
+      //     "Helping the hearing impaired children mostly from economically weaker section.",
+      // },
     ],
   },
   {
@@ -83,18 +83,18 @@ const timelineData = [
         description:
           "Religious Trust Ramakrishna Matt - Bangalore religious Trust Ramakrishna Mission-Shivanahalli, religious Trust Ramakrishna Ashrama-Mysore, Religious Trust Ramakrishna Saradashrama-Ponnampet",
       },
-      {
-        src: "/makingdiff/imagesanime/image9.jpeg",
-        title: "The Deaf Aid Society",
-        description:
-          "Helping the hearing impaired children mostly from economically weaker section.",
-      },
-      {
-        src: "/makingdiff/imagesanime/image10.jpeg",
-        title: "The National Association for the Blind, Karnataka",
-        description:
-          "Screening camps, eye camps, surgery & medicines",
-      },
+      // {
+      //   src: "/makingdiff/imagesanime/image9.jpeg",
+      //   title: "The Deaf Aid Society",
+      //   description:
+      //     "Helping the hearing impaired children mostly from economically weaker section.",
+      // },
+      // {
+      //   src: "/makingdiff/imagesanime/image10.jpeg",
+      //   title: "The National Association for the Blind, Karnataka",
+      //   description:
+      //     "Screening camps, eye camps, surgery & medicines",
+      // },
     ],
   },
 ];

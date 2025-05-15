@@ -757,19 +757,19 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "#6, St. John's Road, \nUlsoor, Bengaluru - 560 042.",
-            phone: ["+91 80 2559 1999", "+91 94498 07080"],
+            address: "M/S. City Honda, #6, St. John's Road, \nUlsoor, Bengaluru - 560 042.",
+            phone: ["+91 80 2513 9199, +91 94808 12350"],
             email: "sales.ho@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6159692!3d12.9860895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20Johns%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1711542825613!5m2!1sen!2sin"
           },
           {
             address: "#202,7th Main, HRBR Layout, Kalyan \nNagar, Bengaluru - 560 043.",
-            phone: ["+91 80 2542 2810", "+91 80 2542 2811", "+91 94498 07080"],
+            phone: ["+91 80 2542 2810", "+91 80 2542 2811", "+91 98459 41305"],
             email: "sales.hrbr@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d77.6431027!3d13.015952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1728131c0e23%3A0xa06978a43d8ffa58!2sCity%20Honda%20Sales%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
           },
           {
-            address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 043.",
+            address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 027.",
             phone: ["+91 80 4333 3330", "+91 88844 34200"],
             email: "sales.lbg@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d77.5865653!3d12.9613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156978155c3f%3A0xead9a19c3f1e2497!2sCity%20Honda%20Sales%20Lalbagh%20Road!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
@@ -801,7 +801,7 @@ const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.161242209912!2d77.58864729999999!3d12.961532099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d9607610e3%3A0x379b9710e881c087!2sCITY%20HONDA%20SERVICE%20LALBAGH%20ROAD!5e0!3m2!1sen!2sin!4v1747228564023!5m2!1sen!2sin"
           },
           {
-            address: "#42/2, Ramamurthynagar Main Road, \nRamamurthy Nagar, Bengaluru - 560 016.",
+            address: "#40/2, Ramamurthynagar Main Road, \nRamamurthy Nagar, Bengaluru - 560 016.",
             phone: ["+91 80 4094 4950", "+91 94808 12390"],
             email: "service.rmn@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.357387289643!2d77.66433099999999!3d13.012898499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae112887e697bf%3A0x46b5e5388f798533!2sCity%20Honda%20Service%20Ramamurthy%20Nagar!5e0!3m2!1sen!2sin!4v1747228592460!5m2!1sen!2sin"
