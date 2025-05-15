@@ -366,8 +366,8 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road,\n Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
+            address: "VST Vistas, #1, Palace Cross Road, \nBengaluru 560 020",
+            phone: ["+91 80-2334 4090", "+91 96069 88123"],
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62194.590892308755!2d77.5057122!3d13.0253581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17efe70fb545%3A0x90e3a1c2447e9a93!2sVST%20CENTRAL%20KIA%20-%20PALACE%20CROSS%20ROAD!5e0!3m2!1sen!2sin!4v1747219026615!5m2!1sen!2sin"
           },
@@ -382,7 +382,7 @@ const slides: SlideData[] = [
         ],
         "sales & service": [
           {
-            address: "#48, Industrial Suburb, Opp.\n Yeshwantpur Railway Station, \nBengaluru 560 022",
+            address: "#48, Industrial Suburb, Opp. \nYeshwantpur Railway Station, \nBengaluru 560 022",
             phone: "+91 96069 88123",
             email: ["salesheadypr.bly@vstcentral-kia.in", "servicemanager.slm@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d3c841e2cb3%3A0x89f4847827ee7596!2sVST%20CENTRAL%20KIA%20-%20YESHWANTHPUR!5e0!3m2!1sen!2sin!4v1747223315800!5m2!1sen!2sin"
@@ -390,7 +390,7 @@ const slides: SlideData[] = [
         ],
         "Pre-Owned Cars": [
           {
-            address: "VST Central Kia-CPO, CPS Tower Building,\n #145, Kempegowda Layout, Laggere Ring\n Road, Near Dhanushri Cycles, Bengaluru 560 058",
+            address: "VST Central Kia-CPO, CPS Tower Building, \n#145, Kempegowda Layout, Laggere Ring \nRoad, Near Dhanushri Cycles, \nBengaluru 560 058",
             phone: "+91 96069 88134",
             email: ["managercpo.bly@vstcentral-kia.in", "servicemanager.vrl@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df363fe3c01%3A0x6cd47089f0ab9064!2sVST%20CENTRAL%20KIA%20CERTIFIED%20PRE%20-%20OWNED%20CARS!5e0!3m2!1sen!2sin!4v1747223390388!5m2!1sen!2sin"
@@ -400,25 +400,25 @@ const slides: SlideData[] = [
       "Chennai": {
         sales: [
           {
-            address: "Old #182, New #237, Anna Salai,\n Chennai 600 006",
+            address: "Old #182, New #237, Anna Salai, \nChennai 600 006",
             phone: "+91 90872 11113",
             email: "salesmanagerch@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31093.718074797078!2d80.2325632!3d13.0538196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b9e01bc651%3A0xb1106c2bec1384e2!2sKIA%20Showroom%20Chennai%20-%20VST%20Central!5e0!3m2!1sen!2sin!4v1747223435630!5m2!1sen!2sin"
           },
           {
-            address: "#204/187, GR Plaza, North Usman Road,\n T. Nagar, Chennai 600 017",
+            address: "#204/187, GR Plaza, North Usman Road, \nT. Nagar, Chennai 600 017",
             phone: "+91 99400 92010",
             email: "salesmanagertn@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.3750756576278!2d80.232498!3d13.0515692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670023549f87%3A0xd1302492f99f3c74!2sKia%20Showroom%20T%20Nagar%20-%20VST%20Kia!5e0!3m2!1sen!2sin!4v1747223565704!5m2!1sen!2sin"
           },
           {
-            address: "#155, Swamith Ashithanar Nagar, \nGNT Road, Thandalkalani, Pulicat, \nChennai 600 066",
+            address: "#155, Swamith Ashithanar Nagar, GNT \nRoad, Thandalkalani, Pulicat, \nChennai 600 066",
             phone: "+91 73050 32085",
             email: "salesmanagerthk@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1942.4034805389128!2d80.1949667!3d13.1745681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527b573076743f%3A0x4df8fecc75acdc92!2sVST%20CENTRAL%20-%20KIA%20REDHILLS%20SHOWROOM!5e0!3m2!1sen!2sin!4v1747223606109!5m2!1sen!2sin"
           },
           {
-            address: "#548/6, Kattukottai, Nattamangalam,\n Salem 636 010",
+            address: "#548/6, Kattukottai, Nattamangalam, \nSalem 636 010",
             phone: "+91 93848 77744",
             email: "salesmanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747233866731!5m2!1sen!2sin"
@@ -427,7 +427,7 @@ const slides: SlideData[] = [
         service: [
           {
             address: "#57, Arcot Road, Virugavayapuram, \nBharani Colony, Saligramam, \nChennai 600 093",
-            phone: "+91 90872 11113, +91 89255 03894",
+            phone: ["+91 90872 11113", "+91 89255 03894"],
             email: "servicemanagerch@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124378.72962695648!2d80.0696671!3d13.0461534!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526720103596eb%3A0x89ee02c1c5997cb0!2sKia%20Car%20Service%20-%20VST%20Central%2C%20Chennai!5e0!3m2!1sen!2sin!4v1747234107357!5m2!1sen!2sin"
           },
@@ -435,19 +435,19 @@ const slides: SlideData[] = [
         "sales & service": [
           {
             address: "#250-2, Meyyanur Road, Ashokapuram \nPost, Salem 636 004",
-            phone: "+91 81488 11113, +91 93848 77744, +91 93840 84430",
+            phone: ["+91 81488 11113", "+91 93848 77744", "+91 93840 84430"],
             email: "servicemanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31258.594118025143!2d78.0997807!3d11.6714159!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf06a1e618371%3A0xd149fb0b495752ca!2sKia%20Car%20Showroom%20-%20Vst%20Kia%2C%20Meyyanur%20Main%20Road!5e0!3m2!1sen!2sin!4v1747234237365!5m2!1sen!2sin"
           },
           {
-            address: "#177, Kodipali, Thoppali Agrahara Village,\n Hosur 635 109",
-            phone: "+91 93449 04681, +91 78458 05068, +91 78458 05069",
+            address: "#177, Kodipali, Thoppali Agrahara Village, \nHosur 635 109",
+            phone: ["+91 93449 04681", "+91 78458 05068", "+91 78458 05069"],
             email: "salesmanagerhsr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.934187484988!2d77.8746835!3d12.717716399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae776f63338a5b%3A0xaf507e08bea31c5!2sKia%20Car%20Showroom%20-%20Vst%20Central%2C%20Kumudepalli!5e0!3m2!1sen!2sin!4v1747234328566!5m2!1sen!2sin"
           },
           {
-            address: "No. 43, Katpadi Road, Gandhinagar,\n Vellore 632 006",
-            phone: "+91 90872 11113, +91 93840 96077",
+            address: "No. 43, Katpadi Road, Gandhinagar, \nVellore 632 006",
+            phone: ["+91 90872 11113", "+91 93840 96077"],
             email: ["servicemanagervlr@vstcentral-kia.in", "salesmanagervlr@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.318270535633!2d79.1367769!3d12.9514746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad393de10f1b39%3A0xee4f088f339b7d95!2sVST%20CENTRAL%20-%20KIA%20SHOWROOM%20%26%20WORKSHOP!5e0!3m2!1sen!2sin!4v1747234422327!5m2!1sen!2sin"
           }
@@ -536,7 +536,7 @@ const slides: SlideData[] = [
             email: "sales.ckb@india-garage.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.921836472896!2d77.72855919999999!3d13.4171652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e59836e5f33f%3A0xa6cd6ee6f458d36b!2sMahindra%20Showroom%20-%20India%20Garage%20Chikkaballapur!5e0!3m2!1sen!2sin!4v1747212226477!5m2!1sen!2sin"
           },
-           {
+          {
             address: "BB Road, Opp. To Reliance Petrol Bunk,\nChikkaballapur - 560 101.",
             phone: "+91 88844 98958",
             email: "prosper.cbkr@india-garage.in",
@@ -673,7 +673,7 @@ const slides: SlideData[] = [
       sales: {
         sales: [
           {
-            address: "VW Palace Cross #1, Palace Cross Road, Bengaluru - 560 020.",
+            address: "VW Palace Cross #1, Palace Cross Road, \nBengaluru - 560 020.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.600293612716!2d77.5856699!3d12.9973978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16471a670e77%3A0xa3b3b7d52a5f3498!2sVolkswagen%20Palace%20Cross%20Bangalore%20-%20Showroom!5e0!3m2!1sen!2sin!4v1747227805300!5m2!1sen!2sin"
@@ -681,13 +681,13 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "VW Rajajinagar, #1/1 Kodi Street, 4th Main Rajajinagar, Next to Venus Int School, Bengaluru - 560 010.",
+            address: "VW Rajajinagar, #1/1 Kodi Street, 4th \nMain Rajajinagar, Next to Venus Int \nSchool, Bengaluru - 560 010.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8569045788895!2d77.5604245!3d12.981002799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df640156a91%3A0x325ed398bf8b8612!2sVolkswagen%20Palace%20Cross%20-%20Rajajinager!5e0!3m2!1sen!2sin!4v1747227847236!5m2!1sen!2sin"
           },
           {
-            address: "VW Palace Cross, #69/2, Begalagunte, Hesarghatta Main Road, 8th Mile, T.Dasarahalli, Bengaluru - 560 057.",
+            address: "VW Palace Cross, #69/2, Begalagunte, \nHesarghatta Main Road, 8th Mile, \nT.Dasarahalli, Bengaluru - 560 057.",
             phone: "+91 96866 01249",
             email: "crhhsrg@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.720216998035!2d77.5078525!3d13.053472600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae232cd37c0e0d%3A0x1a89d7aeb69240c1!2sVolkswagen%20Palace%20Cross%20Hesargatta%20-%20Volkswagen!5e0!3m2!1sen!2sin!4v1747227892497!5m2!1sen!2sin"
@@ -695,7 +695,7 @@ const slides: SlideData[] = [
         ],
         "sales & service": [
           {
-            address: "VW Mysore Road, #26/2 & 27/2, Kenchanahalli Village, Kengeri Hobli, Mysore Road, Bengaluru - 560 057.",
+            address: "VW Mysore Road, #26/2 & 27/2, \nKenchanahalli Village, Kengeri Hobli, \nMysore Road, Bengaluru - 560 057.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.3333016634388!2d77.5030693!3d12.9291368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ef00026b7f3%3A0xc01a322d21f9de9b!2sVolkswagen%20Mysore%20Road%20-%20Sales%20%26%20Service!5e0!3m2!1sen!2sin!4v1747227650015!5m2!1sen!2sin"
@@ -720,19 +720,19 @@ const slides: SlideData[] = [
       India: {
         sales: [
           {
-            address: "#8, KSCMF Building, Cunningham Road Bengaluru - 560 058.",
+            address: "#8, KSCMF Building, Cunningham Road \nBengaluru - 560 058.",
             phone: "+91 96060 74777",
             email: " info@vstbyd.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.9654766732485!2d77.593135!3d12.9895086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1723bff92db9%3A0xee980fcacf73499c!2sVST%20BYD%20Bangalore%20-%20Cunningham%20Road!5e0!3m2!1sen!2sin!4v1747227934358!5m2!1sen!2sin"
           },
           {
-            address: "GKS Tower #40 & 41, sy:33, Hosur Main Road, Hongasandra Metro Rail Stn, Bommanahalli, Bengaluru - 560 058.",
+            address: "GKS Tower #40 & 41, sy:33, Hosur Main \nRoad, Hongasandra Metro Rail Stn, \nBommanahalli, Bengaluru - 560 058.",
             phone: "+91 96060 74777.",
             email: "info@vstbyd.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.2865345441438!2d77.6334927!3d12.8983231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1574556b472b%3A0x40ce1c0dc073c801!2sVST%20BYD%20Showroom%20-%20Hosur%20Road!5e0!3m2!1sen!2sin!4v1747227978547!5m2!1sen!2sin"
           },
           {
-            address: "#38/5A Hyland Industrial Estate, 11th KM, Hosur Road, Bommanahalli,Bengaluru - 560 068.",
+            address: "#38/5A Hyland Industrial Estate, 11th \nKM, Hosur Road, \nBommanahalli,Bengaluru - 560 068.",
             phone: "+91 96060 74777.",
             email: "info@vstbyd.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.149986869151!2d77.6354502!3d12.8980755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae153776c653cf%3A0xe7341df12627565a!2sVST%20BYD%20-%20Service!5e0!3m2!1sen!2sin!4v1747228024967!5m2!1sen!2sin"
@@ -757,53 +757,53 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "#6, St. John's Road, Ulsoor, Bengaluru - 560 042.",
-            phone: "+91 80 2559 1999, +91 94498 07080",
+            address: "#6, St. John's Road, \nUlsoor, Bengaluru - 560 042.",
+            phone: ["+91 80 2559 1999", "+91 94498 07080"],
             email: "sales.ho@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John&#39;s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747249559104!5m2!1sen!2sin"
 
           },
           {
-            address: "#202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru - 560 043.",
-            phone: "+91 80 2542 2810, +91 80 2542 2811, +91 94498 07080",
+            address: "#202,7th Main, HRBR Layout, Kalyan \nNagar, Bengaluru - 560 043.",
+            phone: ["+91 80 2542 2810", "+91 80 2542 2811", "+91 94498 07080"],
             email: "sales.hrbr@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d77.6431027!3d13.015952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1728131c0e23%3A0xa06978a43d8ffa58!2sCity%20Honda%20Sales%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
           },
           {
-            address: "#143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru - 560 043.",
-            phone: "+91 80 4333 3330, +91 88844 34200",
+            address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 043.",
+            phone: ["+91 80 4333 3330", "+91 88844 34200"],
             email: "sales.lbg@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d77.5865653!3d12.9613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156978155c3f%3A0xead9a19c3f1e2497!2sCity%20Honda%20Sales%20Lalbagh%20Road!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
           }
         ],
         "service and parts": [
           {
-            address: "#113, 1sr Main Road, Lingarajapuram, Bengaluru - 560 084.",
-            phone: "+91 80 2549 6561, +91 94808 12384",
+            address: "#113, 1sr Main Road, Lingarajapuram, \nBengaluru - 560 084.",
+            phone: ["+91 80 2549 6561", "+91 94808 12384"],
             email: "service.lrp@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.4260254411024!2d77.6207003!3d13.0085203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16e7556e6ef3%3A0xf689f35e9637d316!2sCity%20Honda%20Service%20Lingarajapuram!5e0!3m2!1sen!2sin!4v1747228353651!5m2!1sen!2sin"
           },
           {
-            address: "Head Workshop, No.6, St. John's Road, Ulsoor,  Bengaluru - 560 042.",
-            phone: "+91 80 2513 9199, +91 94498 67080",
+            address: "Head Workshop, No.6, St. John's Road, \nUlsoor,  Bengaluru - 560 042.",
+            phone: ["+91 80 2513 9199", "+91 94498 67080"],
             email: "service.ho@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6160922!3d12.986102700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1750ec0c4ff3%3A0xf64250c532b819ee!2sCity%20Honda%20Service%20St%20Johns%20Road!5e0!3m2!1sen!2sin!4v1747228507673!5m2!1sen!2sin"
           },
           {
-            address: "No. 24, 25, 30 and 31, 40 Ft Road, PNS Layout, Subbannapalya, Kalyan Nagar, Bengalur - 560 043.",
-            phone: "+91 80 2542 2813, +91 76193 95014",
+            address: "No. 24, 25, 30 and 31, 40 Ft Road, PNS \nLayout, Subbannapalya, Kalyan Nagar, \nBengalur - 560 043.",
+            phone: ["+91 80 2542 2813", "+91 76193 95014"],
             email: "service.hrbr@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.91462263749514!2d77.6412537!3d13.0154752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1727eef1d2ed%3A0xe882785e66ab71e1!2sCity%20Honda%20Service%20HRBR%20Layout%20-Kalyan%20Nagar!5e0!3m2!1sen!2sin!4v1747228536688!5m2!1sen!2sin"
           },
           {
-            address: "#143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru - 560 027.",
-            phone: "+91 80 4333 3330, +91 94808 12380",
+            address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 027.",
+            phone: ["+91 80 4333 3330", "+91 94808 12380"],
             email: "service.ibg@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.161242209912!2d77.58864729999999!3d12.961532099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d9607610e3%3A0x379b9710e881c087!2sCITY%20HONDA%20SERVICE%20LALBAGH%20ROAD!5e0!3m2!1sen!2sin!4v1747228564023!5m2!1sen!2sin"
           },
           {
-            address: "#42/2, Ramamurthynagar Main Road, Ramamurthy Nagar, Bengaluru - 560 016.",
-            phone: "+91 80 4094 4950, +91 94808 12390",
+            address: "#42/2, Ramamurthynagar Main Road, \nRamamurthy Nagar, Bengaluru - 560 016.",
+            phone: ["+91 80 4094 4950", "+91 94808 12390"],
             email: "service.rmn@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.357387289643!2d77.66433099999999!3d13.012898499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae112887e697bf%3A0x46b5e5388f798533!2sCity%20Honda%20Service%20Ramamurthy%20Nagar!5e0!3m2!1sen!2sin!4v1747228592460!5m2!1sen!2sin"
           }
