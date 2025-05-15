@@ -760,8 +760,7 @@ const slides: SlideData[] = [
             address: "#6, St. John's Road, \nUlsoor, Bengaluru - 560 042.",
             phone: ["+91 80 2559 1999", "+91 94498 07080"],
             email: "sales.ho@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John&#39;s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747249559104!5m2!1sen!2sin"
-
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6159692!3d12.9860895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20Johns%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1711542825613!5m2!1sen!2sin"
           },
           {
             address: "#202,7th Main, HRBR Layout, Kalyan \nNagar, Bengaluru - 560 043.",
