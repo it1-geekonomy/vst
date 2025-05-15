@@ -111,7 +111,8 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
-      "spares & distribution"?: Array<{
+
+      "spares warehouse"?: Array<{
         address: string;
         phone: string | string[];
         email: string | string[];
@@ -306,7 +307,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Avventura Private Limited, #73/1, Millers Road, Bengaluru 560 001",
+            address: "VST Avventura Private Limited, #73/1,\n Millers Road, Bengaluru 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"
@@ -314,7 +315,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "VST Avventura Private Limited, 1st Phase Plot #2E4, Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru 560 048",
+            address: "VST Avventura Private Limited, \n1st Phase Plot #2E4, Whitefield Main Road, \nDevasandra Industrial Estate, Mahadevapura, \nBengaluru 560 048",
             phone: "+91 99024 88899",
             email: "info@vstavventura.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62201.86504418537!2d77.635414!3d12.9963588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747218674781!5m2!1sen!2sin"
@@ -339,7 +340,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "#22, Sankey Road, Opp. BDA Office, Bengaluru 560 051",
+            address: "#22, Sankey Road, Opp. BDA Office, \nBengaluru 560 051",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747251086612!5m2!1sen!2sin"
@@ -347,7 +348,7 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "#459, Dhanalakshmi Building, Cottenpet, Bengaluru 560 053",
+            address: "#459, Dhanalakshmi Building, \nCottenpet, Bengaluru 560 053",
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747250831535!5m2!1sen!2sin"
@@ -372,15 +373,15 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Vistas, #1, Palace Cross Road, Bengaluru 560 020",
-            phone: "+91 80-2334 4090, +91 96069 88123",
+            address: "VST Vistas, #1, Palace Cross Road, \nBengaluru 560 020",
+            phone: ["+91 80-2334 4090", "+91 96069 88123"],
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62194.590892308755!2d77.5057122!3d13.0253581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17efe70fb545%3A0x90e3a1c2447e9a93!2sVST%20CENTRAL%20KIA%20-%20PALACE%20CROSS%20ROAD!5e0!3m2!1sen!2sin!4v1747219026615!5m2!1sen!2sin"
           },
         ],
         service: [
           {
-            address: "Survey #69/2, Mallasandra Village, Bagalagunte, Hesaraghatta Main Road, 8th Mile, T. Dasarahalli, Bengaluru 560 057",
+            address: "Survey #69/2, Mallasandra Village, \nBagalagunte, Hesaraghatta Main Road, \n8th Mile, T. Dasarahalli, \nBengaluru 560 057",
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62187.55965849731!2d77.442047!3d13.0533288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d9f9c73cbf5%3A0x8e59bd0957a66f2e!2sKia%20Car%20Service%20-%20Vst%20Central%20Kia%20-%20Hesaraghatta!5e0!3m2!1sen!2sin!4v1747223252452!5m2!1sen!2sin"
@@ -388,15 +389,15 @@ const slides: SlideData[] = [
         ],
         "sales & service": [
           {
-            address: "#48, Industrial Suburb, Opp. Yeshwantpur Railway Station, Bengaluru 560 022",
+            address: "#48, Industrial Suburb, Opp. \nYeshwantpur Railway Station, \nBengaluru 560 022",
             phone: "+91 96069 88123",
             email: ["salesheadypr.bly@vstcentral-kia.in", "servicemanager.slm@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d3c841e2cb3%3A0x89f4847827ee7596!2sVST%20CENTRAL%20KIA%20-%20YESHWANTHPUR!5e0!3m2!1sen!2sin!4v1747223315800!5m2!1sen!2sin"
-          }
+          },
         ],
         "Pre-Owned Cars": [
           {
-            address: "VST Central Kia-CPO, CPS Tower Building, #145, Kempegowda Layout, Laggere Ring Road, Near Dhanushri Cycles, Bengaluru 560 058",
+            address: "VST Central Kia-CPO, CPS Tower Building, \n#145, Kempegowda Layout, Laggere Ring \nRoad, Near Dhanushri Cycles, \nBengaluru 560 058",
             phone: "+91 96069 88134",
             email: ["managercpo.bly@vstcentral-kia.in", "servicemanager.vrl@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df363fe3c01%3A0x6cd47089f0ab9064!2sVST%20CENTRAL%20KIA%20CERTIFIED%20PRE%20-%20OWNED%20CARS!5e0!3m2!1sen!2sin!4v1747223390388!5m2!1sen!2sin"
@@ -406,25 +407,25 @@ const slides: SlideData[] = [
       "Chennai": {
         sales: [
           {
-            address: "Old #182, New #237, Anna Salai, Chennai 600 006",
+            address: "Old #182, New #237, Anna Salai, \nChennai 600 006",
             phone: "+91 90872 11113",
             email: "salesmanagerch@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31093.718074797078!2d80.2325632!3d13.0538196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b9e01bc651%3A0xb1106c2bec1384e2!2sKIA%20Showroom%20Chennai%20-%20VST%20Central!5e0!3m2!1sen!2sin!4v1747223435630!5m2!1sen!2sin"
           },
           {
-            address: "#204/187, GR Plaza, North Usman Road, T. Nagar, Chennai 600 017",
+            address: "#204/187, GR Plaza, North Usman Road, \nT. Nagar, Chennai 600 017",
             phone: "+91 99400 92010",
             email: "salesmanagertn@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.3750756576278!2d80.232498!3d13.0515692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670023549f87%3A0xd1302492f99f3c74!2sKia%20Showroom%20T%20Nagar%20-%20VST%20Kia!5e0!3m2!1sen!2sin!4v1747223565704!5m2!1sen!2sin"
           },
           {
-            address: "#155, Swamith Ashithanar Nagar, GNT Road, Thandalkalani, Pulicat, Chennai 600 066",
+            address: "#155, Swamith Ashithanar Nagar, GNT \nRoad, Thandalkalani, Pulicat, \nChennai 600 066",
             phone: "+91 73050 32085",
             email: "salesmanagerthk@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1942.4034805389128!2d80.1949667!3d13.1745681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527b573076743f%3A0x4df8fecc75acdc92!2sVST%20CENTRAL%20-%20KIA%20REDHILLS%20SHOWROOM!5e0!3m2!1sen!2sin!4v1747223606109!5m2!1sen!2sin"
           },
           {
-            address: "#548/6, Kattukottai, Nattamangalam, Salem 636 010",
+            address: "#548/6, Kattukottai, Nattamangalam, \nSalem 636 010",
             phone: "+91 93848 77744",
             email: "salesmanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747233866731!5m2!1sen!2sin"
@@ -432,28 +433,28 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "#57, Arcot Road, Virugavayapuram, Bharani Colony, Saligramam, Chennai 600 093",
-            phone: "+91 90872 11113, +91 89255 03894",
+            address: "#57, Arcot Road, Virugavayapuram, \nBharani Colony, Saligramam, \nChennai 600 093",
+            phone: ["+91 90872 11113", "+91 89255 03894"],
             email: "servicemanagerch@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124378.72962695648!2d80.0696671!3d13.0461534!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526720103596eb%3A0x89ee02c1c5997cb0!2sKia%20Car%20Service%20-%20VST%20Central%2C%20Chennai!5e0!3m2!1sen!2sin!4v1747234107357!5m2!1sen!2sin"
           },
         ],
         "sales & service": [
           {
-            address: "#250-2, Meyyanur Road, Ashokapuram Post, Salem 636 004",
-            phone: "+91 81488 11113, +91 93848 77744, +91 93840 84430",
+            address: "#250-2, Meyyanur Road, Ashokapuram \nPost, Salem 636 004",
+            phone: ["+91 81488 11113", "+91 93848 77744", "+91 93840 84430"],
             email: "servicemanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31258.594118025143!2d78.0997807!3d11.6714159!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf06a1e618371%3A0xd149fb0b495752ca!2sKia%20Car%20Showroom%20-%20Vst%20Kia%2C%20Meyyanur%20Main%20Road!5e0!3m2!1sen!2sin!4v1747234237365!5m2!1sen!2sin"
           },
           {
-            address: "#177, Kodipali, Thoppali Agrahara Village, Hosur 635 109",
-            phone: "+91 93449 04681, +91 78458 05068, +91 78458 05069",
+            address: "#177, Kodipali, Thoppali Agrahara Village, \nHosur 635 109",
+            phone: ["+91 93449 04681", "+91 78458 05068", "+91 78458 05069"],
             email: "salesmanagerhsr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.934187484988!2d77.8746835!3d12.717716399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae776f63338a5b%3A0xaf507e08bea31c5!2sKia%20Car%20Showroom%20-%20Vst%20Central%2C%20Kumudepalli!5e0!3m2!1sen!2sin!4v1747234328566!5m2!1sen!2sin"
           },
           {
-            address: "No. 43, Katpadi Road, Gandhinagar, Vellore 632 006",
-            phone: "+91 90872 11113, +91 93840 96077",
+            address: "No. 43, Katpadi Road, Gandhinagar, \nVellore 632 006",
+            phone: ["+91 90872 11113", "+91 93840 96077"],
             email: ["servicemanagervlr@vstcentral-kia.in", "salesmanagervlr@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.318270535633!2d79.1367769!3d12.9514746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad393de10f1b39%3A0xee4f088f339b7d95!2sVST%20CENTRAL%20-%20KIA%20SHOWROOM%20%26%20WORKSHOP!5e0!3m2!1sen!2sin!4v1747234422327!5m2!1sen!2sin"
           }
@@ -502,7 +503,7 @@ const slides: SlideData[] = [
             address: "By-Pass Road, Poonamallee, Chennai - 600 056.",
             phone: " +91 98403 76339 , +91 73974 92943 , +91 89259 95593 , +91 98401 54057",
             email: "  cvd.pnmi@vstmotors.com",
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747282040407!5m2!1sen!2sin"
           },
           {
             address: "#43, Katpadi Road, Gandhinagar, Vellore - 632 006.",
@@ -514,25 +515,25 @@ const slides: SlideData[] = [
             address: "#10/3, Anai Goudampatti, Opp to Govt. Engineering College, Omalur Taluk, Salem - 636 011.",
             phone: "+91 80560 90333, +91 94432 39806, +91 73581 09129",
             email: ["slm@vstmotors.com", "wm.slm@vstmotors.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747280383602!5m2!1sen!2sin"
           },
           {
             address: "#42, Mambalapattu Road, Villupuram - 605 602.",
             phone: "+91 98424 10813 , +91 81487 11014",
             email: ["wm.vpm@vstmotors.com", "acetl.vpm@vstmotors.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+      map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747280383602!5m2!1sen!2sin"
           },
           {
             address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
             phone: "+91 98424 10813 , +91 99943 67350, +91 96007 99947 , +91 99943 67310",
             email: ["comm.cud@vstmotors.com", "cudserv@vstmotors.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3903.5280666491453!2d79.4756295!3d11.9378961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a535700220f15e3%3A0xea410901d283e890!2sTATA%20MOTORS%20PVT%20LTD%20%26VST!5e0!3m2!1sen!2sin!4v1747280567993!5m2!1sen!2sin"
           },
           {
             address: "#524/1, 525/1A, O. Karapalli Village, Onnalvadi Post, Hosur - 635 109",
             phone: " +91 94437 47392 , +91 73581 09129 , +91 81488 54889 , +91 98424 10825",
             email: [" hosur@vstmotors.com" , "wm.hosur@vstmotors.com"],
-            map: "https://maps.googleapis.com/maps/api/staticmap?center=Hesaraghatta+Main+Road,+Bengaluru&zoom=15&size=300x120&markers=color:blue%7Clabel:S%7CHesaraghatta+Main+Road,+Bengaluru"
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747280645745!5m2!1sen!2sin"
           },
         ],
          "spares & distribution": [
@@ -598,14 +599,14 @@ const slides: SlideData[] = [
             email: "sales.ckb@india-garage.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.921836472896!2d77.72855919999999!3d13.4171652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e59836e5f33f%3A0xa6cd6ee6f458d36b!2sMahindra%20Showroom%20-%20India%20Garage%20Chikkaballapur!5e0!3m2!1sen!2sin!4v1747212226477!5m2!1sen!2sin"
           },
-           {
+          {
             address: "BB Road, Opp. To Reliance Petrol Bunk,\nChikkaballapur - 560 101.",
             phone: "+91 88844 98958",
             email: "prosper.cbkr@india-garage.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15522.874073908808!2d77.7208083!3d13.4297424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e5593eb46f03%3A0x9ee339a0dd9e6ee1!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747250842932!5m2!1sen!2sin"
           },
           {
-            address: "#344/60, Chikkagollarahatti, \nNear Embosy School, Magadi Main Road, \nBengaluru - 560 091.",
+            address: "#344/60, Chikkagollarahatti, \nNear Embassy School, Magadi Main Road, \nBengaluru - 560 091.",
             phone: "+91 88844 98958",
             email: "sales.mgd@india-garage.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62203.047345636965!2d77.3926228!3d12.9916394!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3bc02d8ac7a7%3A0x67a3e32fa9009175!2sMahindra%20India%20Garage%20-%20Commercial%2C%20Magadi%20Road!5e0!3m2!1sen!2sin!4v1747212402454!5m2!1sen!2sin"
@@ -735,7 +736,7 @@ const slides: SlideData[] = [
       sales: {
         sales: [
           {
-            address: "VW Palace Cross #1, Palace Cross Road, Bengaluru - 560 020.",
+            address: "VW Palace Cross #1, Palace Cross Road, \nBengaluru - 560 020.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.600293612716!2d77.5856699!3d12.9973978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16471a670e77%3A0xa3b3b7d52a5f3498!2sVolkswagen%20Palace%20Cross%20Bangalore%20-%20Showroom!5e0!3m2!1sen!2sin!4v1747227805300!5m2!1sen!2sin"
@@ -743,13 +744,13 @@ const slides: SlideData[] = [
         ],
         service: [
           {
-            address: "VW Rajajinagar, #1/1 Kodi Street, 4th Main Rajajinagar, Next to Venus Int School, Bengaluru - 560 010.",
+            address: "VW Rajajinagar, #1/1 Kodi Street, 4th \nMain Rajajinagar, Next to Venus Int \nSchool, Bengaluru - 560 010.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8569045788895!2d77.5604245!3d12.981002799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df640156a91%3A0x325ed398bf8b8612!2sVolkswagen%20Palace%20Cross%20-%20Rajajinager!5e0!3m2!1sen!2sin!4v1747227847236!5m2!1sen!2sin"
           },
           {
-            address: "VW Palace Cross, #69/2, Begalagunte, Hesarghatta Main Road, 8th Mile, T.Dasarahalli, Bengaluru - 560 057.",
+            address: "VW Palace Cross, #69/2, Begalagunte, \nHesarghatta Main Road, 8th Mile, \nT.Dasarahalli, Bengaluru - 560 057.",
             phone: "+91 96866 01249",
             email: "crhhsrg@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.720216998035!2d77.5078525!3d13.053472600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae232cd37c0e0d%3A0x1a89d7aeb69240c1!2sVolkswagen%20Palace%20Cross%20Hesargatta%20-%20Volkswagen!5e0!3m2!1sen!2sin!4v1747227892497!5m2!1sen!2sin"
@@ -757,7 +758,7 @@ const slides: SlideData[] = [
         ],
         "sales & service": [
           {
-            address: "VW Mysore Road, #26/2 & 27/2, Kenchanahalli Village, Kengeri Hobli, Mysore Road, Bengaluru - 560 057.",
+            address: "VW Mysore Road, #26/2 & 27/2, \nKenchanahalli Village, Kengeri Hobli, \nMysore Road, Bengaluru - 560 057.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.3333016634388!2d77.5030693!3d12.9291368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ef00026b7f3%3A0xc01a322d21f9de9b!2sVolkswagen%20Mysore%20Road%20-%20Sales%20%26%20Service!5e0!3m2!1sen!2sin!4v1747227650015!5m2!1sen!2sin"
@@ -782,19 +783,19 @@ const slides: SlideData[] = [
       India: {
         sales: [
           {
-            address: "#8, KSCMF Building, Cunningham Road Bengaluru - 560 058.",
+            address: "#8, KSCMF Building, Cunningham Road \nBengaluru - 560 058.",
             phone: "+91 96060 74777",
             email: " info@vstbyd.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.9654766732485!2d77.593135!3d12.9895086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1723bff92db9%3A0xee980fcacf73499c!2sVST%20BYD%20Bangalore%20-%20Cunningham%20Road!5e0!3m2!1sen!2sin!4v1747227934358!5m2!1sen!2sin"
           },
           {
-            address: "GKS Tower #40 & 41, sy:33, Hosur Main Road, Hongasandra Metro Rail Stn, Bommanahalli, Bengaluru - 560 058.",
+            address: "GKS Tower #40 & 41, sy:33, Hosur Main \nRoad, Hongasandra Metro Rail Stn, \nBommanahalli, Bengaluru - 560 058.",
             phone: "+91 96060 74777.",
             email: "info@vstbyd.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.2865345441438!2d77.6334927!3d12.8983231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1574556b472b%3A0x40ce1c0dc073c801!2sVST%20BYD%20Showroom%20-%20Hosur%20Road!5e0!3m2!1sen!2sin!4v1747227978547!5m2!1sen!2sin"
           },
           {
-            address: "#38/5A Hyland Industrial Estate, 11th KM, Hosur Road, Bommanahalli,Bengaluru - 560 068.",
+            address: "#38/5A Hyland Industrial Estate, 11th \nKM, Hosur Road, \nBommanahalli,Bengaluru - 560 068.",
             phone: "+91 96060 74777.",
             email: "info@vstbyd.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.149986869151!2d77.6354502!3d12.8980755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae153776c653cf%3A0xe7341df12627565a!2sVST%20BYD%20-%20Service!5e0!3m2!1sen!2sin!4v1747228024967!5m2!1sen!2sin"
@@ -819,55 +820,63 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "#6, St. John's Road, Ulsoor, Bengaluru - 560 042.",
-            phone: "+91 80 2559 1999, +91 94498 07080",
+            address: "M/S. City Honda, #6, St. John's Road, \nUlsoor, Bengaluru - 560 042.",
+            phone: ["+91 80 2513 9199, +91 94808 12350"],
             email: "sales.ho@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31102.186058434843!2d77.5926498!3d12.9863493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20John%27s%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1747248446606!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6159692!3d12.9860895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20Johns%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1711542825613!5m2!1sen!2sin"
           },
           {
-            address: "#202,7th Main, HRBR Layout, Kalyan Nagar, Bengaluru - 560 043.",
-            phone: "+91 80 2542 2810, +91 80 2542 2811, +91 94498 07080",
+            address: "#202,7th Main, HRBR Layout, Kalyan \nNagar, Bengaluru - 560 043.",
+            phone: ["+91 80 2542 2810", "+91 80 2542 2811", "+91 98459 41305"],
             email: "sales.hrbr@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d77.6431027!3d13.015952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1728131c0e23%3A0xa06978a43d8ffa58!2sCity%20Honda%20Sales%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
           },
           {
-            address: "#143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru - 560 043.",
-            phone: "+91 80 4333 3330, +91 88844 34200",
+            address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 027.",
+            phone: ["+91 80 4333 3330", "+91 88844 34200"],
             email: "sales.lbg@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d77.5865653!3d12.9613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156978155c3f%3A0xead9a19c3f1e2497!2sCity%20Honda%20Sales%20Lalbagh%20Road!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
           }
         ],
         "service and parts": [
           {
-            address: "#113, 1sr Main Road, Lingarajapuram, Bengaluru - 560 084.",
-            phone: "+91 80 2549 6561, +91 94808 12384",
+            address: "#113, 1sr Main Road, Lingarajapuram, \nBengaluru - 560 084.",
+            phone: ["+91 80 2549 6561", "+91 94808 12384"],
             email: "service.lrp@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.4260254411024!2d77.6207003!3d13.0085203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16e7556e6ef3%3A0xf689f35e9637d316!2sCity%20Honda%20Service%20Lingarajapuram!5e0!3m2!1sen!2sin!4v1747228353651!5m2!1sen!2sin"
           },
           {
-            address: "Head Workshop, No.6, St. John's Road, Ulsoor,  Bengaluru - 560 042.",
-            phone: "+91 80 2513 9199, +91 94498 67080",
+            address: "Head Workshop, No.6, St. John's Road, \nUlsoor,  Bengaluru - 560 042.",
+            phone: ["+91 80 2513 9199", "+91 94498 67080"],
             email: "service.ho@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6160922!3d12.986102700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1750ec0c4ff3%3A0xf64250c532b819ee!2sCity%20Honda%20Service%20St%20Johns%20Road!5e0!3m2!1sen!2sin!4v1747228507673!5m2!1sen!2sin"
           },
           {
-            address: "No. 24, 25, 30 and 31, 40 Ft Road, PNS Layout, Subbannapalya, Kalyan Nagar, Bengalur - 560 043.",
-            phone: "+91 80 2542 2813, +91 76193 95014",
+            address: "No. 24, 25, 30 and 31, 40 Ft Road, PNS \nLayout, Subbannapalya, Kalyan Nagar, \nBengalur - 560 043.",
+            phone: ["+91 80 2542 2813", "+91 76193 95014"],
             email: "service.hrbr@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.91462263749514!2d77.6412537!3d13.0154752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1727eef1d2ed%3A0xe882785e66ab71e1!2sCity%20Honda%20Service%20HRBR%20Layout%20-Kalyan%20Nagar!5e0!3m2!1sen!2sin!4v1747228536688!5m2!1sen!2sin"
           },
           {
-            address: "#143, Lalbagh Road, Near Subbaiah Circle, Opp, GST Seva Kendra, Bengaluru - 560 027.",
-            phone: "+91 80 4333 3330, +91 94808 12380",
+            address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 027.",
+            phone: ["+91 80 4333 3330", "+91 94808 12380"],
             email: "service.ibg@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.161242209912!2d77.58864729999999!3d12.961532099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d9607610e3%3A0x379b9710e881c087!2sCITY%20HONDA%20SERVICE%20LALBAGH%20ROAD!5e0!3m2!1sen!2sin!4v1747228564023!5m2!1sen!2sin"
           },
           {
-            address: "#42/2, Ramamurthynagar Main Road, Ramamurthy Nagar, Bengaluru - 560 016.",
-            phone: "+91 80 4094 4950, +91 94808 12390",
+            address: "#40/2, Ramamurthynagar Main Road, \nRamamurthy Nagar, Bengaluru - 560 016.",
+            phone: ["+91 80 4094 4950", "+91 94808 12390"],
             email: "service.rmn@cityhonda.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.357387289643!2d77.66433099999999!3d13.012898499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae112887e697bf%3A0x46b5e5388f798533!2sCity%20Honda%20Service%20Ramamurthy%20Nagar!5e0!3m2!1sen!2sin!4v1747228592460!5m2!1sen!2sin"
           }
+        ],
+        "spares warehouse": [
+          {
+            address: "#113, 1st Main Road, Lingarajpuram, \nBengaluru - 560 084.",
+            phone: "+91 80 2549 6561, +91 94483 97794",
+            email: ["warehouse@cityhonda.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.4260254411024!2d77.6207003!3d13.0085203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16e7556e6ef3%3A0xf689f35e9637d316!2sCity%20Honda%20Service%20Lingarajapuram!5e0!3m2!1sen!2sin!4v1747278984074!5m2!1sen!2sin"
+          },
         ]
       },
     }
@@ -941,7 +950,7 @@ const FranchiseSlider = () => {
   const currentLocations = slides[currentSlide].locations;
 
   return (
-    <div className="relative w-full min-h-screen  lg:mt-[0rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen  lg:mt-[-3rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
@@ -967,7 +976,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 w-[50%] lg:w-[92%] h-[90%] rounded-br-[120px] overflow-hidden"
+                className="absolute left-0 w-[50%] lg:w-[92%] h-[95%] rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
@@ -1188,10 +1197,20 @@ const FranchiseSlider = () => {
                                   {sale.address}<br />
                                   {Array.isArray(sale.phone) ? (
                                     sale.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {sale.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {sale.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(sale.email) ? (
                                     sale.email.map((e, i) => (
@@ -1230,10 +1249,20 @@ const FranchiseSlider = () => {
                                   {service.address}<br />
                                   {Array.isArray(service.phone) ? (
                                     service.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {service.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {service.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(service.email) ? (
                                     service.email.map((e, i) => (
@@ -1261,81 +1290,109 @@ const FranchiseSlider = () => {
                           </div>
                         )}
                         {/* Sales and Service */}
-                        {location["sales & service"] && location["sales & service"].length > 0 && location["sales & service"].map((salesService, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="hide-scrollbar mb-6">
+                        {location["sales & service"] && location["sales & service"].length > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
                               Sales & Service:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {salesService.address}<br />
-                              {Array.isArray(salesService.phone) ? (
-                                salesService.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {salesService.phone}</div>
-                              )}
-                              {Array.isArray(salesService.email) ? (
-                                salesService.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {salesService.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Sales & Service Location Map ${idx + 1}`}
-                                src={salesService.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location["sales & service"].map((salesService, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {salesService.address}<br />
+                                  {Array.isArray(salesService.phone) ? (
+                                    salesService.phone.map((p, i) => (
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {salesService.phone}
+                                    </div>
+                                  )}
+                                  {Array.isArray(salesService.email) ? (
+                                    salesService.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {salesService.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales & Service Location Map ${idx + 1}`}
+                                    src={salesService.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
-                        {/* Sales and Distribution */}
-                        {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
-                          <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="hide-scrollbar mb-6">
+                        )}
+                        {/* Sales, Service & Parts distribution */}
+                        {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && (
+                          <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Sales, Service & Parts Distribution {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 1 ? `#${idx + 1}` : ''}:
+                              Sales, Service & Parts Distribution:
                             </div>
-                            <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                              {salesDist.address}<br />
-                              {Array.isArray(salesDist.phone) ? (
-                                salesDist.phone.map((p, i) => (
-                                  <div key={i} className="mt-1">📞 {p}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">📞 {salesDist.phone}</div>
-                              )}
-                              {Array.isArray(salesDist.email) ? (
-                                salesDist.email.map((e, i) => (
-                                  <div key={i} className="mt-1">✉️ {e}</div>
-                                ))
-                              ) : (
-                                <div className="mt-1">✉️ {salesDist.email}</div>
-                              )}
-                            </div>
-                            <div className="rounded-lg overflow-hidden w-full">
-                              <iframe
-                                title={`Sales & Distribution Location Map ${idx + 1}`}
-                                src={salesDist.map}
-                                width="100%"
-                                height="280"
-                                className="rounded-lg w-full"
-                                style={{ border: 0 }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
+                            {location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="mb-6">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {salesDist.address}<br />
+                                  {Array.isArray(salesDist.phone) ? (
+                                    salesDist.phone.map((p, i) => (
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {salesDist.phone}
+                                    </div>
+                                  )}
+                                  {Array.isArray(salesDist.email) ? (
+                                    salesDist.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {salesDist.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales & Distribution Location Map ${idx + 1}`}
+                                    src={salesDist.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        )}
                         {/* Pre-Owned Cars */}
                         {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 0 && (
                           <div className="hide-scrollbar mb-6">
@@ -1348,10 +1405,20 @@ const FranchiseSlider = () => {
                                   {preOwned.address}<br />
                                   {Array.isArray(preOwned.phone) ? (
                                     preOwned.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {preOwned.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {preOwned.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(preOwned.email) ? (
                                     preOwned.email.map((e, i) => (
@@ -1390,10 +1457,20 @@ const FranchiseSlider = () => {
                                   {serviceParts.address}<br />
                                   {Array.isArray(serviceParts.phone) ? (
                                     serviceParts.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {serviceParts.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {serviceParts.phone}
+                                    </div>
                                   )}
                                   {Array.isArray(serviceParts.email) ? (
                                     serviceParts.email.map((e, i) => (
@@ -1420,35 +1497,47 @@ const FranchiseSlider = () => {
                             ))}
                           </div>
                         )}
-                        {/* Spares & Distribution */}
-                        {location["spares & distribution"] && location["spares & distribution"].length > 0 && (
+
+                        {/* Spares Warehouse */}
+                        {location["spares warehouse"] && (location["spares warehouse"]?.length ?? 0) > 0 && (
                           <div className="hide-scrollbar mb-6">
                             <div className="text-white font-bold text-xl mb-2">
-                              Spares & Distribution:
+                              Spares Warehouse:
                             </div>
-                            {location["spares & distribution"].map((sparesDist, idx) => (
-                              <div key={`${currentSlide}-${locationKey}-sparesdist-${idx}`} className="mb-6">
+                            {location["spares warehouse"].map((spares, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-spareswarehouse-${idx}`} className="mb-6">
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {sparesDist.address}<br />
-                                  {Array.isArray(sparesDist.phone) ? (
-                                    sparesDist.phone.map((p, i) => (
-                                      <div key={i} className="mt-1">📞 {p}</div>
+                                  {spares.address}<br />
+                                  {Array.isArray(spares.phone) ? (
+                                    spares.phone.map((p, i) => (
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">📞 {sparesDist.phone}</div>
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {spares.phone}
+                                    </div>
                                   )}
-                                  {Array.isArray(sparesDist.email) ? (
-                                    sparesDist.email.map((e, i) => (
+                                  {Array.isArray(spares.email) ? (
+                                    spares.email.map((e, i) => (
                                       <div key={i} className="mt-1">✉️ {e}</div>
                                     ))
                                   ) : (
-                                    <div className="mt-1">✉️ {sparesDist.email}</div>
+                                    <div className="mt-1">✉️ {spares.email}</div>
                                   )}
                                 </div>
                                 <div className="rounded-lg overflow-hidden w-full">
                                   <iframe
-                                    title={`Spares & Distribution Map ${idx + 1}`}
-                                    src={sparesDist.map}
+
+                                    title={`Spares Warehouse Map ${idx + 1}`}
+                                    src={spares.map}
                                     width="100%"
                                     height="280"
                                     className="rounded-lg w-full"

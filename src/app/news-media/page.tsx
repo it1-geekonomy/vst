@@ -44,7 +44,7 @@ export default function NewsMedia() {
 
       // title: "We Are Now Open",
       text: "Exciting times ahead! Introducing our stunning new Porsche showroom in Whitefield.",
-      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      link: "https://www.linkedin.com/posts/motoring-trends_vstsupercars-porsche-porscheshowroom-activity-7307824403147321344-H_QF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
      
     },
     {
@@ -52,15 +52,15 @@ export default function NewsMedia() {
       alt: "Latesaat Models",
       // title: "We Are Now Open",
       text: "A special moment from our Chennai Finance Team, who surprised our Chairman, Arun Surendra, with a thoughtful token of appreciation.",
-      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      link: "  https://www.linkedin.com/posts/vst-motors-ltd_teamappreciation-gratitude-dreamteam-activity-7321082890115510273-52SW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE",
      
     },
     {
       image: hcard3,
-      alt: "Latest Models",
+      alt: "Latestaa Models",
       // title: "We Are Now Open",
       text: "As a long-standing Ducati dealer partner at VST Group",
-      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      link: "https://www.linkedin.com/posts/vst-motors-ltd_ducatiindia-ducaticommunity-vstgroup-activity-7201814884903235585-li-1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE",
      
     },
     {
@@ -68,7 +68,7 @@ export default function NewsMedia() {
       alt: "Latest Models",
       // title: "We Are Now Open",
       text: "Another milestone on the road to excellence!",
-      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      link: " https://www.linkedin.com/posts/vst-motors-ltd_globalporschemomentaward-porsche-globalrecognition-activity-7313130881051697152-J3cW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
      
     },
 
@@ -88,7 +88,7 @@ export default function NewsMedia() {
     },
     {
       image: imgcar,
-      alt: "Team Photo",
+      alt: "Teams Photo",
       title: "Meet Our Team",
       text: "The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz",
       link: "https://www.linkedin.com/posts/vst-motors-ltd_bharatmobility2025-mercedesbenzindia-porscheindia-activity-7287775917416792067-Eaki?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
@@ -205,11 +205,11 @@ export default function NewsMedia() {
                                   src={card.image} 
                                   alt={card.alt} 
                                   fill
-                                  className="object-cover pr-38 py-1"
+                                  className="object-cover w-full h-full"
                                 />
                               </div>
                               <div className="w-full pt-3">
-                                <p className="text-medium font-semibold text-white leading-tight text-center w-full px-2">
+                                <p className="text-medium font-normal text-white leading-tight text-center w-full px-2">
                                   {card.text}
                                 </p>
                               </div>
@@ -229,11 +229,11 @@ export default function NewsMedia() {
                                   src={headlines2[(index + 1) % headlines2.length].image} 
                                   alt={headlines2[(index + 1) % headlines2.length].alt} 
                                   fill
-                                  className="object-cover pr-38 py-1"
+                                  className="object-cover w-full h-full"
                                 />
                               </div>
                               <div className="w-full pt-3">
-                                <p className="text-medium font-semibold text-white leading-tight text-center w-full px-2">
+                                <p className="text-medium font-normal text-white leading-tight text-center w-full px-2">
                                   {headlines2[(index + 1) % headlines2.length].text}
                                 </p>
                               </div>
