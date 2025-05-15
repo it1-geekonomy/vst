@@ -318,7 +318,7 @@ const slides: SlideData[] = [
             address: "VST Avventura Private Limited, \n1st Phase Plot #2E4, Whitefield Main Road, \nDevasandra Industrial Estate, Mahadevapura, \nBengaluru 560 048",
             phone: "+91 99024 88899",
             email: "info@vstavventura.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62201.86504418537!2d77.635414!3d12.9963588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747218674781!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.616039076196!2d77.701408!3d12.996392400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1106b7c2cac1%3A0x38325cbf53b042a9!2sVST%20Maserati%20Service!5e0!3m2!1sen!2sin!4v1747290651611!5m2!1sen!2sin"
           }
         ]
       },
