@@ -543,7 +543,7 @@ const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15522.874073908808!2d77.7208083!3d13.4297424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e5593eb46f03%3A0x9ee339a0dd9e6ee1!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747250842932!5m2!1sen!2sin"
           },
           {
-            address: "#344/60, Chikkagollarahatti, \nNear Embosy School, Magadi Main Road, \nBengaluru - 560 091.",
+            address: "#344/60, Chikkagollarahatti, \nNear Embassy School, Magadi Main Road, \nBengaluru - 560 091.",
             phone: "+91 88844 98958",
             email: "sales.mgd@india-garage.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62203.047345636965!2d77.3926228!3d12.9916394!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3bc02d8ac7a7%3A0x67a3e32fa9009175!2sMahindra%20India%20Garage%20-%20Commercial%2C%20Magadi%20Road!5e0!3m2!1sen!2sin!4v1747212402454!5m2!1sen!2sin"
