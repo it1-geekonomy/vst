@@ -51,7 +51,7 @@ export default function NewsMedia() {
       image: hcard2,
       alt: "Latesaat Models",
       // title: "We Are Now Open",
-      text: "A special moment from our Chennai Finance Team, who surprised our Chairman, Arun Surendra, with a thoughtful token of appreciation.",
+      text: "A special moment from our Chennai finance team, who surprised our Chairman, Arun Surendra, with a thoughtful token of appreciation.",
       link: "  https://www.linkedin.com/posts/vst-motors-ltd_teamappreciation-gratitude-dreamteam-activity-7321082890115510273-52SW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE",
      
     },
