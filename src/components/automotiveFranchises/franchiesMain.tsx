@@ -64,7 +64,7 @@ import JaguarIcon from "@/app/public/faranchies/jaguarIcon";
 interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
-  brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD";
+  brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD" | "ducati" | "mahindra";
   bgColor: {
     from: string;
     to: string;
@@ -143,14 +143,7 @@ const slides: SlideData[] = [
             phone: " +91 44-6649 8080",
             email: ["info.citysales@titaniummotors.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62186.793014227944!2d80.2065924!3d13.056375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526617129cac13%3A0x3684f8447a03532e!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747217306800!5m2!1sen!2sin"
-          },
-
-          {
-            address: "#148 K, Old Mahabalipuram Road,\nOkkiyam, Thoraipakkam, \n Chennai-600 096.",
-            phone: "+91 44-6649 8181",
-            email: "info.chennaisales@titaniummotors.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747217481341!5m2!1sen!2sin"
-          },
+          }
         ],
         service: [
           {
@@ -192,7 +185,7 @@ const slides: SlideData[] = [
             phone: "+91 96000 53000",
             email: " info@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217780062!5m2!1sen!2sin"
-          },
+          }
         ],
         "sales & service": [
           {
@@ -200,7 +193,7 @@ const slides: SlideData[] = [
             phone: "+91 44-6636 1373, +91 44-6636 1363",
             email: "crs.chn@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217817663!5m2!1sen!2sin"
-          },
+          }
         ]
       },
       Coimbatore: {
@@ -210,7 +203,7 @@ const slides: SlideData[] = [
             phone: "+91 422-452 4444",
             email: ["info.cbe@vstgrandeur.com", "workshop.cbe@vstgrandeur.com"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217854171!5m2!1sen!2sin"
-          },
+          }
         ]
       }
     }
@@ -235,7 +228,7 @@ const slides: SlideData[] = [
             phone: "+91 96000 53000",
             email: " info@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217925445!5m2!1sen!2sin"
-          },
+          }
         ],
         "sales & service": [
           {
@@ -243,7 +236,7 @@ const slides: SlideData[] = [
             phone: "+91 44-6636 1373, +91 44-6636 1363",
             email: "crs.chn@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217959401!5m2!1sen!2sin"
-          },
+          }
         ]
       },
       Coimbatore: {
@@ -253,7 +246,7 @@ const slides: SlideData[] = [
             phone: "+91 422-452 4444",
             email: [" info.cbe@vstgrandeur.com", "workshop.cbe@vstgrandeur.com"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217999025!5m2!1sen!2sin"
-          },
+          }
         ]
       }
     }
@@ -278,7 +271,7 @@ const slides: SlideData[] = [
             phone: "+91 63641 02911",
             email: "info@porsche-bengaluru.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6105688613943!2d77.5848628!3d12.9967417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17fe9bf1e903%3A0x1e8042f60610fb34!2sPorsche%20Showroom%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218092398!5m2!1sen!2sin"
-          },
+          }
         ],
         service: [
           {
@@ -286,7 +279,7 @@ const slides: SlideData[] = [
             phone: "+91 63641 02911",
             email: "info@porsche-bengaluru.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6234932445195!2d77.7013255!3d12.995916399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1581493fbbc5%3A0xf725d431b45ab6f7!2sPorsche%20Centre%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218158568!5m2!1sen!2sin"
-          },
+          }
         ]
       },
     }
@@ -311,7 +304,7 @@ const slides: SlideData[] = [
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"
-          },
+          }
         ],
         service: [
           {
@@ -344,7 +337,7 @@ const slides: SlideData[] = [
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747251086612!5m2!1sen!2sin"
-          },
+          }
         ],
         service: [
           {
@@ -352,7 +345,7 @@ const slides: SlideData[] = [
             phone: "+91 72598 36655",
             email: "info@vstducati.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747250831535!5m2!1sen!2sin"
-          },
+          }
         ]
       },
     }
@@ -377,7 +370,7 @@ const slides: SlideData[] = [
             phone: ["+91 80-2334 4090", "+91 96069 88123"],
             email: "salesmanagerpcr.blr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62194.590892308755!2d77.5057122!3d13.0253581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17efe70fb545%3A0x90e3a1c2447e9a93!2sVST%20CENTRAL%20KIA%20-%20PALACE%20CROSS%20ROAD!5e0!3m2!1sen!2sin!4v1747219026615!5m2!1sen!2sin"
-          },
+          }
         ],
         service: [
           {
@@ -385,7 +378,7 @@ const slides: SlideData[] = [
             phone: "+91 96066 33425",
             email: "servicemanagerhsrg.blr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62187.55965849731!2d77.442047!3d13.0533288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d9f9c73cbf5%3A0x8e59bd0957a66f2e!2sKia%20Car%20Service%20-%20Vst%20Central%20Kia%20-%20Hesaraghatta!5e0!3m2!1sen!2sin!4v1747223252452!5m2!1sen!2sin"
-          },
+          }
         ],
         "sales & service": [
           {
@@ -393,7 +386,7 @@ const slides: SlideData[] = [
             phone: "+91 96069 88123",
             email: ["salesheadypr.bly@vstcentral-kia.in", "servicemanager.slm@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248750.29439806883!2d77.3184282!3d13.0532734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d3c841e2cb3%3A0x89f4847827ee7596!2sVST%20CENTRAL%20KIA%20-%20YESHWANTHPUR!5e0!3m2!1sen!2sin!4v1747223315800!5m2!1sen!2sin"
-          },
+          }
         ],
         "Pre-Owned Cars": [
           {
@@ -438,8 +431,6 @@ const slides: SlideData[] = [
             email: "servicemanagerch@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124378.72962695648!2d80.0696671!3d13.0461534!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526720103596eb%3A0x89ee02c1c5997cb0!2sKia%20Car%20Service%20-%20VST%20Central%2C%20Chennai!5e0!3m2!1sen!2sin!4v1747234107357!5m2!1sen!2sin"
           },
-        ],
-        "sales & service": [
           {
             address: "#250-2, Meyyanur Road, Ashokapuram \nPost, Salem 636 004",
             phone: ["+91 81488 11113", "+91 93848 77744", "+91 93840 84430"],
@@ -506,64 +497,78 @@ const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747282040407!5m2!1sen!2sin"
           },
           {
-            address: "#43, Katpadi Road, Gandhinagar, Vellore - 632 006.",
-            phone: " +91 98423 15740, +91 98423 45530, +91 98424 10825",
-            email: "  vlr@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.316786294946!2d79.1369261!3d12.9515697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad4761940a1a59%3A0xf7813b55f7eaa1a2!2sTata%20Motors%20Commercial%20Vehicle%20Dealer%20-%20V%20S%20T%20Motors%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1747280810427!5m2!1sen!2sin"
-          },
-          {
-            address: "#10/3, Anai Goudampatti, Opp to Govt. Engineering College, Omalur Taluk, Salem - 636 011.",
-            phone: "+91 80560 90333, +91 94432 39806, +91 73581 09129",
-            email: ["slm@vstmotors.com", "wm.slm@vstmotors.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747280383602!5m2!1sen!2sin"
-          },
-          {
-            address: "#42, Mambalapattu Road, Villupuram - 605 602.",
-            phone: "+91 98424 10813 , +91 81487 11014",
-            email: ["wm.vpm@vstmotors.com", "acetl.vpm@vstmotors.com"],
-      map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747280383602!5m2!1sen!2sin"
-          },
-          {
-            address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
-            phone: "+91 98424 10813 , +91 99943 67350, +91 96007 99947 , +91 99943 67310",
-            email: ["comm.cud@vstmotors.com", "cudserv@vstmotors.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3903.5280666491453!2d79.4756295!3d11.9378961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a535700220f15e3%3A0xea410901d283e890!2sTATA%20MOTORS%20PVT%20LTD%20%26VST!5e0!3m2!1sen!2sin!4v1747280567993!5m2!1sen!2sin"
-          },
-          {
-            address: "#524/1, 525/1A, O. Karapalli Village, Onnalvadi Post, Hosur - 635 109",
-            phone: " +91 94437 47392 , +91 73581 09129 , +91 81488 54889 , +91 98424 10825",
-            email: [" hosur@vstmotors.com" , "wm.hosur@vstmotors.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747280645745!5m2!1sen!2sin"
-          },
+            address: "#237, Anna Salai,\n Chennai - 600 006",
+            phone: "+91 72598 36655",
+            email: "info.chennai@vstducati.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217780062!5m2!1sen!2sin"
+          }
         ],
-         "Sales, Service & Parts distribution": [
+        service: [
           {
-            address: "#235/1, Bypass Road, Poonamallee, Chennai - 600 056.",
-            phone: "+91 89255 20999 , +91 73388 59276",
-            email: "autoparts.pme@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124372.9908796914!2d79.9641057!3d13.0575572!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528bf72c7cf71d%3A0x775c66b74dcbbb9f!2sVST%20MOTORS%20P%20LTD%20PARTS%20DIVISION!5e0!3m2!1sen!2sin!4v1747282146552!5m2!1sen!2sin"
-          },
-          {
-            address: "Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
-            phone: "  +91 90039 32034 , +91 73584 44125",
-            email: "autopartssm.cud@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747281880853!5m2!1sen!2sin"
-          },
-          {
-            address: "#3/1, New By-pass Road, Chennai-Bengaluru Highway, Shenbakkam, Vellore - 632 008.",
-            phone: "+91 99406 00442 , +91 73584 44125",
-            email: "autopartssm.vlr@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747281880853!5m2!1sen!2sin"
-          },
+            address: "#267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056",
+            phone: "+91 72598 36655",
+            email: "service.chennai@vstducati.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217817663!5m2!1sen!2sin"
+          }
         ]
-      },
-
+      }
     }
   },
   {
     id: 9,
+    backgroundImage: kia,
+    brand: "kia",
+    bgColor: {
+      from: "#FDC756",
+      to: "rgba(253, 199, 86, 0.4)",
+    },
+    LogoComponent: KiaIcon,
+    header: "VST Central - KIA",
+    description: "VST Central is the authorized dealer for KIA in Bengaluru and Mysore, offering a comprehensive range of KIA vehicles along with exceptional sales and service support. With modern showrooms and state-of-the-art service centers, it ensures a premium automotive experience for all customers.",
+    learnMoreLink: "https://www.kia.com",
+    locations: {
+      Bangalore: {
+        sales: [
+          {
+            address: "#202, 7th Main, HRBR Layout,\n Kalyan Nagar, Bengaluru - 560 043",
+            phone: "+91 80 2542 2810",
+            email: "sales.bangalore@vstcentral.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d77.6431027!3d13.015952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1728131c0e23%3A0xa06978a43d8ffa58!2sCity%20Honda%20Sales%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+          }
+        ],
+        service: [
+          {
+            address: "#143, Lalbagh Road,\n Near Subbaiah Circle, Bengaluru - 560 027",
+            phone: "+91 80 4333 3330",
+            email: "service.bangalore@vstcentral.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d77.5865653!3d12.9613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156978155c3f%3A0xead9a19c3f1e2497!2sCity%20Honda%20Sales%20Lalbagh%20Road!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
+          }
+        ]
+      },
+      Mysore: {
+        sales: [
+          {
+            address: "#123, Hunsur Road,\n Mysore - 570 008",
+            phone: "+91 821 2345678",
+            email: "sales.mysore@vstcentral.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sVST%20Central%20KIA%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+          }
+        ],
+        service: [
+          {
+            address: "#456, Ring Road,\n Mysore - 570 008",
+            phone: "+91 821 2345679",
+            email: "service.mysore@vstcentral.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sVST%20Central%20KIA%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
+          }
+        ]
+      }
+    }
+  },
+  {
+    id: 10,
     backgroundImage: mahindra,
-    brand: "maserati",
+    brand: "mahindra",
     bgColor: {
       from: "#05F1F2",
       to: "rgba(5, 241, 242, 0.4)",
@@ -576,152 +581,43 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "Head Office, #1, VST Vistas, Palace \nCross Rd, Chakravarthy Layout, \nJayamahal, Bengaluru - 560 020.",
+            address: "Head Office, #1, VST Vistas, Palace Cross Rd,\n Chakravarthy Layout, Jayamahal,\n Bengaluru - 560 020",
             phone: "+91 88844 98957",
-            email: ["asm@india-garage.in", "jeevanprasad@india-garage.in", "kalyankumarp@india-garage.in"],
+            email: ["asm@india-garage.in", "jeevanprasad@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae163883f74f7d%3A0x4385e2cd7037dce4!2sMahindra%20India%20Garage%20-%20Palace%20Cross%20Road!5e0!3m2!1sen!2sin!4v1747211520843!5m2!1sen!2sin"
-          },
-          {
-            address: "#110/110/10, Lalbagh Main Road, \nNear Urvashi Theatre, Bengaluru - 560 043.",
-            phone: "+91 80502 90512",
-            email: ["sm.lalbagh@india-garage.in", "karthiks@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e77446713f%3A0x859a28fb0fd3f809!2sMahindra%20India%20Garage%20-%20Lal%20Bagh%20Road!5e0!3m2!1sen!2sin!4v1747211878143!5m2!1sen!2sin"
-          },
-          {
-            address: "#121/32, Danojipalya village, Tumkur \nRoad NH-4, Nelamangala, Bengaluru - \n562 123.",
-            phone: "+91 99001 59602",
-            email: "prosper.mdhalli@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124357.36647001428!2d77.2641574!3d13.0885559!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae25409b550d2b%3A0xe2e55c1338f935d1!2sMahindra%20India%20Garage%20-%20Commercial%20Showroom%20Nelamangala!5e0!3m2!1sen!2sin!4v1747212145609!5m2!1sen!2sin"
-          },
-          {
-            address: "CM Layout, BB Road, Old NH-7, \nChikkaballapur - 562 101.",
-            phone: "+91 74115 67633",
-            email: "sales.ckb@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.921836472896!2d77.72855919999999!3d13.4171652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e59836e5f33f%3A0xa6cd6ee6f458d36b!2sMahindra%20Showroom%20-%20India%20Garage%20Chikkaballapur!5e0!3m2!1sen!2sin!4v1747212226477!5m2!1sen!2sin"
-          },
-          {
-            address: "BB Road, Opp. To Reliance Petrol Bunk,\nChikkaballapur - 560 101.",
-            phone: "+91 88844 98958",
-            email: "prosper.cbkr@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15522.874073908808!2d77.7208083!3d13.4297424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e5593eb46f03%3A0x9ee339a0dd9e6ee1!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747250842932!5m2!1sen!2sin"
-          },
-          {
-            address: "#344/60, Chikkagollarahatti, \nNear Embassy School, Magadi Main Road, \nBengaluru - 560 091.",
-            phone: "+91 88844 98958",
-            email: "sales.mgd@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62203.047345636965!2d77.3926228!3d12.9916394!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3bc02d8ac7a7%3A0x67a3e32fa9009175!2sMahindra%20India%20Garage%20-%20Commercial%2C%20Magadi%20Road!5e0!3m2!1sen!2sin!4v1747212402454!5m2!1sen!2sin"
-          },
-          {
-            address: "Municipal #20/2, P Kalinga Rao Road, \nMission Road, Bengaluru - 560 027.",
-            phone: "+91 88844 98958",
-            email: "sales.mgd@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d496732.41440844996!2d77.401443!3d13.4295279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae154a34bb2109%3A0x4390fad42917eae2!2sMahindra%20India%20Garage%20-%20Commercial%20Mission%20Road!5e0!3m2!1sen!2sin!4v1747212494882!5m2!1sen!2sin"
-          },
-          {
-            address: "1st Main, Peenya 2nd Stage, Below \nMuthoot Finance, Bengaluru - 560 058.",
-            phone: "+91 88844 98958",
-            email: "prosper.pny@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.38306928848!2d77.5046024!3d13.0112605!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cf9a936cbc3%3A0x71d718e2c7baba6b!2sMahindra%20India%20Garage%20-%20Peenya%20Commercial%20Showroom!5e0!3m2!1sen!2sin!4v1747212588162!5m2!1sen!2sin"
-          },
-          {
-            address: "Mahindra Showroom, India Garage, \nOpp, Eid Ground, Maddur, Karnataka - \n571 428.",
-            phone: "+91 88844 98959",
-            email: "sales.maddur@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31158.41933595251!2d76.8878506!3d12.5292446!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747212684728!5m2!1sen!2sin"
-          },
-          {
-            address: "#1608 Adhichunchanagiri Road, \nKuvempunagar, P and T Block, \nChamaraja Mohalla, Mysuru - 570 023.",
-            phone: "+91 88844 98959",
-            email: "sales.kuvempunagar@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.3451145362455!2d76.6313254!3d12.2925299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7b574f907843%3A0x6471774e6fa1206a!2sMahindra%20Indian%20Garage!5e0!3m2!1sen!2sin!4v1747212778740!5m2!1sen!2sin"
-          },
-          {
-            address: "#C-18 Madikeri Bypass Road, Hunsur, \nKarnataka - 571105.",
-            phone: "+91 88844 98959",
-            email: "sales.hunsur@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.1152686131504!2d76.3029991!3d12.308023599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5ab35e5923543%3A0x93eca4c127398a40!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747212863158!5m2!1sen!2sin"
-          }, {
-            address: "#13/7, Thirumalashettyhalli Cross, \nAnugondanahalli, Bengaluru - 560 117.",
-            phone: "+91 88844 98958",
-            email: "salescv.wf@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.64689946292!2d77.7825065!3d12.9831414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0fb453bd4d9f%3A0x612685a21d459c3e!2sMahindra%20India%20Garage%20-%20Whitefield%20Commercial%20Showroom%20(Thirumalashettihalli%20Cross)!5e0!3m2!1sen!2sin!4v1747212947394!5m2!1sen!2sin"
-          },
-          {
-            address: "#80/1, 1st Block, Bychanahalli, \nMangalore Mysore Road, \nKushalnagar, Karnataka - 571 234.",
-            phone: "+91 88844 98958",
-            email: "salescv.wf@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.945086531723!2d75.9493138!3d12.453378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba509cd1b9f725f%3A0x7ae5120debe37d14!2sMAHINDRA%20INDIA%20GARAGE-MYSORE!5e0!3m2!1sen!2sin!4v1747213035256!5m2!1sen!2sin"
-          }, {
-            address: "No.1-4-35B, Two Shutter Ground \nFloor, Jayanagara, K R Pete, Mandya - \n571 426.",
-            phone: "+91 88844 98959",
-            email: "sales.krpete@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31157.027815071415!2d76.9194856!3d12.5407536!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747223757472!5m2!1sen!2sin"
-          },
+          }
         ],
         service: [
           {
-            address: "#207/208, 11th Main, 3rd Phase, Peenya \nIndustrial Area, Bengaluru - 560 058.",
-            phone: "+91 96069 15740",
-            email: "smpeenya@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.6323219085114!2d77.5210083!3d13.018812!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d1b47f37b49%3A0xb59d56802a43eb4d!2sMahindra%20India%20Garage%20%E2%80%93%20Peenya%20Workshop!5e0!3m2!1sen!2sin!4v1747213575627!5m2!1sen!2sin"
-          },
-
-          {
-            address: "#53/10, Madanayakanahalli Village, \nDasanapura Hobli, Bangalore - 562 162.",
-            phone: ["+91 98423 19820", "+91 98424 10847"],
-            email: "tryevdsales@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7773.1723952034945!2d77.4508649!3d13.061991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae24a8f3ae6a4b%3A0x5714d99795576775!2sMahindra%20India%20Garage%20-%20Madanayakanahalli%20Workshop!5e0!3m2!1sen!2sin!4v1747213844410!5m2!1sen!2sin"
-          },
-          {
-            address: "Address: #11, 1st Main Road \nSadaramanagala, Industrial Area, White \nField Road, Near ITPL Bus Stop, \nBengaluru - 560 067",
-            phone: "+91 97855 13333",
-            email: "smitpl@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.626972808544!2d77.731718!3d12.995694199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0e1e8760a745%3A0x557c4e084a2bb5d9!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747213969682!5m2!1sen!2sin"
-          }, {
-            address: "#427/1A, Hebbal Ind. Area, Metagalli Post, \nMysuru - 570 016.",
-            phone: "+91 91485 89147",
-            email: ["smhebbal@india-garage.in", "bodyshopmanager@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.265546858863!2d76.6155936!3d12.3651366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7a3d00d7608b%3A0x260b9f18e163c5a8!2sMahindra%20India%20Garage%20%E2%80%93Workshop!5e0!3m2!1sen!2sin!4v1747214083462!5m2!1sen!2sin"
-          },
-
-        ],
-        "sales & service": [
-          {
-            address: "1st Phase, Plot #2E4, Whitefield Main \nRoad, Behind Decathlon, Mahadevapura, \nBengaluru - 560 048.",
-            phone: "+91 97855 51333",
-            email: ["smvrwf@india-garage.in", "chandrasekharnm@india-garage.in", "sales.wf@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.252573845026!2d77.69879!3d12.995738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747215691087!5m2!1sen!2sin"
-          },
-          {
-            address: "Old B.M Road, Gutturur village, Kottathi \nhobli, Belur Grampanchayat, Malavalli - \n571 403.",
-            phone: "+91 88844 98959",
-            email: ["igmandya@india-garage.in", "mandyaservice@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62313.99311644604!2d76.8699647!3d12.541012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747215798047!5m2!1sen!2sin"
-          },
-          {
-            address: "#292/10, Block #23, Sampige Katte Road, \nMadikeri - 571 201.",
-            phone: "+91 88844 98959",
-            email: ["sales.madikeri@india-garage.in", "service.madikeri@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.2574093870294!2d75.75174919999999!3d12.432562299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5aa9e27787899%3A0x9014a3a231e9653d!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747215901473!5m2!1sen!2sin"
-          },
-          {
-            address: "State Highway 90, Ponnampet, Road \nJodubetti, Gonikoppal - 571 213.",
-            phone: "+91 88844 98959",
-            email: ["mailto:sales.gonikoppal@india-garage.in", "service.gonikoppal@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.360701638476!2d75.939742!3d12.1558282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5ba3786b87fad%3A0xc4dcb9f89be834c9!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747216063691!5m2!1sen!2sin"
-          },
-          {
-            address: "Mysore Road, Near LIC Opp Simha \nTheatre, Chamrajnagar - 571 313.",
-            phone: "+91 88844 98959",
-            email: ["mailto:ig.changar@india-garage.in", "service.changar@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.63656126204!2d76.933995!3d11.9303616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe93a3dc03%3A0x2b3ece5b81cda608!2sMahindra%20India%20Garage%20Mysore%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747216165799!5m2!1sen!2sin"
-          },
+            address: "#110/110/10, Lalbagh Main Road,\n Near Urvashi Theatre,\n Bengaluru - 560 043",
+            phone: "+91 80502 90512",
+            email: ["sm.lalbagh@india-garage.in", "karthiks@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e77446713f%3A0x859a28fb0fd3f809!2sMahindra%20India%20Garage%20-%20Lal%20Bagh%20Road!5e0!3m2!1sen!2sin!4v1747211878143!5m2!1sen!2sin"
+          }
         ]
       },
+      Mysore: {
+        sales: [
+          {
+            address: "#45, Hunsur Road,\n Mysore - 570 008",
+            phone: "+91 821 2345678",
+            email: "sales.mysore@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+          }
+        ],
+        service: [
+          {
+            address: "#67, Ring Road,\n Mysore - 570 008",
+            phone: "+91 821 2345679",
+            email: "service.mysore@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
+          }
+        ]
+      }
     }
   },
   {
-    id: 10,
+    id: 11,
     backgroundImage: wagen,
     brand: "volkswagen",
     bgColor: {
@@ -768,7 +664,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 11,
+    id: 12,
     backgroundImage: byd,
     brand: "BYD",
     bgColor: {
@@ -805,7 +701,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 12,
+    id: 13,
     backgroundImage: honda,
     brand: "honda",
     bgColor: {
@@ -1188,11 +1084,11 @@ const FranchiseSlider = () => {
                         {/* Sales */}
                         {location.sales && location.sales.length > 0 && (
                           <div className="hide-scrollbar">
-                            <div className="text-white font-bold text-xl mb-2">
-                              Sales:
-                            </div>
                             {location.sales.map((sale, idx) => (
                               <div key={`${currentSlide}-${locationKey}-sales-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl mb-2">
+                                  Sales :
+                                </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                                   {sale.address}<br />
                                   {Array.isArray(sale.phone) ? (
@@ -1240,11 +1136,11 @@ const FranchiseSlider = () => {
                         {/* Service */}
                         {location.service && location.service.length > 0 && (
                           <div className="hide-scrollbar mb-6">
-                            <div className="text-white font-bold text-xl mb-2">
-                              Service:
-                            </div>
                             {location.service.map((service, idx) => (
                               <div key={`${currentSlide}-${locationKey}-service-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl mb-2">
+                                  Service :
+                                </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                                   {service.address}<br />
                                   {Array.isArray(service.phone) ? (
@@ -1292,11 +1188,11 @@ const FranchiseSlider = () => {
                         {/* Sales and Service */}
                         {location["sales & service"] && location["sales & service"].length > 0 && (
                           <div className="hide-scrollbar mb-6">
-                            <div className="text-white font-bold text-xl mb-2">
-                              Sales & Service:
-                            </div>
                             {location["sales & service"].map((salesService, idx) => (
                               <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl mb-2">
+                                  Sales & Service :
+                                </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                                   {salesService.address}<br />
                                   {Array.isArray(salesService.phone) ? (
@@ -1344,11 +1240,11 @@ const FranchiseSlider = () => {
                         {/* Sales, Service & Parts distribution */}
                         {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && (
                           <div className="hide-scrollbar mb-6">
-                            <div className="text-white font-bold text-xl mb-2">
-                              Sales, Service & Parts Distribution:
-                            </div>
                             {location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
                               <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl mb-2">
+                                  Sales, Service & Parts Distribution :
+                                </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                                   {salesDist.address}<br />
                                   {Array.isArray(salesDist.phone) ? (
@@ -1396,11 +1292,11 @@ const FranchiseSlider = () => {
                         {/* Pre-Owned Cars */}
                         {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 0 && (
                           <div className="hide-scrollbar mb-6">
-                            <div className="text-white font-bold text-xl mb-2">
-                              Pre-Owned Cars:
-                            </div>
                             {location["Pre-Owned Cars"].map((preOwned, idx) => (
                               <div key={`${currentSlide}-${locationKey}-preowned-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl mb-2">
+                                  Pre-Owned Cars :
+                                </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                                   {preOwned.address}<br />
                                   {Array.isArray(preOwned.phone) ? (
@@ -1448,11 +1344,11 @@ const FranchiseSlider = () => {
                         {/* Service and Parts */}
                         {location["service and parts"] && (location["service and parts"]?.length ?? 0) > 0 && (
                           <div className="hide-scrollbar mb-6">
-                            <div className="text-white font-bold text-xl mb-2">
-                              Service, Parts:
-                            </div>
                             {location["service and parts"].map((serviceParts, idx) => (
                               <div key={`${currentSlide}-${locationKey}-serviceparts-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl mb-2">
+                                  Service & Parts :
+                                </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                                   {serviceParts.address}<br />
                                   {Array.isArray(serviceParts.phone) ? (
@@ -1501,11 +1397,11 @@ const FranchiseSlider = () => {
                         {/* Spares Warehouse */}
                         {location["spares warehouse"] && (location["spares warehouse"]?.length ?? 0) > 0 && (
                           <div className="hide-scrollbar mb-6">
-                            <div className="text-white font-bold text-xl mb-2">
-                              Spares Warehouse:
-                            </div>
                             {location["spares warehouse"].map((spares, idx) => (
                               <div key={`${currentSlide}-${locationKey}-spareswarehouse-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl mb-2">
+                                  Spares Warehouse :
+                                </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
                                   {spares.address}<br />
                                   {Array.isArray(spares.phone) ? (
@@ -1558,7 +1454,9 @@ const FranchiseSlider = () => {
               </>
             )}
           </div>
+          
         </div>
+          
 
         <BusinessSectors />
 
