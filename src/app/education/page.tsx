@@ -58,7 +58,7 @@ export default function EducationPage() {
     const startDelay = setTimeout(() => {
       setShowAllImages(false);
       setActiveDesktopImage(0);
-    }, 3000); // Changed from 1000 to 3000 for 3 second initial delay
+    }, 2000); // Changed from 1000 to 3000 for 3 second initial delay
 
     const interval = setInterval(() => {
       if (showAllImages) {
@@ -66,7 +66,7 @@ export default function EducationPage() {
         setTimeout(() => {
           setShowAllImages(false);
           setActiveDesktopImage(0);
-        }, 3000);
+        }, 2000);
         return;
       }
 
@@ -100,8 +100,8 @@ export default function EducationPage() {
     <main className="flex min-h-screen flex-col items-center bg-[#FFAED7] text-black relative overflow-hidden">
       <div className='w-full'>
         {/* Hero section with logo */}
-        <section className="w-full flex justify-center items-center z-10 relative mb-0">
-          <div className="w-56 h-40 sm:w-64 sm:h-48 md:w-72 md:h-56 lg:w-80 xl:w-96 relative">
+        <section className="w-full flex justify-center items-center z-10 relative mb-0 pt-4 pb-8">
+          <div className="w-48 h-32 sm:w-56 sm:h-40 md:w-64 md:h-48 lg:w-72 xl:w-80 relative">
             <div className="w-full h-full flex justify-center items-center">
               <Image
                 src={EducationLogo}
