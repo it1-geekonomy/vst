@@ -159,7 +159,7 @@ export default function Navbar() {
                 href="/news-media"
                 className="block px-4 py-2 font-roc text-base font-medium hover:text-gray-300 transition-colors text-white"
               >
-                News and Media
+                News & Media
               </Link>
               <Link
                 href="/career"
@@ -243,7 +243,7 @@ export default function Navbar() {
               className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              News and Media
+              News & Media
             </Link>
             <Link
               href="/career"

@@ -161,7 +161,7 @@ const ManufacturePage = () => {
             Empowering Farmers With Efficiency, Affordability And Reliability
           </h1>
           
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
             <div className="flex-1 text-white" style={{ maxWidth: "567px" }}>
               <div className="mb-8">
                 <p className="text-clamp-18 font-roc text-justify" style={{ 
@@ -191,11 +191,11 @@ cultivation by small and medium-scale farmers.
               </div>
             </div>
 
-            <div className="flex-1">
+            <div className="">
               <Image
                 src={Tractor}
                 alt="VST Tractor Manufacturing"
-                width={1000}
+                width={900}
                 height={508}
                 className="rounded-2xl"
                 priority
