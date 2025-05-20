@@ -5,7 +5,7 @@ import slide1 from "@/app/public/hero-section/Homepage-hero section.jpg";
 import slide2 from "@/app/public/hero-section/Image 5.jpg";
 import slide3 from "@/app/public/hero-section/image 3.png";
 import slide4 from "@/app/public/hero-section/Image 4.jpg";
-import slide5 from "@/app/public/hero-section/Image 6.png";
+import slide5 from "@/app/public/hero-section/Image 6.jpg";
 import slide6 from "@/app/public/hero-section/Image 7.jpg";
 import groupImage from "@/app/public/hero-section/Group Image.png";
 
