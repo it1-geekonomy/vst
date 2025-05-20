@@ -642,7 +642,7 @@ const slides: SlideData[] = [
         ],
         "sales & service": [
           {
-            address: "VW Mysore Road, #26/2 & 27/2, \nKenchanahalli Village, Kengeri Hobli, \nMysore Road, Bengaluru - 560 057.",
+            address: "VW Mysore Road, #26/2 & 27/2, \nKenchanahalli Village, Kengeri Hobli, \nMysore Road, Bengaluru - 560 059.",
             phone: "+91 96866 01249",
             email: "crhead@vw-bangaloremotors.co.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.3333016634388!2d77.5030693!3d12.9291368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ef00026b7f3%3A0xc01a322d21f9de9b!2sVolkswagen%20Mysore%20Road%20-%20Sales%20%26%20Service!5e0!3m2!1sen!2sin!4v1747227650015!5m2!1sen!2sin"
