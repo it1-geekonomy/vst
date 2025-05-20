@@ -8,7 +8,7 @@ import frame1 from '@/app/public/contact-us/frame1.jpg'
 import axios from 'axios'
 import { useState } from 'react'
 
-import Footer from '@/components/Footer'
+import ContactUsFooter from '@/components/ContactUsFooter'
 interface ContactFormInputs {
   firstName: string
   lastName: string
@@ -176,7 +176,7 @@ export default function Page() {
         </div>
       </div>
 
-      <Footer bgcolour="bg-[#101010]" />
+      <ContactUsFooter bgcolour="bg-[#101010]" />
     </div>
   )
 }
