@@ -19,6 +19,11 @@ import hcard1 from "@/app/public/news-and-media/Image Placeholder 1.jpg";
 import hcard2 from "@/app/public/news-and-media/Image Placeholder 2.jpg";
 import hcard3 from "@/app/public/news-and-media/Image Placeholder 3.jpg";
 import hcard4 from "@/app/public/news-and-media/Image Placeholder 4.jpg";
+import bgimg from "@/app/public/images/news/bimg.jpg";
+import frame3 from "@/app/public/images/news/card6New.png";
+
+
+
 
 
 
@@ -63,6 +68,8 @@ export default function NewsMedia() {
       link: "https://www.linkedin.com/posts/vst-motors-ltd_ducatiindia-ducaticommunity-vstgroup-activity-7201814884903235585-li-1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE",
      
     },
+
+    
     {
       image: hcard4,
       alt: "Latest Models",
@@ -95,14 +102,16 @@ export default function NewsMedia() {
       target: "_blank",
       rel: "noopener noreferrer"
     },
+   
     {
-      image: imcard12,
-      alt: "Latest Models",
-      title: "New Arrivals",
-      text: "Just wrapped up another amazing week at the Harvard Business School Executive Education ",
-      link: "https://www.linkedin.com/posts/arunsurendra_harvardbusinessschool-backtoschool-activity-7286330643519545344-QLyB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+      image:frame3,
+      alt: "Latesaat Models",
+      // title: "We Are Now Open",
+      text: " Habits become your second nature. So it is with winning! Our winning streak continues. Education World Grand Jury Awards",
+      link: " https://skei.edu.in/awards#education-world-grand-jury-awards",
       target: "_blank",
       rel: "noopener noreferrer"
+     
     },
     {
       image: Frame5,
@@ -121,7 +130,17 @@ export default function NewsMedia() {
       link: "https://www.linkedin.com/posts/vst-motors-ltd_serviceawards-teamrecognition-milestone-activity-7260522846341193728-gRCJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
       target: "_blank",
       rel: "noopener noreferrer"
-    }
+    },
+
+    //  {
+    //   image: imcard12,
+    //   alt: "Latest Models",
+    //   title: "New Arrivals",
+    //   text: "Just wrapped up another amazing week at the Harvard Business School Executive Education ",
+    //   link: "https://www.linkedin.com/posts/arunsurendra_harvardbusinessschool-backtoschool-activity-7286330643519545344-QLyB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+    //   target: "_blank",
+    //   rel: "noopener noreferrer"
+    // },
   ];
 
   useEffect(() => {
@@ -134,21 +153,21 @@ export default function NewsMedia() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#2E2E2E]">
       <div className="absolute top-0 left-0 w-full h-[80px] bg-gradient-to-b from-[#2E2E2E] via-[#2E2E2E]/80 to-transparent flex items-center justify-center z-30 pointer-events-none pt-20">
-        <h1 className="text-white text-5xl md:text-6xl font-bold font-roc drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
+        <h1 className="text-white text-5xl md:text-6xl font-medium font-roc drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
       </div>
       {/* Hero Section */}
       <section className="relative w-full h-[110vh] pt-[10px] mt-[40px]">
         {/* Top blend gradient for seamless transition */}
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-t from-transparent to-[#2E2E2E] z-20 pointer-events-none" />
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-black/20 z-10"></div>
         <Image 
-          src={bg} 
+          src={bgimg} 
           alt="News Background" 
           fill 
           className="object-cover"
           priority
         />
-        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#2E2E2E] via-[#2E2E2E]/50 via-[#2E2E2E]/30 via-[#2E2E2E]/10 to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#2E2E2E] via-[#2E2E2E]/50 to-transparent z-10"></div>
 
         
         {/* Main Content with Popular This Week sidebar */}
@@ -250,7 +269,7 @@ export default function NewsMedia() {
               <div className="hidden lg:flex w-[45%] xl:w-[40%] flex-col justify-end pr-10 pb-18">
                 <div className="bg-black/70 h-[85vh] w-full overflow-hidden flex flex-col bg-white/10 backdrop-blur-sm">
                   <div className="flex flex-col h-full px-12 pt-16 pb-8">
-                    <h2 className="text-4xl font-bold mb-8 text-white font-roc">Popular this week</h2>
+                    <h2 className="text-4xl font-normal mb-8 text-white font-roc">Group Updates</h2>
                     <div className="space-y-4 flex-grow overflow-y-auto hideScrollbar">
                       {cards.map((item, index) => (
                         <a 
@@ -276,7 +295,7 @@ export default function NewsMedia() {
                               )}
                             </div>
                             <div className="w-7/12 h-full flex items-center justify-center">
-                              <p className="text-base font-semibold text-white leading-tight text-start w-full px-2">
+                              <p className="text-base font-normal text-white leading-tight text-start w-full px-2">
                                 {item.text}
                               </p>
                             </div>
