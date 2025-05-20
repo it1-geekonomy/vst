@@ -95,16 +95,13 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                 >
                   <svg 
                     className="w-5 h-5 mr-2" 
-                    fill="none" 
+                    fill={iconColor}
                     stroke={iconColor}
                     viewBox="0 0 24 24" 
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
                     />
                   </svg>
                   <span
@@ -128,12 +125,25 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     href={`mailto:${emails.info}`}
                     className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
                   >
+                    <svg 
+                      className="w-6 h-6 mr-2" 
+                      fill={iconColor}
+                      stroke={iconColor}
+                      viewBox="0 0 24 24" 
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path 
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      />
+                      <path 
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      />
+                    </svg>
                     <span
-                      className={`font-roc ${className}`}
+                      className={`font-roc font-normal ${className}`}
                       style={{
                         fontSize: 'clamp(16px, 2.5vw, 24px)',
-                        lineHeight: '1.5',
-                        fontWeight: 500
+                        lineHeight: '1.5'
                       }}
                     >
                       {emails.info}
@@ -156,12 +166,25 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       href={`mailto:${emails.globalConnect}`}
                       className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
                     >
+                      <svg 
+                        className="w-6 h-6 mr-2" 
+                        fill={iconColor}
+                        stroke={iconColor}
+                        viewBox="0 0 24 24" 
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path 
+                          d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                        />
+                        <path 
+                          d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                        />
+                      </svg>
                       <span
-                        className={`font-roc ${className}`}
+                        className={`font-roc font-normal ${className}`}
                         style={{
                           fontSize: 'clamp(16px, 2.5vw, 24px)',
-                          lineHeight: '1.5',
-                          fontWeight: 500
+                          lineHeight: '1.5'
                         }}
                       >
                         {emails.globalConnect}

@@ -186,6 +186,7 @@ cultivation by small and medium-scale farmers.
                   className="bg-[#FDB813] text-black px-6 md:px-8 py-3 md:py-4 rounded-lg text-lg font-medium hover:bg-[#FDC833] transition-colors w-full md:w-[400px] text-center"
                 >
                   Explore More
+                  
                 </a>
               </div>
             </div>
@@ -208,9 +209,9 @@ cultivation by small and medium-scale farmers.
                locationImage="tillers/Group 1000001966.png"
                address={{
                  street: "Regd. Office: Plot No.1, Hale",
-                 street2: "Dyavasandra Industrial Layout,",
-                 street3: "Whitefield Road, Mahadevapura Post,",
-                 city: "Bengaluru - 560 048",
+                 street2: "Devasandra Industrial Layout,",
+                 street3: "Whitefield Road, Mahadevapura,",
+                 city: "Post, Bengaluru - 560 048",
                  state: "India.",
                  pincode: ""       
                }}
