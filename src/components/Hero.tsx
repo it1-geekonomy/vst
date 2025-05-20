@@ -68,7 +68,7 @@ const slides = [
   {
     id: 3,
     image: slide3,
-    title: "MANUFACTURING",
+    title: "Manufacturing",
     subtitle: "VST Tillers Tractors Ltd. is making a significant impact in global markets with innovative, high-quality machinery, driven by a futuristic approach.",
     label: "Manufacturing",
     color: "from-green-600/80 to-green-800/80",
@@ -79,7 +79,7 @@ const slides = [
   {
     id: 2,
     image: slide2,
-    title: "AUTOMOTIVE FRANCHISES",
+    title: "Automotive Franchises",
 
     subtitle: "Where innovation meets craftsmanship—experience the future of mobility.",
     label: "Automotive Franchise",
