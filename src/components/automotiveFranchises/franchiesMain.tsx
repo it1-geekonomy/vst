@@ -667,7 +667,7 @@ const slides: SlideData[] = [
       India: {
         sales: [
           {
-            address: "#8, KSCMF Building, Cunningham Road \nBengaluru - 560 058.",
+            address: "#8, KSCMF Building, Cunningham Road \nBengaluru - 560 052.",
             phone: "+91 96060 74777",
             email: " info@vstbyd.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.9654766732485!2d77.593135!3d12.9895086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1723bff92db9%3A0xee980fcacf73499c!2sVST%20BYD%20Bangalore%20-%20Cunningham%20Road!5e0!3m2!1sen!2sin!4v1747227934358!5m2!1sen!2sin"
