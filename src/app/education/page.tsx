@@ -33,9 +33,9 @@ export default function EducationPage() {
 
   // Gallery images with varying heights
   const galleryImages: GalleryImage[] = [
-    { id: 1, src: img2, alt: 'Student learning', height: '92%' },
-    { id: 2, src: img7, alt: 'Students outdoors', height: '88%' },
-    { id: 3, src: img5, alt: 'Students on stairs', height: '90%' },
+     { id: 1, src: img5, alt: 'Students on stairs', height: '88%' },
+    { id: 2, src: img2, alt: 'Student learning', height: '94%' },
+    { id: 3, src: img7, alt: 'Students outdoors', height: '88%' },
     { id: 4, src: img3, alt: 'School building', height: '88%' },
     { id: 5, src: img4, alt: 'Robotics project', height: '94%' },
     { id: 6, src: img1, alt: 'Teacher interacting with students', height: '88%' },
@@ -58,7 +58,7 @@ export default function EducationPage() {
     const startDelay = setTimeout(() => {
       setShowAllImages(false);
       setActiveDesktopImage(0);
-    }, 1000);
+    }, 3000); // Changed from 1000 to 3000 for 3 second initial delay
 
     const interval = setInterval(() => {
       if (showAllImages) {
@@ -308,12 +308,14 @@ export default function EducationPage() {
               '+91 80-2226 3022',
               '+91 99807 97527'
             ]}
+            emails={{
+              info: 'info@skei.edu.in'
+            }}
             googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
             className="text-black [&>div>div>div:first-child]:mb-12 [&>div>div>div:first-child]:md:mb-0 [&>div>div>div:last-child]:mt-12 [&>div>div>div:last-child]:md:mt-0"
             iconColor="black"
           />
         </div>
-
         <div className="w-full -mt-12">
           <div className="transform scale-110">
             <BusinessSectorsUpdated />

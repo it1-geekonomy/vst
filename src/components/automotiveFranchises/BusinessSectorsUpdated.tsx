@@ -23,7 +23,7 @@ const BusinessSectorsUpdated = () => {
         className="w-full max-w-[1920px] py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24"
         style={{ height: "454px" }}
       >
-        <h2 className="font-roc font-normal text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
+        <h2 className="font-roc font-medium text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
           Explore Our Other Business Sectors
         </h2>
 

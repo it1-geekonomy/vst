@@ -128,12 +128,25 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     href={`mailto:${emails.info}`}
                     className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
                   >
+                    <svg 
+                      className="w-5 h-5 mr-2" 
+                      fill="none" 
+                      stroke={iconColor}
+                      viewBox="0 0 24 24" 
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
                     <span
-                      className={`font-roc ${className}`}
+                      className={`font-roc font-normal ${className}`}
                       style={{
                         fontSize: 'clamp(16px, 2.5vw, 24px)',
-                        lineHeight: '1.5',
-                        fontWeight: 500
+                        lineHeight: '1.5'
                       }}
                     >
                       {emails.info}
@@ -156,12 +169,25 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       href={`mailto:${emails.globalConnect}`}
                       className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
                     >
+                      <svg 
+                        className="w-5 h-5 mr-2" 
+                        fill="none" 
+                        stroke={iconColor}
+                        viewBox="0 0 24 24" 
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
                       <span
-                        className={`font-roc ${className}`}
+                        className={`font-roc font-normal ${className}`}
                         style={{
                           fontSize: 'clamp(16px, 2.5vw, 24px)',
-                          lineHeight: '1.5',
-                          fontWeight: 500
+                          lineHeight: '1.5'
                         }}
                       >
                         {emails.globalConnect}
