@@ -410,19 +410,7 @@ const slides: SlideData[] = [
             phone: "+91 99400 92010",
             email: "salesmanagertn@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.3750756576278!2d80.232498!3d13.0515692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670023549f87%3A0xd1302492f99f3c74!2sKia%20Showroom%20T%20Nagar%20-%20VST%20Kia!5e0!3m2!1sen!2sin!4v1747223565704!5m2!1sen!2sin"
-          },
-          {
-            address: "#155, Swamith Ashithanar Nagar, GNT \nRoad, Thandalkalani, Pulicat, \nChennai 600 066",
-            phone: "+91 73050 32085",
-            email: "salesmanagerthk@vstcentral-kia.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1942.4034805389128!2d80.1949667!3d13.1745681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527b573076743f%3A0x4df8fecc75acdc92!2sVST%20CENTRAL%20-%20KIA%20REDHILLS%20SHOWROOM!5e0!3m2!1sen!2sin!4v1747223606109!5m2!1sen!2sin"
-          },
-          {
-            address: "#548/6, Kattukottai, Nattamangalam, \nSalem 636 010",
-            phone: "+91 93848 77744",
-            email: "salesmanagerslm@vstcentral-kia.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747233866731!5m2!1sen!2sin"
-          },
+          }
         ],
         service: [
           {
@@ -1457,6 +1445,17 @@ const FranchiseSlider = () => {
           
         </div>
           
+        {/* Text Learn More Link */}
+        {slides[currentSlide]?.learnMoreLink && (
+          <div className="w-full flex justify-end mb-8 px-24">
+            <h2 
+              onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank')}
+              className="text-white hover:text-[#DFAC4F] transition-colors text-lg sm:text-xl lg:text-2xl font-light underline cursor-pointer"
+            >
+              {slides[currentSlide].learnMoreLink}
+            </h2>
+          </div>
+        )}
 
         <BusinessSectors />
 
