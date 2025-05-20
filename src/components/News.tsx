@@ -11,7 +11,7 @@ import card3 from "@/app/public/images/news/card3.png";
 import post4New from "@/app/public/images/news/post4new.png";
 import card5 from "@/app/public/images/news/card5.png";
 import post6 from "@/app/public/images/news/post6.png";
-import post7 from "@/app/public/images/news/post7.png";
+import card6 from "@/app/public/images/news/card6New.png";
 import card8 from "@/app/public/images/news/card8.png";
 // import card4new from "@/app/public/images/news/card4new.png";
 import card7new from "@/app/public/images/news/card7new.jpg";
@@ -112,13 +112,13 @@ const newsData = [
   },
   {
     id: 6,
-    image: post6,
-    title: 'The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz',
+    image: card6,
+    title: 'Habits become your second nature. So it is with winning! Our winning streak continues. Education World Grand Jury Awards ',
     // title:"The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz India's Concept CLA-Class, Porsche India's all-electric Macan, Kia India's Syros and BYD India Private Limited's SEALION 7. As partners, it's great to see these brands driving change in mobility.",
     tag: 'Innovation',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_bharatmobility2025-mercedesbenzindia-porscheindia-activity-7287775917416792067-Eaki?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+    route: 'https://skei.edu.in/awards#education-world-grand-jury-awards'
   },
   {
     id: 7,
@@ -175,7 +175,7 @@ const News = () => {
   };
 
   return (
-    <div className="bg-zinc-800 min-h-screen py-10 px-6 sm:px-10 md:px-16 text-white">
+    <div className="bg-[#2E2E2E] min-h-screen py-10 px-6 sm:px-10 md:px-16 text-white">
       <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Our Updates</h1>
 
       <div className="px-3.5 flex justify-center">
@@ -196,7 +196,7 @@ const News = () => {
                 />
               </div>
 
-              <div className="p-4 flex flex-col justify-between flex-grow bg-[#FFFFFF1A] backdrop-blur-[36.55px]">
+              <div className="p-4 flex flex-col justify-between flex-grow bg-[#333435]backdrop-blur-[36.55px]">
                 <h2 className="mt-2 text-[23px] leading-[130%] tracking-wide font-normal font-roc transition-all">
                   {item.title}
                 </h2>
