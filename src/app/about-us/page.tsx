@@ -290,7 +290,7 @@ function AboutUsPage() {
           <div className="w-full lg:w-2/3 flex items-center justify-center lg:justify-start lg:pl-0 lg:-ml-12">
             <div className="flex items-center justify-center">
               <div className="flex flex-row items-center justify-center
-                -space-x-4 sm:-space-x-8 md:-space-x-12 lg:-space-x-16">
+                -space-x-2 sm:-space-x-4 md:-space-x-6 lg:-space-x-8 xl:-space-x-10">
                 {[...timelineData]
                   .sort((a, b) => {
                     if (a.year === selectedYear) return -1
@@ -314,10 +314,10 @@ function AboutUsPage() {
                         <div
                           className={`relative rounded-full overflow-hidden
                             ${isMainImage
-                              ? 'w-[200px] h-[200px] sm:w-[330px] sm:h-[330px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]'
+                              ? 'w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] xl:w-[320px] xl:h-[320px]'
                               : index === 1
-                              ? 'w-[150px] h-[150px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px]'
-                              : 'w-[120px] h-[120px] sm:w-[210px] sm:h-[210px] md:w-[280px] md:h-[280px] lg:w-[350px] lg:h-[350px]'}`}
+                              ? 'w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[240px] lg:h-[240px] xl:w-[280px] xl:h-[280px]'
+                              : 'w-[80px] h-[80px] sm:w-[130px] sm:h-[130px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] xl:w-[260px] xl:h-[260px]'}`}
                           style={{
                             transition: "width 400ms cubic-bezier(0.4, 0.0, 0.2, 1), height 400ms cubic-bezier(0.4, 0.0, 0.2, 1)",
                             transform: isMainImage ? `scale(${scale})` : 'scale(1)', 
@@ -337,10 +337,11 @@ function AboutUsPage() {
                               transition: "opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1), filter 180ms cubic-bezier(0.4, 0.0, 0.2, 1)",
                               objectFit: "cover"
                             }}
-                            sizes="(max-width: 640px) 200px,
-                                   (max-width: 768px) 330px,
-                                   (max-width: 1024px) 400px,
-                                   500px"
+                            sizes="(max-width: 640px) 120px,
+                                   (max-width: 768px) 180px,
+                                   (max-width: 1024px) 220px,
+                                   (max-width: 1280px) 280px,
+                                   320px"
                             priority={isMainImage}
                           />
                         </div>
@@ -375,9 +376,9 @@ function AboutUsPage() {
               <p className="text-justify hyphens-auto font-roc text-sm md:text-base text-clamp-24">
                 With an annual turnover exceeding ₹5,000 crores ($570 million) , VST Group stands as a powerhouse
                 in India's business landscape. Under the visionary leadership of its fourth generation, the group
-                continues to set new benchmarks in service excellence, technological advancement, and customer
+                continues to set new benchmarks in service excellence, technological advancement and customer
                 satisfaction. By blending a rich legacy with a forward-looking approach to innovation, VST Group remains
-                committed to delivering value, building trust, and driving growth for generations to come.
+                committed to delivering value, building trust and driving growth for generations to come.
               </p>
               
               
@@ -388,12 +389,12 @@ function AboutUsPage() {
         {/* Progress with Purpose Section */}
         <div className="mt-16 md:mt-32 flex items-center justify-center px-4">
           <div className="flex flex-col md:flex-row items-center space-y-0 md:space-y-0 ">
-            <div className="w-full md:h-[500px] md:w-1/2 flex justify-center md:justify-end">
-            <Image
-                  src={gif}
-                  alt="VST Logo Animation"
-                  className="w-[90%] h-[90%] object-cover"
-                />
+            <div className="w-full md:h-[350px] md:w-1/2 flex justify-center md:justify-end">
+              <Image
+                src={gif}
+                alt="VST Logo Animation"
+                className="w-[70%] h-[70%] object-cover"
+              />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left mb-5">
