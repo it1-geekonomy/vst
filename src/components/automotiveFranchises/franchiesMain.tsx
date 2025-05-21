@@ -60,6 +60,7 @@ import TataIcon from "@/app/public/faranchies/TataIcon";
 import BusinessSectors from "./BusinessSectors";
 import Logo from "@/app/public/logos/Logo";
 import JaguarIcon from "@/app/public/faranchies/jaguarIcon";
+import VSTLogoAnimation from "../VSTLogoAnimation";
 
 interface SlideData {
   id: number;
@@ -1460,14 +1461,9 @@ const FranchiseSlider = () => {
         <BusinessSectors />
 
         {/* Logo section */}
-        <div className="w-full flex justify-center py-8 sm:py-12 lg:py-20">
-          <Image
-            src={gif}
-            alt="VST Logo Animation"
-            className="w-[50%] h-[50%] object-contain"
-          />
-
-        </div>
+          <div className="w-full mt-30">
+        <VSTLogoAnimation />
+      </div>
       </motion.div>
     </div>
   );

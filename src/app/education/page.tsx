@@ -14,6 +14,7 @@ import EducationLogo from '@/app/public/education/educational logo.png';
 import BusinessSectorsUpdated from '@/components/automotiveFranchises/BusinessSectorsUpdated';
 import gif from "@/app/public/education/vst logo gif.gif"
 import LocationSection from '@/components/LocationSection';
+import VSTLogoAnimation from '@/components/VSTLogoAnimation';
 
 type GalleryImage = {
   id: number;
@@ -322,13 +323,7 @@ export default function EducationPage() {
           </div>
         </div>
       </div>
-      <div className="w-full h-[250px] lg:h-[250px] xl:h-[300px] flex justify-center items-center -mt-50">
-        <Image
-          src={gif}
-          alt="VST Logo Animation"
-          className="w-[100%] h-[100%] object-contain"
-        />
-      </div>
+      <VSTLogoAnimation />
     </main>
   );
 }

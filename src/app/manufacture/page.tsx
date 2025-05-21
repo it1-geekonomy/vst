@@ -11,6 +11,7 @@ import Tough3 from '@/app/public/tillers/Tough3.png'
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors"
 import Logo from '@/app/public/logos/Logo'
 import LocationSectionUpdated from '@/components/LocationSectionUpdated'
+import VSTLogoAnimation from '@/components/VSTLogoAnimation'
 
 const ManufacturePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -231,12 +232,12 @@ cultivation by small and medium-scale farmers.
           <div className="mt-16 md:mt-24">
             <BusinessSectors />
           </div>
-
-          {/* Added Logo section at the end */}
-          <div className="flex justify-center items-center py-16">
-            <Logo className="w-24 h-36 md:w-32 md:h-48" />
-          </div>
         </div>
+      </div>
+      
+      {/* Added margin-top to create space between BusinessSectors and VSTLogoAnimation */}
+      <div className="w-full mt-25">
+        <VSTLogoAnimation />
       </div>
     </div>
   )

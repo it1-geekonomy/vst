@@ -10,6 +10,7 @@ import bgImage from "@/app/public/vst-auto-parts/bgimg.jpeg";
 import LocationSection from '@/components/LocationSection';
 import gif from "@/app/public/education/vst logo gif.gif";
 import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
+import VSTLogoAnimation from "@/components/VSTLogoAnimation";
 
 export default function Page() {
   const gradientColor = "rgba(255, 185, 34, 1)";
@@ -521,12 +522,8 @@ export default function Page() {
         <div className="relative z-10 w-full overflow-visible -mt-10 scale-110">
           <BusinessSectorsUpdated/>
         </div>
-        <div className="relative w-full flex justify-center z-20 -mt-40">
-          <Image
-            src={gif}
-            alt="VST Logo Animation"
-            className="w-[50%] h-[50%] object-contain"
-          />
+        <div className="relative w-full ">
+          <VSTLogoAnimation/>
         </div>
       </div>
 
