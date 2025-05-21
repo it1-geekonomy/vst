@@ -105,64 +105,74 @@ const LifeAtVst = () => {
         {/* Right half - Text content */}
         <div className="relative w-full md:w-1/2 h-full bg-black">
           {/* Content container with consistent padding */}
-          <div className="px-4 md:px-8">
-            {/* Heading with digits on same line - centered */}
-            <div className="flex items-center justify-center pr-8 w-full mb-2">
-              <div className="flex items-baseline">
-                <div className="flex items-baseline mr-2 md:mr-4">
-                  <span className="text-[60px] md:text-[70px] lg:text-[90px] xl:text-[70px] font-rocWide text-white font-weight-200">0</span>
-                  <AnimatePresence mode="wait">
-                    <motion.span
-                      key={currentSlide}
-                      className="text-[60px] md:text-[70px] lg:text-[90px] xl:text-[70px] font-rocWide animate-flowing-gradient"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      {(currentSlide + 1).toString()}
-                    </motion.span>
-                  </AnimatePresence>
+          <div className="px-4 md:px-8 flex flex-col items-center">
+            {/* Content wrapper to maintain consistent width */}
+            <div className="w-full max-w-[75%]">
+              {/* Heading with digits on same line */}
+              <div className="flex items-center w-full mb-2">
+                <div className="flex items-baseline w-full">
+                  {/* Number container with fixed width */}
+                  <div className="flex items-baseline mr-2 md:mr-4 flex-shrink-0">
+                    <span className="text-clamp-80 font-rocWide text-white font-weight-200">0</span>
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={currentSlide}
+                        className="text-clamp-80 font-rocWide animate-flowing-gradient"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        {(currentSlide + 1).toString()}
+                      </motion.span>
+                    </AnimatePresence>
+                  </div>
+                  {/* Title - left aligned, not stretched */}
+                  <h1
+                    className="text-white font-roc text-left text-clamp-80"
+                    style={{
+                      fontWeight: 300,
+                      lineHeight: '90%',
+                      letterSpacing: '0.09em',
+                      whiteSpace:'nowrap',   
+                      marginLeft: '0.5rem'
+                    }}
+                  >
+                    Life At VST
+                  </h1>
                 </div>
-                
-                <h1
-                  className="text-white text-4xl md:text-5xl xl:text-[60px] font-roc"
-                  style={{
-                    fontWeight: 300,
-                    lineHeight: "90%",
-                    letterSpacing: "0.09em"
-                  }}
-                >
-                  Life At VST
-                </h1>
               </div>
-            </div>
 
-            {/* Container for horizontal line and white ball - keeping original alignment */}
-            <div className="flex items-center mb-1 w-full">
-              <div className="w-3 h-3 md:w-4 md:h-4 bg-[#8CE0FF] rounded-full flex-shrink-0"></div>
-              <div className="h-[2px] gradient-line flex-grow"></div>
-            </div>
+              {/* Horizontal line and blue ball spanning full width */}
+              <div className="relative  left-1/2 right-1/2 md:-ml-[22vw] sm:-ml-[45vw] max-sm:-ml-[45vw] flex items-center mb-1">
+                <div className="w-3 h-3 md:w-4 md:h-4 bg-[#8CE0FF] rounded-full flex-shrink-0 z-10"></div>
+                <div className="h-[2px] gradient-line flex-grow ml-0" />
+              </div>
 
-            {/* Subtitle and description */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="w-full max-w-[75%] h-[230px] md:h-[300px] overflow-y-auto mx-auto"
-              >
-                <h2 className="text-xl md:text-lg lg:text-lg xl:text-lg font-normal mb-3 text-left font-roc">
-                  {slides[currentSlide].subtitle}
-                </h2>
-                <p className="text-base md:text-sm lg:text-base xl:text-base font-normal leading-relaxed hyphens-auto" 
-                   style={{ wordBreak: "break-word", textAlign: "justify", textJustify: "inter-word" }}>
-                  {slides[currentSlide].description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
+              {/* Subtitle and description */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="w-full h-[230px] md:h-[300px] overflow-y-auto"
+                >
+                  <h2 className="text-xl md:text-lg lg:text-lg xl:text-lg font-normal mb-3 text-left font-roc">
+                    {slides[currentSlide].subtitle}
+                  </h2>
+                  <p className="text-base md:text-sm lg:text-base xl:text-base font-normal leading-relaxed w-full" 
+                     style={{ 
+                       wordBreak: "break-word",
+                       textAlign: "justify",
+                       textJustify: "inter-word"
+                     }}>
+                    {slides[currentSlide].description}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>
