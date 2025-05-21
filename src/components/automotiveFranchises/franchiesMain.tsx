@@ -835,7 +835,7 @@ const FranchiseSlider = () => {
   const currentLocations = slides[currentSlide].locations;
 
   return (
-    <div className="relative w-full min-h-screen  lg:mt-[-3rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen lg:mt-[-3rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
@@ -851,9 +851,9 @@ const FranchiseSlider = () => {
         transition={{ duration: 0.01 }}
       >
         {/* Car section */}
-        <div className="relative w-full h-auto sm:h-[85vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1] lg:mb-[10rem] mb-[4rem]">
+        <div className="relative w-full h-auto sm:h-[90vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[10rem] mb-[4rem]">
           {/* Left section with background and car */}
-          <div className="relative w-full lg:w-[55%] h-[40vh] sm:h-[45vh] lg:h-full xl:h-[100vh]">
+          <div className="relative w-full sm:w-full lg:w-[85%] h-[50vh] sm:h-[70vh] lg:h-full xl:h-[100vh]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`bg-${currentSlide}`}
@@ -861,19 +861,22 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 w-[50%] lg:w-[92%] h-[95%] rounded-br-[120px] overflow-hidden"
+                className="absolute left-0 w-full lg:w-[92%] h-full sm:h-[70vh] lg:h-[95%] rounded-br-[60px] sm:rounded-br-[80px] lg:rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
                   alt="Background"
                   fill
-                  className="object-cover "
+                  className="object-cover object-center"
                   priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 55vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 55vw"
+                  style={{
+                    objectPosition: 'center center'
+                  }}
                 />
               </motion.div>
 
-              {/* Static blue accent bars - hidden on mobile */}
+              {/* Static blue accent bars - hidden on mobile/tablet */}
               <div
                 className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none"
                 style={{ backgroundColor: "#2676A6" }}
@@ -886,27 +889,29 @@ const FranchiseSlider = () => {
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-1 sm:px-1 lg:px-1 flex flex-col justify-between py-2 sm:py-4 lg:py-20">
+          <div className="relative w-full lg:w-[45%] px-4 sm:px-6 lg:px-1 flex flex-col justify-between sm:justify-end lg:justify-between py-4 sm:py-0 lg:py-20 mt-4 sm:mt-[12rem] lg:mt-0 sm:mb-19 gap-0 sm:gap-32 lg:gap-0">
             {/* Title */}
-            <div className="flex-1 flex items-center justify-center sm:mb-[rem] mb-[3rem]">
-              <h2 className="text-white font-rocWide font-light text-clamp-67  text-start">
-                Our
-                <br />
-                Automotive
-                <br />
-                Franchises
+            <div className="flex-1 flex items-center justify-center sm:justify-center  sm:mb-[2rem] lg:mb-[4rem] mb-[2rem] w-full">
+              <h2 className="text-white font-rocWide font-light text-4xl sm:text-[3.5rem] lg:text-[4.5rem] text-center lg:text-start w-full sm:w-[90%] lg:w-auto">
+                <div className="flex flex-col items-center sm:items-center lg:items-start gap-2 sm:gap-4 lg:gap-6 w-full">
+                  <div className="flex flex-row sm:flex-row lg:flex-col items-center sm:items-center lg:items-start gap-2 sm:gap-4 lg:gap-6 justify-center sm:justify-center lg:justify-start">
+                    <span className="text-4xl sm:text-[3.5rem] lg:clamp-67 text-center sm:text-center lg:text-start">Our</span>
+                    <span className="text-4xl sm:text-[3.5rem] lg:clamp-67 text-center sm:text-center lg:text-start">Automotive</span>
+                  </div>
+                  <span className="text-4xl sm:text-[3.5rem] lg:text-clamp-67 text-center sm:text-center lg:text-start">Franchises</span>
+                </div>
               </h2>
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-1 sm:gap-2 lg:gap-8 h-auto lg:h-[16rem] translate-y-[-20%] w-full">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-2 sm:gap-4 lg:gap-8 h-auto lg:h-[16rem] translate-y-[-10%] lg:translate-y-[-20%] w-full lg:mt-16">
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
-                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mb-0 sm:mb-1 lg:mb-0"
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mb-2 sm:mb-4 lg:mb-0"
               >
                 <svg
-                  className="w-5 sm:w-6 lg:w-12 h-5 sm:h-6 lg:h-12"
+                  className="w-6 sm:w-8 lg:w-12 h-6 sm:h-8 lg:h-12"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -921,13 +926,12 @@ const FranchiseSlider = () => {
               </button>
 
               {/* Brand logos - infinite loop implementation */}
-              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-0 sm:py-1 lg:py-[2rem] lg:pl-[3rem] relative">
+              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-2 sm:py-4 lg:py-[2rem] lg:pl-[3rem] relative">
                 <motion.div
-                  className="flex items-center gap-3 sm:gap-5 lg:gap-16"
+                  className="flex items-center gap-4 sm:gap-6 lg:gap-16"
                   animate={{
-                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 212 : (screenWidth ?? 1200) < 1024 ? 220 : 264)
-                      }px`,
-                    translateX: (screenWidth ?? 1200) < 640 ? "9.43%" : (screenWidth ?? 1200) < 1024 ? "9.4%" : "-0.1%",
+                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 216 : (screenWidth ?? 1200) < 1024 ? 223 : 264)}px`,
+                    translateX: (screenWidth ?? 1200) < 640 ? "9.6%" : (screenWidth ?? 1200) < 1024 ? "9.6%" : "-0.1%",
                   }}
                   transition={{
                     duration: 0.5,
@@ -969,10 +973,10 @@ const FranchiseSlider = () => {
               {/* Down arrow */}
               <button
                 onClick={nextSlide}
-                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mt-0 sm:mt-1 lg:mt-0"
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mt-2 sm:mt-4 lg:mt-0"
               >
                 <svg
-                  className="w-5 sm:w-6 lg:w-12 h-5 sm:h-6 lg:h-12"
+                  className="w-6 sm:w-8 lg:w-12 h-6 sm:h-8 lg:h-12"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -990,10 +994,10 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Description section */}
-        <div className="w-full flex flex-col lg:flex-row py-10 px-4 sm:px-6 lg:px-24 items-start gap-8">
+        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-10 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8">
           {/* Left: Description */}
-          <div className="w-full lg:w-3/5 flex flex-col items-start">
-            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8 text-left">
+          <div className="w-full lg:w-3/5 flex flex-col items-center sm:items-center lg:items-start">
+            <h2 className="text-white text-xl sm:text-2xl lg:text-[3rem] font-normal mb-3 sm:mb-4 lg:mb-8 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
               <AnimatePresence mode="wait">
                 <motion.h2
                   key={`header-${currentSlide}`}
@@ -1001,7 +1005,7 @@ const FranchiseSlider = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-normal mb-4 sm:mb-6 lg:mb-8"
+                  className="text-white text-xl sm:text-2xl lg:text-[3rem] font-semibold sm:font-semibold lg:font-normal mb-3 sm:mb-4 lg:mb-8 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start xl:justify-start"
                 >
                   {slides[currentSlide].header}
                 </motion.h2>
@@ -1015,31 +1019,31 @@ const FranchiseSlider = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
                 className="text-white text-sm sm:text-base lg:text-[24px] text-justify 
-              font-normal leading-[160%] sm:leading-[177%] tracking-[0%] max-w-6xl"
+                font-normal leading-[150%] sm:leading-[160%] lg:leading-[177%] tracking-[0%] max-w-6xl"
               >
                 {slides[currentSlide].description}
               </motion.p>
             </AnimatePresence>
 
-            <a href={slides[currentSlide].learnMoreLink} className="mt-6 sm:mt-8 lg:mt-10 inline-block w-auto" target="_blank" rel="noopener noreferrer">
-              <h3 className="bg-white rounded-lg px-8 sm:px-12 md:px-20 lg:px-40 xl:px-60 py-3 sm:py-4 lg:py-5 text-[#0f0f0e] text-xl sm:text-2xl lg:text-3xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors">
+            <a href={slides[currentSlide].learnMoreLink} className="mt-4 sm:mt-6 lg:mt-10 inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-start" target="_blank" rel="noopener noreferrer">
+              <h3 className="bg-white rounded-lg px-6 sm:px-8 lg:px-40 py-2 sm:py-3 lg:py-5 text-[#0f0f0e] text-lg sm:text-xl lg:text-3xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
                 Learn More
               </h3>
             </a>
           </div>
 
           {/* Right: Switchable Location Tabs */}
-          <div className="w-full lg:w-2/5 flex flex-col gap-4 mt-8 lg:mt-0">
+          <div className="w-full lg:w-2/5 flex flex-col gap-4 mt-6 sm:mt-8 lg:mt-0">
             {slides[currentSlide]?.locations && (
               <>
                 {/* Only show tabs if there are multiple locations */}
                 {Object.keys(slides[currentSlide].locations).length > 1 && (
-                  <div className="flex gap-4 mb-2 w-full">
+                  <div className="flex gap-2 sm:gap-4 mb-2 w-full overflow-x-auto pb-2">
                     {Object.keys(slides[currentSlide].locations).map((loc) => (
                       <button
                         key={`${currentSlide}-${loc}`}
                         onClick={() => setActiveLocation(loc)}
-                        className={`flex-1 px-4 py-2 rounded-t-lg font-semibold text-lg border-b-2 transition-colors
+                        className={`flex-1 min-w-[120px] px-3 sm:px-4 py-2 rounded-t-lg font-semibold text-base sm:text-lg border-b-2 transition-colors whitespace-nowrap
                           ${activeLocation === loc
                             ? 'border-b-4 border-[#DFAC4F] text-white'
                             : 'border-b-2 border-white/30 text-white'}
@@ -1052,7 +1056,7 @@ const FranchiseSlider = () => {
                 )}
                 {/* Location Card */}
                 <div
-                  className="border-l border-r border-white p-6 flex flex-col gap-6 min-w-0 max-h-[700px] overflow-y-auto"
+                  className="border-l border-r border-white p-4 sm:p-6 flex flex-col gap-4 sm:gap-6 min-w-0 max-h-[500px] sm:max-h-[600px] lg:max-h-[700px] overflow-y-auto"
                   style={{ background: "transparent", scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                   <style>{`
@@ -1448,10 +1452,10 @@ const FranchiseSlider = () => {
           
         {/* Text Learn More Link */}
         {slides[currentSlide]?.learnMoreLink && (
-          <div className="w-full flex justify-end mb-8 px-24">
+          <div className="w-full flex justify-center lg:justify-end mb-6 sm:mb-8 px-4 sm:px-6 lg:px-24">
             <h2 
               onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank')}
-              className="text-white hover:text-[#DFAC4F] transition-colors text-lg sm:text-xl lg:text-2xl font-light underline cursor-pointer"
+              className="text-white hover:text-[#DFAC4F] transition-colors text-base sm:text-lg lg:text-2xl font-light underline cursor-pointer text-center lg:text-right"
             >
               {slides[currentSlide].learnMoreLink}
             </h2>
@@ -1464,6 +1468,7 @@ const FranchiseSlider = () => {
           <div className="w-full mt-20">
         <VSTLogoAnimation />
       </div>
+
       </motion.div>
     </div>
   );
