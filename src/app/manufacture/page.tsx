@@ -236,7 +236,7 @@ cultivation by small and medium-scale farmers.
       </div>
       
       {/* Added margin-top to create space between BusinessSectors and VSTLogoAnimation */}
-      <div className="w-full mt-25">
+      <div className="w-full mt-5">
         <VSTLogoAnimation />
       </div>
     </div>

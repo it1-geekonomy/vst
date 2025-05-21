@@ -1461,7 +1461,7 @@ const FranchiseSlider = () => {
         <BusinessSectors />
 
         {/* Logo section */}
-          <div className="w-full mt-30">
+          <div className="w-full mt-20">
         <VSTLogoAnimation />
       </div>
       </motion.div>
