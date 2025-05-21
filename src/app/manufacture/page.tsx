@@ -299,12 +299,6 @@ const ManufacturePage = () => {
           <div className="mt-16 md:mt-24 w-full">
             <BusinessSectors />
           </div>
-
-          {/* Logo section */}
-          <div className="flex justify-center items-center py-16 w-full">
-            <Logo className="w-24 h-36 md:w-32 md:h-48" />
-          </div>
-
         </div>
       </div>
       
