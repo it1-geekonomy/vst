@@ -7,6 +7,7 @@ import Initiatives from "./Initiatives";
 import bg from "../app/public/makingdiff/orange-bg.png";
 import flag from "../app/public/makingdiff/flag.png";
 import gif from "@/app/public/education/vst logo gif.gif";
+import VSTLogoAnimation from "./VSTLogoAnimation";
 
 
 interface CSRItemProps {
@@ -548,13 +549,9 @@ const CSR = () => {
             </AnimatePresence>
           </section>
         </motion.div>
-        <div className="relative w-full flex justify-center py-8 sm:py-12 lg:py-20">
-          <Image
-            src={gif}
-            alt="VST Logo Animation"
-            className="w-[50%] h-[50%] object-contain"
-          />
-        </div>
+           <div className="w-full mt-45">
+        <VSTLogoAnimation />
+      </div>
       </main>
       <Footer bgcolour="bg-black" />
     </div>
