@@ -62,7 +62,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-12 lg:gap-10 xl:gap-20 2xl:gap-28 w-full md:w-auto mt-16 md:mt-24">
+        <div className="flex flex-col md:flex-row sm:gap-6 md:gap-12 lg:gap-10 xl:gap-20 2xl:gap-28 w-full md:w-auto mt-8 md:mt-24">
           {/* Address */}
           <div className="text-center md:text-left mb-8">
             <p
@@ -84,7 +84,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col items-center md:items-start mt-8 md:mt-0">
+          <div className="flex flex-col items-center md:items-start md:mt-0">
             {/* Phone Numbers */}
             <div className="flex flex-col">
               {phoneNumbers.map((phone, idx) => (

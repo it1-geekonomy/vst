@@ -7,7 +7,7 @@ import img3 from "@/app/public/vst-auto-parts/frame3.png";
 import img4 from "@/app/public/vst-auto-parts/frame4.png";
 import img5 from "@/app/public/vst-auto-parts/frame5.png";
 import bgImage from "@/app/public/vst-auto-parts/bgimg.jpeg";
-import LocationSection from '@/components/LocationSection';
+import LocationSection from "@/components/LocationSection";
 import gif from "@/app/public/education/vst logo gif.gif";
 import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import VSTLogoAnimation from "@/components/VSTLogoAnimation";
@@ -316,7 +316,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen mt-16">
       {/* Main section with background image */}
-      <div className="relative min-h-[50vh] lg:h-screen">
+      <div className="relative min-h-[45vh] sm:min-h-[68vh] md:min-h-[80vh] h-screen">
         {/* Background image only for main section */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 opacity-100">
@@ -339,7 +339,7 @@ export default function Page() {
         </div>
 
         {/* Responsive Carousel Slider */}
-        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto px-4 mb-8 sm:mb-12 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto mb-8 sm:mb-12 h-[250px] sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
           {/* Desktop 3D Carousel - only visible on large screens */}
           <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
             <div className="carousel-container relative w-full h-full">
@@ -411,25 +411,27 @@ export default function Page() {
             {/* Mobile slider track that moves horizontally */}
             <div
               ref={mobileSliderRef}
-              className="flex w-full h-full transition-transform duration-500 ease-in-out"
+              className={`grid w-full h-full transition-transform duration-500 ease-in-out`}
               style={{
-                width: `${images.length * 100}%`,
-                transform: `translateX(-${activeIndex * (100 / images.length)}%)`,
+                gridTemplateColumns: `repeat(${images.length}, 100%)`,
+                width: "100%",
+                height: "100%",
+                transform: `translateX(-${activeIndex * 100}%)`,
               }}
             >
               {images.map((img, index) => (
                 <div
                   key={index}
-                  className="relative w-full h-full flex-shrink-0 px-2"
+                  className="w-full h-full relative"
+                  style={{ width: "100%", height: "100%" }}
                 >
-                  <div className="relative w-full h-full rounded-xl overflow-hidden">
-                    <Image
-                      src={img}
-                      alt={`Auto parts image ${index + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <Image
+                    src={img}
+                    alt={`Auto parts image ${index + 1}`}
+                    fill
+                    className="object-cover"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
               ))}
             </div>
@@ -481,7 +483,7 @@ export default function Page() {
                 `,
           }}
         />
-        
+
         <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-12 xl:py-0 2xl:py-18 3xl:py-0">
           {/* Company information section */}
           <div className="mb-6 sm:mb-8 lg:mb-10 text-black w-full text-justify">
@@ -501,29 +503,29 @@ export default function Page() {
             </p>
           </div>
         </div>
-          <div className="text-black">
-            <LocationSection
-               locationImage="vst-auto-parts/location img.png"
-               address={{
-                 street: "Old No.144, New No.199,",
-                 street2: "1st Floor, Anna Salai, Chennai-",
-                 state: "",
-                 city: "600 002, Tamil Nadu.",
-                 pincode: ""       
-               }}
-               phoneNumbers={[
-                 '+91 44-2860 2485',
-                 '+91 44-2860 2486',
-                 '+91 44-2860 2487'
-               ]}
-               googleMapsUrl="https://www.google.com/maps/place/VST+Motors/@13.0626463,80.2615032,17z/data=!3m1!5s0x3a52661712800ddd:0x9763c5b415119093!4m14!1m7!3m6!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!2sVST+Motors!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7!3m5!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-             />
-          </div>
+        <div className="text-black">
+          <LocationSection
+            locationImage="vst-auto-parts/location img.png"
+            address={{
+              street: "Old No.144, New No.199,",
+              street2: "1st Floor, Anna Salai, Chennai-",
+              state: "",
+              city: "600 002, Tamil Nadu.",
+              pincode: "",
+            }}
+            phoneNumbers={[
+              "+91 44-2860 2485",
+              "+91 44-2860 2486",
+              "+91 44-2860 2487",
+            ]}
+            googleMapsUrl="https://www.google.com/maps/place/VST+Motors/@13.0626463,80.2615032,17z/data=!3m1!5s0x3a52661712800ddd:0x9763c5b415119093!4m14!1m7!3m6!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!2sVST+Motors!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7!3m5!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+          />
+        </div>
         <div className="relative z-10 w-full overflow-visible -mt-10 scale-110">
-          <BusinessSectorsUpdated/>
+          <BusinessSectorsUpdated />
         </div>
         <div className="relative w-full ">
-          <VSTLogoAnimation/>
+          <VSTLogoAnimation />
         </div>
       </div>
 
