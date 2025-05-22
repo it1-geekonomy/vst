@@ -47,7 +47,7 @@ const LifeAtVst = () => {
   }, [isHovered])
 
   return (
-    <div className="relative w-full h-[360px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden pb-10">
+    <div className="relative w-full h-[360px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden ">
       {/* Add keyframes for the flowing gradient animation matching the image */}
       <style jsx global>{`
         @keyframes flowingGradient {
