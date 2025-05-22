@@ -16,14 +16,14 @@ const BusinessSectorsUpdated = () => {
   const isEducationPage = pathname === "/education";
 
   return (
-    <div className="w-full flex justify-center items-center relative z-10 mt-28">
+    <div className="w-full flex justify-center items-center relative z-10 mt-28 ">
       {" "}
       {/* Adjusted top margin */}
       <div
         className="w-full max-w-[1920px] py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24"
         style={{ height: "454px" }}
       >
-        <h2 className="font-roc font-medium text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
+        <h2 className="font-roc font-medium text-[24px] sm:text-[32px] md:text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
           Explore Our Other Business Sectors
         </h2>
 
@@ -104,12 +104,12 @@ const BusinessSectorsUpdated = () => {
                   href="/automotive-franchises"
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="flex items-end justify-center h-[100px] w-[100px]">
+                  <div className="flex items-end justify-center h-[90px] w-[90px]">
                     <Image
                       src={Automobile}
                       alt="Auto"
-                      width={100}
-                      height={100}
+                      width={90}
+                      height={90}
                       className="object-contain"
                     />
                   </div>
@@ -120,12 +120,12 @@ const BusinessSectorsUpdated = () => {
                   href="/manufacture"
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="flex items-end justify-center h-[100px] w-[100px] -mt-2">
+                  <div className="flex items-end justify-center h-[90px] w-[90px] -mt-2">
                     <Image
                       src={ManufacturingIcon}
                       alt="Manufacturing"
-                      width={100}
-                      height={100}
+                      width={90}
+                      height={90}
                       className="object-contain"
                     />
                   </div>
@@ -136,12 +136,12 @@ const BusinessSectorsUpdated = () => {
                   href="/auto-parts"
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="flex items-end justify-center h-[100px] w-[100px]">
+                  <div className="flex items-end justify-center h-[90px] w-[90px]">
                     <Image
                       src={Auto}
                       alt="Auto"
-                      width={100}
-                      height={100}
+                      width={90}
+                      height={90}
                       className="object-contain"
                     />
                   </div>
@@ -152,12 +152,12 @@ const BusinessSectorsUpdated = () => {
                   href="/education"
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="flex items-end justify-center h-[100px] w-[100px] pt-2">
+                  <div className="flex items-end justify-center h-[90px] w-[90px] pt-2">
                     <Image
                       src={EducationIcon}
                       alt="Education"
-                      width={100}
-                      height={100}
+                      width={90}
+                      height={90}
                       className="object-contain"
                     />
                   </div>
