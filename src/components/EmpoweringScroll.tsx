@@ -15,7 +15,7 @@ function EmpoweringScroll() {
     
     let animationId: number
     let startTime: number | null = null
-    const duration = 30000 // Time in ms for one complete scroll cycle
+    const duration = 20000 // Time in ms for one complete scroll cycle
     
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp
@@ -65,7 +65,7 @@ function EmpoweringScroll() {
               backgroundClip: 'text',
             }}
           >
-            Empowering growth through constant innovation                 
+            Empowering Growth Through Evolving Ideas                  
           </h2>
         </div>
       </div>
