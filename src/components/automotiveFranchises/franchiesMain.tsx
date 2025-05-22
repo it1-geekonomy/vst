@@ -622,19 +622,75 @@ const slides: SlideData[] = [
       Mysore: {
         sales: [
           {
-            address: "#45, Hunsur Road,\n Mysore - 570 008",
-            phone: "+91 821 2345678",
-            email: "sales.mysore@india-garage.in",
+            address: "#80/1, 1st Block, Bychanahalli, Mangalore Mysore Road, Kushalnagar, Karnataka - 571 234.",
+            phone: "+91 88844 98958",
+            email: "salescv.wf@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+          },
+          {
+            address: "#1608 Adhichunchanagiri Road, Kuvempunagar, P and T Block, Chamaraja Mohalla, Mysuru - 570 023.",
+            phone: "+91 88844 98959",
+            email: "sales.kuvempunagar@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+          },
+          {
+            address: "Mahindra Showroom, India Garage, Opp, Eid Ground, Maddur, Karnataka - 571 428.",
+            phone: "+91 88844 98959",
+            email: "sales.maddur@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+          },
+          {
+            address: "#C-18, Madikeri Bypass Road, Hunsur, Karnataka - 571105.",
+            phone: "+91 88844 98959",
+            email: "sales.hunsur@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+          },
+          {
+            address: "No.1-4-35B, Two Shutter Ground Floor, Jayanagara, K R Pete, Mandya - 571 426.",
+            phone: "+91 88844 98959",
+            email: "sales.krpete@india-garage.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
           }
         ],
+         "sales & service": [
+          {
+            address: "Near LIC Opp Simha Theatre, Chamrajnagar - 571 313.",
+            phone: "+91 88844 98959",
+            email: ["ig.chnagar@india-garage.in", "service.chnagar@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747282040407!5m2!1sen!2sin"
+          },
+        ],
         service: [
           {
-            address: "#67, Ring Road,\n Mysore - 570 008",
-            phone: "+91 821 2345679",
-            email: "service.mysore@india-garage.in",
+            address: "#427/1A, Hebbal Ind. Area, Metagalli Post, Mysuru - 570 016.",
+            phone: "+91 91485 89147",
+            email: ["smhebbal@india-garage.in", "bodyshopmanager@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
-          }
+          },
+           {
+            address: "#201/202, Hunsur Road, next to Church, Vijayanagar 4th Stage, Hinkal, Mysuru-570 017.",
+            phone: "+91 88844 98959",
+            email: "sales.mysore@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
+          },
+          {
+            address: "Old B.M Road, Gutturur village, Kottathi hobli, Belur Grampanchayat, Malavalli - 571 403.",
+            phone: "+91 88844 98959",
+            email: ["igmandya@india-garage.in", "mandyaservice@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
+          },
+           {
+            address: "#292/10, Block #23, Sampige Katte Road, Madikeri - 571 201.",
+            phone: "+91 88844 98959",
+            email: ["sales.madikeri@india-garage.in", "service.madikeri@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
+          },
+          {
+            address: "State Highway 90, Ponnampet, Road Jodubetti, Gonikoppal - 571 213.",
+            phone: "+91 88844 98959",
+            email: ["sales.gonikoppal@india- garage.in", "service.gonikoppal@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
+          } 
         ]
       }
     }
