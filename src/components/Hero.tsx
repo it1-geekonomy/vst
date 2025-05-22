@@ -219,7 +219,7 @@ const Hero = () => {
                   alt={slides[currentSlide].label}
                   fill
                   style={{
-                    objectFit: "contain",
+                    objectFit: "cover",
                     objectPosition: "center",
                   }}
                   priority
@@ -227,24 +227,53 @@ const Hero = () => {
               )}
             </div>
           </div>
+
+          {/* Content Overlay */}
+          {slides[currentSlide].id !== 1 && (
+            <div className="absolute inset-0 flex items-center justify-center z-20 px-4">
+              <div className="bg-black/70 rounded-lg px-4 sm:px-6 py-6 text-left w-full max-w-[90%]">
+                {/* Yellow line above the title */}
+                <div className="w-[40%] h-1 bg-yellow-400 mb-3"></div>
+                {slides[currentSlide].title && (
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 font-roc">
+                    {slides[currentSlide].title}
+                  </h2>
+                )}
+                {slides[currentSlide].subtitle && (
+                  <p className="text-sm sm:text-base text-white mb-4 font-roc line-clamp-3">
+                    {slides[currentSlide].subtitle}
+                  </p>
+                )}
+                {slides[currentSlide].link && (
+                  <div className="flex justify-center w-full mt-2">
+                    <a
+                      href={slides[currentSlide].link}
+                      className="inline-flex items-center text-yellow-400 text-lg font-semibold hover:underline transition"
+                    >
+                      View more
+                      <span className="ml-2">&#8594;</span>
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
           
-          {/* Slide label */}
-          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded z-10 mt-30">
-          </div>
-          
-          {/* Navigation buttons */}
-          <div className="absolute inset-x-0 top-[23vh] flex items-center justify-between px-4 z-10">
+          {/* Navigation buttons - Updated positioning and z-index */}
+          <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-2 sm:px-4 z-30">
             <button 
-              className="bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition"
+              className="bg-black/50 text-white p-3 sm:p-4 rounded-full hover:bg-black/70 transition"
               onClick={goToPrevSlide}
+              style={{ zIndex: 40 }}
             >
-              &#10094;
+              <span className="text-xl sm:text-2xl">&#10094;</span>
             </button>
             <button 
-              className="bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition"
+              className="bg-black/50 text-white p-3 sm:p-4 rounded-full hover:bg-black/70 transition"
               onClick={goToNextSlide}
+              style={{ zIndex: 40 }}
             >
-              &#10095;
+              <span className="text-xl sm:text-2xl">&#10095;</span>
             </button>
           </div>
           
@@ -253,7 +282,7 @@ const Hero = () => {
             {slides.map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-white' : 'bg-white/50'}`}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${currentSlide === index ? 'bg-white' : 'bg-white/50'}`}
                 onClick={() => setCurrentSlide(index)}
               />
             ))}
@@ -271,9 +300,9 @@ const Hero = () => {
       .strips-container {
       --strip-width-sm: 4rem;    /* Increased from 2.5rem */
       --strip-width-md: 5rem;    /* Increased from 3rem */
-      --strip-width-lg: 6rem;    /* Increased from 4rem */
-      --strip-width-xl: 7rem;    /* Increased from 5rem */
-      --strip-width-2xl: 8rem;   /* Increased from 6rem */
+      --strip-width-lg: 5.5rem;    /* Increased from 4rem */
+      --strip-width-xl: 6rem;    /* Fixed typo from 6srem to 6rem */
+      --strip-width-2xl: 6.5rem;   /* Increased from 6rem */
       --strip-width: var(--strip-width-lg); /* Default width */
 }
         
@@ -301,6 +330,7 @@ const Hero = () => {
         @media (min-width: 1280px) and (max-width: 1535px) {
           .strips-container {
             --strip-width: var(--strip-width-xl);
+            min-width: 6rem; /* Added minimum width to ensure visibility */
           }
         }
         @media (min-width: 1536px) {
