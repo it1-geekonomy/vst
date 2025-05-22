@@ -1,14 +1,14 @@
-'use client'
-import { useState, ChangeEvent } from 'react'
-import axios from 'axios';
-import Footer from '@/components/Footer'
-import Image from 'next/image'
-import frame1 from '../public/careers/frame1.jpg'
-import frame2 from '../public/careers/upload-icon.png'
-import frame3 from '../public/careers/mobilebg.png'
-import frame4 from '../public/careers/Vector calender.png'
-import frame5 from '../public/careers/Vector.png'
-import { Toaster, toast } from 'react-hot-toast';
+"use client";
+import { useState, ChangeEvent } from "react";
+import axios from "axios";
+import Footer from "@/components/Footer";
+import Image from "next/image";
+import frame1 from "../public/careers/frame1.jpg";
+import frame2 from "../public/careers/upload-icon.png";
+import frame3 from "../public/careers/mobilebg.png";
+import frame4 from "../public/careers/Vector calender.png";
+import frame5 from "../public/careers/Vector.png";
+import { Toaster, toast } from "react-hot-toast";
 
 interface FormData {
   name: string;
@@ -21,13 +21,13 @@ interface FormData {
 export default function Page() {
   const MAX_ABOUT_CHARS = 400;
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [fileError, setFileError] = useState('');
+  const [fileError, setFileError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    mobile: '',
-    aboutYourself: '',
+    name: "",
+    email: "",
+    mobile: "",
+    aboutYourself: "",
     resume: null,
   });
 
@@ -37,112 +37,129 @@ export default function Page() {
     if (file) {
       setSelectedFile(file);
       setFormData((prev) => ({ ...prev, resume: file }));
-      const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
-      const fileExtension = file.name.split('.').pop()?.toLowerCase();
-      if (validTypes.includes(file.type) || ['doc', 'docx', 'pdf', 'txt'].includes(fileExtension || '')) {
+      const validTypes = [
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "text/plain",
+      ];
+      const fileExtension = file.name.split(".").pop()?.toLowerCase();
+      if (
+        validTypes.includes(file.type) ||
+        ["doc", "docx", "pdf", "txt"].includes(fileExtension || "")
+      ) {
         setSelectedFile(file);
-        setFileError('');
+        setFileError("");
       } else {
         setSelectedFile(null);
-        setFileError('Please upload a valid file (PDF, DOC, DOCX, or TXT)');
+        setFileError("Please upload a valid file (PDF, DOC, DOCX, or TXT)");
       }
     }
   };
-  
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    
+
     // If this is the aboutYourself field, limit to max characters
-    if (name === 'aboutYourself' && value.length > MAX_ABOUT_CHARS) {
+    if (name === "aboutYourself" && value.length > MAX_ABOUT_CHARS) {
       return;
     }
-    
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
-  
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
       const formDataToSend = new FormData();
-      Object.keys(formData).forEach(key => {
-        if (key !== 'resume' && key in formData) {
+      Object.keys(formData).forEach((key) => {
+        if (key !== "resume" && key in formData) {
           const value = formData[key as keyof FormData];
-          if (typeof value === 'string') {
+          if (typeof value === "string") {
             formDataToSend.append(key, value);
           }
         }
       });
       if (selectedFile) {
-        formDataToSend.append('resume', selectedFile);
+        formDataToSend.append("resume", selectedFile);
       }
-      const response = await axios.post('/api/sendEmail', formDataToSend, {
+      const response = await axios.post("/api/sendEmail", formDataToSend, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       });
 
       if (response.status === 200) {
-        toast.success('Application submitted successfully');
+        toast.success("Application submitted successfully");
         setFormData({
-          name: '',
-          email: '',
-          mobile: '',
-          aboutYourself: '',
+          name: "",
+          email: "",
+          mobile: "",
+          aboutYourself: "",
           resume: null,
         });
         setSelectedFile(null);
       } else {
-        toast.error(response.data.message || 'Error submitting application.');
+        toast.error(response.data.message || "Error submitting application.");
       }
     } catch (err: any) {
-      console.error('Error sending application:', err);
-      toast.error(err.response?.data?.message || 'Error submitting application.');
+      console.error("Error sending application:", err);
+      toast.error(
+        err.response?.data?.message || "Error submitting application."
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
-  
+
   // Function to get file icon based on type
   const getFileIcon = (fileName: string) => {
-    const extension = fileName.split('.').pop()?.toLowerCase();
+    const extension = fileName.split(".").pop()?.toLowerCase();
     switch (extension) {
-      case 'pdf':
-        return '📄';
-      case 'doc':
-      case 'docx':
-        return '📝';
-      case 'txt':
-        return '📄';
+      case "pdf":
+        return "📄";
+      case "doc":
+      case "docx":
+        return "📝";
+      case "txt":
+        return "📄";
       default:
-        return '📎';
+        return "📎";
     }
   };
-  
+
   // Calculate remaining characters
   const remainingChars = MAX_ABOUT_CHARS - formData.aboutYourself.length;
-  const charCountColor = remainingChars <= 50 ? 'text-yellow-500' : remainingChars <= 20 ? 'text-red-500' : 'text-gray-400';
-  
+  const charCountColor =
+    remainingChars <= 50
+      ? "text-yellow-500"
+      : remainingChars <= 20
+        ? "text-red-500"
+        : "text-gray-400";
+
   return (
     <div className="min-h-screen bg-black text-white">
-      <Toaster 
+      <Toaster
         position="top-right"
         toastOptions={{
           success: {
-            icon: '✓',
+            icon: "✓",
             style: {
-              background: '#4CAF50',
-              color: 'white',
+              background: "#4CAF50",
+              color: "white",
             },
           },
           error: {
             style: {
-              background: '#ef4444',
-              color: 'white',
+              background: "#ef4444",
+              color: "white",
             },
           },
         }}
@@ -173,11 +190,15 @@ export default function Page() {
 
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-12 lg:px-10 xl:px-16 h-full flex flex-col justify-center">
-          <h1 className="font-roc font-normal text-[45px] sm:text-[60px] md:text-[75px] lg:text-[85px] xl:text-[90px] text-[#646464] pb-5 md:pb-10 md:mt-48 lg:-mt-14 xl:-mt-32 text-center md:text-left">CAREERS</h1>
+          <h1 className="font-roc font-normal text-[45px] sm:text-[60px] md:text-[75px] lg:text-[85px] xl:text-[90px] text-[#646464] pb-5 md:pb-10 md:mt-48 lg:-mt-14 xl:-mt-32 text-center md:text-left">
+            CAREERS
+          </h1>
           <p className="max-w-[550px]  font-normal text-[15px] sm:text-[18px] md:text-[20px] lg:text-[21px] leading-6 lg:leading-8 font-roc tracking-tight lg:tracking-tighter lg:text-justify">
-            The VST Group offers rewarding career opportunities across a range of disciplines and
-            verticals. The Group is an equal opportunity workplace where results are encouraged and
-            merit is rewarded, making it an ideal choice for a <span className="text-[#FDB813]">long term career path</span>.
+            The VST Group offers rewarding career opportunities across a range
+            of disciplines and verticals. The Group is an equal opportunity
+            workplace where results are encouraged and merit is rewarded, making
+            it an ideal choice for a{" "}
+            <span className="text-[#FDB813]">long term career path</span>.
           </p>
         </div>
       </section>
@@ -186,14 +207,14 @@ export default function Page() {
       <section className="relative z-20 -mt-36 sm:-mt-36 md:mt-0 lg:-mt-24 xl:-mt-40 bg-transparent pb-10 md:pb-20">
         <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
-          <div className="bg-[#3B3B3B] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-16 lg:px-28">
-            <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-center mb-4 sm:mb-6 md:mb-8 font-roc font-normal">Join our team</h2>
-
+          <div className="bg-[#3B3B3B] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-12 lg:px-28">
             <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-1 gap-4 md:gap-6 lg:gap-8">
                 {/* Personal Details Section - Preserved styling */}
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-roc mb-1 md:mb-2 opacity-80 font-normal font-roc">Name</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-roc mb-1 md:mb-2 opacity-80 font-normal font-roc">
+                    Name
+                  </label>
                   <input
                     type="text"
                     value={formData.name}
@@ -204,7 +225,9 @@ export default function Page() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Mobile number</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
+                    Mobile number
+                  </label>
                   <input
                     type="tel"
                     value={formData.mobile}
@@ -215,7 +238,9 @@ export default function Page() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80 ">Email</label>
+                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80 ">
+                    Email
+                  </label>
                   <input
                     type="email"
                     value={formData.email}
@@ -225,45 +250,62 @@ export default function Page() {
                     className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
-                
+
                 {/* About Yourself Section - NEW */}
                 <div>
-                  <div className="flex justify-between items-center">
-                    <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
-                      Tell us about yourself
+                  <div className="mb-2">
+                    <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc opacity-80">
+                      Tell us the role and vertical you're applying for, and why
+                      you're interested in it?
                     </label>
-                    <span className={`text-xs ${charCountColor}`}>
+                  </div>
+                  <div className="relative">
+                    {/* Char count always at top right inside the box */}
+                    <span
+                      className={`absolute top-2 right-3 text-xs font-semibold text-white ${charCountColor}`}
+                    >
                       {remainingChars} chars left
                     </span>
-                  </div>
-                  <textarea
-                    value={formData.aboutYourself}
-                    onChange={handleChange}
-                    name="aboutYourself"
-                    required
-                    rows={4}
-                    maxLength={MAX_ABOUT_CHARS}
-                    className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none resize-none"
-                  />
-                  <div className="w-full h-1 mt-1 rounded-full overflow-hidden">
-                    <div 
-                      className={`h-full ${
-                        formData.aboutYourself.length > MAX_ABOUT_CHARS * 0.8 
-                          ? formData.aboutYourself.length > MAX_ABOUT_CHARS * 0.95 
-                            ? 'bg-red-500' 
-                            : 'bg-yellow-500'
-                          : 'bg-green-500'
-                      }`}
-                      style={{ width: `${Math.min(formData.aboutYourself.length / MAX_ABOUT_CHARS * 100, 100)}%` }}
-                    ></div>
+                    <textarea
+                      value={formData.aboutYourself}
+                      onChange={handleChange}
+                      name="aboutYourself"
+                      required
+                      rows={4}
+                      maxLength={MAX_ABOUT_CHARS}
+                      className="w-full bg-[#666666]  rounded-xl p-4 focus:outline-none resize-none shadow-md transition-all duration-200"
+                    />
+                    <div className="w-full h-1 mt-2 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full ${
+                          formData.aboutYourself.length > MAX_ABOUT_CHARS * 0.8
+                            ? formData.aboutYourself.length >
+                              MAX_ABOUT_CHARS * 0.95
+                              ? "bg-red-500"
+                              : "bg-yellow-500"
+                            : "bg-green-500"
+                        }`}
+                        style={{
+                          width: `${Math.min(
+                            (formData.aboutYourself.length / MAX_ABOUT_CHARS) *
+                              100,
+                            100
+                          )}%`,
+                        }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Upload Resume Section - Enhanced with responsive sizing */}
               <div className="mt-6 md:mt-8">
-                <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">Upload resume</label>
-                <div className={`bg-[#666666] rounded-lg p-8 sm:p-10 md:p-12 lg:p-16 text-center cursor-pointer relative transition-all duration-300 ${selectedFile ? 'border-2 border-[#FDB813]' : ''}`}>
+                <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
+                  Upload resume
+                </label>
+                <div
+                  className={`bg-[#666666] rounded-lg p-8 sm:p-10 md:p-12 lg:p-16 text-center cursor-pointer relative transition-all duration-300 ${selectedFile ? "border-2 border-[#FDB813]" : ""}`}
+                >
                   <div className="flex flex-col items-center justify-center h-full relative">
                     <input
                       type="file"
@@ -290,7 +332,9 @@ export default function Page() {
                     ) : (
                       <div className="flex flex-col items-center justify-center w-full">
                         <div className="flex items-center bg-[#555555] rounded-lg p-3 w-full max-w-xs">
-                          <span className="text-2xl mr-3">{getFileIcon(selectedFile.name || '')}</span>
+                          <span className="text-2xl mr-3">
+                            {getFileIcon(selectedFile.name || "")}
+                          </span>
                           <div className="text-left overflow-hidden flex-1">
                             <p className="text-white font-medium truncate">
                               {selectedFile.name}
@@ -336,7 +380,7 @@ export default function Page() {
                   disabled={isSubmitting}
                   className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[#FDB813] text-black py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-roc"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>
@@ -345,5 +389,5 @@ export default function Page() {
       </section>
       <Footer bgcolour="bg-[#101010]" />
     </div>
-  )
+  );
 }

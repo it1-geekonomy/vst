@@ -15,7 +15,7 @@ function EmpoweringScroll() {
     
     let animationId: number
     let startTime: number | null = null
-    const duration = 30000 // Time in ms for one complete scroll cycle
+    const duration = 20000 // Time in ms for one complete scroll cycle
     
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp
@@ -44,7 +44,7 @@ function EmpoweringScroll() {
   }, [])
   
   return (
-    <div className="w-full bg-black py-20 mt-20 overflow-hidden">
+    <div className="w-full bg-black py-8 sm:py-12 md:py-16 lg:py-20 mt-8 sm:mt-12 md:mt-16 lg:mt-20 overflow-hidden">
       <div className="relative overflow-hidden">
         <div 
           ref={scrollRef}
@@ -54,10 +54,9 @@ function EmpoweringScroll() {
           }}
         >
           <h2 
-            className="whitespace-nowrap font-rocWide"
+            className="whitespace-nowrap font-rocWide text-4xl sm:text-6xl md:text-8xl lg:text-[120px] xl:text-[150px]"
             style={{ 
               fontWeight: 400,
-              fontSize: "150px",
               lineHeight: "120%",
               letterSpacing: "0%",
               backgroundImage: 'linear-gradient(90deg, #1776A2 0%, #28AF70 30.67%, #E7AE33 70.67%, #FF4FC2 100%)',
@@ -66,7 +65,7 @@ function EmpoweringScroll() {
               backgroundClip: 'text',
             }}
           >
-            Empowering growth through constant innovation                 
+            Empowering Growth Through Evolving Ideas                  
           </h2>
         </div>
       </div>
