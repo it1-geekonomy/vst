@@ -229,8 +229,13 @@ export default function EducationPage() {
             {galleryImages.map((image, index) => (
               <div
                 key={image.id}
-                className={`relative overflow-hidden transition-all duration-1000 ease-in-out ${showAllImages ? 'flex-[3]' : index === activeDesktopImage ? 'flex-[35]' : 'flex-[3]'
-                  }`}
+                className={`relative overflow-hidden transition-all duration-1000 ease-in-out ${
+                  showAllImages 
+                    ? 'flex-[1.5] md:flex-[1.5] lg:flex-[3]' 
+                    : index === activeDesktopImage 
+                      ? 'flex-[35] md:flex-[40] lg:flex-[35]' 
+                      : 'flex-[1.5] md:flex-[1.5] lg:flex-[3]'
+                }`}
                 style={{
                   height: showAllImages ? image.height : index === activeDesktopImage ? '94%' : image.height,
                   transition: 'all 1s ease-in-out'
@@ -294,7 +299,7 @@ export default function EducationPage() {
         </div>
 
         {/* Our Location section - using the new component */}
-        <div className="w-full px-4 md:px-8 lg:px-32 mb-1">
+        <div className="w-full px-1 sm:px-2 md:px-6 lg:px-12 xl:px-32 2xl:px-40 mb-1">
           <LocationSection
             locationImage="education/educational location.png"
             address={{
