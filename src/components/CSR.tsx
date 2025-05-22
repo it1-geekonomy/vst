@@ -549,7 +549,7 @@ const CSR = () => {
             </AnimatePresence>
           </section>
         </motion.div>
-           <div className="w-full mt-45">
+           <div className="w-full mt-60 mb-15">
         <VSTLogoAnimation />
       </div>
       </main>

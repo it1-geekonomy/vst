@@ -1070,6 +1070,21 @@ const FranchiseSlider = () => {
           <div className="w-full lg:w-2/5 flex flex-col gap-4 mt-6 sm:mt-8 lg:mt-0">
             {slides[currentSlide]?.locations && (
               <>
+                {/* Website Link */}
+                {slides[currentSlide]?.learnMoreLink && (
+                  <div className="w-full flex justify-end mb-4">
+                    <div className="flex items-center gap-2 w-[400px]">
+                      <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Website:</span>
+                      <h2 
+                        onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank')}
+                        className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
+                      >
+                        {slides[currentSlide].learnMoreLink}
+                      </h2>
+                    </div>
+                  </div>
+                )}
+
                 {/* Only show tabs if there are multiple locations */}
                 {Object.keys(slides[currentSlide].locations).length > 1 && (
                   <div className="flex gap-2 sm:gap-4 mb-2 w-full overflow-x-auto pb-2">
@@ -1485,16 +1500,7 @@ const FranchiseSlider = () => {
         </div>
           
         {/* Text Learn More Link */}
-        {slides[currentSlide]?.learnMoreLink && (
-          <div className="w-full flex justify-center lg:justify-end mb-6 sm:mb-8 px-4 sm:px-6 lg:px-24">
-            <h2 
-              onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank')}
-              className="text-white hover:text-[#DFAC4F] transition-colors text-base sm:text-lg lg:text-2xl font-light underline cursor-pointer text-center lg:text-right"
-            >
-              {slides[currentSlide].learnMoreLink}
-            </h2>
-          </div>
-        )}
+       
 
         <BusinessSectors />
 
