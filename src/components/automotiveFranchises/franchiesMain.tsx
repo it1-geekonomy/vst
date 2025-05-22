@@ -622,19 +622,75 @@ const slides: SlideData[] = [
       Mysore: {
         sales: [
           {
-            address: "#45, Hunsur Road,\n Mysore - 570 008",
-            phone: "+91 821 2345678",
-            email: "sales.mysore@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+            address: "#80/1, 1st Block, Bychanahalli, Mangalore Mysore Road, Kushalnagar, Karnataka - 571 234.",
+            phone: "+91 88844 98958",
+            email: "salescv.wf@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.945086531723!2d75.9493138!3d12.453378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba509cd1b9f725f%3A0x7ae5120debe37d14!2sMAHINDRA%20INDIA%20GARAGE-MYSORE!5e0!3m2!1sen!2sin!4v1747899225545!5m2!1sen!2sin"
+          },
+          {
+            address: "#1608 Adhichunchanagiri Road, Kuvempunagar, P and T Block, Chamaraja Mohalla, Mysuru - 570 023.",
+            phone: "+91 88844 98959",
+            email: "sales.kuvempunagar@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.3451145362455!2d76.6313254!3d12.2925299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7b574f907843%3A0x6471774e6fa1206a!2sMahindra%20Indian%20Garage!5e0!3m2!1sen!2sin!4v1747899405373!5m2!1sen!2sin"
+          },
+          {
+            address: "Mahindra Showroom, India Garage, Opp, Eid Ground, Maddur, Karnataka - 571 428.",
+            phone: "+91 88844 98959",
+            email: "sales.maddur@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31158.41933595251!2d76.8878506!3d12.5292446!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899553266!5m2!1sen!2sin"
+          },
+          {
+            address: "#C-18, Madikeri Bypass Road, Hunsur, Karnataka - 571105.",
+            phone: "+91 88844 98959",
+            email: "sales.hunsur@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.1152686131504!2d76.3029991!3d12.308023599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5ab35e5923543%3A0x93eca4c127398a40!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747899617805!5m2!1sen!2sin"
+          },
+          {
+            address: "No.1-4-35B, Two Shutter Ground Floor, Jayanagara, K R Pete, Mandya - 571 426.",
+            phone: "+91 88844 98959",
+            email: "sales.krpete@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31157.027815071415!2d76.9194856!3d12.5407536!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899692604!5m2!1sen!2sin"
           }
+        ],
+         "sales & service": [
+          {
+            address: "Near LIC Opp Simha Theatre, Chamrajnagar - 571 313.",
+            phone: "+91 88844 98959",
+            email: ["ig.chnagar@india-garage.in", "service.chnagar@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.63656126204!2d76.933995!3d11.9303616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe93a3dc03%3A0x2b3ece5b81cda608!2sMahindra%20India%20Garage%20Mysore%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899794763!5m2!1sen!2sin"
+          },
         ],
         service: [
           {
-            address: "#67, Ring Road,\n Mysore - 570 008",
-            phone: "+91 821 2345679",
-            email: "service.mysore@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMahindra%20India%20Garage%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
-          }
+            address: "#427/1A, Hebbal Ind. Area, Metagalli Post, Mysuru - 570 016.",
+            phone: "+91 91485 89147",
+            email: ["smhebbal@india-garage.in", "bodyshopmanager@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.265546858863!2d76.6155936!3d12.3651366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7a3d00d7608b%3A0x260b9f18e163c5a8!2sMahindra%20India%20Garage%20%E2%80%93Workshop!5e0!3m2!1sen!2sin!4v1747899872802!5m2!1sen!2sin"
+          },
+           {
+            address: "#201/202, Hunsur Road, next to Church, Vijayanagar 4th Stage, Hinkal, Mysuru-570 017.",
+            phone: "+91 88844 98959",
+            email: "sales.mysore@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3897.8701066935896!2d76.6107134!3d12.3245286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7af1a8477065%3A0xba976c8cd1a206a1!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899946356!5m2!1sen!2sin"
+          },
+          {
+            address: "Old B.M Road, Gutturur village, Kottathi hobli, Belur Grampanchayat, Malavalli - 571 403.",
+            phone: "+91 88844 98959",
+            email: ["igmandya@india-garage.in", "mandyaservice@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62313.99311644604!2d76.8699647!3d12.541012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747900006805!5m2!1sen!2sin"
+          },
+           {
+            address: "#292/10, Block #23, Sampige Katte Road, Madikeri - 571 201.",
+            phone: "+91 88844 98959",
+            email: ["sales.madikeri@india-garage.in", "service.madikeri@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.2574093870294!2d75.75174919999999!3d12.432562299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5aa9e27787899%3A0x9014a3a231e9653d!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747900081135!5m2!1sen!2sin"
+          },
+          {
+            address: "State Highway 90, Ponnampet, Road Jodubetti, Gonikoppal - 571 213.",
+            phone: "+91 88844 98959",
+            email: ["sales.gonikoppal@india- garage.in", "service.gonikoppal@india-garage.in"],
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.360701638476!2d75.939742!3d12.1558282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5ba3786b87fad%3A0xc4dcb9f89be834c9!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747900133812!5m2!1sen!2sin"
+          } 
         ]
       }
     }
