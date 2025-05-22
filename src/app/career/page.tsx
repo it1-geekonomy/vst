@@ -208,10 +208,6 @@ export default function Page() {
         <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
           <div className="bg-[#3B3B3B] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-12 lg:px-28">
-            <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-center mb-4 sm:mb-6 md:mb-8 font-roc font-normal">
-              Join our team
-            </h2>
-
             <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-1 gap-4 md:gap-6 lg:gap-8">
                 {/* Personal Details Section - Preserved styling */}
@@ -277,7 +273,7 @@ export default function Page() {
                       required
                       rows={4}
                       maxLength={MAX_ABOUT_CHARS}
-                      className="w-full bg-[#666666] border border-[#FDB813] rounded-xl p-4 focus:outline-none resize-none shadow-md transition-all duration-200"
+                      className="w-full bg-[#666666]  rounded-xl p-4 focus:outline-none resize-none shadow-md transition-all duration-200"
                     />
                     <div className="w-full h-1 mt-2 rounded-full overflow-hidden">
                       <div
