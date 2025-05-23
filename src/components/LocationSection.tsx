@@ -31,16 +31,16 @@ const LocationSection: React.FC<LocationSectionProps> = ({
   iconColor = 'black'
 }) => {
   return (
-    <section className="w-full px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32 flex flex-col md:flex-row items-center justify-center z-10 relative mx-auto">
-      <div className="flex flex-col md:flex-row items-center 2xl:justify-center  w-full gap-4 sm:gap-6 md:gap-8 lg:gap-7 xl:gap-20 2xl:gap-20">
+    <section className="w-full px-0 sm:px-0 md:px-6 lg:px-8 xl:px-12 2xl:px-16 flex flex-col md:flex-row items-center justify-center z-10 relative py-4 md:py-8">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-[1280px] mx-auto gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
         {/* Left section with title and image */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start w-full md:w-auto md:max-w-[45%] lg:max-w-[48%] xl:max-w-[50%]">
           <h2
-            className={`text-[#2B0B1F] text-center md:text-left mb-4 sm:mb-6 md:mb-8 font-roc ${className}`}
+            className={`text-[#2B0B1F] text-center md:text-left mb-4 sm:mb-6 font-roc ${className}`}
             style={{
-              fontSize: 'clamp(28px, 4vw, 50px)',
+              fontSize: 'clamp(24px, 3.5vw, 50px)',
               lineHeight: '1.2',
-              letterSpacing: '-2px',
+              letterSpacing: '-1px',
             }}
           >
             Our Location
@@ -49,7 +49,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
             href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-[220px] h-[200px] sm:w-[280px] sm:h-[240px] md:w-[300px] md:h-[220px] lg:w-[350px] lg:h-[220px] overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            className="relative w-full max-w-[340px] h-[200px] sm:max-w-[330px] sm:h-[220px] md:w-[400px] md:h-[210px] lg:w-[470px] lg:h-[230px] xl:w-[450px] xl:h-[220px] 2xl:w-[480px] 2xl:h-[235px] overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <Image
               src={require(`@/app/public/${locationImage}`)}
@@ -62,14 +62,14 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex flex-col md:flex-row sm:gap-6 md:gap-12 lg:gap-10 xl:gap-20 2xl:gap-28 w-full md:w-auto mt-8 md:mt-24">
+        <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 w-full md:w-auto md:max-w-[55%] lg:max-w-[52%] xl:max-w-[50%] mt-12 md:mt-16 items-center md:items-start justify-center">
           {/* Address */}
-          <div className="text-center md:text-left mb-8">
+          <div className="text-center md:text-left flex items-center">
             <p
               className={`font-roc font-normal ${className}`}
               style={{
-                fontSize: 'clamp(16px, 2.5vw, 24px)',
-                lineHeight: '1.5',
+                fontSize: 'clamp(15px, 2vw, 24px)',
+                lineHeight: '1.6',
               }}
             >
               {address.street}
@@ -84,17 +84,17 @@ const LocationSection: React.FC<LocationSectionProps> = ({
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col items-center md:items-start md:mt-0">
+          <div className="flex flex-col items-center md:items-start justify-center">
             {/* Phone Numbers */}
             <div className="flex flex-col">
               {phoneNumbers.map((phone, idx) => (
                 <a 
                   key={phone} 
                   href={`tel:${phone.replace(/\s+/g, '')}`}
-                  className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
+                  className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity mb-2 last:mb-0"
                 >
                   <svg 
-                    className="w-5 h-5 mr-2" 
+                    className="w-5 h-5 mr-2 flex-shrink-0" 
                     fill={iconColor}
                     stroke={iconColor}
                     viewBox="0 0 24 24" 
@@ -105,10 +105,10 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     />
                   </svg>
                   <span
-                    className={`font-roc font-normal ${className}`}
+                    className={`font-roc font-normal break-all ${className}`}
                     style={{
-                      fontSize: 'clamp(16px, 2.5vw, 24px)',
-                      lineHeight: '1.7',
+                      fontSize: 'clamp(15px, 2vw, 24px)',
+                      lineHeight: '1.6',
                     }}
                   >
                     {phone.replace('📞 ', '')}
@@ -119,14 +119,14 @@ const LocationSection: React.FC<LocationSectionProps> = ({
 
             {/* Email Addresses */}
             {emails && (
-              <div className="flex flex-col">
+              <div className="flex flex-col mt-1">
                 {emails.info && (
                   <a 
                     href={`mailto:${emails.info}`}
-                    className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
+                    className="flex items-center hover:opacity-80 transition-opacity mb-2"
                   >
                     <svg 
-                      className="w-6 h-6 mr-2" 
+                      className="w-5 h-5 mr-2 flex-shrink-0" 
                       fill={iconColor}
                       stroke={iconColor}
                       viewBox="0 0 24 24" 
@@ -140,10 +140,10 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       />
                     </svg>
                     <span
-                      className={`font-roc font-normal ${className}`}
+                      className={`font-roc font-normal break-all ${className}`}
                       style={{
-                        fontSize: 'clamp(16px, 2.5vw, 24px)',
-                        lineHeight: '1.5'
+                        fontSize: 'clamp(15px, 2vw, 24px)',
+                        lineHeight: '1.6'
                       }}
                     >
                       {emails.info}
@@ -153,21 +153,21 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                 {emails.globalConnect && (
                   <div className="flex flex-col">
                     <span
-                      className={`font-roc ${className}`}
+                      className={`font-roc ${className} mb-1`}
                       style={{
-                        fontSize: 'clamp(14px, 2vw, 20px)',
-                        lineHeight: '1.5',
-                        fontWeight: 400
+                        fontSize: 'clamp(14px, 1.8vw, 20px)',
+                        lineHeight: '1.4',
+                        fontWeight: 500
                       }}
                     >
                       Global Connect
                     </span>
                     <a 
                       href={`mailto:${emails.globalConnect}`}
-                      className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity"
+                      className="flex items-center hover:opacity-80 transition-opacity"
                     >
                       <svg 
-                        className="w-6 h-6 mr-2" 
+                        className="w-5 h-5 mr-2 flex-shrink-0" 
                         fill={iconColor}
                         stroke={iconColor}
                         viewBox="0 0 24 24" 
@@ -181,10 +181,10 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                         />
                       </svg>
                       <span
-                        className={`font-roc font-normal ${className}`}
+                        className={`font-roc font-normal break-all ${className}`}
                         style={{
-                          fontSize: 'clamp(16px, 2.5vw, 24px)',
-                          lineHeight: '1.5'
+                          fontSize: 'clamp(15px, 2vw, 24px)',
+                          lineHeight: '1.6'
                         }}
                       >
                         {emails.globalConnect}

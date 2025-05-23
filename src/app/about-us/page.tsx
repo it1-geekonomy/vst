@@ -213,38 +213,57 @@ function AboutUsPage() {
                   // Calculate 3D rotation and z position
                   let rotateX = 0;
                   let translateZ = 0;
+                  let translateX = 0;
                   let translateY = 0;
                   let opacity = 1;
                   let scale = 1;
                   
                   if (position === -1) {
-                    rotateX = 0; // Rotated upward
-                    translateZ = -100; // Behind
-                    translateY = -160; // Increased vertical spacing
+                    if (window.innerWidth >= 1024) {
+                      translateY = -160;
+                      translateX = 0;
+                    } else {
+                      // Mobile/tablet horizontal layout
+                      const gap = window.innerWidth >= 640 ? 90 : 70; // 90px for tablet, 70px for mobile
+                      translateY = 0;
+                      translateX = -gap;
+                    }
                     opacity = 0.7;
-                    scale = 0.85;
+                    scale = window.innerWidth >= 1024 ? 0.85 : 0.7; // smaller on mobile
                   } else if (position === 1) {
-                    rotateX = 0; // Rotated downward
-                    translateZ = -100; // Behind
-                    translateY = 160; // Increased vertical spacing
+                    if (window.innerWidth >= 1024) {
+                      translateY = 160;
+                      translateX = 0;
+                    } else {
+                      const gap = window.innerWidth >= 640 ? 90 : 70;
+                      translateY = 0;
+                      translateX = gap;
+                    }
                     opacity = 0.7;
-                    scale = 0.85;
+                    scale = window.innerWidth >= 1024 ? 0.85 : 0.7;
                   } else {
-                    // Center position
                     rotateX = 0;
                     translateZ = 0;
                     translateY = 0;
                     opacity = 1;
-                    scale = 1.25;
+                    scale = window.innerWidth >= 1024 ? 1.25 : 1; // reduce active scale on mobile
                   }
                   
                    return (
                     <button
                       key={item.year}
                       onClick={() => handleYearClick(item.year)}
-                      className={`absolute lg:absolute left-1/2 top-1/2 ${isSelected ? 'text-clamp-96' : 'text-clamp-67'} font-normal font-roc`}
+                      className={`absolute lg:absolute left-1/2 top-1/2 font-normal font-roc ${
+                        isSelected
+                          ? window.innerWidth >= 1024
+                            ? 'text-clamp-96'
+                            : 'text-clamp-64'
+                          : window.innerWidth >= 1024
+                            ? 'text-clamp-67'
+                            : 'text-clamp-32'
+                      }`}
                       style={{
-                        transform: `translate(-50%, calc(-50% + ${translateY}px)) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${isSelected ? 1.2 : 1.2})`,
+                        transform: `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${isSelected ? 1.2 : 1.2})`,
                         opacity: opacity,
                         color: isSelected ? "rgba(254, 191, 61, 1)" : "rgba(61, 117, 193, 1)",
                         filter: "none", // <- remove blur entirely
@@ -314,10 +333,10 @@ function AboutUsPage() {
                         <div
                           className={`relative rounded-full overflow-hidden
                             ${isMainImage
-                              ? 'w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] xl:w-[320px] xl:h-[320px]'
+                              ? 'w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[340px] lg:h-[340px] xl:w-[400px] xl:h-[400px]'
                               : index === 1
-                              ? 'w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[240px] lg:h-[240px] xl:w-[280px] xl:h-[280px]'
-                              : 'w-[80px] h-[80px] sm:w-[130px] sm:h-[130px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] xl:w-[260px] xl:h-[260px]'}`}
+                              ? 'w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] xl:w-[340px] xl:h-[340px]'
+                              : 'w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[240px] lg:h-[240px] xl:w-[300px] xl:h-[300px]'}`}
                           style={{
                             transition: "width 400ms cubic-bezier(0.4, 0.0, 0.2, 1), height 400ms cubic-bezier(0.4, 0.0, 0.2, 1)",
                             transform: isMainImage ? `scale(${scale})` : 'scale(1)', 

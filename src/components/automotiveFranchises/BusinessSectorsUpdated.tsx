@@ -16,14 +16,14 @@ const BusinessSectorsUpdated = () => {
   const isEducationPage = pathname === "/education";
 
   return (
-    <div className="w-full flex justify-center items-center relative z-10 mt-28">
+    <div className="w-full flex justify-center items-center relative z-10 mt-28 ">
       {" "}
       {/* Adjusted top margin */}
       <div
         className="w-full max-w-[1920px] py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24"
         style={{ height: "454px" }}
       >
-        <h2 className="font-roc font-medium text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
+        <h2 className="font-roc font-medium text-[24px] sm:text-[32px] md:text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
           Explore Our Other Business Sectors
         </h2>
 
@@ -96,78 +96,70 @@ const BusinessSectorsUpdated = () => {
             )}
           </div>
 
-          {/* Mobile view - horizontal scroller with one icon at a time */}
-          <div className="md:hidden w-full overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory">
-            <div className="flex gap-8 min-w-max">
+          {/* Mobile view - horizontal layout without scrolling */}
+          <div className="md:hidden w-full px-4">
+            <div className="flex justify-center items-center gap-5">
               {!isAutomotiveFranchisesPage && (
                 <Link
                   href="/automotive-franchises"
-                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity snap-center w-[80vw]"
+                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-full flex justify-center">
-                    <div className="flex items-end justify-center h-[120px] w-[120px]">
-                      <Image
-                        src={Automobile}
-                        alt="Auto"
-                        width={120}
-                        height={120}
-                        className="object-contain"
-                      />
-                    </div>
+                  <div className="flex items-end justify-center h-[90px] w-[90px]">
+                    <Image
+                      src={Automobile}
+                      alt="Auto"
+                      width={90}
+                      height={90}
+                      className="object-contain"
+                    />
                   </div>
                 </Link>
               )}
               {!isManufacturePage && (
                 <Link
                   href="/manufacture"
-                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity snap-center w-[80vw]"
+                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-full flex justify-center">
-                    <div className="flex items-end justify-center h-[130px] w-[130px] -mt-3">
-                      <Image
-                        src={ManufacturingIcon}
-                        alt="Manufacturing"
-                        width={135}
-                        height={135}
-                        className="object-contain"
-                      />
-                    </div>
+                  <div className="flex items-end justify-center h-[90px] w-[90px] -mt-2">
+                    <Image
+                      src={ManufacturingIcon}
+                      alt="Manufacturing"
+                      width={90}
+                      height={90}
+                      className="object-contain"
+                    />
                   </div>
                 </Link>
               )}
               {!isAutoPartsPage && (
                 <Link
                   href="/auto-parts"
-                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity snap-center w-[80vw]"
+                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-full flex justify-center">
-                    <div className="flex items-end justify-center h-[120px] w-[120px]">
-                      <Image
-                        src={Auto}
-                        alt="Auto"
-                        width={120}
-                        height={120}
-                        className="object-contain"
-                      />
-                    </div>
+                  <div className="flex items-end justify-center h-[90px] w-[90px]">
+                    <Image
+                      src={Auto}
+                      alt="Auto"
+                      width={90}
+                      height={90}
+                      className="object-contain"
+                    />
                   </div>
                 </Link>
               )}
               {!isEducationPage && (
                 <Link
                   href="/education"
-                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity snap-center w-[80vw]"
+                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-full flex justify-center">
-                    <div className="flex items-end justify-center h-[100px] w-[100px] pt-30">
-                      <Image
-                        src={EducationIcon}
-                        alt="Education"
-                        width={100}
-                        height={100}
-                        className="object-contain"
-                      />
-                    </div>
+                  <div className="flex items-end justify-center h-[90px] w-[90px] pt-2">
+                    <Image
+                      src={EducationIcon}
+                      alt="Education"
+                      width={90}
+                      height={90}
+                      className="object-contain"
+                    />
                   </div>
                 </Link>
               )}

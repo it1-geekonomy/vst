@@ -229,8 +229,13 @@ export default function EducationPage() {
             {galleryImages.map((image, index) => (
               <div
                 key={image.id}
-                className={`relative overflow-hidden transition-all duration-1000 ease-in-out ${showAllImages ? 'flex-[3]' : index === activeDesktopImage ? 'flex-[35]' : 'flex-[3]'
-                  }`}
+                className={`relative overflow-hidden transition-all duration-1000 ease-in-out ${
+                  showAllImages 
+                    ? 'flex-[1.5] md:flex-[1.5] lg:flex-[3]' 
+                    : index === activeDesktopImage 
+                      ? 'flex-[35] md:flex-[40] lg:flex-[35]' 
+                      : 'flex-[1.5] md:flex-[1.5] lg:flex-[3]'
+                }`}
                 style={{
                   height: showAllImages ? image.height : index === activeDesktopImage ? '94%' : image.height,
                   transition: 'all 1s ease-in-out'
@@ -271,7 +276,7 @@ export default function EducationPage() {
         <section className="w-full px-4 md:px-8 lg:px-32 pb-2 md:pb-2 lg:pb-2 z-10  mx-auto">
           <div className="text-center mx-auto">
             <p className="text-clamp-28 font-normal font-roc text-justify whitespace-pre-wrap">
-              SKEI, Bangalore is a renowned CBSE institution with a rich legacy of over 100 years, committed to providing a holistic and innovative education. Founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar—a visionary entrepreneur and philanthropist—the school was born out of a mission to address the lack of educational opportunities for girls, including his own daughters.{'\n\n'}
+              SKEI, Bangalore is a renowned co-education CBSE institution with a rich legacy of over 100 years, committed to providing a holistic and innovative education. Founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar—a visionary entrepreneur and philanthropist—the school was born out of a mission to address the lack of educational opportunities for girls, including his own daughters.{'\n\n'}
               Rooted in a learner-centric philosophy, SKEI blends tradition with transformation, offering a nurturing environment that fosters both critical and creative thinking. The school's mission is to empower students with 21st-century skills, preparing them to excel in a global context while emphasizing values, leadership, and a passion for lifelong learning.{'\n\n'}
               Our century-old campus stands as a symbol of inclusive, values-driven education, where academic excellence goes hand-in-hand with empathy, integrity, and leadership. As envisioned by our founder, SKEI continues to be "a sacred place from which girls and boys shall take the highest aspirations to lead better, grander, and more fulfilling lives."
             </p>
@@ -294,7 +299,7 @@ export default function EducationPage() {
         </div>
 
         {/* Our Location section - using the new component */}
-        <div className="w-full px-4 md:px-8 lg:px-32 mb-1">
+        <div className="w-full px-1 sm:px-2 md:px-6 lg:px-12 xl:px-32 2xl:px-40 mb-1">
           <LocationSection
             locationImage="education/educational location.png"
             address={{
