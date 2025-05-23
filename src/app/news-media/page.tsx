@@ -19,7 +19,7 @@ import hcard1 from "@/app/public/news-and-media/Image Placeholder 1.jpg";
 import hcard2 from "@/app/public/news-and-media/Image Placeholder 2.jpg";
 import hcard3 from "@/app/public/news-and-media/Image Placeholder 3.jpg";
 import hcard4 from "@/app/public/news-and-media/Image Placeholder 4.jpg";
-import bgimg from "@/app/public/images/news/bimg.jpg";
+import bgimg from "@/app/public/images/news/BACKIMG.jpg";
 import frame3 from "@/app/public/images/news/card6New.png";
 
 
@@ -159,12 +159,12 @@ export default function NewsMedia() {
       <section className="relative w-full h-auto min-h-[90vh] md:min-h-[100vh] lg:min-h-[110vh] pt-[10px] mt-[20px] md:mt-[40px] mb-[400px] md:mb-[500px] lg:mb-0">
         {/* Top blend gradient for seamless transition */}
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-t from-transparent to-[#2E2E2E] z-20 pointer-events-none" />
-        <div className="absolute inset-0 bg-black/20 z-10"></div>
+        <div className="absolute inset-0 bg-black/5 z-10"></div>
         <Image 
           src={bgimg} 
           alt="News Background" 
           fill 
-          className="object-cover"
+          className="object-cover  "
           priority
         />
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#2E2E2E] via-[#2E2E2E]/50 to-transparent z-10"></div>
@@ -183,7 +183,7 @@ export default function NewsMedia() {
                       {headlines.map((headline, index) => (
                         <h1 
                           key={index}
-                          className={`text-white w-full lg:w-[35rem] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl leading-tight tracking-tight font-roc font-bold absolute transition-all duration-1000 ${
+                          className={`text-black w-full lg:w-[35rem] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl leading-tight tracking-tight font-roc font-semibold absolute transition-all duration-1000 ${
                             currentIndex === index 
                               ? "opacity-100 translate-x-0" 
                               : index === (currentIndex + 1) % headlines.length || (currentIndex === headlines.length - 1 && index === 0)
@@ -228,7 +228,7 @@ export default function NewsMedia() {
                                 />
                               </div>
                               <div className="w-full pt-2 sm:pt-3">
-                                <p className="text-sm sm:text-base font-normal text-white leading-tight text-center w-full px-1 sm:px-2">
+                                <p className="text-sm sm:text-base font-normal text-black leading-tight text-center w-full px-1 sm:px-2">
                                   {card.text}
                                 </p>
                               </div>
@@ -252,7 +252,7 @@ export default function NewsMedia() {
                                 />
                               </div>
                               <div className="w-full pt-2 sm:pt-3">
-                                <p className="text-sm sm:text-base font-normal text-white leading-tight text-center w-full px-1 sm:px-2">
+                                <p className="text-sm sm:text-base font-normal text-black leading-tight text-center w-full px-1 sm:px-2">
                                   {headlines2[(index + 1) % headlines2.length].text}
                                 </p>
                               </div>
@@ -269,7 +269,7 @@ export default function NewsMedia() {
               <div className="w-full lg:w-[45%] xl:w-[40%] flex flex-col justify-start lg:justify-end px-4 md:px-6 lg:px-8 pb-8 lg:pb-18 mt-8 md:mt-10 lg:mt-0">
                 <div className="bg-black/70 h-auto min-h-[400px] md:min-h-[500px] lg:h-[85vh] w-full overflow-hidden flex flex-col bg-white/10 backdrop-blur-sm rounded-lg shadow-lg">
                   <div className="flex flex-col h-full px-4 sm:px-6 md:px-8 lg:px-12 pt-8 sm:pt-10 md:pt-12 lg:pt-16 pb-6 lg:pb-8">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal mb-4 sm:mb-6 lg:mb-8 text-white font-roc">Group Updates</h2>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal mb-4 sm:mb-6 lg:mb-8 text-black font-roc">Group Updates</h2>
                     <div className="space-y-3 lg:space-y-4 flex-grow overflow-y-auto hideScrollbar pr-2">
                       {cards.map((item, index) => (
                         <a 
@@ -295,7 +295,7 @@ export default function NewsMedia() {
                               )}
                             </div>
                             <div className="w-7/12 h-full flex items-center justify-center">
-                              <p className="text-xs sm:text-sm md:text-base font-normal text-white leading-tight text-start w-full px-1 sm:px-2 line-clamp-3">
+                              <p className="text-xs sm:text-sm md:text-base font-normal text-black leading-tight text-start w-full px-1 sm:px-2 line-clamp-3">
                                 {item.text}
                               </p>
                             </div>
