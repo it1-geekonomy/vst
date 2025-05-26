@@ -977,14 +977,14 @@ const FranchiseSlider = () => {
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-2 sm:gap-4 lg:gap-8 h-auto lg:h-[16rem] translate-y-[-10%] lg:translate-y-[-20%] w-full lg:mt-16">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-2 sm:gap-1 lg:gap-2 h-auto lg:h-[16rem] translate-y-[-10%] lg:translate-y-[-20%] w-full lg:mt-16">
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
                 className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mb-2 sm:mb-4 lg:mb-0"
               >
                 <svg
-                  className="w-6 sm:w-8 lg:w-12 h-6 sm:h-8 lg:h-12"
+                  className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1049,7 +1049,7 @@ const FranchiseSlider = () => {
                 className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mt-2 sm:mt-4 lg:mt-0"
               >
                 <svg
-                  className="w-6 sm:w-8 lg:w-12 h-6 sm:h-8 lg:h-12"
+                  className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
