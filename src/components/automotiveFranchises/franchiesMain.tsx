@@ -23,14 +23,7 @@ import bg3 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-301400
 
 import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
 
-// import car4 from "@/app/public/faranchies/carpic/4car.png";
-// import car5 from "@/app/public/faranchies/carpic/5car.png";
-// import car6 from "@/app/public/faranchies/carpic/6car.png";
-// import car7 from "@/app/public/faranchies/carpic/7car.png";
-// import bike from "@/app/public/faranchies/carpic/bike.png";
-// import hondabike from "@/app/public/faranchies/carpic/Honda-bike.png";
-// import volkswagen from "@/app/public/faranchies/carpic/volkswagen-car.png";
-// import byd from "@/app/public/faranchies/carpic/byd-car.png";
+
 import porsche from "@/app/public/faranchies/newcarpics/porsche4.png";
 import benzs from "@/app/public/faranchies/newcarpics/benz1.png";
 import jaguar from "@/app/public/faranchies/newcarpics/jaguar2.png";
@@ -941,9 +934,9 @@ const FranchiseSlider = () => {
         transition={{ duration: 0.01 }}
       >
         {/* Car section */}
-        <div className="relative w-full h-auto sm:h-[90vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[10rem] mb-[4rem]">
+        <div className="relative w-full h-auto sm:h-auto lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[10rem] mb-[4rem]">
           {/* Left section with background and car */}
-          <div className="relative w-full sm:w-full lg:w-[85%] h-[50vh] sm:h-[70vh] lg:h-full xl:h-[100vh]">
+          <div className="relative w-full lg:w-[85%] h-[50vh] sm:h-[50vh] lg:h-full xl:h-[100vh]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`bg-${currentSlide}`}
@@ -951,7 +944,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 w-full lg:w-[92%] h-full sm:h-[70vh] lg:h-[95%] rounded-br-[60px] sm:rounded-br-[80px] lg:rounded-br-[120px] overflow-hidden"
+                className="absolute left-0 w-full lg:w-[92%] h-full sm:h-[80vh] lg:h-[95%] rounded-br-[60px] sm:rounded-br-[60px] lg:rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
@@ -965,21 +958,11 @@ const FranchiseSlider = () => {
                   }}
                 />
               </motion.div>
-
-              {/* Static blue accent bars - hidden on mobile/tablet */}
-              <div
-                className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none"
-                style={{ backgroundColor: "#2676A6" }}
-              />
-              <div
-                className="hidden lg:block absolute top-0 right-[4rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%] rounded-br-full rounded-bl-none rounded-t-none"
-                style={{ backgroundColor: "#3C92C6" }}
-              />
             </AnimatePresence>
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-4 sm:px-6 lg:px-1 flex flex-col justify-between sm:justify-end lg:justify-between py-4 sm:py-0 lg:py-20 mt-4 sm:mt-[12rem] lg:mt-0 sm:mb-19 gap-0 sm:gap-32 lg:gap-0">
+          <div className="relative w-full lg:w-[45%] px-4 sm:px-6 lg:px-1 flex flex-col justify-start lg:justify-between py-4 lg:py-20 mt-4 lg:mt-0 gap-0 lg:gap-0">
             {/* Title */}
             <div className="flex-1 flex items-center justify-center sm:justify-center  sm:mb-[2rem] lg:mb-[4rem] mb-[2rem] w-full">
               <h2 className="text-white font-rocWide font-light text-4xl sm:text-[3.5rem] lg:text-[4.5rem] text-center lg:text-start w-full sm:w-[90%] lg:w-auto">
@@ -1021,7 +1004,7 @@ const FranchiseSlider = () => {
                   className="flex items-center gap-4 sm:gap-6 lg:gap-16"
                   animate={{
                     x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 216 : (screenWidth ?? 1200) < 1024 ? 223 : 264)}px`,
-                    translateX: (screenWidth ?? 1200) < 640 ? "9.6%" : (screenWidth ?? 1200) < 1024 ? "9.6%" : "-0.1%",
+                    translateX: (screenWidth ?? 1200) < 640 ? "9.59%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.1%",
                   }}
                   transition={{
                     duration: 0.5,
