@@ -1,6 +1,6 @@
-import CSR from '../../components/CSR';
+"use client";
+import CorporatePhilanthropy from "../../components/CSR";
 
 export default function CSRPage() {
-    return <CSR />;
+  return <CorporatePhilanthropy />;
 }
-  
