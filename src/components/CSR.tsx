@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import bg from "../app/public/makingdiff/orange-bg.png";
 import VSTLogoAnimation from "./VSTLogoAnimation";
 import Timeline from "./Timeline";
+import InitiativesSection from "./InitiativesSection";
 export default function CorporatePhilanthropy() {
   return (
     <div className={`flex flex-col min-h-screen font-roc font-normal`}>
@@ -46,9 +47,9 @@ export default function CorporatePhilanthropy() {
             </div>
           </section>
           {/* Initiatives Section */}
-          {/* <div className="w-full py-6 sm:py-4 md:py-6 lg:py-8 pl-0 sm:pl-0">
-            <Initiatives />
-          </div> */}
+          <div className="w-full py-6 sm:py-4 md:py-6 lg:py-8 pl-0 sm:pl-0">
+            <InitiativesSection />
+          </div>
           <div>
             <Timeline />
           </div>
