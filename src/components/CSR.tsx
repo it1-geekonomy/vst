@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 import Footer from "./Footer";
 import bg from "../app/public/makingdiff/orange-bg.png";
 import VSTLogoAnimation from "./VSTLogoAnimation";
-import TimelineSection from "./TimelineSection";
-import InitiativesSection from "./InitiativesSection";
-
-const CSR = () => {
+import Timeline from "./Timeline";
+export default function CorporatePhilanthropy() {
   return (
     <div className={`flex flex-col min-h-screen font-roc font-normal`}>
       <main className="relative flex-grow overflow-x-hidden">
@@ -48,10 +46,12 @@ const CSR = () => {
             </div>
           </section>
           {/* Initiatives Section */}
-          <div className="">
-            <InitiativesSection />
+          {/* <div className="w-full py-6 sm:py-4 md:py-6 lg:py-8 pl-0 sm:pl-0">
+            <Initiatives />
+          </div> */}
+          <div>
+            <Timeline />
           </div>
-          <TimelineSection />
         </motion.div>
         <div className="w-full mt-60 mb-15">
           <VSTLogoAnimation />
@@ -60,6 +60,4 @@ const CSR = () => {
       <Footer bgcolour="bg-black" />
     </div>
   );
-};
-
-export default CSR;
+}
