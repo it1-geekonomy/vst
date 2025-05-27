@@ -11,6 +11,35 @@ import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
 import { useRouter } from "next/navigation";
 
+// Add this custom hook at the top level, before the component
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+    
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures effect is only run on mount
+
+  return windowSize;
+}
+
 function AboutUsPage() {
   const [selectedYear, setSelectedYear] = useState("1911");
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -18,6 +47,7 @@ function AboutUsPage() {
   const [blurAmount, setBlurAmount] = useState(0);
   const [scale, setScale] = useState(1);
   const router = useRouter();
+  const { width: windowWidth } = useWindowSize();
   // All timeline data
   const allTimelineData = [
     {
@@ -73,24 +103,20 @@ function AboutUsPage() {
   }, [isTransitioning]);
 
   const getPosition = (year: string) => {
-    // For the 3 visible items, determine their position
-    if (year === selectedYear) return 0; // center
+    if (year === selectedYear) return 0;
     
     const allYears = allTimelineData.map(item => item.year);
     const selectedIndex = allYears.indexOf(selectedYear);
     const yearIndex = allYears.indexOf(year);
     
-    // Previous year (above)
     if (yearIndex === (selectedIndex - 1 + allYears.length) % allYears.length) {
       return -1;
     }
     
-    // Next year (below)
     if (yearIndex === (selectedIndex + 1) % allYears.length) {
       return 1;
     }
     
-    // Not visible
     return null;
   };
 
@@ -210,7 +236,6 @@ function AboutUsPage() {
                   const position = getPosition(item.year);
                   const isSelected = selectedYear === item.year;
                   
-                  // Calculate 3D rotation and z position
                   let rotateX = 0;
                   let translateZ = 0;
                   let translateX = 0;
@@ -219,46 +244,45 @@ function AboutUsPage() {
                   let scale = 1;
                   
                   if (position === -1) {
-                    if (window.innerWidth >= 1024) {
+                    if (windowWidth >= 1024) {
                       translateY = -160;
                       translateX = 0;
                     } else {
-                      // Mobile/tablet horizontal layout
-                      const gap = window.innerWidth >= 640 ? 90 : 70; // 90px for tablet, 70px for mobile
+                      const gap = windowWidth >= 640 ? 90 : 70;
                       translateY = 0;
                       translateX = -gap;
                     }
                     opacity = 0.7;
-                    scale = window.innerWidth >= 1024 ? 0.85 : 0.7; // smaller on mobile
+                    scale = windowWidth >= 1024 ? 0.85 : 0.7;
                   } else if (position === 1) {
-                    if (window.innerWidth >= 1024) {
+                    if (windowWidth >= 1024) {
                       translateY = 160;
                       translateX = 0;
                     } else {
-                      const gap = window.innerWidth >= 640 ? 90 : 70;
+                      const gap = windowWidth >= 640 ? 90 : 70;
                       translateY = 0;
                       translateX = gap;
                     }
                     opacity = 0.7;
-                    scale = window.innerWidth >= 1024 ? 0.85 : 0.7;
+                    scale = windowWidth >= 1024 ? 0.85 : 0.7;
                   } else {
                     rotateX = 0;
                     translateZ = 0;
                     translateY = 0;
                     opacity = 1;
-                    scale = window.innerWidth >= 1024 ? 1.25 : 1; // reduce active scale on mobile
+                    scale = windowWidth >= 1024 ? 1.25 : 1;
                   }
                   
-                   return (
+                  return (
                     <button
                       key={item.year}
                       onClick={() => handleYearClick(item.year)}
                       className={`absolute lg:absolute left-1/2 top-1/2 font-normal font-roc ${
                         isSelected
-                          ? window.innerWidth >= 1024
+                          ? windowWidth >= 1024
                             ? 'text-clamp-96'
                             : 'text-clamp-64'
-                          : window.innerWidth >= 1024
+                          : windowWidth >= 1024
                             ? 'text-clamp-67'
                             : 'text-clamp-32'
                       }`}
@@ -266,7 +290,7 @@ function AboutUsPage() {
                         transform: `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${isSelected ? 1.2 : 1.2})`,
                         opacity: opacity,
                         color: isSelected ? "rgba(254, 191, 61, 1)" : "rgba(61, 117, 193, 1)",
-                        filter: "none", // <- remove blur entirely
+                        filter: "none",
                         transformStyle: "preserve-3d",
                         backfaceVisibility: "hidden",
                         transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"
