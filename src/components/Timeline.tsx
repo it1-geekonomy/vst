@@ -202,37 +202,37 @@ const AnimatedTimeline = () => {
       } else if (window.innerWidth < 580) {
         setSlideAmount(45);
       } else if (window.innerWidth < 680) {
-        setSlideAmount(70);
+        setSlideAmount(55);
       } else if (window.innerWidth < 780) {
-        setSlideAmount(80);
+        setSlideAmount(50);
       } else if (window.innerWidth < 880) {
-        setSlideAmount(90);
+        setSlideAmount(60);
       } else if (window.innerWidth < 980) {
-        setSlideAmount(100);
+        setSlideAmount(70);
       } else if (window.innerWidth < 1080) {
-        setSlideAmount(110);
+        setSlideAmount(80);
       } else if (window.innerWidth < 1180) {
-        setSlideAmount(120);
+        setSlideAmount(90);
       } else if (window.innerWidth < 1280) {
-        setSlideAmount(130);
+        setSlideAmount(100);
       } else if (window.innerWidth < 1380) {
-        setSlideAmount(140);
+        setSlideAmount(110);
       } else if (window.innerWidth < 1480) {
-        setSlideAmount(150);
+        setSlideAmount(120);
       } else if (window.innerWidth < 1580) {
-        setSlideAmount(160);
+        setSlideAmount(130);
       } else if (window.innerWidth < 1680) {
-        setSlideAmount(170);
+        setSlideAmount(140);
       } else if (window.innerWidth < 1780) {
-        setSlideAmount(180);
+        setSlideAmount(150);
       } else if (window.innerWidth < 1880) {
-        setSlideAmount(190);
+        setSlideAmount(160);
       } else if (window.innerWidth < 1980) {
-        setSlideAmount(190);
+        setSlideAmount(170);
       } else if (window.innerWidth < 2080) {
-        setSlideAmount(210);
+        setSlideAmount(180);
       } else if (window.innerWidth < 2180) {
-        setSlideAmount(220);
+        setSlideAmount(190);
       } else {
         setSlideAmount(230);
       }
@@ -334,7 +334,7 @@ const AnimatedTimeline = () => {
             )}
 
             {/* Current year */}
-            <span className="text-white sm:text-clamp-28 text-clamp-20 text-center sm:min-w-[120px] w-24">
+            <span className="text-white text-clamp-28 text-center sm:min-w-[90px] md:min-w-[120px] lg:min-w-[135px] xl:min-w-[150px] 2xl:min-w-[165px] w-24">
               {currentYear.year}
             </span>
 
