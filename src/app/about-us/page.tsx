@@ -201,7 +201,7 @@ function AboutUsPage() {
         {/* Timeline component */}
         <div className="flex flex-col lg:flex-row w-full px-4 sm:px-6 md:px-8 items-center ">
           {/* Timeline Years */}
-          <div className="w-full lg:w-1/3 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative lg:pr-0">
+          <div className="w-3/4 lg:w-1/3 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative lg:pr-0">
             {/* Up arrow - Moves timeline up (previous year) */}
             <button
               onClick={handlePrevClick}
@@ -357,15 +357,16 @@ function AboutUsPage() {
                         <div
                           className={`relative rounded-full overflow-hidden
                             ${isMainImage
-                              ? 'w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[340px] lg:h-[340px] xl:w-[400px] xl:h-[400px]'
+                              ? 'w-[40vw] max-w-[180px] sm:w-[30vw] sm:max-w-[220px] md:w-[22vw] md:max-w-[260px] lg:w-[320px] lg:max-w-[320px] xl:w-[380px] xl:max-w-[380px]'
                               : index === 1
-                              ? 'w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] xl:w-[340px] xl:h-[340px]'
-                              : 'w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[240px] lg:h-[240px] xl:w-[300px] xl:h-[300px]'}`}
+                              ? 'w-[28vw] max-w-[120px] sm:w-[20vw] sm:max-w-[160px] md:w-[16vw] md:max-w-[200px] lg:w-[220px] lg:max-w-[220px] xl:w-[260px] xl:max-w-[260px]'
+                              : 'w-[20vw] max-w-[90px] sm:w-[14vw] sm:max-w-[120px] md:w-[12vw] md:max-w-[140px] lg:w-[160px] lg:max-w-[160px] xl:w-[200px] xl:max-w-[200px]'}
+                            max-w-full h-auto aspect-square`}
                           style={{
                             transition: "width 400ms cubic-bezier(0.4, 0.0, 0.2, 1), height 400ms cubic-bezier(0.4, 0.0, 0.2, 1)",
-                            transform: isMainImage ? `scale(${scale})` : 'scale(1)', 
+                            transform: isMainImage ? `scale(${scale})` : 'scale(1)',
                             transformOrigin: 'center center',
-                            transitionProperty: 'transform, width, height',  
+                            transitionProperty: 'transform, width, height',
                             transitionDuration: isMainImage ? '5s, 400ms, 400ms' : '400ms, 400ms, 400ms',
                             transitionTimingFunction: 'ease-in-out, cubic-bezier(0.4, 0.0, 0.2, 1), cubic-bezier(0.4, 0.0, 0.2, 1)'
                           }}
@@ -397,7 +398,7 @@ function AboutUsPage() {
         </div>
 
         {/* About Us Text Section */}
-        <div className="mt-12 md:mt-16 px-4 md:px-52">
+        <div className="mt-12 md:mt-16 px-4 lg:px-52">
           <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-roc text-clamp-40">Our Legacy</h1>
 
           <div className="flex flex-col font-normal ">
@@ -436,7 +437,7 @@ function AboutUsPage() {
               <Image
                 src={gif}
                 alt="VST Logo Animation"
-                className="w-[70%] h-[70%] object-cover"
+                className="w-[100%] h-[100%] object-cover"
               />
             </div>
 
@@ -444,7 +445,7 @@ function AboutUsPage() {
               <h2 className="text-3xl md:text-4xl text-white mb-2 font-roc">
                 Progress with Purpose.
               </h2>
-              <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-roc">Impact with Vision</h3>
+              <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-roc">Impact with Vision.</h3>
               <button onClick={() => router.push("/career")} className="bg-yellow-400 text-black px-6 md:px-8 py-2 md:py-3 rounded text-base md:text-lg font-medium">
                 Join Us
               </button>
