@@ -2,10 +2,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
-import Initiatives from "./Initiatives";
 import bg from "../app/public/makingdiff/orange-bg.png";
 import VSTLogoAnimation from "./VSTLogoAnimation";
 import TimelineSection from "./TimelineSection";
+import InitiativesSection from "./InitiativesSection";
 
 const CSR = () => {
   return (
@@ -48,8 +48,8 @@ const CSR = () => {
             </div>
           </section>
           {/* Initiatives Section */}
-          <div className="w-full py-6 sm:py-4 md:py-6 lg:py-8 pl-0 sm:pl-0 ">
-            <Initiatives />
+          <div className="">
+            <InitiativesSection />
           </div>
           <TimelineSection />
         </motion.div>

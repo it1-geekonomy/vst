@@ -128,3 +128,16 @@ html {
 .text-clamp-230 {
   font-size: clamp(50px, 10.625vw, 230px);
 }
+
+.px-clamp-8rem {
+  padding-left: clamp(1rem, 5vw, 8rem);
+  padding-right: clamp(1rem, 5vw, 8rem);
+}
+.px-clamp-16rem {
+  padding-left: clamp(1rem, 8vw, 16rem);
+  padding-right: clamp(1rem, 8vw, 16rem);
+}
+.py-clamp {
+  padding-top: clamp(1rem, 3vw, 6rem);
+  padding-bottom: clamp(1rem, 3vw, 6rem);
+}
