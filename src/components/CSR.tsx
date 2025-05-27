@@ -28,11 +28,11 @@ export default function CorporatePhilanthropy() {
         >
           {/* Hero Section */}
           <section className="relative overflow-hidden z-10">
-            <div className="relative h-full flex flex-col items-center justify-start text-white">
-              <h1 className="text-clamp-120 ">
+            <div className="relative h-full flex flex-col items-center justify-start text-white py-14 md:py-16 lg:py-20 xl:py-24">
+              <h1 className="text-clamp-116 font-light p-6 lg:pb-8 xl:pb-10">
                 Making a Difference
               </h1>
-              <p className="text-[#FFFFFF] text-clamp-28 text-justify px-6  md:px-32 lg:px-48 xl:px-52">
+              <p className="text-[#FFFFFF] text-clamp-28 text-justify px-6  md:px-32 lg:px-48 xl:px-52 font-light">
                 Rooted in a legacy of responsibility and service, VST Group,
                 through the V.S. Tiruvengadaswamy Mudaliar Memorial Trust, has
                 consistently extended its hand to communities in need. From
@@ -47,7 +47,7 @@ export default function CorporatePhilanthropy() {
             </div>
           </section>
           {/* Initiatives Section */}
-          <div className="">
+          <div className="pb-18 lg:pb-20 xl:pb-24">
             <InitiativesSection />
           </div>
           <div>

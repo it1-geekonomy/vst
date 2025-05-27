@@ -120,6 +120,9 @@ html {
 .text-clamp-96 {
   font-size: clamp(48px, 5.5vw, 96px);
 }
+.text-clamp-116 {
+  font-size: clamp(58px, 6vw, 116px);
+}
 
 .text-clamp-120 {
   font-size: clamp(60px, 6.5vw, 120px);
