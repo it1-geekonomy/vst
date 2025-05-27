@@ -13,27 +13,37 @@ export default function InitiativesSection() {
       </p>
 
       <div className="w-full px-4 sm:px-8 md:px-10 lg:px-12 xl:px-24">
-        {/* Cross/Plus Layout - Compact */}
-        <div className="flex items-center justify-center">
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 md:gap-6 items-center">
-            {/* Left Column - Education */}
-            <div className="flex justify-center items-center h-full">
-              <InitiativeCard {...initiatives[0]} />
-            </div>
-
-            {/* Middle Column - Rural Development (top) and Sustainability (bottom) */}
-            <div className="flex flex-col gap-4 md:gap-6">
-              <InitiativeCard {...initiatives[1]} />
-              <InitiativeCard {...initiatives[2]} />
-            </div>
-
-            {/* Right Column - Healthcare */}
-            <div className="flex justify-center items-center h-full">
-              <InitiativeCard {...initiatives[3]} />
-            </div>
-          </div>
-        </div>
+  <div className="flex items-center justify-center">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-center">
+      
+      {/* Education */}
+      <div className="flex justify-center items-center h-full">
+        <InitiativeCard {...initiatives[0]} />
       </div>
+
+      {/* Rural Development (ONLY stacked for lg, split for md) */}
+      {/* Show two separate cards at md, stack at lg */}
+      <div className="hidden lg:flex flex-col gap-4 md:gap-6">
+        <InitiativeCard {...initiatives[1]} />
+        <InitiativeCard {...initiatives[2]} />
+      </div>
+
+      {/* For md screens, split the middle column into two separate grid items */}
+      <div className="flex  justify-center items-center h-full lg:hidden">
+        <InitiativeCard {...initiatives[1]} />
+      </div>
+      <div className="flex justify-center items-center h-full lg:hidden">
+        <InitiativeCard {...initiatives[2]} />
+      </div>
+
+      {/* Healthcare */}
+      <div className="flex justify-center items-center h-full">
+        <InitiativeCard {...initiatives[3]} />
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 }
