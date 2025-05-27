@@ -11,6 +11,35 @@ import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
 import { useRouter } from "next/navigation";
 
+// Add this custom hook at the top level, before the component
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+    
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures effect is only run on mount
+
+  return windowSize;
+}
+
 function AboutUsPage() {
   const [selectedYear, setSelectedYear] = useState("1911");
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -18,6 +47,7 @@ function AboutUsPage() {
   const [blurAmount, setBlurAmount] = useState(0);
   const [scale, setScale] = useState(1);
   const router = useRouter();
+  const { width: windowWidth } = useWindowSize();
   // All timeline data
   const allTimelineData = [
     {
@@ -73,24 +103,20 @@ function AboutUsPage() {
   }, [isTransitioning]);
 
   const getPosition = (year: string) => {
-    // For the 3 visible items, determine their position
-    if (year === selectedYear) return 0; // center
+    if (year === selectedYear) return 0;
     
     const allYears = allTimelineData.map(item => item.year);
     const selectedIndex = allYears.indexOf(selectedYear);
     const yearIndex = allYears.indexOf(year);
     
-    // Previous year (above)
     if (yearIndex === (selectedIndex - 1 + allYears.length) % allYears.length) {
       return -1;
     }
     
-    // Next year (below)
     if (yearIndex === (selectedIndex + 1) % allYears.length) {
       return 1;
     }
     
-    // Not visible
     return null;
   };
 
@@ -175,7 +201,7 @@ function AboutUsPage() {
         {/* Timeline component */}
         <div className="flex flex-col lg:flex-row w-full px-4 sm:px-6 md:px-8 items-center ">
           {/* Timeline Years */}
-          <div className="w-full lg:w-1/3 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative lg:pr-0">
+          <div className="w-3/4 lg:w-1/3 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative lg:pr-0">
             {/* Up arrow - Moves timeline up (previous year) */}
             <button
               onClick={handlePrevClick}
@@ -210,7 +236,6 @@ function AboutUsPage() {
                   const position = getPosition(item.year);
                   const isSelected = selectedYear === item.year;
                   
-                  // Calculate 3D rotation and z position
                   let rotateX = 0;
                   let translateZ = 0;
                   let translateX = 0;
@@ -219,46 +244,45 @@ function AboutUsPage() {
                   let scale = 1;
                   
                   if (position === -1) {
-                    if (window.innerWidth >= 1024) {
+                    if (windowWidth >= 1024) {
                       translateY = -160;
                       translateX = 0;
                     } else {
-                      // Mobile/tablet horizontal layout
-                      const gap = window.innerWidth >= 640 ? 90 : 70; // 90px for tablet, 70px for mobile
+                      const gap = windowWidth >= 640 ? 90 : 70;
                       translateY = 0;
                       translateX = -gap;
                     }
                     opacity = 0.7;
-                    scale = window.innerWidth >= 1024 ? 0.85 : 0.7; // smaller on mobile
+                    scale = windowWidth >= 1024 ? 0.85 : 0.7;
                   } else if (position === 1) {
-                    if (window.innerWidth >= 1024) {
+                    if (windowWidth >= 1024) {
                       translateY = 160;
                       translateX = 0;
                     } else {
-                      const gap = window.innerWidth >= 640 ? 90 : 70;
+                      const gap = windowWidth >= 640 ? 90 : 70;
                       translateY = 0;
                       translateX = gap;
                     }
                     opacity = 0.7;
-                    scale = window.innerWidth >= 1024 ? 0.85 : 0.7;
+                    scale = windowWidth >= 1024 ? 0.85 : 0.7;
                   } else {
                     rotateX = 0;
                     translateZ = 0;
                     translateY = 0;
                     opacity = 1;
-                    scale = window.innerWidth >= 1024 ? 1.25 : 1; // reduce active scale on mobile
+                    scale = windowWidth >= 1024 ? 1.25 : 1;
                   }
                   
-                   return (
+                  return (
                     <button
                       key={item.year}
                       onClick={() => handleYearClick(item.year)}
                       className={`absolute lg:absolute left-1/2 top-1/2 font-normal font-roc ${
                         isSelected
-                          ? window.innerWidth >= 1024
+                          ? windowWidth >= 1024
                             ? 'text-clamp-96'
                             : 'text-clamp-64'
-                          : window.innerWidth >= 1024
+                          : windowWidth >= 1024
                             ? 'text-clamp-67'
                             : 'text-clamp-32'
                       }`}
@@ -266,7 +290,7 @@ function AboutUsPage() {
                         transform: `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) rotateX(${rotateX}deg) translateZ(${translateZ}px) scale(${isSelected ? 1.2 : 1.2})`,
                         opacity: opacity,
                         color: isSelected ? "rgba(254, 191, 61, 1)" : "rgba(61, 117, 193, 1)",
-                        filter: "none", // <- remove blur entirely
+                        filter: "none",
                         transformStyle: "preserve-3d",
                         backfaceVisibility: "hidden",
                         transition: "all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"
@@ -333,15 +357,16 @@ function AboutUsPage() {
                         <div
                           className={`relative rounded-full overflow-hidden
                             ${isMainImage
-                              ? 'w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[340px] lg:h-[340px] xl:w-[400px] xl:h-[400px]'
+                              ? 'w-[40vw] max-w-[180px] sm:w-[30vw] sm:max-w-[220px] md:w-[22vw] md:max-w-[260px] lg:w-[320px] lg:max-w-[320px] xl:w-[380px] xl:max-w-[380px]'
                               : index === 1
-                              ? 'w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] xl:w-[340px] xl:h-[340px]'
-                              : 'w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[240px] lg:h-[240px] xl:w-[300px] xl:h-[300px]'}`}
+                              ? 'w-[28vw] max-w-[120px] sm:w-[20vw] sm:max-w-[160px] md:w-[16vw] md:max-w-[200px] lg:w-[220px] lg:max-w-[220px] xl:w-[260px] xl:max-w-[260px]'
+                              : 'w-[20vw] max-w-[90px] sm:w-[14vw] sm:max-w-[120px] md:w-[12vw] md:max-w-[140px] lg:w-[160px] lg:max-w-[160px] xl:w-[200px] xl:max-w-[200px]'}
+                            max-w-full h-auto aspect-square`}
                           style={{
                             transition: "width 400ms cubic-bezier(0.4, 0.0, 0.2, 1), height 400ms cubic-bezier(0.4, 0.0, 0.2, 1)",
-                            transform: isMainImage ? `scale(${scale})` : 'scale(1)', 
+                            transform: isMainImage ? `scale(${scale})` : 'scale(1)',
                             transformOrigin: 'center center',
-                            transitionProperty: 'transform, width, height',  
+                            transitionProperty: 'transform, width, height',
                             transitionDuration: isMainImage ? '5s, 400ms, 400ms' : '400ms, 400ms, 400ms',
                             transitionTimingFunction: 'ease-in-out, cubic-bezier(0.4, 0.0, 0.2, 1), cubic-bezier(0.4, 0.0, 0.2, 1)'
                           }}
@@ -373,7 +398,7 @@ function AboutUsPage() {
         </div>
 
         {/* About Us Text Section */}
-        <div className="mt-12 md:mt-16 px-4 md:px-52">
+        <div className="mt-12 md:mt-16 px-4 lg:px-52">
           <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-roc text-clamp-40">Our Legacy</h1>
 
           <div className="flex flex-col font-normal ">
@@ -412,7 +437,7 @@ function AboutUsPage() {
               <Image
                 src={gif}
                 alt="VST Logo Animation"
-                className="w-[70%] h-[70%] object-cover"
+                className="w-[100%] h-[100%] object-cover"
               />
             </div>
 
@@ -420,7 +445,7 @@ function AboutUsPage() {
               <h2 className="text-3xl md:text-4xl text-white mb-2 font-roc">
                 Progress with Purpose.
               </h2>
-              <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-roc">Impact with Vision</h3>
+              <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-roc">Impact with Vision.</h3>
               <button onClick={() => router.push("/career")} className="bg-yellow-400 text-black px-6 md:px-8 py-2 md:py-3 rounded text-base md:text-lg font-medium">
                 Join Us
               </button>
