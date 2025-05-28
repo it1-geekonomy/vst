@@ -52,12 +52,12 @@ export default function Navbar() {
         }`}
     >
      
-        <div className="flex justify-between items-center h-20 px-10">
+        <div className="flex justify-between items-center h-16 md:h-20 px-4 sm:px-6 md:px-8 lg:px-10">
           {/* Logo */}
-          <div className="flex-shrink-0 ">
-            <Link href="/" className="flex items-center gap-2 pl-10">
-              <Logo className="h-14 w-auto" />
-              <span className="text-white text-3xl font-serif">VST Group</span>
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center gap-1 md:gap-2 pl-2 md:pl-10">
+              <Logo className="h-10 md:h-14 w-auto" />
+              <span className="text-white text-xl md:text-2xl lg:text-3xl font-serif">VST Group</span>
             </Link>
           </div>
 
@@ -66,6 +66,7 @@ export default function Navbar() {
             <button
               onClick={toggleMobileMenu}
               className="text-white p-2 focus:outline-none"
+              aria-label="Toggle menu"
             >
               <svg
                 className="h-6 w-6"
@@ -94,11 +95,10 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:block">
-            <div className="flex justify-end  items-center space-x-6 lg:space-x-8 ">
-
+            <div className="flex justify-end items-center space-x-1 sm:space-x-0 lg:space-x-1 xl:space-x-5 ">
               <div className="relative group">
                 <button 
-                  className="text-base font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1"
+                  className="text-sm lg:text-base font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1"
                   onClick={(e) => {
                     e.preventDefault();
                     setIsDesktopDropdownOpen(!isDesktopDropdownOpen);
@@ -120,30 +120,30 @@ export default function Navbar() {
                   </svg>
                 </button>
                 <div 
-                  className={`absolute left-0 mt-2 w-45 bg-black rounded-md shadow-lg py-1 transition-all duration-300
+                  className={`absolute left-0 mt-2 w-48 lg:w-56 bg-black rounded-md shadow-lg py-1 transition-all duration-300
                   ${isDesktopDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}
                 >
                   <Link
                     href="/automotive-franchises"
-                    className="block px-4 py-2 font-roc text-sm text-white hover:bg-gray-800 whitespace-nowrap"
+                    className="block px-3 lg:px-4 py-2 font-roc text-xs lg:text-sm text-white hover:bg-gray-800 whitespace-nowrap"
                   >
                     Automotive Franchises
                   </Link>
                   <Link
                     href="/education"
-                    className="block px-4 py-2 font-roc text-sm text-white hover:bg-gray-800"
+                    className="block px-3 lg:px-4 py-2 font-roc text-xs lg:text-sm text-white hover:bg-gray-800"
                   >
                     Education
                   </Link>
                   <Link
                     href="/auto-parts"
-                    className="block px-4 py-2 font-roc text-sm text-white hover:bg-gray-800"
+                    className="block px-3 lg:px-4 py-2 font-roc text-xs lg:text-sm text-white hover:bg-gray-800"
                   >
                     OE Parts Distribution
                   </Link>
                   <Link
                     href="/manufacture"
-                    className="block px-4 py-2 font-roc  text-sm text-white hover:bg-gray-800"
+                    className="block px-3 lg:px-4 py-2 font-roc text-xs lg:text-sm text-white hover:bg-gray-800"
                   >
                     Manufacturing
                   </Link>
@@ -151,31 +151,31 @@ export default function Navbar() {
               </div>
               <Link
                 href="/Corporate-philanthropy"
-                className="block px-4 py-2 font-roc text-base font-medium hover:text-gray-300 transition-colors text-white"
+                className="block px-2 lg:px-4 py-2 font-roc text-sm lg:text-base font-medium hover:text-gray-300 transition-colors text-white"
               >
                 Corporate Philanthropy
               </Link>
               <Link
                 href="/news-media"
-                className="block px-4 py-2 font-roc text-base font-medium hover:text-gray-300 transition-colors text-white"
+                className="block px-2 lg:px-4 py-2 font-roc text-sm lg:text-base font-medium hover:text-gray-300 transition-colors text-white"
               >
                 News & Media
               </Link>
               <Link
                 href="/career"
-                className="block px-4 py-2 font-roc text-base font-medium hover:text-gray-300 transition-colors text-white"
+                className="block px-2 lg:px-4 py-2 font-roc text-sm lg:text-base font-medium hover:text-gray-300 transition-colors text-white"
               >
                 Careers
               </Link>
               <Link
                 href="/contact-us"
-                className="block px-4 py-2 font-roc text-base font-medium hover:text-gray-300 transition-colors text-white"
+                className="block px-2 lg:px-4 py-2 font-roc text-sm lg:text-base font-medium hover:text-gray-300 transition-colors text-white"
               >
                 Contact Us
               </Link>
               <Link
                 href="/about-us"
-                className="block pl-4 py-2 font-roc text-base font-medium hover:text-gray-300 transition-colors text-white"
+                className="block px-2 lg:px-4 py-2 font-roc text-sm lg:text-base font-medium hover:text-gray-300 transition-colors text-white"
               >
                 About Us
               </Link>
@@ -188,10 +188,9 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
-
             <div className="relative">
               <button
-                className="block w-full text-left px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
+                className="block w-full text-left px-3 py-2.5 text-sm md:text-base font-medium text-white hover:bg-gray-800 rounded-md"
                 onClick={(e) => {
                   e.preventDefault();
                   const submenu = e.currentTarget.nextElementSibling;
@@ -203,28 +202,28 @@ export default function Navbar() {
               <div className="pl-4 hidden">
                 <Link
                   href="/automotive-franchises"
-                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Automotive Franchises
                 </Link>
                 <Link
                   href="/education"
-                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Education
                 </Link>
                 <Link
                   href="/auto-parts"
-                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Auto Parts
                 </Link>
                 <Link
                   href="/manufacture"
-                  className="block px-3 py-2 text-sm text-white hover:bg-gray-800 rounded-md"
+                  className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Manufacture
@@ -233,28 +232,28 @@ export default function Navbar() {
             </div>
             <Link
               href="/Corporate-philanthropy"
-              className="block px-3 py-2 text-base font-medium text-white rounded-md"
+              className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Corporate Philanthropy
             </Link>
             <Link
               href="/news-media"
-              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
+              className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               News & Media
             </Link>
             <Link
               href="/career"
-              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
+              className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Careers
             </Link>
             <Link
               href="/contact-us"
-              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
+              className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Us
@@ -262,7 +261,7 @@ export default function Navbar() {
 
             <Link
               href="/about-us"
-              className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-800 rounded-md"
+              className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
