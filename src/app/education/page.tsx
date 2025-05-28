@@ -299,7 +299,7 @@ export default function EducationPage() {
         </div>
 
         {/* Our Location section - using the new component */}
-        <div className="w-full px-1 sm:px-2 md:px-6 lg:px-12 xl:px-32 2xl:px-40 mb-1">
+        <div className="w-full px-1 sm:px-2 md:px-4 lg:px-7 xl:px-12 2xl:px-13 mb-1">
           <LocationSection
             locationImage="education/educational location.png"
             address={{
