@@ -62,25 +62,30 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 w-full md:w-auto md:max-w-[55%] lg:max-w-[52%] xl:max-w-[50%] mt-12 md:mt-16 items-center md:items-start justify-center">
+        <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-10 w-full md:w-auto md:max-w-[55%] lg:max-w-[52%] xl:max-w-[50%] mt-12 ">
           {/* Address */}
           <div className="text-center md:text-left flex items-center">
-            <p
-              className={`font-roc font-normal ${className}`}
+            <div
+              className={`font-roc font-normal ${className} mt-5`}
               style={{
                 fontSize: 'clamp(15px, 2vw, 24px)',
                 lineHeight: '1.6',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start',
+                width: '100%',
+                maxWidth: '400px'
               }}
             >
-              {address.street}
-              {address.street2 && <><br />{address.street2}</>}
-              {address.street3 && <><br />{address.street3}</>}
-              <br />
-              {address.city}
-              {!address.city.includes(address.pincode) && address.pincode && <>, {address.pincode}</>}
-              <br />
-              {address.state}
-            </p>
+              <div style={{ width: '100%', whiteSpace: 'nowrap' }}>{address.street}</div>
+              {address.street2 && <div style={{ width: '100%', whiteSpace: 'nowrap' }}>{address.street2}</div>}
+              {address.street3 && <div style={{ width: '100%', whiteSpace: 'nowrap' }}>{address.street3}</div>}
+              {address.city && <div style={{ width: '100%', whiteSpace: 'nowrap' }}>{address.city}</div>}
+              {!address.city.includes(address.pincode) && address.pincode && (
+                <div style={{ width: '100%', whiteSpace: 'nowrap' }}>{address.pincode}</div>
+              )}
+              {address.state && <div style={{ width: '100%', whiteSpace: 'nowrap' }}>{address.state}</div>}
+            </div>
           </div>
 
           {/* Contact Information */}
@@ -108,7 +113,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     className={`font-roc font-normal break-all ${className}`}
                     style={{
                       fontSize: 'clamp(15px, 2vw, 24px)',
-                      lineHeight: '1.6',
+                      lineHeight: '1.4',
                     }}
                   >
                     {phone.replace('📞 ', '')}
@@ -119,7 +124,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
 
             {/* Email Addresses */}
             {emails && (
-              <div className="flex flex-col mt-1">
+              <div className="flex flex-col -mb-8">
                 {emails.info && (
                   <a 
                     href={`mailto:${emails.info}`}
@@ -142,8 +147,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal break-all ${className}`}
                       style={{
-                        fontSize: 'clamp(15px, 2vw, 24px)',
-                        lineHeight: '1.6'
+                        fontSize: 'clamp(16px, 2vw, 24px)',
+                        lineHeight: '2.0'
                       }}
                     >
                       {emails.info}
@@ -153,11 +158,10 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                 {emails.globalConnect && (
                   <div className="flex flex-col">
                     <span
-                      className={`font-roc ${className} mb-1`}
+                      className={`font-roc font-normal ${className} mb-1`}
                       style={{
                         fontSize: 'clamp(14px, 1.8vw, 20px)',
-                        lineHeight: '1.4',
-                        fontWeight: 500
+                        lineHeight: '1.6',
                       }}
                     >
                       Global Connect

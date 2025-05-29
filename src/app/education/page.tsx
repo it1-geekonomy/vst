@@ -301,10 +301,10 @@ export default function EducationPage() {
           <LocationSection
             locationImage="education/educational location.png"
             address={{
-              street: "Edward Road,",
-              street2: "Off Queens Road,",
-              city: "Bengaluru-560 001,",
-              state: "Karnataka.",
+              street: "Edward Road, Off Queens Road,",
+              street2: "Bengaluru - 560 001, Karnataka.",
+              city: "",
+              state: "",
               pincode: ""
             }}
             phoneNumbers={[
