@@ -1197,7 +1197,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="text-white text-sm sm:text-base lg:text-[24px] text-justify 
+                className="text-white text-xs sm:text-sm lg:text-[20px] text-justify 
                 font-normal leading-[150%] sm:leading-[160%] lg:leading-[177%] tracking-[0%] max-w-6xl"
               >
                 {slides[currentSlide].description}
@@ -1217,11 +1217,12 @@ const FranchiseSlider = () => {
               <>
                 {/* Website Link */}
                 {slides[currentSlide]?.learnMoreLink && (
-                  <div className="w-full flex justify-end mb-4">
+                  <div className="w-full flex justify-start mb-4">
                     <div className="flex items-center gap-2 w-[400px]">
                       <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Website:</span>
                       <h2 
                         onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank')}
+                        title={slides[currentSlide].learnMoreLink}
                         className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
                       >
                         {slides[currentSlide].learnMoreLink}

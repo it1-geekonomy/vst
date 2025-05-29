@@ -534,7 +534,7 @@ export default function Page() {
           <LocationSection
             locationImage="vst-auto-parts/location img.png"
             address={{
-              street: "Old No.144, New No.199,",
+              street: "Old No. 144, New No. 199,",
               street2: "1st Floor, Anna Salai,",
               state: "Chennai - 600 002, Tamil Nadu.",
               city: "",

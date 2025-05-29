@@ -175,15 +175,15 @@ export default function NewsMedia() {
           <div className="container mx-auto h-full px-4 md:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row h-full gap-8 md:gap-10 lg:gap-0">
               {/* Left content - 60% */}
-              <div className="w-full lg:w-[55%] flex flex-col items-center">
-                <div className="w-full lg:max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-24 h-full flex flex-col">
+              <div className="w-full lg:w-[55%] flex  flex-col items-center ">
+                <div className="w-full lg:max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-24 h-[50vh] sm:h-[50vh] md:h-[90vh] lg:h-[90vh]  flex flex-col">
                   {/* Hero Title */}
-                  <div className="flex items-center pt-20 sm:pt-24 md:pt-32 lg:pt-44 xl:pt-72 2xl:pt-56 h-[150px] sm:h-[180px] md:h-[200px]">
+                  <div className="flex items-center pt-20 sm:pt-24 md:pt-20 lg:pt-22 xl:pt-24 2xl:pt-26 h-[50%]">
                     <div className="relative h-full flex items-center w-full">
                       {headlines.map((headline, index) => (
                         <h1 
                           key={index}
-                          className={`text-black w-full lg:w-[35rem] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl leading-tight tracking-tight font-roc font-semibold absolute transition-all duration-1000 ${
+                          className={`text-black w-full lg:w-[35rem] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl leading-tight tracking-tight font-roc font-semibold sm:font-medium absolute transition-all duration-1000 ${
                             currentIndex === index 
                               ? "opacity-100 translate-x-0" 
                               : index === (currentIndex + 1) % headlines.length || (currentIndex === headlines.length - 1 && index === 0)
@@ -198,7 +198,7 @@ export default function NewsMedia() {
                   </div>
                   
                   {/* News Cards - positioned at bottom with animation */}
-                  <div className="w-full mt-auto mb-8 sm:mb-12 md:mb-16 lg:mb-16 relative overflow-hidden">
+                  <div className="w-full mt-auto mb-8 sm:mb-12 md:mb-5 lg:mb-10 relative overflow-hidden">
                     <div className="relative h-[180px] sm:h-[200px] md:h-[220px]">
                       {headlines2.map((card, index) => (
                         <div 
