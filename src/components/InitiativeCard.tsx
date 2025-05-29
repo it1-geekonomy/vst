@@ -29,8 +29,8 @@ export default function InitiativeCard({ title, description, image }: Initiative
       </div>
 
       {/* Description - visible on hover */}
-      <div className="absolute inset-0 flex  justify-center  opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-4">
-        <p className="text-white text-clamp-24 font-light text-justify leading-4 md:leading-5 xl:leading-6">
+      <div className="absolute inset-0 flex  justify-center  opacity-0 group-hover:opacity-500 transition-opacity duration-500 px-4 py-4">
+        <p className="text-white text-clamp-24 font-light text-justify leading-4 md:leading-5 2xl:leading-6">
           {description}
         </p>
       </div>
