@@ -334,7 +334,7 @@ export default function Page() {
         {/* VST AUTO PARTS Title */}
         <div className="relative z-10 pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-0 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal tracking-wider text-black">
-            VST AUTO PARTS
+            VST Auto Parts
           </h1>
         </div>
 
@@ -502,25 +502,31 @@ export default function Page() {
               its inception.
             </p>
             <div className="flex justify-left mt-6">
-              <button
-                className="
-                  px-6 py-2
-                  bg-white
-                  text-black
-                  rounded
-                  shadow
-                  hover:bg-gray-200
-                  transition
-                  text-sm
-                  sm:text-lg
-                  font-normal
-                  border border-gray-300
-                  w-full
-                  max-w-xs
-                "
+              <a
+                href="https://vstmotors.com/parts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full max-w-xs"
               >
-                Explore Now
-              </button>
+                <button
+                  className="
+      px-6 py-2
+      bg-white
+      text-black
+      rounded
+      shadow
+      hover:bg-gray-200
+      transition
+      text-sm
+      sm:text-lg
+      font-normal
+      border border-gray-300
+      w-full
+    "
+                >
+                  Explore Now
+                </button>
+              </a>
             </div>
           </div>
         </div>

@@ -6,8 +6,6 @@ import Image from "next/image";
 import frame1 from "../public/careers/frame1.jpg";
 import frame2 from "../public/careers/upload-icon.png";
 import frame3 from "../public/careers/mobilebg.png";
-import frame4 from "../public/careers/Vector calender.png";
-import frame5 from "../public/careers/Vector.png";
 import { Toaster, toast } from "react-hot-toast";
 
 interface FormData {
@@ -193,12 +191,19 @@ export default function Page() {
           <h1 className="font-roc font-normal text-[45px] sm:text-[60px] md:text-[75px] lg:text-[85px] xl:text-[90px] text-[#646464] pb-5 md:pb-10 md:mt-48 lg:-mt-14 xl:-mt-32 text-center md:text-left">
             CAREERS
           </h1>
-          <p className="max-w-[550px]  font-normal text-[15px] sm:text-[18px] md:text-[20px] lg:text-[21px] leading-6 lg:leading-8 font-roc tracking-tight lg:tracking-tighter lg:text-justify">
+          <p className="max-w-[550px] font-normal text-[15px] sm:text-[18px] md:text-[20px] lg:text-[21px] leading-6 lg:leading-8 font-roc tracking-tight lg:text-justify">
             The VST Group offers rewarding career opportunities across a range
-            of disciplines and verticals. The Group is an equal opportunity
+            of disciplines and verticals.
+            <p>
+            The Group is an equal opportunity
             workplace where results are encouraged and merit is rewarded, making
             it an ideal choice for a{" "}
-            <span className="text-[#FDB813]">long term career path</span>.
+            
+            <span className="text-[#FDB813] font-normal tracking-[1px] ml-1">
+              long term career path
+            </span>
+            .
+            </p>
           </p>
         </div>
       </section>

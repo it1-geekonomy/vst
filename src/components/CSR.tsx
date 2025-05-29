@@ -58,7 +58,6 @@ export default function CorporatePhilanthropy() {
           <VSTLogoAnimation />
         </div>
       </main>
-      <Footer bgcolour="bg-black" />
     </div>
   );
 }
