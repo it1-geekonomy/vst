@@ -502,25 +502,31 @@ export default function Page() {
               its inception.
             </p>
             <div className="flex justify-left mt-6">
-              <button
-                className="
-                  px-6 py-2
-                  bg-white
-                  text-black
-                  rounded
-                  shadow
-                  hover:bg-gray-200
-                  transition
-                  text-sm
-                  sm:text-lg
-                  font-normal
-                  border border-gray-300
-                  w-full
-                  max-w-xs
-                "
+              <a
+                href="https://vstmotors.com/parts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full max-w-xs"
               >
-                Explore Now
-              </button>
+                <button
+                  className="
+      px-6 py-2
+      bg-white
+      text-black
+      rounded
+      shadow
+      hover:bg-gray-200
+      transition
+      text-sm
+      sm:text-lg
+      font-normal
+      border border-gray-300
+      w-full
+    "
+                >
+                  Explore Now
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -529,9 +535,9 @@ export default function Page() {
             locationImage="vst-auto-parts/location img.png"
             address={{
               street: "Old No.144, New No.199,",
-              street2: "1st Floor, Anna Salai, Chennai-",
+              street2: "1st Floor, Anna Salai, ",
               state: "",
-              city: "600 002, Tamil Nadu.",
+              city: "Chennai - 600 002, Tamil Nadu.",
               pincode: "",
             }}
             phoneNumbers={[

@@ -298,8 +298,6 @@ export default function EducationPage() {
           </div>
         </div>
 
-        {/* Our Location section - using the new component */}
-        <div className="w-full px-1 sm:px-2 md:px-6 lg:px-12 xl:px-32 2xl:px-40 mb-1">
           <LocationSection
             locationImage="education/educational location.png"
             address={{
@@ -321,7 +319,6 @@ export default function EducationPage() {
             className="text-black [&>div>div>div:first-child]:mb-12 [&>div>div>div:first-child]:md:mb-0 [&>div>div>div:last-child]:mt-12 [&>div>div>div:last-child]:md:mt-0"
             iconColor="black"
           />
-        </div>
         <div className="w-full -mt-12">
           <div className="transform scale-110">
             <BusinessSectorsUpdated />
