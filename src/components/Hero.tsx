@@ -82,7 +82,7 @@ const slides = [
     title: "Automotive Franchises",
 
     subtitle: "Where innovation meets craftsmanship—experience the future of mobility.",
-    label: "Automotive Franchise",
+    label: "Automotive Franchises",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
     videoSrc: "/CarVideo.mp4",
