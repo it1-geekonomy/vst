@@ -9,7 +9,7 @@ interface InitiativeCardProps {
 
 export default function InitiativeCard({ title, description, image }: InitiativeCardProps) {
   return (
-    <div className="relative group overflow-hidden ">
+    <div className="relative group overflow-hidden cursor-pointer select-none">
       <Image
         src={image}
         alt={title}
