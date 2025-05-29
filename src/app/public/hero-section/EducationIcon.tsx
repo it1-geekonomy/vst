@@ -1,36 +1,11 @@
 import React from 'react';
+
 const EducationIcon = () => {
     return (
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_7655_14072)">
-<g filter="url(#filter1_d_7655_14072)">
-<path d="M25.8887 25.2842C24.7631 25.2842 23.6376 25.1174 22.5537 24.8256L13.2158 22.0326V28.4107C13.2158 29.5779 13.9662 30.5784 15.0917 30.9119L19.1771 32.1208C23.6792 33.4548 28.4316 33.4548 32.9338 32.1208L37.0191 30.9119C38.1446 30.5784 38.895 29.5779 38.895 28.4107V21.9492L29.2236 24.8256C28.1398 25.1591 27.0142 25.2842 25.8887 25.2842Z" fill="white"/>
-<path d="M44.8564 14.944L28.3901 10.0666C26.7643 9.56635 25.0135 9.56635 23.346 10.0666L6.92131 14.944C5.79576 15.2775 5.79576 16.9033 6.92131 17.2367L23.3877 22.1141C25.0135 22.6144 26.7643 22.6144 28.4318 22.1141L42.522 17.9454V21.6556C42.2302 21.8223 42.0217 22.1141 42.0217 22.4476V23.4481C42.0217 23.8233 42.2302 24.1568 42.5637 24.2818L41.6882 26.3245C41.5632 26.6163 41.7299 26.9081 42.0634 26.9498L42.9805 27.0332C43.1473 27.0332 43.3557 27.0332 43.5225 27.0332L44.4396 26.9498C44.7314 26.9081 44.8981 26.6163 44.8148 26.3245L43.9393 24.2818C44.2728 24.1151 44.4813 23.8233 44.4813 23.4481V22.4476C44.4813 22.1141 44.2728 21.8223 43.981 21.6556V17.5286L44.8981 17.2367C45.982 16.8616 45.982 15.2775 44.8564 14.944Z" fill="white"/>
-</g>
-</g>
-<defs>
-<filter id="filter0_d_7655_14072" x="0.337795" y="0" width="51.3244" height="51.3244" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4.66221"/>
-<feGaussianBlur stdDeviation="2.3311"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7655_14072"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7655_14072" result="shape"/>
-</filter>
-<filter id="filter1_d_7655_14072" x="0.337795" y="0" width="51.3244" height="51.3244" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4.66221"/>
-<feGaussianBlur stdDeviation="2.3311"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7655_14072"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7655_14072" result="shape"/>
-</filter>
-</defs>
-</svg>
+        <svg width="52" height="51" viewBox="0 0 52 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.4508 28.9987C24.1989 28.9987 22.947 28.8132 21.7414 28.4886L11.355 25.3818V32.4764C11.355 33.7748 12.1896 34.8876 13.4415 35.2586L17.9856 36.6033C22.9933 38.0872 28.2793 38.0872 33.287 36.6033L37.8311 35.2586C39.083 34.8876 39.9176 33.7748 39.9176 32.4764V25.2891L29.1603 28.4886C27.9547 28.8595 26.7028 28.9987 25.4508 28.9987Z" fill="white"/>
+            <path d="M46.5481 17.4998L28.2327 12.0746C26.4244 11.5181 24.4769 11.5181 22.6222 12.0746L4.35326 17.4998C3.10132 17.8708 3.10132 19.6792 4.35326 20.0502L22.6686 25.4755C24.4769 26.0319 26.4244 26.0319 28.2791 25.4755L43.9514 20.8385V24.9654C43.6269 25.1509 43.395 25.4755 43.395 25.8464V26.9593C43.395 27.3766 43.6269 27.7476 43.9978 27.8867L43.0241 30.1588C42.885 30.4834 43.0705 30.808 43.4414 30.8544L44.4615 30.9471C44.647 30.9471 44.8788 30.9471 45.0643 30.9471L46.0844 30.8544C46.4089 30.808 46.5944 30.4834 46.5017 30.1588L45.528 27.8867C45.8989 27.7012 46.1307 27.3766 46.1307 26.9593V25.8464C46.1307 25.4755 45.8989 25.1509 45.5743 24.9654V20.3748L46.5944 20.0502C47.8 19.6329 47.8 17.8708 46.5481 17.4998Z" fill="white"/>
+        </svg>
     );
 };
 
