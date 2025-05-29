@@ -16,7 +16,7 @@ const LifeAtVst = () => {
       title: "Life At VST",
       subtitle: "Commitment To Partnerships",
       description:
-        "Strong partnerships are the cornerstone of enduring success. We cultivate collaborative ecosystems built on trust, transparency, and mutual growth. By forming strategic alliances across industries, our partners gain access to deep expertise, shared resources, and a supportive network—driving innovation and sustainable success together. With every collaboration, we bring the same focus, passion, and commitment that turns every brand we touch into a success story.",
+        "Strong partnerships are the cornerstone of enduring success. We cultivate collaborative ecosystems built on trust, transparency and mutual growth. By forming strategic alliances across industries, our partners gain access to deep expertise, shared resources and a supportive network—driving innovation and sustainable success together. With every collaboration, we bring the same focus, passion and commitment that turns every brand we touch into a success story.",
     },
     {
       number: "02",
@@ -24,7 +24,7 @@ const LifeAtVst = () => {
       title: "Life At VST",
       subtitle: "Fueling Talent With Opportunity",
       description:
-        "People are our greatest strength. We're dedicated to nurturing talent through dynamic career paths, continuous learning, and skill-building initiatives. Our culture of innovation, inclusivity, and growth empowers employees to thrive, lead with confidence, and shape a brighter future—for themselves and for the organisation. We continuously invest in enhancing the quality of professional life—through thoughtful policies, modern tools, and a supportive work environment that enables people to feel valued, motivated, and future-ready.",
+        "People are our greatest strength. We're dedicated to nurturing talent through dynamic career paths, continuous learning and skill-building initiatives. Our culture of innovation, inclusivity and growth empowers employees to thrive, lead with confidence and shape a brighter future—for themselves and for the organisation. We continuously invest in enhancing the quality of professional life—through thoughtful policies, modern tools and a supportive work environment that enables people to feel valued, motivated and future-ready.",
     },
     {
       number: "03",
@@ -32,7 +32,7 @@ const LifeAtVst = () => {
       title: "Life At VST",
       subtitle: "Innovation Through Collaboration",
       description:
-        "Community lies at the heart of who we are. We foster a workplace where collaboration, belonging, and well-being are prioritised. Through engaging experiences, meaningful initiatives, and a culture that celebrates both work and play, our environment supports not just productivity—but personal joy too. We believe work should be fulfilling and fun, with the right balance that makes every day feel worthwhile.",
+        "Community lies at the heart of who we are. We foster a workplace where collaboration, belonging and well-being are prioritised. Through engaging experiences, meaningful initiatives and a culture that celebrates both work and play, our environment supports not just productivity—but personal joy too. We believe work should be fulfilling and fun, with the right balance that makes every day feel worthwhile.",
     },
   ]
 
@@ -80,7 +80,7 @@ const LifeAtVst = () => {
            onMouseEnter={() => setIsHovered(true)}
            onMouseLeave={() => setIsHovered(false)}>
         {/* Left half - Image container */}
-        <div className="relative w-full md:w-1/2 h-462px">
+        <div className="relative w-full md:w-1/2 h-562px">
           {slides.map((slide, index) => (
             <motion.div
               key={index}
@@ -96,7 +96,8 @@ const LifeAtVst = () => {
                 src={slide.image}
                 alt={`Life at VST ${index + 1}`}
                 layout="fill"
-                objectFit="cover"
+                objectFit="contain"
+                objectPosition="left"
               />
             </motion.div>
           ))}
@@ -109,15 +110,15 @@ const LifeAtVst = () => {
             {/* Content wrapper to maintain consistent width */}
             <div className="w-full max-w-[75%]">
               {/* Heading with digits on same line */}
-              <div className="flex items-center w-full mb-2">
+              <div className="flex items-center w-full ">
                 <div className="flex items-baseline w-full">
                   {/* Number container with fixed width */}
                   <div className="flex items-baseline mr-2 md:mr-4 flex-shrink-0">
-                    <span className="text-clamp-80 font-rocWide text-white font-weight-200">0</span>
+                    <span className="text-4xl md:text-5xl lg:text-6xl font-rocWide text-white font-weight-200">0</span>
                     <AnimatePresence mode="wait">
                       <motion.span
                         key={currentSlide}
-                        className="text-clamp-80 font-rocWide animate-flowing-gradient"
+                        className="text-4xl md:text-5xl lg:text-6xl font-rocWide animate-flowing-gradient"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
@@ -159,10 +160,10 @@ const LifeAtVst = () => {
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   className="w-full h-[230px] md:h-[300px] overflow-y-auto"
                 >
-                  <h2 className="text-xl md:text-lg lg:text-lg xl:text-lg font-normal mb-3 text-left font-roc">
+                  <h2 className="text-lg md:text-xl font-normal mb-2 text-left font-roc">
                     {slides[currentSlide].subtitle}
                   </h2>
-                  <p className="text-base md:text-sm lg:text-base xl:text-base font-normal leading-relaxed w-full" 
+                  <p className="text-sm md:text-base font-normal leading-relaxed w-full" 
                      style={{ 
                        wordBreak: "break-word",
                        textAlign: "justify",
