@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 interface InitiativeCardProps {
@@ -9,36 +9,55 @@ interface InitiativeCardProps {
 
 export default function InitiativeCard({ title, description, image }: InitiativeCardProps) {
   const [showDescription, setShowDescription] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const handleToggle = () => {
-    setShowDescription((prev) => !prev)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleClick = () => {
+    if (isMobile) {
+      setShowDescription((prev) => !prev);
+    }
   };
+
   return (
-    <div className="relative group overflow-hidden cursor-pointer select-none"
-      onClick={handleToggle}>
-      <Image
-        src={image}
-        alt={title}
-        // className="object-cover transition-transform duration-500 group-hover:scale-105"
-        priority
+    <div
+      className={`relative overflow-hidden cursor-pointer select-none ${!isMobile ? "group" : ""
+        }`}
+      onClick={handleClick}
+    >
+      <Image src={image} alt={title} priority className="object-cover" />
+
+      {/* Overlay background */}
+      <div
+        className={`absolute inset-0 transition-all duration-300 border-2 rounded-md
+    ${isMobile
+            ? showDescription
+              ? "bg-[#C97D4B] bg-opacity-60 border-amber-50"
+              : "bg-transparent border-transparent border-2"
+            : "bg-transparent border-transparent group-hover:bg-[#C97D4B] group-hover:bg-opacity-60 group-hover:border-amber-50"
+          }
+  `}
       />
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 pointer-events-none" />
-
-      {/* Title - visible by default */}
-      {/* <div className="absolute inset-0"> */}
-      <div className={`absolute top-1/3 w-full flex justify-center  transition-opacity duration-300 ${showDescription ? "opacity-0" : "opacity-100 group-hover:opacity-0"}`}>
-        <h2 className="text-white text-clamp-42 text-center pointer-events-none">
-          {title}
-        </h2>
-      </div>
-      {/* </div> */}
-
-      {/* Description - visible on hover */}
-      <div className={`absolute inset-0 flex  justify-center transition-opacity duration-500 px-4 py-4 ${showDescription ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}>
-        <p className="text-white text-clamp-24 font-light text-justify leading-4 md:leading-5 2xl:leading-6 pointer-events-none">
-          {description}
-        </p>
+      {/* Description text */}
+      <div
+        className={`
+          absolute inset-0 flex items-center justify-center leading-6 px-4 text-white transition-opacity duration-500 pointer-events-none
+          ${isMobile
+            ? showDescription
+              ? "opacity-100"
+              : "opacity-0"
+            : "opacity-0 group-hover:opacity-100"
+          }
+        `}
+      >
+        <p className="text-clamp-28 font-light text-start">{description}</p>
       </div>
     </div>
   );
