@@ -31,8 +31,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
   iconColor = 'black'
 }) => {
   return (
-    <section className="w-full px-0 sm:px-0 md:px-6 lg:px-8 xl:px-12 2xl:px-16 flex flex-col md:flex-row items-center justify-center z-10 relative py-4 md:py-8">
-      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-[1280px] mx-auto gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
+    <section className="w-full px-0 sm:px-0 md:px-6 lg:px-0 xl:px-12 2xl:px-16 flex flex-col md:flex-row items-center justify-center z-10 relative py-4 md:py-8">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-[1380px] mx-auto gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
         {/* Left section with title and image */}
         <div className="flex flex-col items-center md:items-start w-full md:w-auto md:max-w-[45%] lg:max-w-[48%] xl:max-w-[50%]">
           <h2
@@ -62,7 +62,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 w-full md:w-auto md:max-w-[55%] lg:max-w-[52%] xl:max-w-[50%] mt-12 md:mt-16 items-center md:items-start justify-center">
+        <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 w-full md:w-auto md:max-w-[55%] lg:max-w-[55%] xl:max-w-[60%] mt-12 md:mt-16 items-center md:items-start justify-center">
           {/* Address */}
           <div className="text-center md:text-left flex items-center">
             <p
