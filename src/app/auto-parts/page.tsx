@@ -529,9 +529,9 @@ export default function Page() {
             locationImage="vst-auto-parts/location img.png"
             address={{
               street: "Old No.144, New No.199,",
-              street2: "1st Floor, Anna Salai, Chennai-",
-              state: "",
-              city: "600 002, Tamil Nadu.",
+              street2: "1st Floor, Anna Salai,",
+              state: "Chennai - 600 002, Tamil Nadu.",
+              city: "",
               pincode: "",
             }}
             phoneNumbers={[
