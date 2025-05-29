@@ -334,7 +334,7 @@ export default function Page() {
         {/* VST AUTO PARTS Title */}
         <div className="relative z-10 pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-0 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal tracking-wider text-black">
-            VST AUTO PARTS
+            VST Auto Parts
           </h1>
         </div>
 
