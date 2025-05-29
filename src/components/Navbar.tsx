@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Footerlogo from "@/app/public/logos/Footerlogo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,8 +57,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-1 md:gap-2 pl-2 md:pl-10">
-              <Logo className="h-10 md:h-14 w-auto" />
-              <span className="text-white text-xl md:text-2xl lg:text-3xl font-serif">VST Group</span>
+              <Footerlogo className="h-17 sm:h-16 md:h-18  w-auto" />
             </Link>
           </div>
 
