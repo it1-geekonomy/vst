@@ -64,22 +64,22 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         {/* Right section with address, phone numbers and emails */}
         <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-10 w-full md:w-auto md:max-w-[55%] lg:max-w-[52%] xl:max-w-[50%] mt-12">
           {/* Address */}
-          <div className="text-center md:text-left flex items-center">
+          <div className="text-center md:text-left flex items-center justify-center md:justify-start w-full md:w-auto">
             <div
-              className={`font-roc font-normal ${className} mt-5 flex flex-col items-start w-full max-w-[400px]`}
+              className={`font-roc font-normal ${className} mt-5 flex flex-col items-center md:items-start w-full max-w-[400px]`}
               style={{
                 fontSize: 'clamp(15px, 2vw, 24px)',
                 lineHeight: '1.6',
               }}
             >
-              <div className="w-full whitespace-nowrap">{address.street}</div>
-              {address.street2 && <div className="w-full whitespace-nowrap">{address.street2}</div>}
-              {address.street3 && <div className="w-full whitespace-nowrap">{address.street3}</div>}
-              {address.city && <div className="w-full whitespace-nowrap">{address.city}</div>}
+              <div className="w-full text-center md:text-left whitespace-normal md:whitespace-nowrap">{address.street}</div>
+              {address.street2 && <div className="w-full text-center md:text-left whitespace-normal md:whitespace-nowrap">{address.street2}</div>}
+              {address.street3 && <div className="w-full text-center md:text-left whitespace-normal md:whitespace-nowrap">{address.street3}</div>}
+              {address.city && <div className="w-full text-center md:text-left whitespace-normal md:whitespace-nowrap">{address.city}</div>}
               {!address.city.includes(address.pincode) && address.pincode && (
-                <div className="w-full whitespace-nowrap">{address.pincode}</div>
+                <div className="w-full text-center md:text-left whitespace-normal md:whitespace-nowrap">{address.pincode}</div>
               )}
-              {address.state && <div className="w-full whitespace-nowrap">{address.state}</div>}
+              {address.state && <div className="w-full text-center md:text-left whitespace-normal md:whitespace-nowrap">{address.state}</div>}
             </div>
           </div>
 
