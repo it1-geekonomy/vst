@@ -120,7 +120,7 @@ export default function Navbar() {
                   </svg>
                 </button>
                 <div 
-                  className={`absolute left-0 mt-2 w-40 lg:w-48 bg-black rounded-md shadow-lg py-1 transition-all duration-300
+                  className={`absolute left-[-16px] mt-2 w-40 lg:w-48 bg-black rounded-md shadow-lg py-1 transition-all duration-300 pl-2
                   ${isDesktopDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}
                 >
                   <Link
