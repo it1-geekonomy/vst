@@ -130,10 +130,10 @@ export default function Navbar() {
                     Automotive Franchises
                   </Link>
                   <Link
-                    href="/education"
+                    href="/manufacture"
                     className="block px-3 lg:px-4 py-2 font-roc text-xs lg:text-sm font-light text-white hover:bg-gray-800"
                   >
-                    Education
+                    Manufacturing
                   </Link>
                   <Link
                     href="/auto-parts"
@@ -142,10 +142,10 @@ export default function Navbar() {
                     OE Parts Distribution
                   </Link>
                   <Link
-                    href="/manufacture"
+                    href="/education"
                     className="block px-3 lg:px-4 py-2 font-roc text-xs lg:text-sm font-light text-white hover:bg-gray-800"
                   >
-                    Manufacturing
+                    Education
                   </Link>
                 </div>
               </div>
@@ -208,25 +208,25 @@ export default function Navbar() {
                   Automotive Franchises
                 </Link>
                 <Link
-                  href="/education"
+                  href="/manufacture"
                   className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Education
+                  Manufacturing
                 </Link>
                 <Link
                   href="/auto-parts"
                   className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Auto Parts
+                  OE Parts Distribution
                 </Link>
                 <Link
-                  href="/manufacture"
+                  href="/education"
                   className="block px-3 py-2.5 text-xs md:text-sm text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Manufacture
+                  Education
                 </Link>
               </div>
             </div>
