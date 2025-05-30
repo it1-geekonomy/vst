@@ -418,7 +418,7 @@ function AboutUsPage() {
               
               <h3 className="text-xl md:text-2xl text-white py-8 mb-3 font-roc text-clamp-40">A Legacy of Trust and Innovation:</h3>
               <p className="text-justify hyphens-auto font-roc text-sm md:text-base text-clamp-24">
-                With an annual turnover exceeding ₹5,000 crores ($570 million) , VST Group stands as a powerhouse
+                With an annual turnover exceeding ₹5,000 crores ($570 million), VST Group stands as a powerhouse
                 in India's business landscape. Under the visionary leadership of its fourth generation, the group
                 continues to set new benchmarks in service excellence, technological advancement and customer
                 satisfaction. By blending a rich legacy with a forward-looking approach to innovation, VST Group remains
