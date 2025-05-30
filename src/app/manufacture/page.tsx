@@ -197,7 +197,7 @@ const ManufacturePage = () => {
                 }}>
                   VST Tillers Tractors Ltd., a flagship company of VST Group, was incorporated in 1967 as a joint
                   venture with Mitsubishi Heavy Industries Ltd. and Mitsubishi Corporation of Japan. The company
-                  revolutionized agricultural mechanization in India by manufacturing Power Tillers-essential for paddy
+                  revolutionized agricultural mechanization in India by manufacturing Power Tillers - essential for paddy
                   cultivation by small and medium-scale farmers.
                 </p>
               </div>

@@ -165,6 +165,7 @@ const LocationSectionUpdated: React.FC<LocationSectionProps> = ({
                       style={{
                         fontSize: 'clamp(12px, 1.8vw, 18px)',
                         lineHeight: '1.4',
+                        color: '#FEBF3D'
                       }}
                     >
                       Global Connect

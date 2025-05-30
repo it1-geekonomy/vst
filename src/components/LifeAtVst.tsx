@@ -16,7 +16,7 @@ const LifeAtVst = () => {
       title: "Life At VST",
       subtitle: "Commitment To Partnerships",
       description:
-        "Strong partnerships are the cornerstone of enduring success. We cultivate collaborative ecosystems built on trust, transparency and mutual growth. By forming strategic alliances across industries, our partners gain access to deep expertise, shared resources and a supportive network—driving innovation and sustainable success together. With every collaboration, we bring the same focus, passion and commitment that turns every brand we touch into a success story.",
+        "Strong partnerships are the cornerstone of enduring success. We cultivate collaborative ecosystems built on trust, transparency and mutual growth. By forming strategic alliances across industries, our partners gain access to deep expertise, shared resources and a supportive network — driving innovation and sustainable success together. With every collaboration, we bring the same focus, passion and commitment that turns every brand we touch into a success story.",
     },
     {
       number: "02",
@@ -32,7 +32,7 @@ const LifeAtVst = () => {
       title: "Life At VST",
       subtitle: "Innovation Through Collaboration",
       description:
-        "Community lies at the heart of who we are. We foster a workplace where collaboration, belonging and well-being are prioritised. Through engaging experiences, meaningful initiatives and a culture that celebrates both work and play, our environment supports not just productivity—but personal joy too. We believe work should be fulfilling and fun, with the right balance that makes every day feel worthwhile.",
+        "Community lies at the heart of who we are. We foster a workplace where collaboration, belonging and well-being are prioritised. Through engaging experiences, meaningful initiatives and a culture that celebrates both work and play, our environment supports not just productivity but personal joy too. We believe work should be fulfilling and fun, with the right balance that makes every day feel worthwhile.",
     },
   ]
 
