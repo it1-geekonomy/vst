@@ -119,7 +119,7 @@ const timelineData = [
         src: "/imagesanime/image15.png",
         title: "Covid-19 Relief Fund",
         description:
-          "The group made major contributions towards the medical expenses of covid hit patients and also contributed towards medical equipment.",
+          "The VST group made major contributions towards the medical expenses of COVID-hit patients and also contributed towards medical equipment.  In addition, the group ensured the well-being of its employees and their families during this challenging time, providing them with necessary support and care.",
       },
     ],
   },
@@ -159,7 +159,7 @@ const timelineData = [
         src: "/imagesanime/image20.png",
         title: "The Association of People with Disability",
         description:
-          "Disability empowers people with disabilities to live full, productive lives.",
+          "The VST group extended its support to the Association of People with Disability, contributing towards initiatives aimed at empowering and improving the lives of individuals with disabilities."
       },
     ],
   },

@@ -7,8 +7,8 @@ import img3 from "@/app/public/vst-auto-parts/frame3.png";
 import img4 from "@/app/public/vst-auto-parts/frame4.png";
 import img5 from "@/app/public/vst-auto-parts/frame5.png";
 import bgImage from "@/app/public/vst-auto-parts/bgimg.jpeg";
+import Logo from "@/app/public/vst-auto-parts/Logo.png";
 import LocationSection from "@/components/LocationSection";
-import gif from "@/app/public/education/vst logo gif.gif";
 import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import VSTLogoAnimation from "@/components/VSTLogoAnimation";
 
@@ -316,7 +316,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen mt-16">
       {/* Main section with background image */}
-      <div className="relative h-[65vh] sm:h-[85vh] md:h-[100vh] lg:h-[110vh] xl:h-[145vh] 2xl:h-screen">
+      <div className="relative h-auto lg:h-[110vh] xl:h-[145vh] 2xl:h-screen">
         {/* Background image only for main section */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 opacity-100">
@@ -333,13 +333,24 @@ export default function Page() {
 
         {/* VST AUTO PARTS Title */}
         <div className="relative z-10 pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-0 text-center">
+          {/* Logo Section */}
+          <div className="flex justify-center lg:mb-8 mb-5">
+            <Image
+              src={Logo}
+              alt="OE Parts Logo"
+              className="w-20 sm:w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44 h-auto"
+              priority
+            />
+          </div>
+
+          {/* Heading Section */}
           <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal tracking-wider text-black">
-            VST Auto Parts
+            OE Parts Distribution
           </h1>
         </div>
 
         {/* Responsive Carousel Slider */}
-        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto mb-8 sm:mb-12 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto lg:mb-8 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
           {/* Desktop 3D Carousel - only visible on large screens */}
           <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
             <div className="carousel-container relative w-full h-full">
@@ -438,7 +449,7 @@ export default function Page() {
           </div>
 
           {/* Pagination Dots and Navigation Buttons - Updated to match design */}
-          <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-1 sm:space-x-2">
+          <div className="absolute lg:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-1 sm:space-x-2">
             {/* Left Arrow Button */}
             <button
               className="text-black px-2 rounded-full text-xl disabled:opacity-50"
@@ -484,22 +495,19 @@ export default function Page() {
           }}
         />
 
-        <div className="relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-12 xl:py-0 2xl:py-18 3xl:py-0">
+        <div className="pt-14 sm:pt-20 relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-12 xl:py-0 2xl:py-18 3xl:py-0">
           {/* Company information section */}
           <div className="mb-6 sm:mb-8 lg:mb-10 text-black w-full text-justify">
             <p className="text-base sm:text-lg lg:text-xl xl:text-[25px] 2xl:text-[26px] 3xl:text-[30px] leading-[1.6]">
               Founded in 2005, VST Auto Parts enables Tata dealers to go the
               extra mile in providing effective, timely after-sales service with
-              quick access to original spare parts.
-            </p>
-            <p className="mt-2 sm:mt-3 lg:mt-4 text-base sm:text-lg lg:text-xl xl:text-[25px] 2xl:text-[26px] 3xl:text-[30px]  leading-[1.6]">
-              VST Auto Parts supply Tata Motors parts across Tamil Nadu, with
-              the central warehouse spanning 15,000 square feet in Poonamallee,
-              Chennai. This the central supply centre for a network of 2
-              warehouses located in Vellore and Cuddalore. The network supplies
-              over 3300 line items to more than 1200 retailers in the state. VST
-              Auto Parts has registered a steady annual growth rate of 20% since
-              its inception.
+              quick access to original spare parts.VST Auto Parts supply Tata
+              Motors parts across Tamil Nadu, with the central warehouse
+              spanning 15,000 square feet in Poonamallee, Chennai. This the
+              central supply centre for a network of 2 warehouses located in
+              Vellore and Cuddalore. The network supplies over 3300 line items
+              to more than 1400 retailers in the state. VST Auto Parts has
+              registered a steady annual growth rate of 20% since its inception.
             </p>
             <div className="flex justify-left mt-6">
               <a
