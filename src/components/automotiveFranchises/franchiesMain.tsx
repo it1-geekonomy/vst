@@ -184,6 +184,7 @@ const slides: SlideData[] = [
     header: "VST Grandeur - Jaguar Land Rover",
     description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's high-end SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalized service.",
     learnMoreLink: "www.jlr.com/",
+
     locations: {
       Chennai: {
         sales: [
@@ -227,6 +228,7 @@ const slides: SlideData[] = [
     header: "VST Supercars - Porsche",
     description: "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
     learnMoreLink: "dealer.porsche.com/in/bengaluru/en-GB",
+
     locations: {
       Bangalore: {
         sales: [
@@ -260,6 +262,7 @@ const slides: SlideData[] = [
     header: "VST Avventura - Maserati",
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
     learnMoreLink: "www.maserati.com/in/en/official-dealer/vst-maserati",
+
     locations: {
       Bangalore: {
         sales: [
@@ -337,6 +340,7 @@ const slides: SlideData[] = [
     header: "VST Central - KIA",
     description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
     learnMoreLink: "vstcentral-kia.in/karnataka/",
+
     locations: {
       Bengaluru: {
         sales: [

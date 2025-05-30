@@ -7,7 +7,7 @@ import healthImage from "../app/public/making-a-difference/healthImage.png";
 export const initiatives = [
     {
         title: 'Education and Holistic Development',
-        description: 'As part of our Corporate Social Responsibility (CSR) initiatives, we dedicated INR 1.74 crores to the cause of promoting education in the city. By channeling resources into education, we aim to foster a highly educated workforce capable of effectively confronting the challenges that lie ahead.',
+        description: 'As part of our Corporate Social Responsibility (CSR) initiatives, we dedicated INR 1.74 crores to the cause of promoting education in the city. By channelling resources into education, we aim to foster a highly educated workforce capable of effectively confronting the challenges that lie ahead.',
         image: eduImage,
     },
     {

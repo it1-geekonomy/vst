@@ -113,6 +113,15 @@ html {
 .text-clamp-57 {
   font-size: clamp(30px, 3.5vw, 57px);
 }
+
+.text-clamp-70 {
+  font-size: clamp(36px, 4.2vw, 70px);
+}
+
+.text-clamp-75 {
+  font-size: clamp(38px, 4.3vw, 75px);
+}
+
 .text-clamp-80 {
   font-size: clamp(40px, 4.5vw, 80px);
 }
@@ -120,6 +129,7 @@ html {
 .text-clamp-96 {
   font-size: clamp(48px, 5.5vw, 96px);
 }
+
 .text-clamp-116 {
   font-size: clamp(58px, 6vw, 116px);
 }
@@ -136,10 +146,12 @@ html {
   padding-left: clamp(1rem, 5vw, 8rem);
   padding-right: clamp(1rem, 5vw, 8rem);
 }
+
 .px-clamp-16rem {
   padding-left: clamp(1rem, 8vw, 16rem);
   padding-right: clamp(1rem, 8vw, 16rem);
 }
+
 .py-clamp {
   padding-top: clamp(1rem, 3vw, 6rem);
   padding-bottom: clamp(1rem, 3vw, 6rem);
