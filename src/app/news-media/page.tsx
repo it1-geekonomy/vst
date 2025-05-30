@@ -83,54 +83,54 @@ export default function NewsMedia() {
 
   ];
   
-  const cards = [
-    {
-      image: card5,
-      alt: "Porsche Showroom Opening",
-      // title: "We Are Now Open",
-      text: "Happy to inaugurate Maserati's pop-up showroom in Bengaluru.",
-      link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
-      target: "_blank",
-      rel: "noopener noreferrer"
-    },
-    {
-      image: imgcar,
-      alt: "Teams Photo",
-      title: "Meet Our Team",
-      text: "The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz",
-      link: "https://www.linkedin.com/posts/vst-motors-ltd_bharatmobility2025-mercedesbenzindia-porscheindia-activity-7287775917416792067-Eaki?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
-      target: "_blank",
-      rel: "noopener noreferrer"
-    },
+  // const cards = [
+  //   {
+  //     image: card5,
+  //     alt: "Porsche Showroom Opening",
+  //     // title: "We Are Now Open",
+  //     text: "Happy to inaugurate Maserati's pop-up showroom in Bengaluru.",
+  //     link: " https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+  //     target: "_blank",
+  //     rel: "noopener noreferrer"
+  //   },
+  //   {
+  //     image: imgcar,
+  //     alt: "Teams Photo",
+  //     title: "Meet Our Team",
+  //     text: "The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz",
+  //     link: "https://www.linkedin.com/posts/vst-motors-ltd_bharatmobility2025-mercedesbenzindia-porscheindia-activity-7287775917416792067-Eaki?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+  //     target: "_blank",
+  //     rel: "noopener noreferrer"
+  //   },
    
-    {
-      image:frame3,
-      alt: "Latesaat Models",
-      // title: "We Are Now Open",
-      text: " Habits become your second nature. So it is with winning! Our winning streak continues. Education World Grand Jury Awards",
-      link: " https://skei.edu.in/awards#education-world-grand-jury-awards",
-      target: "_blank",
-      rel: "noopener noreferrer"
+  //   {
+  //     image:frame3,
+  //     alt: "Latesaat Models",
+  //     // title: "We Are Now Open",
+  //     text: " Habits become your second nature. So it is with winning! Our winning streak continues. Education World Grand Jury Awards",
+  //     link: " https://skei.edu.in/awards#education-world-grand-jury-awards",
+  //     target: "_blank",
+  //     rel: "noopener noreferrer"
      
-    },
-    {
-      image: Frame5,
-      alt: "Latest Models",
-      title: "New Arrivals",
-      text: "VST Supercars Pvt Ltd, the official dealer for Porsche in Karnataka, has opened another showroom in Whitefield, Bengaluru.",
-      link: "https://www.linkedin.com/posts/motoring-trends_vstsupercars-porsche-porscheshowroom-activity-7307824403147321344-H_QF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
-      target: "_blank",
-      rel: "noopener noreferrer"
-    },
-    {
-      image: mahindra1,
-      alt: "Latest Models",
-      title: "New Arrivals",
-      text: "Celebrating our India Garage - VST Group - Mahindra team",
-      link: "https://www.linkedin.com/posts/vst-motors-ltd_serviceawards-teamrecognition-milestone-activity-7260522846341193728-gRCJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
-      target: "_blank",
-      rel: "noopener noreferrer"
-    },
+  //   },
+  //   {
+  //     image: Frame5,
+  //     alt: "Latest Models",
+  //     title: "New Arrivals",
+  //     text: "VST Supercars Pvt Ltd, the official dealer for Porsche in Karnataka, has opened another showroom in Whitefield, Bengaluru.",
+  //     link: "https://www.linkedin.com/posts/motoring-trends_vstsupercars-porsche-porscheshowroom-activity-7307824403147321344-H_QF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+  //     target: "_blank",
+  //     rel: "noopener noreferrer"
+  //   },
+  //   {
+  //     image: mahindra1,
+  //     alt: "Latest Models",
+  //     title: "New Arrivals",
+  //     text: "Celebrating our India Garage - VST Group - Mahindra team",
+  //     link: "https://www.linkedin.com/posts/vst-motors-ltd_serviceawards-teamrecognition-milestone-activity-7260522846341193728-gRCJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
+  //     target: "_blank",
+  //     rel: "noopener noreferrer"
+  //   },
 
     //  {
     //   image: imcard12,
@@ -141,7 +141,7 @@ export default function NewsMedia() {
     //   target: "_blank",
     //   rel: "noopener noreferrer"
     // },
-  ];
+  // ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -151,14 +151,14 @@ export default function NewsMedia() {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#2E2E2E]">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#2E2E2E] ">
       <div className="absolute top-0 left-0 w-full h-[80px] bg-gradient-to-b from-[#2E2E2E] via-[#2E2E2E]/80 to-transparent flex items-center justify-center z-30 pointer-events-none pt-10 md:pt-20">
         <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roc drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
       </div>
       {/* Hero Section */}
       <section className="relative w-full h-auto min-h-[90vh] md:min-h-[100vh] lg:min-h-[110vh] pt-[10px] mt-[20px] md:mt-[40px] mb-[400px] md:mb-[500px] lg:mb-0">
         {/* Top blend gradient for seamless transition */}
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-t from-transparent to-[#2E2E2E] z-20 pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent to-[#2E2E2E] via-[#2E2E2E]  z-20 pointer-events-none" />
         <div className="absolute inset-0 bg-black/5 z-10"></div>
         <Image 
           src={bgimg} 
@@ -178,12 +178,12 @@ export default function NewsMedia() {
               <div className="w-full lg:w-[55%] flex  flex-col items-center ">
                 <div className="w-full lg:max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-24 h-[50vh] sm:h-[50vh] md:h-[90vh] lg:h-[90vh]  flex flex-col">
                   {/* Hero Title */}
-                  <div className="flex items-center pt-20 sm:pt-24 md:pt-20 lg:pt-22 xl:pt-24 2xl:pt-26 h-[50%]">
-                    <div className="relative h-full flex items-center w-full">
+                    <div className="flex items-center justify-center pt-20 sm:pt-24 md:pt-20 lg:pt-22 xl:pt-24 2xl:pt-26 h-[50%]">
+                    <div className="relative h-full flex items-center justify-center w-full">
                       {headlines.map((headline, index) => (
                         <h1 
                           key={index}
-                          className={`text-black w-full lg:w-[35rem] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl leading-tight tracking-tight font-roc font-semibold sm:font-medium absolute transition-all duration-1000 ${
+                          className={`text-black w-full lg:w-[35rem] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl leading-tight  tracking-tight font-roc font-semibold sm:font-medium  absolute transition-all duration-1000 ${
                             currentIndex === index 
                               ? "opacity-100 translate-x-0" 
                               : index === (currentIndex + 1) % headlines.length || (currentIndex === headlines.length - 1 && index === 0)
@@ -265,7 +265,7 @@ export default function NewsMedia() {
                 </div>
               </div>
               
-              {/* Right sidebar - Popular This Week - 40% */}
+              {/* Right sidebar - Popular This Week - 40%
               <div className="w-full lg:w-[45%] xl:w-[40%] flex flex-col justify-start lg:justify-end px-4 md:px-6 lg:px-8 pb-8 lg:pb-18 mt-8 md:mt-10 lg:mt-0">
                 <div className="bg-black/70 h-auto min-h-[400px] md:min-h-[500px] lg:h-[85vh] w-full overflow-hidden flex flex-col bg-white/10 backdrop-blur-sm rounded-lg shadow-lg">
                   <div className="flex flex-col h-full px-4 sm:px-6 md:px-8 lg:px-12 pt-8 sm:pt-10 md:pt-12 lg:pt-16 pb-6 lg:pb-8">
@@ -312,7 +312,7 @@ export default function NewsMedia() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           
