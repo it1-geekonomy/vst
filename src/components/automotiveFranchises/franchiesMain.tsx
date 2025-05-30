@@ -316,7 +316,7 @@ const slides: SlideData[] = [
         ]
       },
        Chennai: {
-        sales: [
+        "sales & service": [
           {
             address: "#148, Rajiv Gandhi Salai, Okkiyam, \nThoraipakkam, Chennai, Tamil Nadu \n600096",
             phone: "+91 99405 06040",
