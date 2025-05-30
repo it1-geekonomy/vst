@@ -133,7 +133,7 @@ const slides: SlideData[] = [
     LogoComponent: MercedesIcon,
     header: "VST Titanium - Mercedes Benz ",
     description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015, with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar in luxury automotive ownership.",
-    learnMoreLink: "www.titaniummotors.mercedes-benz.co.in/",
+    learnMoreLink: "https://www.titaniummotors.mercedes-benz.co.in/",
     locations: {
       Bangalore: {
         sales: [
@@ -183,7 +183,7 @@ const slides: SlideData[] = [
     LogoComponent: JaguarIcon,
     header: "VST Grandeur - Jaguar Land Rover",
     description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's high-end SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalized service.",
-    learnMoreLink: "www.jlr.com/",
+    learnMoreLink: "https://www.jlr.com/",
 
     locations: {
       Chennai: {
@@ -227,7 +227,7 @@ const slides: SlideData[] = [
     LogoComponent: PorscheIcon,
     header: "VST Supercars - Porsche",
     description: "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
-    learnMoreLink: "dealer.porsche.com/in/bengaluru/en-GB",
+    learnMoreLink: "https://dealer.porsche.com/in/bengaluru/en-GB",
 
     locations: {
       Bangalore: {
@@ -261,7 +261,7 @@ const slides: SlideData[] = [
     LogoComponent: MaseratiIcon,
     header: "VST Avventura - Maserati",
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
-    learnMoreLink: "www.maserati.com/in/en/official-dealer/vst-maserati",
+    learnMoreLink: "https://www.maserati.com/in/en/official-dealer/vst-maserati",
 
     locations: {
       Bangalore: {
@@ -295,7 +295,7 @@ const slides: SlideData[] = [
     LogoComponent: DucatiIcon,
     header: "VST & Sons - Ducati",
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
-    learnMoreLink: "www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
+    learnMoreLink: "https://www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
     locations: {
       Bengaluru: {
         sales: [
@@ -339,7 +339,7 @@ const slides: SlideData[] = [
     LogoComponent: KiaIcon,
     header: "VST Central - KIA",
     description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
-    learnMoreLink: "vstcentral-kia.in/karnataka/",
+    learnMoreLink: "https://vstcentral-kia.in/karnataka/",
 
     locations: {
       Bengaluru: {
@@ -446,7 +446,7 @@ const slides: SlideData[] = [
     LogoComponent: TataIcon,
     header: "VST Motors -TATA",
     description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state.",
-    learnMoreLink: "vstmotors.com/",
+    learnMoreLink: "https://vstmotors.com/",
     locations: {
       Bangalore: {
         sales: [
@@ -533,7 +533,7 @@ const slides: SlideData[] = [
       to: "rgba(5, 241, 242, 0.4)",
     },
     LogoComponent: MahindraIcon,
-    header: "India Garage - Mahindra",
+    header: "India Garage - Mahindra & Mahindra",
     description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction.",
     learnMoreLink: "https://www.india-garage.in/",
     locations: {
@@ -712,7 +712,7 @@ const slides: SlideData[] = [
     LogoComponent: VolkswagenLogo,
     header: "Bangalore Motors - Volkswagen",
     description: "In 2009, Volkswagen Palace Cross, part of the VST Group's longstanding legacy in the Indian automotive space, became a premier destination for automotive excellence in Bengaluru. Located on Palace Cross Road, the showroom offers a refined buying experience, customer-first service, and a deep understanding of what Indian customers seek in a global brand. Bringing the best of German engineering to the city, it showcases the complete Volkswagen lineup, from stylish hatchbacks to robust SUVs in an elegant and welcoming environment. With a focus on trust, transparency, and attention to detail, Volkswagen Palace Cross continues to set benchmarks in customer satisfaction. Blending heritage with modernity, it remains the preferred destination for Volkswagen enthusiasts across the region.",
-    learnMoreLink: "www.vw-bangaloremotors.co.in/",
+    learnMoreLink: "https://www.vw-bangaloremotors.co.in/",
     locations: {
       sales: {
         sales: [
@@ -759,7 +759,7 @@ const slides: SlideData[] = [
     LogoComponent: BydLogo,
     header: "VST BYD",
     description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD's cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
-    learnMoreLink: "vstbyd.com/",
+    learnMoreLink: "https://vstbyd.com/",
     locations: {
       India: {
         sales: [
@@ -798,7 +798,7 @@ const slides: SlideData[] = [
     LogoComponent: HondaLogo,
     header: "City Honda",
     description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence. With two centrally located showrooms in Bangalore and workshops across the city and Chikmagalur, City Honda delivers a complete 4S experience - Sales, Service, Spares, and Safety Riding under one roof. Backed by a knowledgeable sales team and expert service technicians, the brand ensures every customer enjoys a smooth and dependable ownership journey. Rooted in trust and powered by performance, City Honda continues to be a preferred destination for two-wheeler enthusiasts.",
-    learnMoreLink: "cityhonda.in/",
+    learnMoreLink: "https://cityhonda.in/",
     locations: {
       Bangalore: {
         sales: [
@@ -1130,11 +1130,11 @@ const FranchiseSlider = () => {
                     <div className="flex items-center gap-2 w-[400px]">
                       <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Website:</span>
                       <h2 
-                        onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank')}
+                        onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank', 'noopener,noreferrer')}
                         title={slides[currentSlide].learnMoreLink}
                         className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
                       >
-                        {slides[currentSlide].learnMoreLink}
+                        {slides[currentSlide].learnMoreLink.replace(/^https?:\/\//, '')}
                       </h2>
                     </div>
                   </div>
@@ -1186,8 +1186,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Sales :
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {sale.address}<br />
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {sale.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(sale.phone) ? (
                                     sale.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1238,8 +1240,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Service :
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {service.address}<br />
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {service.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(service.phone) ? (
                                     service.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1290,8 +1294,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Sales & Service :
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {salesService.address}<br />
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {salesService.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesService.phone) ? (
                                     salesService.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1342,8 +1348,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Sales, Service & Parts Distribution :
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {salesDist.address}<br />
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {salesDist.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesDist.phone) ? (
                                     salesDist.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1394,8 +1402,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Pre-Owned Cars :
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {preOwned.address}<br />
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {preOwned.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(preOwned.phone) ? (
                                     preOwned.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1446,8 +1456,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl mb-2">
                                   Service & Parts :
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {serviceParts.address}<br />
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {serviceParts.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(serviceParts.phone) ? (
                                     serviceParts.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1499,8 +1511,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                  Spares & Distribution :
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {sparesParts.address}<br />
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {sparesParts.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(sparesParts.phone) ? (
                                     sparesParts.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1552,8 +1566,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl mb-2">
                                   Spares Warehouse :
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
-                                  {spares.address}<br />
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {spares.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(spares.phone) ? (
                                     spares.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
