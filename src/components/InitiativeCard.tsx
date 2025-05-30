@@ -48,7 +48,7 @@ export default function InitiativeCard({ title, description, image }: Initiative
       {/* Description text */}
       <div
         className={`
-          absolute inset-0 flex items-center justify-center leading-6 px-4 text-white transition-opacity duration-500 pointer-events-none
+          absolute inset-0 flex items-center justify-center  px-4 text-white transition-opacity duration-500 pointer-events-none
           ${isMobile
             ? showDescription
               ? "opacity-100"
@@ -57,7 +57,7 @@ export default function InitiativeCard({ title, description, image }: Initiative
           }
         `}
       >
-        <p className="text-clamp-28 font-light text-start">{description}</p>
+        <p className="text-clamp-28 font-light text-start sm:leading-4 md:leading-6 lg:leading-5 xl:leading-6 2xl:leading-8">{description}</p>
       </div>
     </div>
   );
