@@ -120,33 +120,35 @@ export default function Navbar() {
                   </svg>
                 </button>
                 <div 
-                  className={`absolute left-[-16px] mt-2 w-40 lg:w-48 bg-black rounded-md shadow-lg py-1 transition-all duration-300 pl-2
+                  className={`absolute left-[-16px] mt-2 w-44 lg:w-52 bg-black rounded-md shadow-lg transition-all duration-300
                   ${isDesktopDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}
                 >
-                  <Link
-                    href="/automotive-franchises"
-                    className="block py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800 whitespace-nowrap"
-                  >
-                    Automotive Franchises
-                  </Link>
-                  <Link
-                    href="/manufacture"
-                    className="block py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800"
-                  >
-                    Manufacturing
-                  </Link>
-                  <Link
-                    href="/auto-parts"
-                    className="block py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800"
-                  >
-                    OE Parts Distribution
-                  </Link>
-                  <Link
-                    href="/education"
-                    className="block py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800"
-                  >
-                    Education
-                  </Link>
+                  <div className="py-1">
+                    <Link
+                      href="/automotive-franchises"
+                      className="block w-full px-4 py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800 whitespace-nowrap rounded-md "
+                    >
+                      Automotive Franchises
+                    </Link>
+                    <Link
+                      href="/manufacture"
+                      className="block w-full px-4 py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800 rounded-md "
+                    >
+                      Manufacturing
+                    </Link>
+                    <Link
+                      href="/auto-parts"
+                      className="block w-full px-4 py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800 rounded-md "
+                    >
+                      OE Parts Distribution
+                    </Link>
+                    <Link
+                      href="/education"
+                      className="block w-full px-4 py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800 rounded-md "
+                    >
+                      Education
+                    </Link>
+                  </div>
                 </div>
               </div>
               <Link
