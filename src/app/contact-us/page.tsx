@@ -3,7 +3,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
 import Image from 'next/image'
 
-import frame1 from '@/app/public/contact-us/frame1.jpg'
+import frame1 from '@/app/public/contact-us/frame1.png'
 
 import axios from 'axios'
 import { useState } from 'react'

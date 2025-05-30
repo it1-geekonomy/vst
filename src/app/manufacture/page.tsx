@@ -15,7 +15,7 @@ import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors"
 import Logo from '@/app/public/logos/Logo'
 import LocationSectionUpdated from '@/components/LocationSectionUpdated'
 import VSTLogoAnimation from '@/components/VSTLogoAnimation'
-
+import Headerlogo from '@/app/public/images/Manufacture/Headerlogo'
 const ManufacturePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
@@ -79,8 +79,11 @@ const ManufacturePage = () => {
   return (
     <div className="xl:pt-12 bg-[linear-gradient(180deg,#02231C_0%,#04473F_50%,#066C5E_100%)]">
       <div className="mx-auto px-4 md:px-8 lg:px-12 pb-12 flex flex-col justify-around w-[95%] md:w-[98%]">
+        <div className="flex justify-center mt-3">
+          <Headerlogo />
+        </div>
         {/* Tillers & Tractors Heading */}
-        <h1 className="text-clamp-120 font-normal my-8 md:my-12 text-white text-center font-roc">
+        <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal mt-8 md:my-8 text-white text-center font-roc">
           VST Tillers & Tractors
         </h1>
         
@@ -261,8 +264,8 @@ const ManufacturePage = () => {
                  street: "Regd. Office: Plot No.1, Hale",
                  street2: "Devasandra Industrial Layout,",
                  street3: "Whitefield Road, Mahadevapura,",
-                 city: "Post, Bengaluru - 560 048",
-                 state: "India.",
+                 city: "Post, Bengaluru - 560 048, India.",
+                 state: "",
                  pincode: ""       
                }}
                phoneNumbers={[

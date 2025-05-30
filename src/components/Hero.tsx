@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-import slide1 from "@/app/public/hero-section/Homepage-hero section.jpg";
+import slide1 from "@/app/public/hero-section/home-final.png";
 import slide2 from "@/app/public/hero-section/Image 5.jpg";
 import slide3 from "@/app/public/hero-section/image 3.png";
 import slide4 from "@/app/public/hero-section/Image 4.jpg";
@@ -82,7 +82,7 @@ const slides = [
     title: "Automotive Franchises",
 
     subtitle: "Where innovation meets craftsmanship—experience the future of mobility.",
-    label: "Automotive Franchise",
+    label: "Automotive Franchises",
     color: "from-blue-600/80 to-blue-800/80",
     type: 'video',
     videoSrc: "/CarVideo.mp4",

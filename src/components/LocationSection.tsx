@@ -31,14 +31,23 @@ const LocationSection: React.FC<LocationSectionProps> = ({
   iconColor = 'black'
 }) => {
   return (
-    <section className="w-full px-0 sm:px-0 md:px-6 lg:px-8 xl:px-12 2xl:px-16 flex flex-col md:flex-row items-center justify-center z-10 relative py-4 md:py-8">
-      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-[1280px] mx-auto gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
+    <section className="w-full px-0 sm:px-4 lg:px-6 xl:px-12 2xl:px-16 flex flex-col lg:flex-row items-center justify-center z-10 relative py-4 lg:py-8">
+      {/* 
+        Breakpoints:
+        - Default (mobile): < 640px
+        - sm: 640px - 767px (small tablets)
+        - md: 768px - 1023px (tablets/laptops)
+        - lg: 1024px - 1279px (desktops)
+        - xl: 1280px - 1535px (large desktops)
+        - 2xl: 1536px+ (extra large screens)
+      */}
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1380px] mx-auto gap-4 sm:gap-6 lg:gap-8 xl:gap-14 2xl:gap-16">
         {/* Left section with title and image */}
-        <div className="flex flex-col items-center md:items-start w-full md:w-auto md:max-w-[45%] lg:max-w-[48%] xl:max-w-[50%]">
+        <div className="flex flex-col items-center lg:items-start w-full lg:w-auto lg:max-w-[45%] xl:max-w-[50%]">
           <h2
-            className={`text-[#2B0B1F] text-center md:text-left mb-4 sm:mb-6 font-roc ${className}`}
+            className={`text-[#2B0B1F] text-center lg:text-left mb-4 sm:mb-6 font-roc ${className}`}
             style={{
-              fontSize: 'clamp(24px, 3.5vw, 50px)',
+              fontSize: 'clamp(24px, 3.5vw, 50px)', // Responsive font size from 24px to 50px
               lineHeight: '1.2',
               letterSpacing: '-1px',
             }}
@@ -49,7 +58,12 @@ const LocationSection: React.FC<LocationSectionProps> = ({
             href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-full max-w-[340px] h-[200px] sm:max-w-[330px] sm:h-[220px] md:w-[400px] md:h-[210px] lg:w-[470px] lg:h-[230px] xl:w-[450px] xl:h-[220px] 2xl:w-[480px] 2xl:h-[235px] overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            className="relative w-full max-w-[340px] h-[200px] 
+                     sm:max-w-[400px] sm:h-[220px] 
+                     lg:w-[470px] lg:h-[230px] 
+                     xl:w-[450px] xl:h-[220px] 
+                     2xl:w-[480px] 2xl:h-[235px] 
+                     overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <Image
               src={require(`@/app/public/${locationImage}`)}
@@ -62,29 +76,29 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 w-full md:w-auto md:max-w-[55%] lg:max-w-[52%] xl:max-w-[50%] mt-12 md:mt-16 items-center md:items-start justify-center">
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 xl:gap-10 w-full lg:w-auto lg:max-w-[55%] xl:max-w-[50%] mt-8 lg:mt-12">
           {/* Address */}
-          <div className="text-center md:text-left flex items-center">
-            <p
-              className={`font-roc font-normal ${className}`}
+          <div className="text-center lg:text-left flex items-center justify-center lg:justify-start w-full lg:w-auto">
+            <div
+              className={`font-roc font-normal ${className} mt-3 lg:mt-5 flex flex-col items-center lg:items-start w-full max-w-[400px]`}
               style={{
-                fontSize: 'clamp(15px, 2vw, 24px)',
+                fontSize: 'clamp(15px, 2vw, 24px)', // Responsive font size from 15px to 24px
                 lineHeight: '1.6',
               }}
             >
-              {address.street}
-              {address.street2 && <><br />{address.street2}</>}
-              {address.street3 && <><br />{address.street3}</>}
-              <br />
-              {address.city}
-              {!address.city.includes(address.pincode) && address.pincode && <>, {address.pincode}</>}
-              <br />
-              {address.state}
-            </p>
+              <div className="w-full text-center lg:text-left whitespace-normal lg:whitespace-nowrap">{address.street}</div>
+              {address.street2 && <div className="w-full text-center lg:text-left whitespace-normal lg:whitespace-nowrap">{address.street2}</div>}
+              {address.street3 && <div className="w-full text-center lg:text-left whitespace-normal lg:whitespace-nowrap">{address.street3}</div>}
+              {address.city && <div className="w-full text-center lg:text-left whitespace-normal lg:whitespace-nowrap">{address.city}</div>}
+              {!address.city.includes(address.pincode) && address.pincode && (
+                <div className="w-full text-center lg:text-left whitespace-normal lg:whitespace-nowrap">{address.pincode}</div>
+              )}
+              {address.state && <div className="w-full text-center lg:text-left whitespace-normal lg:whitespace-nowrap">{address.state}</div>}
+            </div>
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col items-center md:items-start justify-center">
+          <div className="flex flex-col items-center lg:items-start justify-center">
             {/* Phone Numbers */}
             <div className="flex flex-col">
               {phoneNumbers.map((phone, idx) => (
@@ -107,8 +121,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                   <span
                     className={`font-roc font-normal break-all ${className}`}
                     style={{
-                      fontSize: 'clamp(15px, 2vw, 24px)',
-                      lineHeight: '1.6',
+                      fontSize: 'clamp(15px, 2vw, 24px)', // Responsive font size from 15px to 24px
+                      lineHeight: '1.4',
                     }}
                   >
                     {phone.replace('📞 ', '')}
@@ -119,7 +133,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
 
             {/* Email Addresses */}
             {emails && (
-              <div className="flex flex-col mt-1">
+              <div className="flex flex-col -mb-8">
                 {emails.info && (
                   <a 
                     href={`mailto:${emails.info}`}
@@ -142,8 +156,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal break-all ${className}`}
                       style={{
-                        fontSize: 'clamp(15px, 2vw, 24px)',
-                        lineHeight: '1.6'
+                        fontSize: 'clamp(16px, 2vw, 24px)', // Responsive font size from 16px to 24px
+                        lineHeight: '2.0'
                       }}
                     >
                       {emails.info}
@@ -153,11 +167,10 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                 {emails.globalConnect && (
                   <div className="flex flex-col">
                     <span
-                      className={`font-roc ${className} mb-1`}
+                      className={`font-roc font-normal ${className} mb-1`}
                       style={{
-                        fontSize: 'clamp(14px, 1.8vw, 20px)',
-                        lineHeight: '1.4',
-                        fontWeight: 500
+                        fontSize: 'clamp(14px, 1.8vw, 20px)', // Responsive font size from 14px to 20px
+                        lineHeight: '1.6',
                       }}
                     >
                       Global Connect
@@ -183,7 +196,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       <span
                         className={`font-roc font-normal break-all ${className}`}
                         style={{
-                          fontSize: 'clamp(15px, 2vw, 24px)',
+                          fontSize: 'clamp(15px, 2vw, 24px)', // Responsive font size from 15px to 24px
                           lineHeight: '1.6'
                         }}
                       >

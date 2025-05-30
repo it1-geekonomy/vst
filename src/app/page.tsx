@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import Initiatives from "@/components/Initiatives";
+
 import LifeAtVst from "@/components/LifeAtVst";
 import ContactUs from "@/components/GetInTouch";
 import Footer from "@/components/Footer";

@@ -23,21 +23,14 @@ import bg3 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-301400
 
 import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
 
-// import car4 from "@/app/public/faranchies/carpic/4car.png";
-// import car5 from "@/app/public/faranchies/carpic/5car.png";
-// import car6 from "@/app/public/faranchies/carpic/6car.png";
-// import car7 from "@/app/public/faranchies/carpic/7car.png";
-// import bike from "@/app/public/faranchies/carpic/bike.png";
-// import hondabike from "@/app/public/faranchies/carpic/Honda-bike.png";
-// import volkswagen from "@/app/public/faranchies/carpic/volkswagen-car.png";
-// import byd from "@/app/public/faranchies/carpic/byd-car.png";
+
 import porsche from "@/app/public/faranchies/newcarpics/porsche4.png";
 import benzs from "@/app/public/faranchies/newcarpics/benz1.png";
-import jaguar from "@/app/public/faranchies/newcarpics/jaguar2.png";
+import jaguar from "@/app/public/faranchies/newcarpics/ja-la.png";
 import landrover from "@/app/public/faranchies/newcarpics/landrover3.png";
 import maserati from "@/app/public/faranchies/newcarpics/maserati5.png";
 import honda from "@/app/public/faranchies/newcarpics/honda12.png";
-import tata from "@/app/public/faranchies/newcarpics/tata8.png";
+import tatanew from "@/app/public/faranchies/newcarpics/tatanew.png";
 import kia from "@/app/public/faranchies/newcarpics/kia7.png";
 import ducati from "@/app/public/faranchies/newcarpics/ducati6.png";
 import mahindra from "@/app/public/faranchies/newcarpics/mahindra9.png";
@@ -65,7 +58,7 @@ import VSTLogoAnimation from "../VSTLogoAnimation";
 interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
-  brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD" | "ducati" | "mahindra";
+  brand: "mercedes" | "jlr" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD" | "ducati" | "mahindra";
   bgColor: {
     from: string;
     to: string;
@@ -118,7 +111,6 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
-
       "spares warehouse"?: Array<{
         address: string;
         phone: string | string[];
@@ -141,7 +133,7 @@ const slides: SlideData[] = [
     LogoComponent: MercedesIcon,
     header: "VST Titanium - Mercedes Benz ",
     description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015, with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar in luxury automotive ownership.",
-    learnMoreLink: "https://www.titaniummotors.mercedes-benz.co.in/",
+    learnMoreLink: "www.titaniummotors.mercedes-benz.co.in/",
     locations: {
       Bangalore: {
         sales: [
@@ -183,71 +175,29 @@ const slides: SlideData[] = [
   {
     id: 2,
     backgroundImage: jaguar,
-    brand: "jaguar",
+    brand: "jlr",
     bgColor: {
       from: "#780E26",
       to: "rgba(120, 14, 38, 0.4)",
     },
     LogoComponent: JaguarIcon,
-    header: "VST Grandeur - Jaguar",
-    description: "VST Grandeur has been representing Jaguar in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalised service.",
-    learnMoreLink: "https://retailers.jaguar.in/vst-grandeur-jaguar",
+    header: "VST Grandeur - Jaguar Land Rover",
+    description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's high-end SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalized service.",
+    learnMoreLink: "www.jlr.com/",
+
     locations: {
       Chennai: {
         sales: [
           {
             address: "Old #182, New #237,VST Emerald\n Anna Salai, Chennai - 600 006.",
             phone: "+91 96000 53000",
-            email: " info@vstgrandeur.com",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217780062!5m2!1sen!2sin"
-          }
-        ],
-        "sales & service": [
-          {
-            address: " #267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056.",
-            phone: "+91 44-6636 1373, +91 44-6636 1363",
-            email: "crs.chn@vstgrandeur.com",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217817663!5m2!1sen!2sin"
-          }
-        ]
-      },
-      Coimbatore: {
-        "sales & service": [
-          {
-            address: "#145-1C1, L&T By-pass Road,\n Oddar Palayam, Ondipudur ,\n Coimbatore - 641 016.",
-            phone: "+91 422-452 4444",
-            email: ["info.cbe@vstgrandeur.com", "workshop.cbe@vstgrandeur.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217854171!5m2!1sen!2sin"
-          }
-        ]
-      }
-    }
-  },
-  {
-    id: 3,
-    backgroundImage: landrover,
-    brand: "landrover",
-    bgColor: {
-      from: "#DCAB77",
-      to: "rgba(220, 171, 119, 0.4)",
-    },
-    LogoComponent: LandRoverIcon,
-    header: "VST Grandeur - Land Rover",
-    description: "VST Grandeur has been representing Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service.",
-    learnMoreLink: "https://retailers.landrover.in/vst-grandeur-land-rover",
-    locations: {
-      Chennai: {
-        sales: [
-          {
-            address: "Old #182, New #237,VST Emerald\n Anna Salai, Chennai - 600 006.",
-            phone: "+91 96000 53000",
-            email: " info@vstgrandeur.com",
+            email: "info@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217925445!5m2!1sen!2sin"
           }
         ],
         "sales & service": [
           {
-            address: " #267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056.",
+            address: "#267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056.",
             phone: "+91 44-6636 1373, +91 44-6636 1363",
             email: "crs.chn@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217959401!5m2!1sen!2sin"
@@ -257,17 +207,17 @@ const slides: SlideData[] = [
       Coimbatore: {
         "sales & service": [
           {
-            address: "#145-1C1, L&T By-pass Road,\n Oddar Palayam, Ondipudur ,\n Coimbatore - 641 016.",
-            phone: "+91 422-452 4444",
-            email: [" info.cbe@vstgrandeur.com", "workshop.cbe@vstgrandeur.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217999025!5m2!1sen!2sin"
+            address: "#145-1C1, L&T By-pass Road, Oddar\n Palayam, Ondipudur , Coimbatore - 641 016.",
+            phone: "+91 422 6636 1373, +91 422 6636 1363",
+            email: "crs.cbe@vstgrandeur.com",
+            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1748587200340!5m2!1sen!2sin" 
           }
         ]
       }
     }
   },
   {
-    id: 4,
+    id: 3,
     backgroundImage: porsche,
     brand: "porsche",
     bgColor: {
@@ -277,7 +227,8 @@ const slides: SlideData[] = [
     LogoComponent: PorscheIcon,
     header: "VST Supercars - Porsche",
     description: "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
-    learnMoreLink: "https://dealer.porsche.com/in/bengaluru/en-GB",
+    learnMoreLink: "dealer.porsche.com/in/bengaluru/en-GB",
+
     locations: {
       Bangalore: {
         sales: [
@@ -300,7 +251,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 5,
+    id: 4,
     backgroundImage: maserati,
     brand: "maserati",
     bgColor: {
@@ -310,7 +261,8 @@ const slides: SlideData[] = [
     LogoComponent: MaseratiIcon,
     header: "VST Avventura - Maserati",
     description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
-    learnMoreLink: "https://www.maserati.com/in/en/official-dealer/vst-maserati",
+    learnMoreLink: "www.maserati.com/in/en/official-dealer/vst-maserati",
+
     locations: {
       Bangalore: {
         sales: [
@@ -333,7 +285,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 6,
+    id: 5,
     backgroundImage: ducati,
     brand: "maserati",
     bgColor: {
@@ -343,7 +295,7 @@ const slides: SlideData[] = [
     LogoComponent: DucatiIcon,
     header: "VST & Sons - Ducati",
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
-    learnMoreLink: "https://www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
+    learnMoreLink: "www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
     locations: {
       Bengaluru: {
         sales: [
@@ -377,7 +329,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 7,
+    id: 6,
     backgroundImage: kia,
     brand: "maserati",
     bgColor: {
@@ -387,7 +339,8 @@ const slides: SlideData[] = [
     LogoComponent: KiaIcon,
     header: "VST Central - KIA",
     description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
-    learnMoreLink: "https://vstcentral-kia.in/karnataka/",
+    learnMoreLink: "vstcentral-kia.in/karnataka/",
+
     locations: {
       Bengaluru: {
         sales: [
@@ -453,7 +406,7 @@ const slides: SlideData[] = [
         service: [
           {
             address: "#57, Arcot Road, Virugavayapuram, \nBharani Colony, Saligramam, \nChennai - 600 093.",
-            phone: "+91 90872 11113, +91 89255 03894",
+            phone: "+91 90872 11113 , +91 89255 03894",
             email: "servicemanagerch@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124378.72962695648!2d80.0696671!3d13.0461534!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526720103596eb%3A0x89ee02c1c5997cb0!2sKia%20Car%20Service%20-%20VST%20Central%2C%20Chennai!5e0!3m2!1sen!2sin!4v1747234107357!5m2!1sen!2sin"
           },
@@ -462,19 +415,19 @@ const slides: SlideData[] = [
           
           {
             address: "#250-2, Meyyanur Road, Ashokapuram \nPost, Salem - 636 004.",
-            phone: "+91 81488 11113, +91 93848 77744, \n+91 93840 84430",
+            phone: "+91 81488 11113 , +91 93848 77744, \n+91 93840 84430",
             email: "servicemanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31258.594118025143!2d78.0997807!3d11.6714159!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf06a1e618371%3A0xd149fb0b495752ca!2sKia%20Car%20Showroom%20-%20Vst%20Kia%2C%20Meyyanur%20Main%20Road!5e0!3m2!1sen!2sin!4v1747234237365!5m2!1sen!2sin"
           },
           {
             address: "#177, Kodipali, Thoppali Agrahara Village, \nHosur - 635 109.",
-            phone: "+91 93449 04681, +91 78458 05068, \n+91 78458 05069",
+            phone: "+91 93449 04681 , +91 78458 05068, \n+91 78458 05069",
             email: "salesmanagerhsr@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.934187484988!2d77.8746835!3d12.717716399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae776f63338a5b%3A0xaf507e08bea31c5!2sKia%20Car%20Showroom%20-%20Vst%20Central%2C%20Kumudepalli!5e0!3m2!1sen!2sin!4v1747234328566!5m2!1sen!2sin"
           },
           {
             address: "No. 43, Katpadi Road, Gandhinagar, \nVellore - 632 006.",
-            phone: "+91 90872 11113, +91 93840 96077",
+            phone: "+91 90872 11113 , +91 93840 96077",
             email: ["servicemanagervlr@vstcentral-kia.in", "salesmanagervlr@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.318270535633!2d79.1367769!3d12.9514746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad393de10f1b39%3A0xee4f088f339b7d95!2sVST%20CENTRAL%20-%20KIA%20SHOWROOM%20%26%20WORKSHOP!5e0!3m2!1sen!2sin!4v1747234422327!5m2!1sen!2sin"
           }
@@ -483,8 +436,8 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 8,
-    backgroundImage: tata,
+    id: 7,
+    backgroundImage: tatanew,
     brand: "tata",
     bgColor: {
       from: "#D6744E",
@@ -493,7 +446,7 @@ const slides: SlideData[] = [
     LogoComponent: TataIcon,
     header: "VST Motors -TATA",
     description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state.",
-    learnMoreLink: "https://vstmotors.com/",
+    learnMoreLink: "vstmotors.com/",
     locations: {
       Bangalore: {
         sales: [
@@ -513,38 +466,38 @@ const slides: SlideData[] = [
         "sales & service": [
           {
             address: "By-Pass Road, Poonamallee, \nChennai - 600 056.",
-            phone: [" +91 98403 76339 , +91 73974 92943 , \n+91 89259 95593 , +91 98401 54057"],
+            phone: [" +91 98403 76339 , +91 73974 92943 " ,"+91 89259 95593 , +91 98401 54057"],
             email: "  cvd.pnml@vstmotors.com",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747890775190!5m2!1sen!2sin"
           },
           {
             address: "#43, Katpadi Road, Gandhinagar, \nVellore - 632 006.",
-            phone: " +91 98423 15740 ,\n +91 98423 45530, +91 98424 10825",
+            phone: [" +91 98423 15740 "," +91 98423 45530, +91 98424 10825"],
             email: " vlr@vstmotors.com",
             map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.316786294946!2d79.1369261!3d12.9515697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad4761940a1a59%3A0xf7813b55f7eaa1a2!2sTata%20Motors%20Commercial%20Vehicle%20Dealer%20-%20V%20S%20T%20Motors%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1747890843996!5m2!1sen!2sin" 
           },
             {
             address: "#10/3, Anai Goudampatti, Opp to Govt. \nEngineering College, Omalur Taluk,\nSalem - 636 011.",
-            phone: " +91 80560 90333,\n+91 94432 39806, +91 73581 09129",
-            email: "slm@vstmotors.com, \nwm.slm@vstmotors.com",
+            phone: [" +91 80560 90333","+91 94432 39806, +91 73581 09129"],
+            email: ["slm@vstmotors.com", "wm.slm@vstmotors.com"],
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1953.3741033567155!2d78.0846876!3d11.7122379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babfb00691d7ad9%3A0x843fd77a9ee4e7de!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1747890920571!5m2!1sen!2sin" 
           },
             {
             address: "#42, Mambalapattu Road, \nVillupuram - 605 602.",
-            phone: " +91 98424 10813,+91 81487 11014",
-            email: " wm.vpm@vstmotors.com,\nacetl.vpm@vstmotors.com",
+            phone: " +91 98424 10813 , +91 81487 11014",
+            email: [" wm.vpm@vstmotors.com","acetl.vpm@vstmotors.com"],
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3903.5280666491453!2d79.4756295!3d11.9378961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a535700220f15e3%3A0xea410901d283e890!2sTATA%20MOTORS%20PVT%20LTD%20%26VST!5e0!3m2!1sen!2sin!4v1747891034524!5m2!1sen!2sin" 
           },
           {
-            address:"Nellikuppam Main Road, Kondur Post, Cuddalore - 607 006.",
-            phone: " +91 98424 10813 , +91 99943 67350,\n+91 96007 99947 , +91 99943 67310",
-            email: " comm.cud@vstmotors.com,\ncudserv@vstmotors.com",
+            address:"Nellikuppam Main Road, Kondur Post, \nCuddalore - 607 006.",
+            phone: [" +91 98424 10813 , +91 99943 67350","+91 96007 99947 , +91 99943 67310"],
+            email: [" comm.cud@vstmotors.com","cudserv@vstmotors.com"],
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747891093784!5m2!1sen!2sin"
           },
           {
-            address:"#524/1, 525/1A, O. Karapalli Village, Onnalvadi Post, Hosur - 635 109.",
-            phone: " +91 94437 47392 , +91 73581 09129,\n+91 81488 54889 , +91 98424 10825",
-            email: " hosur@vstmotors.com,\nwm.hosur@vstmotors.com",
+            address:"#524/1, 525/1A, O. Karapalli Village, \nOnnalvadi Post, Hosur - 635 109.",
+            phone: [" +91 94437 47392 , +91 73581 09129","+91 81488 54889 , +91 98424 10825"],
+            email: [" hosur@vstmotors.com","wm.hosur@vstmotors.com"],
             map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3892.144510501195!2d77.8461167!3d12.7039895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae70ba3aafc4c1%3A0x8dd6df1a69e8bf7d!2sTata%20Motors%20Commercial%20Vehicle%20Dealer%20-%20V%20S%20T%20Motors%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1747891729704!5m2!1sen!2sin" 
           }
         ],
@@ -562,7 +515,7 @@ const slides: SlideData[] = [
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747891861045!5m2!1sen!2sin" 
           },
            {
-            address: "#3/1, New By-pass Road, Chennai-\nBengaluru Highway, Shenbakkam, \nVellore - 632 008..",
+            address: "#3/1, New By-pass Road, Chennai-\nBengaluru Highway, Shenbakkam, \nVellore - 632 008.",
             phone: "+91 99406 00442 , +91 73584 44125",
             email: "autopartssm.vlr@vstmotors.com",
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747891932644!5m2!1sen!2sin" 
@@ -571,59 +524,8 @@ const slides: SlideData[] = [
       }
     }
   },
-  // {
-  //   id: 9,
-  //   backgroundImage: kia,
-  //   brand: "kia",
-  //   bgColor: {
-  //     from: "#FDC756",
-  //     to: "rgba(253, 199, 86, 0.4)",
-  //   },
-  //   LogoComponent: KiaIcon,
-  //   header: "VST Central - KIA",
-  //   description: "VST Central is the authorized dealer for KIA in Bengaluru and Mysore, offering a comprehensive range of KIA vehicles along with exceptional sales and service support. With modern showrooms and state-of-the-art service centers, it ensures a premium automotive experience for all customers.",
-  //   learnMoreLink: "https://www.kia.com",
-  //   locations: {
-  //     Bangalore: {
-  //       sales: [
-  //         {
-  //           address: "#202, 7th Main, HRBR Layout,\n Kalyan Nagar, Bengaluru - 560 043",
-  //           phone: "+91 80 2542 2810",
-  //           email: "sales.bangalore@vstcentral.in",
-  //           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d77.6431027!3d13.015952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1728131c0e23%3A0xa06978a43d8ffa58!2sCity%20Honda%20Sales%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
-  //         }
-  //       ],
-  //       service: [
-  //         {
-  //           address: "#143, Lalbagh Road,\n Near Subbaiah Circle, Bengaluru - 560 027",
-  //           phone: "+91 80 4333 3330",
-  //           email: "service.bangalore@vstcentral.in",
-  //           map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d77.5865653!3d12.9613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156978155c3f%3A0xead9a19c3f1e2497!2sCity%20Honda%20Sales%20Lalbagh%20Road!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
-  //         }
-  //       ]
-  //     },
-  //     Mysore: {
-  //       sales: [
-  //         {
-  //           address: "#123, Hunsur Road,\n Mysore - 570 008",
-  //           phone: "+91 821 2345678",
-  //           email: "sales.mysore@vstcentral.in",
-  //           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sVST%20Central%20KIA%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
-  //         }
-  //       ],
-  //       service: [
-  //         {
-  //           address: "#456, Ring Road,\n Mysore - 570 008",
-  //           phone: "+91 821 2345679",
-  //           email: "service.mysore@vstcentral.in",
-  //           map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sVST%20Central%20KIA%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
   {
-    id: 10,
+    id: 8,
     backgroundImage: mahindra,
     brand: "mahindra",
     bgColor: {
@@ -800,7 +702,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 11,
+    id: 9,
     backgroundImage: wagen,
     brand: "volkswagen",
     bgColor: {
@@ -810,7 +712,7 @@ const slides: SlideData[] = [
     LogoComponent: VolkswagenLogo,
     header: "Bangalore Motors - Volkswagen",
     description: "In 2009, Volkswagen Palace Cross, part of the VST Group's longstanding legacy in the Indian automotive space, became a premier destination for automotive excellence in Bengaluru. Located on Palace Cross Road, the showroom offers a refined buying experience, customer-first service, and a deep understanding of what Indian customers seek in a global brand. Bringing the best of German engineering to the city, it showcases the complete Volkswagen lineup, from stylish hatchbacks to robust SUVs in an elegant and welcoming environment. With a focus on trust, transparency, and attention to detail, Volkswagen Palace Cross continues to set benchmarks in customer satisfaction. Blending heritage with modernity, it remains the preferred destination for Volkswagen enthusiasts across the region.",
-    learnMoreLink: "https://www.vw-bangaloremotors.co.in/",
+    learnMoreLink: "www.vw-bangaloremotors.co.in/",
     locations: {
       sales: {
         sales: [
@@ -847,7 +749,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 12,
+      id: 10,
     backgroundImage: byd,
     brand: "BYD",
     bgColor: {
@@ -857,7 +759,7 @@ const slides: SlideData[] = [
     LogoComponent: BydLogo,
     header: "VST BYD",
     description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD's cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
-    learnMoreLink: "https://vstbyd.com/",
+    learnMoreLink: "vstbyd.com/",
     locations: {
       India: {
         sales: [
@@ -886,7 +788,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 13,
+    id: 11,
     backgroundImage: honda,
     brand: "honda",
     bgColor: {
@@ -896,7 +798,7 @@ const slides: SlideData[] = [
     LogoComponent: HondaLogo,
     header: "City Honda",
     description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence. With two centrally located showrooms in Bangalore and workshops across the city and Chikmagalur, City Honda delivers a complete 4S experience - Sales, Service, Spares, and Safety Riding under one roof. Backed by a knowledgeable sales team and expert service technicians, the brand ensures every customer enjoys a smooth and dependable ownership journey. Rooted in trust and powered by performance, City Honda continues to be a preferred destination for two-wheeler enthusiasts.",
-    learnMoreLink: "https://cityhonda.in/",
+    learnMoreLink: "cityhonda.in/",
     locations: {
       Bangalore: {
         sales: [
@@ -1047,9 +949,9 @@ const FranchiseSlider = () => {
         transition={{ duration: 0.01 }}
       >
         {/* Car section */}
-        <div className="relative w-full h-auto sm:h-[90vh] lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[10rem] mb-[4rem]">
+        <div className="relative w-full h-auto sm:h-auto lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[10rem] mb-[4rem]">
           {/* Left section with background and car */}
-          <div className="relative w-full sm:w-full lg:w-[85%] h-[50vh] sm:h-[70vh] lg:h-full xl:h-[100vh]">
+          <div className="relative w-full lg:w-[85%] h-[50vh] sm:h-[50vh] lg:h-full xl:h-[100vh]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`bg-${currentSlide}`}
@@ -1057,7 +959,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute left-0 w-full lg:w-[92%] h-full sm:h-[70vh] lg:h-[95%] rounded-br-[60px] sm:rounded-br-[80px] lg:rounded-br-[120px] overflow-hidden"
+                className="absolute left-0 w-full lg:w-[92%] h-full sm:h-[80vh] lg:h-[95%] rounded-br-[60px] sm:rounded-br-[60px] lg:rounded-br-[120px] overflow-hidden"
               >
                 <Image
                   src={slides[currentSlide].backgroundImage}
@@ -1071,21 +973,11 @@ const FranchiseSlider = () => {
                   }}
                 />
               </motion.div>
-
-              {/* Static blue accent bars - hidden on mobile/tablet */}
-              <div
-                className="hidden lg:block absolute top-0 right-0 w-[1rem] sm:w-[1.5rem] h-[40%] rounded-br-full rounded-bl-none rounded-t-none"
-                style={{ backgroundColor: "#2676A6" }}
-              />
-              <div
-                className="hidden lg:block absolute top-0 right-[4rem] sm:right-[40px] w-[1rem] sm:w-[1.5rem] h-[50%] rounded-br-full rounded-bl-none rounded-t-none"
-                style={{ backgroundColor: "#3C92C6" }}
-              />
             </AnimatePresence>
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-4 sm:px-6 lg:px-1 flex flex-col justify-between sm:justify-end lg:justify-between py-4 sm:py-0 lg:py-20 mt-4 sm:mt-[12rem] lg:mt-0 sm:mb-19 gap-0 sm:gap-32 lg:gap-0">
+          <div className="relative w-full lg:w-[45%] px-4 sm:px-6 lg:px-1 flex flex-col justify-start lg:justify-between py-4 lg:py-20 mt-4 lg:mt-0 gap-0 lg:gap-0">
             {/* Title */}
             <div className="flex-1 flex items-center justify-center sm:justify-center  sm:mb-[2rem] lg:mb-[4rem] mb-[2rem] w-full">
               <h2 className="text-white font-rocWide font-light text-4xl sm:text-[3.5rem] lg:text-[4.5rem] text-center lg:text-start w-full sm:w-[90%] lg:w-auto">
@@ -1100,15 +992,15 @@ const FranchiseSlider = () => {
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-2 sm:gap-4 lg:gap-8 h-auto lg:h-[16rem] translate-y-[-10%] lg:translate-y-[-20%] w-full lg:mt-16">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-2 sm:gap-1 lg:gap-2 h-auto lg:h-[16rem] translate-y-[-10%] lg:translate-y-[-20%] w-full lg:mt-16">
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
                 className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mb-2 sm:mb-4 lg:mb-0"
               >
                 <svg
-                  className="w-6 sm:w-8 lg:w-12 h-6 sm:h-8 lg:h-12"
-                  fill="none"
+                  className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
+                    fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -1127,7 +1019,7 @@ const FranchiseSlider = () => {
                   className="flex items-center gap-4 sm:gap-6 lg:gap-16"
                   animate={{
                     x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 216 : (screenWidth ?? 1200) < 1024 ? 223 : 264)}px`,
-                    translateX: (screenWidth ?? 1200) < 640 ? "9.6%" : (screenWidth ?? 1200) < 1024 ? "9.6%" : "-0.1%",
+                    translateX: (screenWidth ?? 1200) < 640 ? "9.59%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.1%",
                   }}
                   transition={{
                     duration: 0.5,
@@ -1172,7 +1064,7 @@ const FranchiseSlider = () => {
                 className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mt-2 sm:mt-4 lg:mt-0"
               >
                 <svg
-                  className="w-6 sm:w-8 lg:w-12 h-6 sm:h-8 lg:h-12"
+                  className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1214,7 +1106,7 @@ const FranchiseSlider = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="text-white text-sm sm:text-base lg:text-[24px] text-justify 
+                className="text-white text-xs sm:text-sm lg:text-[20px] text-justify 
                 font-normal leading-[150%] sm:leading-[160%] lg:leading-[177%] tracking-[0%] max-w-6xl"
               >
                 {slides[currentSlide].description}
@@ -1234,11 +1126,12 @@ const FranchiseSlider = () => {
               <>
                 {/* Website Link */}
                 {slides[currentSlide]?.learnMoreLink && (
-                  <div className="w-full flex justify-end mb-4">
+                  <div className="w-full flex justify-start mb-4">
                     <div className="flex items-center gap-2 w-[400px]">
                       <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Website:</span>
                       <h2 
                         onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank')}
+                        title={slides[currentSlide].learnMoreLink}
                         className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
                       >
                         {slides[currentSlide].learnMoreLink}
@@ -1584,6 +1477,59 @@ const FranchiseSlider = () => {
                                   <iframe
                                     title={`Service and Parts Map ${idx + 1}`}
                                     src={serviceParts.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                         {/* spares and distribution */}
+                        {location["Spares & Distribution"] && (location["Spares & Distribution"]?.length ?? 0) > 0 && (
+                          <div className="hide-scrollbar mb-6">
+                            {location["Spares & Distribution"].map((sparesParts, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-serviceparts-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl ">
+                                 Spares & Distribution :
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line' }}>
+                                  {sparesParts.address}<br />
+                                  {Array.isArray(sparesParts.phone) ? (
+                                    sparesParts.phone.map((p, i) => (
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {sparesParts.phone}
+                                    </div>
+                                  )}
+                                  {Array.isArray(sparesParts.email) ? (
+                                    sparesParts.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {sparesParts.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Spares & Distribution Map ${idx + 1}`}
+                                    src={sparesParts.map}
                                     width="100%"
                                     height="280"
                                     className="rounded-lg w-full"

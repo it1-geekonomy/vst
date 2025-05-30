@@ -316,7 +316,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen mt-16">
       {/* Main section with background image */}
-      <div className="relative min-h-[45vh] sm:min-h-[68vh] md:min-h-[80vh] h-screen">
+      <div className="relative h-[65vh] sm:h-[85vh] md:h-[100vh] lg:h-[110vh] xl:h-[145vh] 2xl:h-screen">
         {/* Background image only for main section */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 opacity-100">
@@ -334,12 +334,12 @@ export default function Page() {
         {/* VST AUTO PARTS Title */}
         <div className="relative z-10 pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-0 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal tracking-wider text-black">
-            VST AUTO PARTS
+            VST Auto Parts
           </h1>
         </div>
 
         {/* Responsive Carousel Slider */}
-        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto mb-8 sm:mb-12 h-[250px] sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto mb-8 sm:mb-12 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
           {/* Desktop 3D Carousel - only visible on large screens */}
           <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
             <div className="carousel-container relative w-full h-full">
@@ -501,16 +501,43 @@ export default function Page() {
               Auto Parts has registered a steady annual growth rate of 20% since
               its inception.
             </p>
+            <div className="flex justify-left mt-6">
+              <a
+                href="https://vstmotors.com/parts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full max-w-xs"
+              >
+                <button
+                  className="
+      px-6 py-2
+      bg-white
+      text-black
+      rounded
+      shadow
+      hover:bg-gray-200
+      transition
+      text-sm
+      sm:text-lg
+      font-normal
+      border border-gray-300
+      w-full
+    "
+                >
+                  Explore Now
+                </button>
+              </a>
+            </div>
           </div>
         </div>
         <div className="text-black">
           <LocationSection
             locationImage="vst-auto-parts/location img.png"
             address={{
-              street: "Old No.144, New No.199,",
-              street2: "1st Floor, Anna Salai, Chennai-",
-              state: "",
-              city: "600 002, Tamil Nadu.",
+              street: "Old No. 144, New No. 199,",
+              street2: "1st Floor, Anna Salai,",
+              state: "Chennai - 600 002, Tamil Nadu.",
+              city: "",
               pincode: "",
             }}
             phoneNumbers={[

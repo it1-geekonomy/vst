@@ -10,23 +10,23 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
   return (
     <footer className={`bg-[#101010] text-white py-10 mt-10 lg:mt-0 ${bgcolour}`}>
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col 2xl:flex-row justify-between items-center gap-16 2xl:items-start">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-16 lg:gap-8 2xl:items-start">
           {/* Logo Section */}
           <div className="w-full sm:w-4/5 2xl:w-1/4 flex flex-col items-center 2xl:items-start">
             <div className="flex flex-col items-center 2xl:items-start">
-              <div className="flex items-center justify-center">
-                <Footerlogo />
+              <div className="w-full max-w-[280px] sm:max-w-[300px] md:max-w-[320px] lg:max-w-[250px] xl:max-w-[280px] 2xl:max-w-[480px] transition-all duration-300">
+                <Footerlogo className="w-full h-auto" />
               </div>
             </div>
           </div>
 
           {/* Map Section */}
-          <div className="w-full sm:w-4/5 2xl:w-1/3 flex justify-center 2xl:justify-start mt-8 2xl:mt-0 px-10">
+          <div className="w-full sm:w-4/5 lg:w-8/9 2xl:w-1/3 flex justify-center 2xl:justify-start mt-8 2xl:mt-0 px-10 lg:px-6">
             <div className="rounded-lg overflow-hidden w-full max-w-md">
               <iframe
                 title="VST Group Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0167881117726!2d77.57254827475243!3d12.989645014917816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1651b4dd2399%3A0x9c4cbf3e1c014d1b!2s1%2C%20Palace%20Cross%20Rd%2C%20Bengaluru%2C%20Karnataka%20560020!5e0!3m2!1sen!2sin!4v1709534844025!5m2!1sen!2sin"
-                width="100%"
+                width=" 100%"
                 height="230"
                 style={{ border: 0 }}
                 allowFullScreen={true}
