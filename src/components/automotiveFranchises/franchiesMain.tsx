@@ -26,7 +26,7 @@ import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
 
 import porsche from "@/app/public/faranchies/newcarpics/porsche4.png";
 import benzs from "@/app/public/faranchies/newcarpics/benz1.png";
-import jaguar from "@/app/public/faranchies/newcarpics/jaguar2.png";
+import jaguar from "@/app/public/faranchies/newcarpics/ja-la.png";
 import landrover from "@/app/public/faranchies/newcarpics/landrover3.png";
 import maserati from "@/app/public/faranchies/newcarpics/maserati5.png";
 import honda from "@/app/public/faranchies/newcarpics/honda12.png";
@@ -58,7 +58,7 @@ import VSTLogoAnimation from "../VSTLogoAnimation";
 interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
-  brand: "mercedes" | "jaguar" | "landrover" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD" | "ducati" | "mahindra";
+  brand: "mercedes" | "jlr" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD" | "ducati" | "mahindra";
   bgColor: {
     from: string;
     to: string;
@@ -111,7 +111,6 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
-
       "spares warehouse"?: Array<{
         address: string;
         phone: string | string[];
@@ -134,7 +133,7 @@ const slides: SlideData[] = [
     LogoComponent: MercedesIcon,
     header: "VST Titanium - Mercedes Benz ",
     description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015, with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar in luxury automotive ownership.",
-    learnMoreLink: "https://www.titaniummotors.mercedes-benz.co.in/",
+    learnMoreLink: "www.titaniummotors.mercedes-benz.co.in/",
     locations: {
       Bangalore: {
         sales: [
@@ -176,71 +175,29 @@ const slides: SlideData[] = [
   {
     id: 2,
     backgroundImage: jaguar,
-    brand: "jaguar",
+    brand: "jlr",
     bgColor: {
       from: "#780E26",
       to: "rgba(120, 14, 38, 0.4)",
     },
     LogoComponent: JaguarIcon,
-    header: "VST Grandeur - Jaguar",
-    description: "VST Grandeur has been representing Jaguar in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's highend SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalised service.",
-    learnMoreLink: "https://retailers.jaguar.in/vst-grandeur-jaguar",
+    header: "VST Grandeur - Jaguar Land Rover",
+    description: "VST Grandeur has been representing Jaguar Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's high-end SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported by expert after-sales care and personalized service.",
+    learnMoreLink: "www.jlr.com/",
+
     locations: {
       Chennai: {
         sales: [
           {
             address: "Old #182, New #237,VST Emerald\n Anna Salai, Chennai - 600 006.",
             phone: "+91 96000 53000",
-            email: " info@vstgrandeur.com",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217780062!5m2!1sen!2sin"
-          }
-        ],
-        "sales & service": [
-          {
-            address: " #267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056.",
-            phone: "+91 44-6636 1373, +91 44-6636 1363",
-            email: "crs.chn@vstgrandeur.com",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217817663!5m2!1sen!2sin"
-          }
-        ]
-      },
-      Coimbatore: {
-        "sales & service": [
-          {
-            address: "#145-1C1, L&T By-pass Road,\n Oddar Palayam, Ondipudur ,\n Coimbatore - 641 016.",
-            phone: "+91 422-452 4444",
-            email: ["info.cbe@vstgrandeur.com", "workshop.cbe@vstgrandeur.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217854171!5m2!1sen!2sin"
-          }
-        ]
-      }
-    }
-  },
-  {
-    id: 3,
-    backgroundImage: landrover,
-    brand: "landrover",
-    bgColor: {
-      from: "#DCAB77",
-      to: "rgba(220, 171, 119, 0.4)",
-    },
-    LogoComponent: LandRoverIcon,
-    header: "VST Grandeur - Land Rover",
-    description: "VST Grandeur has been representing Land Rover in Tamil Nadu since 2011, offering the perfect blend of British luxury and rugged capability. With showrooms and service facilities in Chennai and Coimbatore, customers enjoy a seamless experience from purchase to after-sales care, crafted with precision and delivered with pride. One location operates as a comprehensive 3S facility, integrating Sales, Service, and Spare Parts, while the other focuses solely on sales. Whether it's high-end SUVs or elegant sedans, VST Grandeur ensures a premium ownership experience, supported byexpert after-sales care and personalised service.",
-    learnMoreLink: "https://retailers.landrover.in/vst-grandeur-land-rover",
-    locations: {
-      Chennai: {
-        sales: [
-          {
-            address: "Old #182, New #237,VST Emerald\n Anna Salai, Chennai - 600 006.",
-            phone: "+91 96000 53000",
-            email: " info@vstgrandeur.com",
+            email: "info@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6408169750102!2d80.25909779999999!3d13.05852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52674abb0bb305%3A0x753d3dea0b6e7db9!2sVST%20EMERALD%20Anna%20Salai!5e0!3m2!1sen!2sin!4v1747217925445!5m2!1sen!2sin"
           }
         ],
         "sales & service": [
           {
-            address: " #267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056.",
+            address: "#267/2, By-Pass Road, Poonamalle,\n Chennai - 600 056.",
             phone: "+91 44-6636 1373, +91 44-6636 1363",
             email: "crs.chn@vstgrandeur.com",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d80.09370609999999!3d13.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR!5e0!3m2!1sen!2sin!4v1747217959401!5m2!1sen!2sin"
@@ -251,16 +208,16 @@ const slides: SlideData[] = [
         "sales & service": [
           {
             address: "#145-1C1, L&T By-pass Road,\n Oddar Palayam, Ondipudur ,\n Coimbatore - 641 016.",
-            phone: "+91 422-452 4444",
-            email: [" info.cbe@vstgrandeur.com", "workshop.cbe@vstgrandeur.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250652.7168123875!2d76.8123673!3d11.0049225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba856e0ac6041f1%3A0x5d84af563fa4d462!2sJaguar%20Vst%20Grandeur!5e0!3m2!1sen!2sin!4v1747217999025!5m2!1sen!2sin"
+            phone: "+91 422 6636 1373, +91 422 6636 1363",
+            email: "crs.cbe@vstgrandeur.com",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.694512902591!2d77.09370609999999!3d11.055106799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a0b75750ef7%3A0x3c4e908ec67d2f95!2sVST%20GRANDEUR%20COIMBATORE!5e0!3m2!1sen!2sin!4v1747217959401!5m2!1sen!2sin"
           }
         ]
       }
     }
   },
   {
-    id: 4,
+    id: 3,
     backgroundImage: porsche,
     brand: "porsche",
     bgColor: {
@@ -269,8 +226,9 @@ const slides: SlideData[] = [
     },
     LogoComponent: PorscheIcon,
     header: "VST Supercars - Porsche",
-    description: "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre. With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
-    learnMoreLink: "https://dealer.porsche.com/in/bengaluru/en-GB",
+    description: "Porsche Centre Bengaluru, under VST Supercars, has been bringing world-class performance and luxury to Karnataka since 2022. Located in the city's Central Business District, the showroom presents the complete Porsche lineup in a premium urban setting, while a dedicated 3S facility in Whitefield offers expert service, advanced diagnostics, and a certified body repair centre.With a strong presence across key locations, Porsche Centre Bengaluru ensures easy access and an exceptional ownership experience. As part of VST Group's continued expansion in the luxury automotive space, it reflects the group's enduring legacy and passion for excellence.",
+    learnMoreLink: "dealer.porsche.com/in/bengaluru/en-GB",
+
     locations: {
       Bangalore: {
         sales: [
@@ -293,7 +251,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 5,
+    id: 4,
     backgroundImage: maserati,
     brand: "maserati",
     bgColor: {
@@ -302,8 +260,9 @@ const slides: SlideData[] = [
     },
     LogoComponent: MaseratiIcon,
     header: "VST Avventura - Maserati",
-    description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. With expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
-    learnMoreLink: "https://www.maserati.com/in/en/official-dealer/vst-maserati",
+    description: "With its South India debut in 2024 through VST Avventura, VST Maserati has quickly emerged as a symbol of refined power and bespoke service. Bringing Italian craftsmanship and cutting-edge performance to the region, the brand redefines luxury through its flagship showroom in Bangalore's Central Business District (CBD), complemented by a dedicated service facility in Whitefield. Showcasing the complete Maserati range—from high-performance sedans to iconic SUVs—VST Maserati offers customers a truly immersive experience marked by elegance and precision. Wit expansion plans underway across South India, it is poised to enhance accessibility while delivering personalised service rooted in a legacy of excellence. The addition of Maserati to the VST Group's premium portfolio reinforces its commitment to curating the world's finest automobile experiences. Your Maserati journey begins here.",
+    learnMoreLink: "www.maserati.com/in/en/official-dealer/vst-maserati",
+
     locations: {
       Bangalore: {
         sales: [
@@ -326,7 +285,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 6,
+    id: 5,
     backgroundImage: ducati,
     brand: "maserati",
     bgColor: {
@@ -336,7 +295,7 @@ const slides: SlideData[] = [
     LogoComponent: DucatiIcon,
     header: "VST & Sons - Ducati",
     description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
-    learnMoreLink: "https://www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
+    learnMoreLink: "www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
     locations: {
       Bengaluru: {
         sales: [
@@ -370,7 +329,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 7,
+    id: 6,
     backgroundImage: kia,
     brand: "maserati",
     bgColor: {
@@ -379,8 +338,9 @@ const slides: SlideData[] = [
     },
     LogoComponent: KiaIcon,
     header: "VST Central - KIA",
-    description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to world-class automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
-    learnMoreLink: "https://vstcentral-kia.in/karnataka/",
+    description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
+    learnMoreLink: "vstcentral-kia.in/karnataka/",
+
     locations: {
       Bengaluru: {
         sales: [
@@ -476,7 +436,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 8,
+    id: 7,
     backgroundImage: tata,
     brand: "tata",
     bgColor: {
@@ -486,7 +446,7 @@ const slides: SlideData[] = [
     LogoComponent: TataIcon,
     header: "VST Motors -TATA",
     description: "VST Motors, one of the group's oldest and most successful franchise partnerships, has represented Tata Motors in Tamil Nadu since 1954, becoming an integral part of the region's automotive landscape. The journey began in 1942 when V.S. Thiruvengadasamy Mudaliar acquired the family's first showroom on Mount Road, Chennai, now a landmark that marked the group's expansion into Tamil Nadu.  With a strong presence across key locations including Chennai, Cuddalore, Salem, Hosur, Trichy, and Vellore, VST Motors is committed to delivering reliable vehicles and exceptional after-sales service. Driven by a legacy of quality, trust, and customer focus, VST Motors continues to build lasting relationships with its customers, reinforcing its reputation as a dependable and customer-centric brand across the state.",
-    learnMoreLink: "https://vstmotors.com/",
+    learnMoreLink: "vstmotors.com/",
     locations: {
       Bangalore: {
         sales: [
@@ -564,236 +524,8 @@ const slides: SlideData[] = [
       }
     }
   },
-  // {
-  //   id: 9,
-  //   backgroundImage: kia,
-  //   brand: "kia",
-  //   bgColor: {
-  //     from: "#FDC756",
-  //     to: "rgba(253, 199, 86, 0.4)",
-  //   },
-  //   LogoComponent: KiaIcon,
-  //   header: "VST Central - KIA",
-  //   description: "VST Central is the authorized dealer for KIA in Bengaluru and Mysore, offering a comprehensive range of KIA vehicles along with exceptional sales and service support. With modern showrooms and state-of-the-art service centers, it ensures a premium automotive experience for all customers.",
-  //   learnMoreLink: "https://www.kia.com",
-  //   locations: {
-  //     Bangalore: {
-  //       sales: [
-  //         {
-  //           address: "#202, 7th Main, HRBR Layout,\n Kalyan Nagar, Bengaluru - 560 043",
-  //           phone: "+91 80 2542 2810",
-  //           email: "sales.bangalore@vstcentral.in",
-  //           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d77.6431027!3d13.015952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1728131c0e23%3A0xa06978a43d8ffa58!2sCity%20Honda%20Sales%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
-  //         }
-  //       ],
-  //       service: [
-  //         {
-  //           address: "#143, Lalbagh Road,\n Near Subbaiah Circle, Bengaluru - 560 027",
-  //           phone: "+91 80 4333 3330",
-  //           email: "service.bangalore@vstcentral.in",
-  //           map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d77.5865653!3d12.9613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156978155c3f%3A0xead9a19c3f1e2497!2sCity%20Honda%20Sales%20Lalbagh%20Road!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
-  //         }
-  //       ]
-  //     },
-  //     Mysore: {
-  //       sales: [
-  //         {
-  //           address: "#123, Hunsur Road,\n Mysore - 570 008",
-  //           phone: "+91 821 2345678",
-  //           email: "sales.mysore@vstcentral.in",
-  //           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d76.6431027!3d12.315952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sVST%20Central%20KIA%20Mysore!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
-  //         }
-  //       ],
-  //       service: [
-  //         {
-  //           address: "#456, Ring Road,\n Mysore - 570 008",
-  //           phone: "+91 821 2345679",
-  //           email: "service.mysore@vstcentral.in",
-  //           map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d76.5865653!3d12.2613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf0c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sVST%20Central%20KIA%20Service%20Mysore!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
   {
-    id: 10,
-    backgroundImage: mahindra,
-    brand: "mahindra",
-    bgColor: {
-      from: "#05F1F2",
-      to: "rgba(5, 241, 242, 0.4)",
-    },
-    LogoComponent: MahindraIcon,
-    header: "India Garage - Mahindra",
-    description: "India Garage, a well-established franchise partner of Mahindra & Mahindra, has been a trusted name in Karnataka since 1949, proudly serving both urban and rural communities. With showrooms and workshops in key locations including Bengaluru, Mysuru, and across southern Karnataka, India Garage offers an extensive range of robust SUVs and commercial vehicles, backed by a dependable service network and a customer-first approach. Driven by a commitment to excellence, reliability, and performance, India Garage remains the preferred destination for Mahindra customers across the region, continuing to build lasting trust and satisfaction.",
-    learnMoreLink: "https://www.india-garage.in/",
-    locations: {
-      Bengaluru: {
-        sales: [
-          {
-            address: "Head Office, #1, VST Vistas, \nPalace Cross Rd, Chakravarthy Layout, \nJayamahal, Bengaluru - 560 020",
-            phone: "+91 88844 98957",
-            email: ["asm@india-garage.in", "jeevanprasad@india-garage.in","kalyankumarp@india-garage.in"],
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae163883f74f7d%3A0x4385e2cd7037dce4!2sMahindra%20India%20Garage%20-%20Palace%20Cross%20Road!5e0!3m2!1sen!2sin!4v1747895221318!5m2!1sen!2sin"           
-          },
-          {
-            address: "#110/110/10, Lalbagh Main Road, Near \n Urvashi Theatre,Bengaluru - 560 043",
-            phone: "+91 80502 90512",
-            email: ["sm.lalbagh@india-garage.in", "karthiks@india-garage.in"],
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e77446713f%3A0x859a28fb0fd3f809!2sMahindra%20India%20Garage%20-%20Lal%20Bagh%20Road!5e0!3m2!1sen!2sin!4v1747895356864!5m2!1sen!2sin" 
-          },
-          {
-            address: "#121/32, Danojipalya village, Tumkur \nRoad NH-4, Nelamangala, Bengaluru - \n562 123.",
-            phone: "+91 99001 59602 ",
-            email: ["prosper.mdhalli@india-garage.in"],
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124357.36647001428!2d77.2641574!3d13.0885559!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae25409b550d2b%3A0xe2e55c1338f935d1!2sMahindra%20India%20Garage%20-%20Commercial%20Showroom%20Nelamangala!5e0!3m2!1sen!2sin!4v1747895413474!5m2!1sen!2sin" 
-          },
-           {
-            address: " CM Layout, BB Road, Old NH-7, \nChikkaballapur - 562 101.",
-            phone: "+91 74115 67633 ",
-            email: "sales.ckb@india-garage.in",
-            map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.921836472896!2d77.72855919999999!3d13.4171652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e59836e5f33f%3A0xa6cd6ee6f458d36b!2sMahindra%20Showroom%20-%20India%20Garage%20Chikkaballapur!5e0!3m2!1sen!2sin!4v1747895776906!5m2!1sen!2sin" 
-          },
-          {
-            address: " BB Road, Opp. To Reliance Petrol Bunk, \nChikkaballapur - 560 101",
-            phone: "+91 88844 98958 ",
-            email: "prosper.cbkr@india-garage.in",
-            map :"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15522.874073908808!2d77.7208083!3d13.4297424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e5593eb46f03%3A0x9ee339a0dd9e6ee1!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747895856529!5m2!1sen!2sin" 
-          },
-          {
-            address: " #344/60, Chikkagollarahatti, \nNear Embassy School, Magadi Main Road,\nBengaluru - 560 091.",
-            phone: "+91 88844 98958",
-            email: "sales.mgd@india-garage.in",
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62203.047345636965!2d77.3926228!3d12.9916394!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3bc02d8ac7a7%3A0x67a3e32fa9009175!2sMahindra%20India%20Garage%20-%20Commercial%2C%20Magadi%20Road!5e0!3m2!1sen!2sin!4v1747895927992!5m2!1sen!2sin"
-          },
-          {
-            address: " Municipal #20/2, P Kalinga Rao Road, \nMission Road, Bengaluru - 560 027.",
-            phone: "+91 88844 98958",
-            email: "sales.mgd@india-garage.in",
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d496732.41440844996!2d77.401443!3d13.4295279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae154a34bb2109%3A0x4390fad42917eae2!2sMahindra%20India%20Garage%20-%20Commercial%20Mission%20Road!5e0!3m2!1sen!2sin!4v1747895986496!5m2!1sen!2sin" 
-          },
-            {
-            address: " 1st Main, Peenya 2nd Stage, Below \nMuthoot Finance, Bengaluru - 560 058",
-            phone: "+91 88844 98958",
-            email: "prosper.pny@india-garage.in",
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.38306928848!2d77.5046024!3d13.0112605!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cf9a936cbc3%3A0x71d718e2c7baba6b!2sMahindra%20India%20Garage%20-%20Peenya%20Commercial%20Showroom!5e0!3m2!1sen!2sin!4v1747896043710!5m2!1sen!2sin" 
-          },
-          {
-            address: " #13/7, Thirumalashettyhalli Cross, \nAnugondanahalli, Bengaluru - 560 117.",
-            phone: "+91 88844 98958",
-            email: " salescv.wf@india-garage.in",
-            map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.64689946292!2d77.7825065!3d12.9831414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0fb453bd4d9f%3A0x612685a21d459c3e!2sMahindra%20India%20Garage%20-%20Whitefield%20Commercial%20Showroom%20(Thirumalashettihalli%20Cross)!5e0!3m2!1sen!2sin!4v1747896109759!5m2!1sen!2sin" 
-          },
-
-        ],
-        service: [
-          {
-            address: "#207/208, 11th Main, 3rd Phase, Peenya \nIndustrial Area, Bengaluru - 560 058.",
-            phone: "+91 96069 15740",
-            email: ["smpeenya@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.6323219085114!2d77.5210083!3d13.018812!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d1b47f37b49%3A0xb59d56802a43eb4d!2sMahindra%20India%20Garage%20%E2%80%93%20Peenya%20Workshop!5e0!3m2!1sen!2sin!4v1747895747654!5m2!1sen!2sin"
-          },
-
-          {
-            address: "#53/10, Madanayakanahalli Village, \nDasanapura Hobli, Bangalore - 562 162.",
-            phone: "+91 98423 19820 , +91 98424 10847",
-            email: [" tryevdsales@vstmotors.com"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7773.1723952034945!2d77.4508649!3d13.061991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae24a8f3ae6a4b%3A0x5714d99795576775!2sMahindra%20India%20Garage%20-%20Madanayakanahalli%20Workshop!5e0!3m2!1sen!2sin!4v1747895817487!5m2!1sen!2sin"  
-          },
-           {
-            address: "Address: #11, 1st Main Road \nSadaramanagala, Industrial Area, White \nField Road, Near ITPL Bus Stop, \nBengaluru - 560 067.",
-            phone: "+91 97855 13333",
-            email: ["smitpl@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.626972808544!2d77.731718!3d12.995694199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0e1e8760a745%3A0x557c4e084a2bb5d9!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747895898763!5m2!1sen!2sin" 
-          }
-        ],
-        "sales & service": [
-          {
-            address: "1st Phase, Plot #2E4, Whitefield Main \nRoad, Behind Decathlon, Mahadevapura, \nBengaluru - 560 048.",
-            phone: "+91 97855 51333 ",
-            email: [" smvrwf@india-garage.in","chandrasekharnm@india-garage.in"," sales.wf@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.252573845026!2d77.69879!3d12.995738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1163598ae1a3%3A0x62bd833b811078c2!2sMahindra%20India%20Garage%20-%20Whitefield%20%7C%20Showroom%2C%20Service%20center!5e0!3m2!1sen!2sin!4v1747895959839!5m2!1sen!2sin" 
-          }
-        ]
-      },
-      Mysore: {
-        sales: [
-          {
-            address: "#80/1, 1st Block, Bychanahalli, Mangalore Mysore Road, Kushalnagar, Karnataka - 571 234.",
-            phone: "+91 88844 98958",
-            email: "salescv.wf@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.945086531723!2d75.9493138!3d12.453378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba509cd1b9f725f%3A0x7ae5120debe37d14!2sMAHINDRA%20INDIA%20GARAGE-MYSORE!5e0!3m2!1sen!2sin!4v1747899225545!5m2!1sen!2sin"
-          },
-          {
-            address: "#1608 Adhichunchanagiri Road, Kuvempunagar, P and T Block, Chamaraja Mohalla, Mysuru - 570 023.",
-            phone: "+91 88844 98959",
-            email: "sales.kuvempunagar@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.3451145362455!2d76.6313254!3d12.2925299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7b574f907843%3A0x6471774e6fa1206a!2sMahindra%20Indian%20Garage!5e0!3m2!1sen!2sin!4v1747899405373!5m2!1sen!2sin"
-          },
-          {
-            address: "Mahindra Showroom, India Garage, Opp, Eid Ground, Maddur, Karnataka - 571 428.",
-            phone: "+91 88844 98959",
-            email: "sales.maddur@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31158.41933595251!2d76.8878506!3d12.5292446!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899553266!5m2!1sen!2sin"
-          },
-          {
-            address: "#C-18, Madikeri Bypass Road, Hunsur, Karnataka - 571105.",
-            phone: "+91 88844 98959",
-            email: "sales.hunsur@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.1152686131504!2d76.3029991!3d12.308023599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5ab35e5923543%3A0x93eca4c127398a40!2sMahindra%20India%20Garage!5e0!3m2!1sen!2sin!4v1747899617805!5m2!1sen!2sin"
-          },
-          {
-            address: "No.1-4-35B, Two Shutter Ground Floor, Jayanagara, K R Pete, Mandya - 571 426.",
-            phone: "+91 88844 98959",
-            email: "sales.krpete@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31157.027815071415!2d76.9194856!3d12.5407536!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899692604!5m2!1sen!2sin"
-          }
-        ],
-         "sales & service": [
-          {
-            address: "Near LIC Opp Simha Theatre, Chamrajnagar - 571 313.",
-            phone: "+91 88844 98959",
-            email: ["ig.chnagar@india-garage.in", "service.chnagar@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.63656126204!2d76.933995!3d11.9303616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe93a3dc03%3A0x2b3ece5b81cda608!2sMahindra%20India%20Garage%20Mysore%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899794763!5m2!1sen!2sin"
-          },
-        ],
-        service: [
-          {
-            address: "#427/1A, Hebbal Ind. Area, Metagalli Post, Mysuru - 570 016.",
-            phone: "+91 91485 89147",
-            email: ["smhebbal@india-garage.in", "bodyshopmanager@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.265546858863!2d76.6155936!3d12.3651366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7a3d00d7608b%3A0x260b9f18e163c5a8!2sMahindra%20India%20Garage%20%E2%80%93Workshop!5e0!3m2!1sen!2sin!4v1747899872802!5m2!1sen!2sin"
-          },
-           {
-            address: "#201/202, Hunsur Road, next to Church, Vijayanagar 4th Stage, Hinkal, Mysuru-570 017.",
-            phone: "+91 88844 98959",
-            email: "sales.mysore@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3897.8701066935896!2d76.6107134!3d12.3245286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7af1a8477065%3A0xba976c8cd1a206a1!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899946356!5m2!1sen!2sin"
-          },
-          {
-            address: "Old B.M Road, Gutturur village, Kottathi hobli, Belur Grampanchayat, Malavalli - 571 403.",
-            phone: "+91 88844 98959",
-            email: ["igmandya@india-garage.in", "mandyaservice@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62313.99311644604!2d76.8699647!3d12.541012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747900006805!5m2!1sen!2sin"
-          },
-           {
-            address: "#292/10, Block #23, Sampige Katte Road, Madikeri - 571 201.",
-            phone: "+91 88844 98959",
-            email: ["sales.madikeri@india-garage.in", "service.madikeri@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.2574093870294!2d75.75174919999999!3d12.432562299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5aa9e27787899%3A0x9014a3a231e9653d!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747900081135!5m2!1sen!2sin"
-          },
-          {
-            address: "State Highway 90, Ponnampet, Road Jodubetti, Gonikoppal - 571 213.",
-            phone: "+91 88844 98959",
-            email: ["sales.gonikoppal@india- garage.in", "service.gonikoppal@india-garage.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.360701638476!2d75.939742!3d12.1558282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5ba3786b87fad%3A0xc4dcb9f89be834c9!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747900133812!5m2!1sen!2sin"
-          } 
-        ]
-      }
-    }
-  },
-  {
-    id: 11,
+    id: 8,
     backgroundImage: wagen,
     brand: "volkswagen",
     bgColor: {
@@ -803,7 +535,7 @@ const slides: SlideData[] = [
     LogoComponent: VolkswagenLogo,
     header: "Bangalore Motors - Volkswagen",
     description: "In 2009, Volkswagen Palace Cross, part of the VST Group's longstanding legacy in the Indian automotive space, became a premier destination for automotive excellence in Bengaluru. Located on Palace Cross Road, the showroom offers a refined buying experience, customer-first service, and a deep understanding of what Indian customers seek in a global brand. Bringing the best of German engineering to the city, it showcases the complete Volkswagen lineup, from stylish hatchbacks to robust SUVs in an elegant and welcoming environment. With a focus on trust, transparency, and attention to detail, Volkswagen Palace Cross continues to set benchmarks in customer satisfaction. Blending heritage with modernity, it remains the preferred destination for Volkswagen enthusiasts across the region.",
-    learnMoreLink: "https://www.vw-bangaloremotors.co.in/",
+    learnMoreLink: "www.vw-bangaloremotors.co.in/",
     locations: {
       sales: {
         sales: [
@@ -840,7 +572,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 12,
+    id: 9,
     backgroundImage: byd,
     brand: "BYD",
     bgColor: {
@@ -850,7 +582,7 @@ const slides: SlideData[] = [
     LogoComponent: BydLogo,
     header: "VST BYD",
     description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD's cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
-    learnMoreLink: "https://vstbyd.com/",
+    learnMoreLink: "vstbyd.com/",
     locations: {
       India: {
         sales: [
@@ -879,7 +611,7 @@ const slides: SlideData[] = [
     }
   },
   {
-    id: 13,
+    id: 10,
     backgroundImage: honda,
     brand: "honda",
     bgColor: {
@@ -889,7 +621,7 @@ const slides: SlideData[] = [
     LogoComponent: HondaLogo,
     header: "City Honda",
     description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence. With two centrally located showrooms in Bangalore and workshops across the city and Chikmagalur, City Honda delivers a complete 4S experience - Sales, Service, Spares, and Safety Riding under one roof. Backed by a knowledgeable sales team and expert service technicians, the brand ensures every customer enjoys a smooth and dependable ownership journey. Rooted in trust and powered by performance, City Honda continues to be a preferred destination for two-wheeler enthusiasts.",
-    learnMoreLink: "https://cityhonda.in/",
+    learnMoreLink: "cityhonda.in/",
     locations: {
       Bangalore: {
         sales: [
