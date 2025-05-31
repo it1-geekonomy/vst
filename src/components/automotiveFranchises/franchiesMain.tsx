@@ -117,6 +117,12 @@ interface SlideData {
         email: string | string[];
         map: string;
       }>;
+      "Sales, Service & Spares"?: Array<{
+        address: string;
+        phone: string | string[];
+        email: string | string[];
+        map: string;
+      }>;
     };
   };
 }
@@ -239,7 +245,7 @@ const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6105688613943!2d77.5848628!3d12.9967417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17fe9bf1e903%3A0x1e8042f60610fb34!2sPorsche%20Showroom%20Bengaluru!5e0!3m2!1sen!2sin!4v1747218092398!5m2!1sen!2sin"
           }
         ],
-        service: [
+        "Sales, Service & Spares": [
           {
             address: "#2E3, Dyavasandra 1st Phase, Whitefield\n Road, Mahadevapura Post,\n Bengaluru - 560 048.",
             phone: "+91 63641 02911",
@@ -339,7 +345,7 @@ const slides: SlideData[] = [
     LogoComponent: KiaIcon,
     header: "VST Central - KIA",
     description: "VST Central has been driving KIA's journey in South India since 2019, bringing innovative and dependable vehicles to customers across Bangalore and North Tamil Nadu. With showrooms and service centres in Bangalore, Chennai, Salem, Vellore, and Hosur, it ensures easy access to worldclass automotive experiences. Built on a foundation of reliability and customer-first service, VST Central continues to grow, making every journey smoother with exceptional care and support at every step.",
-    learnMoreLink: "https://vstcentral-kia.in/karnataka/",
+    learnMoreLink: "https://vstcentral-kia.in/",
 
     locations: {
       Bengaluru: {
@@ -758,7 +764,7 @@ const slides: SlideData[] = [
     },
     LogoComponent: BydLogo,
     header: "VST BYD",
-    description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (OSUR), VST BYD offers access to BYD's cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
+    description: "In 2023, VST Group extended its automotive legacy by partnering with BYD, introducing a new era of electric mobility to Karnataka. With showrooms located on Cunningham Road and Outer Ring Road (ORR), VST BYD offers access to BYD's cutting-edge electric vehicles, combining innovation with everyday practicality. As the first Chinese automotive brand in the VST portfolio, BYD represents a bold step toward the future of sustainable transportation. The VST Group brings its deep-rooted expertise in automotive retail and service to this new venture. With a strong focus on green mobility and future-ready technology, VST BYD is poised to redefine the electric vehicle experience in the region, backed by trusted guidance and dependable after-sales support.",
     learnMoreLink: "https://vstbyd.com/",
     locations: {
       India: {
@@ -1605,6 +1611,61 @@ const FranchiseSlider = () => {
                                     className="rounded-lg w-full"
                                     style={{ border: 0 }}
                                     allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {/* Sales, Service & Spares */}
+                        {location["Sales, Service & Spares"] && (location["Sales, Service & Spares"]?.length ?? 0) > 0 && (
+                          <div className="hide-scrollbar mb-6">
+                            {location["Sales, Service & Spares"].map((salesService, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl">Sales, Service & Spares :</div>
+                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {salesService.address}
+                                </div>
+                                <div className="text-white">
+                                  {Array.isArray(salesService.phone) ? (
+                                    salesService.phone.map((p, i) => (
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {salesService.phone}
+                                    </div>
+                                  )}
+                                  {Array.isArray(salesService.email) ? (
+                                    salesService.email.map((email, emailIdx) => (
+                                      <a key={emailIdx} href={`mailto:${email}`} className="text-sm hover:text-blue-400">
+                                        {email}
+                                      </a>
+                                    ))
+                                  ) : (
+                                    <a href={`mailto:${salesService.email}`} className="text-sm hover:text-blue-400">
+                                      {salesService.email}
+                                    </a>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    src={salesService.map}
+                                    className="w-full rounded-lg"
+                                    width="100%"
+                                    height="280"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                   />

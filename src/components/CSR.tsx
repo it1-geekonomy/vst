@@ -38,10 +38,10 @@ export default function CorporatePhilanthropy() {
                 consistently extended its hand to communities in need. From
                 supporting education and healthcare to empowering the
                 differently-abled, protecting wildlife, and responding to
-                humanitarian crises, our CSR initiatives reflect a deep
+                humanitarian crises, our csr initiatives reflect a deep
                 commitment to creating a meaningful and lasting impact. Guided
                 by empathy and driven by purpose, we believe in building a
-                better future—not just through business, but through compassion,
+                better future — not just through business, but through compassion,
                 care, and collective upliftment.
               </p>
             </div>
