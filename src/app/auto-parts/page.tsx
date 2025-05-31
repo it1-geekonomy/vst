@@ -532,7 +532,7 @@ export default function Page() {
       w-full
     "
                 >
-                  Explore Now
+                  Explore More
                 </button>
               </a>
             </div>

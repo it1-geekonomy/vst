@@ -34,15 +34,15 @@ export default function CorporatePhilanthropy() {
               </h1>
               <p className="text-[#FFFFFF] text-clamp-28 text-justify px-6  md:px-32 lg:px-48 xl:px-52 font-light">
                 Rooted in a legacy of responsibility and service, VST Group,
-                through the V.S. Tiruvengadaswamy Mudaliar Memorial Trust, has
+                through the V. S. Tiruvengadaswamy Mudaliar Memorial Trust, has
                 consistently extended its hand to communities in need. From
                 supporting education and healthcare to empowering the
                 differently-abled, protecting wildlife, and responding to
                 humanitarian crises, our CSR initiatives reflect a deep
                 commitment to creating a meaningful and lasting impact. Guided
                 by empathy and driven by purpose, we believe in building a
-                better future—not just through business, but through compassion,
-                care, and collective upliftment.
+                better future — not just through business, but through
+                compassion, care, and collective upliftment.
               </p>
             </div>
           </section>

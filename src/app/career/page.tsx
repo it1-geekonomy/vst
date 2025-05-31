@@ -195,14 +195,12 @@ export default function Page() {
             The VST Group offers rewarding career opportunities across a range
             of disciplines and verticals.
             <p>
-            The Group is an equal opportunity
-            workplace where results are encouraged and merit is rewarded, making
-            it an ideal choice for a{" "}
-            
-            <span className="text-[#FDB813] font-normal tracking-[1px] ml-1">
-              long term career path
-            </span>
-            .
+              The Group is an equal opportunity workplace where results are
+              encouraged and merit is rewarded, making it an ideal choice for a{" "}
+              <span className="text-[#FDB813] font-normal tracking-[1px] ml-1">
+                long - term career path
+              </span>
+              .
             </p>
           </p>
         </div>
