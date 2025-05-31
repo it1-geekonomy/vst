@@ -182,8 +182,8 @@ const ManufacturePage = () => {
         </div>
 
         <div className="px-0">
-          <h1 className="text-clamp-57 mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
-            Empowering Farmers With Efficiency, Affordability And Reliability
+        <h1 className="text-clamp-57 mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
+            Empowering farmers with efficiency, affordability<span className="hidden md:inline"><br /></span> and reliability
           </h1>
           
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 w-full">
@@ -263,7 +263,7 @@ const ManufacturePage = () => {
                address={{
                  street: "Regd. Office: Plot No.1, Hale",
                  street2: "Devasandra Industrial Layout,",
-                 street3: "Whitefield Road, Mahadevapura,",
+                 street3: "Whitefield Road, Mahadevapura",
                  city: "Post, Bengaluru - 560 048, India.",
                  state: "",
                  pincode: ""       

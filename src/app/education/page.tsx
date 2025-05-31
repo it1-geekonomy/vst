@@ -325,7 +325,10 @@ export default function EducationPage() {
           </div>
         </div>
       </div>
-      <VSTLogoAnimation />
+      <div className="mt-15">
+        <VSTLogoAnimation />
+      </div>
+      
     </main>
   );
 }
@@ -338,4 +341,4 @@ export default function EducationPage() {
 // .no-scrollbar {
 //   -ms-overflow-style: none;
 //   scrollbar-width: none;
-// }
+// 
