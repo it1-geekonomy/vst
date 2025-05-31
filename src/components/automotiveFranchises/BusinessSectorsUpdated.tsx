@@ -4,10 +4,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import EducationIcon from "@/app/public/education/Education.svg";
-import Auto from "@/app/public/education/Auto Parts.svg";
-import ManufacturingIcon from "@/app/public/education/Manufacturing.svg";
-import Automobile from "@/app/public/education/Auto mobile.svg";
+import EducationIcon from "@/app/public/education/Education.png";
+import Auto from "@/app/public/education/Auto Parts.png";
+import ManufacturingIcon from "@/app/public/education/Manufacturing.png";
+import Automobile from "@/app/public/education/Auto mobile.png";
 const BusinessSectorsUpdated = () => {
   const pathname = usePathname();
   const isAutomotiveFranchisesPage = pathname === "/automotive-franchises";
