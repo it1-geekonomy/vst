@@ -5,7 +5,7 @@ const TataIcon = () => {
     <svg
      width="200"
       height="80"
-      viewBox="10 -20 180 90"
+      viewBox="10 -20 175 95"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
