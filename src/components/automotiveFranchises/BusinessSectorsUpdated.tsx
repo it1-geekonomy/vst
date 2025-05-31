@@ -4,10 +4,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import EducationIcon from "@/app/public/education/Education.png";
-import Auto from "@/app/public/education/Auto Parts.png";
-import ManufacturingIcon from "@/app/public/education/Manufacturing.png";
-import Automobile from "@/app/public/education/Auto mobile.png";
+import EducationIcon from "@/app/public/education/Education.svg";
+import Auto from "@/app/public/education/Auto Parts.svg";
+import ManufacturingIcon from "@/app/public/education/Manufacturing.svg";
+import Automobile from "@/app/public/education/Auto mobile.svg";
 const BusinessSectorsUpdated = () => {
   const pathname = usePathname();
   const isAutomotiveFranchisesPage = pathname === "/automotive-franchises";
@@ -23,13 +23,13 @@ const BusinessSectorsUpdated = () => {
         className="w-full max-w-[1920px] py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24"
         style={{ height: "454px" }}
       >
-        <h2 className="font-roc font-medium text-[24px] sm:text-[32px] md:text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
+        <h2 className="font-roc font-medium text-[45px] leading-[100%] tracking-[0%] text-center text-[#230715] mb-4">
           Explore Our Other Business Sectors
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-12 lg:gap-24">
+        <div className="flex flex-col md:flex-row justify-center items-center">
           {/* Desktop view - hidden on mobile */}
-          <div className="hidden md:flex gap-6 sm:gap-8 md:gap-10 lg:gap-16 px-2 sm:px-4 md:px-6 lg:px-0">
+          <div className="hidden md:flex justify-center items-center gap-4 sm:gap-8 md:gap-12 lg:gap-24">
             {!isAutomotiveFranchisesPage && (
               <Link
                 href="/automotive-franchises"
@@ -57,7 +57,7 @@ const BusinessSectorsUpdated = () => {
                     alt="Auto"
                     width={300}
                     height={300}
-                    className="object-contain "
+                    className="object-contain"
                   />
                 </div>
               </Link>
@@ -98,7 +98,7 @@ const BusinessSectorsUpdated = () => {
 
           {/* Mobile view - horizontal layout without scrolling */}
           <div className="md:hidden w-full px-4">
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex justify-center items-center gap-4 sm:gap-8">
               {!isAutomotiveFranchisesPage && (
                 <Link
                   href="/automotive-franchises"
