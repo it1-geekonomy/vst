@@ -269,7 +269,7 @@ export default function Page() {
                     <span
                       className={`absolute top-2 right-3 text-xs font-semibold text-white ${charCountColor}`}
                     >
-                      {remainingChars} chars left
+                      {remainingChars} words left
                     </span>
                     <textarea
                       value={formData.aboutYourself}
