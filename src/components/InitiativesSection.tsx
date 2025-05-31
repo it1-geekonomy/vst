@@ -9,7 +9,7 @@ export default function InitiativesSection() {
     <div className="w-full flex flex-col items-center">
       <h2 className="text-[#FFFFFF] text-clamp-57">Our Initiatives</h2>
       <p className="text-[#FFFFFF] text-clamp-28 text-justify px-6  md:px-32 lg:px-48 xl:px-52 pb-8 lg:pb-18 xl:pb-20">
-        At VST Group, our Corporate Social Responsibility (CSR) initiatives are rooted in a deep sense of purpose and commitment to creating lasting, positive change. We believe that our success is intertwined with the well-being of the communities we serve.
+        At VST Group, our Corporate Social Responsibility (csr) initiatives are rooted in a deep sense of purpose and commitment to creating lasting, positive change. We believe that our success is intertwined with the well-being of the communities we serve.
       </p>
 
       <div className="w-full px-4 sm:px-8 md:px-10 lg:px-12 xl:px-20">

@@ -84,7 +84,7 @@ const ManufacturePage = () => {
         </div>
         {/* Tillers & Tractors Heading */}
         <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal mt-8 md:my-8 text-white text-center font-roc">
-          VST Tillers & Tractors
+          VST Tillers Tractors
         </h1>
         
         {/* Desktop view - Image Grid Section */}

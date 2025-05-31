@@ -25,7 +25,7 @@ const slides = [
     id: 7,
     image: slide5,
     title: "News & Media",
-    subtitle: "Stay updated with the latest news, events, and milestones from VST group",
+    subtitle: "Stay updated with the latest news, events, and milestones from VST group.",
     label: "News & Media",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
