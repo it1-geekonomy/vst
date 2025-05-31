@@ -84,7 +84,7 @@ const ManufacturePage = () => {
         </div>
         {/* Tillers & Tractors Heading */}
         <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal mt-8 md:my-8 text-white text-center font-roc">
-          VST Tillers & Tractors
+          VST Tillers Tractors
         </h1>
         
         {/* Desktop view - Image Grid Section */}
@@ -182,8 +182,8 @@ const ManufacturePage = () => {
         </div>
 
         <div className="px-0">
-          <h1 className="text-clamp-57 mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
-            Empowering Farmers With Efficiency, Affordability And Reliability
+        <h1 className="text-clamp-57 mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
+            Empowering farmers with efficiency, affordability<span className="hidden md:inline"><br /></span> and reliability
           </h1>
           
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 w-full">
@@ -197,7 +197,7 @@ const ManufacturePage = () => {
                 }}>
                   VST Tillers Tractors Ltd., a flagship company of VST Group, was incorporated in 1967 as a joint
                   venture with Mitsubishi Heavy Industries Ltd. and Mitsubishi Corporation of Japan. The company
-                  revolutionized agricultural mechanization in India by manufacturing Power Tillers-essential for paddy
+                  revolutionized agricultural mechanization in India by manufacturing Power Tillers - essential for paddy
                   cultivation by small and medium-scale farmers.
                 </p>
               </div>
@@ -263,7 +263,7 @@ const ManufacturePage = () => {
                address={{
                  street: "Regd. Office: Plot No.1, Hale",
                  street2: "Devasandra Industrial Layout,",
-                 street3: "Whitefield Road, Mahadevapura,",
+                 street3: "Whitefield Road, Mahadevapura",
                  city: "Post, Bengaluru - 560 048, India.",
                  state: "",
                  pincode: ""       

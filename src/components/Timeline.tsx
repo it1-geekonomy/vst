@@ -13,7 +13,7 @@ const timelineData = [
         src: "/imagesanime/image1.png",
         title: "Anugraha Charitable Trust",
         description:
-          "Providing health, education, food, and shelter to the needy while empowering the hearing-impaired at Sheila Kothavala Institute for the Deaf.",
+          "The VST group made contributions to the trust supporting its mission to enhance the well-being and development of persons with intellectual disabilities through care, education, and rehabilitation initiatives.",
       },
       {
         src: "/imagesanime/image2.png",
@@ -27,15 +27,15 @@ const timelineData = [
     images: [
       {
         src: "/imagesanime/image3.png",
-        title: "Wild Life First",
+        title: "Wildlife First",
         description:
-          "VST Group is proud to stand at the intersection of business excellence and social good. We remain deeply committed to building a future where economic growth, social equity, and environmental stewardship go hand in hand.",
+          "The group supported the Wildlife First movement, contributing to the conservation of wildlife and natural habitats through advocacy and protection initiatives.",
       },
       {
         src: "/imagesanime/image4.png",
         title: "The National Association for the Blind, Karnataka",
         description:
-          "Driven by a commitment to inclusivity, equips the visually challenged with knowledge, independence, and a pathway to a brighter future.",
+          "Driven by a commitment to inclusivity and empowerment, the VST group supported The National Association for the Blind, Karnataka, helping provide visually challenged individuals with access to education, skill development, and opportunities for independent living.",
       },
       {
         src: "/imagesanime/image5.png",
@@ -57,7 +57,7 @@ const timelineData = [
         src: "/imagesanime/image7.png",
         title: "Smt. Kamala Bai Educational Institution, Bangalore",
         description:
-          "Founded in 1931 by Mr. Mudaliar, this institution promotes girls' education and Indian cultural values. Spanning 8 acres, it includes Primary & High School, Pre-University, and Degree College.",
+          "Founded in 1931 by Mr. Mudaliar, this institution promotes education and Indian cultural values. Spanning 8 acres, it includes Primary & High School, Pre-University, and Degree College.",
       },
       {
         src: "/imagesanime/image8.png",
@@ -119,7 +119,7 @@ const timelineData = [
         src: "/imagesanime/image15.png",
         title: "Covid-19 Relief Fund",
         description:
-          "The group made major contributions towards the medical expenses of covid hit patients and also contributed towards medical equipment.",
+          "The VST group made major contributions towards the medical expenses of COVID-hit patients and also contributed towards medical equipment.  In addition, the group ensured the well-being of its employees and their families during this challenging time, providing them with necessary support and care.",
       },
     ],
   },
@@ -159,7 +159,7 @@ const timelineData = [
         src: "/imagesanime/image20.png",
         title: "The Association of People with Disability",
         description:
-          "Disability empowers people with disabilities to live full, productive lives.",
+          "The VST group extended its support to the Association of People with Disability, contributing towards initiatives aimed at empowering and improving the lives of individuals with disabilities."
       },
     ],
   },
