@@ -23,7 +23,7 @@ const BusinessSectorsUpdated = () => {
         className="w-full max-w-[1920px] py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24"
         style={{ height: "454px" }}
       >
-        <h2 className="font-roc font-medium text-[45px] leading-[100%] tracking-[0%] text-center text-[#230715] mb-4">
+        <h2 className="font-roc font-medium text-[28px] md:text-[45px] leading-[100%] tracking-[0%] text-center text-[#230715] mb-4">
           Explore Our Other Business Sectors
         </h2>
 
@@ -104,12 +104,12 @@ const BusinessSectorsUpdated = () => {
                   href="/automotive-franchises"
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="flex items-end justify-center h-[90px] w-[90px]">
+                  <div className="flex items-end justify-center h-[75px] w-[75px] mt-3">
                     <Image
                       src={Automobile}
                       alt="Auto"
-                      width={90}
-                      height={90}
+                      width={75}
+                      height={75}
                       className="object-contain"
                     />
                   </div>
@@ -120,13 +120,13 @@ const BusinessSectorsUpdated = () => {
                   href="/auto-parts"
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
-                  <div className="flex items-end justify-center h-[90px] w-[90px]">
+                  <div className="flex items-end justify-center h-[120px] w-[120px] -mt-8">
                     <Image
                       src={Auto}
                       alt="Auto"
-                      width={200}
-                      height={200}
-                      className="object-contain -mb-10"
+                      width={250}
+                      height={250}
+                      className="object-contain"
                     />
                   </div>
                 </Link>

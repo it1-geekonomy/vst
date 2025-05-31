@@ -33,12 +33,12 @@ const BusinessSectors = () => {
           </Link>
           {!isAutoPartsPage && (
             <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[100px] w-[140px] sm:h-[200px] sm:w-[250px] -mt-12">
+              <div className="flex items-end justify-center h-[85px] w-[120px] sm:h-[220px] sm:w-[280px] -mt-8 sm:-mt-18">
                 <Image
                   src={Auto}
                   alt="Auto Parts"
-                  width={250}
-                  height={200}
+                  width={280}
+                  height={210}
                   className="object-contain"
                 />
               </div>
@@ -46,7 +46,7 @@ const BusinessSectors = () => {
           )}
           {!isEducationPage && (
             <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[80px] w-[80px] sm:h-[130px] sm:w-[130px] mt-5">
+              <div className="flex items-end justify-center h-[60px] w-[60px] sm:h-[130px] sm:w-[130px] -mt-2 sm:mt-5">
                 <Image
                   src={EducationIcon}
                   alt="Education"
@@ -64,7 +64,7 @@ const BusinessSectors = () => {
         <>
           {!isManufacturePage && (
             <Link href="/manufacture" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[120px] w-[120px] sm:h-[190px] sm:w-[190px] -mt-8">
+              <div className="flex items-end justify-center h-[75px] w-[100px] sm:h-[190px] sm:w-[190px] -mt-5 sm:-mt-11">
                 <Image
                   src={ManufacturingIcon}
                   alt="Manufacturing"
@@ -77,12 +77,12 @@ const BusinessSectors = () => {
           )}
           {!isAutoPartsPage && (
             <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[100px] w-[140px] sm:h-[200px] sm:w-[250px] -mt-12">
+              <div className="flex items-end justify-center h-[85px] w-[120px] sm:h-[220px] sm:w-[280px] -mt-8 sm:-mt-18">
                 <Image
                   src={Auto}
                   alt="Auto Parts"
-                  width={250}
-                  height={200}
+                  width={280}
+                  height={210}
                   className="object-contain"
                 />
               </div>
@@ -90,7 +90,7 @@ const BusinessSectors = () => {
           )}
           {!isEducationPage && (
             <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[80px] w-[80px] sm:h-[130px] sm:w-[130px] mt-5">
+              <div className="flex items-end justify-center h-[60px] w-[60px] sm:h-[130px] sm:w-[130px] -mt-2 sm:mt-5">
                 <Image
                   src={EducationIcon}
                   alt="Education"
@@ -109,14 +109,14 @@ const BusinessSectors = () => {
   return (
     <div className="w-full flex justify-center items-center relative z-10 mt-28">
       <div
-        className="w-full max-w-[1920px] py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24"
-        style={{ height: '454px' }}
+        className="w-full max-w-[1920px] py-4 sm:py-6 md:py-8 lg:py-16 px-3 sm:px-6 md:px-8 lg:px-24"
+        style={{ height: 'auto', minHeight: '454px' }}
       >
-        <h2 className="font-roc font-medium text-[45px] leading-[100%] tracking-[0%] text-center text-white">
+        <h2 className="font-roc font-medium text-[32px] sm:text-[40px] md:text-[45px] leading-[100%] tracking-[0%] text-center text-white mb-10 sm:mb-8 md:mb-10">
           Explore Our Other Business Sectors
         </h2>
         <div className="flex justify-center items-center">
-          <div className="flex justify-center items-center gap-4 sm:gap-8 md:gap-12 lg:gap-24">
+          <div className="flex justify-center items-center gap-2 sm:gap-4 md:gap-8 lg:gap-24 px-2 sm:px-4">
             {renderIcons()}
           </div>
         </div>
