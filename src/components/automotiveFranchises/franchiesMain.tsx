@@ -30,7 +30,7 @@ import jaguar from "@/app/public/faranchies/newcarpics/ja-la.png";
 import landrover from "@/app/public/faranchies/newcarpics/landrover3.png";
 import maserati from "@/app/public/faranchies/newcarpics/maserati5.png";
 import honda from "@/app/public/faranchies/newcarpics/honda12.png";
-import newtata from "@/app/public/faranchies/newcarpics/newtata.png";
+import tataupdate from "@/app/public/faranchies/newcarpics/tataupdate.jpg";
 import kia from "@/app/public/faranchies/newcarpics/kia7.png";
 import ducati from "@/app/public/faranchies/newcarpics/ducati6.png";
 import mahindra from "@/app/public/faranchies/newcarpics/mahindra9.png";
@@ -437,7 +437,7 @@ const slides: SlideData[] = [
   },
   {
     id: 7,
-    backgroundImage: newtata,
+    backgroundImage: tataupdate,
     brand: "tata",
     bgColor: {
       from: "#D6744E",
