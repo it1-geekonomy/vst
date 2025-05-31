@@ -15,10 +15,10 @@ import Frame5 from "@/app/public/news-and-media/frame5.png";
 import mahindra1 from "@/app/public/news-and-media/mahindra1.png";
 
 
-import hcard1 from "@/app/public/news-and-media/Image Placeholder 1.jpg";
-import hcard2 from "@/app/public/news-and-media/Image Placeholder 2.jpg";
-import hcard3 from "@/app/public/news-and-media/Image Placeholder 3.jpg";
-import hcard4 from "@/app/public/news-and-media/Image Placeholder 4.jpg";
+import hcard1 from "@/app/public/news-and-media/Exciting Times.jpg";
+import hcard2 from "@/app/public/news-and-media/Special Moment news.jpg";
+import hcard3 from "@/app/public/news-and-media/Long standing Ducati 1.jpg";
+import hcard4 from "@/app/public/news-and-media/Porsche Moment news.jpg";
 import bgimg from "@/app/public/images/news/BACKIMG.jpg";
 import frame3 from "@/app/public/images/news/card6New.png";
 
@@ -40,8 +40,7 @@ export default function NewsMedia() {
   const headlines = [
     "Exciting! Our new Porsche showroom \n is now in Whitefield!",
     "A special moment from our Chennai finance team",
-    "As a long-standing Ducati dealer partner at VST Group.",
-    "Another milestone on the road to excellence!"
+    "As a long-standing Ducati dealer partner at VST Group."
   ];
   const headlines2 = [
     {
@@ -199,7 +198,7 @@ export default function NewsMedia() {
                   
                   {/* News Cards - positioned at bottom with animation */}
                   <div className="w-full mt-4 sm:mt-12 md:mt-16 lg:mt-20 mb-4 sm:mb-6 md:mb-8 lg:mb-10 relative overflow-visible">
-                    <div className="relative h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px]">
+                    <div className="relative h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px] max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mx-auto">
                       {headlines2.map((card, index) => (
                         <div 
                           key={index} 
@@ -219,7 +218,7 @@ export default function NewsMedia() {
                             className="relative border-l-4 border-yellow-500 bg-white/10 backdrop-blur-sm min-h-[300px] sm:min-h-[280px] md:min-h-[300px] lg:min-h-[320px] overflow-visible hover:bg-white/20 transition-colors"
                           >
                             <div className="flex flex-col h-full px-3 sm:px-1 py-4 sm:py-4 md:py-5">
-                              <div className="w-full h-36 sm:h-32 md:h-36 lg:h-40 relative">
+                              <div className="w-full h-44 sm:h-40 md:h-48 lg:h-52 relative">
                                 <Image 
                                   src={card.image} 
                                   alt={card.alt} 
@@ -243,7 +242,7 @@ export default function NewsMedia() {
                             className="relative backdrop-blur-sm min-h-[300px] sm:min-h-[280px] md:min-h-[300px] lg:min-h-[320px] overflow-visible hover:bg-white/20 transition-colors hidden md:block"
                           >
                             <div className="flex flex-col h-full px-3 sm:px-8 py-4 sm:py-4 md:py-5">
-                              <div className="w-full h-36 sm:h-32 md:h-36 lg:h-40 relative">
+                              <div className="w-full h-44 sm:h-40 md:h-48 lg:h-52 relative">
                                 <Image 
                                   src={headlines2[(index + 1) % headlines2.length].image} 
                                   alt={headlines2[(index + 1) % headlines2.length].alt} 
