@@ -33,12 +33,12 @@ const BusinessSectors = () => {
           </Link>
           {!isAutoPartsPage && (
             <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[85px] w-[120px] sm:h-[220px] sm:w-[280px] -mt-8 sm:-mt-18">
+              <div className="flex items-end justify-center h-[90px] w-[125px] sm:h-[215px] sm:w-[275px] -mt-8 sm:-mt-10">
                 <Image
                   src={Auto}
                   alt="Auto Parts"
-                  width={280}
-                  height={210}
+                  width={270}
+                  height={205}
                   className="object-contain"
                 />
               </div>
@@ -46,7 +46,7 @@ const BusinessSectors = () => {
           )}
           {!isEducationPage && (
             <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[60px] w-[60px] sm:h-[130px] sm:w-[130px] -mt-2 sm:mt-5">
+              <div className="flex items-end justify-center h-[65px] w-[65px] sm:h-[130px] sm:w-[130px] -mt-4 sm:mt-5">
                 <Image
                   src={EducationIcon}
                   alt="Education"
@@ -77,12 +77,12 @@ const BusinessSectors = () => {
           )}
           {!isAutoPartsPage && (
             <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[85px] w-[120px] sm:h-[220px] sm:w-[280px] -mt-8 sm:-mt-18">
+              <div className="flex items-end justify-center h-[85px] w-[120px] sm:h-[210px] sm:w-[270px] -mt-8 sm:-mt-18">
                 <Image
                   src={Auto}
                   alt="Auto Parts"
-                  width={280}
-                  height={210}
+                  width={270}
+                  height={205}
                   className="object-contain"
                 />
               </div>
@@ -90,7 +90,7 @@ const BusinessSectors = () => {
           )}
           {!isEducationPage && (
             <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[60px] w-[60px] sm:h-[130px] sm:w-[130px] -mt-2 sm:mt-5">
+              <div className="flex items-end justify-center h-[75px] w-[75px] sm:h-[130px] sm:w-[130px] -mt-2 sm:mt-5">
                 <Image
                   src={EducationIcon}
                   alt="Education"
