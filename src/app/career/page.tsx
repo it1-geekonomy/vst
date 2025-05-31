@@ -208,7 +208,7 @@ export default function Page() {
               The Group is an equal opportunity workplace where results are
               encouraged and merit is rewarded, making it an ideal choice for a{" "}
               <span className="text-[#FDB813] font-normal tracking-[1px] ml-1">
-                long - term career path
+                long-term career path
               </span>
               .
             </p>
