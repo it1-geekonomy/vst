@@ -17,7 +17,7 @@ interface FormData {
 }
 
 export default function Page() {
-  const MAX_ABOUT_CHARS = 400;
+  const MAX_WORDS = 400;
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -60,9 +60,15 @@ export default function Page() {
   ) => {
     const { name, value } = e.target;
 
-    // If this is the aboutYourself field, limit to max characters
-    if (name === "aboutYourself" && value.length > MAX_ABOUT_CHARS) {
-      return;
+    // If this is the aboutYourself field, limit to max words
+    if (name === "aboutYourself") {
+      const wordCount = value
+        .trim()
+        .split(/\s+/)
+        .filter((word) => word.length > 0).length;
+      if (wordCount > MAX_WORDS) {
+        return;
+      }
     }
 
     setFormData((prev) => ({
@@ -133,12 +139,16 @@ export default function Page() {
     }
   };
 
-  // Calculate remaining characters
-  const remainingChars = MAX_ABOUT_CHARS - formData.aboutYourself.length;
-  const charCountColor =
-    remainingChars <= 50
+  // Calculate remaining words
+  const wordCount = formData.aboutYourself
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word.length > 0).length;
+  const remainingWords = MAX_WORDS - wordCount;
+  const wordCountColor =
+    remainingWords <= 50
       ? "text-yellow-500"
-      : remainingChars <= 20
+      : remainingWords <= 20
         ? "text-red-500"
         : "text-gray-400";
 
@@ -265,9 +275,9 @@ export default function Page() {
                   <div className="relative">
                     {/* Char count always at top right inside the box */}
                     <span
-                      className={`absolute top-2 right-3 text-xs font-semibold text-white ${charCountColor}`}
+                      className={`absolute top-2 right-3 text-xs font-semibold text-white ${wordCountColor}`}
                     >
-                      {remainingChars} words left
+                      {remainingWords} words left
                     </span>
                     <textarea
                       value={formData.aboutYourself}
@@ -275,23 +285,20 @@ export default function Page() {
                       name="aboutYourself"
                       required
                       rows={4}
-                      maxLength={MAX_ABOUT_CHARS}
-                      className="w-full bg-[#666666]  rounded-xl p-4 focus:outline-none resize-none shadow-md transition-all duration-200"
+                      className="w-full bg-[#666666] rounded-xl p-4 focus:outline-none resize-none shadow-md transition-all duration-200"
                     />
                     <div className="w-full h-1 mt-2 rounded-full overflow-hidden">
                       <div
                         className={`h-full ${
-                          formData.aboutYourself.length > MAX_ABOUT_CHARS * 0.8
-                            ? formData.aboutYourself.length >
-                              MAX_ABOUT_CHARS * 0.95
+                          wordCount > MAX_WORDS * 0.8
+                            ? wordCount > MAX_WORDS * 0.95
                               ? "bg-red-500"
                               : "bg-yellow-500"
                             : "bg-green-500"
                         }`}
                         style={{
                           width: `${Math.min(
-                            (formData.aboutYourself.length / MAX_ABOUT_CHARS) *
-                              100,
+                            (wordCount / MAX_WORDS) * 100,
                             100
                           )}%`,
                         }}
