@@ -30,7 +30,7 @@ const LifeAtVst = () => {
       number: "03",
       image: Image3,
       title: "Life At VST",
-      subtitle: "Innovation Through Collaboration",
+      subtitle: "A Strong Community Spirit",
       description:
         "Community lies at the heart of who we are. We foster a workplace where collaboration, belonging and well-being are prioritised. Through engaging experiences, meaningful initiatives and a culture that celebrates both work and play, our environment supports not just productivity but personal joy too. We believe work should be fulfilling and fun, with the right balance that makes every day feel worthwhile.",
     },
