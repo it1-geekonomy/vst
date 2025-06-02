@@ -1088,7 +1088,7 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Description section */}
-        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-10 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8">
+        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8">
           {/* Left: Description */}
           <div className="w-full lg:w-3/5 flex flex-col items-center sm:items-center lg:items-start">
             <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-8 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
@@ -1142,7 +1142,7 @@ const FranchiseSlider = () => {
                             title="https://retailers.jaguar.in/vst-grandeur-jaguar/"
                             className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
                           >
-                            retail.jaguar.in/vst-grandeur-jaguar
+                            retailers.jaguar.in/vst-grandeur-jaguar
                           </h2>
                         </div>
                         <div className="flex items-center gap-2 w-[400px]">
