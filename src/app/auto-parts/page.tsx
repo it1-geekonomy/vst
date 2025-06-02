@@ -344,7 +344,7 @@ export default function Page() {
           </div>
 
           {/* Heading Section */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal tracking-wider text-black">
+          <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-6xl  font-normal tracking-wider text-black">
             OE Parts Distribution
           </h1>
         </div>
