@@ -50,7 +50,7 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                   Corporate Office
                 </h4>
                 <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left whitespace-normal">#1, Palace Cross Road,</p>
-                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Bengalure - 560 020.</p>
+                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Bengaluru - 560 020.</p>
               </div>
 
               {/* Chennai Office */}

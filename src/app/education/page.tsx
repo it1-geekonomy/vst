@@ -296,7 +296,7 @@ export default function EducationPage() {
               rel="noopener noreferrer"
               className="w-full h-full flex items-center justify-center text-black no-underline"
             >
-              Learn More
+              Explore More
             </a>
           </div>
         </div>
