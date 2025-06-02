@@ -82,7 +82,7 @@ const BusinessSectors = () => {
         className="w-full max-w-[1920px] py-4 sm:py-6 md:py-8 lg:py-16 px-3 sm:px-6 md:px-8 lg:px-24"
         style={{ height: 'auto', minHeight: '454px' }}
       >
-        <h2 className="font-roc font-medium text-[32px] sm:text-[40px] md:text-[45px] leading-[100%] tracking-[0%] text-center text-white mb-10 sm:mb-8 md:mb-10">
+        <h2 className="font-roc font-medium text-[22px] sm:text-[30px] md:text-[35px] leading-[100%] tracking-[0%] text-center text-white mb-10 sm:mb-8 md:mb-10">
           Explore Our Other Business Sectors
         </h2>
         <div className="flex justify-center items-center">

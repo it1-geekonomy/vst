@@ -1091,7 +1091,7 @@ const FranchiseSlider = () => {
         <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8">
           {/* Left: Description */}
           <div className="w-full lg:w-3/5 flex flex-col items-center sm:items-center lg:items-start">
-            <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-8 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
+            <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-0 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
               <AnimatePresence mode="wait">
                 <motion.h2
                   key={`header-${currentSlide}`}
