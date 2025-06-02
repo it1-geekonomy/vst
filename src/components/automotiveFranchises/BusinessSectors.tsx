@@ -20,24 +20,27 @@ const BusinessSectors = () => {
     if (isManufacturePage) {
       return (
         <>
-          <Link href="/automotive-franchises" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-            <div className="flex items-end justify-center h-[50px] w-[50px] sm:h-[80px] sm:w-[155px] mt-14 sm:mt-14">
-              <Automobile />
-            </div>
+          <Link
+            href="/automotive-franchises"
+            className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
+          >
+            <Automobile className="w-full h-full" />
           </Link>
           {!isAutoPartsPage && (
-            <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[90px] w-[125px] sm:h-[215px] sm:w-[275px] -mt-0 sm:-mt-20">
-                <Auto />
-              </div>
+            <Link
+              href="/auto-parts"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[120px] h-[80px] sm:w-[160px] sm:h-[100px] md:w-[180px] md:h-[120px] lg:w-[260px] lg:h-[180px] hover:opacity-80 transition-opacity"
+            >
+              <Auto className="w-full h-full" />
             </Link>
           )}
           {!isEducationPage && (
-            <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[65px] w-[65px] sm:h-[130px] sm:w-[130px] mt-8 sm:mt-5">
-                  <EducationIcon />
-              </div>
-            </Link>
+            <Link
+                href="/education"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
+            >
+              <EducationIcon className="w-full h-full" />
+              </Link>
           )}
         </>
       );
@@ -45,24 +48,27 @@ const BusinessSectors = () => {
       return (
         <>
           {!isManufacturePage && (
-            <Link href="/manufacture" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[75px] w-[100px] sm:h-[190px] sm:w-[190px] mt-5 sm:-mt-11">
-                <ManufacturingIcon />
-              </div>
+            <Link
+              href="/manufacture"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
+            >
+              <ManufacturingIcon className="w-full h-full" />
             </Link>
           )}
           {!isAutoPartsPage && (
-            <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[85px] w-[120px] sm:h-[210px] sm:w-[270px] mt-5 sm:-mt-18">
-                <Auto />
-              </div>
+            <Link
+              href="/auto-parts"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[120px] h-[80px] sm:w-[160px] sm:h-[100px] md:w-[180px] md:h-[120px] lg:w-[260px] lg:h-[180px] hover:opacity-80 transition-opacity"
+            >
+              <Auto className="w-full h-full" />
             </Link>
           )}
           {!isEducationPage && (
-            <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[75px] w-[75px] sm:h-[130px] sm:w-[130px] mt-7 sm:mt-5">
-                <EducationIcon />
-              </div>
+            <Link
+              href="/education"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
+            >
+              <EducationIcon className="w-full h-full" />
             </Link>
           )}
         </>
@@ -80,7 +86,7 @@ const BusinessSectors = () => {
           Explore Our Other Business Sectors
         </h2>
         <div className="flex justify-center items-center">
-          <div className="flex justify-center items-center gap-2 sm:gap-4 md:gap-8 lg:gap-24 px-2 sm:px-4">
+          <div className="flex flex-nowrap sm:flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 px-2 sm:px-4">
             {renderIcons()}
           </div>
         </div>
