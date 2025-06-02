@@ -63,7 +63,7 @@ const ManufacturePage = () => {
 
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % tractorImages.length)
-    }, 5000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [isHovering])
@@ -83,7 +83,7 @@ const ManufacturePage = () => {
           <Headerlogo />
         </div>
         {/* Tillers & Tractors Heading */}
-        <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal mt-8 md:my-8 text-white text-center font-roc">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl  font-normal mt-8 md:my-8 text-white text-center font-roc">
           VST Tillers Tractors
         </h1>
         
@@ -95,14 +95,14 @@ const ManufacturePage = () => {
                 src={image.base}
                 alt={`VST Tractor ${index + 1}`}
                 fill
-                className="object-fit transition-opacity duration-300 group-hover:opacity-0"
+                className="object-fit transition-opacity duration-200 group-hover:opacity-0"
                 priority
               />
               <Image
                 src={image.hover}
                 alt={`VST Tractor ${index + 1}`}
                 fill
-                className="object-fit opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="object-fit opacity-0 transition-opacity duration-7000 group-hover:opacity-100"
                 priority
               />
             </div>
