@@ -7,7 +7,7 @@ import healthImage from "../app/public/making-a-difference/healthImage.png";
 export const initiatives = [
     {
         title: 'Education and Holistic Development',
-        description: 'As part of our Corporate Social Responsibility (csr) initiatives, we dedicated significant resources to promoting education in the city. By investing in education, we aim to foster a highly skilled and knowledgeable workforce capable of effectively addressing future challenges.',
+        description: 'As part of our (CSR) initiatives, we dedicated significant resources to promoting education in the city. By investing in education, we aim to foster a highly skilled and knowledgeable workforce capable of effectively addressing future challenges.',
         image: eduImage,
     },
     {
