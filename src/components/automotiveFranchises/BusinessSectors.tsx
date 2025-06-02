@@ -4,10 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import EducationIcon from '@/app/public/common/BusinessSectorIcons/EducationIcon.png';
-import Auto from '@/app/public/common/BusinessSectorIcons/Auto.png';
-import ManufacturingIcon from '@/app/public/common/BusinessSectorIcons/ManufacturingIcon.png';
-import Automobile from '@/app/public/common/BusinessSectorIcons/Automobile.png';
+import EducationIcon from '@/app/public/business-sector-White/education';
+import Auto from '@/app/public/business-sector-White/auto-parts';
+import ManufacturingIcon from '@/app/public/business-sector-White/manufature';
+import Automobile from '@/app/public/business-sector-White/auto-mobile';
 
 const BusinessSectors = () => {
   const pathname = usePathname();
@@ -21,39 +21,21 @@ const BusinessSectors = () => {
       return (
         <>
           <Link href="/automotive-franchises" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-            <div className="flex items-end justify-center h-[100px] w-[100px] sm:h-[155px] sm:w-[155px]">
-              <Image
-                src={Automobile}
-                alt="Auto Mobile"
-                width={155}
-                height={155}
-                className="object-contain"
-              />
+            <div className="flex items-end justify-center h-[50px] w-[50px] sm:h-[80px] sm:w-[155px] mt-14 sm:mt-14">
+              <Automobile />
             </div>
           </Link>
           {!isAutoPartsPage && (
             <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[90px] w-[125px] sm:h-[215px] sm:w-[275px] -mt-8 sm:-mt-10">
-                <Image
-                  src={Auto}
-                  alt="Auto Parts"
-                  width={270}
-                  height={205}
-                  className="object-contain"
-                />
+              <div className="flex items-end justify-center h-[90px] w-[125px] sm:h-[215px] sm:w-[275px] -mt-0 sm:-mt-20">
+                <Auto />
               </div>
             </Link>
           )}
           {!isEducationPage && (
             <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[65px] w-[65px] sm:h-[130px] sm:w-[130px] -mt-4 sm:mt-5">
-                <Image
-                  src={EducationIcon}
-                  alt="Education"
-                  width={130}
-                  height={130}
-                  className="object-contain"
-                />
+              <div className="flex items-end justify-center h-[65px] w-[65px] sm:h-[130px] sm:w-[130px] mt-8 sm:mt-5">
+                  <EducationIcon />
               </div>
             </Link>
           )}
@@ -64,40 +46,22 @@ const BusinessSectors = () => {
         <>
           {!isManufacturePage && (
             <Link href="/manufacture" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[75px] w-[100px] sm:h-[190px] sm:w-[190px] -mt-5 sm:-mt-11">
-                <Image
-                  src={ManufacturingIcon}
-                  alt="Manufacturing"
-                  width={190}
-                  height={190}
-                  className="object-contain"
-                />
+              <div className="flex items-end justify-center h-[75px] w-[100px] sm:h-[190px] sm:w-[190px] mt-5 sm:-mt-11">
+                <ManufacturingIcon />
               </div>
             </Link>
           )}
           {!isAutoPartsPage && (
             <Link href="/auto-parts" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[85px] w-[120px] sm:h-[210px] sm:w-[270px] -mt-8 sm:-mt-18">
-                <Image
-                  src={Auto}
-                  alt="Auto Parts"
-                  width={270}
-                  height={205}
-                  className="object-contain"
-                />
+              <div className="flex items-end justify-center h-[85px] w-[120px] sm:h-[210px] sm:w-[270px] mt-5 sm:-mt-18">
+                <Auto />
               </div>
             </Link>
           )}
           {!isEducationPage && (
             <Link href="/education" className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity">
-              <div className="flex items-end justify-center h-[75px] w-[75px] sm:h-[130px] sm:w-[130px] -mt-2 sm:mt-5">
-                <Image
-                  src={EducationIcon}
-                  alt="Education"
-                  width={130}
-                  height={130}
-                  className="object-contain"
-                />
+              <div className="flex items-end justify-center h-[75px] w-[75px] sm:h-[130px] sm:w-[130px] mt-7 sm:mt-5">
+                <EducationIcon />
               </div>
             </Link>
           )}
