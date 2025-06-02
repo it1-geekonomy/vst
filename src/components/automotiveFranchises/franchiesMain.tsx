@@ -1121,7 +1121,7 @@ const FranchiseSlider = () => {
 
             <a href={slides[currentSlide].learnMoreLink} className="mt-4 sm:mt-6 lg:mt-10 inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-start" target="_blank" rel="noopener noreferrer">
               <h3 className="bg-white rounded-lg px-6 sm:px-8 lg:px-40 py-2 sm:py-3 lg:py-5 text-[#0f0f0e] text-lg sm:text-xl lg:text-3xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
-                Learn More
+                Explore More
               </h3>
             </a>
           </div>
