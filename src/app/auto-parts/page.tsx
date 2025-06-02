@@ -20,6 +20,7 @@ export default function Page() {
   const [previousPositions, setPreviousPositions] = useState<{
     [key: number]: string;
   }>({});
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   // Touch swipe handling for mobile/tablet
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -31,6 +32,34 @@ export default function Page() {
 
   // Use the imported images
   const images = [img1, img4, img5, img3, img2];
+
+  // Auto-play effect
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout;
+
+    if (isAutoPlaying && !isTransitioning) {
+      intervalId = setInterval(() => {
+        goToNextSlide();
+      }, 2000); // Change slide every 2 seconds
+    }
+
+    // Cleanup interval on component unmount or when dependencies change
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [isAutoPlaying, isTransitioning]); // Dependencies for the effect
+
+  // Pause auto-play on user interaction
+  const pauseAutoPlay = () => {
+    setIsAutoPlaying(false);
+  };
+
+  // Resume auto-play after user interaction
+  const resumeAutoPlay = () => {
+    setIsAutoPlaying(true);
+  };
 
   // Mobile and tablet swipe handlers
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
@@ -65,6 +94,7 @@ export default function Page() {
 
   const handleImageClick = (index: number) => {
     if (isTransitioning) return;
+    pauseAutoPlay();
 
     // Store previous positions before changing activeIndex
     const prevPositions: { [key: number]: string } = {};
@@ -90,11 +120,13 @@ export default function Page() {
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
+      resumeAutoPlay();
     }, 1200); // Extended for smoother animation
   };
 
   const goToPrevSlide = () => {
     if (isTransitioning) return;
+    pauseAutoPlay();
 
     // Store previous positions before changing activeIndex
     const prevPositions: { [key: number]: string } = {};
@@ -110,11 +142,13 @@ export default function Page() {
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
+      resumeAutoPlay();
     }, 1200); // Extended for smoother animation
   };
 
   const goToNextSlide = () => {
     if (isTransitioning) return;
+    pauseAutoPlay();
 
     // Store previous positions before changing activeIndex
     const prevPositions: { [key: number]: string } = {};
@@ -130,6 +164,7 @@ export default function Page() {
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
+      resumeAutoPlay();
     }, 1200); // Extended for smoother animation
   };
 
@@ -450,15 +485,6 @@ export default function Page() {
 
           {/* Pagination Dots and Navigation Buttons - Updated to match design */}
           <div className="absolute lg:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-1 sm:space-x-2">
-            {/* Left Arrow Button */}
-            <button
-              className="text-black px-2 rounded-full text-xl disabled:opacity-50"
-              onClick={goToPrevSlide}
-              disabled={isTransitioning}
-            >
-              ←
-            </button>
-
             {/* Pagination Dots */}
             {images.map((_, index) => (
               <button
@@ -470,15 +496,6 @@ export default function Page() {
                 disabled={isTransitioning}
               />
             ))}
-
-            {/* Right Arrow Button */}
-            <button
-              className="text-black px-2 rounded-full text-xl disabled:opacity-50"
-              onClick={goToNextSlide}
-              disabled={isTransitioning}
-            >
-              →
-            </button>
           </div>
         </div>
       </div>
