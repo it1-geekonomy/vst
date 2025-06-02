@@ -28,8 +28,8 @@ export default function CorporatePhilanthropy() {
         >
           {/* Hero Section */}
           <section className="relative overflow-hidden z-10">
-            <div className="relative h-full flex flex-col items-center justify-start text-white py-14 md:py-16 lg:py-20 xl:py-24">
-              <h1 className="text-clamp-75 sm:text-clamp-116 font-light pb-4 sm:p-6 lg:pb-8 xl:pb-10">
+            <div className="relative h-full flex flex-col items-center justify-start text-white py-14 md:py-16  xl:py-24">
+              <h1 className="text-clamp-75 sm:text-clamp-116 font-light pb-4 sm:p-6 lg:pb-8 xl:pb-6">
                 Making a Difference
               </h1>
               <p className="text-[#FFFFFF] text-clamp-28 text-justify px-6  md:px-32 lg:px-48 xl:px-52 font-light">
@@ -38,7 +38,7 @@ export default function CorporatePhilanthropy() {
                 consistently extended its hand to communities in need. From
                 supporting education and healthcare to empowering the
                 differently-abled, protecting wildlife, and responding to
-                humanitarian crises, our csr initiatives reflect a deep
+                humanitarian crises, our CSR initiatives reflect a deep
                 commitment to creating a meaningful and lasting impact. Guided
                 by empathy and driven by purpose, we believe in building a
 
@@ -48,7 +48,7 @@ export default function CorporatePhilanthropy() {
             </div>
           </section>
           {/* Initiatives Section */}
-          <div className="pb-18 lg:pb-20 xl:pb-24">
+          <div className="-mt-8 pb-18 lg:pb-20 xl:pb-24">
             <InitiativesSection />
           </div>
           <div>
