@@ -132,7 +132,7 @@ const newsData = [
   {
     id: 8,
     image: card8,
-    title:'VST Zetor Tractors, a partnership between VST Tillers Tractors Ltd and HTC Investments',
+    title:'VST Zetor Tractors a partnership between VST Tillers and tractors and HTC Investments',
     // title: (
     //   <>
     //     <a
@@ -176,7 +176,7 @@ const News = () => {
 
   return (
     <div className="bg-[#2E2E2E] min-h-screen py-10  px-3 sm:px-4 md:px-6 lg:px-16 text-white">
-      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Our News</h1>
+      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Latest Updates</h1>
 
       <div className="px-3.5 flex justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
