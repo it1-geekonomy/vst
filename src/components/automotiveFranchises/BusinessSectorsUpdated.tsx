@@ -4,10 +4,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import EducationIcon from "@/app/public/education/Education.png";
-import Auto from "@/app/public/education/Auto Parts.png";
-import ManufacturingIcon from "@/app/public/education/Manufacturing.png";
-import Automobile from "@/app/public/education/Auto mobile.png";
+import EducationIcon from "@/app/public/business-sector-Black/education";
+import Auto from "@/app/public/business-sector-Black/auto-parts";
+import ManufacturingIcon from "@/app/public/business-sector-Black/manufature";
+import Automobile from "@/app/public/business-sector-Black/auto-mobile";
 const BusinessSectorsUpdated = () => {
   const pathname = usePathname();
   const isAutomotiveFranchisesPage = pathname === "/automotive-franchises";
@@ -36,13 +36,7 @@ const BusinessSectorsUpdated = () => {
                 className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
               >
                 <div className="flex items-end justify-center h-[120px] w-[120px]">
-                  <Image
-                    src={Automobile}
-                    alt="Auto"
-                    width={120}
-                    height={120}
-                    className="object-contain"
-                  />
+                 <Automobile />
                 </div>
               </Link>
             )}
@@ -52,13 +46,7 @@ const BusinessSectorsUpdated = () => {
                 className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
               >
                 <div className="flex items-end justify-center h-[120px] w-[190px]">
-                  <Image
-                    src={Auto}
-                    alt="Auto"
-                    width={300}
-                    height={300}
-                    className="object-contain"
-                  />
+                  <Auto />
                 </div>
               </Link>
             )}
@@ -68,13 +56,7 @@ const BusinessSectorsUpdated = () => {
                 className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
               >
                 <div className="flex items-end justify-center h-[120px] w-[160px]">
-                  <Image
-                    src={ManufacturingIcon}
-                    alt="Manufacturing"
-                    width={120}
-                    height={160}
-                    className="object-contain"
-                  />
+                  <ManufacturingIcon />
                 </div>
               </Link>
             )}
@@ -84,13 +66,7 @@ const BusinessSectorsUpdated = () => {
                 className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
               >
                 <div className="flex items-end justify-center h-[120px] w-[100px]">
-                  <Image
-                    src={EducationIcon}
-                    alt="Education"
-                    width={120}
-                    height={120}
-                    className="object-contain"
-                  />
+                  <EducationIcon />
                 </div>
               </Link>
             )}
@@ -105,13 +81,7 @@ const BusinessSectorsUpdated = () => {
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
                   <div className="flex items-end justify-center h-[75px] w-[75px] mt-3">
-                    <Image
-                      src={Automobile}
-                      alt="Auto"
-                      width={75}
-                      height={75}
-                      className="object-contain"
-                    />
+                    <Automobile />
                   </div>
                 </Link>
               )}
@@ -121,13 +91,7 @@ const BusinessSectorsUpdated = () => {
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
                   <div className="flex items-end justify-center h-[120px] w-[120px] -mt-8">
-                    <Image
-                      src={Auto}
-                      alt="Auto"
-                      width={250}
-                      height={250}
-                      className="object-contain"
-                    />
+                    <Auto />
                   </div>
                 </Link>
               )}
@@ -137,13 +101,7 @@ const BusinessSectorsUpdated = () => {
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
                   <div className="flex items-end justify-center h-[90px] w-[90px]">
-                    <Image
-                      src={ManufacturingIcon}
-                      alt="Manufacturing"
-                      width={90}
-                      height={90}
-                      className="object-contain"
-                    />
+                    <ManufacturingIcon />
                   </div>
                 </Link>
               )}
@@ -153,13 +111,7 @@ const BusinessSectorsUpdated = () => {
                   className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
                 >
                   <div className="flex items-end justify-center h-[90px] w-[90px]">
-                    <Image
-                      src={EducationIcon}
-                      alt="Education"
-                      width={90}
-                      height={90}
-                      className="object-contain"
-                    />
+                    <EducationIcon />
                   </div>
                 </Link>
               )}
