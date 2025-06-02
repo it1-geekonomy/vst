@@ -50,7 +50,7 @@ const ContactUsFooter: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                   Corporate Office
                 </h4>
                 <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left whitespace-normal">#1, Palace Cross Road,</p>
-                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Bengalure - 560 020.</p>
+                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Bengaluru - 560 020.</p>
                 <div className="flex flex-col gap-2 mt-3">
                   <div className="flex items-center gap-2 text-white text-clamp-18 font-roc">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
