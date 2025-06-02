@@ -1091,7 +1091,7 @@ const FranchiseSlider = () => {
         <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-10 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8">
           {/* Left: Description */}
           <div className="w-full lg:w-3/5 flex flex-col items-center sm:items-center lg:items-start">
-            <h2 className="text-white text-xl sm:text-2xl lg:text-[3rem] font-normal mb-3 sm:mb-4 lg:mb-8 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
+            <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-8 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
               <AnimatePresence mode="wait">
                 <motion.h2
                   key={`header-${currentSlide}`}
@@ -1099,7 +1099,7 @@ const FranchiseSlider = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="text-white text-xl sm:text-2xl lg:text-[3rem] font-semibold sm:font-semibold lg:font-normal mb-3 sm:mb-4 lg:mb-8 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start xl:justify-start"
+                  className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-8 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start xl:justify-start"
                 >
                   {slides[currentSlide].header}
                 </motion.h2>
@@ -1132,20 +1132,44 @@ const FranchiseSlider = () => {
               <>
                 {/* Website Link */}
                 {slides[currentSlide]?.learnMoreLink && (
-                  <div className="w-full flex justify-start mb-4">
-                    <div className="flex items-center gap-2 w-[400px]">
-                      <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Website:</span>
-                      <h2 
-                        onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank', 'noopener,noreferrer')}
-                        title={slides[currentSlide].learnMoreLink}
-                        className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
-                      >
-                        {slides[currentSlide].learnMoreLink.replace(/^https?:\/\//, '')}
-                      </h2>
-                    </div>
+                  <div className="w-full flex flex-col gap-2 mb-4">
+                    {slides[currentSlide].brand === "jlr" ? (
+                      <>
+                        <div className="flex items-center gap-2 w-[400px]">
+                          <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Jaguar:</span>
+                          <h2 
+                            onClick={() => window.open("https://retailers.jaguar.in/vst-grandeur-jaguar/", '_blank', 'noopener,noreferrer')}
+                            title="https://retailers.jaguar.in/vst-grandeur-jaguar/"
+                            className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
+                          >
+                            retail.jaguar.in/vst-grandeur-jaguar
+                          </h2>
+                        </div>
+                        <div className="flex items-center gap-2 w-[400px]">
+                          <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Land Rover:</span>
+                          <h2 
+                            onClick={() => window.open("https://retailers.landrover.in/vst-grandeur-land-rover/", '_blank', 'noopener,noreferrer')}
+                            title="https://retailers.landrover.in/vst-grandeur-land-rover/"
+                            className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
+                          >
+                            retailers.landrover.in/vst-grandeur-land-rover
+                          </h2>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="flex items-center gap-2 w-[400px]">
+                        <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Website:</span>
+                        <h2 
+                          onClick={() => window.open(slides[currentSlide].learnMoreLink, '_blank', 'noopener,noreferrer')}
+                          title={slides[currentSlide].learnMoreLink}
+                          className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
+                        >
+                          {slides[currentSlide].learnMoreLink.replace(/^https?:\/\//, '')}
+                        </h2>
+                      </div>
+                    )}
                   </div>
                 )}
-
                 {/* Only show tabs if there are multiple locations */}
                 {Object.keys(slides[currentSlide].locations).length > 1 && (
                   <div className="flex gap-2 sm:gap-4 mb-2 w-full overflow-x-auto pb-2">
@@ -1624,11 +1648,13 @@ const FranchiseSlider = () => {
                           <div className="hide-scrollbar mb-6">
                             {location["Sales, Service & Spares"].map((salesService, idx) => (
                               <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
-                                <div className="text-white font-bold text-xl">Sales, Service & Spares :</div>
+                                <div className="text-white font-bold text-xl">
+                                  Sales, Service & Spares :
+                                </div>
                                 <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {salesService.address}
                                 </div>
-                                <div className="text-white">
+                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesService.phone) ? (
                                     salesService.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1646,16 +1672,12 @@ const FranchiseSlider = () => {
                                       {salesService.phone}
                                     </div>
                                   )}
-                                  {Array.isArray(salesService.email) ? (
-                                    salesService.email.map((email, emailIdx) => (
-                                      <a key={emailIdx} href={`mailto:${email}`} className="text-sm hover:text-blue-400">
-                                        {email}
-                                      </a>
+                               {Array.isArray(salesService.email) ? (
+                                    salesService.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
                                     ))
                                   ) : (
-                                    <a href={`mailto:${salesService.email}`} className="text-sm hover:text-blue-400">
-                                      {salesService.email}
-                                    </a>
+                                    <div className="mt-1">✉️ {salesService.email}</div>
                                   )}
                                 </div>
                                 <div className="rounded-lg overflow-hidden w-full">
