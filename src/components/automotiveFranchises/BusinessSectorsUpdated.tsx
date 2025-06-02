@@ -95,7 +95,7 @@ const BusinessSectorsUpdated = () => {
               className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
             >
               <div className="flex items-end justify-center h-[120px] w-[120px]">
-                <Automobile />
+              <Automobile />
               </div>
             </Link>
           )}
@@ -104,8 +104,8 @@ const BusinessSectorsUpdated = () => {
               href="/manufacture"
               className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
             >
-              <div className="flex items-end justify-center h-[120px] w-[120px]">
-                <ManufacturingIcon />
+              <div className="flex items-end justify-center h-[120px] w-[150px]">
+              <ManufacturingIcon />
               </div>
             </Link>
           )}
@@ -114,7 +114,7 @@ const BusinessSectorsUpdated = () => {
               href="/education"
               className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
             >
-              <div className="flex items-end justify-center h-[120px] w-[100px]">
+              <div className="flex items-end justify-center h-[120px] w-[110px]">
                 <EducationIcon />
               </div>
             </Link>
