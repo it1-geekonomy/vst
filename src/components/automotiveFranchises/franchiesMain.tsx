@@ -1216,10 +1216,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Sales :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {sale.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(sale.phone) ? (
                                     sale.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1270,10 +1270,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Service :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {service.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(service.phone) ? (
                                     service.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1324,10 +1324,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Sales & Service :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {salesService.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesService.phone) ? (
                                     salesService.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1378,10 +1378,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Sales, Service & Parts Distribution :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {salesDist.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesDist.phone) ? (
                                     salesDist.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1432,10 +1432,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                   Pre-Owned Cars :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {preOwned.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(preOwned.phone) ? (
                                     preOwned.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1486,10 +1486,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl mb-2">
                                   Service & Parts :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {serviceParts.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(serviceParts.phone) ? (
                                     serviceParts.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1541,10 +1541,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl ">
                                  Spares & Distribution :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {sparesParts.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(sparesParts.phone) ? (
                                     sparesParts.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1596,10 +1596,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl mb-2">
                                   Spares Warehouse :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {spares.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(spares.phone) ? (
                                     spares.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
@@ -1651,10 +1651,10 @@ const FranchiseSlider = () => {
                                 <div className="text-white font-bold text-xl">
                                   Sales, Service & Spares :
                                 </div>
-                                <div className="text-white text-lg leading-tight mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {salesService.address}
                                 </div>
-                                <div className="text-white text-lg leading-relaxed mb-4 font-medium" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesService.phone) ? (
                                     salesService.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
