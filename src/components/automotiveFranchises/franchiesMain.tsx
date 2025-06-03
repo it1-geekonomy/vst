@@ -54,78 +54,7 @@ import BusinessSectors from "./BusinessSectors";
 import Logo from "@/app/public/logos/Logo";
 import JaguarIcon from "@/app/public/faranchies/jaguarIcon";
 import VSTLogoAnimation from "../VSTLogoAnimation";
-
-interface SlideData {
-  id: number;
-  backgroundImage: StaticImageData;
-  brand: "mercedes" | "jlr" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD" | "ducati" | "mahindra";
-  bgColor: {
-    from: string;
-    to: string;
-  };
-  LogoComponent: React.ComponentType<{ className?: string }>;
-  header: string,
-  description: string;
-  learnMoreLink: string;
-  locations?: {
-    [key: string]: {
-      sales?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-      service?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-      "sales & service"?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-      "Sales, Service & Parts distribution"?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-      "Pre-Owned Cars"?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-      "service and parts"?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-      "Spares & Distribution"?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-      "spares warehouse"?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-      "Sales, Service & Spares"?: Array<{
-        address: string;
-        phone: string | string[];
-        email: string | string[];
-        map: string;
-      }>;
-    };
-  };
-}
+import { SlideData, LocationKeys } from '@/app/automotive-franchises/cars-data';
 
 const slides: SlideData[] = [
   {
@@ -871,9 +800,6 @@ const slides: SlideData[] = [
     }
   },
 ];
-
-// Get the type of the current slide's locations
-type LocationKeys = keyof typeof slides[number]['locations'];
 
 const FranchiseSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
