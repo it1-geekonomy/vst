@@ -5,7 +5,7 @@ import Image from "next/image";
 import Image1911 from "@/app/public/images/AboutUs/1911Image.png";
 import Image1930 from "@/app/public/images/AboutUs/1930Image.png";
 import Image1960 from "@/app/public/images/AboutUs/1960Image.png";
-import Image2000 from "@/app/public/images/AboutUs/2000Image.png";
+import Image2000 from "@/app/public/images/AboutUs/2000.png";
 
 import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
