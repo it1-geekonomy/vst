@@ -277,7 +277,7 @@ export default function Page() {
                     <span
                       className={`absolute top-2 right-3 text-xs font-semibold text-white ${wordCountColor}`}
                     >
-                      {remainingWords} words left
+                      {remainingWords} words 
                     </span>
                     <textarea
                       value={formData.aboutYourself}

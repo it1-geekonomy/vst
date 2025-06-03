@@ -197,7 +197,7 @@ const News = () => {
               </div>
 
               <div className="p-4 flex flex-col justify-between flex-grow bg-[#333435]backdrop-blur-[36.55px]">
-                <h2 className="mt-2 text-[23px] leading-[130%] tracking-wide font-normal font-roc transition-all">
+                <h2 className="mt-2 text-[20px] leading-[140%] tracking-wide font-normal font-roc transition-all">
                   {item.title}
                 </h2>
               </div>
