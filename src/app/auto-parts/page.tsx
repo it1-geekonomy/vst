@@ -385,7 +385,7 @@ export default function Page() {
         </div>
 
         {/* Responsive Carousel Slider */}
-        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto lg:mb-8 2xl:mb-0 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto lg:mb-16 2xl:mb-20 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
           {/* Desktop 3D Carousel - only visible on large screens */}
           <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
             <div className="carousel-container relative w-full h-full">
@@ -501,7 +501,7 @@ export default function Page() {
       </div>
 
       {/* Location section with its own gradient background */}
-      <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px]">
+      <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-8 sm:pt-12 lg:pt-16">
         {/* Gradient background for location section */}
         <div
           className="absolute inset-0 z-0"
