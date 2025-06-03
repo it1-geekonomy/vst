@@ -30,7 +30,7 @@ import jaguar from "@/app/public/faranchies/newcarpics/ja-la.png";
 import landrover from "@/app/public/faranchies/newcarpics/landrover3.png";
 import maserati from "@/app/public/faranchies/newcarpics/maserati5.png";
 import honda from "@/app/public/faranchies/newcarpics/honda12.png";
-import tataupdate from "@/app/public/faranchies/newcarpics/tataupdate.jpg";
+import tataupdate from "@/app/public/faranchies/newcarpics/image.png";
 import kia from "@/app/public/faranchies/newcarpics/kia7.png";
 import ducati from "@/app/public/faranchies/newcarpics/ducati6.png";
 import mahindra from "@/app/public/faranchies/newcarpics/mahindra9.png";
