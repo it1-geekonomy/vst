@@ -49,8 +49,10 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 <h4 className="text-[#FEBF3D] text-clamp-18 font-roc mb-3 inline-block">
                   Corporate Office
                 </h4>
-                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left whitespace-normal">#1, Palace Cross Road,</p>
-                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Bengaluru - 560 020.</p>
+                <div className="text-white text-clamp-18 font-roc text-center 2xl:text-left">
+                  <p className="whitespace-nowrap">#1, Palace Cross Road,</p>
+                  <p className="whitespace-nowrap">Bengaluru - 560 020.</p>
+                </div>
               </div>
 
               {/* Chennai Office */}
@@ -58,8 +60,10 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 <h4 className="text-[#FEBF3D] text-clamp-18 font-roc mb-3 inline-block">
                   Chennai Office
                 </h4>
-                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left whitespace-normal">#199, Anna Salai,</p>
-                <p className="text-white text-clamp-18 font-roc text-center 2xl:text-left">Chennai - 600 002.</p>
+                <div className="text-white text-clamp-18 font-roc text-center 2xl:text-left">
+                  <p className="whitespace-nowrap">#199, Anna Salai,</p>
+                  <p className="whitespace-nowrap">Chennai - 600 002.</p>
+                </div>
               </div>
             </div>
           </div>
