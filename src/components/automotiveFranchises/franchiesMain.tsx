@@ -1002,7 +1002,7 @@ const FranchiseSlider = () => {
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
-                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mb-2 sm:mb-4 lg:mb-0"
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6.5rem] mb-2 sm:mb-4 lg:mb-0"
               >
                 <svg
                   className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
@@ -1024,8 +1024,8 @@ const FranchiseSlider = () => {
                 <motion.div
                   className="flex items-center gap-4 sm:gap-6 lg:gap-16"
                   animate={{
-                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 216 : (screenWidth ?? 1200) < 1024 ? 223 : 264)}px`,
-                    translateX: (screenWidth ?? 1200) < 640 ? "9.59%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.1%",
+                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 215 : (screenWidth ?? 1200) < 1024 ? 223 : 264.1)}px`,
+                    translateX: (screenWidth ?? 1200) < 640 ? "9.532%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.07%",
                   }}
                   transition={{
                     duration: 0.5,
@@ -1067,7 +1067,7 @@ const FranchiseSlider = () => {
               {/* Down arrow */}
               <button
                 onClick={nextSlide}
-                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[5.5rem] mt-2 sm:mt-4 lg:mt-0"
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6.5rem] mt-2 sm:mt-4 lg:mt-0"
               >
                 <svg
                   className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
