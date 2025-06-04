@@ -202,7 +202,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "VST Avventura Private Limited \n#73/1, Millers Road, Bengaluru - 560 001.",
+            address: "Marksquare, 61 - St Mark’s Rd, \nShanthala Nagar, Bengaluru - 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"

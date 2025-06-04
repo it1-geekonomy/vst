@@ -278,7 +278,8 @@ const ManufacturePage = () => {
                }}
                className="text-white text-justify"
                iconColor="white"
-               showEmailIcon={true}
+              showEmailIcon={true}
+                websiteUrl="www.vsttractors.com"
              />
           </div>
           <div className="mt-16 md:mt-24 w-full">

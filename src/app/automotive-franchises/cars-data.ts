@@ -39,6 +39,7 @@ export interface LocationData {
   phone: string | string[];
   email: string | string[];
   map: string;
+  website?: string;  // Optional website link
 }
 
 export interface LocationTypes {
