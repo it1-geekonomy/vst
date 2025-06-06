@@ -199,7 +199,7 @@ export default function Page() {
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-12 lg:px-10 xl:px-16 h-full flex flex-col justify-center">
           <h1 className="font-roc font-normal text-[45px] sm:text-[60px] md:text-[75px] lg:text-[85px] xl:text-[90px] text-[#646464] pb-5 md:pb-10 md:mt-48 lg:-mt-14 xl:-mt-32 text-center md:text-left">
-            CAREERS
+          Careers
           </h1>
           <p className="max-w-[550px] font-normal text-[15px] sm:text-[18px] md:text-[20px] lg:text-[21px] leading-6 lg:leading-8 font-roc tracking-tight lg:text-justify">
             The VST Group offers rewarding career opportunities across a range
