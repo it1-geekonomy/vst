@@ -202,7 +202,7 @@ const slides: SlideData[] = [
       Bangalore: {
         sales: [
           {
-            address: "Marksquare, 61 - St Mark’s Rd, \nShanthala Nagar, Bengaluru - 560 001",
+            address: "Marksquare, 61 - St Mark's Rd, \nShanthala Nagar, Bengaluru - 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"
@@ -1045,11 +1045,25 @@ const FranchiseSlider = () => {
               </motion.p>
             </AnimatePresence>
 
-            <a href={slides[currentSlide].learnMoreLink} className="mt-4 sm:mt-6 lg:mt-10 inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-start" target="_blank" rel="noopener noreferrer">
+            <a href={slides[currentSlide].learnMoreLink} className={`mt-4 sm:mt-6 lg:mt-10 ${slides[currentSlide].brand === "jlr" ? "hidden" : "inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-start"}`} target="_blank" rel="noopener noreferrer">
               <h3 className="bg-white rounded-lg px-6 sm:px-8 lg:px-40 py-2 sm:py-3 lg:py-5 text-[#0f0f0e] text-lg sm:text-xl lg:text-3xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
                 Explore More
               </h3>
             </a>
+            {slides[currentSlide].brand === "jlr" && (
+              <div className="mt-4 sm:mt-6 lg:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 w-full justify-center">
+                <a href="https://retailers.jaguar.in/vst-grandeur-jaguar/" className="w-full sm:w-[45%] lg:w-[40%]" target="_blank" rel="noopener noreferrer">
+                  <h3 className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-5 text-[#0f0f0e] text-lg sm:text-xl lg:text-2xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
+                    Jaguar
+                  </h3>
+                </a>
+                <a href="https://retailers.landrover.in/vst-grandeur-land-rover/" className="w-full sm:w-[45%] lg:w-[40%]" target="_blank" rel="noopener noreferrer">
+                  <h3 className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-5 text-[#0f0f0e] text-lg sm:text-xl lg:text-2xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
+                  Land Rover
+                  </h3>
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Right: Switchable Location Tabs */}
@@ -1061,25 +1075,28 @@ const FranchiseSlider = () => {
                   <div className="w-full flex flex-col gap-2 mb-4">
                     {slides[currentSlide].brand === "jlr" ? (
                       <>
-                        <div className="flex items-center gap-2 w-[400px]">
-                          <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Jaguar:</span>
-                          <h2 
-                            onClick={() => window.open("https://retailers.jaguar.in/vst-grandeur-jaguar/", '_blank', 'noopener,noreferrer')}
-                            title="https://retailers.jaguar.in/vst-grandeur-jaguar/"
-                            className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
-                          >
-                            retailers.jaguar.in/vst-grandeur-jaguar
-                          </h2>
-                        </div>
-                        <div className="flex items-center gap-2 w-[400px]">
-                          <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Land Rover:</span>
-                          <h2 
-                            onClick={() => window.open("https://retailers.landrover.in/vst-grandeur-land-rover/", '_blank', 'noopener,noreferrer')}
-                            title="https://retailers.landrover.in/vst-grandeur-land-rover/"
-                            className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
-                          >
-                            retailers.landrover.in/vst-grandeur-land-rover
-                          </h2>
+                        <div className="flex flex-col gap-2">
+                          <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal">Website:</span>
+                          <div className="flex items-center gap-2 w-[400px]">
+                            <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Jaguar:</span>
+                            <h2 
+                              onClick={() => window.open("https://retailers.jaguar.in/vst-grandeur-jaguar/", '_blank', 'noopener,noreferrer')}
+                              title="https://retailers.jaguar.in/vst-grandeur-jaguar/"
+                              className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
+                            >
+                              retailers.jaguar.in/vst-grandeur-jaguar
+                            </h2>
+                          </div>
+                          <div className="flex items-center gap-2 w-[400px]">
+                            <span className="text-white text-sm sm:text-base lg:text-lg font-roc font-normal whitespace-nowrap">Land Rover:</span>
+                            <h2 
+                              onClick={() => window.open("https://retailers.landrover.in/vst-grandeur-land-rover/", '_blank', 'noopener,noreferrer')}
+                              title="https://retailers.landrover.in/vst-grandeur-land-rover/"
+                              className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
+                            >
+                              retailers.landrover.in/vst-grandeur-land-rover
+                            </h2>
+                          </div>
                         </div>
                       </>
                     ) : (
