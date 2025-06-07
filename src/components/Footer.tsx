@@ -19,7 +19,7 @@ const MapWithNoSSR = dynamic(() => import('./Map'), {
 const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
   // Coordinates for both locations
   const bengaluruCoords = [12.989645, 77.572548];
-  const chennaiCoords = [13.062646, 80.264078];
+  const chennaiCoords = [13.062646300000011, 80.12400241640626]
   
   // Center point between both locations
   const centerCoords = [
