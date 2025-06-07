@@ -12,6 +12,7 @@ import LocationSection from "@/components/LocationSection";
 import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import VSTLogoAnimation from "@/components/VSTLogoAnimation";
 import { Bus } from "lucide-react";
+import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
 
 export default function Page() {
   const gradientColor = "rgba(255, 185, 34, 1)";
@@ -507,20 +508,18 @@ export default function Page() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            background: `
-                linear-gradient(161.25deg, rgba(255, 185, 34, 1) 50.56%, rgba(241, 233, 146, 0) 107.23%)
-                `,
+           background: `#FFB922`
           }}
         />
 
         <div className="pt-14 sm:pt-20 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-12 xl:py-0 2xl:py-18 3xl:py-0">
           {/* Company information section */}
-          <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl ">
-          Reliable Distribution and Strong Partnerships Driving Growth
+          <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
+            Reliable Distribution and Strong Partnerships Driving Growth
           </h1>
 
           <div className="mb-6 sm:mb-8 w-full lg:mb-10 text-black">
-            <p className=" text-clamp-18 leading-[1.6] text-justify">
+            <p className="text-clamp-18 leading-[1.6] text-justify">
               We operate within a focused region in North Tamil Nadu, covering
               four key districts with a well-established logistics network. Our
               central operations are based in Chennai, supported by strategically
@@ -531,15 +530,15 @@ export default function Page() {
               Our portfolio includes approximately 2,750 line items, catering to a strong network of over 1700 retailers and 1000 Tata Guru mechanics. With a consistent 12–15% year-on-year growth, our continued success reflects both our operational strength and our unwavering commitment to customer satisfaction
             </p>
             <div className="mt-15">
-            <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15 ">
-            Expanding reach with Mercedes-Benz
-            </h1>
-            <p  className=" text-clamp-18 leading-[1.6] text-justify">
-             In 2018, we extended our capabilities by becoming an authorized distributor of Mercedes-Benz parts for South India. To support this premium segment, we’ve established a central warehouse in Chennai and a supply center in Hyderabad, enabling seamless service across a broader geographic area. This division has experienced remarkable growth, recording an average annual increase of 25%. Our performance in this space underscores our ability to manage high-value automotive components while maintaining precision, efficiency, and reliability.
-            </p>  
+              <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15">
+                Expanding reach with Mercedes-Benz
+              </h1>
+              <p className="text-clamp-18 leading-[1.6] text-justify">
+                In 2018, we extended our capabilities by becoming an authorized distributor of Mercedes-Benz parts for South India. To support this premium segment, we've established a central warehouse in Chennai and a supply center in Hyderabad, enabling seamless service across a broader geographic area.This division has experienced remarkable growth, recording an average annual increase of 25%. Our performance in this space underscores our ability to manage high-value automotive components while maintaining precision, efficiency, and reliability.
+              </p>  
             </div>
             
-              <div className="flex justify-left mt-6">
+            <div className="flex justify-left mt-6">
               <a
                 href="https://vstmotors.com/parts/"
                 target="_blank"
@@ -587,11 +586,12 @@ export default function Page() {
           />
         </div>
         
-        <div className="relative z-10 w-full b overflow-visible -mt-10 scale-110">
-          <BusinessSectorsUpdated />
+        {/* Business Sectors section with higher z-index to overlap yellow */}
+        <div className="relative z-10 w-full bg-black">
+          <BusinessSectors />
         </div>
-        
-        <div className="relative w-full ">
+        {/* Logo section with higher z-index to overlap yellow */}
+        <div className="relative z-20 w-full bg-black mt-15">
           <VSTLogoAnimation />
         </div>
         
