@@ -11,6 +11,7 @@ import Logo from "@/app/public/vst-auto-parts/Logo.png";
 import LocationSection from "@/components/LocationSection";
 import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import VSTLogoAnimation from "@/components/VSTLogoAnimation";
+import { Bus } from "lucide-react";
 
 export default function Page() {
   const gradientColor = "rgba(255, 185, 34, 1)";
@@ -351,7 +352,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen mt-16">
       {/* Main section with background image */}
-      <div className="relative h-auto lg:h-[110vh] xl:h-[145vh] 2xl:h-auto">
+      <div className="relative h-auto lg:h-[110vh] xl:h-[145vh] 2xl:h-[145vh]">
         {/* Background image only for main section */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 opacity-100">
@@ -512,21 +513,33 @@ export default function Page() {
           }}
         />
 
-        <div className="pt-14 sm:pt-20 relative z-10 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-12 xl:py-0 2xl:py-18 3xl:py-0">
+        <div className="pt-14 sm:pt-20 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-12 xl:py-0 2xl:py-18 3xl:py-0">
           {/* Company information section */}
-          <div className="mb-6 sm:mb-8 lg:mb-10 text-black w-full text-justify">
-            <p className="text-base sm:text-lg lg:text-xl xl:text-[25px] 2xl:text-[26px] 3xl:text-[30px] leading-[1.6]">
-              Founded in 2005, VST Auto Parts enables Tata dealers to go the
-              extra mile in providing effective, timely after-sales service with
-              quick access to original spare parts.VST Auto Parts supply Tata
-              Motors parts across Tamil Nadu, with the central warehouse
-              spanning 15,000 square feet in Poonamallee, Chennai. This the
-              central supply centre for a network of 2 warehouses located in
-              Vellore and Cuddalore. The network supplies over 3300 line items
-              to more than 1400 retailers in the state. VST Auto Parts has
-              registered a steady annual growth rate of 20% since its inception.
+          <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl ">
+          Reliable Distribution and Strong Partnerships Driving Growth
+          </h1>
+
+          <div className="mb-6 sm:mb-8 w-full lg:mb-10 text-black">
+            <p className=" text-clamp-18 leading-[1.6] text-justify">
+              We operate within a focused region in North Tamil Nadu, covering
+              four key districts with a well-established logistics network. Our
+              central operations are based in Chennai, supported by strategically
+              located warehouses in Chengalpet, Cuddalore, and Vellore, enabling
+              the timely and efficient distribution of genuine Tata Motors parts.
+              <br />
+              
+              Our portfolio includes approximately 2,750 line items, catering to a strong network of over 1700 retailers and 1000 Tata Guru mechanics. With a consistent 12–15% year-on-year growth, our continued success reflects both our operational strength and our unwavering commitment to customer satisfaction
             </p>
-            <div className="flex justify-left mt-6">
+            <div className="mt-15">
+            <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-bold text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15 ">
+            Expanding reach with Mercedes-Benz
+            </h1>
+            <p  className=" text-clamp-18 leading-[1.6] text-justify">
+             In 2018, we extended our capabilities by becoming an authorized distributor of Mercedes-Benz parts for South India. To support this premium segment, we’ve established a central warehouse in Chennai and a supply center in Hyderabad, enabling seamless service across a broader geographic area. This division has experienced remarkable growth, recording an average annual increase of 25%. Our performance in this space underscores our ability to manage high-value automotive components while maintaining precision, efficiency, and reliability.
+            </p>  
+            </div>
+            
+              <div className="flex justify-left mt-6">
               <a
                 href="https://vstmotors.com/parts/"
                 target="_blank"
@@ -573,12 +586,15 @@ export default function Page() {
             googleMapsUrl="https://www.google.com/maps/place/VST+Motors/@13.0626463,80.2615032,17z/data=!3m1!5s0x3a52661712800ddd:0x9763c5b415119093!4m14!1m7!3m6!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!2sVST+Motors!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7!3m5!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
           />
         </div>
-        <div className="relative z-10 w-full overflow-visible -mt-10 scale-110">
+        
+        <div className="relative z-10 w-full b overflow-visible -mt-10 scale-110">
           <BusinessSectorsUpdated />
         </div>
+        
         <div className="relative w-full ">
           <VSTLogoAnimation />
         </div>
+        
       </div>
 
       {/* Add custom CSS for the perspective effect and animations */}

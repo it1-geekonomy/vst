@@ -15,6 +15,7 @@ import BusinessSectorsUpdated from '@/components/automotiveFranchises/BusinessSe
 import gif from "@/app/public/education/vst logo gif.gif"
 import LocationSection from '@/components/LocationSection';
 import VSTLogoAnimation from '@/components/VSTLogoAnimation';
+import BusinessSectors from '@/components/automotiveFranchises/BusinessSectors';
 
 type GalleryImage = {
   id: number;
@@ -323,14 +324,18 @@ export default function EducationPage() {
           iconColor="black"
           websiteUrl="www.skei.edu.in"
           />
-        <div className="w-full -mt-12">
+          
+        <div className="w-screen bg-black -mt-12 ">
           <div className="transform scale-110">
-            <BusinessSectorsUpdated />
+            <BusinessSectors />
           </div>
         </div>
+        
       </div>
-      <div className="mt-15">
-        <VSTLogoAnimation />
+      <div className="w-screen bg-black">
+        <div className="mt-15">
+          <VSTLogoAnimation />
+        </div>
       </div>
       
     </main>

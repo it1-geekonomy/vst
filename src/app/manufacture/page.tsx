@@ -282,14 +282,18 @@ const ManufacturePage = () => {
                 websiteUrl="www.vsttractors.com"
              />
           </div>
-          <div className="mt-16 md:mt-24 w-full">
-            <BusinessSectors />
-          </div>
         </div>
       </div>
       
-      {/* Added margin-top to create space between BusinessSectors and VSTLogoAnimation */}
-      <div className="w-full mt-5">
+      {/* Black background section - moved outside the container */}
+      <div className="w-screen bg-black">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12 pb-12">
+          <BusinessSectors />
+        </div>
+      </div>
+      
+      {/* VSTLogoAnimation with black background */}
+      <div className="w-screen bg-black">
         <VSTLogoAnimation />
       </div>
     </div>

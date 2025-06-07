@@ -9,18 +9,17 @@ import card1 from "@/app/public/images/news/card1.png";
 import card2 from "@/app/public/images/news/card2.png";
 import card3 from "@/app/public/images/news/card3.png";
 import post4New from "@/app/public/images/news/post4new.png";
-import card5 from "@/app/public/images/news/card5.png";
-import post6 from "@/app/public/images/news/post6.png";
-import card6 from "@/app/public/images/news/card6New.png";
-import card8 from "@/app/public/images/news/card8.png";
-// import card4new from "@/app/public/images/news/card4new.png";
-import card7new from "@/app/public/images/news/card7new.jpg";
+import card5 from "@/app/public/news-and-media/NewsAndArticles/Image1.png";
+import card6 from "@/app/public/news-and-media/NewsAndArticles/Image2.png";
+import card7 from "@/app/public/news-and-media/NewsAndArticles/Image3.png";
+import card8 from "@/app/public/news-and-media/NewsAndArticles/Image4.png";
 
 
 
 import { title } from 'process';
 
-const newsData = [
+// Separate data for Latest Updates and News & Articles
+const latestUpdatesData = [
   {
     id: 1,
     image: card1,
@@ -101,116 +100,104 @@ const newsData = [
     time: '',
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
   },
+    
+];
+
+const newsAndArticlesData = [
   {
-    id: 5,
+    id: 1,
     image: card5,
-    title: "Happy to inaugurate Maserati's pop-up showroom in Bengaluru! ",
-    tag: 'Industry',
+    title: "VST Group’s strategies for success in India’s booming luxury auto market",
+    tag: 'Business',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+    route: 'https://www.manufacturingtodayindia.com/vst-groups-strategies-for-success-in-indias-booming-luxury-auto-market?fbclid=PAZXh0bgNhZW0CMTEAAaf3D-ozwleWR98__LGP3YP-ARg2AYiwIyCF49HCTeYvEHx4-MXETWxjImtvPg_aem_dSj40Rx1kG0ytZ_I--W-sg'
   },
   {
-    id: 6,
+    id: 2,
     image: card6,
-    title: 'Habits become your second nature. So it is with winning! Our winning streak continues. Education World Grand Jury Awards ',
-    // title:"The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz India's Concept CLA-Class, Porsche India's all-electric Macan, Kia India's Syros and BYD India Private Limited's SEALION 7. As partners, it's great to see these brands driving change in mobility.",
+    title: "Sales Revenue Of Jaguar, Mercedes And Other Premium Brands Has Seen Over 20% Growth: VST Group MD Arun Surendra",
+    tag: 'Anniversary',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.outlookbusiness.com/corporate/sales-revenue-of-jaguar-mercedes-and-other-premium-brands-has-seen-over-20-growth-this-year-vst-group-md-arun-surendra'
+  },
+  {
+    id: 3,
+    image: card7,
+    title: "Industry eyes electric tractor adoption amid mounting challenges",
     tag: 'Innovation',
     location: 'Bengaluru',
     time: '',
-    route: 'https://skei.edu.in/awards#education-world-grand-jury-awards'
+    route: 'https://auto.economictimes.indiatimes.com/news/automotive/industry-eyes-electric-tractor-adoption-amid-mounting-challenges/113997926?fbclid=PAZXh0bgNhZW0CMTEAAafs5SNE3v-NwiCrVv5A0OcW8xg57SduP7gNQGGNMpBB1yN6bmSSWmnKMRbKHg_aem_VaM4ujXKpTP7_pI1ph2iPw'
   },
   {
-    id: 7,
-    image:card7new,
-    title: "A proud moment for the VST family! VST Central (KIA), Salem has been presented with the 'Global Best Dealer'",
-    tag: 'Inspiration',
-    location: 'Bengaluru',
-    time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_kiaplatinumprestige-kia-kiaindia-activity-7288807665202339842-OSvJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE'
-  },
-  {
-    id: 8,
+    id: 4,
     image: card8,
-    title:'VST Zetor Tractors a partnership between VST Tillers and tractors and HTC Investments',
-    // title: (
-    //   <>
-    //     <a
-    //       href="https://www.linkedin.com/company/vst-zetor/" 
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //       className="underline text-white hover:text-white"
-    //       onClick={(e) => e.stopPropagation()}
-    //     >
-    //       VST Zetor Tractors
-    //     </a>
-    //     , a partnership between{' '}
-    //     <a
-    //       href="https://www.linkedin.com/company/vsttillers/"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //       className="underline text-white hover:text-white"
-    //       onClick={(e) => e.stopPropagation()}
-    //     >
-    //       VST Tillers Tractors Ltd
-    //     </a>{' '}
-    //     and HTC Investments.
-    //   </>
-    // ),
-    
-    tag: 'Industry',
+    title: "Maserati and VST Group Join Forces to Bring Iconic Italian Luxury Cars to South India",
+    tag: 'Partnership',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/cmv360_vstzetor-tractorinnovation-agriculturaltechnology-activity-7193513168457875456-ZPkw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
-  },  
+    route: 'https://www.business-standard.com/content/press-releases-ani/maserati-and-vst-group-join-forces-to-bring-iconic-italian-luxury-cars-to-south-india-124121100503_1.html?fbclid=PAZXh0bgNhZW0CMTEAAacQ5vIqrym5JnbKR5vrLEeLjiv0lijVJ-cQPylm8nTKVB7T8sMTappqJ3oZOA_aem_aYDO8RrZC-KpHqLSy6nLIQ'
+  }
 ];
 
 const News = () => {
   const router = useRouter();
   const [activeId, setActiveId] = useState<number | null>(null);
 
-    const handleCardClick = (id: number, route: string) => {
+  const handleCardClick = (id: number, route: string) => {
     setActiveId(id);
-    window.open(route, '_blank'); // Open in a new tab
+    window.open(route, '_blank');
   };
 
-  return (
-    <div className="bg-[#2E2E2E] min-h-screen py-10  px-3 sm:px-4 md:px-6 lg:px-16 text-white">
-      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Latest Updates</h1>
-
-      <div className="px-3.5 flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {newsData.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col"
-              onClick={() => handleCardClick(item.id, item.route)}
-            >
-              {/* Image */}
-              <div className="relative w-full h-[330px]">
-                <Image
-                  src={item.image}
-                  alt="news-image"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="p-4 flex flex-col justify-between flex-grow bg-[#333435]backdrop-blur-[36.55px]">
-                <h2 className="mt-2 text-[20px] leading-[140%] tracking-wide font-normal font-roc transition-all">
-                  {item.title}
-                </h2>
-              </div>
-            </div>
-          ))}
-        </div>
+  const NewsCard = ({ item }: { item: typeof latestUpdatesData[0] }) => (
+    <div
+      key={item.id}
+      className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col"
+      onClick={() => handleCardClick(item.id, item.route)}
+    >
+      <div className="relative w-full h-[330px]">
+        <Image
+          src={item.image}
+          alt="news-image"
+          fill
+          className="object-cover"
+        />
       </div>
+      <div className="p-4 flex flex-col justify-between flex-grow bg-[#333435] backdrop-blur-[36.55px]">
+        <h2 className="mt-2 text-[20px] leading-[140%] tracking-wide font-normal font-roc transition-all">
+          {item.title}
+        </h2>
+      </div>
+    </div>
+  );
 
-      {/* it might be Pagination things there */}
-      {/* <div className="flex justify-center mt-10 gap-4">
-        <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Previous</button>
-        <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Next</button>
-      </div> */}
+  return (
+    <div className="bg-[#2E2E2E] min-h-screen py-10 px-3 sm:px-4 md:px-6 lg:px-16 text-white">
+      {/* Latest Updates Section */}
+      <section className="mb-20">
+        <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Latest Updates</h1>
+        <div className="px-3.5 flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {latestUpdatesData.map((item) => (
+              <NewsCard key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* News & Articles Section */}
+      <section>
+        <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">News & Articles</h1>
+        <div className="px-3.5 flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {newsAndArticlesData.map((item) => (
+              <NewsCard key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

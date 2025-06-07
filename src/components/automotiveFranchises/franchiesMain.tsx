@@ -1651,11 +1651,11 @@ const FranchiseSlider = () => {
           
         {/* Text Learn More Link */}
        
-
+<div className="w-screen bg-black">
         <BusinessSectors />
-
+</div>
         {/* Logo section */}
-          <div className="w-full mt-20">
+          <div className="w-screen bg-black mt-20">
         <VSTLogoAnimation />
       </div>
 
