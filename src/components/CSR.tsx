@@ -20,6 +20,7 @@ export default function CorporatePhilanthropy() {
             priority
           />
         </div>
+       
         {/* Content */}
         <motion.div
           className="relative w-full z-10"
@@ -28,8 +29,9 @@ export default function CorporatePhilanthropy() {
         >
           {/* Hero Section */}
           <section className="relative overflow-hidden z-10">
-            <div className="relative h-full flex flex-col items-center justify-start text-white py-14 md:py-16  xl:py-24">
-              <h1 className="text-clamp-75 sm:text-clamp-116 font-light pb-4 sm:p-6 lg:pb-8 xl:pb-6">
+            <div className="relative h-full flex flex-col items-center justify-start text-white py-14 md:py-16 xl:py-24">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-roc drop-shadow-lg pointer-events-auto mt-7">Corporate Philanthropy</h1>
+              <h1 className="text-clamp-36  font-medium pb-2  pt-8  lg:pb-8 xl:pb-6">
                 Making a Difference
               </h1>
               <p className="text-[#FFFFFF] text-clamp-28 text-justify px-6  md:px-32 lg:px-48 xl:px-52 font-light">
@@ -41,7 +43,6 @@ export default function CorporatePhilanthropy() {
                 humanitarian crises, our CSR initiatives reflect a deep
                 commitment to creating a meaningful and lasting impact. Guided
                 by empathy and driven by purpose, we believe in building a
-
                 better future — not just through business, but through
                 compassion, care, and collective upliftment.
               </p>

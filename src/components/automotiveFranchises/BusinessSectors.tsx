@@ -73,6 +73,41 @@ const BusinessSectors = () => {
           )}
         </>
       );
+    } else if (isEducationPage) {
+      return (
+        <>
+          {!isAutomotiveFranchisesPage && (
+            <Link
+              href="/automotive-franchises"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[120px]">
+                <Automobile />
+              </div>
+            </Link>
+          )}
+          {!isAutoPartsPage && (
+            <Link
+              href="/auto-parts"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[200px] sm:w-[210px] lg:w-[210px] ">
+                <Auto />
+              </div>
+            </Link>
+          )}
+          {!isManufacturePage && (
+            <Link
+              href="/manufacture"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[150px]">
+                <ManufacturingIcon />
+              </div>
+            </Link>
+          )}
+        </>
+      );
     }
   };
   
@@ -95,4 +130,4 @@ const BusinessSectors = () => {
   );
 };
 
-export default BusinessSectors; 
+export default BusinessSectors;

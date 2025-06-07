@@ -198,10 +198,15 @@ function AboutUsPage() {
 
       {/* Layer 2: Content */}
       <div className="relative z-10 md:pb-5">
+        {/* About Us heading at the top */}
+        <div className="w-full flex justify-center items-center py-10  xl:p-10">
+        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-roc drop-shadow-lg pointer-events-auto mt-7">About Us</h1>
+        </div>
+
         {/* Timeline component */}
         <div className="flex flex-col lg:flex-row w-full px-4 sm:px-6 md:px-8 items-center ">
           {/* Timeline Years */}
-          <div className="w-3/4 lg:w-1/3 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[100px] lg:h-[600px] relative lg:pr-0">
+          <div className="w-3/4 lg:w-1/3 flex flex-row items-center justify-between lg:flex-col lg:justify-center h-[80px] lg:h-[500px] relative lg:pr-0">
             {/* Up arrow - Moves timeline up (previous year) */}
             <button
               onClick={handlePrevClick}
@@ -399,7 +404,7 @@ function AboutUsPage() {
 
         {/* About Us Text Section */}
         <div className="mt-12 md:mt-16 px-4 lg:px-52">
-          <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-roc text-clamp-40">Our Legacy</h1>
+          <h2 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-roc text-clamp-40">Our Legacy</h2>
 
           <div className="flex flex-col font-normal ">
             

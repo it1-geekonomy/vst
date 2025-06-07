@@ -154,7 +154,7 @@ export default function NewsMedia() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#2E2E2E] ">
       <div className="absolute top-0 left-0 w-full h-[80px] bg-gradient-to-b from-[#2E2E2E] via-[#2E2E2E]/80 to-transparent flex items-center justify-center z-30 pointer-events-none pt-10 md:pt-20">
-        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roc drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
+        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-roc drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
       </div>
       {/* Hero Section */}
       <section className="relative w-full h-auto min-h-[85vh] md:min-h-[100vh] lg:min-h-[110vh] pt-[10px] mt-[20px] md:mt-[40px] mb-[150px] md:mb-[300px] lg:mb-0 z-20">
