@@ -13,9 +13,9 @@ const OFFICE_LOCATIONS = {
   },
   chennai: {
     name: 'VST Chennai Office',
-    coords: [13.062646, 80.264078] as [number, number],
+    coords: [13.0626463, 80.2640781] as [number, number],
     address: '199, Anna Salai,\nChennai - 600 002',
-    mapsUrl: 'https://www.google.com/maps/search/vst+in+chennai/@13.0626463,80.2640781,12z'
+    mapsUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.6439710634196!2d80.26407809999999!3d13.0626463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266170d73c381%3A0xb1a2f46c2795a4b1!2sVST%20Motors!5e0!3m2!1sen!2sin!4v1749290939492!5m2!1sen!2sin'
   }
 };
 
