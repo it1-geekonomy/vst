@@ -79,31 +79,55 @@ const BusinessSectors = () => {
           {!isAutomotiveFranchisesPage && (
             <Link
               href="/automotive-franchises"
-              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
             >
-              <div className="flex items-end justify-center h-[120px] w-[120px]">
-                <Automobile />
-              </div>
+              <Automobile className="w-full h-full" />
             </Link>
           )}
           {!isAutoPartsPage && (
             <Link
               href="/auto-parts"
-              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[120px] h-[80px] sm:w-[160px] sm:h-[100px] md:w-[180px] md:h-[120px] lg:w-[260px] lg:h-[180px] hover:opacity-80 transition-opacity"
             >
-              <div className="flex items-end justify-center h-[120px] w-[200px] sm:w-[210px] lg:w-[210px] ">
-                <Auto />
-              </div>
+              <Auto className="w-full h-full" />
             </Link>
           )}
           {!isManufacturePage && (
             <Link
               href="/manufacture"
-              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
             >
-              <div className="flex items-end justify-center h-[120px] w-[150px]">
-                <ManufacturingIcon />
-              </div>
+              <ManufacturingIcon className="w-full h-full" />
+            </Link>
+          )}
+        </>
+      );
+    }
+    else if (isAutoPartsPage) {
+      return (
+        <>
+          {!isAutomotiveFranchisesPage && (
+            <Link
+              href="/automotive-franchises"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
+            >
+              <Automobile className="w-full h-full" />
+            </Link>
+          )}
+          {!isManufacturePage && (
+            <Link
+              href="/manufacture"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
+            >
+              <ManufacturingIcon className="w-full h-full" />
+            </Link>
+          )}
+          {!isEducationPage && (
+            <Link
+              href="/education"
+              className="flex-shrink-0 sm:flex-shrink flex items-center justify-center w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px] hover:opacity-80 transition-opacity"
+            >
+              <EducationIcon className="w-full h-full" />
             </Link>
           )}
         </>
