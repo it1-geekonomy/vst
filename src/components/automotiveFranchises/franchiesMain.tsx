@@ -915,10 +915,9 @@ const FranchiseSlider = () => {
               <h2 className="text-white font-rocWide font-light text-4xl sm:text-[3.5rem] lg:text-[4.5rem] text-center lg:text-start w-full sm:w-[90%] lg:w-auto">
                 <div className="flex flex-col items-center sm:items-center lg:items-start gap-2 sm:gap-4 lg:gap-6 w-full">
                   <div className="flex flex-row sm:flex-row lg:flex-col items-center sm:items-center lg:items-start gap-2 sm:gap-4 lg:gap-6 justify-center sm:justify-center lg:justify-start">
-                    <span className="text-4xl sm:text-[3.5rem] lg:clamp-67 text-center sm:text-center lg:text-start">Our</span>
-                    <span className="text-4xl sm:text-[3.5rem] lg:clamp-67 text-center sm:text-center lg:text-start">Automotive</span>
+                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-roc drop-shadow-lg pointer-events-auto mt-7">Our Automotive Franchises</h1>
+                  
                   </div>
-                  <span className="text-4xl sm:text-[3.5rem] lg:text-clamp-67 text-center sm:text-center lg:text-start">Franchises</span>
                 </div>
               </h2>
             </div>
