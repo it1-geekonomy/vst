@@ -193,7 +193,7 @@ export default function Page() {
       </section>
 
       {/* Form Section - Improved for consistent overlap across all screen sizes */}
-      <section className="relative z-20 -mt-36 sm:-mt-36 md:mt-0 lg:-mt-24 xl:-mt-40 bg-transparent pb-10 md:pb-20">
+      <section className="relative z-20 -mt-36 sm:-mt-36 md:mt-0 lg:-mt-24 xl:-mt-40 bg-transparent pb-32 md:pb-40">
         <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
           <div className="bg-[#DCDCDC] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-12 lg:px-28">
@@ -373,7 +373,9 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <Footer bgcolour="bg-[#101010]" />
+      <div className="relative z-10">
+        <Footer bgcolour="bg-[#101010]" />
+      </div>
     </div>
   );
 }

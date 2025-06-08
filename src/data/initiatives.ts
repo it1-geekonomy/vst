@@ -22,7 +22,7 @@ export const initiatives = [
     },
     {
         title: 'Healthcare',
-        description: "Established in 1948, this facility has been dedicated to offering affordable care to underserved communities. Over the years, it has grown and is now managed by the city of Bangalore. In 1960, a generous land donation helped expand the facility's mission, enabling a nonprofit organization to support over 10,000 individuals annually through rehabilitation and awareness programs across the region.",
+        description: "Established in 1948, this initiative has focused on providing affordable care to underserved communities. Over time, it has expanded under the management of the city of Bangalore. A generous land donation in 1960 further advanced its mission, allowing a nonprofit organization to support over 10,000 individuals each year through rehabilitation and awareness programs across the region.",
         image: healthImage,
     },
 ];
