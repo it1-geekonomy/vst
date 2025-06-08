@@ -353,7 +353,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen mt-16">
       {/* Main section with background image */}
-      <div className="relative h-auto lg:h-[110vh] xl:h-[145vh] 2xl:h-[145vh]">
+      <div className="relative h-auto lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh]">
         {/* Background image only for main section */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 opacity-100">
@@ -369,7 +369,7 @@ export default function Page() {
         </div>
 
         {/* VST AUTO PARTS Title */}
-        <div className="relative z-10 pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-0 text-center">
+        <div className="relative z-10 pt-8 sm:pt-12 lg:pt-12 pb-4 sm:pb-6 lg:pb-4 text-center">
           {/* Logo Section */}
           <div className="flex justify-center lg:mb-8 mb-5">
             <Image
@@ -387,7 +387,7 @@ export default function Page() {
         </div>
 
         {/* Responsive Carousel Slider */}
-        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto lg:mb-16 2xl:mb-20 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[500px] xl:h-[580px] 2xl:h-[650px] xl:mt-0 2xl:mt-0 3xl:mt-0">
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto lg:mb-0 2xl:mb-0 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[45\80px] xl:h-[500px] 2xl:h-[550px] xl:mt-0 2xl:mt-0 3xl:mt-0 mb-0 lg:mb-20 xl:mb-20">
           {/* Desktop 3D Carousel - only visible on large screens */}
           <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
             <div className="carousel-container relative w-full h-full">
@@ -502,51 +502,44 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Location section with its own gradient background */}
-      <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-8 sm:pt-12 lg:pt-16">
-        {/* Gradient background for location section */}
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-           background: `#FFB922`
-          }}
-        />
+      {/* Location section with its own gradient background - completely separate section */}
+      <div className="relative w-full bg-[#FFB922] mt-0">
+        <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-16 sm:pt-20 lg:pt-30 xl:pt-60 ">
+          <div className="pt-12 sm:pt-16 lg:pt-16 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
+            {/* Company information section */}
+            <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl  font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
+              Reliable Distribution and Strong Partnerships Driving Growth
+            </h1>
 
-        <div className="pt-14 sm:pt-20 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-15 lg:py-12 xl:py-0 2xl:py-18 3xl:py-0">
-          {/* Company information section */}
-          <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
-            Reliable Distribution and Strong Partnerships Driving Growth
-          </h1>
-
-          <div className="mb-6 sm:mb-8 w-full lg:mb-10 text-black">
-            <p className="text-clamp-18 leading-[1.6] text-justify">
-              We operate within a focused region in North Tamil Nadu, covering
-              four key districts with a well-established logistics network. Our
-              central operations are based in Chennai, supported by strategically
-              located warehouses in Chengalpet, Cuddalore, and Vellore, enabling
-              the timely and efficient distribution of genuine Tata Motors parts.
-              <br />
-              
-              Our portfolio includes approximately 2,750 line items, catering to a strong network of over 1700 retailers and 1000 Tata Guru mechanics. With a consistent 12–15% year-on-year growth, our continued success reflects both our operational strength and our unwavering commitment to customer satisfaction
-            </p>
-            <div className="mt-15">
-              <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15">
-                Expanding reach with Mercedes-Benz
-              </h1>
+            <div className="mb-6 sm:mb-8 w-full lg:mb-10 text-black">
               <p className="text-clamp-18 leading-[1.6] text-justify">
-                In 2018, we extended our capabilities by becoming an authorized distributor of Mercedes-Benz parts for South India. To support this premium segment, we've established a central warehouse in Chennai and a supply center in Hyderabad, enabling seamless service across a broader geographic area.This division has experienced remarkable growth, recording an average annual increase of 25%. Our performance in this space underscores our ability to manage high-value automotive components while maintaining precision, efficiency, and reliability.
-              </p>  
-            </div>
-            
-            <div className="flex justify-left mt-6">
-              <a
-                href="https://vstmotors.com/parts/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full max-w-xs"
-              >
-                <button
-                  className="
+                We operate within a focused region in North Tamil Nadu, covering
+                four key districts with a well-established logistics network. Our
+                central operations are based in Chennai, supported by strategically
+                located warehouses in Chengalpet, Cuddalore, and Vellore, enabling
+                the timely and efficient distribution of genuine Tata Motors parts.
+                <br />
+                
+                Our portfolio includes approximately 2,750 line items, catering to a strong network of over 1700 retailers and 1000 Tata Guru mechanics. With a consistent 12–15% year-on-year growth, our continued success reflects both our operational strength and our unwavering commitment to customer satisfaction
+              </p>
+              <div className="mt-15">
+                <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl  font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15">
+                  Expanding reach with Mercedes-Benz
+                </h1>
+                <p className="text-clamp-18 leading-[1.6] text-justify">
+                  In 2018, we extended our capabilities by becoming an authorized distributor of Mercedes-Benz parts for South India. To support this premium segment, we've established a central warehouse in Chennai and a supply center in Hyderabad, enabling seamless service across a broader geographic area.This division has experienced remarkable growth, recording an average annual increase of 25%. Our performance in this space underscores our ability to manage high-value automotive components while maintaining precision, efficiency, and reliability.
+                </p>  
+              </div>
+              
+              <div className="flex justify-left mt-6">
+                <a
+                  href="https://vstmotors.com/parts/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full max-w-xs"
+                >
+                  <button
+                    className="
       px-6 py-2
       bg-white
       text-black
@@ -560,41 +553,42 @@ export default function Page() {
       border border-gray-300
       w-full
     "
-                >
-                  Explore More
-                </button>
-              </a>
+                  >
+                    Explore More
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
+          <div className="text-black">
+            <LocationSection
+              locationImage="vst-auto-parts/location img.png"
+              address={{
+                street: "Old No. 144, New No. 199,",
+                street2: "1st Floor, Anna Salai,",
+                state: "Chennai - 600 002, Tamil Nadu.",
+                city: "",
+                pincode: "",
+              }}
+              phoneNumbers={[
+                "+91 44-2860 2485",
+                "+91 44-2860 2486",
+                "+91 44-2860 2487",
+              ]}
+              googleMapsUrl="https://www.google.com/maps/place/VST+Motors/@13.0626463,80.2615032,17z/data=!3m1!5s0x3a52661712800ddd:0x9763c5b415119093!4m14!1m7!3m6!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!2sVST+Motors!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7!3m5!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+            />
+          </div>
+          
+          {/* Business Sectors section with higher z-index to overlap yellow */}
+          <div className="relative z-10 w-full bg-black">
+            <BusinessSectors />
+          </div>
+          {/* Logo section with higher z-index to overlap yellow */}
+          <div className="relative z-20 w-full bg-black mt-15">
+            <VSTLogoAnimation />
+          </div>
+          
         </div>
-        <div className="text-black">
-          <LocationSection
-            locationImage="vst-auto-parts/location img.png"
-            address={{
-              street: "Old No. 144, New No. 199,",
-              street2: "1st Floor, Anna Salai,",
-              state: "Chennai - 600 002, Tamil Nadu.",
-              city: "",
-              pincode: "",
-            }}
-            phoneNumbers={[
-              "+91 44-2860 2485",
-              "+91 44-2860 2486",
-              "+91 44-2860 2487",
-            ]}
-            googleMapsUrl="https://www.google.com/maps/place/VST+Motors/@13.0626463,80.2615032,17z/data=!3m1!5s0x3a52661712800ddd:0x9763c5b415119093!4m14!1m7!3m6!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!2sVST+Motors!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7!3m5!1s0x3a5266170d73c381:0xb1a2f46c2795a4b1!8m2!3d13.0626463!4d80.2640781!16s%2Fg%2F1tp8ygm7?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-          />
-        </div>
-        
-        {/* Business Sectors section with higher z-index to overlap yellow */}
-        <div className="relative z-10 w-full bg-black">
-          <BusinessSectors />
-        </div>
-        {/* Logo section with higher z-index to overlap yellow */}
-        <div className="relative z-20 w-full bg-black mt-15">
-          <VSTLogoAnimation />
-        </div>
-        
       </div>
 
       {/* Add custom CSS for the perspective effect and animations */}

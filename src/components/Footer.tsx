@@ -42,7 +42,7 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
 
           {/* Map Section */}
           <div className="w-full sm:w-4/5 lg:w-8/9 2xl:w-1/3 flex justify-center 2xl:justify-start mt-8 2xl:mt-0 px-10 lg:px-6">
-            <div className="rounded-lg overflow-hidden w-full max-w-md h-[240px]">
+            <div className="rounded-lg overflow-hidden w-full max-w-md h-[240px] lg:h-[220px]">
               <MapWithNoSSR />
             </div>
           </div>
