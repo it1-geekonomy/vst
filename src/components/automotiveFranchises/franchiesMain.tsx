@@ -1206,7 +1206,7 @@ const FranchiseSlider = () => {
                         )}
                         {/* Service */}
                         {location.service && location.service.length > 0 && (
-                          <div className="hide-scrollbar mb-6">
+                          <div className="hide-scrollbar mb-1">
                             {location.service.map((service, idx) => (
                               <div key={`${currentSlide}-${locationKey}-service-${idx}`} className="mb-6">
                                 <div className="text-white font-bold text-xl ">
@@ -1260,7 +1260,7 @@ const FranchiseSlider = () => {
                         )}
                         {/* Sales and Service */}
                         {location["sales & service"] && location["sales & service"].length > 0 && (
-                          <div className="hide-scrollbar mb-6">
+                          <div className="hide-scrollbar mb-1">
                             {location["sales & service"].map((salesService, idx) => (
                               <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
                                 <div className="text-white font-bold text-xl ">
@@ -1314,7 +1314,7 @@ const FranchiseSlider = () => {
                         )}
                         {/* Sales, Service & Parts distribution */}
                         {location["Sales, Service & Parts distribution"] && location["Sales, Service & Parts distribution"].length > 0 && (
-                          <div className="hide-scrollbar mb-6">
+                          <div className="hide-scrollbar mb-1">
                             {location["Sales, Service & Parts distribution"].map((salesDist, idx) => (
                               <div key={`${currentSlide}-${locationKey}-salesdist-${idx}`} className="mb-6">
                                 <div className="text-white font-bold text-xl ">
@@ -1368,7 +1368,7 @@ const FranchiseSlider = () => {
                         )}
                         {/* Pre-Owned Cars */}
                         {location["Pre-Owned Cars"] && location["Pre-Owned Cars"].length > 0 && (
-                          <div className="hide-scrollbar mb-6">
+                          <div className="hide-scrollbar mb-1">
                             {location["Pre-Owned Cars"].map((preOwned, idx) => (
                               <div key={`${currentSlide}-${locationKey}-preowned-${idx}`} className="mb-6">
                                 <div className="text-white font-bold text-xl ">
@@ -1422,7 +1422,7 @@ const FranchiseSlider = () => {
                         )}
                         {/* Service and Parts */}
                         {location["service and parts"] && (location["service and parts"]?.length ?? 0) > 0 && (
-                          <div className="hide-scrollbar mb-6">
+                          <div className="hide-scrollbar mb-1">
                             {location["service and parts"].map((serviceParts, idx) => (
                               <div key={`${currentSlide}-${locationKey}-serviceparts-${idx}`} className="mb-6">
                                 <div className="text-white font-bold text-xl mb-2">
@@ -1477,7 +1477,7 @@ const FranchiseSlider = () => {
 
                          {/* spares and distribution */}
                         {location["Spares & Distribution"] && (location["Spares & Distribution"]?.length ?? 0) > 0 && (
-                          <div className="hide-scrollbar mb-6">
+                          <div className="hide-scrollbar mb-1">
                             {location["Spares & Distribution"].map((sparesParts, idx) => (
                               <div key={`${currentSlide}-${locationKey}-serviceparts-${idx}`} className="mb-6">
                                 <div className="text-white font-bold text-xl ">
@@ -1532,7 +1532,7 @@ const FranchiseSlider = () => {
 
                         {/* Spares Warehouse */}
                         {location["spares warehouse"] && (location["spares warehouse"]?.length ?? 0) > 0 && (
-                          <div className="hide-scrollbar mb-6">
+                          <div className="hide-scrollbar mb-1">
                             {location["spares warehouse"].map((spares, idx) => (
                               <div key={`${currentSlide}-${locationKey}-spareswarehouse-${idx}`} className="mb-6">
                                 <div className="text-white font-bold text-xl mb-2">
@@ -1587,7 +1587,7 @@ const FranchiseSlider = () => {
                         )}
                         {/* Sales, Service & Spares */}
                         {location["Sales, Service & Spares"] && (location["Sales, Service & Spares"]?.length ?? 0) > 0 && (
-                          <div className="hide-scrollbar mb-6">
+                            <div className="hide-scrollbar mb-1">
                             {location["Sales, Service & Spares"].map((salesService, idx) => (
                               <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
                                 <div className="text-white font-bold text-xl">
