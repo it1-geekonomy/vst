@@ -512,7 +512,7 @@ export default function Page() {
             </h1>
 
             <div className="mb-6 sm:mb-8 w-full lg:mb-10 text-black">
-              <p className="text-clamp-18 leading-[1.6] text-justify">
+              <p className="text-clamp-28 leading-[1.6] text-justify">
                 We operate within a focused region in North Tamil Nadu, covering
                 four key districts with a well-established logistics network. Our
                 central operations are based in Chennai, supported by strategically
@@ -523,10 +523,10 @@ export default function Page() {
                 Our portfolio includes approximately 2,750 line items, catering to a strong network of over 1700 retailers and 1000 Tata Guru mechanics. With a consistent 12–15% year-on-year growth, our continued success reflects both our operational strength and our unwavering commitment to customer satisfaction
               </p>
               <div className="mt-15">
-                <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl  font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15">
+                <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15">
                   Expanding reach with Mercedes-Benz
                 </h1>
-                <p className="text-clamp-18 leading-[1.6] text-justify">
+                <p className="text-clamp-28 leading-[1.6] text-justify">
                   In 2018, we extended our capabilities by becoming an authorized distributor of Mercedes-Benz parts for South India. To support this premium segment, we've established a central warehouse in Chennai and a supply center in Hyderabad, enabling seamless service across a broader geographic area.This division has experienced remarkable growth, recording an average annual increase of 25%. Our performance in this space underscores our ability to manage high-value automotive components while maintaining precision, efficiency, and reliability.
                 </p>  
               </div>
