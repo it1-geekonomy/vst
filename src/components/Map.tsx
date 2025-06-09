@@ -6,10 +6,10 @@ import { createMapiIcon } from '@/app/public/logos/mapiIcon';
 // Office locations data
 const OFFICE_LOCATIONS = {
   bengaluru: {
-    name: 'VST Bengaluru Office',
-    coords: [12.989645, 77.572548] as [number, number],
-    address: '1, Palace Cross Road,\nBengaluru - 560 020',
-    mapsUrl: 'https://www.google.com/maps/place/1,+Palace+Cross+Rd,+Bengaluru,+Karnataka+560020'
+    name: 'VST & Sons Corporate Office',
+    coords: [12.9973978, 77.5856699] as [number, number],
+    address: 'VST & Sons Corporate Office,\nBengaluru - 560 020',
+    mapsUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.600293612716!2d77.5856699!3d12.9973978!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17f8fe67c1c7%3A0x972c36b83a694612!2sVST%20%26%20Sons%20Corporate%20Office!5e0!3m2!1sen!2sin!4v1749445892495!5m2!1sen!2sin'
   },
   chennai: {
     name: 'VST Chennai Office',
@@ -41,7 +41,7 @@ const Map: React.FC = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       
-      {/* Bengaluru Office Marker */}
+      {/* Bengaluru Corporate Office Marker */}
       <Marker 
         position={OFFICE_LOCATIONS.bengaluru.coords} 
         icon={customIcon}
