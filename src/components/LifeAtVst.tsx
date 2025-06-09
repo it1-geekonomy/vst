@@ -114,11 +114,11 @@ const LifeAtVst = () => {
                 <div className="flex items-baseline w-full">
                   {/* Number container with fixed width */}
                   <div className="flex items-baseline mr-2 md:mr-4 flex-shrink-0">
-                    <span className="text-4xl md:text-5xl lg:text-6xl font-rocWide text-white font-weight-200">0</span>
+                    <span className="text-clamp-80 font-rocWide text-white font-weight-200">0</span>
                     <AnimatePresence mode="wait">
                       <motion.span
                         key={currentSlide}
-                        className="text-4xl md:text-5xl lg:text-6xl font-rocWide animate-flowing-gradient"
+                        className="text-clamp-80 font-rocWide animate-flowing-gradient"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
