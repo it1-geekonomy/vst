@@ -154,7 +154,7 @@ const News = () => {
     window.open(route, '_blank');
   };
 
-  const scrollSection = (ref: React.RefObject<HTMLDivElement>, direction: 'left' | 'right') => {
+  const scrollSection = (ref: React.RefObject<HTMLDivElement | null>, direction: 'left' | 'right') => {
     if (ref.current) {
       const scrollAmount = 400; // Adjust this value based on your card width + gap
       const currentScroll = ref.current.scrollLeft;
@@ -199,7 +199,7 @@ const News = () => {
   }: { 
     title: string; 
     data: typeof latestUpdatesData; 
-    ref: React.RefObject<HTMLDivElement>;
+    ref: React.RefObject<HTMLDivElement | null>;
     sectionName: string;
   }) => (
     <section className="mb-20 relative">
