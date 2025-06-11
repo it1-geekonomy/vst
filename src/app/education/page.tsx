@@ -6,7 +6,7 @@ import img1 from '../public/education/Frame 6.jpg';
 import img2 from '../public/education/Image 1.jpg';
 import img3 from '../public/education/Frame 8.jpg';
 import img4 from '../public/education/Frame 9.jpg';
-import img5 from '../public/education/Frame 10.jpg';
+import img5 from '../public/education/education scl.jpg';
 import img6 from '../public/education/Frame11.jpg';
 import img7 from '../public/education/Frame 12.jpg';
 import { StaticImageData } from 'next/image';

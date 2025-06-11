@@ -508,7 +508,7 @@ export default function Page() {
           <div className="pt-12 sm:pt-16 lg:pt-16 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
             {/* Company information section */}
             <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl  font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
-              Reliable Distribution and Strong Partnerships Driving Growth
+              Reliable distribution and strong partnerships driving growth
             </h1>
 
             <div className="mb-6 sm:mb-8 w-full lg:mb-10 text-black">

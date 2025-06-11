@@ -49,11 +49,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 bg-[#000000] transition-transform duration-300 ${isVisible ? "translate-y-0" : "translate-y-[-100%]"
-        }`}
+      className={`fixed w-full z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "translate-y-[-100%]"}`}
+      style={{
+        background: "linear-gradient(to right, #fff 0%, #000 28%)"
+      }}
     >
      
-        <div className="flex justify-between items-center h-20 md:h-20 px-4 sm:px-6 md:px-8 lg:px-10 bg-black">
+        <div className="flex justify-between items-center h-20 md:h-20 px-4 sm:px-6 md:px-8 lg:px-10">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-1 md:gap-2 pl-2 md:pl-10">
@@ -104,7 +106,7 @@ export default function Navbar() {
                     setIsDesktopDropdownOpen(!isDesktopDropdownOpen);
                   }}
                 >
-                  Our Businesses
+                   Businesses
                   <svg
                     className={`w-3 h-3 text-white transition-transform ${isDesktopDropdownOpen ? 'rotate-180' : ''}`}
                     fill="none"
