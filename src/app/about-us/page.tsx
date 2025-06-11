@@ -180,6 +180,17 @@ function AboutUsPage() {
     handleYearClick(allYears[nextIndex]);
   };
 
+  // Auto-scroll effect
+  useEffect(() => {
+    if (isTransitioning) return
+
+    const interval = setInterval(() => {
+      handleNextClick()
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [selectedYear, isTransitioning])
+
   return (
     <div 
       className="min-h-screen text-white relative bg-cover bg-center bg-no-repeat"
@@ -404,24 +415,24 @@ function AboutUsPage() {
 
         {/* About Us Text Section */}
         <div className="mt-12 md:mt-16 px-4 lg:px-52">
-          <h2 className="text-3xl md:text-4xl mb-6 md:mb-8 text-white font-roc text-clamp-40">Our Legacy</h2>
+        <h3 className="text-xl md:text-2xl text-white py-8 mb-3 font-roc text-clamp-40">A Legacy of Trust and Innovation:</h3>
 
           <div className="flex flex-col font-normal ">
             
             <div>
-              <p className="text-justify hyphens-auto font-roc font-normal text-sm md:text-base text-clamp-24">
+              <p className="text-justify hyphens-auto font-roc font-normal text-sm md:text-base text-clamp-24 pb-3">
                 Founded in 1911, VST Group is a leading conglomerate headquartered in Bangalore, known for
                 its enduring legacy of excellence, innovation, and sustainable growth. The group has been
                 growing ever since, expanding its presence across four core verticals:
               </p>
-              <ul className="list-disc pl-6 mt-3 mb-4 space-y-1 text-sm md:text-base text-clamp-24">
+              <ul className="list-disc pl-6 mt-3 mb-6 space-y-1 text-sm md:text-base text-clamp-24">
                 <li>Automotive Franchise</li>
                 <li>Manufacturing</li> 
                 <li>OE Parts Distribution</li>
                 <li>Education</li>
               </ul>
               
-              <h3 className="text-xl md:text-2xl text-white py-8 mb-3 font-roc text-clamp-40">A Legacy of Trust and Innovation:</h3>
+              
               <p className="text-justify hyphens-auto font-roc text-sm md:text-base text-clamp-24">
                 With an annual turnover exceeding ₹5,000 crores ($570 million), VST Group stands as a powerhouse
                 in India's business landscape. Under the visionary leadership of its fourth generation, the group
