@@ -39,21 +39,21 @@ export default function InitiativeCard({ title, description, image }: Initiative
         className={`absolute inset-0 transition-all duration-300 border-2 rounded-md
     ${isMobile
             ? showDescription
-              ? "bg-[#C97D4B] bg-opacity-60 border-amber-50"
+              ? "bg-white bg-opacity-95 border-amber-50"
               : "bg-transparent border-transparent border-2"
-            : "bg-transparent border-transparent group-hover:bg-[#C97D4B] group-hover:bg-opacity-60 group-hover:border-amber-50"
+            : "bg-transparent border-transparent group-hover:bg-white group-hover:bg-opacity-95 group-hover:border-amber-50"
           }
   `}
       />
       {/* Description text */}
       <div
         className={`
-          absolute inset-0 flex items-center justify-center  px-4 text-white transition-opacity duration-500 pointer-events-none
+          absolute inset-0 flex items-center justify-center  px-4 transition-opacity duration-500 pointer-events-none
           ${isMobile
             ? showDescription
-              ? "opacity-100"
-              : "opacity-0"
-            : "opacity-0 group-hover:opacity-100"
+              ? "opacity-100 text-orange-600"
+              : "opacity-0 text-white"
+            : "opacity-0 text-white group-hover:opacity-100 group-hover:text-orange-600"
           }
         `}
       >

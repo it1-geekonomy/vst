@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
@@ -100,6 +100,7 @@ const latestUpdatesData = [
     time: '',
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
   },
+  
     
 ];
 
@@ -107,7 +108,7 @@ const newsAndArticlesData = [
   {
     id: 1,
     image: card5,
-    title: "VST Group’s strategies for success in India’s booming luxury auto market",
+    title: "VST Group's strategies for success in India's booming luxury auto market",
     tag: 'Business',
     location: 'Bengaluru',
     time: '',
@@ -145,16 +146,33 @@ const newsAndArticlesData = [
 const News = () => {
   const router = useRouter();
   const [activeId, setActiveId] = useState<number | null>(null);
+  const latestUpdatesRef = useRef<HTMLDivElement>(null);
+  const newsArticlesRef = useRef<HTMLDivElement>(null);
 
   const handleCardClick = (id: number, route: string) => {
     setActiveId(id);
     window.open(route, '_blank');
   };
 
+  const scrollSection = (ref: React.RefObject<HTMLDivElement>, direction: 'left' | 'right') => {
+    if (ref.current) {
+      const scrollAmount = 400; // Adjust this value based on your card width + gap
+      const currentScroll = ref.current.scrollLeft;
+      const newScroll = direction === 'left' 
+        ? currentScroll - scrollAmount 
+        : currentScroll + scrollAmount;
+      
+      ref.current.scrollTo({
+        left: newScroll,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const NewsCard = ({ item }: { item: typeof latestUpdatesData[0] }) => (
     <div
       key={item.id}
-      className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col"
+      className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col flex-shrink-0 w-[300px] sm:w-[280px] md:w-[300px] lg:w-[320px]"
       onClick={() => handleCardClick(item.id, item.route)}
     >
       <div className="relative w-full h-[330px]">
@@ -173,31 +191,81 @@ const News = () => {
     </div>
   );
 
+  const SectionWithArrows = ({ 
+    title, 
+    data, 
+    ref, 
+    sectionName 
+  }: { 
+    title: string; 
+    data: typeof latestUpdatesData; 
+    ref: React.RefObject<HTMLDivElement>;
+    sectionName: string;
+  }) => (
+    <section className="mb-20 relative">
+      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">{title}</h1>
+      
+      {/* Cards Container */}
+      <div className="relative px-3.5">
+        <div 
+          ref={ref}
+          className="flex gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {data.map((item) => (
+            <NewsCard key={item.id} item={item} />
+          ))}
+        </div>
+        
+        {/* Navigation Arrows */}
+        <div className="absolute right-4 -bottom-12 flex gap-4 items-center z-10">
+          <button
+            onClick={() => scrollSection(ref, 'left')}
+            className="pr-3 bg-transparent border-none"
+            aria-label={`Scroll ${sectionName} left`}
+            type="button"
+          >
+            {/* Left Arrow SVG */}
+            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.0127 10.0083L2.00079 10.0083M2.00079 10.0083L11.0061 19.0137M2.00079 10.0083L11.0061 1.00296" stroke="white" stroke-width="2"/>
+</svg>
+
+          </button>
+          
+          <button
+            onClick={() => scrollSection(ref, 'right')}
+            className="p-0 bg-transparent border-none"
+            aria-label={`Scroll ${sectionName} right`}
+            type="button"
+          >
+            {/* Right Arrow SVG */}
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 12.0073H22.0119M22.0119 12.0073L13.0065 3.00195M22.0119 12.0073L13.0065 21.0127" stroke="white" stroke-width="2"/>
+</svg>
+
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+
   return (
     <div className="bg-[#2E2E2E] min-h-screen py-10 px-3 sm:px-4 md:px-6 lg:px-16 text-white">
       {/* Latest Updates Section */}
-      <section className="mb-20">
-        <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Latest Updates</h1>
-        <div className="px-3.5 flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {latestUpdatesData.map((item) => (
-              <NewsCard key={item.id} item={item} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <SectionWithArrows 
+        title="Latest Updates" 
+        data={latestUpdatesData} 
+        ref={latestUpdatesRef}
+        sectionName="latest updates"
+      />
 
       {/* News & Articles Section */}
-      <section>
-        <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">News & Articles</h1>
-        <div className="px-3.5 flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {newsAndArticlesData.map((item) => (
-              <NewsCard key={item.id} item={item} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <SectionWithArrows 
+        title="News & Articles" 
+        data={newsAndArticlesData} 
+        ref={newsArticlesRef}
+        sectionName="news and articles"
+      />
     </div>
   );
 };

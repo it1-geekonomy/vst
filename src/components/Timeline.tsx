@@ -7,41 +7,110 @@ import rightarrow from "@/app/public/makingdiff/RightVector.png";
 
 const timelineData = [
   {
-    year: "2015-2016",
+    year: "2023-2024",
     images: [
       {
-        src: "/imagesanime/image1.png",
-        title: "Anugraha Charitable Trust",
+        src: "/imagesanime/image21.png",
+        title: "BGC Crow Trust",
         description:
-          "The VST group made contributions to the trust supporting its mission to enhance the well-being and development of persons with intellectual disabilities through care, education, and rehabilitation initiatives.",
+          "An initiative dedicated to opening a world of opportunities for children of golf caddies. With a vision to empower these children through education and skill development, the Trust helps break the cycle of poverty and builds pathways to a brighter future. VST's partnership strengthens this mission, fostering hope and growth for the next generation.",
       },
       {
-        src: "/imagesanime/image2.png",
-        title: "Chennai - Flood relief fund",
-        description: " The Chennai Flood Relief Fund to support communities devastated by the 2015 Chennai floods. Our assistance helped provide essential supplies, medical aid, and rehabilitation efforts for those affected by this natural disaster.",
+        src: "/imagesanime/image22.png",
+        title: "The Live Love Laugh Foundation",
+        description:
+          "The Live Love Laugh Foundation in its vital mission to raise mental health awareness and destigmatize mental illness across communities. By promoting open conversations and access to mental health resources, this partnership aims to build a more compassionate and informed society.",
       },
     ],
   },
   {
-    year: "2016-2017",
+    year: "2022-2023",
     images: [
       {
-        src: "/imagesanime/image3.png",
-        title: "Wildlife First",
+        src: "/imagesanime/image19.png",
+        title: "Akshadhaa Foundation",
         description:
-          "The group supported the Wildlife First movement, contributing to the conservation of wildlife and natural habitats through advocacy and protection initiatives.",
+          "VST Group supports Akshadhaa Foundation in its mission to create meaningful learning environments that empower children to lead independent and fulfilling lives. By fostering education, life skills, and holistic development, this initiative helps children overcome challenges and build confidence for a brighter future. VST's contribution strengthens the foundation's efforts to nurture self-reliant individuals who can positively impact their communities.",
       },
       {
-        src: "/imagesanime/image4.png",
-        title: "The National Association for the Blind, Karnataka",
+        src: "/imagesanime/image20.png",
+        title: "The Association of People with Disability",
         description:
-          "Driven by a commitment to inclusivity and empowerment, the VST group supported The National Association for the Blind, Karnataka, helping provide visually challenged individuals with access to education, skill development, and opportunities for independent living.",
+          "The VST group extended its support to the Association of People with Disability, contributing towards initiatives aimed at empowering and improving the lives of individuals with disabilities."
+      },
+    ],
+  },
+  {
+    year: "2021-2022",
+    images: [
+      {
+        src: "/imagesanime/image16.png",
+        title: "PM Care Fund",
+        description:
+          "VST stands with the nation in times of need, upholding its responsibility to protect and uplift lives. Together, we contribute to a resilient and prepared India.",
       },
       {
-        src: "/imagesanime/image5.png",
-        title: "The Deaf Aid Society",
+        src: "/imagesanime/image17.png",
+        title: "Lakshmi Pain And Palliative Care Trust",
         description:
-          "The Deaf Aid Society is dedicated to empowering hearing-impaired children, especially from economically weaker sections. Through early intervention, special education, and assistive technology, these children are given the tools to communicate, learn, and thrive.",
+          "Providing Medical Care with Compassion and Competence, We treat the physical symptoms ,social needs of patients suffering from medical conditions.",
+      },
+      {
+        src: "/imagesanime/image18.png",
+        title: "The Kuppuswamy Naidu Charity Trust-Healing Tiny Hearts",
+        description:
+          "This initiative, Healing Tiny Hearts, focuses on early diagnosis, treatment, and care for children from underprivileged backgrounds. VST's contribution helps save young lives and offers hope to families facing medical and financial challenges. Through this effort, we reaffirm our commitment to nurturing healthier, brighter futures for India's children.",
+      },
+    ],
+  },
+  {
+    year: "2020-2021",
+    images: [
+      {
+        src: "/imagesanime/image14.png",
+        title: "Rotary Club of Bangalore Charitable Trust",
+        description:
+          "The Rotary Club of Bangalore Charitable Trust to support large-scale projects focused on Education, Health, Economic Empowerment, Youth Development, and Environmental Sustainability. These initiatives are designed to uplift underserved communities and drive long-term social impact. From building schools to supporting healthcare access and green initiatives, the partnership reflects VST's deep-rooted commitment to holistic community development. Together, we are building stronger, healthier, and more resilient futures.",
+      },
+      {
+        src: "/imagesanime/image15.png",
+        title: "Covid-19 Relief Fund",
+        description:
+          "The VST group made major contributions towards the medical expenses of COVID-hit patients and also contributed towards medical equipment.  In addition, the group ensured the well-being of its employees and their families during this challenging time, providing them with necessary support and care.",
+      },
+    ],
+  },
+  {
+    year: "2019-2020",
+    images: [
+      {
+        src: "/imagesanime/image12.png",
+        title: "The Shakthi Foundation",
+        description:
+          "Striving hard to make the society healthy in a holistic way, pattern-based education to the young generation and make the scientifically tested and trusted quality food available to the public.",
+      },
+      {
+        src: "/imagesanime/image13.png",
+        title: "Indian Cancer Society",
+        description:
+          "The Indian Cancer Society in its “Rise Against Cancer” movement, aimed at spreading awareness, enabling timely treatment, and offering holistic rehabilitation. This initiative empowers patients and families through education, early detection, and compassionate care. VST's contribution helps bridge the gap between diagnosis and recovery, especially for the underprivileged. Together, we are fostering hope, strength, and a future free from cancer.",
+      },
+    ],
+  },
+  {
+    year: "2018-2019",
+    images: [
+      {
+        src: "/imagesanime/image10.png",
+        title:
+          "Bhaskaracharya Educational Resource and Research Institute, Bijjargi",
+        description: "These contributions support enhanced learning environments, access to quality education, and resource development for students in rural areas. By investing in education, VST Group is nurturing future leaders and driving long-term community upliftment. Education remains a cornerstone of our CSR vision.",
+      },
+      {
+        src: "/imagesanime/image11.png",
+        title: "Bangalore Hospice Trust",
+        description:
+          "Provided free palliative care to advanced-stage cancer patients who are beyond cure.",
       },
     ],
   },
@@ -73,110 +142,41 @@ const timelineData = [
     ],
   },
   {
-    year: "2018-2019",
+    year: "2016-2017",
     images: [
       {
-        src: "/imagesanime/image10.png",
-        title:
-          "Bhaskaracharya Educational Resource and Research Institute, Bijjargi",
-        description: "These contributions support enhanced learning environments, access to quality education, and resource development for students in rural areas. By investing in education, VST Group is nurturing future leaders and driving long-term community upliftment. Education remains a cornerstone of our CSR vision.",
+        src: "/imagesanime/image3.png",
+        title: "Wildlife First",
+        description:
+          "The group supported the Wildlife First movement, contributing to the conservation of wildlife and natural habitats through advocacy and protection initiatives.",
       },
       {
-        src: "/imagesanime/image11.png",
-        title: "Bangalore Hospice Trust",
+        src: "/imagesanime/image4.png",
+        title: "The National Association for the Blind, Karnataka",
         description:
-          "Provided free palliative care to advanced-stage cancer patients who are beyond cure.",
+          "Driven by a commitment to inclusivity and empowerment, the VST group supported The National Association for the Blind, Karnataka, helping provide visually challenged individuals with access to education, skill development, and opportunities for independent living.",
+      },
+      {
+        src: "/imagesanime/image5.png",
+        title: "The Deaf Aid Society",
+        description:
+          "The Deaf Aid Society is dedicated to empowering hearing-impaired children, especially from economically weaker sections. Through early intervention, special education, and assistive technology, these children are given the tools to communicate, learn, and thrive.",
       },
     ],
   },
   {
-    year: "2019-2020",
+    year: "2015-2016",
     images: [
       {
-        src: "/imagesanime/image12.png",
-        title: "The Shakthi Foundation",
+        src: "/imagesanime/image1.png",
+        title: "Anugraha Charitable Trust",
         description:
-          "Striving hard to make the society healthy in a holistic way, pattern-based education to the young generation and make the scientifically tested and trusted quality food available to the public.",
+          "The VST group made contributions to the trust supporting its mission to enhance the well-being and development of persons with intellectual disabilities through care, education, and rehabilitation initiatives.",
       },
       {
-        src: "/imagesanime/image13.png",
-        title: "Indian Cancer Society",
-        description:
-          "The Indian Cancer Society in its “Rise Against Cancer” movement, aimed at spreading awareness, enabling timely treatment, and offering holistic rehabilitation. This initiative empowers patients and families through education, early detection, and compassionate care. VST’s contribution helps bridge the gap between diagnosis and recovery, especially for the underprivileged. Together, we are fostering hope, strength, and a future free from cancer.",
-      },
-    ],
-  },
-  {
-    year: "2020-2021",
-    images: [
-      {
-        src: "/imagesanime/image14.png",
-        title: "Rotary Club of Bangalore Charitable Trust",
-        description:
-          "The Rotary Club of Bangalore Charitable Trust to support large-scale projects focused on Education, Health, Economic Empowerment, Youth Development, and Environmental Sustainability. These initiatives are designed to uplift underserved communities and drive long-term social impact. From building schools to supporting healthcare access and green initiatives, the partnership reflects VST’s deep-rooted commitment to holistic community development. Together, we are building stronger, healthier, and more resilient futures.",
-      },
-      {
-        src: "/imagesanime/image15.png",
-        title: "Covid-19 Relief Fund",
-        description:
-          "The VST group made major contributions towards the medical expenses of COVID-hit patients and also contributed towards medical equipment.  In addition, the group ensured the well-being of its employees and their families during this challenging time, providing them with necessary support and care.",
-      },
-    ],
-  },
-  {
-    year: "2021-2022",
-    images: [
-      {
-        src: "/imagesanime/image16.png",
-        title: "PM Care Fund",
-        description:
-          "VST stands with the nation in times of need, upholding its responsibility to protect and uplift lives. Together, we contribute to a resilient and prepared India.",
-      },
-      {
-        src: "/imagesanime/image17.png",
-        title: "Lakshmi Pain And Palliative Care Trust",
-        description:
-          "Providing Medical Care with Compassion and Competence, We treat the physical symptoms ,social needs of patients suffering from medical conditions.",
-      },
-      {
-        src: "/imagesanime/image18.png",
-        title: "The Kuppuswamy Naidu Charity Trust-Healing Tiny Hearts",
-        description:
-          "This initiative, Healing Tiny Hearts, focuses on early diagnosis, treatment, and care for children from underprivileged backgrounds. VST’s contribution helps save young lives and offers hope to families facing medical and financial challenges. Through this effort, we reaffirm our commitment to nurturing healthier, brighter futures for India’s children.",
-      },
-    ],
-  },
-  {
-    year: "2022-2023",
-    images: [
-      {
-        src: "/imagesanime/image19.png",
-        title: "Akshadhaa Foundation",
-        description:
-          "VST Group supports Akshadhaa Foundation in its mission to create meaningful learning environments that empower children to lead independent and fulfilling lives. By fostering education, life skills, and holistic development, this initiative helps children overcome challenges and build confidence for a brighter future. VST’s contribution strengthens the foundation’s efforts to nurture self-reliant individuals who can positively impact their communities.",
-      },
-      {
-        src: "/imagesanime/image20.png",
-        title: "The Association of People with Disability",
-        description:
-          "The VST group extended its support to the Association of People with Disability, contributing towards initiatives aimed at empowering and improving the lives of individuals with disabilities."
-      },
-    ],
-  },
-  {
-    year: "2023-2024",
-    images: [
-      {
-        src: "/imagesanime/image21.png",
-        title: "BGC Crow Trust",
-        description:
-          "An initiative dedicated to opening a world of opportunities for children of golf caddies. With a vision to empower these children through education and skill development, the Trust helps break the cycle of poverty and builds pathways to a brighter future. VST’s partnership strengthens this mission, fostering hope and growth for the next generation.",
-      },
-      {
-        src: "/imagesanime/image22.png",
-        title: "The Live Love Laugh Foundation",
-        description:
-          "The Live Love Laugh Foundation in its vital mission to raise mental health awareness and destigmatize mental illness across communities. By promoting open conversations and access to mental health resources, this partnership aims to build a more compassionate and informed society.",
+        src: "/imagesanime/image2.png",
+        title: "Chennai - Flood relief fund",
+        description: " The Chennai Flood Relief Fund to support communities devastated by the 2015 Chennai floods. Our assistance helped provide essential supplies, medical aid, and rehabilitation efforts for those affected by this natural disaster.",
       },
     ],
   },
