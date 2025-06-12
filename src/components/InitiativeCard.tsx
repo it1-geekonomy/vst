@@ -51,9 +51,9 @@ export default function InitiativeCard({ title, description, image }: Initiative
           absolute inset-0 flex items-center justify-center  px-4 transition-opacity duration-500 pointer-events-none
           ${isMobile
             ? showDescription
-              ? "opacity-100 text-orange-600"
+              ? "opacity-100 text-black"
               : "opacity-0 text-white"
-            : "opacity-0 text-white group-hover:opacity-100 group-hover:text-orange-600"
+            : "opacity-0 text-white group-hover:opacity-100 group-hover:text-black"
           }
         `}
       >
