@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Footerlogo from "@/app/public/logos/Footerlogo";
+import NavBarLogo from "@/app/public/logos/NavBarLogo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +52,7 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "translate-y-[-100%]"}`}
       style={{
-        background: "linear-gradient(to right, #fff 0%, #000 28%)"
+        background: "linear-gradient(to right, #fff 0%, #000 50%)"
       }}
     >
      
@@ -59,7 +60,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-1 md:gap-2 pl-2 md:pl-10">
-              <Footerlogo className="h-17 sm:h-16 md:h-18  w-auto" />
+              <NavBarLogo />
             </Link>
           </div>
 
