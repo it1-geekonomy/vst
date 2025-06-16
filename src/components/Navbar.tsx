@@ -60,7 +60,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-1 md:gap-2 pl-2 md:pl-10">
-              <NavBarLogo />
+              <NavBarLogo className="h-8 sm:h-10 md:h-18 w-auto" />
             </Link>
           </div>
 
