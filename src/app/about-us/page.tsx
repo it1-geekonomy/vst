@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Frame1967 from "@/app/public/images/AboutUs/Frame 1973341967.png";
+import Frame2024 from "@/app/public/images/AboutUs/Frame 1973341967.png";
 import Frame1968 from "@/app/public/images/AboutUs/Frame 1973341968.png";
 import Frame1970 from "@/app/public/images/AboutUs/Frame 1973341970.png";
 import Frame1972 from "@/app/public/images/AboutUs/Frame 1973341972.png";
@@ -11,21 +11,33 @@ import Frame1974 from "@/app/public/images/AboutUs/Frame 1973341974.png";
 import Frame1976 from "@/app/public/images/AboutUs/Frame 1973341976.png";
 import Frame1977 from "@/app/public/images/AboutUs/Frame 1973341977.png";
 import Frame1978 from "@/app/public/images/AboutUs/Frame 1973341978.png";
+import Frame2022 from "@/app/public/images/AboutUs/Rectangle 2022.png";
+import Frame1930 from "@/app/public/images/AboutUs/Rectangle 1930.png";
+import Frame1954 from "@/app/public/images/AboutUs/Rectangle 1954.png";
+import Frame1967 from "@/app/public/images/AboutUs/Frame 1967.jpg";
+
+
+
 
 import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
 import { useRouter } from "next/navigation";
 
 const timelineItems = [
-  { year: '1967', image: Frame1967, description: 'A new beginning.' },
-  { year: '1968', image: Frame1968, description: 'Building the foundation.' },
-  { year: '1970', image: Frame1970, description: 'Expanding horizons.' },
-  { year: '1972', image: Frame1972, description: 'Innovating for the future.' },
-  { year: '1973', image: Frame1973, description: 'A year of growth.' },
-  { year: '1974', image: Frame1974, description: 'Making an impact.' },
-  { year: '1976', image: Frame1976, description: 'Achieving milestones.' },
-  { year: '1977', image: Frame1977, description: 'Consolidating success.' },
-  { year: '1978', image: Frame1978, description: 'Leading the industry.' }
+  { year: '2024', image: Frame2024, description: 'Maserati added to VST’s elite brand portfolio in South India' },
+  { year: '1911', image: Frame1968, description: 'Formation of VST & Sons' },
+  { year: '1930', image: Frame1930, description: 'Sons join the Business' },
+  { year: '1949', image: Frame1970, description: 'India Garage began its journey with Austin Motor Company and Studebaker cars in South India.' },
+  { year: '1954', image: Frame1954, description: 'VST Motors partnered with Tata Motors in Tamil Nadu.' },
+  { year: '1960', image: Frame1972, description: 'Diversification into Automobile Dealerships' },
+  { year: '1967', image: Frame1967, description: 'Establishment of VST Tillers Tractors Ltd. in technical collaboration with Mitsubishi Heavy Industries' },
+  { year: '1980-1990', image: Frame1973, description: 'Brand consolidation and product expansion' },
+  { year: '1995', image: Frame1974, description: 'VST Tillers Tractors became a publicly listed company' },
+  { year: '2000', image: Frame1976, description: 'Expansion of businesses in automobile and manufacturing sectors'},
+  { year: '2011', image: Frame1977, description: 'VST entered luxury with Jaguar Land Rover in Tamil Nadu.'},
+  { year: '2015', image: Frame1978, description: 'Expanded luxury portfolio with Ducati and Mercedes-Benz in South India.' },
+  { year: '2022', image: Frame2022, description: 'Porsche joined VST’s luxury lineup in Karnataka' }
+
 ];
 
 function AboutUsPage() {
