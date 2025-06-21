@@ -16,6 +16,29 @@ import BackgroundImage from "@/app/public/images/AboutUs/Background.png";
 import gif from "@/app/public/education/vst logo gif.gif"
 import { useRouter } from "next/navigation";
 
+function useWindowSize() {
+  const [size, setSize] = useState({
+    width: 0,
+    height: 0
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+    
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return size;
+}
+
 const timelineItems = [
   { year: '1967', image: Frame1967, description: 'A new beginning.' },
   { year: '1968', image: Frame1968, description: 'Building the foundation.' },
@@ -31,6 +54,7 @@ const timelineItems = [
 function AboutUsPage() {
   const [activeIndex, setActiveIndex] = useState(1);
   const router = useRouter();
+  const { width } = useWindowSize();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,6 +62,8 @@ function AboutUsPage() {
     }, 2000);
     return () => clearInterval(timer);
   }, []);
+
+  const isTabletOrMobile = width < 1024;
 
   return (
     <div 
@@ -65,7 +91,7 @@ function AboutUsPage() {
         {/* Timeline Slider Section */}
         <div className="flex flex-col items-center w-full px-4 sm:px-6 md:px-8 py-10">
           {/* Images Container */}
-          <div className="relative flex justify-center items-center h-[400px] w-full mb-10">
+          <div className="relative flex justify-center items-center w-full mb-10 overflow-hidden" style={{ height: isTabletOrMobile ? '300px' : '400px' }}>
             {timelineItems.map((item, index) => {
               const N = timelineItems.length;
               let offset = index - activeIndex;
@@ -78,26 +104,31 @@ function AboutUsPage() {
                 offset += N;
               }
 
-              const isVisible = Math.abs(offset) <= 1
-
               const style: React.CSSProperties = {
                 position: 'absolute',
                 transition: 'all 500ms ease-in-out',
-                opacity: isVisible ? 1 : 0,
-                zIndex: isVisible ? 5 : 0,
-                transform: `translateX(0) scale(0.7)`,
-                pointerEvents: isVisible ? 'auto' : 'none',
               };
 
-              if (offset === 0) { // Center
-                style.transform = 'translateX(0) scale(1.2)';
-                style.zIndex = 10;
-              } else if (offset === -1) { // Left
-                style.transform = 'translateX(-120%) scale(0.9)';
-              } else if (offset === 1) { // Right
-                style.transform = 'translateX(120%) scale(0.9)';
-              } else { // Hidden
-                style.transform = `translateX(${offset > 0 ? 120 : -120}%) scale(0.9)`;
+              if (isTabletOrMobile) {
+                style.transform = `translateX(${offset * 100}%) scale(0.9)`;
+                style.zIndex = N - Math.abs(offset);
+              } else {
+                const isVisible = Math.abs(offset) <= 1;
+                style.opacity = isVisible ? 1 : 0;
+                style.zIndex = isVisible ? 5 : 0;
+                style.transform = 'translateX(0) scale(0.7)';
+                style.pointerEvents = isVisible ? 'auto' : 'none';
+
+                if (offset === 0) { // Center
+                  style.transform = 'translateX(0) scale(1.2)';
+                  style.zIndex = 10;
+                } else if (offset === -1) { // Left
+                  style.transform = 'translateX(-120%) scale(0.9)';
+                } else if (offset === 1) { // Right
+                  style.transform = 'translateX(120%) scale(0.9)';
+                } else { // Hidden
+                  style.transform = `translateX(${offset > 0 ? 120 : -120}%) scale(0.9)`;
+                }
               }
 
               return (
@@ -107,7 +138,7 @@ function AboutUsPage() {
                   style={style}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <div className="relative w-80 h-80">
+                  <div className="relative" style={{ width: isTabletOrMobile ? '280px' : '320px', height: isTabletOrMobile ? '280px' : '320px' }}>
                     <Image
                       src={item.image}
                       alt={`Timeline ${item.year}`}
