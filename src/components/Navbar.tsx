@@ -202,7 +202,7 @@ export default function Navbar() {
                   submenu?.classList.toggle("hidden");
                 }}
               >
-                Our Businesses
+                 Businesses
               </button>
               <div className="pl-4 hidden">
                 <Link
