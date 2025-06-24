@@ -10,6 +10,12 @@ const timelineData = [
     year: "2023-2024",
     images: [
       {
+        src: "/imagesanime/image3.png",
+        title: "Wildlife First",
+        description:
+          "The group supported the Wildlife First movement, contributing to the conservation of wildlife and natural habitats through advocacy and protection initiatives.",
+      },
+      {
         src: "/imagesanime/image21.png",
         title: "BGC Crow Trust",
         description:
@@ -144,12 +150,7 @@ const timelineData = [
   {
     year: "2016-2017",
     images: [
-      {
-        src: "/imagesanime/image3.png",
-        title: "Wildlife First",
-        description:
-          "The group supported the Wildlife First movement, contributing to the conservation of wildlife and natural habitats through advocacy and protection initiatives.",
-      },
+    
       {
         src: "/imagesanime/image4.png",
         title: "The National Association for the Blind, Karnataka",
