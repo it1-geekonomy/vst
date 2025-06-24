@@ -282,7 +282,7 @@ export default function EducationPage() {
             <p className="text-clamp-28 font-normal font-roc text-justify whitespace-pre-wrap">
               SKEI, Bangalore is a renowned co-education CBSE institution with a rich legacy of over 90 years, committed to providing a holistic and innovative education. Founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar—a visionary entrepreneur and philanthropist—the school was born out of a mission to address the lack of educational opportunities for girls, including with his daughters.{'\n\n'}
               Rooted in a learner-centric philosophy, SKEI blends tradition with transformation, offering a nurturing environment that fosters both critical and creative thinking. The school's mission is to empower students with 21st-century skills, preparing them to excel in a global context while emphasizing values, leadership, and a passion for lifelong learning.{'\n\n'}
-              Our century-old campus stands as a symbol of inclusive, values-driven education, where academic excellence goes hand-in-hand with empathy, integrity, and leadership. As envisioned by our founder, SKEI continues to be 
+              Our century-old campus stands as a symbol of inclusive, values-driven education, where academic excellence goes hand-in-hand with empathy, integrity, and leadership. As envisioned by our founder, SKEI continues to be a sacred place from which girls and boys shall take the highest aspirations to lead better, grander, and more fulfilling lives.
             </p>
           </div>
         </section>
