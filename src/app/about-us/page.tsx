@@ -15,7 +15,7 @@ import Frame2022 from "@/app/public/images/AboutUs/Rectangle 2022.png";
 import Frame1930 from "@/app/public/images/AboutUs/Rectangle 1930.png";
 import Frame1954 from "@/app/public/images/AboutUs/Rectangle 1954.png";
 import Frame1967 from "@/app/public/images/AboutUs/Frame 1967.jpg";
-import Frame1931 from "@/app/public/images/AboutUs/1931.jpg";
+import Frame1931 from "@/app/public/images/AboutUs/new1931.jpg";
 
 
 
@@ -48,10 +48,10 @@ function useWindowSize() {
 }
 
 const timelineItems = [
-  { year: '2024', image: Frame2024, description: 'Maserati added to VST’s elite brand portfolio in South India' },
+  { year: '2024', image: Frame2024, description: "Maserati added to VST's elite brand portfolio in South India" },
   { year: '1911', image: Frame1968, description: 'Formation of VST & Sons' },
   { year: '1930', image: Frame1930, description: 'Sons join the Business' },
-  { year: '1931', image: Frame1931, description: 'Inaugration of Smt. Kamalabai Education Institution' },
+  { year: '1931', image: Frame1931, description: 'Founded Smt. Kamalabai Education Institution' },
 
   
   { year: '1949', image: Frame1970, description: 'India Garage began its journey with Austin Motor Company and Studebaker cars in South India.' },
@@ -63,7 +63,7 @@ const timelineItems = [
   { year: '2000', image: Frame1976, description: 'Expansion of businesses in automobile and manufacturing sectors'},
   { year: '2011', image: Frame1977, description: 'VST entered luxury with Jaguar Land Rover in Tamil Nadu.'},
   { year: '2015', image: Frame1978, description: 'Expanded luxury portfolio with Ducati and Mercedes-Benz in South India.' },
-  { year: '2022', image: Frame2022, description: 'Porsche joined VST’s luxury lineup in Karnataka' }
+  { year: '2022', image: Frame2022, description: "Porsche joined VST's luxury lineup in Karnataka" }
 
 ];
 
@@ -154,7 +154,12 @@ function AboutUsPage() {
                   style={style}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <div className="relative" style={{ width: isTabletOrMobile ? '280px' : '320px', height: isTabletOrMobile ? '280px' : '320px' }}>
+                  <div className="relative" style={{ 
+                    width: isTabletOrMobile ? '280px' : '320px', 
+                    height: isTabletOrMobile ? '280px' : '320px',
+                    borderRadius: offset === 0 ? '16px' : '0px',
+                    overflow: 'hidden'
+                  }}>
                     <Image
                       src={item.image}
                       alt={`Timeline ${item.year}`}
@@ -163,7 +168,7 @@ function AboutUsPage() {
                       className="shadow-lg"
                     />
                     {offset === 0 && (
-                      <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/80 to-transparent">
+                      <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/80 to-transparent rounded-2xl">
                         <p className="text-white text-center text-lg font-semibold">
                           {item.description}
                         </p>

@@ -230,7 +230,7 @@ const LocationSectionUpdated: React.FC<LocationSectionProps> = ({
                         lineHeight: '1.4',
                       }}
                     >
-                      {websiteUrl}
+                      {websiteUrl.replace(/^https?:\/\//, '')}
                     </span>
                   </a>
                 )}
