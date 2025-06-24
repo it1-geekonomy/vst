@@ -7,7 +7,7 @@ import healthImage from "../app/public/making-a-difference/healthImage.png";
 export const initiatives = [
     {
         title: 'Education and Holistic Development',
-        description: 'VST Group has consistently invested in education through SKEI, a legacy institution with over 90 years of history. By supporting quality learning and holistic development, the Group aims to nurture a skilled, future-ready workforce capable of meeting tomorrow’s challenges.',
+        description: 'VST Group supports child education through SKEI and various foundations, empowering under-privileged children with quality learning and holistic growth.',
         image: eduImage,
     },
     {
