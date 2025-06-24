@@ -15,6 +15,7 @@ import Frame2022 from "@/app/public/images/AboutUs/Rectangle 2022.png";
 import Frame1930 from "@/app/public/images/AboutUs/Rectangle 1930.png";
 import Frame1954 from "@/app/public/images/AboutUs/Rectangle 1954.png";
 import Frame1967 from "@/app/public/images/AboutUs/Frame 1967.jpg";
+import Frame1931 from "@/app/public/images/AboutUs/1931.jpg";
 
 
 
@@ -50,6 +51,9 @@ const timelineItems = [
   { year: '2024', image: Frame2024, description: 'Maserati added to VST’s elite brand portfolio in South India' },
   { year: '1911', image: Frame1968, description: 'Formation of VST & Sons' },
   { year: '1930', image: Frame1930, description: 'Sons join the Business' },
+  { year: '1931', image: Frame1931, description: 'Inaugration of Smt. Kamalabai Education Institution' },
+
+  
   { year: '1949', image: Frame1970, description: 'India Garage began its journey with Austin Motor Company and Studebaker cars in South India.' },
   { year: '1954', image: Frame1954, description: 'VST Motors partnered with Tata Motors in Tamil Nadu.' },
   { year: '1960', image: Frame1972, description: 'Diversification into Automobile Dealerships' },
