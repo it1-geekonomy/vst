@@ -189,9 +189,7 @@ const ManufacturePage = () => {
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 w-full">
             <div className="flex-1 text-white md:max-w-[48%]">
               <div className="mb-8">
-              <p className="text-clamp-28 font-roc text-justify pb-6">
-                  Empowering Farmers Since 1967
-                  </p>
+             
                 <p className="text-clamp-24 font-roc text-justify">
                   A pioneer in farm mechanization, VST Tillers Tractors Ltd. is India’s one of the leading manufacturer of power tillers and compact 4WD tractors. Established in 1967 through a joint venture with Mitsubishi Heavy Industries, Japan, VST has grown to dominate over 70% of the Indian tiller market and exports to 40+ countries globally. <br /> <br /> With over five decades of trust, innovation, and durability, VST offers a robust product range from 9 HP to 50 HP, catering to diverse farming needs from vineyards to commercial haulage. Our commitment to quality and farmer empowerment has made us a preferred partner in sustainable agriculture across the world.
                 </p>

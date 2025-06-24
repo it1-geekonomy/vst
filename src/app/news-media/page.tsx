@@ -274,9 +274,7 @@ export default function NewsMedia() {
         <div className="container mx-auto px-1 sm:px-1 md:px-0 lg:px-0">
           <div className="pt-0 md:pt-12 lg:pt-16">
             <News/>
-            <div className="bg-[#2E2E2E]">
-              <ContactUs bgcolour="bg-[#2E2E2E]"/>
-            </div>
+           
           </div>
         </div>
       </section>
