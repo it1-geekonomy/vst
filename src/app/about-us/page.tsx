@@ -288,9 +288,7 @@ function AboutUsPage() {
                 Progress with Purpose.
               </h2>
               <h3 className="text-3xl md:text-4xl text-white mb-6 md:mb-8 font-roc">Impact with Vision.</h3>
-              <button onClick={() => router.push("/career")} className="bg-yellow-400 text-black px-6 md:px-8 py-2 md:py-3 rounded text-base md:text-lg font-medium">
-                Join Us
-              </button>
+            
             </div>
           </div>
         </div>
