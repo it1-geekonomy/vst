@@ -13,6 +13,8 @@ import card5 from "@/app/public/news-and-media/NewsAndArticles/Image1.png";
 import card6 from "@/app/public/news-and-media/NewsAndArticles/Image2.png";
 import card7 from "@/app/public/news-and-media/NewsAndArticles/Image3.png";
 import card8 from "@/app/public/news-and-media/NewsAndArticles/Image4.png";
+import card4 from "@/app/public/news-and-media/NewsAndArticles/image 209.png";
+
 
 
 
@@ -140,6 +142,15 @@ const newsAndArticlesData = [
     location: 'Bengaluru',
     time: '',
     route: 'https://www.business-standard.com/content/press-releases-ani/maserati-and-vst-group-join-forces-to-bring-iconic-italian-luxury-cars-to-south-india-124121100503_1.html?fbclid=PAZXh0bgNhZW0CMTEAAacQ5vIqrym5JnbKR5vrLEeLjiv0lijVJ-cQPylm8nTKVB7T8sMTappqJ3oZOA_aem_aYDO8RrZC-KpHqLSy6nLIQ'
+  },
+  {
+    id: 5,
+    image: card4,
+    title: "VST Tillers Tractors Showcases its range of innovative Farm Machines at the Krushi Odisha 2025",
+    tag: 'Business',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://onlinenews9.in/business/vst-tillers-tractors-showcases-its-range-of-innovative-farm-machines/'
   }
 ];
 

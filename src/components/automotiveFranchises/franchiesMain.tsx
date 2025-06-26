@@ -67,7 +67,7 @@ const slides: SlideData[] = [
     },
     LogoComponent: MercedesIcon,
     header: "VST Titanium - Mercedes Benz ",
-    description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015, with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar in luxury automotive ownership.",
+    description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015, with the Mount Road showroom - an iconic heritage property over 109 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar in luxury automotive ownership.",
     learnMoreLink: "https://www.titaniummotors.mercedes-benz.co.in/",
     locations: {
       Bangalore: {
@@ -311,7 +311,7 @@ const slides: SlideData[] = [
           }
         ]
       },
-      "Chennai": {
+      " Tamil Nadu": {
         sales: [
           {
             address: "Old #182, New #237, Anna Salai, \nChennai - 600 006.",
@@ -366,6 +366,14 @@ const slides: SlideData[] = [
             email: ["servicemanagervlr@vstcentral-kia.in", "salesmanagervlr@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.318270535633!2d79.1367769!3d12.9514746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad393de10f1b39%3A0xee4f088f339b7d95!2sVST%20CENTRAL%20-%20KIA%20SHOWROOM%20%26%20WORKSHOP!5e0!3m2!1sen!2sin!4v1747234422327!5m2!1sen!2sin"
           }
+        ],
+        "Pre-Owned Cars": [
+          {
+            address: "#548/6, Kattukottai, Nattamangalam, \nSalem - 636 010.",
+            phone: "+91 93848 77744",
+            email: "salesmanagerslm@vstcentral-kia.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747843601693!5m2!1sen!2sin" 
+          },
         ]
       }
     }
@@ -385,12 +393,7 @@ const slides: SlideData[] = [
     locations: {
       Bangalore: {
         sales: [
-          {
-            address: "#1049, Poonamallee High Road, \nArumbakkam, Chennai - 600 106.",
-            phone: "+91 73389 77522 , +91 93840 58820",
-            email: "ace.ambkm@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3551153647277!2d80.2061238!3d13.076666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a11dafd219%3A0x908e7f8c925d6c45!2s1049%2C%20Poonamallee%20High%20Rd%2C%20Amaravathi%20Nagar%2C%20Arumbakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600106!5e0!3m2!1sen!2sin!4v1747890545393!5m2!1sen!2sin"
-          },
+          
            {
             address: "#2D, Dindigul Road, Trichy - 620 001.",
             phone: "+91 98423 19820 , +91 98424 10847",
@@ -454,7 +457,13 @@ const slides: SlideData[] = [
             phone: "+91 99406 00442 , +91 73584 44125",
             email: "autopartssm.vlr@vstmotors.com",
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747891932644!5m2!1sen!2sin" 
-          }
+          },
+           {
+            address: "#A18/1, Alagesan Nagar, Chengalpet - 603 001.",
+            phone:  ["+91 73050 26539","+91 73058 88646"],
+            email: "autopartssm.cgl@vstmotors.com ",
+            map:"https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3892.5212143571725!2d79.97430037507146!3d12.67936708760981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDQwJzQ1LjciTiA3OcKwNTgnMzYuOCJF!5e0!3m2!1sen!2sin!4v1750851830026!5m2!1sen!2sin"  
+           }
         ]
       }
     }
@@ -1150,6 +1159,60 @@ const FranchiseSlider = () => {
 
                     return (
                       <>
+                        {/* For Tata slide, show "sales & service" first */}
+                        {slides[currentSlide].brand === "tata" && location["sales & service"] && location["sales & service"].length > 0 && (
+                          <div className="hide-scrollbar">
+                            {location["sales & service"].map((salesService, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl ">
+                                  Sales & Service :
+                                </div>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {salesService.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {Array.isArray(salesService.phone) ? (
+                                    salesService.phone.map((p, i) => (
+                                      <div key={i} className="mt-1 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {p}
+                                      </div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                      </svg>
+                                      {salesService.phone}
+                                    </div>
+                                  )}
+                                  {Array.isArray(salesService.email) ? (
+                                    salesService.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {salesService.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales & Service Location Map ${idx + 1}`}
+                                    src={salesService.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                         {/* Sales */}
                         {location.sales && location.sales.length > 0 && (
                           <div className="hide-scrollbar">
@@ -1258,8 +1321,8 @@ const FranchiseSlider = () => {
                             ))}
                           </div>
                         )}
-                        {/* Sales and Service */}
-                        {location["sales & service"] && location["sales & service"].length > 0 && (
+                        {/* Sales and Service - Only show for non-Tata slides or after the first Tata section */}
+                        {slides[currentSlide].brand !== "tata" && location["sales & service"] && location["sales & service"].length > 0 && (
                           <div className="hide-scrollbar">
                             {location["sales & service"].map((salesService, idx) => (
                               <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
