@@ -19,7 +19,7 @@ import hcard1 from "@/app/public/news-and-media/Exciting Times.jpg";
 import hcard2 from "@/app/public/news-and-media/Special Moment news.jpg";
 import hcard3 from "@/app/public/news-and-media/Long standing Ducati 1.jpg";
 import hcard4 from "@/app/public/news-and-media/Porsche Moment news.jpg";
-import hcard5 from "@/app/public/news-and-media/newslid.png";
+import hcard5 from "@/app/public/news-and-media/newslid.jpg";
 import bgimg from "@/app/public/images/news/BACKIMG.jpg";
 import frame3 from "@/app/public/images/news/card6New.png";
 
