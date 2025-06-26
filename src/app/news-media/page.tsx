@@ -19,6 +19,7 @@ import hcard1 from "@/app/public/news-and-media/Exciting Times.jpg";
 import hcard2 from "@/app/public/news-and-media/Special Moment news.jpg";
 import hcard3 from "@/app/public/news-and-media/Long standing Ducati 1.jpg";
 import hcard4 from "@/app/public/news-and-media/Porsche Moment news.jpg";
+import hcard5 from "@/app/public/news-and-media/newslid.png";
 import bgimg from "@/app/public/images/news/BACKIMG.jpg";
 import frame3 from "@/app/public/images/news/card6New.png";
 
@@ -79,6 +80,15 @@ export default function NewsMedia() {
       link: " https://www.linkedin.com/posts/vst-motors-ltd_globalporschemomentaward-porsche-globalrecognition-activity-7313130881051697152-J3cW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
      
     },
+    {
+      image: hcard5,
+      alt: "Latest Models",
+      // title: "We Are Now Open",
+      text: "VST Tillers Tractors Reports Sales of 3,486 Units in May 2025",
+      link: "https://krishijagran.com/industry-news/vst-tillers-tractors-reports-sales-of-3-486-units-in-may-2025/",
+     
+    },
+
 
 
 
