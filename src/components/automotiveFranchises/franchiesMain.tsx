@@ -406,7 +406,7 @@ const slides: SlideData[] = [
             address: "By-Pass Road, Poonamallee, \nChennai - 600 056.",
             phone: [" +91 98403 76339 , +91 73974 92943 " ,"+91 89259 95593 , +91 98401 54057"],
             email: "  cvd.pnml@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747890775190!5m2!1sen!2sin"
+            map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.663392277386!2d80.09531729999999!3d13.0570851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528bad1a24d0f1%3A0xba63e50f543b52c9!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1751004583770!5m2!1sen!2sin"
           },
           {
             address: "#43, Katpadi Road, Gandhinagar, \nVellore - 632 006.",
@@ -1115,7 +1115,7 @@ const FranchiseSlider = () => {
                           title={slides[currentSlide].learnMoreLink}
                           className="text-white hover:text-[#DFAC4F] transition-colors text-sm sm:text-base lg:text-lg font-roc font-normal cursor-pointer truncate flex-1"
                         >
-                          {slides[currentSlide].learnMoreLink.replace(/^https?:\/\//, '')}
+                          {slides[currentSlide].learnMoreLink.replace(/^https?:\/\//, '').replace(/^www\./, '')}
                         </h2>
                       </div>
                     )}
