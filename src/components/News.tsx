@@ -107,8 +107,17 @@ const latestUpdatesData = [
 ];
 
 const newsAndArticlesData = [
-  {
+{
     id: 1,
+    image: card4,
+    title: "VST Tillers Tractors Showcases its range of innovative Farm Machines at the Krushi Odisha 2025",
+    tag: 'Business',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://onlinenews9.in/business/vst-tillers-tractors-showcases-its-range-of-innovative-farm-machines/'
+  },
+  {
+    id: 2,
     image: card5,
     title: "VST Group's strategies for success in India's booming luxury auto market",
     tag: 'Business',
@@ -117,7 +126,7 @@ const newsAndArticlesData = [
     route: 'https://www.manufacturingtodayindia.com/vst-groups-strategies-for-success-in-indias-booming-luxury-auto-market?fbclid=PAZXh0bgNhZW0CMTEAAaf3D-ozwleWR98__LGP3YP-ARg2AYiwIyCF49HCTeYvEHx4-MXETWxjImtvPg_aem_dSj40Rx1kG0ytZ_I--W-sg'
   },
   {
-    id: 2,
+    id: 3,
     image: card6,
     title: "Sales Revenue Of Jaguar, Mercedes And Other Premium Brands Has Seen Over 20% Growth: VST Group MD Arun Surendra",
     tag: 'Anniversary',
@@ -126,7 +135,7 @@ const newsAndArticlesData = [
     route: 'https://www.outlookbusiness.com/corporate/sales-revenue-of-jaguar-mercedes-and-other-premium-brands-has-seen-over-20-growth-this-year-vst-group-md-arun-surendra'
   },
   {
-    id: 3,
+    id: 4,
     image: card7,
     title: "Industry eyes electric tractor adoption amid mounting challenges",
     tag: 'Innovation',
@@ -135,7 +144,7 @@ const newsAndArticlesData = [
     route: 'https://auto.economictimes.indiatimes.com/news/automotive/industry-eyes-electric-tractor-adoption-amid-mounting-challenges/113997926?fbclid=PAZXh0bgNhZW0CMTEAAafs5SNE3v-NwiCrVv5A0OcW8xg57SduP7gNQGGNMpBB1yN6bmSSWmnKMRbKHg_aem_VaM4ujXKpTP7_pI1ph2iPw'
   },
   {
-    id: 4,
+    id: 5,
     image: card8,
     title: "Maserati and VST Group Join Forces to Bring Iconic Italian Luxury Cars to South India",
     tag: 'Partnership',
@@ -143,15 +152,6 @@ const newsAndArticlesData = [
     time: '',
     route: 'https://www.business-standard.com/content/press-releases-ani/maserati-and-vst-group-join-forces-to-bring-iconic-italian-luxury-cars-to-south-india-124121100503_1.html?fbclid=PAZXh0bgNhZW0CMTEAAacQ5vIqrym5JnbKR5vrLEeLjiv0lijVJ-cQPylm8nTKVB7T8sMTappqJ3oZOA_aem_aYDO8RrZC-KpHqLSy6nLIQ'
   },
-  {
-    id: 5,
-    image: card4,
-    title: "VST Tillers Tractors Showcases its range of innovative Farm Machines at the Krushi Odisha 2025",
-    tag: 'Business',
-    location: 'Bengaluru',
-    time: '',
-    route: 'https://onlinenews9.in/business/vst-tillers-tractors-showcases-its-range-of-innovative-farm-machines/'
-  }
 ];
 
 const News = () => {
