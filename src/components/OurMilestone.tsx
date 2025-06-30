@@ -17,8 +17,8 @@ function OurMilestone() {
   const milestones: MilestoneItem[] = [
     { value: 100, label: 'Years', suffix: '+', color: 'bg-[#B897FF]' },
     { value: 10000, label: 'Customers', suffix: '+', color: 'bg-[#95C7FF]' },
-    { value: 60, label: 'Brands', suffix: '+', color: 'bg-[#50FFA0]' },
-    { value: 6, label: 'Locations', suffix: '+', color: 'bg-[#FEBF3D]' }
+    { value: 12, label: 'Brands', suffix: '+', color: 'bg-[#50FFA0]' },
+    { value: 60, label: 'Locations', suffix: '+', color: 'bg-[#FEBF3D]' }
   ]
 
   return (
