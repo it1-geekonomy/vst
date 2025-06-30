@@ -54,46 +54,10 @@ import BusinessSectors from "./BusinessSectors";
 import Logo from "@/app/public/logos/Logo";
 import JaguarIcon from "@/app/public/faranchies/jaguarIcon";
 import VSTLogoAnimation from "../VSTLogoAnimation";
-import { SlideData, LocationKeys } from '@/app/automotive-franchises/cars-data';
+import { SlideData, LocationKeys, slides } from '@/app/automotive-franchises/cars-data';
 
-const slides: SlideData[] = [
-  {
-    id: 1,
-    backgroundImage: benzs,
-    brand: "mercedes",
-    bgColor: {
-      from: "#B897FF",
-      to: "#5A6292"
-    },
-    LogoComponent: MercedesIcon,
-    header: "VST Titanium - Mercedes Benz ",
-    description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015, with the Mount Road showroom - an iconic heritage property over 109 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar in luxury automotive ownership.",
-    learnMoreLink: "https://www.titaniummotors.mercedes-benz.co.in/",
-    locations: {
-      Bangalore: {
-        sales: [
-          {
-            address: "#199, Anna Salai, Chennai - 600 002. ",
-            phone: " +91 44-6649 8080",
-            email: ["info.citysales@titaniummotors.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62186.793014227944!2d80.2065924!3d13.056375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526617129cac13%3A0x3684f8447a03532e!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747217306800!5m2!1sen!2sin"
-          },
 
-          {
-            address: "#148 K, Old Mahabalipuram Road, \nOkkiyam, Thoraipakkam, \nChennai - 600 096.",
-            phone: " +91 44-6649 8181",
-            email: ["info.chennaisales@titaniummotors.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1193.6802138844046!2d80.2383462355382!3d12.947988840734611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747834700657!5m2!1sen!2sin" 
-          }
-        ],
-        service: [
-          {
-            address: "Plot #115, Industrial Estate (EEII), \nPerungudi, Chennai - 600 096.",
-            phone: "+91 44-4610 8282",
-            email: "info.service@titaniummotors.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d243.0144022068351!2d80.2484338!3d12.9571013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d10b409895b%3A0xb14f9ec23ada69d8!2sV.S.T%20Titanium%20Motors%20Private%20Limited%20Mercedes%20Benz!5e0!3m2!1sen!2sin!4v1747217696418!5m2!1sen!2sin"
-          }
-        ],
+
 
         "Sales, Service & Parts distribution": [
           {
@@ -849,7 +813,7 @@ const FranchiseSlider = () => {
   const gradientColor = "rgba(223, 172, 79, 0.56)"
 
   // Total number of virtual slides for infinite scrolling
-  const totalVirtualSlides = 50 * slides.length;
+  const totalVirtualSlides = 10 * slides.length;
 
   // Move to previous slide with infinite loop
   const prevSlide = () => {
@@ -932,17 +896,17 @@ const FranchiseSlider = () => {
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-2 sm:gap-1 lg:gap-2 h-auto lg:h-[16rem] translate-y-[-10%] lg:translate-y-[-20%] w-full lg:mt-16">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-2 sm:gap-1 lg:gap-2 h-auto lg:h-[18rem] translate-y-[-10%] lg:translate-y-[-20%] w-full lg:mt-16">
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
-                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6.5rem] mb-2 sm:mb-4 lg:mb-0"
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6rem] mb-2 sm:mb-4 lg:mb-0"
               >
                 <svg
-                  className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
+                  className="w-26 sm:w-12 lg:w-26 h-20 sm:h-12 lg:h-20"
                     fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  viewBox="4 1 16 16"
                 >
                   <path
                     strokeLinecap="round"
@@ -954,12 +918,12 @@ const FranchiseSlider = () => {
               </button>
 
               {/* Brand logos - infinite loop implementation */}
-              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-2 sm:py-4 lg:py-[2rem] lg:pl-[3rem] relative">
+              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-2 sm:py-4 lg:py-[3rem] lg:pl-[4rem] relative">
                 <motion.div
                   className="flex items-center gap-4 sm:gap-6 lg:gap-16"
                   animate={{
-                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 215 : (screenWidth ?? 1200) < 1024 ? 223 : 264.1)}px`,
-                    translateX: (screenWidth ?? 1200) < 640 ? "9.532%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.07%",
+                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 216 : (screenWidth ?? 1200) < 1024 ? 223 : 264)}px`,
+                    translateX: (screenWidth ?? 1200) < 640 ? "9.70%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.1%",
                   }}
                   transition={{
                     duration: 0.5,
@@ -967,7 +931,7 @@ const FranchiseSlider = () => {
                   }}
                 >
                   {/* Create a large number of repeating logos for infinite scrolling */}
-                  {Array(10).fill(null).map((_, outerIndex) =>
+                  {Array(15).fill(null).map((_, outerIndex) =>
                     slides.map((slide, innerIndex) => {
                       const index = (outerIndex * slides.length) + innerIndex;
                       const realIndex = index % slides.length;
@@ -1001,13 +965,13 @@ const FranchiseSlider = () => {
               {/* Down arrow */}
               <button
                 onClick={nextSlide}
-                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6.5rem] mt-2 sm:mt-4 lg:mt-0"
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6rem] mt-2 sm:mt-4 lg:mt-0"
               >
                 <svg
-                  className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
+                  className="w-26 sm:w-12 lg:w-26 h-20 sm:h-12 lg:h-20"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  viewBox="4 2 16 16"
                 >
                   <path
                     strokeLinecap="round"
