@@ -115,7 +115,7 @@ export const slides: SlideData[] = [
         "Sales, Service & Parts distribution": [
           {
             address: "#A9 & A10, Thiru-Vi-Ka Industrial \n Estate, Guindy, Chennai - 600 032.",
-            phone: "+91 90030 26789,+91 90036 93555,\n+91 96000 67911",
+            phone: "+91 90030 26789, +91 90036 93555, +91 96000 67911",
             email: "info.guindy@titaniummotors.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d971.849043901052!2d80.2094384!3d13.0104245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526774a3022697%3A0xe1ba2886b8f8e5ec!2sVST%20TITANIUM%20MOTORS%20(PARTS%20TRADING%20FOR%20MERCEDES%20BENZ)!5e0!3m2!1sen!2sin!4v1747217731579!5m2!1sen!2sin"
           }
