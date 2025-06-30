@@ -45,6 +45,15 @@ export default function NewsMedia() {
     "Another milestone on the road to excellence!",
   ];
   const headlines2 = [
+
+    {
+      image: hcard5,
+      alt: "Latest Models",
+      // title: "We Are Now Open",
+      text: "VST Tillers Tractors Reports Sales of 3,486 Units in May 2025",
+      link: "https://krishijagran.com/industry-news/vst-tillers-tractors-reports-sales-of-3-486-units-in-may-2025/",
+     
+    },
     {
       image: hcard1,
       alt: "Latest Models",
@@ -80,19 +89,7 @@ export default function NewsMedia() {
       link: " https://www.linkedin.com/posts/vst-motors-ltd_globalporschemomentaward-porsche-globalrecognition-activity-7313130881051697152-J3cW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
      
     },
-    {
-      image: hcard5,
-      alt: "Latest Models",
-      // title: "We Are Now Open",
-      text: "VST Tillers Tractors Reports Sales of 3,486 Units in May 2025",
-      link: "https://krishijagran.com/industry-news/vst-tillers-tractors-reports-sales-of-3-486-units-in-may-2025/",
-     
-    },
-
-
-
-
-  ];
+ ];
   
   // const cards = [
   //   {
