@@ -207,7 +207,7 @@ const FranchiseSlider = () => {
                 <motion.div
                   className="flex items-center gap-4 sm:gap-6 lg:gap-16"
                   animate={{
-                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 215 : (screenWidth ?? 1200) < 1024 ? 223 : 264)}px`,
+                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 216 : (screenWidth ?? 1200) < 1024 ? 223 : 264)}px`,
                     translateX: (screenWidth ?? 1200) < 640 ? "9.70%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.1%",
                   }}
                   transition={{
