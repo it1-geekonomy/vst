@@ -87,7 +87,7 @@ const slides: SlideData[] = [
     },
     LogoComponent: MercedesIcon,
     header: "VST Titanium - Mercedes Benz ",
-    description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015, with the Mount Road showroom - an iconic heritage property over 105 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar in luxury automotive ownership.",
+    description: "VST Titanium began bringing the legacy of Mercedes-Benz to Chennai and North Tamil Nadu in 2015, with the Mount Road showroom - an iconic heritage property over 109 years old, standing as a landmark of timeless elegance. This historic setting perfectly mirrors the brand's legacy of luxury and engineering excellence. Expanding its footprint, VST Titanium opened a second showroom on OMR, offering a contemporary and dynamic environment to experience the full range of Mercedes-Benz vehicles. A state-of-the-art service centre nearby, staffed by MB-trained technicians and equipped with advanced diagnostic tools, ensures expert maintenance, certified body repairs, and round-the-clock support. Dedicated to delivering distinction at every touchpoint, VST Titanium continues to raise the bar in luxury automotive ownership.",
     learnMoreLink: "https://www.titaniummotors.mercedes-benz.co.in/",
     locations: {
       Bangalore: {
@@ -331,7 +331,7 @@ const slides: SlideData[] = [
           }
         ]
       },
-      "Chennai": {
+      " Tamil Nadu": {
         sales: [
           {
             address: "Old #182, New #237, Anna Salai, \nChennai - 600 006.",
@@ -386,6 +386,14 @@ const slides: SlideData[] = [
             email: ["servicemanagervlr@vstcentral-kia.in", "salesmanagervlr@vstcentral-kia.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.318270535633!2d79.1367769!3d12.9514746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad393de10f1b39%3A0xee4f088f339b7d95!2sVST%20CENTRAL%20-%20KIA%20SHOWROOM%20%26%20WORKSHOP!5e0!3m2!1sen!2sin!4v1747234422327!5m2!1sen!2sin"
           }
+        ],
+        "Pre-Owned Cars": [
+          {
+            address: "#548/6, Kattukottai, Nattamangalam, \nSalem - 636 010.",
+            phone: "+91 93848 77744",
+            email: "salesmanagerslm@vstcentral-kia.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747843601693!5m2!1sen!2sin" 
+          },
         ]
       }
     }
@@ -405,12 +413,7 @@ const slides: SlideData[] = [
     locations: {
       Bangalore: {
         sales: [
-          {
-            address: "#1049, Poonamallee High Road, \nArumbakkam, Chennai - 600 106.",
-            phone: "+91 73389 77522 , +91 93840 58820",
-            email: "ace.ambkm@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3551153647277!2d80.2061238!3d13.076666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a11dafd219%3A0x908e7f8c925d6c45!2s1049%2C%20Poonamallee%20High%20Rd%2C%20Amaravathi%20Nagar%2C%20Arumbakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600106!5e0!3m2!1sen!2sin!4v1747890545393!5m2!1sen!2sin"
-          },
+          
            {
             address: "#2D, Dindigul Road, Trichy - 620 001.",
             phone: "+91 98423 19820 , +91 98424 10847",
@@ -423,7 +426,7 @@ const slides: SlideData[] = [
             address: "By-Pass Road, Poonamallee, \nChennai - 600 056.",
             phone: [" +91 98403 76339 , +91 73974 92943 " ,"+91 89259 95593 , +91 98401 54057"],
             email: "  cvd.pnml@vstmotors.com",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.182183592293!2d80.2387666!3d12.9485207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d03a4292861%3A0x22d85d28dbf66c98!2sMercedes-Benz%20Titanium%20Motors!5e0!3m2!1sen!2sin!4v1747890775190!5m2!1sen!2sin"
+            map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.663392277386!2d80.09531729999999!3d13.0570851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528bad1a24d0f1%3A0xba63e50f543b52c9!2sVST%20MOTORS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1751004583770!5m2!1sen!2sin"
           },
           {
             address: "#43, Katpadi Road, Gandhinagar, \nVellore - 632 006.",
@@ -474,7 +477,13 @@ const slides: SlideData[] = [
             phone: "+91 99406 00442 , +91 73584 44125",
             email: "autopartssm.vlr@vstmotors.com",
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62496.125965978885!2d79.6792734!3d11.7644961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a2743110ef23%3A0x7b9ed2ba281e57a1!2sTata%20Motors%20Limited!5e0!3m2!1sen!2sin!4v1747891932644!5m2!1sen!2sin" 
-          }
+          },
+           {
+            address: "#A18/1, Alagesan Nagar, Chengalpet - 603 001.",
+            phone:  ["+91 73050 26539","+91 73058 88646"],
+            email: "autopartssm.cgl@vstmotors.com ",
+            map:"https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3892.5212143571725!2d79.97430037507146!3d12.67936708760981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDQwJzQ1LjciTiA3OcKwNTgnMzYuOCJF!5e0!3m2!1sen!2sin!4v1750851830026!5m2!1sen!2sin"  
+           }
         ]
       }
     }
