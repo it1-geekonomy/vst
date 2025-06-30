@@ -5,7 +5,7 @@ const MercedesIcon = () => {
     <svg
       width="200"
       height="100"
-      viewBox="-13 0 200 110"
+      viewBox="-2 0 200 110"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
