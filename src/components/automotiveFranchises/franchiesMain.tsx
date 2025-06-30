@@ -7,22 +7,8 @@ import gif from "@/app/public/education/vst logo gif.gif"
 import bg1 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (1).png";
 import bg2 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (2).png";
 import bg3 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 2 (1).png";
-// import car2 from "@/app/public/faranchies/carpic/Benz Car 2 1.png";
-// import car3 from "@/app/public/faranchies/carpic/land-rover car.png";
-// import bg4 from "@/app/public/faranchies/bgpic/4carbg.png";
-// import bg5 from "@/app/public/faranchies/bgpic/5carbg.png";
-// import bg6 from "@/app/public/faranchies/bgpic/6carbg.png";
-// import bg7 from "@/app/public/faranchies/bgpic/7carbg.png";
-// import bg8 from "@/app/public/faranchies/bgpic/Honda-bg.png";
-// import bg9 from "@/app/public/faranchies/bgpic/volkswagen-bg.png";
-// import bg10 from "@/app/public/faranchies/bgpic/byd-bg.png";
-// import car1 from "@/app/public/faranchies/bgpic/car1.png";
-//  import ferrari from "@/app/public/faranchies/bgpic/ferrari.png";
-
-
 
 import bikebg from "@/app/public/faranchies/bgpic/bikebg.png";
-
 
 import porsche from "@/app/public/faranchies/newcarpics/porsche4.png";
 import benzs from "@/app/public/faranchies/newcarpics/benz1.png";
@@ -36,8 +22,6 @@ import ducati from "@/app/public/faranchies/newcarpics/ducati6.png";
 import mahindra from "@/app/public/faranchies/newcarpics/mahindra9.png";
 import byd from "@/app/public/faranchies/newcarpics/byd11.png";
 import wagen from "@/app/public/faranchies/newcarpics/wagen10.png";
-
-
 
 import MercedesIcon from "@/app/public/faranchies/MercedesIcon";
 import LandRoverIcon from "@/app/public/faranchies/LandRoverIcon";
@@ -809,6 +793,7 @@ const slides: SlideData[] = [
     }
   },
 ];
+
 
 const FranchiseSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
