@@ -54,8 +54,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const fromEmail = process.env.SENDGRID_FROM_EMAIL;
     const toEmail = process.env.SENDGRID_TO_EMAIL;
 
+    // Debug: Log environment variables (remove in production)
+    console.log('Environment variables:', {
+      SENDGRID_API_KEY: process.env.SENDGRID_API_KEY ? 'SET' : 'NOT SET',
+      SENDGRID_FROM_EMAIL: fromEmail,
+      SENDGRID_TO_EMAIL: toEmail
+    });
+
     if (!fromEmail || !toEmail) {
-      return res.status(500).json({ message: 'Missing email configuration in environment variables' });
+      return res.status(500).json({ 
+        message: 'Missing email configuration in environment variables',
+        debug: {
+          fromEmail: fromEmail || 'NOT SET',
+          toEmail: toEmail || 'NOT SET'
+        }
+      });
     }
 
     const msg = {
