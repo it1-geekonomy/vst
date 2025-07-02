@@ -8,7 +8,7 @@ export const config = {
   },
 };
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
+sgMail.setApiKey("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");
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -51,8 +51,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       </div>
     `;
 
-    const fromEmail = process.env.SENDGRID_FROM_EMAIL;
-    const toEmail = process.env.SENDGRID_TO_EMAIL;
+    const fromEmail = "sachin@geekonomy.in";
+    const toEmail = "sachin@geekonomy.in";
 
     // Debug: Log environment variables (remove in production)
     console.log('Environment variables:', {
