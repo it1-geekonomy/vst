@@ -98,6 +98,16 @@ export default function EducationPage() {
     }
   }, [resetting]);
 
+  // Auto-advance mobile gallery slider every 2 seconds for mobile and tablet views
+  useEffect(() => {
+    const handle = setInterval(() => {
+      if (window.innerWidth < 1024) {
+        setActiveImageIndex((prev) => (prev + 1) % galleryImages.length);
+      }
+    }, 3000);
+    return () => clearInterval(handle);
+  }, [galleryImages.length]);
+
   return (
     <main className="flex min-h-screen flex-col items-center bg-[#FFAED7] text-black relative overflow-hidden">
       <div className='w-full'>
@@ -118,7 +128,7 @@ export default function EducationPage() {
         </section>
 
         {/* Gallery section with varying height strips */}
-        <section className="w-full px-4 sm:px-6 md:px-8 lg:px-24 h-auto md:h-[400px] lg:h-[450px] xl:h-[500px] mb-2 md:mb-2 lg:mb-2 z-10 relative mx-auto -mt-12">
+        <section className="w-full px-4 sm:px-6 md:px-8 lg:px-24 h-auto md:h-[400px] lg:h-[450px] xl:h-[500px] mb-8 md:mb-12 lg:mb-2 z-10 relative mx-auto -mt-12">
           {/* Background image with light orange glow - ONLY in this section */}
           <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ isolation: 'isolate', zIndex: 0 }}>
             <Image
