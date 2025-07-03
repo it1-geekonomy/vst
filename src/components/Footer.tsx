@@ -28,7 +28,7 @@ const Footer: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
   ];
 
   return (
-    <footer className={`bg-[#101010] text-white py-10 mt-10 lg:mt-0 ${bgcolour}`}>
+    <footer className={`bg-[#101010] text-white py-10 mt-0 ${bgcolour}`}>
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-16 lg:gap-8 2xl:items-start">
           {/* Logo Section */}

@@ -13,7 +13,7 @@ import Timeless2 from '@/app/public/tillers/Timeless2.png'
 import Tough3 from '@/app/public/tillers/Tough3.png'
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors"
 import Logo from '@/app/public/logos/Logo'
-import LocationSectionUpdated from '@/components/LocationSectionUpdated'
+import LocationSection from '@/components/LocationSection'
 import VSTLogoAnimation from '@/components/VSTLogoAnimation'
 import Headerlogo from '@/app/public/images/Manufacture/Headerlogo'
 const ManufacturePage = () => {
@@ -251,7 +251,7 @@ const ManufacturePage = () => {
 
           {/* Location Section */} 
           <div className="mt-16 md:mt-24 w-full">
-            <LocationSectionUpdated
+            <LocationSection
                locationImage="tillers/Group 1000001966.png"
                address={{
                  street: "Regd. Office: Plot No.1, Hale",
@@ -269,10 +269,9 @@ const ManufacturePage = () => {
                  info: "info@vsttractors.com",
                  globalConnect: "connect@vsttractors.com"
                }}
-               className="text-white text-justify"
+               className="text-white"
                iconColor="white"
-              showEmailIcon={true}
-                websiteUrl="www.vsttractors.com"
+               websiteUrl="www.vsttractors.com"
              />
           </div>
         </div>

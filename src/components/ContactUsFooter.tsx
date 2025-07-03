@@ -25,7 +25,9 @@ const ContactUsFooter: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
           <div className="w-full sm:w-4/5 2xl:w-1/4 flex flex-col items-center 2xl:items-start">
             <div className="flex flex-col items-center 2xl:items-start">
               <div className="flex items-center justify-center">
-                <Footerlogo />
+                <div className="scale-75 sm:scale-90 2xl:scale-100">
+                  <Footerlogo />
+                </div>
               </div>
             </div>
           </div>

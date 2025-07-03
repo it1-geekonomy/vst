@@ -8,6 +8,7 @@ import Image3 from "@/app/public/images/LifeAtVst/Image3.jpg"
 const LifeAtVst = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
+  const [isTouched, setIsTouched] = useState(false)
 
   const slides = [
     {
@@ -37,14 +38,22 @@ const LifeAtVst = () => {
   ]
 
   useEffect(() => {
-    if (isHovered) return
+    if (isHovered || isTouched) return
     
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 3000)
 
     return () => clearInterval(timer)
-  }, [isHovered])
+  }, [isHovered, isTouched])
+
+  const handleTouchStart = () => {
+    setIsTouched(true)
+  }
+
+  const handleTouchEnd = () => {
+    setIsTouched(false)
+  }
 
   return (
     <div className="relative w-full h-[360px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden ">
@@ -78,7 +87,9 @@ const LifeAtVst = () => {
       {/* Create a flex container to divide the screen into two halves */}
       <div className="flex flex-col md:flex-row h-568px"
            onMouseEnter={() => setIsHovered(true)}
-           onMouseLeave={() => setIsHovered(false)}>
+           onMouseLeave={() => setIsHovered(false)}
+           onTouchStart={handleTouchStart}
+           onTouchEnd={handleTouchEnd}>
         {/* Left half - Image container */}
         <div className="relative w-full md:w-1/2 h-562px">
           {slides.map((slide, index) => (

@@ -49,7 +49,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
           <h2
             className={`text-[#2B0B1F] text-center lg:text-left mb-4 sm:mb-6 font-roc ${className}`}
             style={{
-              fontSize: 'clamp(24px, 3.5vw, 50px)', // Responsive font size from 24px to 50px
+              fontSize: 'clamp(20px, 3vw, 40px)', // Responsive font size from 20px to 40px
               lineHeight: '1.2',
               letterSpacing: '-1px',
             }}
@@ -84,7 +84,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
             <div
               className={`font-roc font-normal ${className} mt-3 lg:mt-5 flex flex-col items-center lg:items-start w-full max-w-[400px]`}
               style={{
-                fontSize: 'clamp(15px, 2vw, 24px)', // Responsive font size from 15px to 24px
+                fontSize: 'clamp(15px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
                 lineHeight: '1.6',
               }}
             >
@@ -123,7 +123,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                   <span
                     className={`font-roc font-normal break-all ${className}`}
                     style={{
-                      fontSize: 'clamp(15px, 2vw, 24px)', // Responsive font size from 15px to 24px
+                      fontSize: 'clamp(15px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
                       lineHeight: '1.4',
                     }}
                   >
@@ -156,9 +156,9 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       />
                     </svg>
                     <span
-                      className={`font-roc font-normal break-all ${className}`}
+                      className={`font-roc font-normal whitespace-nowrap ${className}`}
                       style={{
-                        fontSize: 'clamp(16px, 2vw, 24px)', // Responsive font size from 16px to 24px
+                        fontSize: 'clamp(16px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
                         lineHeight: '2.0'
                       }}
                     >
@@ -171,7 +171,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal ${className} `}
                       style={{
-                        fontSize: 'clamp(14px, 1.8vw, 20px)', // Responsive font size from 14px to 20px
+                        fontSize: 'clamp(14px, 1.6vw, 24px)', // Responsive font size from 14px to 20px
                         lineHeight: '1.6',
                       }}
                     >
@@ -196,9 +196,9 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                         />
                       </svg>
                       <span
-                        className={`font-roc font-normal break-all ${className}`}
+                        className={`font-roc font-normal whitespace-nowrap ${className}`}
                         style={{
-                          fontSize: 'clamp(15px, 2vw, 24px)', // Responsive font size from 15px to 24px
+                          fontSize: 'clamp(15px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
                           lineHeight: '1.6'
                         }}
                       >
@@ -229,7 +229,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal whitespace-nowrap ${className}`}
                       style={{
-                        fontSize: 'clamp(15px, 2vw, 24px)',
+                        fontSize: 'clamp(15px, 1.6vw, 24px)',
                         lineHeight: '1.6'
                       }}
                     >

@@ -173,7 +173,7 @@ export default function Page() {
         }}
       />
       {/* Hero Section with Background */}
-      <section className="relative h-[105vh] md:h-[60vh] xl:h-[135vh]">
+      <section className="relative h-[20vh] md:h-[40vh] lg:h-[50vh] xl:h-[65vh] 2xl:h-[100vh] ">
         {/* Desktop Background Image */}
         <div className="">
           <Image
@@ -192,8 +192,8 @@ export default function Page() {
         
       </section>
 
-      {/* Form Section - Improved for consistent overlap across all screen sizes */}
-      <section className="relative z-20 -mt-36 sm:-mt-36 md:mt-0 lg:-mt-24 xl:-mt-40 bg-transparent pb-32 md:pb-40">
+      {/* Form Section - Consistent spacing across all screen sizes */}
+      <section className="relative z-20 mt-4 sm:mt-6 md:mt-8 lg:mt-20 xl:mt-24 bg-transparent pb-32 md:pb-40">
         <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
           <div className="bg-[#DCDCDC] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-12 lg:px-28">

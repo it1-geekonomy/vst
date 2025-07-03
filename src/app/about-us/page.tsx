@@ -69,15 +69,18 @@ const timelineItems = [
 
 function AboutUsPage() {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
   const router = useRouter();
   const { width } = useWindowSize();
 
   useEffect(() => {
+    if (isPaused) return;
+    
     const timer = setInterval(() => {
       setActiveIndex(prevIndex => (prevIndex + 1) % timelineItems.length);
-    }, 2000);
+    }, 2500);
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const isTabletOrMobile = width < 1024;
 
@@ -105,7 +108,11 @@ function AboutUsPage() {
         </div>
 
         {/* Timeline Slider Section */}
-        <div className="flex flex-col items-center w-full px-4 sm:px-6 md:px-8 py-10">
+        <div 
+          className="flex flex-col items-center w-full px-4 sm:px-6 md:px-8 py-10"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           {/* Images Container */}
           <div className="relative flex justify-center items-center w-full mb-10 overflow-hidden" style={{ height: isTabletOrMobile ? '300px' : '400px' }}>
             {timelineItems.map((item, index) => {
