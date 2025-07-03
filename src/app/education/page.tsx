@@ -325,11 +325,11 @@ export default function EducationPage() {
           websiteUrl="www.skei.edu.in"
           />
           
-          <div className="w-screen bg-black">
+          <div className="relative  w-full pt-1 sm:pt-0 bg-black">
         <BusinessSectors />
 </div>
         {/* Logo section */}
-          <div className="w-screen bg-black mt-20">
+          <div className="w-screen  bg-black mt-15">
         <VSTLogoAnimation />
       </div>
         

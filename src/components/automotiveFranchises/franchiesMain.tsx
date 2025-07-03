@@ -943,8 +943,8 @@ const FranchiseSlider = () => {
                 <motion.div
                   className="flex items-center gap-4 sm:gap-6 lg:gap-16"
                   animate={{
-                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 215 : (screenWidth ?? 1200) < 1024 ? 223 : 264.1)}px`,
-                    translateX: (screenWidth ?? 1200) < 640 ? "9.532%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.07%",
+                    x: `-${scrollPosition * ((screenWidth ?? 1200) < 640 ? 216 : (screenWidth ?? 1200) < 1024 ? 223 : 264.06)}px`,
+                    translateX: (screenWidth ?? 1200) < 640 ? "49.78%" : (screenWidth ?? 1200) < 1024 ? "9.55%" : "-0.038%",
                   }}
                   transition={{
                     duration: 0.5,
@@ -952,7 +952,7 @@ const FranchiseSlider = () => {
                   }}
                 >
                   {/* Create a large number of repeating logos for infinite scrolling */}
-                  {Array(10).fill(null).map((_, outerIndex) =>
+                  {Array(20).fill(null).map((_, outerIndex) =>
                     slides.map((slide, innerIndex) => {
                       const index = (outerIndex * slides.length) + innerIndex;
                       const realIndex = index % slides.length;

@@ -279,13 +279,13 @@ const ManufacturePage = () => {
       
       {/* Black background section - moved outside the container */}
       <div className="w-screen bg-black">
-        <div className="container mx-auto px-4 md:px-8 lg:px-12 pb-12">
+        <div className="relative z-10 w-full pt-1 sm:pt-0">
           <BusinessSectors />
         </div>
       </div>
       
       {/* VSTLogoAnimation with black background */}
-      <div className="w-screen bg-black">
+      <div className="w-screen mt-15 bg-black">
         <VSTLogoAnimation />
       </div>
     </div>

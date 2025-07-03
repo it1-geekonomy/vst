@@ -33,7 +33,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
   iconColor = 'black'
 }) => {
   return (
-    <section className="w-full px-0 sm:px-4 lg:px-6 xl:px-12 2xl:px-16 flex flex-col lg:flex-row items-center justify-center z-10 relative py-4 lg:py-8">
+    <section className="w-full px-0 sm:px-4 lg:px-6 xl:px-12 2xl:px-16 flex flex-col lg:flex-row items-center justify-center z-10 relative py-8 lg:py-8">
       {/* 
         Breakpoints:
         - Default (mobile): < 640px
@@ -102,12 +102,12 @@ const LocationSection: React.FC<LocationSectionProps> = ({
           {/* Contact Information */}
           <div className="flex flex-col items-center lg:items-start justify-center">
             {/* Phone Numbers */}
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center lg:items-start">
               {phoneNumbers.map((phone, idx) => (
                 <a 
                   key={phone} 
                   href={`tel:${phone.replace(/\s+/g, '')}`}
-                  className="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity mb-2 last:mb-0"
+                  className="flex items-center justify-center lg:justify-start whitespace-nowrap hover:opacity-80 transition-opacity mb-2 last:mb-0"
                 >
                   <svg 
                     className="w-5 h-5 mr-2 flex-shrink-0" 
@@ -135,11 +135,11 @@ const LocationSection: React.FC<LocationSectionProps> = ({
 
             {/* Email Addresses */}
             {emails && (
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center lg:items-start">
                 {emails.info && (
                   <a 
                     href={`mailto:${emails.info}`}
-                    className="flex items-center hover:opacity-80 transition-opacity mb-0"
+                    className="flex items-center justify-center lg:justify-start hover:opacity-80 transition-opacity mb-0"
                   >
                     <svg 
                       className="w-5 h-5 mr-2 flex-shrink-0" 
@@ -167,9 +167,9 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                   </a>
                 )}
                 {emails.globalConnect && (
-                  <div className="flex flex-col">
+                  <div className="flex flex-col items-center lg:items-start">
                     <span
-                      className={`font-roc font-normal ${className} `}
+                      className={`font-roc font-normal text-center lg:text-left ${className} `}
                       style={{
                         fontSize: 'clamp(14px, 1.6vw, 24px)', // Responsive font size from 14px to 20px
                         lineHeight: '1.6',
@@ -179,7 +179,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     </span>
                     <a 
                       href={`mailto:${emails.globalConnect}`}
-                      className="flex items-center hover:opacity-80 transition-opacity"
+                      className="flex items-center justify-center lg:justify-start hover:opacity-80 transition-opacity"
                     >
                       <svg 
                         className="w-5 h-5 mr-2 flex-shrink-0" 
@@ -213,7 +213,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     href={websiteUrl.startsWith('http') ? websiteUrl : `https://${websiteUrl}`}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    className="flex items-center hover:opacity-80 transition-opacity mt-[-4] sm:mt-[-1]"
+                    className="flex items-center justify-center lg:justify-start hover:opacity-80 transition-opacity mt-[-4] sm:mt-[-1]"
                   >
                     <svg 
                       className="w-5 h-5 mr-2 flex-shrink-0" 
