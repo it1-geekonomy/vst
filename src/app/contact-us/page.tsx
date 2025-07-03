@@ -3,7 +3,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
 import Image from 'next/image'
 
-import frame1 from '@/app/public/contact-us/frame1.png'
+import frame1 from '@/app/public/contact-us/frame1.jpg'
 
 import axios from 'axios'
 import { useState } from 'react'
@@ -156,6 +156,7 @@ export default function Page() {
               
               <div className="flex justify-end mt-16">
                 <button
+                  
                   type="submit"
                   disabled={isSubmitting}
                   className="bg-[#FEBF3D] text-black py-4 px-12 rounded-md hover:bg-[#f4c430] transition-colors text-lg font-medium"

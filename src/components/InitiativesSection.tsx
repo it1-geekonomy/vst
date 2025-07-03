@@ -7,7 +7,9 @@ import InitiativeCard from "./InitiativeCard";
 export default function InitiativesSection() {
   return (
     <div className="w-full flex flex-col items-center">
-      <h2 className="text-[#FFFFFF] text-clamp-57">Our Initiatives</h2>
+      <h1 className="text-clamp-36  font-medium pb-2  pt-8  lg:pb-8 xl:pb-6 text-white">
+        Our Initiatives
+              </h1>
       <p className="text-[#FFFFFF] text-clamp-28 text-justify px-6  md:px-32 lg:px-48 xl:px-52 pb-8 lg:pb-18 xl:pb-20">
         At VST Group, our Corporate Social Responsibility (CSR) initiatives are rooted in a deep sense of purpose and commitment to creating lasting, positive change. We believe that our success is intertwined with the well-being of the communities we serve.
       </p>

@@ -6,7 +6,7 @@ import img1 from '../public/education/Frame 6.jpg';
 import img2 from '../public/education/Image 1.jpg';
 import img3 from '../public/education/Frame 8.jpg';
 import img4 from '../public/education/Frame 9.jpg';
-import img5 from '../public/education/Frame 10.jpg';
+import img5 from '../public/education/education scl.jpg';
 import img6 from '../public/education/Frame11.jpg';
 import img7 from '../public/education/Frame 12.jpg';
 import { StaticImageData } from 'next/image';
@@ -15,6 +15,7 @@ import BusinessSectorsUpdated from '@/components/automotiveFranchises/BusinessSe
 import gif from "@/app/public/education/vst logo gif.gif"
 import LocationSection from '@/components/LocationSection';
 import VSTLogoAnimation from '@/components/VSTLogoAnimation';
+import BusinessSectors from '@/components/automotiveFranchises/BusinessSectors';
 
 type GalleryImage = {
   id: number;
@@ -101,7 +102,7 @@ export default function EducationPage() {
     <main className="flex min-h-screen flex-col items-center bg-[#FFAED7] text-black relative overflow-hidden">
       <div className='w-full'>
         {/* Hero section with logo */}
-        <section className="w-full flex justify-center items-center z-10 relative mb-0 pt-4 pb-8">
+        <section className="w-full flex flex-col justify-center items-center z-10 relative mb-0 pt-4 pb-10">
           <div className="w-48 h-32 sm:w-56 sm:h-40 md:w-64 md:h-48 lg:w-72 xl:w-80 relative">
             <div className="w-full h-full flex justify-center items-center">
               <Image
@@ -111,6 +112,9 @@ export default function EducationPage() {
               />
             </div>
           </div>
+          <h1 className="text-center font-roc font-normal mt-8 text-3xl md:text-4xl lg:text-6xl mb-8">
+            Smt. Kamalabai Educational Institution
+          </h1>
         </section>
 
         {/* Gallery section with varying height strips */}
@@ -276,9 +280,9 @@ export default function EducationPage() {
         <section className="w-full px-4 md:px-8 lg:px-32 pb-2 md:pb-2 lg:pb-2 z-10  mx-auto">
           <div className="text-center mx-auto">
             <p className="text-clamp-28 font-normal font-roc text-justify whitespace-pre-wrap">
-              SKEI, Bangalore is a renowned co-education CBSE institution with a rich legacy of over 100 years, committed to providing a holistic and innovative education. Founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar—a visionary entrepreneur and philanthropist—the school was born out of a mission to address the lack of educational opportunities for girls, including with his daughters.{'\n\n'}
+              SKEI, Bangalore is a renowned co-education CBSE institution with a rich legacy of over 90 years, committed to providing a holistic and innovative education. Founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar—a visionary entrepreneur and philanthropist—the school was born out of a mission to address the lack of educational opportunities for girls, including with his daughters.{'\n\n'}
               Rooted in a learner-centric philosophy, SKEI blends tradition with transformation, offering a nurturing environment that fosters both critical and creative thinking. The school's mission is to empower students with 21st-century skills, preparing them to excel in a global context while emphasizing values, leadership, and a passion for lifelong learning.{'\n\n'}
-              Our century-old campus stands as a symbol of inclusive, values-driven education, where academic excellence goes hand-in-hand with empathy, integrity, and leadership. As envisioned by our founder, SKEI continues to be "a sacred place from which girls and boys shall take the highest aspirations to lead better, grander, and more fulfilling lives."
+              Our century-old campus stands as a symbol of inclusive, values-driven education, where academic excellence goes hand-in-hand with empathy, integrity, and leadership. As envisioned by our founder, SKEI continues to be a sacred place from which girls and boys shall take the highest aspirations to lead better, grander, and more fulfilling lives.
             </p>
           </div>
         </section>
@@ -293,7 +297,7 @@ export default function EducationPage() {
               rel="noopener noreferrer"
               className="w-full h-full flex items-center justify-center text-black no-underline"
             >
-              Learn More
+              Explore More
             </a>
           </div>
         </div>
@@ -317,15 +321,21 @@ export default function EducationPage() {
             }}
             googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
             className="text-black [&>div>div>div:first-child]:mb-12 [&>div>div>div:first-child]:md:mb-0 [&>div>div>div:last-child]:mt-12 [&>div>div>div:last-child]:md:mt-0"
-            iconColor="black"
+          iconColor="black"
+          websiteUrl="www.skei.edu.in"
           />
-        <div className="w-full -mt-12">
-          <div className="transform scale-110">
-            <BusinessSectorsUpdated />
-          </div>
-        </div>
+          
+          <div className="w-screen bg-black">
+        <BusinessSectors />
+</div>
+        {/* Logo section */}
+          <div className="w-screen bg-black mt-20">
+        <VSTLogoAnimation />
       </div>
-      <VSTLogoAnimation />
+        
+      </div>
+      
+      
     </main>
   );
 }
@@ -338,4 +348,4 @@ export default function EducationPage() {
 // .no-scrollbar {
 //   -ms-overflow-style: none;
 //   scrollbar-width: none;
-// }
+// 

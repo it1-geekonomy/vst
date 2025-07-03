@@ -4,10 +4,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import EducationIcon from "@/app/public/education/Education.png";
-import Auto from "@/app/public/education/Auto Parts.png";
-import ManufacturingIcon from "@/app/public/education/Manufacturing.png";
-import Automobile from "@/app/public/education/Auto mobile.png";
+import EducationIcon from "@/app/public/business-sector-Black/education";
+import Auto from "@/app/public/business-sector-Black/auto-parts";
+import ManufacturingIcon from "@/app/public/business-sector-Black/manufature";
+import Automobile from "@/app/public/business-sector-Black/auto-mobile";
 const BusinessSectorsUpdated = () => {
   const pathname = usePathname();
   const isAutomotiveFranchisesPage = pathname === "/automotive-franchises";
@@ -15,153 +15,306 @@ const BusinessSectorsUpdated = () => {
   const isManufacturePage = pathname === "/manufacture";
   const isEducationPage = pathname === "/education";
 
+  const renderIcons = () => {
+    if (isManufacturePage) {
+      return (
+        <>
+          {!isAutomotiveFranchisesPage && (
+            <Link
+              href="/automotive-franchises"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[120px]">
+                <Automobile />
+              </div>
+            </Link>
+          )}
+          {!isAutoPartsPage && (
+            <Link
+              href="/auto-parts"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[190px]">
+                <Auto />
+              </div>
+            </Link>
+          )}
+          {!isEducationPage && (
+            <Link
+              href="/education"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[100px]">
+                <EducationIcon />
+              </div>
+            </Link>
+          )}
+        </>
+      );
+    } else if (isAutomotiveFranchisesPage) {
+      return (
+        <>
+          {!isManufacturePage && (
+            <Link
+              href="/manufacture"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[160px]">
+                <ManufacturingIcon />
+              </div>
+            </Link>
+          )}
+          {!isAutoPartsPage && (
+            <Link
+              href="/auto-parts"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[190px]">
+                <Auto />
+              </div>
+            </Link>
+          )}
+          {!isEducationPage && (
+            <Link
+              href="/education"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[100px]">
+                <EducationIcon />
+              </div>
+            </Link>
+          )}
+        </>
+      );
+    } else if (isAutoPartsPage) {
+      return (
+        <>
+          {!isAutomotiveFranchisesPage && (
+            <Link
+              href="/automotive-franchises"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[120px]">
+              <Automobile />
+              </div>
+            </Link>
+          )}
+          {!isManufacturePage && (
+            <Link
+              href="/manufacture"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[150px]">
+              <ManufacturingIcon />
+              </div>
+            </Link>
+          )}
+          {!isEducationPage && (
+            <Link
+              href="/education"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[110px]">
+                <EducationIcon />
+              </div>
+            </Link>
+          )}
+        </>
+      );
+    } else if (isEducationPage) {
+      return (
+        <>
+          {!isAutomotiveFranchisesPage && (
+            <Link
+              href="/automotive-franchises"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[120px]">
+                <Automobile />
+              </div>
+            </Link>
+          )}
+          {!isAutoPartsPage && (
+            <Link
+              href="/auto-parts"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[200px] sm:w-[210px] lg:w-[210px] ">
+                <Auto />
+              </div>
+            </Link>
+          )}
+          {!isManufacturePage && (
+            <Link
+              href="/manufacture"
+              className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+            >
+              <div className="flex items-end justify-center h-[120px] w-[150px]">
+                <ManufacturingIcon />
+              </div>
+            </Link>
+          )}
+        </>
+      );
+    }
+  };
+
   return (
-    <div className="w-full flex justify-center items-center relative z-10 mt-28 ">
+    <div className="w-full flex justify-center items-center relative z-10 mt-28">
       {" "}
       {/* Adjusted top margin */}
       <div
         className="w-full max-w-[1920px] py-6 sm:py-8 md:py-10 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-24"
-        style={{ height: "454px" }}
+        style={{ height: "auto", minHeight: "454px" }}
       >
-        <h2 className="font-roc font-medium text-[24px] sm:text-[32px] md:text-[40px] leading-[100%] tracking-[0%] text-center text-[#230715]">
+         <h2 className="font-roc font-medium text-[22px] sm:text-[30px] md:text-[35px] leading-[100%] tracking-[0%] text-center text-black mb-14 sm:mb-12 md:mb-16">
           Explore Our Other Business Sectors
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-12 lg:gap-24">
+        <div className="flex flex-col md:flex-row justify-center items-center">
           {/* Desktop view - hidden on mobile */}
-          <div className="hidden md:flex gap-8 sm:gap-12 md:gap-16 lg:gap-24 px-2 sm:px-4 md:px-6 lg:px-0">
-            {!isAutomotiveFranchisesPage && (
-              <Link
-                href="/automotive-franchises"
-                className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
-              >
-                <div className="flex items-end justify-center h-[120px] w-[120px]">
-                  <Image
-                    src={Automobile}
-                    alt="Auto"
-                    width={120}
-                    height={120}
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-            )}
-            {!isManufacturePage && (
-              <Link
-                href="/manufacture"
-                className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
-              >
-                <div className="flex items-end justify-center h-[130px] w-[130px] -mt-3">
-                  <Image
-                    src={ManufacturingIcon}
-                    alt="Manufacturing"
-                    width={135}
-                    height={135}
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-            )}
-            {!isAutoPartsPage && (
-              <Link
-                href="/auto-parts"
-                className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
-              >
-                <div className="flex items-end justify-center h-[120px] w-[120px]">
-                  <Image
-                    src={Auto}
-                    alt="Auto"
-                    width={120}
-                    height={120}
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-            )}
-            {!isEducationPage && (
-              <Link
-                href="/education"
-                className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
-              >
-                <div className="flex items-end justify-center h-[100px] w-[100px] pt-30">
-                  <Image
-                    src={EducationIcon}
-                    alt="Education"
-                    width={100}
-                    height={100}
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-            )}
+          <div className="hidden md:flex justify-center items-center gap-4 sm:gap-8 md:gap-12 lg:gap-24">
+            {renderIcons()}
           </div>
 
           {/* Mobile view - horizontal layout without scrolling */}
           <div className="md:hidden w-full px-4">
-            <div className="flex justify-center items-center gap-5">
-              {!isAutomotiveFranchisesPage && (
-                <Link
-                  href="/automotive-franchises"
-                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
-                >
-                  <div className="flex items-end justify-center h-[90px] w-[90px]">
-                    <Image
-                      src={Automobile}
-                      alt="Auto"
-                      width={90}
-                      height={90}
-                      className="object-contain"
-                    />
-                  </div>
-                </Link>
+            <div className="flex justify-center items-center gap-4 sm:gap-8">
+              {isManufacturePage && (
+                <>
+                  {!isAutomotiveFranchisesPage && (
+                    <Link
+                      href="/automotive-franchises"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[75px]">
+                        <Automobile />
+                      </div>
+                    </Link>
+                  )}
+                  {!isAutoPartsPage && (
+                    <Link
+                      href="/auto-parts"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[120px]">
+                        <Auto />
+                      </div>
+                    </Link>
+                  )}
+                  {!isEducationPage && (
+                    <Link
+                      href="/education"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[75px]">
+                        <EducationIcon />
+                      </div>
+                    </Link>
+                  )}
+                </>
               )}
-              {!isManufacturePage && (
-                <Link
-                  href="/manufacture"
-                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
-                >
-                  <div className="flex items-end justify-center h-[90px] w-[90px] -mt-2">
-                    <Image
-                      src={ManufacturingIcon}
-                      alt="Manufacturing"
-                      width={90}
-                      height={90}
-                      className="object-contain"
-                    />
-                  </div>
-                </Link>
+              {isAutomotiveFranchisesPage && (
+                <>
+                  {!isManufacturePage && (
+                    <Link
+                      href="/manufacture"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[100px]">
+                        <ManufacturingIcon />
+                      </div>
+                    </Link>
+                  )}
+                  {!isAutoPartsPage && (
+                    <Link
+                      href="/auto-parts"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[120px]">
+                        <Auto />
+                      </div>
+                    </Link>
+                  )}
+                  {!isEducationPage && (
+                    <Link
+                      href="/education"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[75px]">
+                        <EducationIcon />
+                      </div>
+                    </Link>
+                  )}
+                </>
               )}
-              {!isAutoPartsPage && (
-                <Link
-                  href="/auto-parts"
-                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
-                >
-                  <div className="flex items-end justify-center h-[90px] w-[90px]">
-                    <Image
-                      src={Auto}
-                      alt="Auto"
-                      width={90}
-                      height={90}
-                      className="object-contain"
-                    />
-                  </div>
-                </Link>
+              {isAutoPartsPage && (
+                <>
+                  {!isAutomotiveFranchisesPage && (
+                    <Link
+                      href="/automotive-franchises"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[75px]">
+                        <Automobile />
+                      </div>
+                    </Link>
+                  )}
+                  {!isManufacturePage && (
+                    <Link
+                      href="/manufacture"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[100px]">
+                        <ManufacturingIcon />
+                      </div>
+                    </Link>
+                  )}
+                  {!isEducationPage && (
+                    <Link
+                      href="/education"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[75px]">
+                        <EducationIcon />
+                      </div>
+                    </Link>
+                  )}
+                </>
               )}
-              {!isEducationPage && (
-                <Link
-                  href="/education"
-                  className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
-                >
-                  <div className="flex items-end justify-center h-[90px] w-[90px] pt-2">
-                    <Image
-                      src={EducationIcon}
-                      alt="Education"
-                      width={90}
-                      height={90}
-                      className="object-contain"
-                    />
-                  </div>
-                </Link>
+              {isEducationPage && (
+                <>
+                  {!isAutomotiveFranchisesPage && (
+                    <Link
+                      href="/automotive-franchises"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[75px]">
+                        <Automobile />
+                      </div>
+                    </Link>
+                  )}
+                  {!isAutoPartsPage && (
+                    <Link
+                      href="/auto-parts"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[120px]">
+                        <Auto />
+                      </div>
+                    </Link>
+                  )}
+                  {!isManufacturePage && (
+                    <Link
+                      href="/manufacture"
+                      className="flex flex-col items-center flex-shrink-0 text-white hover:opacity-80 transition-opacity"
+                    >
+                      <div className="flex items-end justify-center h-[75px] w-[100px]">
+                        <ManufacturingIcon />
+                      </div>
+                    </Link>
+                  )}
+                </>
               )}
             </div>
           </div>

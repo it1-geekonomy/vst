@@ -17,7 +17,7 @@ interface FormData {
 }
 
 export default function Page() {
-  const MAX_ABOUT_CHARS = 400;
+  const MAX_WORDS = 400;
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -60,9 +60,15 @@ export default function Page() {
   ) => {
     const { name, value } = e.target;
 
-    // If this is the aboutYourself field, limit to max characters
-    if (name === "aboutYourself" && value.length > MAX_ABOUT_CHARS) {
-      return;
+    // If this is the aboutYourself field, limit to max words
+    if (name === "aboutYourself") {
+      const wordCount = value
+        .trim()
+        .split(/\s+/)
+        .filter((word) => word.length > 0).length;
+      if (wordCount > MAX_WORDS) {
+        return;
+      }
     }
 
     setFormData((prev) => ({
@@ -133,17 +139,21 @@ export default function Page() {
     }
   };
 
-  // Calculate remaining characters
-  const remainingChars = MAX_ABOUT_CHARS - formData.aboutYourself.length;
-  const charCountColor =
-    remainingChars <= 50
+  // Calculate remaining words
+  const wordCount = formData.aboutYourself
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word.length > 0).length;
+  const remainingWords = MAX_WORDS - wordCount;
+  const wordCountColor =
+    remainingWords <= 50
       ? "text-yellow-500"
-      : remainingChars <= 20
+      : remainingWords <= 20
         ? "text-red-500"
         : "text-gray-400";
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white">
       <Toaster
         position="top-right"
         toastOptions={{
@@ -163,61 +173,35 @@ export default function Page() {
         }}
       />
       {/* Hero Section with Background */}
-      <section className="relative h-[105vh] md:h-[100vh] xl:h-[105vh]">
+      <section className="relative h-[105vh] md:h-[60vh] xl:h-[135vh]">
         {/* Desktop Background Image */}
-        <div className="absolute inset-0 h-[110vh] md:h-[105vh] lg:h-[110vh] hidden lg:block">
+        <div className="">
           <Image
             src={frame1}
             alt="Background"
-            fill
-            className="object-fit"
-            priority
+            
+            
+            
           />
         </div>
 
         {/* Mobile Background Image */}
-        <div className="absolute inset-0 h-[70vh] md:h-[100vh] block lg:hidden">
-          <Image
-            src={frame3}
-            alt="Mobile Background"
-            fill
-            className="object-fill"
-            priority
-          />
-        </div>
+        
 
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-12 lg:px-10 xl:px-16 h-full flex flex-col justify-center">
-          <h1 className="font-roc font-normal text-[45px] sm:text-[60px] md:text-[75px] lg:text-[85px] xl:text-[90px] text-[#646464] pb-5 md:pb-10 md:mt-48 lg:-mt-14 xl:-mt-32 text-center md:text-left">
-            CAREERS
-          </h1>
-          <p className="max-w-[550px] font-normal text-[15px] sm:text-[18px] md:text-[20px] lg:text-[21px] leading-6 lg:leading-8 font-roc tracking-tight lg:text-justify">
-            The VST Group offers rewarding career opportunities across a range
-            of disciplines and verticals.
-            <p>
-            The Group is an equal opportunity
-            workplace where results are encouraged and merit is rewarded, making
-            it an ideal choice for a{" "}
-            
-            <span className="text-[#FDB813] font-normal tracking-[1px] ml-1">
-              long term career path
-            </span>
-            .
-            </p>
-          </p>
-        </div>
+        
       </section>
 
       {/* Form Section - Improved for consistent overlap across all screen sizes */}
-      <section className="relative z-20 -mt-36 sm:-mt-36 md:mt-0 lg:-mt-24 xl:-mt-40 bg-transparent pb-10 md:pb-20">
+      <section className="relative z-20 -mt-36 sm:-mt-36 md:mt-0 lg:-mt-24 xl:-mt-40 bg-transparent pb-32 md:pb-40">
         <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
-          <div className="bg-[#3B3B3B] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-12 lg:px-28">
+          <div className="bg-[#DCDCDC] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-12 lg:px-28">
             <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-1 gap-4 md:gap-6 lg:gap-8">
                 {/* Personal Details Section - Preserved styling */}
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-roc mb-1 md:mb-2 opacity-80 font-normal font-roc">
+                  <label className="block text-black text-[16px] md:text-[18px] lg:text-[20px] font-roc mb-1 md:mb-2 opacity-80 font-normal font-roc">
                     Name
                   </label>
                   <input
@@ -226,11 +210,11 @@ export default function Page() {
                     onChange={handleChange}
                     name="name"
                     required
-                    className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none font-normal font-roc"
+                    className="w-full bg-[#E8E8E8] rounded p-2 md:p-2.5 focus:outline-none font-normal font-roc"
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
+                  <label className="block text-black text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
                     Mobile number
                   </label>
                   <input
@@ -239,11 +223,11 @@ export default function Page() {
                     onChange={handleChange}
                     name="mobile"
                     required
-                    className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
+                    className="w-full bg-[#E8E8E8] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80 ">
+                  <label className="block text-black text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80 ">
                     Email
                   </label>
                   <input
@@ -252,14 +236,14 @@ export default function Page() {
                     onChange={handleChange}
                     name="email"
                     required
-                    className="w-full bg-[#666666] rounded p-2 md:p-2.5 focus:outline-none"
+                    className="w-full bg-[#E8E8E8] rounded p-2 md:p-2.5 focus:outline-none"
                   />
                 </div>
 
                 {/* About Yourself Section - NEW */}
                 <div>
                   <div className="mb-2">
-                    <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc opacity-80">
+                    <label className="block text-black text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc opacity-80">
                       Tell us the role and vertical you're applying for, and why
                       you're interested in it?
                     </label>
@@ -267,9 +251,9 @@ export default function Page() {
                   <div className="relative">
                     {/* Char count always at top right inside the box */}
                     <span
-                      className={`absolute top-2 right-3 text-xs font-semibold text-white ${charCountColor}`}
+                      className={`absolute top-2 right-3 text-xs font-semibold text-black ${wordCountColor}`}
                     >
-                      {remainingChars} chars left
+                      {remainingWords} words 
                     </span>
                     <textarea
                       value={formData.aboutYourself}
@@ -277,23 +261,20 @@ export default function Page() {
                       name="aboutYourself"
                       required
                       rows={4}
-                      maxLength={MAX_ABOUT_CHARS}
-                      className="w-full bg-[#666666]  rounded-xl p-4 focus:outline-none resize-none shadow-md transition-all duration-200"
+                      className="w-full bg-[#E8E8E8] rounded-xl p-4 focus:outline-none resize-none shadow-md transition-all duration-200"
                     />
                     <div className="w-full h-1 mt-2 rounded-full overflow-hidden">
                       <div
                         className={`h-full ${
-                          formData.aboutYourself.length > MAX_ABOUT_CHARS * 0.8
-                            ? formData.aboutYourself.length >
-                              MAX_ABOUT_CHARS * 0.95
+                          wordCount > MAX_WORDS * 0.8
+                            ? wordCount > MAX_WORDS * 0.95
                               ? "bg-red-500"
                               : "bg-yellow-500"
                             : "bg-green-500"
                         }`}
                         style={{
                           width: `${Math.min(
-                            (formData.aboutYourself.length / MAX_ABOUT_CHARS) *
-                              100,
+                            (wordCount / MAX_WORDS) * 100,
                             100
                           )}%`,
                         }}
@@ -305,11 +286,11 @@ export default function Page() {
 
               {/* Upload Resume Section - Enhanced with responsive sizing */}
               <div className="mt-6 md:mt-8">
-                <label className="block text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
+                <label className="block text-black text-[16px] md:text-[18px] lg:text-[20px] font-normal font-roc mb-1 md:mb-2 opacity-80">
                   Upload resume
                 </label>
                 <div
-                  className={`bg-[#666666] rounded-lg p-8 sm:p-10 md:p-12 lg:p-16 text-center cursor-pointer relative transition-all duration-300 ${selectedFile ? "border-2 border-[#FDB813]" : ""}`}
+                  className={`bg-[#E8E8E8] rounded-lg p-8 sm:p-10 md:p-12 lg:p-16 text-center cursor-pointer relative transition-all duration-300 ${selectedFile ? "border-2 border-[#FDB813]" : ""}`}
                 >
                   <div className="flex flex-col items-center justify-center h-full relative">
                     <input
@@ -330,7 +311,7 @@ export default function Page() {
                           className="object-contain pointer-events-none sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px]"
                           priority
                         />
-                        <p className="mt-2 text-sm md:text-base text-white opacity-70 font-normal font-roc">
+                        <p className="mt-2 text-sm md:text-base text-black opacity-70 font-normal font-roc">
                           Click to upload your resume
                         </p>
                       </>
@@ -341,7 +322,7 @@ export default function Page() {
                             {getFileIcon(selectedFile.name || "")}
                           </span>
                           <div className="text-left overflow-hidden flex-1">
-                            <p className="text-white font-medium truncate">
+                            <p className="text-black font-medium truncate">
                               {selectedFile.name}
                             </p>
                             <p className="text-xs text-gray-300">
@@ -360,7 +341,7 @@ export default function Page() {
                             ✕
                           </button>
                         </div>
-                        <p className="mt-3 text-sm text-[#FDB813] font-normal font-roc">
+                        <p className="mt-3 text-sm text-black font-normal font-roc">
                           Click again to change file
                         </p>
                       </div>
@@ -372,7 +353,7 @@ export default function Page() {
                     {fileError}
                   </p>
                 ) : (
-                  <p className="text-xs sm:text-sm text-[#FDB813] font-normal font-roc mt-1 md:mt-2">
+                  <p className="text-xs sm:text-sm text-black font-normal font-roc mt-1 md:mt-2">
                     File types accepted: TXT, PDF or Word Doc
                   </p>
                 )}
@@ -383,16 +364,18 @@ export default function Page() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[#FDB813] text-black py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-roc"
+                  className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[black] text-white py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-roc"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Sending..." : "Send"}
                 </button>
               </div>
             </form>
           </div>
         </div>
       </section>
-      <Footer bgcolour="bg-[#101010]" />
+      <div className="relative z-10">
+        <Footer bgcolour="bg-[#101010]" />
+      </div>
     </div>
   );
 }

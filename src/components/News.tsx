@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
@@ -9,18 +9,19 @@ import card1 from "@/app/public/images/news/card1.png";
 import card2 from "@/app/public/images/news/card2.png";
 import card3 from "@/app/public/images/news/card3.png";
 import post4New from "@/app/public/images/news/post4new.png";
-import card5 from "@/app/public/images/news/card5.png";
-import post6 from "@/app/public/images/news/post6.png";
-import card6 from "@/app/public/images/news/card6New.png";
-import card8 from "@/app/public/images/news/card8.png";
-// import card4new from "@/app/public/images/news/card4new.png";
-import card7new from "@/app/public/images/news/card7new.jpg";
+import card5 from "@/app/public/news-and-media/NewsAndArticles/Image1.png";
+import card6 from "@/app/public/news-and-media/NewsAndArticles/Image2.png";
+import card7 from "@/app/public/news-and-media/NewsAndArticles/Image3.png";
+import card8 from "@/app/public/news-and-media/NewsAndArticles/Image4.png";
+import card4 from "@/app/public/news-and-media/NewsAndArticles/image 209.png";
+
 
 
 
 import { title } from 'process';
 
-const newsData = [
+// Separate data for Latest Updates and News & Articles
+const latestUpdatesData = [
   {
     id: 1,
     image: card1,
@@ -101,116 +102,181 @@ const newsData = [
     time: '',
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
   },
-  {
-    id: 5,
-    image: card5,
-    title: "Happy to inaugurate Maserati's pop-up showroom in Bengaluru! ",
-    tag: 'Industry',
+  
+    
+];
+
+const newsAndArticlesData = [
+{
+    id: 1,
+    image: card4,
+    title: "VST Tillers Tractors Showcases its range of innovative Farm Machines at the Krushi Odisha 2025",
+    tag: 'Business',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_maserati-vstmaserati-southindia-activity-7280809406001258497-GtYy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+    route: 'https://onlinenews9.in/business/vst-tillers-tractors-showcases-its-range-of-innovative-farm-machines/'
   },
   {
-    id: 6,
+    id: 2,
+    image: card5,
+    title: "VST Group's strategies for success in India's booming luxury auto market",
+    tag: 'Business',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.manufacturingtodayindia.com/vst-groups-strategies-for-success-in-indias-booming-luxury-auto-market?fbclid=PAZXh0bgNhZW0CMTEAAaf3D-ozwleWR98__LGP3YP-ARg2AYiwIyCF49HCTeYvEHx4-MXETWxjImtvPg_aem_dSj40Rx1kG0ytZ_I--W-sg'
+  },
+  {
+    id: 3,
     image: card6,
-    title: 'Habits become your second nature. So it is with winning! Our winning streak continues. Education World Grand Jury Awards ',
-    // title:"The Bharat Mobility Global Expo 2025 highlighted some big launches including Mercedes-Benz India's Concept CLA-Class, Porsche India's all-electric Macan, Kia India's Syros and BYD India Private Limited's SEALION 7. As partners, it's great to see these brands driving change in mobility.",
+    title: "Sales Revenue Of Jaguar, Mercedes And Other Premium Brands Has Seen Over 20% Growth: VST Group MD Arun Surendra",
+    tag: 'Anniversary',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.outlookbusiness.com/corporate/sales-revenue-of-jaguar-mercedes-and-other-premium-brands-has-seen-over-20-growth-this-year-vst-group-md-arun-surendra'
+  },
+  {
+    id: 4,
+    image: card7,
+    title: "Industry eyes electric tractor adoption amid mounting challenges",
     tag: 'Innovation',
     location: 'Bengaluru',
     time: '',
-    route: 'https://skei.edu.in/awards#education-world-grand-jury-awards'
+    route: 'https://auto.economictimes.indiatimes.com/news/automotive/industry-eyes-electric-tractor-adoption-amid-mounting-challenges/113997926?fbclid=PAZXh0bgNhZW0CMTEAAafs5SNE3v-NwiCrVv5A0OcW8xg57SduP7gNQGGNMpBB1yN6bmSSWmnKMRbKHg_aem_VaM4ujXKpTP7_pI1ph2iPw'
   },
   {
-    id: 7,
-    image:card7new,
-    title: "A proud moment for the VST family! VST Central (KIA), Salem has been presented with the 'Global Best Dealer'",
-    tag: 'Inspiration',
-    location: 'Bengaluru',
-    time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_kiaplatinumprestige-kia-kiaindia-activity-7288807665202339842-OSvJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE'
-  },
-  {
-    id: 8,
+    id: 5,
     image: card8,
-    title:'VST Zetor Tractors, a partnership between VST Tillers Tractors Ltd and HTC Investments',
-    // title: (
-    //   <>
-    //     <a
-    //       href="https://www.linkedin.com/company/vst-zetor/" 
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //       className="underline text-white hover:text-white"
-    //       onClick={(e) => e.stopPropagation()}
-    //     >
-    //       VST Zetor Tractors
-    //     </a>
-    //     , a partnership between{' '}
-    //     <a
-    //       href="https://www.linkedin.com/company/vsttillers/"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //       className="underline text-white hover:text-white"
-    //       onClick={(e) => e.stopPropagation()}
-    //     >
-    //       VST Tillers Tractors Ltd
-    //     </a>{' '}
-    //     and HTC Investments.
-    //   </>
-    // ),
-    
-    tag: 'Industry',
+    title: "Maserati and VST Group Join Forces to Bring Iconic Italian Luxury Cars to South India",
+    tag: 'Partnership',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/cmv360_vstzetor-tractorinnovation-agriculturaltechnology-activity-7193513168457875456-ZPkw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
-  },  
+    route: 'https://www.business-standard.com/content/press-releases-ani/maserati-and-vst-group-join-forces-to-bring-iconic-italian-luxury-cars-to-south-india-124121100503_1.html?fbclid=PAZXh0bgNhZW0CMTEAAacQ5vIqrym5JnbKR5vrLEeLjiv0lijVJ-cQPylm8nTKVB7T8sMTappqJ3oZOA_aem_aYDO8RrZC-KpHqLSy6nLIQ'
+  },
 ];
 
 const News = () => {
   const router = useRouter();
   const [activeId, setActiveId] = useState<number | null>(null);
+  const latestUpdatesRef = useRef<HTMLDivElement>(null);
+  const newsArticlesRef = useRef<HTMLDivElement>(null);
 
-    const handleCardClick = (id: number, route: string) => {
+  const handleCardClick = (id: number, route: string) => {
     setActiveId(id);
-    window.open(route, '_blank'); // Open in a new tab
+    window.open(route, '_blank');
   };
 
-  return (
-    <div className="bg-[#2E2E2E] min-h-screen py-10  px-3 sm:px-4 md:px-6 lg:px-16 text-white">
-      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">Our News</h1>
+  const scrollSection = (ref: React.RefObject<HTMLDivElement | null>, direction: 'left' | 'right') => {
+    if (ref.current) {
+      const scrollAmount = 400; // Adjust this value based on your card width + gap
+      const currentScroll = ref.current.scrollLeft;
+      const newScroll = direction === 'left' 
+        ? currentScroll - scrollAmount 
+        : currentScroll + scrollAmount;
+      
+      ref.current.scrollTo({
+        left: newScroll,
+        behavior: 'smooth'
+      });
+    }
+  };
 
-      <div className="px-3.5 flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {newsData.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col"
-              onClick={() => handleCardClick(item.id, item.route)}
-            >
-              {/* Image */}
-              <div className="relative w-full h-[330px]">
-                <Image
-                  src={item.image}
-                  alt="news-image"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+  const NewsCard = ({ item }: { item: typeof latestUpdatesData[0] }) => (
+    <div
+      key={item.id}
+      className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col flex-shrink-0 w-[300px] sm:w-[280px] md:w-[300px] lg:w-[320px]"
+      onClick={() => handleCardClick(item.id, item.route)}
+    >
+      <div className="relative w-full h-[330px]">
+        <Image
+          src={item.image}
+          alt="news-image"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="p-4 flex flex-col justify-between flex-grow bg-[#333435] backdrop-blur-[36.55px]">
+        <h2 className="mt-2 text-[20px] leading-[140%] tracking-wide font-normal font-roc transition-all">
+          {item.title}
+        </h2>
+      </div>
+    </div>
+  );
 
-              <div className="p-4 flex flex-col justify-between flex-grow bg-[#333435]backdrop-blur-[36.55px]">
-                <h2 className="mt-2 text-[23px] leading-[130%] tracking-wide font-normal font-roc transition-all">
-                  {item.title}
-                </h2>
-              </div>
-            </div>
+  const SectionWithArrows = ({ 
+    title, 
+    data, 
+    ref, 
+    sectionName 
+  }: { 
+    title: string; 
+    data: typeof latestUpdatesData; 
+    ref: React.RefObject<HTMLDivElement | null>;
+    sectionName: string;
+  }) => (
+    <section className="mb-20 relative">
+      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">{title}</h1>
+      
+      {/* Cards Container */}
+      <div className="relative px-3.5">
+        <div 
+          ref={ref}
+          className="flex gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {data.map((item) => (
+            <NewsCard key={item.id} item={item} />
           ))}
         </div>
-      </div>
+        
+        {/* Navigation Arrows */}
+        <div className="absolute right-4 -bottom-12 flex gap-4 items-center z-10">
+          <button
+            onClick={() => scrollSection(ref, 'left')}
+            className="pr-3 bg-transparent border-none"
+            aria-label={`Scroll ${sectionName} left`}
+            type="button"
+          >
+            {/* Left Arrow SVG */}
+            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.0127 10.0083L2.00079 10.0083M2.00079 10.0083L11.0061 19.0137M2.00079 10.0083L11.0061 1.00296" stroke="white" stroke-width="2"/>
+</svg>
 
-      {/* it might be Pagination things there */}
-      {/* <div className="flex justify-center mt-10 gap-4">
-        <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Previous</button>
-        <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Next</button>
-      </div> */}
+          </button>
+          
+          <button
+            onClick={() => scrollSection(ref, 'right')}
+            className="p-0 bg-transparent border-none"
+            aria-label={`Scroll ${sectionName} right`}
+            type="button"
+          >
+            {/* Right Arrow SVG */}
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 12.0073H22.0119M22.0119 12.0073L13.0065 3.00195M22.0119 12.0073L13.0065 21.0127" stroke="white" stroke-width="2"/>
+</svg>
+
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+
+  return (
+    <div className="bg-[#2E2E2E] min-h-screen py-10 px-3 sm:px-4 md:px-6 lg:px-16 text-white">
+      {/* Latest Updates Section */}
+      <SectionWithArrows 
+        title="Latest Updates" 
+        data={latestUpdatesData} 
+        ref={latestUpdatesRef}
+        sectionName="latest updates"
+      />
+
+      {/* News & Articles Section */}
+      <SectionWithArrows 
+        title="News & Articles" 
+        data={newsAndArticlesData} 
+        ref={newsArticlesRef}
+        sectionName="news and articles"
+      />
     </div>
   );
 };

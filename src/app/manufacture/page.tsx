@@ -63,7 +63,7 @@ const ManufacturePage = () => {
 
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % tractorImages.length)
-    }, 5000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [isHovering])
@@ -83,8 +83,8 @@ const ManufacturePage = () => {
           <Headerlogo />
         </div>
         {/* Tillers & Tractors Heading */}
-        <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[80px] 2xl:text-[70px] 3xl:text-[100px] font-normal mt-8 md:my-8 text-white text-center font-roc">
-          VST Tillers & Tractors
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl  font-normal mt-8 md:my-8 text-white text-center font-roc">
+          VST Tillers Tractors
         </h1>
         
         {/* Desktop view - Image Grid Section */}
@@ -95,14 +95,14 @@ const ManufacturePage = () => {
                 src={image.base}
                 alt={`VST Tractor ${index + 1}`}
                 fill
-                className="object-fit transition-opacity duration-300 group-hover:opacity-0"
+                className="object-fit transition-opacity duration-200 group-hover:opacity-0"
                 priority
               />
               <Image
                 src={image.hover}
                 alt={`VST Tractor ${index + 1}`}
                 fill
-                className="object-fit opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="object-fit opacity-0 transition-opacity duration-7000 group-hover:opacity-100"
                 priority
               />
             </div>
@@ -182,23 +182,16 @@ const ManufacturePage = () => {
         </div>
 
         <div className="px-0">
-          <h1 className="text-clamp-57 mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
-            Empowering Farmers With Efficiency, Affordability And Reliability
+        <h1 className="text-clamp-57 mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
+            Empowering farmers with efficiency, affordability<span className="hidden md:inline"><br /></span> and reliability
           </h1>
           
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 w-full">
             <div className="flex-1 text-white md:max-w-[48%]">
               <div className="mb-8">
-                <p className="text-clamp-28 font-roc text-justify" style={{ 
-                  lineHeight: 1.8,
-                  hyphens: "auto",
-                  wordSpacing: "-0.5px",
-                  letterSpacing: "0.02em"
-                }}>
-                  VST Tillers Tractors Ltd., a flagship company of VST Group, was incorporated in 1967 as a joint
-                  venture with Mitsubishi Heavy Industries Ltd. and Mitsubishi Corporation of Japan. The company
-                  revolutionized agricultural mechanization in India by manufacturing Power Tillers-essential for paddy
-                  cultivation by small and medium-scale farmers.
+             
+                <p className="text-clamp-24 font-roc text-justify">
+                  A pioneer in farm mechanization, VST Tillers Tractors Ltd. is India’s one of the leading manufacturer of power tillers and compact 4WD tractors. Established in 1967 through a joint venture with Mitsubishi Heavy Industries, Japan, VST has grown to dominate over 70% of the Indian tiller market and exports to 40+ countries globally. <br /> <br /> With over five decades of trust, innovation, and durability, VST offers a robust product range from 9 HP to 50 HP, catering to diverse farming needs from vineyards to commercial haulage. Our commitment to quality and farmer empowerment has made us a preferred partner in sustainable agriculture across the world.
                 </p>
               </div>
 
@@ -263,7 +256,7 @@ const ManufacturePage = () => {
                address={{
                  street: "Regd. Office: Plot No.1, Hale",
                  street2: "Devasandra Industrial Layout,",
-                 street3: "Whitefield Road, Mahadevapura,",
+                 street3: "Whitefield Road, Mahadevapura",
                  city: "Post, Bengaluru - 560 048, India.",
                  state: "",
                  pincode: ""       
@@ -278,17 +271,22 @@ const ManufacturePage = () => {
                }}
                className="text-white text-justify"
                iconColor="white"
-               showEmailIcon={true}
+              showEmailIcon={true}
+                websiteUrl="www.vsttractors.com"
              />
-          </div>
-          <div className="mt-16 md:mt-24 w-full">
-            <BusinessSectors />
           </div>
         </div>
       </div>
       
-      {/* Added margin-top to create space between BusinessSectors and VSTLogoAnimation */}
-      <div className="w-full mt-5">
+      {/* Black background section - moved outside the container */}
+      <div className="w-screen bg-black">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12 pb-12">
+          <BusinessSectors />
+        </div>
+      </div>
+      
+      {/* VSTLogoAnimation with black background */}
+      <div className="w-screen bg-black">
         <VSTLogoAnimation />
       </div>
     </div>

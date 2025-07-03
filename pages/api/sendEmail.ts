@@ -9,7 +9,7 @@ export const config = {
   },
 };
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
+sgMail.setApiKey("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");
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -61,8 +61,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     </div>
   `;
     const msg: any = {
-      to: process.env.SENDGRID_TO_EMAIL,
-      from: process.env.SENDGRID_FROM_EMAIL,
+      to: "sachin@geekonomy.in",
+      from: "sachin@geekonomy.in",
       subject: 'New Career Form Submission',
       html,
     };
