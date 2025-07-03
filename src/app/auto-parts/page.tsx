@@ -586,7 +586,7 @@ export default function Page() {
           </div>
           
           {/* Business Sectors section with higher z-index to overlap yellow */}
-          <div className="relative z-10 w-full bg-black">
+          <div className="relative z-10 w-full pt-1 sm:pt-0  bg-black ">
             <BusinessSectors />
           </div>
           {/* Logo section with higher z-index to overlap yellow */}

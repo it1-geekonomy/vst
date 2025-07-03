@@ -56,7 +56,7 @@ export default function CorporatePhilanthropy() {
             <Timeline />
           </div>
         </motion.div>
-        <div className="w-full mt-32 md:mt-20 lg:mt-28 mb-8 md:mb-12 lg:mb-15">
+        <div className="w-full mt-32 md:mt-20 lg:mt-28 mb-8 md:mb-12 lg:mb-15 flex justify-center items-center">
           <VSTLogoAnimation />
         </div>
       </main>

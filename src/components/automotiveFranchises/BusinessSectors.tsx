@@ -136,7 +136,7 @@ const BusinessSectors = () => {
   };
   
   return (
-    <div className="w-full flex justify-center items-center relative z-10 mt-28">
+    <div className="w-full flex justify-center items-center relative z-10 mt-28 ">
       <div
         className="w-full max-w-[1920px] py-4 sm:py-6 md:py-8 lg:py-16 lg:pb-32 px-3 sm:px-6 md:px-8 lg:px-24"
         style={{ height: 'auto', minHeight: '354px' }}
