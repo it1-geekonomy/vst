@@ -287,9 +287,9 @@ export default function EducationPage() {
           </div>
         </section>
 
-        <div className="w-full px-4 md:px-8 lg:px-30 mb-20 mt-4 font-normal font-roc text-justify">
+       <div className="w-full px-4 md:px-8 lg:px-30 mb-20 mt-4 font-normal font-roc text-justify flex justify-center lg:block lg:text-justify">
           <div
-            className="w-[300px] h-[50px] rounded-[5px] bg-[#FEBF3D] px-10 py-4 text-2xl text-black tracking-wider shadow-[0_2px_8px_rgba(0,0,0,0.07)] transition-all duration-300 ease-in-out flex items-center justify-center cursor-pointer hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
+            className="w-full max-w-xs md:max-w-sm lg:w-[300px] rounded-[5px] bg-[#FEBF3D] px-6 py-3 md:px-8 md:py-4 text-lg md:text-xl lg:text-2xl text-black tracking-wider shadow-[0_2px_8px_rgba(0,0,0,0.07)] transition-all duration-300 ease-in-out flex items-center justify-center cursor-pointer hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
           >
             <a
               href="https://www.skei.edu.in/"
