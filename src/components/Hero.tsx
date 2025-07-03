@@ -175,13 +175,15 @@ const Hero = () => {
 
   // Mobile slider functions
   const goToNextSlide = () => {
-    const nextIndex = (currentSlide + 1) % slides.length;
-    setCurrentSlide(nextIndex);
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
   };
 
   const goToPrevSlide = () => {
-    const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
-    setCurrentSlide(prevIndex);
+    if (currentSlide < slides.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
   };
 
   // Mobile view render
@@ -282,8 +284,8 @@ const Hero = () => {
             {slides.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${currentSlide === index ? 'bg-white' : 'bg-white/50'}`}
-                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${currentSlide === (slides.length - 1 - index) ? 'bg-white' : 'bg-white/50'}`}
+                onClick={() => setCurrentSlide(slides.length - 1 - index)}
               />
             ))}
           </div>
