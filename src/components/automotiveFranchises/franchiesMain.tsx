@@ -1640,7 +1640,7 @@ const FranchiseSlider = () => {
             )}
           </div>
           
-        </div>
+        </div>i want in center
           
         {/* Text Learn More Link */}
        
@@ -1648,7 +1648,7 @@ const FranchiseSlider = () => {
         <BusinessSectors />
 </div>
         {/* Logo section */}
-          <div className="w-screen bg-black mt-20">
+          <div className="w-screen bg-black mt-20 flex justify-center items-center">
         <VSTLogoAnimation />
       </div>
 

@@ -3,7 +3,7 @@ import { useState, ChangeEvent } from "react";
 import axios from "axios";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import frame1 from "../public/careers/frame1.jpg";
+import frame1 from "../public/careers/Career_7[1].jpg";
 import frame2 from "../public/careers/upload-icon.png";
 import frame3 from "../public/careers/mobilebg.png";
 import { Toaster, toast } from "react-hot-toast";
@@ -172,24 +172,37 @@ export default function Page() {
           },
         }}
       />
-      {/* Hero Section with Background */}
-      <section className="relative h-[20vh] md:h-[40vh] lg:h-[50vh] xl:h-[65vh] 2xl:h-[100vh] ">
-        {/* Desktop Background Image */}
-        <div className="">
-          <Image
-            src={frame1}
-            alt="Background"
-            
-            
-            
-          />
+      {/* Hero Section with Background Image and Overlayed Text */}
+      <section className="relative h-[40vh] md:h-[60vh] w-full overflow-hidden flex items-center px-4 lg:px-6 xl:px-11 2xl:px-14 pt-4">
+        {/* Background Image */}
+        <Image
+          src={frame1}
+          alt="Careers"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Strong white gradient for mobile, tablet, and medium laptops (md and below) */}
+        <div
+          className="absolute inset-0 z-10 pointer-events-none block lg:hidden"
+          style={{ background: 'linear-gradient(to right, white 65%, transparent 100%)' }}
+        />
+        {/* Subtle gradient for large screens (lg only) */}
+        <div
+          className="absolute inset-0 z-10 pointer-events-none hidden lg:block xl:hidden"
+          style={{ background: 'linear-gradient(to right, white 30%, transparent 100%)' }}
+        />
+        {/* No gradient for xl and above */}
+        {/* No overlay needed for xl:block, so nothing here */}
+        {/* Text Content */}
+        <div className="relative z-20 flex flex-col justify-center h-full px-4 lg:px-6 xl:px-11 2xl:px-14 max-w-[750px]">
+          <h1 className="text-4xl md:text-6xl font-roc font-normal text-black mb-6 text-center md:text-left pt-2">
+            Careers
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-black font-roc text-justify leading-relaxed">
+            The VST Group offers rewarding career opportunities across a range of disciplines and verticals. The Group is an equal opportunity workplace where results are encouraged and merit is rewarded, making it an ideal choice for a long-term career path.
+          </p>
         </div>
-
-        {/* Mobile Background Image */}
-        
-
-        {/* Hero Content */}
-        
       </section>
 
       {/* Form Section - Consistent spacing across all screen sizes */}

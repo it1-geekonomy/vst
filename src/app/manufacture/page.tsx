@@ -79,11 +79,11 @@ const ManufacturePage = () => {
   return (
     <div className="xl:pt-12 bg-[linear-gradient(180deg,#02231C_0%,#04473F_50%,#066C5E_100%)]">
       <div className="mx-auto px-4 md:px-8 lg:px-12 pb-12 flex flex-col justify-around w-[95%] md:w-[98%]">
-        <div className="flex justify-center mt-3">
+        <div className="flex justify-center mt-10 md:mt-3">
           <Headerlogo />
         </div>
         {/* Tillers & Tractors Heading */}
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl  font-normal mt-8 md:my-8 text-white text-center font-roc">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-normal mt-8 md:my-8 text-white text-center font-roc">
           VST Tillers Tractors
         </h1>
         
@@ -110,10 +110,10 @@ const ManufacturePage = () => {
         </div>
 
         {/* Mobile view - Full width carousel with hover effect and top padding */}
-        <div className="md:hidden pt-12 relative h-[450px] w-full mb-8">
+        <div className="md:hidden  relative h-[450px] w-full mb-4">
           <div className="absolute inset-0 top-12 w-full h-[400px]">
             <div 
-              className="relative h-full w-full overflow-hidden"
+              className="relative h-full w-full mt-[-10] overflow-hidden"
               onTouchStart={() => setIsHovering(true)}
               onTouchEnd={() => setIsHovering(false)}
               onMouseEnter={() => setIsHovering(true)}
@@ -124,7 +124,7 @@ const ManufacturePage = () => {
                 src={images[currentSlide].base}
                 alt={`VST Tractor ${currentSlide + 1}`}
                 fill
-                className={`object-fit transition-opacity duration-300 ${isHovering ? 'opacity-0' : 'opacity-100'}`}
+                className={`object-fit transition-opacity duration-300  ${isHovering ? 'opacity-0' : 'opacity-100'}`}
                 priority
               />
               
@@ -285,7 +285,7 @@ const ManufacturePage = () => {
       </div>
       
       {/* VSTLogoAnimation with black background */}
-      <div className="w-screen mt-15 bg-black">
+      <div className="w-screen mt-15 bg-black flex justify-center items-center">
         <VSTLogoAnimation />
       </div>
     </div>
