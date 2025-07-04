@@ -7,7 +7,7 @@ interface VSTLogoAnimationProps {
 
 const VSTLogoAnimation = ({ className = "" }: VSTLogoAnimationProps) => {
   return (
-    <div className={`w-full h-[240px] lg:h-[240px] xl:h-[280px] flex justify-center items-center relative ${className}`}>
+    <div className={`w-full h-[240px] lg:h-[240px] xl:h-[280px] pl-4  flex justify-center items-center relative ${className}`}>
       <div className="w-full h-full relative">
         <Image
           src={gif}

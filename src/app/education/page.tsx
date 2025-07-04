@@ -297,7 +297,7 @@ export default function EducationPage() {
           </div>
         </section>
 
-       <div className="w-full px-4 md:px-8 lg:px-30 mb-20 mt-4 font-normal font-roc text-justify flex justify-center lg:block lg:text-justify">
+       <div className="w-full px-4 md:px-8 lg:px-30 mb-8 sm:mb-12 md:mb-20  mt-4 font-normal font-roc text-justify flex justify-center lg:block lg:text-justify">
           <div
             className="w-full max-w-xs md:max-w-sm lg:w-[300px] rounded-[5px] bg-[#FEBF3D] px-6 py-3 md:px-8 md:py-4 text-lg md:text-xl lg:text-2xl text-black tracking-wider shadow-[0_2px_8px_rgba(0,0,0,0.07)] transition-all duration-300 ease-in-out flex items-center justify-center cursor-pointer hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
           >
@@ -330,9 +330,10 @@ export default function EducationPage() {
               info: 'info@skei.edu.in'
             }}
             googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-            className="text-black [&>div>div>div:first-child]:mb-12 [&>div>div>div:first-child]:md:mb-0 [&>div>div>div:last-child]:mt-12 [&>div>div>div:last-child]:md:mt-0"
+            className="text-black"
           iconColor="black"
           websiteUrl="www.skei.edu.in"
+          mobilePadding="education"
           />
           
           <div className="relative  w-full pt-1 sm:pt-0 bg-black">

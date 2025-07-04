@@ -69,7 +69,7 @@ const ContactUs: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
                 Get In Touch
               </h1>
             </div>
-            <div className="w-full h-[300px] lg:h-[350px] xl:h-[450px] flex justify-center items-center">
+            <div className="w-full h-[300px] lg:h-[350px] xl:h-[450px] flex justify-center items-center py-5">
               <Image
                 src={gif}
                 alt="VST Logo Animation"

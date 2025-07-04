@@ -298,6 +298,7 @@ const ManufacturePage = () => {
                className="text-white"
                iconColor="white"
                websiteUrl="www.vsttractors.com"
+               mobilePadding="manufacture"
              />
           </div>
         </div>

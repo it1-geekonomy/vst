@@ -369,9 +369,9 @@ export default function Page() {
         </div>
 
         {/* VST AUTO PARTS Title */}
-        <div className="relative z-10 pt-8 sm:pt-12 lg:pt-12 pb-4 sm:pb-6 lg:pb-4 text-center">
+        <div className="relative z-10 pt-8 sm:pt-12 lg:pt-12 pb-6 sm:pb-6 lg:pb-4 text-center">
           {/* Logo Section */}
-          <div className="flex justify-center lg:mb-8 mb-5">
+          <div className="flex justify-center lg:mb-8 mb-6">
             <Image
               src={Logo}
               alt="OE Parts Logo"
@@ -504,8 +504,8 @@ export default function Page() {
 
       {/* Location section with its own gradient background - completely separate section */}
       <div className="relative w-full bg-[#FFB922] mt-0">
-        <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-16 sm:pt-20 lg:pt-30 xl:pt-60 ">
-          <div className="pt-12 sm:pt-16 lg:pt-16 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
+        <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-8 sm:pt-20 lg:pt-30 xl:pt-60 ">
+          <div className="pt-8 sm:pt-16 lg:pt-16 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
             {/* Company information section */}
             <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl  font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
               Reliable distribution and strong partnerships driving growth
@@ -582,6 +582,7 @@ export default function Page() {
               className="text-black [&>div>div>div:first-child]:mb-12 [&>div>div>div:first-child]:md:mb-0 [&>div>div>div:last-child]:mt-12 [&>div>div>div:last-child]:md:mt-0   [&_a]:mt-4"
               iconColor="black"
               websiteUrl="https://vstmotors.com/parts/"
+              mobilePadding="auto-parts"
             />
           </div>
           
