@@ -154,7 +154,7 @@ export default function NewsMedia() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % headlines.length);
-    }, 7000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 

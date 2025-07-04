@@ -250,7 +250,7 @@ const ManufacturePage = () => {
           </div>
 
           {/* Location Section */} 
-          <div className="mt-16 md:mt-24 w-full">
+          <div className="mt-8 sm:mt-12 md:mt-24 w-full">
             <LocationSection
                locationImage="tillers/Group 1000001966.png"
                address={{
@@ -285,7 +285,7 @@ const ManufacturePage = () => {
       </div>
       
       {/* VSTLogoAnimation with black background */}
-      <div className="w-screen mt-15 bg-black flex justify-center items-center">
+      <div className="w-screen bg-black flex justify-center items-center py-1 -mt-8 pl-3">
         <VSTLogoAnimation />
       </div>
     </div>

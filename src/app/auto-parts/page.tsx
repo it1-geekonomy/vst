@@ -590,7 +590,7 @@ export default function Page() {
             <BusinessSectors />
           </div>
           {/* Logo section with higher z-index to overlap yellow */}
-          <div className="relative z-20 w-full bg-black mt-15">
+          <div className="relative z-20 w-full bg-black flex justify-center items-center py-1 -mt-8 pl-3">
             <VSTLogoAnimation />
           </div>
           

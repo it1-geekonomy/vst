@@ -229,7 +229,7 @@ const News = () => {
         </div>
         
         {/* Navigation Arrows */}
-        <div className="absolute right-4 -bottom-12 flex gap-4 items-center z-10">
+        <div className="absolute right-4 -bottom-12 flex gap-4 items-center z-10 hidden md:flex">
           <button
             onClick={() => scrollSection(ref, 'left')}
             className="pr-3 bg-transparent border-none"

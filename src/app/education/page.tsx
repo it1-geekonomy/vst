@@ -329,7 +329,7 @@ export default function EducationPage() {
         <BusinessSectors />
 </div>
         {/* Logo section */}
-          <div className="w-screen  bg-black mt-15">
+          <div className="w-screen bg-black flex justify-center items-center py-1 -mt-8 pl-3">
         <VSTLogoAnimation />
       </div>
         

@@ -1007,7 +1007,7 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Description section */}
-        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8">
+        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8  pb-12 sm:pb-0">
           {/* Left: Description */}
           <div className="w-full lg:w-3/5 flex flex-col items-center sm:items-center lg:items-start">
             <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-0 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
@@ -1640,15 +1640,17 @@ const FranchiseSlider = () => {
             )}
           </div>
           
-        </div>i want in center
+        </div>
           
         {/* Text Learn More Link */}
        
-<div className="w-screen bg-black">
-        <BusinessSectors />
-</div>
+        <div className="w-screen bg-black">
+        <div className="relative z-10 w-full pt-1 sm:pt-0">
+          <BusinessSectors />
+        </div>
+      </div>
         {/* Logo section */}
-          <div className="w-screen bg-black mt-20 flex justify-center items-center">
+          <div className="w-screen bg-black flex justify-center items-center py-1 -mt-8 pl-3">
         <VSTLogoAnimation />
       </div>
 
