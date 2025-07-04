@@ -110,7 +110,7 @@ const ManufacturePage = () => {
         </div>
 
         {/* Mobile view - Full width carousel with hover effect and top padding */}
-        <div className="md:hidden  relative h-[450px] w-full mb-4">
+        <div className="md:hidden relative h-[450px] w-full mb-12">
           <div className="absolute inset-0 top-12 w-full h-[400px]">
             <div 
               className="relative h-full w-full mt-[-10] overflow-hidden"
@@ -186,45 +186,47 @@ const ManufacturePage = () => {
           </h1>
           
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 w-full">
-            {/* Mobile: Image section above everything */}
-            <div className="block md:hidden w-full mb-4">
-              <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-4">
-                {tractorImages.map((image, index) => (
-                  <Image
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 48vw"
-                    className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 rounded-2xl ${
-                      currentImage === index ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    priority={index === 0}
-                  />
-                ))}
-              </div>
-              <div className="flex justify-center space-x-3 mt-4">
-                {tractorImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImage(index)}
-                    className={`h-3 w-3 md:h-2 md:w-2 rounded-full transition-all duration-300 ${
-                      currentImage === index 
-                        ? 'bg-[#FDB813] md:w-6' 
-                        : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                    aria-label={`Go to image ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-            {/* Description and Explore More (mobile: below image) */}
+            {/* Description and Explore More (mobile: first, desktop: left) */}
             <div className="flex-1 text-white md:max-w-[48%]">
               <div className="mb-8">
                 <p className="text-clamp-24 font-roc text-justify">
                   A pioneer in farm mechanization, VST Tillers Tractors Ltd. is India's one of the leading manufacturer of power tillers and compact 4WD tractors. Established in 1967 through a joint venture with Mitsubishi Heavy Industries, Japan, VST has grown to dominate over 70% of the Indian tiller market and exports to 40+ countries globally. <br /> <br /> With over five decades of trust, innovation, and durability, VST offers a robust product range from 9 HP to 50 HP, catering to diverse farming needs from vineyards to commercial haulage. Our commitment to quality and farmer empowerment has made us a preferred partner in sustainable agriculture across the world.
                 </p>
               </div>
+              
+              {/* Mobile: Image section between text and button */}
+              <div className="block md:hidden w-full mb-8">
+                <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-4">
+                  {tractorImages.map((image, index) => (
+                    <Image
+                      key={index}
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 48vw"
+                      className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 rounded-2xl ${
+                        currentImage === index ? 'opacity-100' : 'opacity-0'
+                      }`}
+                      priority={index === 0}
+                    />
+                  ))}
+                </div>
+                <div className="flex justify-center space-x-3 mt-4">
+                  {tractorImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImage(index)}
+                      className={`h-3 w-3 md:h-2 md:w-2 rounded-full transition-all duration-300 ${
+                        currentImage === index 
+                          ? 'bg-[#FDB813] md:w-6' 
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+              
               <div className="w-full flex justify-start">
                 <a 
                   href="https://www.vsttractors.com/"
@@ -236,6 +238,7 @@ const ManufacturePage = () => {
                 </a>
               </div>
             </div>
+            
             {/* Desktop: Image section remains on the right */}
             <div className="hidden md:flex flex-1 w-full md:max-w-[48%] flex-col">
               <div 

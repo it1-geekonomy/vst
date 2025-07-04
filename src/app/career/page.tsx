@@ -153,7 +153,7 @@ export default function Page() {
         : "text-gray-400";
 
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen text-white mt-[-30] ">
       <Toaster
         position="top-right"
         toastOptions={{
@@ -196,17 +196,17 @@ export default function Page() {
         {/* No overlay needed for xl:block, so nothing here */}
         {/* Text Content */}
         <div className="relative z-20 flex flex-col justify-center h-full px-4 lg:px-6 xl:px-11 2xl:px-14 max-w-[750px]">
-          <h1 className="text-4xl md:text-6xl font-roc font-normal text-black mb-4 sm:mb-6 md:mb-10 text-center md:text-left pt-2">
+          <h1 className="text-4xl md:text-6xl font-roc font-normal text-black mb-4 sm:mb-6 md:mb-10 text-center md:text-left -mt-10 md:pt-2">
             Careers
           </h1>
-          <p className="text-base sm:text-lg md:text-xl xl:text-2xl text-black font-roc text-justify leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl xl:text-2xl text-black font-roc text-justify leading-relaxed -mb-18 md:mb-0">
             The VST Group offers rewarding career opportunities across a range of disciplines and verticals. The Group is an equal opportunity workplace where results are encouraged and merit is rewarded, making it an ideal choice for a long-term career path.
           </p>
         </div>
       </section>
 
       {/* Form Section - Consistent spacing across all screen sizes */}
-      <section className="relative z-20 mt-4 sm:mt-6 md:mt-8 lg:mt-20 xl:mt-24 bg-transparent pb-32 md:pb-40">
+      <section className="relative z-20 mt-2 sm:mt-6 md:mt-8 lg:mt-20 xl:mt-24 bg-transparent pb-32 md:pb-40">
         <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
           <div className="bg-[#DCDCDC] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-12 lg:px-28">
