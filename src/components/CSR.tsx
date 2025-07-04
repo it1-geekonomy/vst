@@ -30,7 +30,7 @@ export default function CorporatePhilanthropy() {
           {/* Hero Section */}
           <section className="relative overflow-hidden z-10">
             <div className="relative h-full flex flex-col items-center justify-start text-white py-14 md:py-16 xl:py-24">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-roc drop-shadow-lg pointer-events-auto mt-7">Corporate Philanthropy</h1>
+            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-roc drop-shadow-lg pointer-events-auto -mt-2 md:mt-0">Corporate Philanthropy</h1>
               <h1 className="text-clamp-36  font-medium pb-2  pt-8  lg:pb-8 xl:pb-6">
                 Making a Difference
               </h1>
