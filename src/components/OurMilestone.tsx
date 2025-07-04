@@ -22,7 +22,7 @@ function OurMilestone() {
   ]
 
   return (
-    <div className="flex flex-col md:flex-col lg:flex-row justify-between items-center w-full bg-black text-white py-8 md:py-28 px-4 md:px-6">
+    <div className="flex flex-col md:flex-col lg:flex-row justify-between items-center w-full bg-black text-white py-8  md:py-28 px-4 md:px-6">
       {/* Typography Section - Now stays on top for both mobile AND tablet */}
       <div className="w-full lg:w-1/4 mb-8 md:mb-10 lg:mb-0 lg:pr-6 text-center md:text-center lg:text-left">
         <div className="inline-block lg:w-full">

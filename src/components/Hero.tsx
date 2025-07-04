@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 
 import slide1 from "@/app/public/hero-section/home-final.png";
@@ -175,21 +176,29 @@ const Hero = () => {
 
   // Mobile slider functions
   const goToNextSlide = () => {
-    if (currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
+    console.log('Next button clicked, current slide:', currentSlide);
+    if (currentSlide < slides.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+    } else {
+      // Loop back to first slide
+      setCurrentSlide(0);
     }
   };
 
   const goToPrevSlide = () => {
-    if (currentSlide < slides.length - 1) {
-      setCurrentSlide(currentSlide + 1);
+    console.log('Prev button clicked, current slide:', currentSlide);
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    } else {
+      // Loop to last slide
+      setCurrentSlide(slides.length - 1);
     }
   };
 
   // Mobile view render
   if (isMobile) {
     return (
-      <section className="relative h-screen overflow-hidden bg-black/5 mt-[-10vh]">
+      <section className="relative h-[80vh] overflow-hidden bg-black/5 mt-[-10vh]">
         <div className="relative h-full w-full flex items-center justify-center">
           {/* Current slide */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -232,7 +241,7 @@ const Hero = () => {
 
           {/* Content Overlay */}
           {slides[currentSlide].id !== 1 && (
-            <div className="absolute inset-0 flex items-center justify-center z-20 px-4">
+            <div className="absolute inset-0 flex items-center justify-center z-40 px-4">
               <div className="bg-black/70 rounded-lg px-4 sm:px-6 py-6 text-left w-full max-w-[90%]">
                 {/* Yellow line above the title */}
                 <div className="w-[40%] h-1 bg-yellow-400 mb-3"></div>
@@ -248,32 +257,32 @@ const Hero = () => {
                 )}
                 {slides[currentSlide].link && (
                   <div className="flex justify-center w-full mt-2">
-                    <a
+                    <Link
                       href={slides[currentSlide].link}
-                      className="inline-flex items-center text-yellow-400 text-lg font-semibold hover:underline transition"
+                      className="inline-flex items-center text-yellow-400 text-lg font-semibold hover:underline transition cursor-pointer"
                     >
                       View more
                       <span className="ml-2">&#8594;</span>
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
             </div>
           )}
           
-          {/* Navigation buttons - Updated positioning and z-index */}
-          <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-2 sm:px-4 z-30">
+          {/* Navigation buttons */}
+          <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-2 sm:px-4 z-50 pointer-events-none">
             <button 
-              className="bg-black/50 text-white p-3 sm:p-4 rounded-full hover:bg-black/70 transition"
-              onClick={goToPrevSlide}
-              style={{ zIndex: 40 }}
+              className="bg-black/50 text-white p-3 sm:p-4 rounded-full hover:bg-black/70 transition z-50 pointer-events-auto"
+              onClick={goToNextSlide}
+              type="button"
             >
               <span className="text-xl sm:text-2xl">&#10094;</span>
             </button>
             <button 
-              className="bg-black/50 text-white p-3 sm:p-4 rounded-full hover:bg-black/70 transition"
-              onClick={goToNextSlide}
-              style={{ zIndex: 40 }}
+              className="bg-black/50 text-white p-3 sm:p-4 rounded-full hover:bg-black/70 transition z-50 pointer-events-auto"
+              onClick={goToPrevSlide}
+              type="button"
             >
               <span className="text-xl sm:text-2xl">&#10095;</span>
             </button>
@@ -548,13 +557,13 @@ const Hero = () => {
                     )}
                     {slide.link && (
                       <div className="flex justify-center w-full mt-2">
-                        <a
+                        <Link
                           href={slide.link}
                           className="inline-flex items-center text-yellow-400 text-xl font-semibold hover:underline transition"
                         >
                           View more
                           <span className="ml-2">&#8594;</span>
-                        </a>
+                        </Link>
                       </div>
                     )}
                   </div>

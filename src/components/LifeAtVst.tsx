@@ -1,14 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Image1 from "@/app/public/images/LifeAtVst/Image1.jpg"
 import Image2 from "@/app/public/images/LifeAtVst/Image2.jpg"
 import Image3 from "@/app/public/images/LifeAtVst/Image3.jpg"
 
 const LifeAtVst = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
-  const [isTouched, setIsTouched] = useState(false)
 
   const slides = [
     {
@@ -37,22 +35,12 @@ const LifeAtVst = () => {
     },
   ]
 
-  useEffect(() => {
-    if (isHovered || isTouched) return
-    
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 3000)
-
-    return () => clearInterval(timer)
-  }, [isHovered, isTouched])
-
-  const handleTouchStart = () => {
-    setIsTouched(true)
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
 
-  const handleTouchEnd = () => {
-    setIsTouched(false)
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
   return (
@@ -85,11 +73,7 @@ const LifeAtVst = () => {
       `}</style>
 
       {/* Create a flex container to divide the screen into two halves */}
-      <div className="flex flex-col md:flex-row h-568px"
-           onMouseEnter={() => setIsHovered(true)}
-           onMouseLeave={() => setIsHovered(false)}
-           onTouchStart={handleTouchStart}
-           onTouchEnd={handleTouchEnd}>
+      <div className="flex flex-col md:flex-row h-568px">
         {/* Left half - Image container */}
         <div className="relative w-full md:w-1/2 h-562px">
           {slides.map((slide, index) => (
@@ -161,29 +145,73 @@ const LifeAtVst = () => {
                 <div className="h-[2px] gradient-line flex-grow ml-0" />
               </div>
 
-              {/* Subtitle and description */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentSlide}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="w-full h-[230px] md:h-[300px] overflow-y-auto"
+              {/* Subtitle and description with navigation arrows */}
+              <div className="relative flex items-center">
+                {/* Left arrow */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-0 z-10 w-8 h-8 md:w-10 md:h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-200 -translate-x-8 md:-translate-x-12"
+                  aria-label="Previous slide"
                 >
-                  <h2 className="text-lg md:text-xl font-normal mb-2 text-left font-roc">
-                    {slides[currentSlide].subtitle}
-                  </h2>
-                  <p className="text-sm md:text-base font-normal leading-relaxed w-full" 
-                     style={{ 
-                       wordBreak: "break-word",
-                       textAlign: "justify",
-                       textJustify: "inter-word"
-                     }}>
-                    {slides[currentSlide].description}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-white"
+                  >
+                    <path d="m15 18-6-6 6-6" />
+                  </svg>
+                </button>
+
+                {/* Right arrow */}
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-0 z-10 w-8 h-8 md:w-10 md:h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-200 translate-x-8 md:translate-x-12"
+                  aria-label="Next slide"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-white"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentSlide}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="w-full h-[230px] md:h-[300px] overflow-y-auto px-4 flex flex-col justify-center"
+                  >
+                    <h2 className="text-lg md:text-xl font-normal mb-2 text-left font-roc">
+                      {slides[currentSlide].subtitle}
+                    </h2>
+                    <p className="text-sm md:text-base font-normal leading-relaxed w-full" 
+                       style={{ 
+                         wordBreak: "break-word",
+                         textAlign: "justify",
+                         textJustify: "inter-word"
+                       }}>
+                      {slides[currentSlide].description}
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
           </div>
         </div>

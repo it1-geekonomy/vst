@@ -35,10 +35,10 @@ import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black overflow-x-hidden">
+    <main className="relative min-h-screen bg-black overflow-x-hidden mt-[-2vh] sm:mt-[0vh]">
       {/* Hero Section with Slider */}
       <Hero />
-      <OurMilestone />
+      <OurMilestone  />
       {/* Life at VST Sectssssion */}
       <LifeAtVst />
       <EmpoweringScroll />
