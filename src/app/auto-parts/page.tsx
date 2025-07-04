@@ -486,7 +486,7 @@ export default function Page() {
           </div>
 
           {/* Pagination Dots and Navigation Buttons - Updated to match design */}
-          <div className="absolute lg:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-1 sm:space-x-2">
+          <div className="absolute lg:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-1 sm:space-x-2 mt-4 sm:mt-6 ">
             {/* Pagination Dots */}
             {images.map((_, index) => (
               <button
@@ -531,7 +531,7 @@ export default function Page() {
                 </p>  
               </div>
               
-              <div className="flex justify-left mt-6">
+              <div className="flex justify-center lg:justify-start mt-6">
                 <a
                   href="https://vstmotors.com/parts/"
                   target="_blank"

@@ -3,7 +3,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
 import Image from 'next/image'
 
-import frame1 from '@/app/public/contact-us/frame1.jpg'
+import frame1 from '@/app/public/contact-us/Contact-VST-3 (1).jpg'
 
 import axios from 'axios'
 import { useState } from 'react'
@@ -75,7 +75,7 @@ export default function Page() {
       {/* Contact Form Section with even more decreased width */}
       <div className="bg-black py-16 px-4 md:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl text-white text-center mb-16 md:mb-24 font-normal">
+          <h1 className="text-3xl md:text-6xl text-white text-center mb-16 md:mb-24 font-normal">
             Get in touch with us.
           </h1>
           
@@ -154,7 +154,7 @@ export default function Page() {
                 )}
               </div>
               
-              <div className="flex justify-end mt-16">
+              <div className="flex justify-center md:justify-end mt-16">
                 <button
                   
                   type="submit"
