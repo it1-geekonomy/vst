@@ -271,7 +271,7 @@ const Hero = () => {
           )}
           
           {/* Navigation buttons */}
-          <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-2 sm:px-4 z-50 pointer-events-none">
+          <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-2 sm:px-4 z-40 pointer-events-none">
             <button 
               className="bg-black/50 text-white p-3 sm:p-4 rounded-full hover:bg-black/70 transition z-50 pointer-events-auto"
               onClick={goToNextSlide}
