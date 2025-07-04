@@ -122,7 +122,7 @@ export default function EducationPage() {
               />
             </div>
           </div>
-          <h1 className="text-center font-roc font-normal mt-8 text-3xl md:text-4xl lg:text-6xl mb-8">
+          <h1 className="text-center font-roc font-normal  text-3xl md:text-4xl lg:text-6xl mb-8">
             Smt. Kamalabai Educational Institution
           </h1>
         </section>

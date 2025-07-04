@@ -82,7 +82,7 @@ const slides: SlideData[] = [
         "Sales, Service & Parts distribution": [
           {
             address: "#A9 & A10, Thiru-Vi-Ka Industrial \n Estate, Guindy, Chennai - 600 032.",
-            phone: "+91 90030 26789,+91 90036 93555,\n+91 96000 67911",
+            phone: "+91 90030 26789,+91 90036 93555,+91 96000 67911",
             email: "info.guindy@titaniummotors.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d971.849043901052!2d80.2094384!3d13.0104245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526774a3022697%3A0xe1ba2886b8f8e5ec!2sVST%20TITANIUM%20MOTORS%20(PARTS%20TRADING%20FOR%20MERCEDES%20BENZ)!5e0!3m2!1sen!2sin!4v1747217731579!5m2!1sen!2sin"
           }
@@ -875,7 +875,7 @@ const FranchiseSlider = () => {
         transition={{ duration: 0.01 }}
       >
         {/* Car section */}
-        <div className="relative w-full h-auto sm:h-auto lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[5rem] mb-[4rem]">
+        <div className="relative w-full h-auto sm:h-auto lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[5rem] mb-[1rem]">
           {/* Left section with background and car */}
           <div className="relative w-full lg:w-[85%] h-[50vh] sm:h-[50vh] lg:h-full xl:h-[100vh]">
             <AnimatePresence mode="wait">
@@ -903,13 +903,13 @@ const FranchiseSlider = () => {
           </div>
 
           {/* Right section */}
-          <div className="relative w-full lg:w-[45%] px-4 sm:px-6 lg:px-1 flex flex-col justify-start lg:justify-between py-4 lg:py-20 mt-4 lg:mt-0 gap-0 lg:gap-0">
+          <div className="relative w-full lg:w-[45%] px-4 sm:px-6 lg:px-1 flex flex-col justify-start lg:justify-between py-1 lg:py-20 mt-1 lg:mt-0 gap-0 lg:gap-0">
             {/* Title */}
-            <div className="flex-1 flex items-center justify-center sm:justify-center  sm:mb-[2rem] lg:mb-[4rem] mb-[2rem] w-full">
+            <div className="flex-1 flex items-center justify-center sm:justify-center sm:mb-[1rem] lg:mb-[4rem] mb-[0.5rem] w-full">
               <h2 className="text-white font-rocWide font-light text-4xl sm:text-[3.5rem] lg:text-[4.5rem] text-center lg:text-start w-full sm:w-[90%] lg:w-auto">
                 <div className="flex flex-col items-center sm:items-center lg:items-start gap-2 sm:gap-4 lg:gap-6 w-full">
                   <div className="flex flex-row sm:flex-row lg:flex-col items-center sm:items-center lg:items-start gap-2 sm:gap-4 lg:gap-6 justify-center sm:justify-center lg:justify-start">
-                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-roc drop-shadow-lg pointer-events-auto mt-7"> Automotive<br />Franchises</h1>
+                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-roc drop-shadow-lg pointer-events-auto mt-2 lg:mt-7"> Automotive<br />Franchises</h1>
                   
                   </div>
                 </div>
@@ -917,11 +917,11 @@ const FranchiseSlider = () => {
             </div>
 
             {/* Navigation and logos */}
-            <div className="flex flex-col items-center lg:items-start justify-start gap-2 sm:gap-1 lg:gap-2 h-auto lg:h-[16rem] translate-y-[-10%] lg:translate-y-[-20%] w-full lg:mt-16">
+            <div className="flex flex-col items-center lg:items-start justify-start gap-0 sm:gap-1 lg:gap-2 h-auto lg:h-[16rem] translate-y-[-2%] lg:translate-y-[-20%] w-full lg:mt-16">
               {/* Up arrow */}
               <button
                 onClick={prevSlide}
-                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6.5rem] mb-2 sm:mb-4 lg:mb-0"
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6.5rem] mb-0 sm:mb-4 lg:mb-0"
               >
                 <svg
                   className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
@@ -939,7 +939,7 @@ const FranchiseSlider = () => {
               </button>
 
               {/* Brand logos - infinite loop implementation */}
-              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-2 sm:py-4 lg:py-[2rem] lg:pl-[3rem] relative">
+              <div className="w-full flex justify-center lg:justify-start overflow-hidden py-0 sm:py-4 lg:py-[2rem] lg:pl-[3rem] relative">
                 <motion.div
                   className="flex items-center gap-4 sm:gap-6 lg:gap-16"
                   animate={{
@@ -986,7 +986,7 @@ const FranchiseSlider = () => {
               {/* Down arrow */}
               <button
                 onClick={nextSlide}
-                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6.5rem] mt-2 sm:mt-4 lg:mt-0"
+                className="text-white hover:text-purple-400 transition-colors w-8 sm:w-10 lg:w-12 flex justify-center mx-auto lg:mx-0 lg:ml-[6.5rem] mt-0 sm:mt-4 lg:mt-0"
               >
                 <svg
                   className="w-10 sm:w-12 lg:w-16 h-10 sm:h-12 lg:h-16"
@@ -1065,7 +1065,7 @@ const FranchiseSlider = () => {
               <>
                 {/* Website Link */}
                 {slides[currentSlide]?.learnMoreLink && (
-                  <div className="w-full flex flex-col gap-2 mb-4">
+                  <div className="w-full flex flex-col gap-2 mb-8 sm:mb-4">
                     {slides[currentSlide].brand === "jlr" ? (
                       <>
                         <div className="flex flex-col gap-2">
@@ -1321,7 +1321,7 @@ const FranchiseSlider = () => {
                                   {Array.isArray(salesDist.phone) ? (
                                     salesDist.phone.map((p, i) => (
                                       <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-5 sm:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
                                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                         </svg>
                                         {p}
@@ -1329,7 +1329,7 @@ const FranchiseSlider = () => {
                                     ))
                                   ) : (
                                     <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-5 sm:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                       </svg>
                                       {salesDist.phone}
