@@ -103,13 +103,13 @@ function AboutUsPage() {
       {/* Layer 2: Content */}
       <div className="relative z-10 md:pb-5">
         {/* About Us heading at the top */}
-        <div className="w-full flex justify-center items-center py-10  xl:p-10">
-        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-roc drop-shadow-lg pointer-events-auto mt-7">About Us</h1>
+        <div className="w-full flex justify-center items-center py-4 xl:p-10">
+        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-roc drop-shadow-lg pointer-events-auto mt-8">About Us</h1>
         </div>
 
         {/* Timeline Slider Section */}
         <div 
-          className="flex flex-col items-center w-full px-4 sm:px-6 md:px-8 py-10"
+          className="flex flex-col items-center w-full px-4 sm:px-6 md:px-8 py-4"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -188,7 +188,7 @@ function AboutUsPage() {
           </div>
 
           {/* Timeline Bar */}
-          <div className="w-full max-w-2xl mt-12 relative overflow-hidden">
+          <div className="w-full max-w-2xl mt-4 relative overflow-hidden">
             <div className="absolute top-[7px] left-0 right-0 h-0.5 bg-white/30"></div>
             <div className="relative w-full h-16 flex items-center">
               {timelineItems.map((item, index) => {
