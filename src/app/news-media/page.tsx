@@ -164,7 +164,7 @@ export default function NewsMedia() {
         <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-roc drop-shadow-lg pointer-events-auto -mt-6">News & Media</h1>
       </div>
       {/* Hero Section */}
-      <section className="relative w-full h-auto min-h-[85vh] md:min-h-[100vh] lg:min-h-[110vh] pt-[10px] mt-[20px] md:mt-[40px] mb-[150px] md:mb-[300px] lg:mb-0 z-20">
+      <section className="relative w-full h-auto min-h-[85vh] md:min-h-[100vh] lg:min-h-[110vh] pt-[10px] mt-[20px] md:mt-[40px] mb-[30px] md:mb-[10px] lg:mb-0 z-20">
         {/* Top blend gradient for seamless transition */}
         <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent to-[#2E2E2E] via-[#2E2E2E] z-20 pointer-events-none" />
         <div className="absolute inset-0 bg-black/5 z-10"></div>
@@ -185,8 +185,8 @@ export default function NewsMedia() {
               <div className="w-full flex flex-col items-center">
                 <div className="w-full max-w-7xl px-6 sm:px-6 md:px-8 lg:px-4 xl:px-10 h-[80vh] sm:h-[80vh] md:h-[80vh] lg:h-[90vh] flex flex-col">
                   {/* Hero Title */}
-                  <div className="flex items-center justify-center pt-8 sm:pt-30 md:pt-20 lg:pt-40 xl:pt-48 h-[45%] sm:h-[55%] md:h-[45%]">
-                    <div className="relative h-full flex items-center justify-center w-full">
+                  <div className="flex items-center justify-center pt-12 sm:pt-30 md:pt-20 lg:pt-40 xl:pt-48 h-[40%] sm:h-[55%] md:h-[45%]">
+                    <div className="relative h-full flex items-center justify-center w-full min-h-[50px]">
                       {headlines.map((headline, index) => (
                         <h1 
                           key={index}
@@ -205,7 +205,7 @@ export default function NewsMedia() {
                   </div>
                   
                   {/* News Cards - positioned at bottom with animation */}
-                  <div className="w-full mt-4 sm:mt-12 md:mt-16 lg:mt-20 mb-4 sm:mb-6 md:mb-8 lg:mb-10 relative overflow-visible">
+                  <div className="w-full mt-0 sm:mt-12 md:mt-16 lg:mt-20 mb-4 sm:mb-6 md:mb-8 lg:mb-10 relative overflow-visible">
                     <div className="relative h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px] max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mx-auto">
                       {headlines2.map((card, index) => (
                         <div 

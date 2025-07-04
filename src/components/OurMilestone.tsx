@@ -22,10 +22,10 @@ function OurMilestone() {
   ]
 
   return (
-    <div className="flex flex-col md:flex-col lg:flex-row justify-between items-center w-full bg-black text-white py-8  md:py-28 px-4 md:px-6 pl-10 sm:pl-20 md:pl-10">
-      {/* Typography Section - Now stays on top for both mobile AND tablet */}
-      <div className="w-full lg:w-1/4 mb-8 md:mb-10 lg:mb-0 lg:pr-6 text-center md:text-center lg:text-left">
-        <div className="inline-block lg:w-full">
+    <div className="flex flex-col justify-center items-center w-full bg-black text-white py-8 md:py-28 px-4 md:px-6">
+      {/* Typography Section - Centered */}
+      <div className="w-full mb-8 md:mb-10 text-center">
+        <div className="inline-block">
           <div className="text-4xl sm:text-5xl md:text-5xl text-white font-roc relative z-10">
             <div>Our</div>
             <div>Milestones</div>
@@ -34,7 +34,7 @@ function OurMilestone() {
       </div>
 
       {/* Counters Section */}
-      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-12 font-rocWide">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-12 font-rocWide pl-5 lg:pl-30 ">
         {milestones.map((item, index) => (
           <CounterItem key={index} item={item} />
         ))}

@@ -181,7 +181,6 @@ const ManufacturePage = () => {
           </div>
         </div>
 
-        <div className="px-0">
         <h1 className="text-clamp-57 mb-8 md:mb-16 leading-tight text-white text-center font-rocwide">
             Empowering farmers with efficiency, affordability<span className="hidden md:inline"><br /></span> and reliability
           </h1>
@@ -223,7 +222,7 @@ const ManufacturePage = () => {
             <div className="flex-1 text-white md:max-w-[48%]">
               <div className="mb-8">
                 <p className="text-clamp-24 font-roc text-justify">
-                  A pioneer in farm mechanization, VST Tillers Tractors Ltd. is India’s one of the leading manufacturer of power tillers and compact 4WD tractors. Established in 1967 through a joint venture with Mitsubishi Heavy Industries, Japan, VST has grown to dominate over 70% of the Indian tiller market and exports to 40+ countries globally. <br /> <br /> With over five decades of trust, innovation, and durability, VST offers a robust product range from 9 HP to 50 HP, catering to diverse farming needs from vineyards to commercial haulage. Our commitment to quality and farmer empowerment has made us a preferred partner in sustainable agriculture across the world.
+                  A pioneer in farm mechanization, VST Tillers Tractors Ltd. is India's one of the leading manufacturer of power tillers and compact 4WD tractors. Established in 1967 through a joint venture with Mitsubishi Heavy Industries, Japan, VST has grown to dominate over 70% of the Indian tiller market and exports to 40+ countries globally. <br /> <br /> With over five decades of trust, innovation, and durability, VST offers a robust product range from 9 HP to 50 HP, catering to diverse farming needs from vineyards to commercial haulage. Our commitment to quality and farmer empowerment has made us a preferred partner in sustainable agriculture across the world.
                 </p>
               </div>
               <div className="w-full flex justify-start">
@@ -274,33 +273,31 @@ const ManufacturePage = () => {
               </div>
             </div>
           </div>
-
-          <div className="mt-8 sm:mt-12 md:mt-24 w-full">
-
-            <LocationSection
-               locationImage="tillers/Group 1000001966.png"
-               address={{
-                 street: "Regd. Office: Plot No.1, Hale",
-                 street2: "Devasandra Industrial Layout,",
-                 street3: "Whitefield Road, Mahadevapura",
-                 city: "Post, Bengaluru - 560 048, India.",
-                 state: "",
-                 pincode: ""       
-               }}
-               phoneNumbers={[
-                 '1800-419-0136'
-               ]}
-               googleMapsUrl="https://www.google.com/maps/place/VST+TILLERS+TRACTORS+LTD/@12.9947235,77.6974669,17z/data=!4m14!1m7!3m6!1s0x3bae11a00d70e90d:0x5a90ab36eeaad4fc!2sVST+TILLERS+TRACTORS+LTD!8m2!3d12.9947235!4d77.7000418!16s%2Fg%2F1tjtgq78!3m5!1s0x3bae11a00d70e90d:0x5a90ab36eeaad4fc!8m2!3d12.9947235!4d77.7000418!16s%2Fg%2F1tjtgq78?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-               emails={{
-                 info: "info@vsttractors.com",
-                 globalConnect: "connect@vsttractors.com"
-               }}
-               className="text-white"
-               iconColor="white"
-               websiteUrl="www.vsttractors.com"
-               mobilePadding="manufacture"
-             />
-          </div>
+        {/* LocationSection full width, aligned with parent */}
+        <div className="mt-8 sm:mt-12 md:mt-24 w-full">
+          <LocationSection
+            locationImage="tillers/Group 1000001966.png"
+            address={{
+              street: "Regd. Office: Plot No.1, Hale",
+              street2: "Devasandra Industrial Layout,",
+              street3: "Whitefield Road, Mahadevapura",
+              city: "Post, Bengaluru - 560 048, India.",
+              state: "",
+              pincode: ""       
+            }}
+            phoneNumbers={[
+              '1800-419-0136'
+            ]}
+            googleMapsUrl="https://www.google.com/maps/place/VST+TILLERS+TRACTORS+LTD/@12.9947235,77.6974669,17z/data=!4m14!1m7!3m6!1s0x3bae11a00d70e90d:0x5a90ab36eeaad4fc!2sVST+TILLERS+TRACTORS+LTD!8m2!3d12.9947235!4d77.7000418!16s%2Fg%2F1tjtgq78!3m5!1s0x3bae11a00d70e90d:0x5a90ab36eeaad4fc!8m2!3d12.9947235!4d77.7000418!16s%2Fg%2F1tjtgq78?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+            emails={{
+              info: "info@vsttractors.com",
+              globalConnect: "connect@vsttractors.com"
+            }}
+            className="text-white"
+            iconColor="white"
+            websiteUrl="www.vsttractors.com"
+            mobilePadding="manufacture"
+          />
         </div>
       </div>
       
