@@ -167,13 +167,15 @@ const News = React.memo(() => {
 
   const scrollSection = (ref: React.RefObject<HTMLDivElement | null>, direction: 'left' | 'right') => {
     if (ref.current) {
-      const scrollAmount = 400; // Adjust this value based on your card width + gap
-      const currentScroll = ref.current.scrollLeft;
+      const container = ref.current;
+      const cardWidth = container.querySelector('div')?.offsetWidth || 0;
+      const scrollAmount = cardWidth; // Scroll exactly one card width
+      const currentScroll = container.scrollLeft;
       const newScroll = direction === 'left'
         ? currentScroll - scrollAmount
         : currentScroll + scrollAmount;
 
-      ref.current.scrollTo({
+      container.scrollTo({
         left: newScroll,
         behavior: 'smooth'
       });
@@ -183,7 +185,7 @@ const News = React.memo(() => {
   const NewsCard = ({ item }: { item: typeof latestUpdatesData[0] }) => (
     <div
       key={item.id}
-      className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col flex-shrink-0 w-[365px] sm:w-[280px] md:w-[325px] lg:w-[250px]"
+      className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col flex-shrink-0 w-screen sm:w-[280px] md:w-[325px] lg:w-[250px]"
       onClick={() => handleCardClick(item.id, item.route)}
     >
       <div className="relative w-full h-[330px]">
@@ -217,13 +219,16 @@ const News = React.memo(() => {
     sectionName: string;
   }) => (
     <section className="mb-20 relative">
-      <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">{title}</h1>
+      <div className="flex justify-between items-center mb-10 ml-2 md:ml-4">
+        <h1 className="text-3xl font-bold">{title}</h1>
+        <p className="text-sm text-gray-400 sm:hidden">Swipe to scroll</p>
+      </div>
 
       {/* Cards Container */}
-      <div className="relative px-3.5">
+      <div className="relative px-0 sm:px-3.5">
         <div
           ref={ref}
-          className="flex gap-8 md:gap-10 overflow-x-auto scroll-smooth pb-4 overflow-scroll"
+          className="flex gap-0 sm:gap-8 md:gap-10 overflow-x-auto scroll-smooth pb-4 overflow-scroll"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {data.map((item) => (
@@ -232,7 +237,7 @@ const News = React.memo(() => {
         </div>
 
         {/* Navigation Arrows */}
-        <div className="hidden absolute right-4 -bottom-12 flex gap-4 items-center z-10">
+        <div className="flex absolute right-4 -bottom-12 gap-4 items-center z-10">
 
           <button
             onClick={() => scrollSection(ref, 'left')}
@@ -260,6 +265,8 @@ const News = React.memo(() => {
 
           </button>
         </div>
+
+
       </div>
 
     </section>
