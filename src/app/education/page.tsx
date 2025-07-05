@@ -122,7 +122,7 @@ export default function EducationPage() {
               />
             </div>
           </div>
-          <h1 className="text-center font-roc font-normal mt-8 text-3xl md:text-4xl lg:text-6xl mb-8">
+          <h1 className="text-center font-roc font-normal  text-3xl md:text-4xl lg:text-6xl mb-8">
             Smt. Kamalabai Educational Institution
           </h1>
         </section>
@@ -310,8 +310,6 @@ export default function EducationPage() {
               Explore More
             </a>
           </div>
-        </div>
-
           <LocationSection
             locationImage="education/educational location.png"
             address={{
@@ -335,6 +333,8 @@ export default function EducationPage() {
           websiteUrl="www.skei.edu.in"
           mobilePadding="education"
           />
+        </div>
+
           
           <div className="relative  w-full pt-1 sm:pt-0 bg-black">
         <BusinessSectors />

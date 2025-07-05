@@ -154,7 +154,7 @@ const newsAndArticlesData = [
   },
 ];
 
-const News = () => {
+const News = React.memo(() => {
   const router = useRouter();
   const [activeId, setActiveId] = useState<number | null>(null);
   const latestUpdatesRef = useRef<HTMLDivElement>(null);
@@ -187,12 +187,15 @@ const News = () => {
       onClick={() => handleCardClick(item.id, item.route)}
     >
       <div className="relative w-full h-[330px]">
-        <Image
+        { item.image ? (
+          <Image
           src={item.image}
           alt="news-image"
           fill
           className="object-cover"
         />
+      ): null}
+      
       </div>
       <div className="p-4 flex flex-col justify-between flex-grow bg-[#333435] backdrop-blur-[36.55px]">
         <h2 className="mt-2 text-[20px] leading-[140%] tracking-wide font-normal font-roc transition-all">
@@ -229,7 +232,7 @@ const News = () => {
         </div>
         
         {/* Navigation Arrows */}
-        <div className="absolute right-4 -bottom-12 flex gap-4 items-center z-10 hidden md:flex">
+        <div className="absolute right-4 -bottom-12 flex gap-4 items-center z-10 md:flex">
 
           <button
             onClick={() => scrollSection(ref, 'left')}
@@ -280,6 +283,6 @@ const News = () => {
       />
     </div>
   );
-};
+});
 
 export default News;

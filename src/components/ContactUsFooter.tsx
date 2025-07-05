@@ -20,7 +20,7 @@ const ContactUsFooter: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
   return (
     <footer className={`bg-[#101010] text-white py-10 mt-10 lg:mt-0 ${bgcolour}`}>
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col 2xl:flex-row justify-between items-center gap-16 2xl:items-start">
+        <div className="flex flex-col 2xl:flex-row justify-between items-center gap-6 2xl:items-start">
           {/* Logo Section */}
           <div className="w-full sm:w-4/5 2xl:w-1/4 flex flex-col items-center 2xl:items-start">
             <div className="flex flex-col items-center 2xl:items-start">
@@ -33,14 +33,14 @@ const ContactUsFooter: React.FC<{ bgcolour: string }> = ({ bgcolour }) => {
           </div>
 
           {/* Map Section */}
-          <div className="w-full sm:w-4/5 2xl:w-1/3 flex justify-center 2xl:justify-start mt-8 2xl:mt-0 px-10">
+          <div className="w-full sm:w-4/5 2xl:w-1/3 flex justify-center 2xl:justify-start  2xl:mt-0 px-10">
           <div className="rounded-lg overflow-hidden w-full max-w-md h-[240px]">
               <MapWithNoSSR />
             </div>
           </div>
 
           {/* Contact Information */}
-          <div className="w-full sm:w-4/5 2xl:w-1/3 2xl:pl-4 pt-10 2xl:pt-0 flex flex-col items-center 2xl:items-start">
+          <div className="w-full sm:w-4/5 2xl:w-1/3 2xl:pl-4 flex flex-col items-center 2xl:items-start mt-4">
             <div className="mb-6 w-full text-center 2xl:text-left">
               <h3 className="text-lg lg:text-xl font-roc text-white inline-block">Contact Us</h3>
             </div>
