@@ -25,7 +25,7 @@ const latestUpdatesData = [
   {
     id: 1,
     image: card1,
-    title:'Arun Surendra (Chairman & Managing Director, VST Group), and   Sanjeev Subramanian',
+    title: 'Arun Surendra (Chairman & Managing Director, VST Group), and   Sanjeev Subramanian',
     // title: 'Arun Surendra (Chairman & Managing Director, VST Group), and Sanjeev Subramanian  (President - Automotive Division, VST Group), along with and Hardeep S. Brar (Sr. Vice President & Head of Marketing & Sales, Kia India), Mr. Paramjiv Dutta (General Manager Service, Kia India), and Ravi N. (Head - Dealer Development/ General Manager, Kia India), had a quick catchup meeting session. It was a pleasure to connect and discuss exciting possibilities',
     // title: (
     //   <>
@@ -40,7 +40,7 @@ const latestUpdatesData = [
     //     </a>{' '}
     //     <br />
     //     (Chairman & Managing Director, VST Group),
-       
+
     //     and{' '}
     //     <a
     //       href="https://www.linkedin.com/in/sanjeev-subramanian-83479716/"
@@ -87,7 +87,7 @@ const latestUpdatesData = [
     //   </>
     // ),
     title: " Congratulations to the Porsche Centre Bengaluru team for achieving yet another extraordinary success.",
-    
+
     tag: 'Industry',
     location: 'Bengaluru',
     time: '',
@@ -102,12 +102,12 @@ const latestUpdatesData = [
     time: '',
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
   },
-  
-    
+
+
 ];
 
 const newsAndArticlesData = [
-{
+  {
     id: 1,
     image: card4,
     title: "VST Tillers Tractors Showcases its range of innovative Farm Machines at the Krushi Odisha 2025",
@@ -169,10 +169,10 @@ const News = React.memo(() => {
     if (ref.current) {
       const scrollAmount = 400; // Adjust this value based on your card width + gap
       const currentScroll = ref.current.scrollLeft;
-      const newScroll = direction === 'left' 
-        ? currentScroll - scrollAmount 
+      const newScroll = direction === 'left'
+        ? currentScroll - scrollAmount
         : currentScroll + scrollAmount;
-      
+
       ref.current.scrollTo({
         left: newScroll,
         behavior: 'smooth'
@@ -183,19 +183,19 @@ const News = React.memo(() => {
   const NewsCard = ({ item }: { item: typeof latestUpdatesData[0] }) => (
     <div
       key={item.id}
-      className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col flex-shrink-0 w-[300px] sm:w-[280px] md:w-[300px] lg:w-[320px]"
+      className="bg-[#2E2E32] min-h-[450px] shadow-lg cursor-pointer hover:scale-105 transition-transform overflow-hidden flex flex-col flex-shrink-0 w-[365px] sm:w-[280px] md:w-[325px] lg:w-[250px]"
       onClick={() => handleCardClick(item.id, item.route)}
     >
       <div className="relative w-full h-[330px]">
-        { item.image ? (
+        {item.image ? (
           <Image
-          src={item.image}
-          alt="news-image"
-          fill
-          className="object-cover"
-        />
-      ): null}
-      
+            src={item.image}
+            alt="news-image"
+            fill
+            className="object-cover"
+          />
+        ) : null}
+
       </div>
       <div className="p-4 flex flex-col justify-between flex-grow bg-[#333435] backdrop-blur-[36.55px]">
         <h2 className="mt-2 text-[20px] leading-[140%] tracking-wide font-normal font-roc transition-all">
@@ -205,34 +205,34 @@ const News = React.memo(() => {
     </div>
   );
 
-  const SectionWithArrows = ({ 
-    title, 
-    data, 
-    ref, 
-    sectionName 
-  }: { 
-    title: string; 
-    data: typeof latestUpdatesData; 
+  const SectionWithArrows = ({
+    title,
+    data,
+    ref,
+    sectionName
+  }: {
+    title: string;
+    data: typeof latestUpdatesData;
     ref: React.RefObject<HTMLDivElement | null>;
     sectionName: string;
   }) => (
     <section className="mb-20 relative">
       <h1 className="text-3xl font-bold mb-10 ml-2 md:ml-4">{title}</h1>
-      
+
       {/* Cards Container */}
       <div className="relative px-3.5">
-        <div 
+        <div
           ref={ref}
-          className="flex gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+          className="flex gap-8 md:gap-10 overflow-x-auto scroll-smooth pb-4 overflow-scroll"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {data.map((item) => (
             <NewsCard key={item.id} item={item} />
           ))}
         </div>
-        
+
         {/* Navigation Arrows */}
-        <div className="absolute right-4 -bottom-12 flex gap-4 items-center z-10 md:flex">
+        <div className="hidden absolute right-4 -bottom-12 flex gap-4 items-center z-10">
 
           <button
             onClick={() => scrollSection(ref, 'left')}
@@ -242,11 +242,11 @@ const News = React.memo(() => {
           >
             {/* Left Arrow SVG */}
             <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22.0127 10.0083L2.00079 10.0083M2.00079 10.0083L11.0061 19.0137M2.00079 10.0083L11.0061 1.00296" stroke="white" stroke-width="2"/>
-</svg>
+              <path d="M22.0127 10.0083L2.00079 10.0083M2.00079 10.0083L11.0061 19.0137M2.00079 10.0083L11.0061 1.00296" stroke="white" stroke-width="2" />
+            </svg>
 
           </button>
-          
+
           <button
             onClick={() => scrollSection(ref, 'right')}
             className="p-0 bg-transparent border-none"
@@ -255,29 +255,30 @@ const News = React.memo(() => {
           >
             {/* Right Arrow SVG */}
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 12.0073H22.0119M22.0119 12.0073L13.0065 3.00195M22.0119 12.0073L13.0065 21.0127" stroke="white" stroke-width="2"/>
-</svg>
+              <path d="M2 12.0073H22.0119M22.0119 12.0073L13.0065 3.00195M22.0119 12.0073L13.0065 21.0127" stroke="white" stroke-width="2" />
+            </svg>
 
           </button>
         </div>
       </div>
+
     </section>
   );
 
   return (
     <div className="bg-[#2E2E2E] min-h-screen py-10 px-3 sm:px-4 md:px-6 lg:px-16 text-white">
       {/* Latest Updates Section */}
-      <SectionWithArrows 
-        title="Latest Updates" 
-        data={latestUpdatesData} 
+      <SectionWithArrows
+        title="Latest Updates"
+        data={latestUpdatesData}
         ref={latestUpdatesRef}
         sectionName="latest updates"
       />
 
       {/* News & Articles Section */}
-      <SectionWithArrows 
-        title="News & Articles" 
-        data={newsAndArticlesData} 
+      <SectionWithArrows
+        title="News & Articles"
+        data={newsAndArticlesData}
         ref={newsArticlesRef}
         sectionName="news and articles"
       />
