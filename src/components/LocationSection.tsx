@@ -39,9 +39,9 @@ const LocationSection: React.FC<LocationSectionProps> = ({
     switch (mobilePadding) {
       case 'auto-parts':
       case 'education':
-        return 'pl-18 sm:pl-10'; // More padding for auto-parts and education
+        return 'pl-21 sm:pl-10'; // More padding for auto-parts and education
       case 'manufacture':
-        return 'pl-12 sm:pl-6'; // Same padding for manufacture
+        return 'pl-14 sm:pl-6'; // Same padding for manufacture
       default:
         return 'pl-0 sm:pl-6'; // Default padding
     }
@@ -58,7 +58,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         - xl: 1280px - 1535px (large desktops)
         - 2xl: 1536px+ (extra large screens)
       */}
-      <div className="flex flex-col justify-around lg:flex-row items-left lg:items-stretch w-full mx-auto gap-4 sm:gap-6 md:gap-8 lg:gap-0">
+      <div className="flex flex-col justify-around lg:flex-row items-left lg:items-stretch w-full mx-auto gap-4 sm:gap-6 md:gap-6 lg:gap-0">
         {/* Left section with title and image */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-[40%]">
           <h2
@@ -75,12 +75,12 @@ const LocationSection: React.FC<LocationSectionProps> = ({
             href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-[90%] max-w-[340px] h-[50vw] max-h-[320px] min-h-[240px]
-                     sm:w-[85%] sm:max-w-[400px] sm:h-[45vw] sm:max-h-[200px]
-                     md:w-[95%] md:max-w-[480px] md:h-[15vw] md:max-h-[200px]
-                     lg:w-[95%] lg:max-w-[490px] lg:h-[15vw] lg:max-h-[300px] lg:min-h-[280px]
-                     xl:w-[90%] xl:max-w-[500px] xl:h-[30vw] xl:max-h-[320px]
-                     2xl:w-[80%] 2xl:max-w-[520px] 2xl:h-[15vw] 2xl:max-h-[320px]
+            className="relative w-[90%] max-w-[280px] h-[40vw] max-h-[260px] min-h-[200px]
+                     sm:w-[75%] sm:max-w-[320px] sm:h-[35vw] sm:max-h-[160px]
+                     md:w-[85%] md:max-w-[380px] md:h-[12vw] md:max-h-[160px]
+                     lg:w-[85%] lg:max-w-[390px] lg:h-[12vw] lg:max-h-[240px] lg:min-h-[220px]
+                     xl:w-[80%] xl:max-w-[400px] xl:h-[25vw] xl:max-h-[260px]
+                     2xl:w-[70%] 2xl:max-w-[420px] 2xl:h-[18vw] 2xl:max-h-[260px]
                      overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <Image
@@ -94,13 +94,13 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex items-center lg:items-start flex-col lg:flex-row justify-center lg:justify-around gap-8 sm:gap-6 lg:gap-10 xl:gap-10 w-full lg:w-[60%] mt-16 lg:mt-28 object-center">
+        <div className="flex items-center lg:items-start flex-col lg:flex-row justify-center lg:justify-around gap-8 sm:gap-6 md:gap-2 lg:gap-10 xl:gap-10 2xl:gap-40 w-full lg:w-[60%] mt-16 lg:mt-28 object-center">
           {/* Address */}
           <div className="text-center lg:text-left flex items-center justify-center lg:justify-start w-full lg:w-auto pr-1 self-center flex-shrink-0">
             <div
               className={`font-roc font-normal ${className} flex flex-col items-center lg:items-start w-full max-w-[400px]`}
               style={{
-                fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                 lineHeight: '1.6',
               }}
             >
@@ -141,7 +141,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal break-all text-left ${className}`}
                       style={{
-                        fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                        fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                         lineHeight: '1.4'
                       }}
                     >
@@ -177,7 +177,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                         <span
                           className={`font-roc font-normal break-all text-left ${className}`}
                           style={{
-                            fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                            fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                             lineHeight: '1.4'
                           }}
                         >
@@ -194,7 +194,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                           <h1
                             className={`font-roc font-normal text-left text-[#FDB813] `}
                             style={{
-                              fontSize: 'clamp(14px, 1.8vw, 26px)', // Reduced font size from 14px to 26px
+                              fontSize: 'clamp(16px, 1.6vw, 26px)', // Reduced font size from 12px to 22px
                               lineHeight: '1.6',
                             }}
                           >
@@ -224,7 +224,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                                                       <span
                               className={`font-roc font-normal break-all text-left ${className}`}
                               style={{
-                                fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                                fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                                 lineHeight: '1.4'
                               }}
                             >
@@ -260,7 +260,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal break-all text-left ${className}`}
                       style={{
-                        fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                        fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                         lineHeight: '1.4'
                       }}
                     >
@@ -295,7 +295,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal ${className}`}
                       style={{
-                        fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                        fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                         lineHeight: '1.4',
                       }}
                     >
@@ -330,7 +330,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       <span
                         className={`font-roc font-normal whitespace-nowrap ${className}`}
                         style={{
-                          fontSize: 'clamp(14px, 1.8vw, 26px)', // Reduced font size from 14px to 26px
+                          fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 12px to 22px
                           lineHeight: '1.6',
                         }}
                       >
@@ -343,7 +343,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       <h1
                         className={`font-roc font-normal text-left text-[#FDB813] pl-7`}
                         style={{
-                          fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                          fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                           lineHeight: '1.6',
                         }}
                       >
@@ -370,7 +370,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                         <span
                           className={`font-roc font-normal whitespace-nowrap ${className}`}
                           style={{
-                            fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                            fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                             lineHeight: '1.4'
                           }}
                         >
@@ -401,7 +401,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       <span
                         className={`font-roc font-normal whitespace-nowrap ${className}`}
                         style={{
-                          fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                          fontSize: 'clamp(16px, 1.8vw, 26px)', // Reduced font size from 14px to 24px
                           lineHeight: '1.6'
                         }}
                       >
