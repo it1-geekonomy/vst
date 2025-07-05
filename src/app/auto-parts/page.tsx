@@ -504,7 +504,7 @@ export default function Page() {
 
       {/* Location section with its own gradient background - completely separate section */}
       <div className="relative w-full bg-[#FFB922] mt-0">
-        <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-8 sm:pt-20 lg:pt-30 xl:pt-60 ">
+        <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-8 sm:pt-20 lg:pt-10 xl:pt-30 ">
           <div className="pt-8 sm:pt-16 lg:pt-16 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
             {/* Company information section */}
             <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl  font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
@@ -520,7 +520,7 @@ export default function Page() {
                 the timely and efficient distribution of genuine Tata Motors parts.
                 <br />
                 
-                Our portfolio includes approximately 2,750 line items, catering to a strong network of over 1700 retailers and 1000 Tata Guru mechanics. With a consistent 12–15% year-on-year growth, our continued success reflects both our operational strength and our unwavering commitment to customer satisfaction
+                Our portfolio includes approximately 2,750 line items, catering to a strong network of over 1700 retailers and 1000 Tata Guru mechanics. With a consistent 12–15% year-on-year growth, our continued success reflects both our operational strength and our unwavering commitment to customer satisfaction.
               </p>
               <div className="mt-15">
                 <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15">

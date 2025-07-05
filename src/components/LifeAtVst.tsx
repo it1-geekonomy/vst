@@ -44,7 +44,7 @@ const LifeAtVst = () => {
   }
 
   return (
-    <div className="relative w-full h-[360px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden ">
+    <div className="relative w-full h-[500px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden ">
       {/* Add keyframes for the flowing gradient animation matching the image */}
       <style jsx global>{`
         @keyframes flowingGradient {
@@ -74,8 +74,8 @@ const LifeAtVst = () => {
 
       {/* Create a flex container to divide the screen into two halves */}
       <div className="flex flex-col md:flex-row h-568px">
-        {/* Left half - Image container */}
-        <div className="relative w-full md:w-1/2 h-562px">
+        {/* Left half - Image container (hidden on mobile) */}
+        <div className="relative hidden md:block w-full md:w-1/2 h-562px">
           {slides.map((slide, index) => (
             <motion.div
               key={index}
@@ -100,10 +100,37 @@ const LifeAtVst = () => {
 
         {/* Right half - Text content */}
         <div className="relative w-full md:w-1/2 h-full bg-black">
+          {/* Mobile background images */}
+          <div className="md:hidden absolute inset-0">
+            {slides.map((slide, index) => (
+              <motion.div
+                key={index}
+                className="absolute inset-0 w-full h-full"
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: currentSlide === index ? 1 : 0,
+                  zIndex: currentSlide === index ? 1 : 0
+                }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+              >
+                <Image
+                  src={slide.image}
+                  alt={`Life at VST ${index + 1}`}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  className="opacity-80"
+                />
+                {/* Dark overlay for better text readability */}
+                <div className="absolute inset-0 bg-black/30"></div>
+              </motion.div>
+            ))}
+          </div>
+
           {/* Content container with consistent padding */}
-          <div className="px-4 md:px-8 flex flex-col items-center">
+          <div className="relative z-10 px-4 md:px-8 flex flex-col items-center">
             {/* Content wrapper to maintain consistent width */}
-            <div className="w-full max-w-[75%]">
+            <div className="w-full max-w-[90%] md:max-w-[75%]">
               {/* Heading with digits on same line */}
               <div className="flex items-center w-full ">
                 <div className="flex items-baseline w-full">
@@ -196,7 +223,7 @@ const LifeAtVst = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="w-full h-[230px] md:h-[300px] overflow-y-auto px-4 flex flex-col justify-center"
+                    className="w-full h-[370px] md:h-[300px] overflow-y-auto px-4 flex flex-col justify-center"
                   >
                     <h2 className="text-lg md:text-xl font-normal mb-2 text-left font-roc">
                       {slides[currentSlide].subtitle}
