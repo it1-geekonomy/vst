@@ -288,18 +288,15 @@ export default function EducationPage() {
 
         {/* Description section */}
         <section className="w-full px-4 md:px-8 lg:px-32 pb-2 md:pb-2 lg:pb-2 z-10  mx-auto">
-          <div className="text-center mx-auto">
+          <div className="text-center mx-auto mb-4">
             <p className="text-clamp-28 font-normal font-roc text-justify whitespace-pre-wrap">
               SKEI, Bangalore is a renowned co-education CBSE institution with a rich legacy of over 90 years, committed to providing a holistic and innovative education. Founded in 1931 by Dharamprakasha Sri Rao Bahadur V. S. Thiruvengadaswamy Mudaliar—a visionary entrepreneur and philanthropist—the school was born out of a mission to address the lack of educational opportunities for girls, including with his daughters.{'\n\n'}
               Rooted in a learner-centric philosophy, SKEI blends tradition with transformation, offering a nurturing environment that fosters both critical and creative thinking. The school's mission is to empower students with 21st-century skills, preparing them to excel in a global context while emphasizing values, leadership, and a passion for lifelong learning.{'\n\n'}
               Our century-old campus stands as a symbol of inclusive, values-driven education, where academic excellence goes hand-in-hand with empathy, integrity, and leadership. As envisioned by our founder, SKEI continues to be a sacred place from which girls and boys shall take the highest aspirations to lead better, grander, and more fulfilling lives.
             </p>
           </div>
-        </section>
-
-       <div className="w-full px-4 md:px-8 lg:px-30 mb-8 sm:mb-12 md:mb-20  mt-4 font-normal font-roc text-justify flex justify-center lg:block lg:text-justify">
           <div
-            className="w-full max-w-xs md:max-w-sm lg:w-[300px] rounded-[5px] bg-[#FEBF3D] px-6 py-3 md:px-8 md:py-4 text-lg md:text-xl lg:text-2xl text-black tracking-wider shadow-[0_2px_8px_rgba(0,0,0,0.07)] transition-all duration-300 ease-in-out flex items-center justify-center cursor-pointer hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
+            className="w-full max-w-xs md:max-w-sm lg:w-[300px] rounded-[5px] bg-[#FEBF3D] px-6 py-6 md:px-8 md:py-4 text-lg md:text-xl lg:text-2xl text-black tracking-wider shadow-[0_2px_8px_rgba(0,0,0,0.07)] transition-all duration-300 ease-in-out flex items-center justify-center cursor-pointer hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95"
           >
             <a
               href="https://www.skei.edu.in/"
@@ -310,6 +307,10 @@ export default function EducationPage() {
               Explore More
             </a>
           </div>
+        </section>
+
+       <div className="w-full px-4 md:px-8 lg:px-30 mb-8 sm:mb-12 md:mb-20  mt-4 font-normal font-roc text-justify flex justify-center lg:block lg:text-justify">
+      
           <LocationSection
             locationImage="education/educational location.png"
             address={{

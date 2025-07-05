@@ -39,11 +39,11 @@ const LocationSection: React.FC<LocationSectionProps> = ({
     switch (mobilePadding) {
       case 'auto-parts':
       case 'education':
-        return 'pl-16 sm:pl-10'; // More padding for auto-parts and education
+        return 'pl-18 sm:pl-10'; // More padding for auto-parts and education
       case 'manufacture':
-        return 'pl-8 sm:pl-6'; // Same padding for manufacture
+        return 'pl-12 sm:pl-6'; // Same padding for manufacture
       default:
-        return 'pl-8 sm:pl-6'; // Default padding
+        return 'pl-0 sm:pl-6'; // Default padding
     }
   };
 
@@ -58,9 +58,9 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         - xl: 1280px - 1535px (large desktops)
         - 2xl: 1536px+ (extra large screens)
       */}
-      <div className="flex flex-col justify-between lg:flex-row items-left lg:items-stretch w-full mx-auto gap-4 sm:gap-6 lg:gap-8 xl:gap-10 2xl:gap-16 ">
+      <div className="flex flex-col justify-around lg:flex-row items-left lg:items-stretch w-full mx-auto gap-4 sm:gap-6 md:gap-8 lg:gap-0">
         {/* Left section with title and image */}
-        <div className="flex flex-col items-center lg:items-start w-full lg:w-auto lg:max-w-[45%] xl:max-w-[50%]">
+        <div className="flex flex-col items-center lg:items-start w-full lg:w-[40%]">
           <h2
             className={`text-[#2B0B1F] text-center lg:text-left mb-4 sm:mb-6 font-roc ${className}`}
             style={{
@@ -75,11 +75,12 @@ const LocationSection: React.FC<LocationSectionProps> = ({
             href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-full max-w-[340px] h-[200px] 
-                     sm:max-w-[400px] sm:h-[220px] 
-                     lg:w-[470px] lg:h-[230px] 
-                     xl:w-[450px] xl:h-[220px] 
-                     2xl:w-[480px] 2xl:h-[235px] 
+            className="relative w-[90%] max-w-[340px] h-[50vw] max-h-[320px] min-h-[240px]
+                     sm:w-[85%] sm:max-w-[400px] sm:h-[45vw] sm:max-h-[200px]
+                     md:w-[95%] md:max-w-[480px] md:h-[15vw] md:max-h-[200px]
+                     lg:w-[95%] lg:max-w-[490px] lg:h-[15vw] lg:max-h-[300px] lg:min-h-[280px]
+                     xl:w-[90%] xl:max-w-[500px] xl:h-[30vw] xl:max-h-[320px]
+                     2xl:w-[80%] 2xl:max-w-[520px] 2xl:h-[15vw] 2xl:max-h-[320px]
                      overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <Image
@@ -93,13 +94,13 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex items-start flex-col lg:flex-row gap-8 sm:gap-6 lg:gap-10 xl:gap-10 w-[80%] lg:w-auto lg:max-w-[55%] xl:max-w-[50%] mt-16 lg:mt-28 object-center">
+        <div className="flex items-center lg:items-start flex-col lg:flex-row justify-center lg:justify-around gap-8 sm:gap-6 lg:gap-10 xl:gap-10 w-full lg:w-[60%] mt-16 lg:mt-28 object-center">
           {/* Address */}
-          <div className="text-center lg:text-left flex items-center justify-center lg:justify-start w-full lg:w-auto pr-1">
+          <div className="text-center lg:text-left flex items-center justify-center lg:justify-start w-full lg:w-auto pr-1 self-center flex-shrink-0">
             <div
               className={`font-roc font-normal ${className} flex flex-col items-center lg:items-start w-full max-w-[400px]`}
               style={{
-                fontSize: 'clamp(15px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
+                fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
                 lineHeight: '1.6',
               }}
             >
@@ -115,9 +116,9 @@ const LocationSection: React.FC<LocationSectionProps> = ({
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col items-center justify-center lg:items-start">
+          <div className="flex flex-col items-center justify-center lg:items-start self-center w-full">
             {/* Mobile/Tablet: Single column centered layout */}
-            <div className={`flex flex-col items-center lg:hidden w-full max-w-[400px] mx-auto space-y-2 sm:space-y-6 ${getMobilePadding()}`}>
+            <div className={`flex flex-col items-center lg:hidden w-full max-w-[400px] mx-auto space-y-2 sm:space-y-6 justify-center ${getMobilePadding()}`}>
               {/* Phone Numbers */}
               {phoneNumbers.map((phone, idx) => (
                 <a 
@@ -140,8 +141,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal break-all text-left ${className}`}
                       style={{
-                        fontSize: 'clamp(15px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
-                        lineHeight: '1.4',
+                        fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                        lineHeight: '1.4'
                       }}
                     >
                       {phone.replace('📞 ', '')}
@@ -176,7 +177,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                         <span
                           className={`font-roc font-normal break-all text-left ${className}`}
                           style={{
-                            fontSize: 'clamp(16px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
+                            fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
                             lineHeight: '1.4'
                           }}
                         >
@@ -193,7 +194,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                           <h1
                             className={`font-roc font-normal text-left text-[#FDB813] `}
                             style={{
-                              fontSize: 'clamp(14px, 1.6vw, 24px)', // Responsive font size from 14px to 20px
+                              fontSize: 'clamp(14px, 1.8vw, 26px)', // Reduced font size from 14px to 26px
                               lineHeight: '1.6',
                             }}
                           >
@@ -220,15 +221,15 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                               d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
                             />
                           </svg>
-                          <span
-                            className={`font-roc font-normal break-all text-left ${className}`}
-                            style={{
-                              fontSize: 'clamp(15px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
-                              lineHeight: '1.6'
-                            }}
-                          >
-                            {emails.globalConnect}
-                          </span>
+                                                      <span
+                              className={`font-roc font-normal break-all text-left ${className}`}
+                              style={{
+                                fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                                lineHeight: '1.4'
+                              }}
+                            >
+                              {emails.globalConnect}
+                            </span>
                         </div>
                       </a>
                     </>
@@ -259,8 +260,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal break-all text-left ${className}`}
                       style={{
-                        fontSize: 'clamp(15px, 1.6vw, 24px)',
-                        lineHeight: '1.6'
+                        fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                        lineHeight: '1.4'
                       }}
                     >
                       {websiteUrl.replace(/^https?:\/\//, '')}
@@ -294,7 +295,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                     <span
                       className={`font-roc font-normal ${className}`}
                       style={{
-                        fontSize: 'clamp(15px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
+                        fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
                         lineHeight: '1.4',
                       }}
                     >
@@ -329,8 +330,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       <span
                         className={`font-roc font-normal whitespace-nowrap ${className}`}
                         style={{
-                          fontSize: 'clamp(16px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
-                          lineHeight: '2.0'
+                          fontSize: 'clamp(14px, 1.8vw, 26px)', // Reduced font size from 14px to 26px
+                          lineHeight: '1.6',
                         }}
                       >
                         {emails.info}
@@ -342,7 +343,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       <h1
                         className={`font-roc font-normal text-left text-[#FDB813] pl-7`}
                         style={{
-                          fontSize: 'clamp(14px, 1.6vw, 24px)', // Responsive font size from 14px to 20px
+                          fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
                           lineHeight: '1.6',
                         }}
                       >
@@ -369,8 +370,8 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                         <span
                           className={`font-roc font-normal whitespace-nowrap ${className}`}
                           style={{
-                            fontSize: 'clamp(15px, 1.6vw, 24px)', // Responsive font size from 13px to 20px
-                            lineHeight: '1.6'
+                            fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
+                            lineHeight: '1.4'
                           }}
                         >
                           {emails.globalConnect}
@@ -400,7 +401,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
                       <span
                         className={`font-roc font-normal whitespace-nowrap ${className}`}
                         style={{
-                          fontSize: 'clamp(15px, 1.6vw, 24px)',
+                          fontSize: 'clamp(16px, 2vw, 28px)', // Reduced font size from 16px to 28px
                           lineHeight: '1.6'
                         }}
                       >
