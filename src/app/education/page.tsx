@@ -310,8 +310,6 @@ export default function EducationPage() {
               Explore More
             </a>
           </div>
-        </div>
-
           <LocationSection
             locationImage="education/educational location.png"
             address={{
@@ -335,6 +333,8 @@ export default function EducationPage() {
           websiteUrl="www.skei.edu.in"
           mobilePadding="education"
           />
+        </div>
+
           
           <div className="relative  w-full pt-1 sm:pt-0 bg-black">
         <BusinessSectors />

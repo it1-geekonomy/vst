@@ -559,7 +559,6 @@ export default function Page() {
                 </a>
               </div>
             </div>
-          </div>
           <div className="text-black">
             <LocationSection
               locationImage="vst-auto-parts/location img.png"
@@ -584,6 +583,7 @@ export default function Page() {
               websiteUrl="https://vstmotors.com/parts/"
               mobilePadding="auto-parts"
             />
+          </div>
           </div>
           
           {/* Business Sectors section with higher z-index to overlap yellow */}

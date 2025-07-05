@@ -43,7 +43,7 @@ export default function Home() {
       <LifeAtVst />
       <EmpoweringScroll />
 
-      <ContactUs bgcolour="bg-black" />
+      {/* <ContactUs bgcolour="bg-black" /> */}
       <Footer bgcolour="bg-[#101010]" />
     </main>
   );
