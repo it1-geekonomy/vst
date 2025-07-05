@@ -132,7 +132,7 @@ const LifeAtVst = () => {
             {/* Content wrapper to maintain consistent width */}
             <div className="w-full max-w-[90%] md:max-w-[75%]">
               {/* Heading with digits on same line */}
-              <div className="flex items-center w-full ">
+              <div className="flex items-center w-full pt-8 md:pt-0">
                 <div className="flex items-baseline w-full">
                   {/* Number container with fixed width */}
                   <div className="flex items-baseline mr-2 md:mr-4 flex-shrink-0">
@@ -223,7 +223,7 @@ const LifeAtVst = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="w-full h-[370px] md:h-[300px] overflow-y-auto px-4 flex flex-col justify-center"
+                    className="w-full h-[420px] md:h-[300px] overflow-y-auto px-4 flex flex-col justify-center"
                   >
                     <h2 className="text-lg md:text-xl font-normal mb-2 text-left font-roc">
                       {slides[currentSlide].subtitle}
