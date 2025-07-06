@@ -353,7 +353,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen mt-16">
       {/* Main section with background image */}
-      <div className="relative h-auto lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh]">
+      <div className="relative min-h-[70vh] lg:min-h-[90vh] xl:min-h-[90vh] 2xl:min-h-[90vh]">
         {/* Background image only for main section */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 opacity-100">
@@ -369,7 +369,7 @@ export default function Page() {
         </div>
 
         {/* VST AUTO PARTS Title */}
-        <div className="relative z-10 pt-8 sm:pt-12 lg:pt-12 pb-6 sm:pb-6 lg:pb-4 text-center">
+        <div className="relative z-10 pt-8 sm:pt-12 lg:pt-12 pb-6 sm:pb-6 lg:pb-8 text-center">
           {/* Logo Section */}
           <div className="flex justify-center lg:mb-8 mb-6">
             <Image
@@ -387,7 +387,7 @@ export default function Page() {
         </div>
 
         {/* Responsive Carousel Slider */}
-        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto lg:mb-0 2xl:mb-0 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[45\80px] xl:h-[500px] 2xl:h-[550px] xl:mt-0 2xl:mt-0 3xl:mt-0 mb-0 lg:mb-20 xl:mb-20">
+        <div className="relative z-10 max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl mx-auto lg:mb-0 2xl:mb-0 h-[250px] sm:h-[340px] md:h-[450px] lg:h-[480px] xl:h-[500px] 2xl:h-[550px] xl:mt-0 2xl:mt-0 3xl:mt-0 mb-0 lg:mb-0 xl:mb-0 pb-2 sm:pb-4 lg:pb-0">
           {/* Desktop 3D Carousel - only visible on large screens */}
           <div className="relative hidden lg:flex h-full items-center justify-center perspective-1500">
             <div className="carousel-container relative w-full h-full">
@@ -504,14 +504,14 @@ export default function Page() {
 
       {/* Location section with its own gradient background - completely separate section */}
       <div className="relative w-full bg-[#FFB922] mt-0">
-        <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-8 sm:pt-20 lg:pt-10 xl:pt-30 ">
-          <div className="pt-8 sm:pt-16 lg:pt-16 relative z-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
+        <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-4 sm:pt-8 lg:pt-0 xl:pt-0">
+          <div className="flex flex-col  pt-4 sm:pt-8 lg:pt-0 relative z-10 max-w-full sm:max-w-[90%] md:max-[90%] lg:max-w-[88%]  mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
             {/* Company information section */}
             <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl  font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
               Reliable distribution and strong partnerships driving growth
             </h1>
 
-            <div className="mb-6 sm:mb-8 w-full lg:mb-10 text-black">
+            <div className="mb-6 sm:mb-4 w-full lg:mb-10 text-black">
               <p className="text-clamp-28 leading-[1.6] text-justify">
                 We operate within a focused region in North Tamil Nadu, covering
                 four key districts with a well-established logistics network. Our
@@ -522,8 +522,8 @@ export default function Page() {
                 
                 Our portfolio includes approximately 2,750 line items, catering to a strong network of over 1700 retailers and 1000 Tata Guru mechanics. With a consistent 12–15% year-on-year growth, our continued success reflects both our operational strength and our unwavering commitment to customer satisfaction.
               </p>
-              <div className="mt-15">
-                <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-15">
+              <div className="mt-2 flex flex-col justify-center items-center">
+                <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl mt-10">
                   Expanding reach with Mercedes-Benz
                 </h1>
                 <p className="text-clamp-28 leading-[1.6] text-justify">
@@ -559,7 +559,7 @@ export default function Page() {
                 </a>
               </div>
             </div>
-          <div className="text-black">
+            <div className="text-black flex justify-center items-center w-auto">
             <LocationSection
               locationImage="vst-auto-parts/location img.png"
               address={{
@@ -584,7 +584,9 @@ export default function Page() {
               mobilePadding="auto-parts"
             />
           </div>
+          
           </div>
+          
           
           {/* Business Sectors section with higher z-index to overlap yellow */}
           <div className="relative z-10 w-full pt-1 sm:pt-0  bg-black ">

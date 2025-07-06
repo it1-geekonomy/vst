@@ -173,7 +173,7 @@ export default function Page() {
         }}
       />
       {/* Hero Section with Background Image and Overlayed Text */}
-      <section className="relative h-[50vh] md:h-[80vh] lg:h-[100vh] w-full overflow-hidden flex items-center px-4 lg:px-6 xl:px-11 2xl:px-14 pt-4">
+      <section className="relative h-[50vh] md:h-[80vh] lg:h-[80vh] w-full overflow-hidden flex items-center px-4 lg:px-6 xl:px-11 2xl:px-14 pt-4">
         {/* Background Image */}
         <Image
           src={frame1}
@@ -206,7 +206,7 @@ export default function Page() {
       </section>
 
       {/* Form Section - Consistent spacing across all screen sizes */}
-      <section className="relative z-20 mt-2 sm:mt-6 md:mt-8 lg:mt-20 xl:mt-24 bg-transparent pb-32 md:pb-40">
+      <section className="relative z-20 mt-0 bg-transparent pb-32 md:pb-40">
         <div className="px-4 lg:px-6 xl:px-11 2xl:px-14">
           {/* Form Container */}
           <div className="bg-[#DCDCDC] rounded-xl sm:rounded-2xl md:rounded-3xl mx-2 sm:mx-5 md:mx-8 lg:mx-10 py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-8 md:px-12 lg:px-28">

@@ -1163,20 +1163,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(sale.phone) ? (
-                                    sale.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    sale.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {sale.phone}
+                                    <div className="mt-1">
+                                      {sale.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                   {Array.isArray(sale.email) ? (
@@ -1217,20 +1228,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(service.phone) ? (
-                                    service.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    service.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {service.phone}
+                                    <div className="mt-1">
+                                      {service.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                   {Array.isArray(service.email) ? (
@@ -1271,20 +1293,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesService.phone) ? (
-                                    salesService.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    salesService.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {salesService.phone}
+                                    <div className="mt-1">
+                                      {salesService.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                   {Array.isArray(salesService.email) ? (
@@ -1325,20 +1358,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesDist.phone) ? (
-                                    salesDist.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-5 sm:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    salesDist.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-5 sm:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-5 sm:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {salesDist.phone}
+                                    <div className="mt-1">
+                                      {salesDist.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-5 sm:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                   {Array.isArray(salesDist.email) ? (
@@ -1379,20 +1423,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(preOwned.phone) ? (
-                                    preOwned.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    preOwned.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {preOwned.phone}
+                                    <div className="mt-1">
+                                      {preOwned.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                   {Array.isArray(preOwned.email) ? (
@@ -1433,20 +1488,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(serviceParts.phone) ? (
-                                    serviceParts.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    serviceParts.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {serviceParts.phone}
+                                    <div className="mt-1">
+                                      {serviceParts.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                   {Array.isArray(serviceParts.email) ? (
@@ -1488,20 +1554,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(sparesParts.phone) ? (
-                                    sparesParts.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    sparesParts.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {sparesParts.phone}
+                                    <div className="mt-1">
+                                      {sparesParts.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                   {Array.isArray(sparesParts.email) ? (
@@ -1543,20 +1620,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(spares.phone) ? (
-                                    spares.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    spares.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {spares.phone}
+                                    <div className="mt-1">
+                                      {spares.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                   {Array.isArray(spares.email) ? (
@@ -1598,20 +1686,31 @@ const FranchiseSlider = () => {
                                 </div>
                                 <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
                                   {Array.isArray(salesService.phone) ? (
-                                    salesService.phone.map((p, i) => (
-                                      <div key={i} className="mt-1 flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        {p}
-                                      </div>
-                                    ))
+                                    salesService.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
                                   ) : (
-                                    <div className="mt-1 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                      </svg>
-                                      {salesService.phone}
+                                    <div className="mt-1">
+                                      {salesService.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
                                     </div>
                                   )}
                                {Array.isArray(salesService.email) ? (

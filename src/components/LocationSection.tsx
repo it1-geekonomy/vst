@@ -58,7 +58,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         - xl: 1280px - 1535px (large desktops)
         - 2xl: 1536px+ (extra large screens)
       */}
-      <div className="flex flex-col justify-around lg:flex-row items-left lg:items-stretch w-full mx-auto gap-4 sm:gap-6 md:gap-6 lg:gap-0">
+      <div className="flex flex-col justify-around lg:flex-row items-left lg:items-stretch w-full mx-auto gap-[-2] sm:gap-6 md:gap-6 lg:gap-0">
         {/* Left section with title and image */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-[40%]">
           <h2
@@ -94,7 +94,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         </div>
 
         {/* Right section with address, phone numbers and emails */}
-        <div className="flex items-center lg:items-start flex-col lg:flex-row justify-center lg:justify-around gap-8 sm:gap-6 md:gap-2 lg:gap-10 xl:gap-10 2xl:gap-40 w-full lg:w-[60%] mt-16 lg:mt-28 object-center">
+        <div className="flex items-center lg:items-start flex-col lg:flex-row justify-center lg:justify-around gap-8 sm:gap-6 md:gap-2 lg:gap-10 xl:gap-1 2xl:gap-25 w-full lg:w-[60%] mt-10 lg:mt-28 object-center">
           {/* Address */}
           <div className="text-center lg:text-left flex items-center justify-center lg:justify-start w-full lg:w-auto pr-1 self-center flex-shrink-0">
             <div
