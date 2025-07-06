@@ -44,7 +44,7 @@ const LifeAtVst = () => {
   }
 
   return (
-    <div className="relative w-full h-[500px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden ">
+    <div className="relative w-full h-[550px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden ">
       {/* Add keyframes for the flowing gradient animation matching the image */}
       <style jsx global>{`
         @keyframes flowingGradient {
@@ -223,7 +223,7 @@ const LifeAtVst = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="w-full h-[420px] md:h-[300px] overflow-y-auto px-4 pb-8 md:pb-0 flex flex-col"
+                    className="w-full h-[500px] md:h-[300px] overflow-y-auto md:overflow-y-auto overflow-hidden px-4 pb-8 md:pb-0 flex flex-col"
                     style={{ paddingTop: '2rem' }}
                   >
                     <h2 className="text-lg md:text-xl font-normal mb-4 text-left font-roc">

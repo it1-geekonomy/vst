@@ -507,7 +507,7 @@ export default function Page() {
         <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-4 sm:pt-8 lg:pt-0 xl:pt-0">
           <div className="flex flex-col  pt-4 sm:pt-8 lg:pt-0 relative z-10 max-w-full sm:max-w-[90%] md:max-[90%] lg:max-w-[88%]  mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
             {/* Company information section */}
-            <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl  font-medium text-black mb-6 sm:mb-8 lg:mb-10 max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
+            <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 mx-auto max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
               Reliable distribution and strong partnerships driving growth
             </h1>
 
@@ -532,30 +532,15 @@ export default function Page() {
               </div>
               
               <div className="flex justify-center lg:justify-start mt-6">
-                <a
-                  href="https://vstmotors.com/parts/"
-                  target="_blank"
+                <a 
+                  href="https://vstmotors.com/parts/" 
+                  className="mt-4 sm:mt-6 lg:mt-10 inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-start" 
+                  target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-full max-w-xs"
                 >
-                  <button
-                    className="
-      px-6 py-2
-      bg-white
-      text-black
-      rounded
-      shadow
-      hover:bg-gray-200
-      transition
-      text-sm
-      sm:text-lg
-      font-normal
-      border border-gray-300
-      w-full
-    "
-                  >
+                  <h3 className="bg-white rounded-lg px-6 sm:px-8 lg:px-34 py-2 sm:py-3 lg:py-3 text-[#0f0f0e] text-lg sm:text-xl lg:text-3xl font-light hover:bg-gray-100 hover:text-[#0f0f0e] transition-colors text-center">
                     Explore More
-                  </button>
+                  </h3>
                 </a>
               </div>
             </div>

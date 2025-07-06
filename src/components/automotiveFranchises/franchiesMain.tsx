@@ -1013,7 +1013,7 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Description section */}
-        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8  pb-12 sm:pb-0">
+        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8 lg:gap-20 mb-12 sm:mb-0">
           {/* Left: Description */}
           <div className="w-full lg:w-3/5 flex flex-col items-center sm:items-center lg:items-start">
             <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-0 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
@@ -1045,22 +1045,22 @@ const FranchiseSlider = () => {
             </AnimatePresence>
 
             <a href={slides[currentSlide].learnMoreLink} className={`mt-4 sm:mt-6 lg:mt-10 ${slides[currentSlide].brand === "jlr" ? "hidden" : "inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-start"}`} target="_blank" rel="noopener noreferrer">
-              <h3 className="bg-white rounded-lg px-6 sm:px-8 lg:px-40 py-2 sm:py-3 lg:py-5 text-[#0f0f0e] text-lg sm:text-xl lg:text-3xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
+              <h3 className="bg-white rounded-lg px-6 sm:px-8 lg:px-30 py-2 sm:py-3 lg:py-3 text-[#0f0f0e] text-lg sm:text-xl lg:text-2xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
                 Explore More
               </h3>
             </a>
-            {slides[currentSlide].brand === "jlr" && (
-              <div className="mt-4 sm:mt-6 lg:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 w-full justify-center">
-                <a href="https://retailers.jaguar.in/vst-grandeur-jaguar/" className="w-full sm:w-[45%] lg:w-[40%]" target="_blank" rel="noopener noreferrer">
-                  <h3 className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-5 text-[#0f0f0e] text-lg sm:text-xl lg:text-2xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
-                    Jaguar
-                  </h3>
-                </a>
-                <a href="https://retailers.landrover.in/vst-grandeur-land-rover/" className="w-full sm:w-[45%] lg:w-[40%]" target="_blank" rel="noopener noreferrer">
-                  <h3 className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-5 text-[#0f0f0e] text-lg sm:text-xl lg:text-2xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
-                  Land Rover
-                  </h3>
-                </a>
+                          {slides[currentSlide].brand === "jlr" && (
+                <div className="mt-4 sm:mt-6 lg:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 w-full justify-center lg:justify-between">
+                                  <a href="https://retailers.jaguar.in/vst-grandeur-jaguar/" className="w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
+                    <h3 className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 xl:px-24 2xl:px-34 py-2 sm:py-3 lg:py-3 text-[#0f0f0e] text-lg sm:text-xl lg:text-2xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center">
+                      Jaguar
+                    </h3>
+                  </a>
+                  <a href="https://retailers.landrover.in/vst-grandeur-land-rover/" className="w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
+                    <h3 className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 xl:px-24 2xl:px-34    py-2 sm:py-3 lg:py-3 text-[#0f0f0e] text-lg sm:text-xl lg:text-2xl font-light hover:bg-[#DFAC4F] hover:text-white transition-colors text-center whitespace-nowrap">
+                      Land Rover
+                    </h3>
+                  </a>
               </div>
             )}
           </div>

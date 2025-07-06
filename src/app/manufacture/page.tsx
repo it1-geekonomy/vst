@@ -227,19 +227,17 @@ const ManufacturePage = () => {
                 </div>
               </div>
               
-              <div className="w-full flex justify-start">
-                <div
-                  className="w-full max-w-xs md:max-w-sm lg:w-[300px] rounded-[5px] bg-[#FEBF3D] px-6 py-6 md:px-8 md:py-4 text-lg md:text-xl lg:text-2xl text-black tracking-wider shadow-[0_2px_8px_rgba(0,0,0,0.07)] transition-all duration-300 ease-in-out flex items-center justify-center cursor-pointer hover:bg-[#FFD84D] hover:scale-105 hover:shadow-lg active:scale-95 mx-auto md:mx-0"
+              <div className="flex justify-center lg:justify-start">
+                <a 
+                  href="https://www.vsttractors.com/" 
+                  className="mt-4 sm:mt-6 lg:mt-10 inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-start" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                 >
-                  <a
-                    href="https://www.vsttractors.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full h-full flex items-center justify-center text-black no-underline"
-                  >
+                  <h3 className="bg-[#FEBF3D] rounded-lg px-6 sm:px-8 lg:px-34 py-2 sm:py-3 lg:py-3 text-[#0f0f0e] text-lg sm:text-xl lg:text-3xl font-light hover:bg-white hover:text-[#0f0f0e] transition-colors text-center">
                     Explore More
-                  </a>
-                </div>
+                  </h3>
+                </a>
               </div>
             </div>
             
