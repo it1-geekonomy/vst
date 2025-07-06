@@ -353,7 +353,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen mt-16">
       {/* Main section with background image */}
-      <div className="relative min-h-[70vh] lg:min-h-[90vh] xl:min-h-[90vh] 2xl:min-h-[90vh]">
+      <div className="relative min-h-[66vh] lg:min-h-[90vh] xl:min-h-[90vh] 2xl:min-h-[90vh]">
         {/* Background image only for main section */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 opacity-100">

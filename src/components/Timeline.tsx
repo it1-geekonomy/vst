@@ -377,13 +377,13 @@ const AnimatedTimeline = () => {
                       transition={{ duration: 0.5 }}
                     >
                       <div
-                        className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-28 items-center ${
-                          index % 2 === 0 ? "" : "md:flex-row-reverse"
+                        className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-30 items-center px-12 ${
+                          index % 2 === 0 ? "" : "md:justify-end"
                         }`}
                       >
                         {/* Image Section */}
                         <motion.div
-                          className={`relative order-1 ${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}
+                          className={`relative order-1 ${index % 2 === 0 ? "md:order-1" : "md:order-2 md:justify-self-end"}`}
                           initial={{ scale: 0.95 }}
                           animate={{ scale: 1 }}
                           transition={{ duration: 0.5 }}
