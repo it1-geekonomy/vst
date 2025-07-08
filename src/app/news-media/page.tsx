@@ -30,7 +30,7 @@ import frame3 from "@/app/public/images/news/card6New.png";
 
 import News from "@/components/News";
 import VideosSection from "@/components/VideosSection";
-import { Contact } from "lucide-react";
+import { Contact, Group } from "lucide-react";
 import ContactUs from "@/components/GetInTouch";
 import Footer from "@/components/Footer";
 import { frame } from "framer-motion";
@@ -38,18 +38,19 @@ import { frame } from "framer-motion";
 export default function NewsMedia() {
   const [currentIndex, setCurrentIndex] = useState(0);
   
-  const headlines = [
-    "Exciting! Our new Porsche showroom \n is now in Whitefield!",
-    "A special moment from our Chennai finance team",
-    "As a long-standing Ducati dealer partner at VST Group.",
-    "Another milestone on the road to excellence!",
-  ];
+  // const headlines = [
+  //   "A special moment from our Chennai finance team",
+  //   "Exciting! Our new Porsche showroom \n is now in Whitefield!",
+    
+  //   "As a long-standing Ducati dealer partner at VST Group.",
+  //   "Another milestone on the road to excellence!",
+  // ];
   const headlines2 = [
 
     {
       image: hcard5,
       alt: "Latest Models",
-      // title: "We Are Now Open",
+       title: "Surging sales of VST Tillers Tractors",
       text: "VST Tillers Tractors Reports Sales of 3,486 Units in May 2025",
       link: "https://krishijagran.com/industry-news/vst-tillers-tractors-reports-sales-of-3-486-units-in-may-2025/",
      
@@ -58,7 +59,7 @@ export default function NewsMedia() {
       image: hcard1,
       alt: "Latest Models",
 
-      // title: "We Are Now Open",
+      title:  "Exciting! Our new Porsche showroom \n is now in Whitefield!",
       text: "Exciting times ahead! Introducing our stunning new Porsche showroom in Whitefield.",
       link: "https://www.linkedin.com/posts/motoring-trends_vstsupercars-porsche-porscheshowroom-activity-7307824403147321344-H_QF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
      
@@ -66,7 +67,7 @@ export default function NewsMedia() {
     {
       image: hcard2,
       alt: "Latesaat Models",
-      // title: "We Are Now Open",
+      title:  "A special moment from our Chennai finance team",
       text: "A special moment from our Chennai finance team, who surprised our Chairman, Arun Surendra, with a thoughtful token of appreciation.",
       link: "  https://www.linkedin.com/posts/vst-motors-ltd_teamappreciation-gratitude-dreamteam-activity-7321082890115510273-52SW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE",
      
@@ -74,7 +75,7 @@ export default function NewsMedia() {
     {
       image: hcard3,
       alt: "Latestaa Models",
-      // title: "We Are Now Open",
+       title: "As a long-standing Ducati dealer partner at VST Group.",
       text: "As a long-standing Ducati dealer partner at VST Group",
       link: "https://www.linkedin.com/posts/vst-motors-ltd_ducatiindia-ducaticommunity-vstgroup-activity-7201814884903235585-li-1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEKXx8oBJZx9kmwsl0vvlJNzz3koCw-vLhE",
      
@@ -84,7 +85,7 @@ export default function NewsMedia() {
     {
       image: hcard4,
       alt: "Latest Models",
-      // title: "We Are Now Open",
+      title: "Another milestone on the road to excellence!",
       text: "Another milestone on the road to excellence!",
       link: " https://www.linkedin.com/posts/vst-motors-ltd_globalporschemomentaward-porsche-globalrecognition-activity-7313130881051697152-J3cW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ",
      
@@ -153,8 +154,8 @@ export default function NewsMedia() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % headlines.length);
-    }, 2000);
+      setCurrentIndex((prev) => (prev + 1) % headlines2.length);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -187,18 +188,18 @@ export default function NewsMedia() {
                   {/* Hero Title */}
                   <div className="flex items-center justify-center pt-12 sm:pt-30 md:pt-20 lg:pt-40 xl:pt-48 h-[40%] sm:h-[55%] md:h-[45%]">
                     <div className="relative h-full flex items-center justify-center w-full min-h-[50px]">
-                      {headlines.map((headline, index) => (
+                      {headlines2.map((headline, index) => (
                         <h1 
                           key={index}
                           className={`text-black w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight font-roc font-semibold sm:font-medium px-4 sm:px-6 md:px-8 absolute transition-all duration-1000 text-center ${
                             currentIndex === index 
                               ? "opacity-100 translate-x-0" 
-                              : index === (currentIndex + 1) % headlines.length || (currentIndex === headlines.length - 1 && index === 0)
+                              : index === (currentIndex + 1) % headlines2.length || (currentIndex === headlines2.length - 1 && index === 0)
                                 ? "opacity-0" 
                                 : "opacity-0"
                           }`}
                         >
-                          {headline}
+                          {headline.title}
                         </h1>
                       ))}
                     </div>

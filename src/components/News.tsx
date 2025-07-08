@@ -14,9 +14,10 @@ import card6 from "@/app/public/news-and-media/NewsAndArticles/Image2.png";
 import card7 from "@/app/public/news-and-media/NewsAndArticles/Image3.png";
 import card8 from "@/app/public/news-and-media/NewsAndArticles/Image4.png";
 import card4 from "@/app/public/news-and-media/NewsAndArticles/image 209.png";
-
-
-
+import card9 from "@/app/public/news-and-media/NewsAndArticles/4.jpg";
+import card10 from "@/app/public/news-and-media/NewsAndArticles/5.jpg";
+import card11 from "@/app/public/news-and-media/NewsAndArticles/6.jpg";
+import card12 from "@/app/public/news-and-media/NewsAndArticles/7.png";
 
 import { title } from 'process';
 
@@ -102,6 +103,45 @@ const latestUpdatesData = [
     time: '',
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
   },
+  {
+    id: 5,
+    image: card9,
+    title: "Leadership in action. While in Chennai for strategic business discussions, Mr. Arun Surendra",
+    tag: 'Business',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_leadershipinaction-customerexperience-mercedesbenzindia-activity-7344642564475580416-lfOz?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+  },
+  {
+    id: 6,
+    image: card10,
+    title: "Now that’s how you end an IPL season. RCB finally gets the win, and we caught it live at Porsche Centre Bengaluru !",
+    tag: 'Business',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_rcb-ipl2025-18yearswait-activity-7336324640845254656--5SQ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+  },
+  {
+    id: 7,
+    image: card11,
+    title: " What an incredible two days at the Porsche Golf Cup India 2025 in Bengaluru!",
+    tag: 'Business',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_porschegolfcup2025-porschecommunity-golfwithporsche-activity-7331581877008420867-tpNf?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+  },
+  {
+    id: 8,
+    image: card12,
+    title: "It was great having our Managing Director Mr. Arun Surendra, visit our new VST Grandeur Jaguar Land Rover facility in Coimbatore last week.",
+    tag: 'Business',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_jlrshowroom-newfacility-coimbatore-activity-7343498202295259136-Iiyp?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+  },
+
+
+
 
 
 ];
