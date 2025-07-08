@@ -189,7 +189,7 @@ const slides: SlideData[] = [
             address: "Marksquare, 61 - St Mark's Rd, \nShanthala Nagar, Bengaluru - 560 001",
             phone: "+91 99024 88899",
             email: " info@vst-maserati.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7475751110064!2d77.5915893!3d12.9879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1747218568134!5m2!1sen!2sin"
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9713024798307!2d77.6016358!3d12.9736873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e80714a3af%3A0x8de8cd7a5664e5aa!2sVST%20Maserati%20Sales!5e0!3m2!1sen!2sin!4v1751966058266!5m2!1sen!2sin"
           }
         ],
         service: [
@@ -357,6 +357,12 @@ const slides: SlideData[] = [
             phone: "+91 93848 77744",
             email: "salesmanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747843601693!5m2!1sen!2sin" 
+          },
+          {
+            address: "184 Anna Salai, India Garage building Chennai, 600 006",
+            phone: "+91 9500722951",
+            email: " pocmanager.chn@vstcentral-kia.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6426892964228!2d80.25879789999999!3d13.058401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267e3df4cc7d7%3A0x821c429e677033ea!2sKIA%20Showroom%20Chennai%20-%20VST%20Central%20CPO!5e0!3m2!1sen!2sin!4v1751965936879!5m2!1sen!2sin" 
           },
         ]
       }
