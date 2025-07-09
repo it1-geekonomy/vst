@@ -132,7 +132,7 @@ const FranchiseSlider = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen lg:mt-[-3rem] mt-[1rem]">
+    <div className="relative w-full min-h-screen lg:mt-[-2rem] mt-[1rem]">
       {/* Fixed background gradient */}
       <div
         className="fixed inset-0 z-0 pointer-events-none"
@@ -151,7 +151,7 @@ const FranchiseSlider = () => {
         onTouchEnd={onTouchEnd}
       >
         {/* Car section */}
-        <div className="relative w-full h-auto sm:h-auto lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[5rem] mb-[1rem]">
+        <div className="relative w-full h-auto sm:h-auto lg:h-screen flex flex-col lg:flex-row sm:mb-[1rem] lg:mb-[2rem] mb-[1rem]">
           {/* Left section with background and car */}
           <div className="relative w-full lg:w-[85%] h-[50vh] sm:h-[50vh] lg:h-full xl:h-[100vh]">
             <AnimatePresence mode="wait">
@@ -289,7 +289,7 @@ const FranchiseSlider = () => {
         </div>
 
         {/* Description section */}
-        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-4 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8 lg:gap-20 mb-12 sm:mb-0">
+        <div className="w-full flex flex-col lg:flex-row py-2 sm:py-12 lg:py-0 px-4 sm:px-6 lg:px-24 items-start gap-6 sm:gap-8 lg:gap-20 mb-12 sm:mb-0">
           {/* Left: Description */}
           <div className="w-full lg:w-3/5 flex flex-col items-center sm:items-center lg:items-start">
             <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-0 text-center sm:text-center lg:text-left w-full flex justify-center sm:justify-center lg:justify-start">
@@ -347,7 +347,7 @@ const FranchiseSlider = () => {
               <>
                 {/* Website Link */}
                 {slides[currentSlide]?.learnMoreLink && (
-                  <div className="w-full flex flex-col gap-2 mb-8 sm:mb-4">
+                  <div className="w-full flex flex-col gap-2 mb-8 sm:mb-4 lg:mb-0">
                     {slides[currentSlide].brand === "jlr" ? (
                       <>
                         <div className="flex flex-col gap-2">
@@ -408,7 +408,7 @@ const FranchiseSlider = () => {
                 )}
                 {/* Location Card */}
                 <div
-                  className="border-l border-r border-white p-4 sm:p-6 flex flex-col gap-0 min-w-0 max-h-[500px] sm:max-h-[600px] lg:max-h-[700px] overflow-y-auto"
+                  className="border-l border-r border-white p-4 sm:p-6 flex flex-col gap-0 min-w-0 max-h-[500px] sm:max-h-[600px] md:max-h-[480px] overflow-y-auto"
                   style={{ background: "transparent", scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                   <style>{`

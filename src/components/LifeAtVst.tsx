@@ -44,7 +44,7 @@ const LifeAtVst = () => {
   }
 
   return (
-    <div className="relative w-full h-[550px] md:h-[370px] lg:h-[420px] bg-black text-white overflow-hidden ">
+    <div className="relative w-full h-[580px] md:h-[420px] lg:h-[500px] xl:h-[520px] bg-black text-white overflow-hidden ">
       {/* Add keyframes for the flowing gradient animation matching the image */}
       <style jsx global>{`
         @keyframes flowingGradient {
@@ -69,6 +69,32 @@ const LifeAtVst = () => {
         
         .gradient-line {
           background: linear-gradient(90deg, #8CE0FF, white);
+        }
+        
+        /* Custom scrollbar styling */
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 4px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 2px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: rgba(140, 224, 255, 0.6);
+          border-radius: 2px;
+          transition: background 0.2s ease;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: rgba(140, 224, 255, 0.8);
+        }
+        
+        /* Firefox scrollbar styling */
+        .custom-scrollbar {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(140, 224, 255, 0.6) rgba(255, 255, 255, 0.1);
         }
       `}</style>
 
@@ -223,7 +249,7 @@ const LifeAtVst = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="w-full h-[500px] md:h-[300px] overflow-y-auto md:overflow-y-auto overflow-hidden px-4 pb-8 md:pb-0 flex flex-col"
+                    className="w-full h-[450px] md:h-[300px] overflow-y-auto md:overflow-y-auto overflow-hidden px-4 pb-8 md:pb-0 flex flex-col custom-scrollbar"
                     style={{ paddingTop: '2rem' }}
                   >
                     <h2 className="text-lg md:text-xl font-normal mb-4 text-left font-roc">
@@ -240,7 +266,24 @@ const LifeAtVst = () => {
                   </motion.div>
                 </AnimatePresence>
               </div>
+
             </div>
+          </div>
+
+          {/* Dot indicators - positioned outside content container */}
+          <div className="absolute bottom-[0] md:bottom-[-25px] lg:bottom-[-50px] xl:bottom-[-40px] left-1/2 transform -translate-x-1/2 flex justify-center items-center space-x-3 z-10">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 ${
+                  currentSlide === index 
+                    ? 'bg-[#8CE0FF] scale-125 shadow-lg' 
+                    : 'bg-white/60 hover:bg-white/80'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>

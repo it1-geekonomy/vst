@@ -44,7 +44,7 @@ function EmpoweringScroll() {
   }, [])
   
   return (
-    <div className="w-full bg-black py-10 sm:py-6 md:py-16 lg:py-20 mt-0 sm:mt-6 md:mt-16 lg:mt-20 overflow-hidden">
+    <div className="w-full bg-black py-10 sm:py-6 md:py-16 lg:py-20 mt-0 sm:mt-6 md:mt-0 overflow-hidden">
       <div className="relative overflow-hidden">
         <div 
           ref={scrollRef}
