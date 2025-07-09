@@ -9,7 +9,7 @@ import landrover from "@/app/public/faranchies/newcarpics/landrover3.png";
 import maserati from "@/app/public/faranchies/newcarpics/maserati5.png";
 import honda from "@/app/public/faranchies/newcarpics/honda12.png";
 import tata from "@/app/public/faranchies/newcarpics/tata8.png";
-import tataupdate from "@/app/public/faranchies/newcarpics/tataupdate.png";
+import tataupdate from "@/app/public/faranchies/newcarpics/tataupdate.jpg";
 import kia from "@/app/public/faranchies/newcarpics/kia7.png";
 import ducati from "@/app/public/faranchies/newcarpics/ducati6.png";
 import mahindra from "@/app/public/faranchies/newcarpics/mahindra9.png";
@@ -76,7 +76,7 @@ export interface SlideData {
 export type LocationKeys = keyof LocationTypes;
 
 // Export the slides data
-const slides: SlideData[] = [
+export const slides: SlideData[] = [
   {
     id: 1,
     backgroundImage: benzs,
@@ -242,7 +242,7 @@ const slides: SlideData[] = [
   {
     id: 5,
     backgroundImage: ducati,
-    brand: "maserati",
+    brand: "ducati",
     bgColor: {
       from: "#E9354C",
       to: "rgba(233, 53, 76, 0.4)",
@@ -286,7 +286,7 @@ const slides: SlideData[] = [
   {
     id: 6,
     backgroundImage: kia,
-    brand: "maserati",
+    brand: "kia",
     bgColor: {
       from: "#FDC756",
       to: "rgba(253, 199, 86, 0.4)",
@@ -393,6 +393,12 @@ const slides: SlideData[] = [
             phone: "+91 93848 77744",
             email: "salesmanagerslm@vstcentral-kia.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31261.099198102755!2d78.1153607!3d11.6491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef3400b770e9%3A0xaa5d6b61a93abfdb!2sVST%20CENTRAL%20-%20KIA%20Kondalampatti%2C%20Salem!5e0!3m2!1sen!2sin!4v1747843601693!5m2!1sen!2sin" 
+          },
+          {
+            address: "184 Anna Salai, India Garage building Chennai, 600 006",
+            phone: "+91 9500722951",
+            email: " pocmanager.chn@vstcentral-kia.in",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6426892964228!2d80.25879789999999!3d13.058401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267e3df4cc7d7%3A0x821c429e677033ea!2sKIA%20Showroom%20Chennai%20-%20VST%20Central%20CPO!5e0!3m2!1sen!2sin!4v1751965936879!5m2!1sen!2sin" 
           },
         ]
       }
