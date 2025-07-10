@@ -14,6 +14,7 @@ interface FormData {
   mobile: string;
   aboutYourself: string;
   resume: File | null;
+  agreeToTerms: boolean;
 }
 
 export default function Page() {
@@ -27,6 +28,7 @@ export default function Page() {
     mobile: "",
     aboutYourself: "",
     resume: null,
+    agreeToTerms: false,
   });
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -58,7 +60,17 @@ export default function Page() {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+
+    // Handle checkbox separately
+    if (type === "checkbox") {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData((prev) => ({
+        ...prev,
+        [name]: checked,
+      }));
+      return;
+    }
 
     // If this is the aboutYourself field, limit to max words
     if (name === "aboutYourself") {
@@ -108,6 +120,7 @@ export default function Page() {
           mobile: "",
           aboutYourself: "",
           resume: null,
+          agreeToTerms: false,
         });
         setSelectedFile(null);
       } else {
@@ -372,12 +385,38 @@ export default function Page() {
                 )}
               </div>
 
+              {/* Terms and Conditions Checkbox */}
+              <div className="mt-6 md:mt-8">
+                <div className="flex items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    id="agreeToTerms"
+                    name="agreeToTerms"
+                    checked={formData.agreeToTerms}
+                    onChange={handleChange}
+                    required
+                    className="mt-1 w-4 h-4 text-[#FDB813] bg-[#E8E8E8] border-gray-300 rounded focus:ring-[#FDB813] focus:ring-2"
+                  />
+                  <label htmlFor="agreeToTerms" className="text-sm md:text-base text-black font-normal font-roc leading-relaxed">
+                    I agree to the{" "}
+                    <span className="text-[#FDB813] hover:underline cursor-pointer">
+                      Terms and Conditions
+                    </span>{" "}
+                    and confirm that I am a human user submitting this application.
+                  </label>
+                </div>
+              </div>
+
               {/* Save Button - Responsive button */}
               <div className="mt-6 md:mt-8 flex justify-center">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-[black] text-white py-2 md:py-3 rounded-lg hover:bg-[#FDB813]/90 transition-colors font-normal font-roc"
+                  disabled={isSubmitting || !formData.agreeToTerms}
+                  className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 py-2 md:py-3 rounded-lg transition-colors font-normal font-roc ${
+                    isSubmitting || !formData.agreeToTerms
+                      ? "bg-gray-400 text-gray-600 cursor-not-allowed"
+                      : "bg-[black] text-white hover:bg-[#FDB813]/90"
+                  }`}
                 >
                   {isSubmitting ? "Sending..." : "Send"}
                 </button>
