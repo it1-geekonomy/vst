@@ -7,6 +7,8 @@ import frame1 from "../public/careers/Career_7[1].jpg";
 import frame2 from "../public/careers/upload-icon.png";
 import frame3 from "../public/careers/mobilebg.png";
 import { Toaster, toast } from "react-hot-toast";
+import ReCAPTCHA from 'react-google-recaptcha'
+import { useRef } from 'react'
 
 interface FormData {
   name: string;
@@ -14,7 +16,6 @@ interface FormData {
   mobile: string;
   aboutYourself: string;
   resume: File | null;
-  agreeToTerms: boolean;
 }
 
 export default function Page() {
@@ -28,8 +29,9 @@ export default function Page() {
     mobile: "",
     aboutYourself: "",
     resume: null,
-    agreeToTerms: false,
   });
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -62,16 +64,6 @@ export default function Page() {
   ) => {
     const { name, value, type } = e.target;
 
-    // Handle checkbox separately
-    if (type === "checkbox") {
-      const checked = (e.target as HTMLInputElement).checked;
-      setFormData((prev) => ({
-        ...prev,
-        [name]: checked,
-      }));
-      return;
-    }
-
     // If this is the aboutYourself field, limit to max words
     if (name === "aboutYourself") {
       const wordCount = value
@@ -94,6 +86,14 @@ export default function Page() {
     setIsSubmitting(true);
 
     try {
+      const recaptchaToken = (recaptchaRef.current as any)?.getValue()
+      console.log("recaptchaToken",recaptchaToken);
+      if (!recaptchaToken) {
+        toast.error("Please complete the reCAPTCHA.");
+        setIsSubmitting(false);
+        return;
+      }
+
       const formDataToSend = new FormData();
       Object.keys(formData).forEach((key) => {
         if (key !== "resume" && key in formData) {
@@ -106,6 +106,8 @@ export default function Page() {
       if (selectedFile) {
         formDataToSend.append("resume", selectedFile);
       }
+      formDataToSend.append("recaptchaToken", recaptchaToken);
+
       const response = await axios.post("/api/sendEmail", formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
@@ -120,9 +122,9 @@ export default function Page() {
           mobile: "",
           aboutYourself: "",
           resume: null,
-          agreeToTerms: false,
         });
         setSelectedFile(null);
+        setRecaptchaToken(null);
       } else {
         toast.error(response.data.message || "Error submitting application.");
       }
@@ -386,34 +388,24 @@ export default function Page() {
               </div>
 
               {/* Terms and Conditions Checkbox */}
-              <div className="mt-6 md:mt-8">
-                <div className="flex items-start space-x-3">
-                  <input
-                    type="checkbox"
-                    id="agreeToTerms"
-                    name="agreeToTerms"
-                    checked={formData.agreeToTerms}
-                    onChange={handleChange}
-                    required
-                    className="mt-1 w-4 h-4 text-[#FDB813] bg-[#E8E8E8] border-gray-300 rounded focus:ring-[#FDB813] focus:ring-2"
-                  />
-                  <label htmlFor="agreeToTerms" className="text-sm md:text-base text-black font-normal font-roc leading-relaxed">
-                    I agree to the{" "}
-                    <span className="text-[#FDB813] hover:underline cursor-pointer">
-                      Terms and Conditions
-                    </span>{" "}
-                    and confirm that I am a human user submitting this application.
-                  </label>
-                </div>
+              {/* Remove the agreeToTerms checkbox from the form JSX */}
+
+              {/* reCAPTCHA Widget */}
+              <div className="mt-6 md:mt-8 flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="6LdJJ38rAAAAACZeKQwQ3qCMn4-Dy6XkwlT5Ymb9" // <-- use your real site key here
+                  onChange={token => setRecaptchaToken(token)}
+                />
               </div>
 
               {/* Save Button - Responsive button */}
               <div className="mt-6 md:mt-8 flex justify-center">
                 <button
                   type="submit"
-                  disabled={isSubmitting || !formData.agreeToTerms}
+                  disabled={isSubmitting || !recaptchaToken}
                   className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 py-2 md:py-3 rounded-lg transition-colors font-normal font-roc ${
-                    isSubmitting || !formData.agreeToTerms
+                    isSubmitting || !recaptchaToken
                       ? "bg-gray-400 text-gray-600 cursor-not-allowed"
                       : "bg-[black] text-white hover:bg-[#FDB813]/90"
                   }`}

@@ -6,9 +6,10 @@ import Image from 'next/image'
 import frame1 from '@/app/public/contact-us/Contact-VST-3 cropped (1).jpg'
 
 import axios from 'axios'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 import ContactUsFooter from '@/components/ContactUsFooter'
+import ReCAPTCHA from 'react-google-recaptcha'
 interface ContactFormInputs {
   firstName: string
   lastName: string
@@ -28,7 +29,18 @@ export default function Page() {
     formState: { errors }
   } = useForm<ContactFormInputs>()
 
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
+
   const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
+    const recaptchaToken = (recaptchaRef.current as any)?.getValue()
+    if (!recaptchaToken) {
+      setSubmitStatus({
+        success: false,
+        message: 'Please complete the reCAPTCHA.'
+      })
+      return
+    }
     setIsSubmitting(true)
     setSubmitStatus(null)
     
@@ -154,11 +166,19 @@ export default function Page() {
                 )}
               </div>
               
+              <div className="mt-8 flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="6LdJJ38rAAAAACZeKQwQ3qCMn4-Dy6XkwlT5Ymb9" // <-- replace with your real site key
+                  onChange={token => setRecaptchaToken(token)}
+                />
+              </div>
+              
               <div className="flex justify-center md:justify-end mt-16">
                 <button
                   
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !recaptchaToken}
                   className="bg-[#FEBF3D] text-black py-4 px-12 rounded-md hover:bg-[#f4c430] transition-colors text-lg font-medium"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}

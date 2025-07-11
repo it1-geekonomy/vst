@@ -271,7 +271,7 @@ const LifeAtVst = () => {
           </div>
 
           {/* Dot indicators - positioned outside content container */}
-          <div className="absolute bottom-[0] md:bottom-[-25px] lg:bottom-[-50px] xl:bottom-[-40px] left-1/2 transform -translate-x-1/2 flex justify-center items-center space-x-3 z-10">
+          <div className="absolute bottom-[20] md:bottom-[-25px] lg:bottom-[-50px] xl:bottom-[-40px] left-1/2 transform -translate-x-1/2 flex justify-center items-center space-x-3 z-10">
             {slides.map((_, index) => (
               <button
                 key={index}
