@@ -15,7 +15,7 @@ const LifeAtVst = () => {
       title: "Life At VST",
       subtitle: "Commitment To Partnerships",
       description:
-        "Strong partnerships are the cornerstone of enduring success. We cultivate collaborative ecosystems built on trust, transparency and mutual growth. By forming strategic alliances across industries, our partners gain access to deep expertise, shared resources and a supportive network — driving innovation and sustainable success together. With every collaboration, we bring the same focus, passion and commitment that turns every brand we touch into a success story.",
+        "At VST Group, we believe strong partnerships are the cornerstone of enduring success. We cultivate collaborative ecosystems built on trust, transparency, and mutual growth. Through strategic alliances across industries, our partners benefit from deep expertise, shared resources, and a supportive network that drives innovation and long-term success. In every collaboration, we bring the same focus, passion, and commitment that transforms every brand we touch into a success story.",
     },
     {
       number: "02",
@@ -23,7 +23,7 @@ const LifeAtVst = () => {
       title: "Life At VST",
       subtitle: "Fueling Talent With Opportunity",
       description:
-        "People are our greatest strength. We're dedicated to nurturing talent through dynamic career paths, continuous learning and skill building initiatives. Our culture of innovation, inclusivity and growth empowers employees to thrive, lead with confidence and shape a brighter future for themselves and for the organisation. We continuously invest in enhancing the quality of professional life through thoughtful policies, modern tools and a supportive work environment that enables people to feel valued, motivated and future-ready.",
+        "At VST Group, people are our greatest strength. We are committed to nurturing talent through dynamic career paths, continuous learning and skill-building initiatives. Our culture of innovation, inclusivity and growth empowers our teams to thrive, lead with confidence and shape a brighter future for themselves and the organization. We invest in enhancing professional life through thoughtful policies, modern tools and a supportive environment where every individual feels valued, motivated and future ready.",
     },
     {
       number: "03",
