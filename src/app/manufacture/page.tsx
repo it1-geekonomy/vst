@@ -110,7 +110,7 @@ const ManufacturePage = () => {
         </div>
 
         {/* Mobile view - Full width carousel with hover effect and top padding */}
-        <div className="md:hidden relative h-[450px] w-full mb-12">
+        <div className="md:hidden relative h-[470px] w-full mb-8">
           <div className="absolute inset-0 top-12 w-full h-[400px]">
             <div 
               className="relative h-full w-full mt-[-10] overflow-hidden"
@@ -165,7 +165,7 @@ const ManufacturePage = () => {
           </div>
           
           {/* Pagination indicators */}
-          <div className="absolute bottom-0 inset-x-0 flex justify-center space-x-2 z-10 !mb-0 !pb-0">
+          <div className="absolute bottom-0 inset-x-0 flex justify-center space-x-2 z-10 !mb-0 !pb-0 ">
             {images.map((_, index) => (
               <button
                 key={index}

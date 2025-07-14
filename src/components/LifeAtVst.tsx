@@ -249,13 +249,13 @@ const LifeAtVst = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="w-full h-[450px] md:h-[300px] overflow-y-auto md:overflow-y-auto overflow-hidden px-4 pb-8 md:pb-0 flex flex-col custom-scrollbar"
+                    className="w-full overflow-hidden px-4 pb-8 md:pb-0 flex flex-col"
                     style={{ paddingTop: '2rem' }}
                   >
                     <h2 className="text-lg md:text-xl font-normal mb-4 text-left font-roc">
                       {slides[currentSlide].subtitle}
                     </h2>
-                    <p className="text-sm md:text-base font-normal leading-relaxed w-full flex-1" 
+                    <p className="text-sm md:text-base font-normal leading-relaxed w-full" 
                        style={{ 
                          wordBreak: "break-word",
                          textAlign: "justify",
