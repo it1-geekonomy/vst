@@ -353,7 +353,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen mt-16">
       {/* Main section with background image */}
-      <div className="relative min-h-[66vh] lg:min-h-[90vh] xl:min-h-[90vh] 2xl:min-h-[90vh]">
+      <div className="relative min-h-[50vh] lg:min-h-[90vh] xl:min-h-[90vh] 2xl:min-h-[90vh]">
         {/* Background image only for main section */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 opacity-100">
@@ -505,7 +505,7 @@ export default function Page() {
       {/* Location section with its own gradient background - completely separate section */}
       <div className="relative w-full bg-[#FFB922] mt-0">
         <div className="relative min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] pt-4 sm:pt-8 lg:pt-0 xl:pt-0">
-          <div className="flex flex-col  pt-4 sm:pt-8 lg:pt-0 relative z-10 max-w-full sm:max-w-[90%] md:max-[90%] lg:max-w-[88%]  mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
+          <div className="flex flex-col  pt-2 sm:pt-8 lg:pt-0 relative z-10 max-w-full sm:max-w-[90%] md:max-[90%] lg:max-w-[88%]  mx-auto px-4 sm:px-6 lg:px-12 xl:px-4 2xl:px-0 py-2 sm:py-8 lg:py-12 xl:py-8 2xl:py-8 3xl:py-2">
             {/* Company information section */}
             <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl font-medium text-black mb-6 sm:mb-8 lg:mb-10 mx-auto max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-8xl">
               Reliable distribution and strong partnerships driving growth
