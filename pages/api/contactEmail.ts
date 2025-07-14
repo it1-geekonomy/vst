@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import sgMail from '@sendgrid/mail';
+import { Resend } from 'resend';
 import formidable from 'formidable';
 
 export const config = {
@@ -8,13 +8,11 @@ export const config = {
   },
 };
 
-sgMail.setApiKey("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");
-
+const resend = new Resend('re_UAuQVvJD_Hy72u8ZJoWHm9KzWtuEss2GT');
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
-
   try {
     const form = formidable({});
     const [fields] = await form.parse(req);
@@ -25,7 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       phoneNumber: fields.phoneNumber?.[0] || '',
       message: fields.message?.[0] || '',
     };
-
     const html = `
       <div style="max-width: 600px; margin: auto; padding: 20px; font-family: 'Segoe UI', sans-serif; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #f9f9f9;">
         <h2 style="text-align: center; color: #333;">New Contact Form Submission</h2>
@@ -51,18 +48,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       </div>
     `;
 
-    const fromEmail = "sachin@geekonomy.in";
-    const toEmail = "sachin@geekonomy.in";
-
-    // Debug: Log environment variables (remove in production)
-    console.log('Environment variables:', {
-      SENDGRID_API_KEY: process.env.SENDGRID_API_KEY ? 'SET' : 'NOT SET',
-      SENDGRID_FROM_EMAIL: fromEmail,
-      SENDGRID_TO_EMAIL: toEmail
-    });
+    const fromEmail = "notifications@vstgroup.com";
+    const toEmail = "mdoffice@vstsons.in";
 
     if (!fromEmail || !toEmail) {
-      return res.status(500).json({ 
+      return res.status(500).json({
         message: 'Missing email configuration in environment variables',
         debug: {
           fromEmail: fromEmail || 'NOT SET',
@@ -70,19 +60,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
       });
     }
-
-    const msg = {
-      to: toEmail,
-      from: fromEmail,
-      subject: 'New Contact Form Submission',
+    const formattedDate = new Date().toLocaleString('en-IN', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    });
+    const emailData = {
+      from: `VST Groups <notifications@vstgroup.com>`,
+      to: [toEmail],
+      subject: `New Contact Form Submission - ${formattedDate}`,
       html,
     };
-
-    await sgMail.send(msg);
+    const { data, error } = await resend.emails.send(emailData);
+    if (error) {
+      console.error('Resend error:', error);
+      return res.status(500).json({ message: 'Failed to send email' });
+    }
 
     return res.status(200).json({ message: 'Message sent successfully' });
   } catch (error: any) {
-    console.error('Error sending email:', error.response?.body || error.message);
+    console.error('Error sending email:', error);
     return res.status(500).json({ message: 'Failed to send message' });
   }
 }

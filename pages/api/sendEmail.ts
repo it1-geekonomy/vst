@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import sgMail from '@sendgrid/mail';
+import { Resend } from 'resend';
 import formidable from 'formidable';
 import { promises as fs } from 'fs';
 
@@ -9,7 +9,7 @@ export const config = {
   },
 };
 
-sgMail.setApiKey("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");
+const resend = new Resend('re_UAuQVvJD_Hy72u8ZJoWHm9KzWtuEss2GT');
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -60,28 +60,41 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       </div>
     </div>
   `;
-    const msg: any = {
-      to: "sachin@geekonomy.in",
-      from: "sachin@geekonomy.in",
-      subject: 'New Career Form Submission',
+    const formattedDate = new Date().toLocaleString('en-IN', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    });
+    const emailData: any = {
+      from: `VST Groups <notifications@vstgroup.com>`,
+      to: ['mdoffice@vstsons.in'],
+      subject: `New Career Form Submission - ${formattedDate}`,
       html,
     };
     const resumeFile = files.resume?.[0];
     if (resumeFile) {
       const content = await fs.readFile(resumeFile.filepath);
-      msg.attachments = [
+      emailData.attachments = [
         {
-          content: content.toString('base64'),
           filename: resumeFile.originalFilename || 'resume',
-          type: resumeFile.mimetype,
-          disposition: 'attachment',
+          content: content.toString('base64'),
         },
       ];
     }
-    await sgMail.send(msg);
+
+    const { data, error } = await resend.emails.send(emailData);
+
+    if (error) {
+      console.error('Resend error:', error);
+      return res.status(500).json({ message: 'Failed to send email' });
+    }
+
     return res.status(200).json({ message: 'Application submitted successfully' });
   } catch (error: any) {
-    console.error('Error processing application:', error.response?.body || error.message);
+    console.error('Error processing application:', error);
     return res.status(500).json({ message: 'Failed to process application' });
   }
 }
