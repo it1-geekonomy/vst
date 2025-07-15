@@ -9,10 +9,12 @@ export const config = {
 };
 
 const resend = new Resend('re_UAuQVvJD_Hy72u8ZJoWHm9KzWtuEss2GT');
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
+
   try {
     const form = formidable({});
     const [fields] = await form.parse(req);
@@ -23,29 +25,97 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       phoneNumber: fields.phoneNumber?.[0] || '',
       message: fields.message?.[0] || '',
     };
+
+    const formattedDate = new Date().toLocaleString('en-IN', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    });
+
+    // Improved HTML with better structure and deliverability
     const html = `
-      <div style="max-width: 600px; margin: auto; padding: 20px; font-family: 'Segoe UI', sans-serif; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #f9f9f9;">
-        <h2 style="text-align: center; color: #333;">New Contact Form Submission</h2>
-        <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
-          <tr>
-            <td style="padding: 8px 0; font-weight: bold; width: 40%;">Name:</td>
-            <td style="padding: 8px 0;">${formData.firstName} ${formData.lastName}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 0; font-weight: bold;">Email:</td>
-            <td style="padding: 8px 0;">${formData.email}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 0; font-weight: bold;">Phone Number:</td>
-            <td style="padding: 8px 0;">${formData.phoneNumber}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 0; font-weight: bold;">Message:</td>
-            <td style="padding: 8px 0;">${formData.message}</td>
-          </tr>
-        </table>
-        <p style="margin-top: 20px; text-align: center; font-size: 13px; color: #888;">Submitted via Contact-Us Form • VST</p>
-      </div>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Contact Form Submission</title>
+      </head>
+      <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4;">
+        <div style="max-width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden;">
+          <!-- Header -->
+          <div style="background-color: #2c3e50; color: white; padding: 20px; text-align: center;">
+            <h1 style="margin: 0; font-size: 24px; font-weight: 600;">VST Group</h1>
+            <p style="margin: 10px 0 0; font-size: 16px; opacity: 0.9;">New Contact Form Submission</p>
+          </div>
+          
+          <!-- Content -->
+          <div style="padding: 30px;">
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px; margin-bottom: 20px;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 15px; color: #2c3e50;">
+                <tr>
+                  <td style="padding: 12px 0; font-weight: 600; width: 35%; border-bottom: 1px solid #e9ecef;">Full Name:</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">${formData.firstName} ${formData.lastName}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; font-weight: 600; border-bottom: 1px solid #e9ecef;">Email Address:</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+                    <a href="mailto:${formData.email}" style="color: #3498db; text-decoration: none;">${formData.email}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; font-weight: 600; border-bottom: 1px solid #e9ecef;">Phone Number:</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+                    <a href="tel:${formData.phoneNumber}" style="color: #3498db; text-decoration: none;">${formData.phoneNumber}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; font-weight: 600;">Message:</td>
+                  <td style="padding: 12px 0;">${formData.message}</td>
+                </tr>
+              </table>
+            </div>
+            
+            <!-- Submission Details -->
+            <div style="background-color: #e8f4fd; padding: 15px; border-radius: 6px; border-left: 4px solid #3498db;">
+              <p style="margin: 0; font-size: 14px; color: #2c3e50;">
+                <strong>Submitted:</strong> ${formattedDate}<br>
+                <strong>Source:</strong> VST Group Contact Form
+              </p>
+            </div>
+          </div>
+          
+          <!-- Footer -->
+          <div style="background-color: #ecf0f1; padding: 20px; text-align: center; border-top: 1px solid #bdc3c7;">
+            <p style="margin: 0; font-size: 13px; color: #7f8c8d;">
+              This email was sent from the VST Group website contact form.<br>
+              © ${new Date().getFullYear()} VST Group. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+
+    // Plain text version for better deliverability
+    const text = `
+New Contact Form Submission - VST Group
+
+Full Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phoneNumber}
+
+Message:
+${formData.message}
+
+Submitted: ${formattedDate}
+Source: VST Group Contact Form
+
+---
+© ${new Date().getFullYear()} VST Group
     `;
 
     const fromEmail = "notifications@vstgroup.com";
@@ -60,21 +130,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
       });
     }
-    const formattedDate = new Date().toLocaleString('en-IN', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true,
-    });
     const emailData = {
-      from: `VST Groups <notifications@vstgroup.com>`,
+      from: `VST Group <${fromEmail}>`,
       to: [toEmail],
       subject: `New Contact Form Submission - ${formattedDate}`,
       html,
+      text, 
+      headers: {
+        'List-Unsubscribe': '<mailto:unsubscribe@vstgroup.com>',
+        'Precedence': 'bulk',
+        'X-Auto-Response-Suppress': 'OOF, AutoReply',
+        'X-Mailer': 'VST Group Contact Form',
+      },
+      reply_to: fromEmail,
     };
+
     const { data, error } = await resend.emails.send(emailData);
+    
     if (error) {
       console.error('Resend error:', error);
       return res.status(500).json({ message: 'Failed to send email' });
