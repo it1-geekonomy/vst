@@ -211,7 +211,7 @@ export default function NewsMedia() {
                       {headlines2.map((card, index) => (
                         <div 
                           key={index} 
-                          className={`absolute top-0 left-0 w-full grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 transition-all duration-1500 ${
+                          className={`absolute top-0 left-0 w-full grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 transition-all duration-1000 ${
                             currentIndex === index 
                               ? "opacity-100 translate-x-0" 
                               : index === (currentIndex + 1) % headlines2.length || (currentIndex === headlines2.length - 1 && index === 0)
@@ -227,12 +227,12 @@ export default function NewsMedia() {
                             className="relative border-l-4 border-yellow-500 bg-white/10 backdrop-blur-sm min-h-[300px] sm:min-h-[280px] md:min-h-[300px] lg:min-h-[320px] overflow-visible hover:bg-white/20 transition-colors"
                           >
                             <div className="flex flex-col h-full px-3 sm:px-1 py-4 sm:py-4 md:py-5">
-                              <div className="w-full h-44 sm:h-40 md:h-48 lg:h-52 relative">
+                              <div className="w-full h-44 sm:h-40 md:h-48 lg:h-52 relative overflow-hidden">
                                 <Image 
                                   src={card.image} 
                                   alt={card.alt} 
                                   fill
-                                  className="object-cover w-full h-full"
+                                  className="object-contain w-full h-full"
                                 />
                               </div>
                               <div className="w-full pt-3 sm:pt-4 md:pt-5 flex-grow">
@@ -251,12 +251,12 @@ export default function NewsMedia() {
                             className="relative backdrop-blur-sm min-h-[300px] sm:min-h-[280px] md:min-h-[300px] lg:min-h-[320px] overflow-visible hover:bg-white/20 transition-colors hidden md:block"
                           >
                             <div className="flex flex-col h-full px-3 sm:px-8 py-4 sm:py-4 md:py-5">
-                              <div className="w-full h-44 sm:h-40 md:h-48 lg:h-52 relative">
+                              <div className="w-full h-44 sm:h-40 md:h-48 lg:h-52 relative overflow-hidden">
                                 <Image 
                                   src={headlines2[(index + 1) % headlines2.length].image} 
                                   alt={headlines2[(index + 1) % headlines2.length].alt} 
                                   fill
-                                  className="object-cover w-full h-full"
+                                  className="object-contain w-full h-full"
                                 />
                               </div>
                               <div className="w-full pt-3 sm:pt-4 md:pt-5 flex-grow">
