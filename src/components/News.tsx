@@ -25,95 +25,25 @@ import { title } from 'process';
 const latestUpdatesData = [
   {
     id: 1,
-    image: card1,
-    title: 'Arun Surendra (Chairman & Managing Director, VST Group), and   Sanjeev Subramanian',
-    // title: 'Arun Surendra (Chairman & Managing Director, VST Group), and Sanjeev Subramanian  (President - Automotive Division, VST Group), along with and Hardeep S. Brar (Sr. Vice President & Head of Marketing & Sales, Kia India), Mr. Paramjiv Dutta (General Manager Service, Kia India), and Ravi N. (Head - Dealer Development/ General Manager, Kia India), had a quick catchup meeting session. It was a pleasure to connect and discuss exciting possibilities',
-    // title: (
-    //   <>
-    //     <a
-    //       href="https://www.linkedin.com/in/arunsurendra/"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //       className=" text-white hover:text-white"
-    //       onClick={(e) => e.stopPropagation()}
-    //     >
-    //       Arun Surendra
-    //     </a>{' '}
-    //     <br />
-    //     (Chairman & Managing Director, VST Group),
-
-    //     and{' '}
-    //     <a
-    //       href="https://www.linkedin.com/in/sanjeev-subramanian-83479716/"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //       className=" text-white hover:text-white"
-    //       onClick={(e) => e.stopPropagation()}
-    //     >
-    //       Sanjeev Subramanian
-    //     </a>{' '}
-    //     {/* (President - Automotive Division, VST Group) */}
-    //   </>
-    // ),
-    tag: 'Porche',
+    image: card12,
+    title: "It was great having our Managing Director Mr. Arun Surendra, visit our new VST Grandeur Jaguar Land Rover facility in Coimbatore last week.",
+    tag: 'Business',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_vstgroup-automotive-kia-activity-7219620766533791744-W2H4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_jlrshowroom-newfacility-coimbatore-activity-7343498202295259136-Iiyp?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
   {
     id: 2,
-    image: card2,
-    title: "Your support fuels our drive for success, and we're grateful for your ongoing partnership.",
-    tag: 'Innovation',
+    image: card11,
+    title: " What an incredible two days at the Porsche Golf Cup India 2025 in Bengaluru!",
+    tag: 'Business',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/tanvi-gupta-09b07455_bangladeshexpo-agriculture-expo-activity-7206191159939919872-LHrH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_porschegolfcup2025-porschecommunity-golfwithporsche-activity-7331581877008420867-tpNf?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
+  
   {
     id: 3,
-    image: card3,
-    // title: (
-    //   <>
-    //      Congratulations to the{' '}
-    //     <a
-    //       href="https://www.linkedin.com/company/porschecentrebengaluru/" 
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //       className="underline text-white hover:text-white"
-    //       onClick={(e) => e.stopPropagation()}
-    //     >
-    //       Porsche Centre Bengaluru
-    //     </a>{' '}
-    //     team for achieving yet another extraordinary success.
-    //   </>
-    // ),
-    title: " Congratulations to the Porsche Centre Bengaluru team for achieving yet another extraordinary success.",
-
-    tag: 'Industry',
-    location: 'Bengaluru',
-    time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_globalporschemomentaward-porsche-globalrecognition-activity-7313130881051697152-J3cW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
-  },
-  {
-    id: 4,
-    image: post4New,
-    title: "South and Best Performance in Most Active User - Fleet Edge - South, reaffirming our commitment to outstanding service.",
-    tag: 'Business',
-    location: 'Bengaluru',
-    time: '',
-    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
-  },
-  {
-    id: 5,
-    image: card9,
-    title: "Leadership in action. While in Chennai for strategic business discussions, Mr. Arun Surendra",
-    tag: 'Business',
-    location: 'Bengaluru',
-    time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_leadershipinaction-customerexperience-mercedesbenzindia-activity-7344642564475580416-lfOz?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
-  },
-  {
-    id: 6,
     image: card10,
     title: "Now that’s how you end an IPL season. RCB finally gets the win, and we caught it live at Porsche Centre Bengaluru !",
     tag: 'Business',
@@ -122,23 +52,54 @@ const latestUpdatesData = [
     route: 'https://www.linkedin.com/posts/vst-motors-ltd_rcb-ipl2025-18yearswait-activity-7336324640845254656--5SQ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
   {
-    id: 7,
-    image: card11,
-    title: " What an incredible two days at the Porsche Golf Cup India 2025 in Bengaluru!",
+    id: 4,
+    image: card9,
+    title: "Leadership in action. While in Chennai for strategic business discussions, Mr. Arun Surendra",
     tag: 'Business',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_porschegolfcup2025-porschecommunity-golfwithporsche-activity-7331581877008420867-tpNf?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_leadershipinaction-customerexperience-mercedesbenzindia-activity-7344642564475580416-lfOz?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+  },
+  {
+    id: 5,
+    image: card1,
+    title: 'Arun Surendra (Chairman & Managing Director, VST Group), and   Sanjeev Subramanian',
+
+    tag: 'Porche',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_vstgroup-automotive-kia-activity-7219620766533791744-W2H4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+  },
+  {
+    id: 6,
+    image: card2,
+    title: "Your support fuels our drive for success, and we're grateful for your ongoing partnership.",
+    tag: 'Innovation',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.linkedin.com/posts/tanvi-gupta-09b07455_bangladeshexpo-agriculture-expo-activity-7206191159939919872-LHrH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+  },
+  {
+    id: 7,
+    image: card3,
+  
+    title: " Congratulations to the Porsche Centre Bengaluru team for achieving yet another extraordinary success.",
+
+    tag: 'Industry',
+    location: 'Bengaluru',
+    time: '',
+    route: 'https://www.linkedin.com/posts/vst-motors-ltd_globalporschemomentaward-porsche-globalrecognition-activity-7313130881051697152-J3cW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
   },
   {
     id: 8,
-    image: card12,
-    title: "It was great having our Managing Director Mr. Arun Surendra, visit our new VST Grandeur Jaguar Land Rover facility in Coimbatore last week.",
+    image: post4New,
+    title: "South and Best Performance in Most Active User - Fleet Edge - South, reaffirming our commitment to outstanding service.",
     tag: 'Business',
     location: 'Bengaluru',
     time: '',
-    route: 'https://www.linkedin.com/posts/vst-motors-ltd_jlrshowroom-newfacility-coimbatore-activity-7343498202295259136-Iiyp?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD07rHsBD3hdzu_y6g1hbsgIIhmFgoowJHQ'
+    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7209269161649217536/'
   },
+ 
 
 
 
