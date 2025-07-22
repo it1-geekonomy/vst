@@ -635,6 +635,12 @@ export const slides: SlideData[] = [
             email: ["ig.chnagar@india-garage.in", "service.chnagar@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.63656126204!2d76.933995!3d11.9303616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe93a3dc03%3A0x2b3ece5b81cda608!2sMahindra%20India%20Garage%20Mysore%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899794763!5m2!1sen!2sin"
           },
+          {
+            address: "201/ 1&2 , Vijayanagar 4th Stage, Hinkal, India Garage Showroom - Hinkal , Mysore, Karnataka - 570017",
+            phone: "+91 88844 98959",
+            email: "sales.mysore@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3897.8701066935896!2d76.6107134!3d12.3245286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7af1a8477065%3A0xba976c8cd1a206a1!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899946356!5m2!1sen!2sin"
+          }
         ],
         service: [
           {
@@ -643,12 +649,7 @@ export const slides: SlideData[] = [
             email: ["smhebbal@india-garage.in", "bodyshopmanager@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.265546858863!2d76.6155936!3d12.3651366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7a3d00d7608b%3A0x260b9f18e163c5a8!2sMahindra%20India%20Garage%20%E2%80%93Workshop!5e0!3m2!1sen!2sin!4v1747899872802!5m2!1sen!2sin"
           },
-           {
-            address: "India Garage Showroom - Hinkal201/ 1&2 , Vijayanagar 4th Stage, Hinkal, India Garage Showroom - Hinkal , Mysore, Karnataka - 570017",
-            phone: "+91 88844 98959",
-            email: "sales.mysore@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3897.8701066935896!2d76.6107134!3d12.3245286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7af1a8477065%3A0xba976c8cd1a206a1!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899946356!5m2!1sen!2sin"
-          },
+          
           {
             address: "Old B.M Road, Gutturur village, Kottathi \nhobli, Belur Grampanchayat, Malavalli - \n571 403.",
             phone: "+91 88844 98959",
