@@ -188,58 +188,81 @@ function AboutUsPage() {
           </div>
 
           {/* Timeline Bar */}
-          <div className="w-full max-w-2xl mt-4 relative overflow-hidden">
-            <div className="absolute top-[7px] left-0 right-0 h-0.5 bg-white/30"></div>
-            <div className="relative w-full h-16 flex items-center">
+          <div className="w-full max-w-2xl mt-8  relative overflow-hidden" style={{ height: '90px' }}>
+            {/* Timeline line */}
+            <div className="absolute top-1/3 left-[13%] right-[13%] h-0.5 bg-white/30" style={{ transform: 'translateY(0%)' }}></div>
+            {/* Dots on the line: smoothly sliding, true carousel effect */}
+            <div className="absolute left-[13%] right-[13%]" style={{ top: '33.333%', height: '0', pointerEvents: 'none' }}>
               {timelineItems.map((item, index) => {
                 const N = timelineItems.length;
                 let offset = index - activeIndex;
                 const half = Math.floor(N / 2);
-
-                if (offset > half) {
-                  offset -= N;
-                }
-                if (offset < -half) {
-                  offset += N;
-                }
-                
-                const spacingPercentage = 35;
-                
+                if (offset > half) offset -= N;
+                if (offset < -half) offset += N;
+                // Only show -1, 0, +1
+                if (Math.abs(offset) > 1) return null;
+                // Dynamic position: 0% + ((offset + 1) / 2) * 100% (within the 70% container)
+                const pos = `${((offset + 1) / 2) * 100}%`;
                 const style: React.CSSProperties = {
                   position: 'absolute',
-                  left: `calc(50% + ${offset * spacingPercentage}%)`,
-                  transform: 'translateX(-50%)',
-                  transition: 'all 500ms ease-in-out',
-                  opacity: Math.abs(offset) > 2 ? 0 : 1,
-                  pointerEvents: Math.abs(offset) > 2 ? 'none' : 'auto',
+                  left: pos,
+                  top: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  transition: 'left 500ms cubic-bezier(0.4,0,0.2,1)',
+                  opacity: 1,
+                  pointerEvents: 'auto',
+                  zIndex: offset === 0 ? 2 : 1,
                 };
-
                 return (
                   <div
                     key={item.year}
-                    className="flex flex-col items-center cursor-pointer"
+                    style={style}
+                  >
+                    <div
+                      className={`w-4 h-4 rounded-full border-2 transition-all duration-300 z-10 ${
+                        offset === 0
+                          ? 'bg-yellow-400 border-white scale-125'
+                          : 'bg-[#0c2340] border-white'
+                      }`}
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => setActiveIndex(index)}
+                    ></div>
+                  </div>
+                );
+              })}
+            </div>
+            {/* Year labels in a single horizontal row below the dots with extra gap, smoothly sliding carousel */}
+            <div className="relative w-full h-8 flex items-center" style={{ marginTop: '56px' }}>
+              {timelineItems.map((item, index) => {
+                const N = timelineItems.length;
+                let offset = index - activeIndex;
+                const half = Math.floor(N / 2);
+                if (offset > half) offset -= N;
+                if (offset < -half) offset += N;
+                if (Math.abs(offset) > 1) return null;
+                const pos = `calc(13% + ${((offset + 1) / 2) * 74}%)`;
+                const style: React.CSSProperties = {
+                  position: 'absolute',
+                  left: pos,
+                  top: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  transition: 'left 500ms cubic-bezier(0.4,0,0.2,1)',
+                  opacity: 1,
+                  pointerEvents: 'auto',
+                  textAlign: 'center',
+                  whiteSpace: 'nowrap',
+                };
+                return (
+                  <span
+                    key={item.year}
+                    className={`text-lg transition-colors duration-300 cursor-pointer ${
+                      offset === 0 ? 'text-yellow-400 font-bold' : 'text-white'
+                    }`}
                     style={style}
                     onClick={() => setActiveIndex(index)}
                   >
-                    <div className="relative flex items-center justify-center w-8 h-8">
-                      <div
-                        className={`w-4 h-4 rounded-full border-2 transition-all duration-300 z-10 ${
-                          offset === 0
-                            ? 'bg-yellow-400 border-white scale-125'
-                            : 'bg-[#0c2340] border-white'
-                        }`}
-                      ></div>
-                    </div>
-                    <p
-                      className={`mt-2 text-lg transition-colors duration-300 ${
-                        offset === 0
-                          ? 'text-yellow-400 font-bold'
-                          : 'text-white'
-                      }`}
-                    >
-                      {item.year}
-                    </p>
-                  </div>
+                    {item.year}
+                  </span>
                 );
               })}
             </div>
