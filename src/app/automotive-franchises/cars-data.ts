@@ -512,7 +512,7 @@ export const slides: SlideData[] = [
           {
             address: "Head Office, #1, VST Vistas, Palace \nCross Rd, Chakravarthy Layout, \nJayamahal, Bengaluru - 560 020.",
             phone: "+91 88844 98957",
-            email: ["asm@india-garage.in", "jeevanprasad@india-garage.in","kalyankumarp@india-garage.in"],
+            email: ["dem@india-garage.in"],
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996461.3198621258!2d76.5380582!3d12.6855276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae163883f74f7d%3A0x4385e2cd7037dce4!2sMahindra%20India%20Garage%20-%20Palace%20Cross%20Road!5e0!3m2!1sen!2sin!4v1747895221318!5m2!1sen!2sin"           
           },
           {
@@ -644,7 +644,7 @@ export const slides: SlideData[] = [
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.265546858863!2d76.6155936!3d12.3651366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7a3d00d7608b%3A0x260b9f18e163c5a8!2sMahindra%20India%20Garage%20%E2%80%93Workshop!5e0!3m2!1sen!2sin!4v1747899872802!5m2!1sen!2sin"
           },
            {
-            address: "#201/202, Hunsur Road, next to Church, \nVijayanagar 4th Stage, Hinkal, Mysuru \n570 017.",
+            address: "India Garage Showroom - Hinkal201/ 1&2 , Vijayanagar 4th Stage, Hinkal, India Garage Showroom - Hinkal , Mysore, Karnataka - 570017",
             phone: "+91 88844 98959",
             email: "sales.mysore@india-garage.in",
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3897.8701066935896!2d76.6107134!3d12.3245286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7af1a8477065%3A0xba976c8cd1a206a1!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899946356!5m2!1sen!2sin"
