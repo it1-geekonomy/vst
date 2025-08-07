@@ -426,6 +426,71 @@ const FranchiseSlider = () => {
 
                     return (
                       <>
+                        {/* Special handling for Mahindra Mysore - Sales & Service first */}
+                        {slides[currentSlide].brand === "mahindra" && locationKey === "Mysore" && location["sales & service"] && location["sales & service"].length > 0 && (
+                          <div className="hide-scrollbar">
+                            {location["sales & service"].map((salesService, idx) => (
+                              <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">
+                                <div className="text-white font-bold text-xl ">
+                                  Sales & Service :
+                                </div>
+                                <div className="text-white text-lg leading-tight mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {salesService.address}
+                                </div>
+                                <div className="text-white text-lg leading-relaxed mb-4 font-normal" style={{ whiteSpace: 'pre-line', lineHeight: '1.2' }}>
+                                  {Array.isArray(salesService.phone) ? (
+                                    salesService.phone.map((p, i) => {
+                                      const phoneNumbers = p.split(',').map(num => num.trim());
+                                      return (
+                                        <div key={i} className="mt-1">
+                                          {phoneNumbers.map((num, idx) => (
+                                            <div key={idx} className="flex items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                              </svg>
+                                              {num}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      );
+                                    })
+                                  ) : (
+                                    <div className="mt-1">
+                                      {salesService.phone.split(',').map((num, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="white">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                          </svg>
+                                          {num.trim()}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
+                                  {Array.isArray(salesService.email) ? (
+                                    salesService.email.map((e, i) => (
+                                      <div key={i} className="mt-1">✉️ {e}</div>
+                                    ))
+                                  ) : (
+                                    <div className="mt-1">✉️ {salesService.email}</div>
+                                  )}
+                                </div>
+                                <div className="rounded-lg overflow-hidden w-full">
+                                  <iframe
+                                    title={`Sales & Service Location Map ${idx + 1}`}
+                                    src={salesService.map}
+                                    width="100%"
+                                    height="280"
+                                    className="rounded-lg w-full"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                         {/* Sales */}
                         {location.sales && location.sales.length > 0 && (
                           <div className="hide-scrollbar">
@@ -556,8 +621,8 @@ const FranchiseSlider = () => {
                             ))}
                           </div>
                         )}
-                        {/* Sales and Service */}
-                        {location["sales & service"] && location["sales & service"].length > 0 && (
+                        {/* Sales and Service - for all other cases except Mahindra Mysore */}
+                        {!(slides[currentSlide].brand === "mahindra" && locationKey === "Mysore") && location["sales & service"] && location["sales & service"].length > 0 && (
                           <div className="hide-scrollbar">
                             {location["sales & service"].map((salesService, idx) => (
                               <div key={`${currentSlide}-${locationKey}-salesservice-${idx}`} className="mb-6">

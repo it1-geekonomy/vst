@@ -552,7 +552,7 @@ export const slides: SlideData[] = [
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d496732.41440844996!2d77.401443!3d13.4295279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae154a34bb2109%3A0x4390fad42917eae2!2sMahindra%20India%20Garage%20-%20Commercial%20Mission%20Road!5e0!3m2!1sen!2sin!4v1747895986496!5m2!1sen!2sin" 
           },
             {
-            address: " 1st Main, Peenya 2nd Stage, Below \nMuthoot Finance, Bengaluru - 560 058.",
+            address: " #117, 1, Rajagopalnagar Main Rd, 2nd Stage, Peenya Industrial Area Phase IV, Bengaluru - 560 058.",
             phone: "+91 88844 98958",
             email: "prosper.pny@india-garage.in",
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.38306928848!2d77.5046024!3d13.0112605!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cf9a936cbc3%3A0x71d718e2c7baba6b!2sMahindra%20India%20Garage%20-%20Peenya%20Commercial%20Showroom!5e0!3m2!1sen!2sin!4v1747896043710!5m2!1sen!2sin" 
@@ -576,7 +576,7 @@ export const slides: SlideData[] = [
           {
             address: "#53/10, Madanayakanahalli Village, \nDasanapura Hobli, Bangalore - 562 162.",
             phone: "+91 98423 19820 , +91 98424 10847",
-            email: [" tryevdsales@vstmotors.com"],
+            email: [" sm.mnhalli@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7773.1723952034945!2d77.4508649!3d13.061991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae24a8f3ae6a4b%3A0x5714d99795576775!2sMahindra%20India%20Garage%20-%20Madanayakanahalli%20Workshop!5e0!3m2!1sen!2sin!4v1747895817487!5m2!1sen!2sin"  
           },
            {
@@ -629,18 +629,20 @@ export const slides: SlideData[] = [
           }
         ],
          "sales & service": [
-          {
+         
+         {
+            address: "201/ 1&2 , Vijayanagar 4th Stage, Hinkal, India Garage Showroom - Hinkal , Mysore, Karnataka - 570017",
+            phone: "+91 88844 98959",
+            email: "sales.mysore@india-garage.in",
+            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3897.8701066935896!2d76.6107134!3d12.3245286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7af1a8477065%3A0xba976c8cd1a206a1!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899946356!5m2!1sen!2sin"
+          },
+           {
             address: "Mysore Road, Near LIC Opp Simha \nTheatre, Chamrajnagar - 571 313.",
             phone: "+91 88844 98959",
             email: ["ig.chnagar@india-garage.in", "service.chnagar@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.63656126204!2d76.933995!3d11.9303616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11fe93a3dc03%3A0x2b3ece5b81cda608!2sMahindra%20India%20Garage%20Mysore%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899794763!5m2!1sen!2sin"
           },
-          {
-            address: "201/ 1&2 , Vijayanagar 4th Stage, Hinkal, India Garage Showroom - Hinkal , Mysore, Karnataka - 570017",
-            phone: "+91 88844 98959",
-            email: "sales.mysore@india-garage.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3897.8701066935896!2d76.6107134!3d12.3245286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7af1a8477065%3A0xba976c8cd1a206a1!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747899946356!5m2!1sen!2sin"
-          }
+          
         ],
         service: [
           {
@@ -651,7 +653,7 @@ export const slides: SlideData[] = [
           },
           
           {
-            address: "Old B.M Road, Gutturur village, Kottathi \nhobli, Belur Grampanchayat, Malavalli - \n571 403.",
+            address: "Old B.M Road, Gutturur village, Kottathi \nhobli, Belur Grampanchayat, Mandya - \n571 403.",
             phone: "+91 88844 98959",
             email: ["igmandya@india-garage.in", "mandyaservice@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62313.99311644604!2d76.8699647!3d12.541012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747900006805!5m2!1sen!2sin"
