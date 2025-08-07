@@ -653,7 +653,7 @@ export const slides: SlideData[] = [
           },
           
           {
-            address: "Old B.M Road, Gutturur village, Kottathi \nhobli, Belur Grampanchayat, Mandya - \n571 403.",
+            address: "#99/145 MC Road ,Belur Gram Panchyath ,Near Acetate Town, Mandya - 571 404.",
             phone: "+91 88844 98959",
             email: ["igmandya@india-garage.in", "mandyaservice@india-garage.in"],
             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62313.99311644604!2d76.8699647!3d12.541012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa12923faac49%3A0x3b4688d0d189eda4!2sMahindra%20India%20Garage%20-%20SUV%20%26%20Commercial%20Vehicle%20Showroom!5e0!3m2!1sen!2sin!4v1747900006805!5m2!1sen!2sin"
