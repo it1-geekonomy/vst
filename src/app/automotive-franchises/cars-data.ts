@@ -552,7 +552,7 @@ export const slides: SlideData[] = [
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d496732.41440844996!2d77.401443!3d13.4295279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae154a34bb2109%3A0x4390fad42917eae2!2sMahindra%20India%20Garage%20-%20Commercial%20Mission%20Road!5e0!3m2!1sen!2sin!4v1747895986496!5m2!1sen!2sin" 
           },
             {
-            address: " #117, 1, Rajagopalnagar Main Rd, 2nd Stage, Peenya Industrial Area Phase IV, Bengaluru - 560 058.",
+            address: "#610/9, Ground Floor, Laggere, Rajagopalnagar, 1st Main Road, Opp.  Peenya 2nd Stage Bus Stand, Bangalore - 560 058.",
             phone: "+91 88844 98958",
             email: "prosper.pny@india-garage.in",
             map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.38306928848!2d77.5046024!3d13.0112605!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cf9a936cbc3%3A0x71d718e2c7baba6b!2sMahindra%20India%20Garage%20-%20Peenya%20Commercial%20Showroom!5e0!3m2!1sen!2sin!4v1747896043710!5m2!1sen!2sin" 
