@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import gif from "@/app/public/education/vst logo gif.gif"
@@ -19,7 +19,8 @@ import { SlideData, LocationKeys, LocationData, slides } from '@/app/automotive-
 
 
 
-const FranchiseSlider = () => {
+// Inner component that uses useSearchParams
+const FranchiseSliderInner = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -1120,6 +1121,15 @@ const FranchiseSlider = () => {
 
       </motion.div>
     </div>
+  );
+};
+
+// Wrapper component with Suspense
+const FranchiseSlider = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <FranchiseSliderInner />
+    </Suspense>
   );
 };
 
