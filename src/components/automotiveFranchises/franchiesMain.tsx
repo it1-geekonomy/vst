@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import gif from "@/app/public/education/vst logo gif.gif"
+import { useRouter, useSearchParams } from "next/navigation";
 
 import bg1 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (1).png";
 import bg2 from "@/app/public/faranchies/bgpic/pexels-jack-redgate-333633-30140021 1 (2).png";
@@ -19,12 +20,50 @@ import { SlideData, LocationKeys, LocationData, slides } from '@/app/automotive-
 
 
 const FranchiseSlider = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [screenWidth, setScreenWidth] = useState<number | null>(null);
   const [activeLocation, setActiveLocation] = useState<string | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Get slide from URL parameter using brand name
+  const getSlideFromURL = () => {
+    const brandParam = searchParams?.get('brand');
+    if (brandParam) {
+      const slideIndex = slides.findIndex((slide) => slide.brand === brandParam);
+      if (slideIndex !== -1) {
+        return slideIndex;
+      }
+    }
+    return 0;
+  };
+
+  // Update URL when slide changes using brand name
+  const updateURL = (slideIndex: number) => {
+    const brand = slides[slideIndex].brand;
+    const newURL = new URL(window.location.href);
+    newURL.searchParams.set('brand', brand);
+    router.push(newURL.pathname + newURL.search, { scroll: false });
+  };
+
+  // Initialize slide from URL
+  useEffect(() => {
+    const slideFromURL = getSlideFromURL();
+    setCurrentSlide(slideFromURL);
+    
+    // Set the scroll position to match the slide from URL
+    // This ensures the logo carousel stays at the correct position on refresh
+    if (slideFromURL > 0) {
+      // Calculate which cycle we should be in (each cycle has slides.length items)
+      const cycle = Math.floor(scrollPosition / slides.length);
+      const positionInCycle = slideFromURL % slides.length;
+      const targetScrollPosition = (cycle * slides.length) + positionInCycle;
+      setScrollPosition(targetScrollPosition);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -52,32 +91,9 @@ const FranchiseSlider = () => {
   const goToSlide = (brand: SlideData["brand"]) => {
     const index = slides.findIndex((slide) => slide.brand === brand);
     if (index !== -1) {
-      // Check if the clicked logo is the next one in sequence
-      const nextIndex = (currentSlide + 1) % slides.length;
-      
-      if (index === nextIndex) {
-        // If clicking on the next logo, just slide by 1
-        setCurrentSlide(index);
-        setScrollPosition(prev => prev + 1);
-      } else {
-        // If clicking on any other logo, find the closest occurrence in the current array cycle
-        const currentCycle = Math.floor(scrollPosition / slides.length);
-        const currentCycleStart = currentCycle * slides.length;
-        const currentCycleEnd = currentCycleStart + slides.length;
-        
-        // Find the target position within the current cycle
-        let targetScrollPosition;
-        if (index >= currentSlide) {
-          // Target is ahead in the current cycle
-          targetScrollPosition = currentCycleStart + index;
-        } else {
-          // Target is behind, so go to the next cycle
-          targetScrollPosition = (currentCycle + 1) * slides.length + index;
-        }
-        
-        setCurrentSlide(index);
-        setScrollPosition(targetScrollPosition);
-      }
+      setCurrentSlide(index);
+      setScrollPosition(prev => prev + 1); // Continue horizontal infinite loop
+      updateURL(index);
     }
   };
 
@@ -93,6 +109,7 @@ const FranchiseSlider = () => {
       const newPosition = scrollPosition - 1;
       setScrollPosition(newPosition);
       setCurrentSlide(newPosition % slides.length);
+      updateURL(newPosition % slides.length);
     }
     // If at beginning, do nothing - no action taken
   };
@@ -101,6 +118,7 @@ const FranchiseSlider = () => {
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     setScrollPosition((prev) => prev + 1);
+    updateURL((currentSlide + 1) % slides.length);
     // Let it continue through all 20 arrays naturally
   };
 

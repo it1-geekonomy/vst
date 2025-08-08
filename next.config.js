@@ -12,7 +12,7 @@ const nextConfig = {
       // Old vstgroup.com URLs redirecting to new internal paths
       {
         source: '/index.php/home/volkswagon',
-        destination: '/manufacture',
+        destination: '/automotive-franchises?brand=volkswagen',
         permanent: true,
       },
       {
@@ -24,6 +24,16 @@ const nextConfig = {
       {
         source: '/index.php/home/mercedes',
         destination: '/automotive-franchises/mercedes',
+        permanent: true,
+      },
+      {
+        source: '/index.php/home/social',
+        destination: '/education',
+        permanent: true,
+      },
+      {
+        source: '/index.php/home/volkswagon',
+        destination: '/automotive-franchises/volkswagon',
         permanent: true,
       },
    
