@@ -36,6 +36,11 @@ const nextConfig = {
         destination: '/automotive-franchises/volkswagon',
         permanent: true,
       },
+      {
+        source: '/index.php/home/garagebangloor',
+        destination: '/automotive-franchises?brand=mahindra',
+        permanent: true,
+      },
    
     
      
