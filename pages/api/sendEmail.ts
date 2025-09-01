@@ -120,7 +120,7 @@ Source: VST Group Careers Portal
 
     const emailData: any = {
       from: 'VST Group <notifications@vstgroup.com>',
-      to: ['mdoffice@vstsons.in'],
+      to: ['careers.web@vstgroup.co.in'],
       subject: `New Career Form Submission - ${formattedDate}`,
       html,
       text, 
