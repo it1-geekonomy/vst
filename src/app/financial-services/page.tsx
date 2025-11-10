@@ -5,21 +5,22 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] text-white">
+    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white">
       <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-20">
         {/* HEADER SECTION */}
-        <header className="w-full flex flex-col items-center justify-center mb-12 text-center">
-          <div className="w-full">
-            <Image
-              src="/imagesanime/govelogo.png"
-              alt="GOVE Finance Limited Logo"
-              width={420}
-              height={200}
-              priority
-              className="mx-auto w-full max-w-[540px]"
-            />
-          </div>
-        </header>
+       <header className="w-full flex flex-col items-center justify-center mb-8 sm:mb-10 md:mb-12 h-[80px] sm:h-[100px] md:h-[110px] text-center px-4">
+  <div className="w-full">
+    <Image
+      src="/imagesanime/govelogo.png"
+      alt="GOVE Finance Limited Logo"
+      width={420}
+      height={200}
+      priority
+      className="mx-auto w-[220px] sm:w-[340px] md:w-[420px] lg:w-[540px] h-auto"
+    />
+  </div>
+</header>
+
       </section>
 
       {/* BUILDING IMAGE */}
@@ -40,10 +41,10 @@ export default function Home() {
             src="/imagesanime/carfinance.jpg"
             alt="Car finance background"
             fill
-            className="object-cover opacity-80"
+            className="object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0" />
         <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl lg:text-[2.9rem] font-normal font-roc leading-tight">
             Empowering mobility through trusted financial solutions
@@ -65,19 +66,19 @@ export default function Home() {
           </h3>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="w-full rounded-2xl bg-white/10 border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Passenger Vehicle</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Upgrade to your ideal ride with affordable interest rates, flexible repayment, and quick approvals.
               </p>
             </div>
-            <div className="w-full rounded-2xl bg-white/10 border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Commercial Vehicle</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Our Commercial Vehicle Loan solutions offer competitive rates, flexible terms, and quick approval.
               </p>
             </div>
-            <div className="w-full rounded-2xl bg-white/10 border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Refinancing</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 We offer refinance on commercial and passenger vehicles to suit your requirement.

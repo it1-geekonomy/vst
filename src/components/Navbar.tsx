@@ -146,10 +146,16 @@ export default function Navbar() {
                       OE Parts Distribution
                     </Link>
                     <Link
-                      href="/education"
+                      href="/manufacture"
                       className="block w-full px-4 py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800 rounded-md "
                     >
-                      Education
+                      Manufacturing
+                    </Link>
+                    <Link
+                      href="/financial-services"
+                      className="block w-full px-4 py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800 rounded-md "
+                    >
+                      Finance
                     </Link>
                   </div>
                 </div>
