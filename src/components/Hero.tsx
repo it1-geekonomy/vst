@@ -117,7 +117,7 @@ const slides = [
 ];
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(6);
+  const [currentSlide, setCurrentSlide] = useState<number>(7);
   const [showImages, setShowImages] = useState(slides);
   const [isMobile, setIsMobile] = useState(false);
   const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
