@@ -1,6 +1,9 @@
 "use client";
 
+import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
+import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import LocationSection from "@/components/LocationSection";
+import VSTLogoAnimation from "@/components/VSTLogoAnimation";
 import Image from "next/image";
 
 export default function Home() {
@@ -124,6 +127,16 @@ export default function Home() {
           />
         </div>
       </section>
+      {/* Black background section - moved outside the container */}
+      <div className="w-screen bg-black">
+        <div className="relative z-10 w-full pt-1 sm:pt-0">
+          <BusinessSectors />
+        </div>
+      </div>
+        {/* Logo section */}
+          <div className="w-screen bg-black flex justify-center items-center py-1 -mt-8 pl-3">
+        <VSTLogoAnimation />
+      </div>
 
       {/* <div className="w-full px-4 md:px-8 lg:px-30 mb-8 sm:mb-12 md:mb-20  mt-4 font-normal font-roc text-justify flex justify-center lg:block lg:text-justify">
       

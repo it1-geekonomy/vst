@@ -1,13 +1,20 @@
 import React from "react";
 
-const FinanceIcon = () => {
+interface FinanceIconProps {
+  className?: string;
+}
+
+const FinanceIcon: React.FC<FinanceIconProps> = ({ className }) => {
   return (
     <svg
-      width="141"
-      height="168"
-      viewBox="0 0 141 168"
+      className={className}
+      width="100%"
+      height="100%"
+      viewBox="-60 0 261 170"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid meet"
+      style={{ maxWidth: "100%", height: "auto" }}
     >
       <path
         d="M45.7699 62.6096L45.7699 21.4969L61.935 21.4969L61.935 62.6096L53.8525 55.0857L45.7699 62.6096ZM72.7117 70.671L72.7117 0L88.8768 0L88.8768 54.5483L72.7117 70.671ZM18.8281 89.212L18.8281 42.9937H34.9932L34.9932 73.0894L18.8281 89.212ZM18.8281 102.379L53.5831 67.7152L72.7117 84.1065L102.887 54.0109H94.2652L94.2652 43.2625H121.207L121.207 70.1336H110.43V61.5348L73.2506 98.6169L54.1219 82.2255L33.9155 102.379H18.8281Z"
