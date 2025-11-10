@@ -233,6 +233,13 @@ export default function Navbar() {
                   OE Parts Distribution
                 </Link>
                 <Link
+                  href="/financial-services"
+                  className="block py-2.5 text-sm md:text-base font-medium text-white hover:bg-gray-800 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Finance
+                </Link>
+                <Link
                   href="/education"
                   className="block py-2.5 text-sm md:text-base font-medium text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
