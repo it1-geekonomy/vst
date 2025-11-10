@@ -18,7 +18,7 @@ import Frame3 from "@/app/public/faranchies/Frame 1973341733.svg";
 import NewsIcon from "@/app/public/hero-section/NewsIcon";
 import CorporateIcon from "@/app/public/hero-section/CorporateIcon";
 import EducationIcon from "@/app/public/hero-section/EducationIcon";
-import FinanceIcon from "@/app/public/common/BusinessSectorIcons/FinanceIcon";
+import FinanceIcon from "@/app/public/hero-section/Finance";
 import OEPartsIcon from "@/app/public/hero-section/OEPartsIcon";
 import ManufacturingIcon from "@/app/public/hero-section/ManufacturingIcon";
 import AutomativeFranchiseIcon from "@/app/public/hero-section/AutomativeFranchiseIcon";
@@ -60,9 +60,9 @@ const slides = [
   {
     id: 5,
     image: slide7,
-    title: "financial Services",
+    title: "Financial Services",
     subtitle: "Empowering mobility through trusted financial solutions.",
-    label: "financial Services",
+    label: "Financial Services",
     color: "from-green-600/80 to-green-800/80",
     type: 'image',
     icon: FinanceIcon,
@@ -457,7 +457,19 @@ const Hero = () => {
                       priority={index === 0}
                     />
                     {/* Background overlays for both active and inactive states */}
-                    {slide.id === 6 && (
+                    {slide.id === 5 && (
+                      <div 
+                        className="absolute inset-0 transition-all duration-1500 ease-in-out"
+                        style={{
+                          background: isActive 
+                            ? '#5B21B6CC'
+                            : 'transparent',
+                          opacity: isActive ? 0 : 0.8,
+                          transition: 'all 1500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
+                        }}
+                      />
+                    )}
+                    {slide.id === 7 && (
                       <div 
                         className="absolute inset-0 transition-all duration-1500 ease-in-out"
                         style={{
@@ -469,7 +481,7 @@ const Hero = () => {
                         }}
                       />
                     )}
-                    {slide.id === 5 && (
+                    {slide.id === 6 && (
                       <div 
                         className="absolute inset-0 transition-all duration-1500 ease-in-out"
                         style={{

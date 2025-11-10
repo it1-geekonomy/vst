@@ -20,7 +20,7 @@ const BusinessSectors = () => {
   const baseCircleSize = "w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px]";
   const autoRectSize = "w-[110px] h-[70px] sm:w-[150px] sm:h-[95px] md:w-[180px] md:h-[120px] lg:w-[260px] lg:h-[180px]";
   const autoRectWideSize = "w-[120px] h-[70px] sm:w-[160px] sm:h-[95px] md:w-[200px] md:h-[120px] lg:w-[280px] lg:h-[180px]";
-  const financeSize = "w-[75px] h-[75px] sm:w-[100px] sm:h-[100px] md:w-[130px] md:h-[130px] lg:w-[180px] lg:h-[180px]";
+  const financeSize = "w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[180px] lg:h-[180px]";
   const baseLinkClass = "flex-shrink-0 sm:flex-shrink flex items-center justify-center hover:opacity-80 transition-opacity";
 
   const iconConfigs = {
