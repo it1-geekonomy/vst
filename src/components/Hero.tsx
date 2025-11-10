@@ -8,6 +8,7 @@ import slide3 from "@/app/public/hero-section/image 3.png";
 import slide4 from "@/app/public/hero-section/Image 4.jpg";
 import slide5 from "@/app/public/hero-section/Image 6.jpg";
 import slide6 from "@/app/public/hero-section/Image 7.jpg";
+import slide7 from "@/app/public/hero-section/Image 8.png";
 import groupImage from "@/app/public/hero-section/Group Image.png";
 
 // Import SVG icons
@@ -17,13 +18,14 @@ import Frame3 from "@/app/public/faranchies/Frame 1973341733.svg";
 import NewsIcon from "@/app/public/hero-section/NewsIcon";
 import CorporateIcon from "@/app/public/hero-section/CorporateIcon";
 import EducationIcon from "@/app/public/hero-section/EducationIcon";
+import FinanceIcon from "@/app/public/common/BusinessSectorIcons/FinanceIcon";
 import OEPartsIcon from "@/app/public/hero-section/OEPartsIcon";
 import ManufacturingIcon from "@/app/public/hero-section/ManufacturingIcon";
 import AutomativeFranchiseIcon from "@/app/public/hero-section/AutomativeFranchiseIcon";
 
 const slides = [
   {
-    id: 7,
+    id: 8,
     image: slide5,
     title: "News & Media",
     subtitle: "Stay updated with the latest news, events, and milestones from VST group.",
@@ -34,7 +36,7 @@ const slides = [
     link: "/news-media"
   },
   {
-    id: 6,
+    id: 7,
     image: slide6,
     title: "Corporate Philanthropy",
     subtitle: "Driven by empathy and purpose, our efforts aim to create a lasting impact through compassion and collective upliftment.",
@@ -45,7 +47,7 @@ const slides = [
     link: "/Corporate-philanthropy"
   },
   {
-    id: 5,
+    id: 6,
     image: slide2,
     title: "Education",
     subtitle: "Our educational philosophy emphasises a learner-centric approach wherein we cater to the diverse learning needs of students.",
@@ -54,6 +56,17 @@ const slides = [
     type: 'image',
     icon: EducationIcon,
     link: "/education"
+  },
+  {
+    id: 5,
+    image: slide7,
+    title: "financial Services",
+    subtitle: "Empowering mobility through trusted financial solutions.",
+    label: "financial Services",
+    color: "from-green-600/80 to-green-800/80",
+    type: 'image',
+    icon: FinanceIcon,
+    link: "/financial-services"
   },
   {
     id: 4,
