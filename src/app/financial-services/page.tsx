@@ -8,11 +8,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white">
+    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white bg-black">
       <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-20">
         {/* HEADER SECTION */}
        <header className="w-full flex flex-col items-center justify-center mb-8 sm:mb-10 md:mb-12 h-[80px] sm:h-[100px] md:h-[110px] text-center px-4">
-  <div className="w-full">
+  <div className="w-full flex justify-center items-center">
     <Image
       src="/imagesanime/govelogo.png"
       alt="GOVE Finance Limited Logo"
@@ -39,7 +39,7 @@ export default function Home() {
 
       {/* TAGLINE */}
       <section className="relative w-full text-center mt-12 sm:mt-16 lg:mt-24">
-        <div className="relative w-full h-[220px] sm:h-[280px] lg:h-[320px]">
+        <div className="relative w-full h-[220px] sm:h-[200px] lg:h-[300px]">
           <Image
             src="/imagesanime/carfinance.jpg"
             alt="Car finance background"
@@ -64,24 +64,24 @@ export default function Home() {
         </div>
 
         <div className="w-full mt-12">
-          <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal font-roc text-white mb-10">
+          <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal font-roc text-white mb-10 pt-10">
             Gove Retail Loans And Investments
           </h3>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Passenger Vehicle</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Upgrade to your ideal ride with affordable interest rates, flexible repayment, and quick approvals.
               </p>
             </div>
-            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Commercial Vehicle</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Our Commercial Vehicle Loan solutions offer competitive rates, flexible terms, and quick approval.
               </p>
             </div>
-            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Refinancing</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 We offer refinance on commercial and passenger vehicles to suit your requirement.
@@ -120,7 +120,7 @@ export default function Home() {
               info: 'info@skei.edu.in'
             }}
             googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-            className="text-black"
+            className="text-white"
           iconColor="black"
           websiteUrl="www.skei.edu.in"
           mobilePadding="education"

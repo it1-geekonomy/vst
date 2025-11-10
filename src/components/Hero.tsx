@@ -64,7 +64,7 @@ const slides = [
     color: "from-blue-600/80 to-blue-800/80",
     type: 'image',
     icon: OEPartsIcon,
-    link: "/auto-parts"
+    link: " "
   },
   {
     id: 3,
