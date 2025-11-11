@@ -38,18 +38,6 @@ export default function Home() {
         />
       </div>
 
-      {/* 📱 Mobile View */}
-      <div className="relative w-full block sm:hidden h-[200px]">
-        <Image
-          src="/imagesanime/Govefinancenew.png"
-          alt="Historic building mobile"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
-
       {/* TAGLINE */}
        {/* 🌐 Desktop + Tablet View */}
       <section className="relative w-full text-center hidden sm:block mt-6 sm:mt-6 md:mt-6 lg:mt-6 xl:mt-6 2xl:mt-12">
@@ -69,7 +57,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 pb-2 md:pb-6 lg:pb-0 py-12 sm:py-16 md:py-20">
+      <section className="relative w-full text-center block sm:hidden mt-6">
+  <div className="relative w-full h-[120px]">
+    <Image
+      src="/imagesanime/carfinance-mobile.jpg"
+      alt="Car finance mobile background"
+      fill
+      className="object-cover"
+    />
+
+    {/* 🔳 Blackish overlay */}
+    <div className="absolute inset-0 bg-black/50" /> 
+    {/* You can adjust opacity: bg-black/30, /40, /50, etc. */}
+  </div>
+
+  <div className="absolute inset-0 flex items-center justify-center px-4">
+    <h2 className="text-xl font-normal font-roc leading-tight text-white">
+      Empowering mobility through trusted financial solutions
+    </h2>
+  </div>
+</section>
+
+      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 pb-2 md:pb-6 lg:pb-8 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-6 sm:mb-8">
           <p className="text-base sm:text-lg lg:text-xl font-normal font-roc text-justify whitespace-pre-wrap text-white leading-relaxed">
             Established in 1983, GOVE Finance Limited, part of the VST Group founded in 1911, has been a trusted name in auto finance industry for over 40 years. Operating across Tamil Nadu and Karnataka, the company offers tailored financial solutions for commercial vehicles, passenger cars, buses, pre-owned vehicles, and vehicle refinancing.{'\n\n'}
