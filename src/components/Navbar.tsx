@@ -237,7 +237,7 @@ export default function Navbar() {
                   className="block py-2.5 text-sm md:text-base font-medium text-white hover:bg-gray-800 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Finance
+                  Financial Services
                 </Link>
                 <Link
                   href="/education"

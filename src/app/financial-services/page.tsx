@@ -27,16 +27,28 @@ export default function Home() {
 
       </section>
 
-      {/* BUILDING IMAGE */}
-      <div className="relative w-full h-[200px] sm:h-[200px] md:h-[280px] lg:h-[450px] xl:h-[700px]">
+            {/* 🖥️ Desktop + Tablet View */}
+      <div className="relative w-full hidden sm:block h-[200px] sm:h-[200px] md:h-[280px] lg:h-[450px] xl:h-[700px]">
         <Image
           src="/imagesanime/Govefinancenew.png"
           alt="Historic building"
           fill
-          className="object-cover md:object-cover"
+          className="object-fit md:object-fit"
           priority
         />
       </div>
+
+      {/* 📱 Mobile View */}
+      <div className="relative w-full block sm:hidden h-[200px]">
+        <Image
+          src="/imagesanime/Govefinancenew.png"
+          alt="Historic building mobile"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
 
       {/* TAGLINE */}
        {/* 🌐 Desktop + Tablet View */}
@@ -87,8 +99,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="w-full mt-12">
-          <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal font-roc text-white mb-10 pt-10">
+        <div className="w-full mt-0 sm:mt-4 md:mt-8 lg:mt-10">
+          <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal font-roc text-white mb-10 pt-2 sm:pt-2 md:pt-3 lg:pt-4">
             Gove Retail Loans And Investments
           </h3>
 
