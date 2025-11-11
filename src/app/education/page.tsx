@@ -11,11 +11,11 @@ import img6 from '../public/education/Frame11.jpg';
 import img7 from '../public/education/Frame 12.jpg';
 import { StaticImageData } from 'next/image';
 import EducationLogo from '@/app/public/education/educational logo.png';
-import BusinessSectorsUpdated from '@/components/automotiveFranchises/BusinessSectorsUpdated';
 import gif from "@/app/public/education/vst logo gif.gif"
 import LocationSection from '@/components/LocationSection';
 import VSTLogoAnimation from '@/components/VSTLogoAnimation';
 import BusinessSectors from '@/components/automotiveFranchises/BusinessSectors';
+import BusinessSectorsUpdated from '@/components/automotiveFranchises/BusinessSectorsUpdated';
 
 type GalleryImage = {
   id: number;
@@ -338,7 +338,7 @@ export default function EducationPage() {
 
           
           <div className="relative  w-full pt-1 sm:pt-0 bg-black">
-        <BusinessSectors />
+        <BusinessSectors  />
 </div>
         {/* Logo section */}
           <div className="w-screen bg-black flex justify-center items-center py-1 -mt-8 pl-3">
