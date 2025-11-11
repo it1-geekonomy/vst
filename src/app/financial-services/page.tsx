@@ -24,22 +24,25 @@ export default function Home() {
   </div>
 </header>
 
+
       </section>
 
       {/* BUILDING IMAGE */}
-      <div className="relative w-full h-[360px] sm:h-[520px] lg:h-[800px]">
+      <div className="relative w-full h-[200px] sm:h-[200px] md:h-[280px] lg:h-[450px] xl:h-[550px]">
         <Image
           src="/imagesanime/Gove_finance_new.jpg"
           alt="Historic building"
           fill
-          className="object-cover"
+          className="object-cover md:object-contain"
           priority
         />
       </div>
 
       {/* TAGLINE */}
-      <section className="relative w-full text-center mt-12 sm:mt-16 lg:mt-24">
-        <div className="relative w-full h-[220px] sm:h-[200px] lg:h-[300px]">
+      <section className="relative w-full text-center mt-6 sm:mt-6 md:mt-6 lg:mt-6 xl:mt-6 2xl:mt-12">
+
+
+        <div className="relative w-full h-[220px] sm:h-[280px] lg:h-[320px]">
           <Image
             src="/imagesanime/carfinance1.jpg"
             alt="Car finance background"
@@ -105,8 +108,9 @@ export default function Home() {
           <LocationSection
             locationImage="education/educational location.png"
             address={{
-              street: "Edward Road, Off Queens Road,",
-              street2: "Bengaluru - 560 001, Karnataka.",
+              street: "#239, India Garage Building,",
+              street2: "3rd Floor, Anna Salai,",
+              street3: "Chennai - 600 006, Tamil Nadu",
               city: "",
               state: "",
               pincode: ""
