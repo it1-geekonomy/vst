@@ -1,15 +1,15 @@
 "use client";
 
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
+import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import LocationSection from "@/components/LocationSection";
 import VSTLogoAnimation from "@/components/VSTLogoAnimation";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white ">
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-20">
-    
+    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white bg-black">
+      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-16">
         {/* HEADER SECTION */}
        <header className="w-full flex flex-col items-center justify-center mb-8 sm:mb-1 h-[60px] sm:h-[80px] md:h-[70px] text-center px-4">
   <div className="w-full flex justify-center items-center">
@@ -37,6 +37,18 @@ export default function Home() {
           priority
         />
       </div>
+
+      {/* 📱 Mobile View */}
+      <div className="relative w-full block sm:hidden h-[200px]">
+        <Image
+          src="/imagesanime/Govefinancenew.png"
+          alt="Historic building mobile"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      
 
       {/* TAGLINE */}
        {/* 🌐 Desktop + Tablet View */}
@@ -77,6 +89,7 @@ export default function Home() {
     </h2>
   </div>
 </section>
+
 
       <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 pb-2 md:pb-6 lg:pb-8 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-6 sm:mb-8">
@@ -150,8 +163,10 @@ export default function Home() {
         </div>
       </section>
       {/* Black background section - moved outside the container */}
-      <div className="bg-black">
-        <BusinessSectors />
+      <div className="w-screen bg-black">
+        <div className="relative z-10 w-full pt-1 sm:pt-0">
+          <BusinessSectors />
+        </div>
       </div>
         {/* Logo section */}
           <div className="w-screen bg-black flex justify-center items-center py-1 -mt-8 pl-3">
