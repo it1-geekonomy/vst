@@ -149,7 +149,7 @@ export default function Navbar() {
                       href="/financial-services"
                       className="block w-full px-4 py-2 font-roc text-sm lg:text-base font-medium text-white hover:bg-gray-800 rounded-md "
                     >
-                         Finance
+                         Financial Services
                     </Link>
                     <Link
                       href="/education"
