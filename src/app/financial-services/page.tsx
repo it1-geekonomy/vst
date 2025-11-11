@@ -1,7 +1,6 @@
 "use client";
 
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
-import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import LocationSection from "@/components/LocationSection";
 import VSTLogoAnimation from "@/components/VSTLogoAnimation";
 import Image from "next/image";
