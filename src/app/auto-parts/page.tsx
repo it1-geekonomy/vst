@@ -9,7 +9,6 @@ import img5 from "@/app/public/vst-auto-parts/frame5.png";
 import bgImage from "@/app/public/vst-auto-parts/bgimg.jpeg";
 import Logo from "@/app/public/vst-auto-parts/Logo.png";
 import LocationSection from "@/components/LocationSection";
-import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import VSTLogoAnimation from "@/components/VSTLogoAnimation";
 import { Bus } from "lucide-react";
 import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
