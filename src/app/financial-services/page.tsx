@@ -24,6 +24,7 @@ export default function Home() {
   </div>
 </header>
 
+
       </section>
 
       {/* BUILDING IMAGE */}
