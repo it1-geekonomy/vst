@@ -157,7 +157,7 @@ export default function Home() {
             googleMapsUrl="https://www.google.com/maps?q=Gove+Finance+Limited,+184+Anna+Salai,+India+Garage+building+3rd+Floor,+Chennai,+Chennai,+Tamil+Nadu+600014&ftid=0x3a52663e195d039d:0x3af060bbbc9fa829&entry=gps&lucs=,94259550,94284466,94224825,94227247,94227248,94231188,94280568,47071704,47069508,94218641,94282134,94203019,47084304&g_ep=CAISEjI1LjQ0LjIuODI0NjIxMzk2MBgAIIgnKnUsOTQyNTk1NTAsOTQyODQ0NjYsOTQyMjQ4MjUsOTQyMjcyNDcsOTQyMjcyNDgsOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsNDcwNjk1MDgsOTQyMTg2NDEsOTQyODIxMzQsOTQyMDMwMTksNDcwODQzMDRCAklO&skid=e53cf141-d2b5-4b9b-b5cf-b805d672079e&g_st=ipc"
             className="text-white"
           iconColor="white"
-          websiteUrl="https://govefinance.in/"
+          websiteUrl="www.govefinance.in"
           mobilePadding="education"
           />
         </div>
