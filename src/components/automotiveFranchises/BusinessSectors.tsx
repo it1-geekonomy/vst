@@ -113,7 +113,7 @@ const BusinessSectors = () => {
   };
   
   return (
-      <div className="w-full flex justify-center items-center relative z-10 mt-6 sm:mt-10 md:mt-28 ">
+      <div className="w-full flex justify-center items-center relative z-10 mt-6 sm:mt-10 md:mt-2 ">
       <div
         className="w-full max-w-[1920px] py-0 sm:py-6 md:py-8 lg:py-16 lg:pb-8 px-3 sm:px-6 md:px-8 lg:px-24 min-h-[200px] sm:min-h-[300px]"
       >
