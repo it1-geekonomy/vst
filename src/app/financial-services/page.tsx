@@ -8,11 +8,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white bg-black">
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-26">
+    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white">
+      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-16 mt-4">
         {/* HEADER SECTION */}
-       <header className="w-full flex flex-col items-center justify-center mb-8 sm:mb-10 md:mb-12 h-[80px] sm:h-[100px] md:h-[110px] text-center px-4">
-  <div className="w-full flex justify-center items-center">
+       <header className="w-full flex flex-col items-center justify-center mb-8 sm:mb-10 md:mb-12 h-[80px] sm:h-[100px] md:h-[80px] lg:h-[90px] xl:h-[110px] text-center px-4 md:mt-6 lg:mt-8">
+  <div className="w-full">
     <Image
       src="/imagesanime/govelogo.png"
       alt="GOVE Finance Limited Logo"
@@ -28,19 +28,21 @@ export default function Home() {
       </section>
 
       {/* BUILDING IMAGE */}
-      <div className="relative w-full h-[360px] sm:h-[520px] lg:h-[800px]">
+      <div className="relative w-full h-[200px] sm:h-[200px] md:h-[280px] lg:h-[450px] xl:h-[550px]">
         <Image
           src="/imagesanime/historicbuilding.jpg"
           alt="Historic building"
           fill
-          className="object-cover"
+          className="object-cover md:object-contain"
           priority
         />
       </div>
 
       {/* TAGLINE */}
-      <section className="relative w-full text-center mt-12 sm:mt-16 lg:mt-24">
-        <div className="relative w-full h-[220px] sm:h-[200px] lg:h-[300px]">
+      <section className="relative w-full text-center mt-6 sm:mt-6 md:mt-6 lg:mt-6 xl:mt-6 2xl:mt-12">
+
+
+        <div className="relative w-full h-[220px] sm:h-[280px] lg:h-[320px]">
           <Image
             src="/imagesanime/carfinance1.jpg"
             alt="Car finance background"
