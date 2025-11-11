@@ -1,6 +1,9 @@
 "use client";
 
+import BusinessSectors from "@/components/automotiveFranchises/BusinessSectors";
+import BusinessSectorsUpdated from "@/components/automotiveFranchises/BusinessSectorsUpdated";
 import LocationSection from "@/components/LocationSection";
+import VSTLogoAnimation from "@/components/VSTLogoAnimation";
 import Image from "next/image";
 
 export default function Home() {
@@ -41,7 +44,7 @@ export default function Home() {
 
         <div className="relative w-full h-[220px] sm:h-[280px] lg:h-[320px]">
           <Image
-            src="/imagesanime/carfinance.jpg"
+            src="/imagesanime/carfinance1.jpg"
             alt="Car finance background"
             fill
             className="object-cover"
@@ -58,30 +61,30 @@ export default function Home() {
       <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 pb-2 md:pb-6 lg:pb-8 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-6 sm:mb-8">
           <p className="text-base sm:text-lg lg:text-xl font-normal font-roc text-justify whitespace-pre-wrap text-white leading-relaxed">
-            Established in 1983, GOVE Finance Limited, part of the VST Group founded in 1911, has been a trusted name in auto finance for over 40 years. Operating across Tamil Nadu and Karnataka, the company offers tailored financial solutions for commercial vehicles, passenger cars, buses, pre-owned vehicles, and vehicle refinancing.{'\n\n'}
+            Established in 1983, GOVE Finance Limited, part of the VST Group founded in 1911, has been a trusted name in auto finance industry for over 40 years. Operating across Tamil Nadu and Karnataka, the company offers tailored financial solutions for commercial vehicles, passenger cars, buses, pre-owned vehicles, and vehicle refinancing.{'\n\n'}
             With a deep understanding of regional markets and customer needs, GOVE Finance combines financial expertise with flexible lending options to support both individuals and businesses. Its strong foundation, reliable service network, and customer-first approach continue to drive sustained growth and trust across South India.
           </p>
         </div>
 
         <div className="w-full mt-12">
-          <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal font-roc text-white mb-10">
+          <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal font-roc text-white mb-10 pt-10">
             Gove Retail Loans And Investments
           </h3>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Passenger Vehicle</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Upgrade to your ideal ride with affordable interest rates, flexible repayment, and quick approvals.
               </p>
             </div>
-            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Commercial Vehicle</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Our Commercial Vehicle Loan solutions offer competitive rates, flexible terms, and quick approval.
               </p>
             </div>
-            <div className="w-full rounded-2xl bg-[#CD62FF] border border-white/15 p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[240px] sm:min-h-[260px] md:min-h-[280px]">
+            <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
               <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Refinancing</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 We offer refinance on commercial and passenger vehicles to suit your requirement.
@@ -91,7 +94,7 @@ export default function Home() {
 
           <div className="flex justify-center mt-12">
             <a
-              href="#"
+              href="https://govefinance.in/"
               className="inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-center"
             >
               <h3 className="bg-[#FEBF3D] rounded-lg px-6 sm:px-8 lg:px-34 py-2 sm:py-3 lg:py-3 text-[#0f0f0e] text-lg sm:text-xl lg:text-3xl font-light hover:bg-white hover:text-[#0f0f0e] transition-colors text-center">
@@ -119,13 +122,23 @@ export default function Home() {
               info: 'care@govefinance.in'
             }}
             googleMapsUrl="https://www.google.com/maps/place/SKEI+-+Smt.+Kamalabai+Educational+Institution/@12.987965,77.5947328,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1667c5c960f1:0x4e3200223320b7c2!8m2!3d12.987965!4d77.5973077!16s%2Fg%2F1t_kdz9b?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-            className="text-black"
+            className="text-white"
           iconColor="black"
           websiteUrl="www.skei.edu.in"
           mobilePadding="education"
           />
         </div>
       </section>
+      {/* Black background section - moved outside the container */}
+      <div className="w-screen bg-black">
+        <div className="relative z-10 w-full pt-1 sm:pt-0">
+          <BusinessSectors />
+        </div>
+      </div>
+        {/* Logo section */}
+          <div className="w-screen bg-black flex justify-center items-center py-1 -mt-8 pl-3">
+        <VSTLogoAnimation />
+      </div>
 
       {/* <div className="w-full px-4 md:px-8 lg:px-30 mb-8 sm:mb-12 md:mb-20  mt-4 font-normal font-roc text-justify flex justify-center lg:block lg:text-justify">
       
