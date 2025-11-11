@@ -105,19 +105,19 @@ export default function Home() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
-              <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Passenger Vehicle</h4>
+              <h4 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 font-roc">Passenger Vehicle</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Upgrade to your ideal ride with affordable interest rates, flexible repayment, and quick approvals.
               </p>
             </div>
             <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
-              <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Commercial Vehicle</h4>
+              <h4 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 font-roc">Commercial Vehicle</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Our Commercial Vehicle Loan solutions offer competitive rates, flexible terms, and quick approval.
               </p>
             </div>
             <div className="w-full rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md p-6 sm:p-8 md:p-10 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl min-h-[180px] sm:min-h-[260px] md:min-h-[280px]">
-              <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4 font-roc">Refinancing</h4>
+              <h4 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 font-roc">Refinancing</h4>
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 We offer refinance on commercial and passenger vehicles to suit your requirement.
               </p>
@@ -138,7 +138,7 @@ export default function Home() {
         <div className="w-full px-4 md:px-8 lg:px-0 mb-8 sm:mb-12 md:mb-20  mt-4 font-normal font-roc text-justify flex justify-center lg:block lg:text-justify">
       
           <LocationSection
-            locationImage="education/educational location.png"
+            locationImage="education/Gove finance Map.jpg"
             address={{
               street: "#239, India Garage Building,",
               street2: "3rd Floor, Anna Salai,",
