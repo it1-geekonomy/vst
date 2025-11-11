@@ -10,7 +10,7 @@ const AutoParts: React.FC<AutoPartsProps> = ({ className }) => {
       className={className}
       width="100%" 
       height="100%" 
-      viewBox="-30 0 367 160" 
+      viewBox="-10 0 360 165" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid meet"
