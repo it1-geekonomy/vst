@@ -102,8 +102,9 @@ export default function Home() {
           <LocationSection
             locationImage="education/educational location.png"
             address={{
-              street: "Edward Road, Off Queens Road,",
-              street2: "Bengaluru - 560 001, Karnataka.",
+              street: "#239, India Garage Building,",
+              street2: "3rd Floor, Anna Salai,",
+              street3: "Chennai - 600 006, Tamil Nadu",
               city: "",
               state: "",
               pincode: ""
