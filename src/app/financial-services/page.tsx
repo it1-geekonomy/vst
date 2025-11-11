@@ -7,8 +7,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white bg-black">
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-16">
+    <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white ">
+      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-20">
+    
         {/* HEADER SECTION */}
        <header className="w-full flex flex-col items-center justify-center mb-8 sm:mb-1 h-[60px] sm:h-[80px] md:h-[70px] text-center px-4">
   <div className="w-full flex justify-center items-center">
@@ -68,29 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative w-full text-center block sm:hidden mt-6">
-  <div className="relative w-full h-[120px]">
-    <Image
-      src="/imagesanime/carfinance-mobile.jpg"
-      alt="Car finance mobile background"
-      fill
-      className="object-cover"
-    />
-
-    {/* 🔳 Blackish overlay */}
-    <div className="absolute inset-0 bg-black/50" /> 
-    {/* You can adjust opacity: bg-black/30, /40, /50, etc. */}
-  </div>
-
-  <div className="absolute inset-0 flex items-center justify-center px-4">
-    <h2 className="text-xl font-normal font-roc leading-tight text-white">
-      Empowering mobility through trusted financial solutions
-    </h2>
-  </div>
-</section>
-
-
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 pb-2 md:pb-6 lg:pb-8 py-12 sm:py-16 md:py-20">
+      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 pb-2 md:pb-6 lg:pb-0 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-6 sm:mb-8">
           <p className="text-base sm:text-lg lg:text-xl font-normal font-roc text-justify whitespace-pre-wrap text-white leading-relaxed">
             Established in 1983, GOVE Finance Limited, part of the VST Group founded in 1911, has been a trusted name in auto finance industry for over 40 years. Operating across Tamil Nadu and Karnataka, the company offers tailored financial solutions for commercial vehicles, passenger cars, buses, pre-owned vehicles, and vehicle refinancing.{'\n\n'}
@@ -162,10 +141,8 @@ export default function Home() {
         </div>
       </section>
       {/* Black background section - moved outside the container */}
-      <div className="w-screen bg-black">
-        <div className="relative z-10 w-full pt-1 sm:pt-0">
-          <BusinessSectors />
-        </div>
+      <div className="bg-black">
+        <BusinessSectors />
       </div>
         {/* Logo section */}
           <div className="w-screen bg-black flex justify-center items-center py-1 -mt-8 pl-3">
