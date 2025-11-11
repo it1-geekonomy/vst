@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex flex-col items-stretch w-full min-h-screen bg-gradient-to-b from-[#240135] via-[#9440BC] to-[#CD62FF] bg-[length:100%_300%] bg-no-repeat text-white bg-black">
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-20">
+      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-32 z-10 mx-auto py-12 sm:py-16 md:py-26">
         {/* HEADER SECTION */}
        <header className="w-full flex flex-col items-center justify-center mb-8 sm:mb-10 md:mb-12 h-[80px] sm:h-[100px] md:h-[110px] text-center px-4">
   <div className="w-full flex justify-center items-center">
@@ -41,7 +41,7 @@ export default function Home() {
       <section className="relative w-full text-center mt-12 sm:mt-16 lg:mt-24">
         <div className="relative w-full h-[220px] sm:h-[200px] lg:h-[300px]">
           <Image
-            src="/imagesanime/carfinance.jpg"
+            src="/imagesanime/carfinance1.jpg"
             alt="Car finance background"
             fill
             className="object-cover"
@@ -58,7 +58,7 @@ export default function Home() {
       <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 pb-2 md:pb-6 lg:pb-8 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-6 sm:mb-8">
           <p className="text-base sm:text-lg lg:text-xl font-normal font-roc text-justify whitespace-pre-wrap text-white leading-relaxed">
-            Established in 1983, GOVE Finance Limited, part of the VST Group founded in 1911, has been a trusted name in auto finance for over 40 years. Operating across Tamil Nadu and Karnataka, the company offers tailored financial solutions for commercial vehicles, passenger cars, buses, pre-owned vehicles, and vehicle refinancing.{'\n\n'}
+            Established in 1983, GOVE Finance Limited, part of the VST Group founded in 1911, has been a trusted name in auto finance industry for over 40 years. Operating across Tamil Nadu and Karnataka, the company offers tailored financial solutions for commercial vehicles, passenger cars, buses, pre-owned vehicles, and vehicle refinancing.{'\n\n'}
             With a deep understanding of regional markets and customer needs, GOVE Finance combines financial expertise with flexible lending options to support both individuals and businesses. Its strong foundation, reliable service network, and customer-first approach continue to drive sustained growth and trust across South India.
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function Home() {
 
           <div className="flex justify-center mt-12">
             <a
-              href="#"
+              href="https://govefinance.in/"
               className="inline-block w-full sm:w-auto flex justify-center sm:justify-center lg:justify-center"
             >
               <h3 className="bg-[#FEBF3D] rounded-lg px-6 sm:px-8 lg:px-34 py-2 sm:py-3 lg:py-3 text-[#0f0f0e] text-lg sm:text-xl lg:text-3xl font-light hover:bg-white hover:text-[#0f0f0e] transition-colors text-center">
