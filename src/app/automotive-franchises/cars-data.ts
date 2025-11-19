@@ -7,7 +7,7 @@ import benzs from "@/app/public/faranchies/newcarpics/benz1.png";
 import jaguar from "@/app/public/faranchies/newcarpics/ja-la.png";
 import landrover from "@/app/public/faranchies/newcarpics/landrover3.png";
 import maserati from "@/app/public/faranchies/newcarpics/maserati5.png";
-import honda from "@/app/public/faranchies/newcarpics/honda12.png";
+//import honda from "@/app/public/faranchies/newcarpics/honda12.png";
 import tata from "@/app/public/faranchies/newcarpics/tata8.png";
 import tataupdate from "@/app/public/faranchies/newcarpics/tataupdate.jpg";
 import kia from "@/app/public/faranchies/newcarpics/kia7.png";
@@ -26,7 +26,7 @@ import MaseratiIcon from "@/app/public/faranchies/MaseratiIcon";
 import MahindraIcon from "@/app/public/faranchies/MahindraIcon";
 import KiaIcon from "@/app/public/faranchies/KiaIcon";
 import DucatiIcon from "@/app/public/faranchies/DucatiIcon";
-import HondaLogo from "@/app/public/faranchies/HondaLogo";
+//import HondaLogo from "@/app/public/faranchies/HondaLogo";
 import VolkswagenLogo from "@/app/public/faranchies/VolkswagenLogo";
 import BydLogo from "@/app/public/faranchies/BydLogo";
 import TataIcon from "@/app/public/faranchies/TataIcon";
@@ -58,7 +58,7 @@ export interface LocationTypes {
 export interface SlideData {
   id: number;
   backgroundImage: StaticImageData;
-  brand: "mercedes" | "jlr" | "porsche" | "maserati" | "honda" | "kia" | "tata" | "volkswagen" | "BYD" | "ducati" | "mahindra" | "bmw" | "mini";
+  brand: "mercedes" | "jlr" | "porsche" | "maserati" |/*"honda"*/ "kia" | "tata" | "volkswagen" | "BYD" | "ducati" | "mahindra" | "bmw" | "mini";
   bgColor: {
     from: string;
     to: string;
@@ -760,81 +760,81 @@ export const slides: SlideData[] = [
       },
     }
   },
-  {
-    id: 11,
-    backgroundImage: honda,
-    brand: "honda",
-    bgColor: {
-      from: "#E9354C",
-      to: "rgba(233, 53, 76, 0.4)",
-    },
-    LogoComponent: HondaLogo,
-    header: "City Honda",
-    description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence. With two centrally located showrooms in Bangalore and workshops across the city and Chikmagalur, City Honda delivers a complete 4S experience - Sales, Service, Spares, and Safety Riding under one roof. Backed by a knowledgeable sales team and expert service technicians, the brand ensures every customer enjoys a smooth and dependable ownership journey. Rooted in trust and powered by performance, City Honda continues to be a preferred destination for two-wheeler enthusiasts.",
-    learnMoreLink: "https://cityhonda.in/",
-    locations: {
-      Bangalore: {
-        sales: [
-          {
-            address: "M/S. City Honda, #6, St. John's Road, \nUlsoor, Bengaluru - 560 042.",
-            phone: ["+91 8025139199, +91 9480812350"],
-            email: "sales.ho@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6159692!3d12.9860895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20Johns%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1711542825613!5m2!1sen!2sin"
-          },
-          {
-            address: "#202,7th Main, HRBR Layout, Kalyan \nNagar, Bengaluru - 560 043.",
-            phone: "+91 8025422810,+91 8025422811 \n+91 9845941305",
-            email: "sales.hrbr@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d77.6431027!3d13.015952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1728131c0e23%3A0xa06978a43d8ffa58!2sCity%20Honda%20Sales%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
-          },
-          {
-            address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 027.",
-            phone: "+91 8043333330, +91 8884434200",
-            email: "sales.lbg@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d77.5865653!3d12.9613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156978155c3f%3A0xead9a19c3f1e2497!2sCity%20Honda%20Sales%20Lalbagh%20Road!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
-          }
-        ],
-        "service and parts": [
-          {
-            address: "#113, 1sr Main Road, Lingarajapuram, \nBengaluru - 560 084.",
-            phone: ["+91 80 2549 6561, +91 94808 12384"],
-            email: "service.lrp@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.4260254411024!2d77.6207003!3d13.0085203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16e7556e6ef3%3A0xf689f35e9637d316!2sCity%20Honda%20Service%20Lingarajapuram!5e0!3m2!1sen!2sin!4v1747228353651!5m2!1sen!2sin"
-          },
-          {
-            address: "Head Workshop, No.6, St. John's Road, \nUlsoor,  Bengaluru - 560 042.",
-            phone: ["+91 80 2513 9199, +91 94498 67080"],
-            email: "service.ho@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6160922!3d12.986102700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1750ec0c4ff3%3A0xf64250c532b819ee!2sCity%20Honda%20Service%20St%20Johns%20Road!5e0!3m2!1sen!2sin!4v1747228507673!5m2!1sen!2sin"
-          },
-          {
-            address: "No. 24, 25, 30 and 31, 40 Ft Road, PNS \nLayout, Subbannapalya, Kalyan Nagar, \nBengalur - 560 043.",
-            phone: ["+91 80 2542 2813, +91 76193 95014"],
-            email: "service.hrbr@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.91462263749514!2d77.6412537!3d13.0154752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1727eef1d2ed%3A0xe882785e66ab71e1!2sCity%20Honda%20Service%20HRBR%20Layout%20-Kalyan%20Nagar!5e0!3m2!1sen!2sin!4v1747228536688!5m2!1sen!2sin"
-          },
-          {
-            address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 027.",
-            phone: ["+91 80 4333 3330, +91 94808 12380"],
-            email: "service.ibg@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.161242209912!2d77.58864729999999!3d12.961532099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d9607610e3%3A0x379b9710e881c087!2sCITY%20HONDA%20SERVICE%20LALBAGH%20ROAD!5e0!3m2!1sen!2sin!4v1747228564023!5m2!1sen!2sin"
-          },
-          {
-            address: "#40/2, Ramamurthynagar Main Road, \nRamamurthy Nagar, Bengaluru - 560 016.",
-            phone: "+91 80 4094 4950, +91 94808 12390" ,
-            email: "service.rmn@cityhonda.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.357387289643!2d77.66433099999999!3d13.012898499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae112887e697bf%3A0x46b5e5388f798533!2sCity%20Honda%20Service%20Ramamurthy%20Nagar!5e0!3m2!1sen!2sin!4v1747228592460!5m2!1sen!2sin"
-          }
-        ],
-        "spares warehouse": [
-          {
-            address: "#113, 1st Main Road, Lingarajpuram, \nBengaluru - 560 084.",
-            phone: "+91 80 2549 6561, +91 94483 97794",
-            email: ["warehouse@cityhonda.in"],
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.4260254411024!2d77.6207003!3d13.0085203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16e7556e6ef3%3A0xf689f35e9637d316!2sCity%20Honda%20Service%20Lingarajapuram!5e0!3m2!1sen!2sin!4v1747278984074!5m2!1sen!2sin"
-          },
-        ]
-      },
-    }
-  },
+// {
+//     id: 11,
+//     backgroundImage: honda,
+//     brand: "honda",
+//     bgColor: {
+//       from: "#E9354C",
+//       to: "rgba(233, 53, 76, 0.4)",
+//     },
+//     LogoComponent: HondaLogo,
+//     header: "City Honda",
+//     description: "Since 2001, City Honda has been bringing the trusted performance of Honda two-wheelers to customers across Karnataka. As part of the VST Group, City Honda caters to a dynamic and growing community of riders, offering a seamless blend of reliability, efficiency, and service excellence. With two centrally located showrooms in Bangalore and workshops across the city and Chikmagalur, City Honda delivers a complete 4S experience - Sales, Service, Spares, and Safety Riding under one roof. Backed by a knowledgeable sales team and expert service technicians, the brand ensures every customer enjoys a smooth and dependable ownership journey. Rooted in trust and powered by performance, City Honda continues to be a preferred destination for two-wheeler enthusiasts.",
+//     learnMoreLink: "https://cityhonda.in/",
+//     locations: {
+//       Bangalore: {
+//         sales: [
+//           {
+//             address: "M/S. City Honda, #6, St. John's Road, \nUlsoor, Bengaluru - 560 042.",
+//             phone: ["+91 8025139199, +91 9480812350"],
+//             email: "sales.ho@cityhonda.in",
+//             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6159692!3d12.9860895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168c36ee3133%3A0xe180f725b7e36d72!2sCity%20Honda%20Sales%20St.%20Johns%20Road%20India%20Garage%20Agencies!5e0!3m2!1sen!2sin!4v1711542825613!5m2!1sen!2sin"
+//           },
+//           {
+//             address: "#202,7th Main, HRBR Layout, Kalyan \nNagar, Bengaluru - 560 043.",
+//             phone: "+91 8025422810,+91 8025422811 \n+91 9845941305",
+//             email: "sales.hrbr@cityhonda.in",
+//             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3094986550345!2d77.6431027!3d13.015952299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1728131c0e23%3A0xa06978a43d8ffa58!2sCity%20Honda%20Sales%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1747228274606!5m2!1sen!2sin"
+//           },
+//           {
+//             address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 027.",
+//             phone: "+91 8043333330, +91 8884434200",
+//             email: "sales.lbg@cityhonda.in",
+//             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.164150449718!2d77.5865653!3d12.9613459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156978155c3f%3A0xead9a19c3f1e2497!2sCity%20Honda%20Sales%20Lalbagh%20Road!5e0!3m2!1sen!2sin!4v1747228307684!5m2!1sen!2sin"
+//           }
+//         ],
+//         "service and parts": [
+//           {
+//             address: "#113, 1sr Main Road, Lingarajapuram, \nBengaluru - 560 084.",
+//             phone: ["+91 80 2549 6561, +91 94808 12384"],
+//             email: "service.lrp@cityhonda.in",
+//             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.4260254411024!2d77.6207003!3d13.0085203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16e7556e6ef3%3A0xf689f35e9637d316!2sCity%20Honda%20Service%20Lingarajapuram!5e0!3m2!1sen!2sin!4v1747228353651!5m2!1sen!2sin"
+//           },
+//           {
+//             address: "Head Workshop, No.6, St. John's Road, \nUlsoor,  Bengaluru - 560 042.",
+//             phone: ["+91 80 2513 9199, +91 94498 67080"],
+//             email: "service.ho@cityhonda.in",
+//             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7771161651913!2d77.6160922!3d12.986102700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1750ec0c4ff3%3A0xf64250c532b819ee!2sCity%20Honda%20Service%20St%20Johns%20Road!5e0!3m2!1sen!2sin!4v1747228507673!5m2!1sen!2sin"
+//           },
+//           {
+//             address: "No. 24, 25, 30 and 31, 40 Ft Road, PNS \nLayout, Subbannapalya, Kalyan Nagar, \nBengalur - 560 043.",
+//             phone: ["+91 80 2542 2813, +91 76193 95014"],
+//             email: "service.hrbr@cityhonda.in",
+//             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.91462263749514!2d77.6412537!3d13.0154752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1727eef1d2ed%3A0xe882785e66ab71e1!2sCity%20Honda%20Service%20HRBR%20Layout%20-Kalyan%20Nagar!5e0!3m2!1sen!2sin!4v1747228536688!5m2!1sen!2sin"
+//           },
+//           {
+//             address: "#143, Lalbagh Road, Near Subbaiah \nCircle, Opp, GST Seva Kendra, \nBengaluru - 560 027.",
+//             phone: ["+91 80 4333 3330, +91 94808 12380"],
+//             email: "service.ibg@cityhonda.in",
+//             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.161242209912!2d77.58864729999999!3d12.961532099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d9607610e3%3A0x379b9710e881c087!2sCITY%20HONDA%20SERVICE%20LALBAGH%20ROAD!5e0!3m2!1sen!2sin!4v1747228564023!5m2!1sen!2sin"
+//           },
+//           {
+//             address: "#40/2, Ramamurthynagar Main Road, \nRamamurthy Nagar, Bengaluru - 560 016.",
+//             phone: "+91 80 4094 4950, +91 94808 12390" ,
+//             email: "service.rmn@cityhonda.in",
+//             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.357387289643!2d77.66433099999999!3d13.012898499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae112887e697bf%3A0x46b5e5388f798533!2sCity%20Honda%20Service%20Ramamurthy%20Nagar!5e0!3m2!1sen!2sin!4v1747228592460!5m2!1sen!2sin"
+//           }
+//         ],
+//         "spares warehouse": [
+//           {
+//             address: "#113, 1st Main Road, Lingarajpuram, \nBengaluru - 560 084.",
+//             phone: "+91 80 2549 6561, +91 94483 97794",
+//             email: ["warehouse@cityhonda.in"],
+//             map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.4260254411024!2d77.6207003!3d13.0085203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16e7556e6ef3%3A0xf689f35e9637d316!2sCity%20Honda%20Service%20Lingarajapuram!5e0!3m2!1sen!2sin!4v1747278984074!5m2!1sen!2sin"
+//           },
+//         ]
+//       },
+//     }
+//   },
 ];
