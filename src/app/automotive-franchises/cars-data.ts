@@ -249,7 +249,7 @@ export const slides: SlideData[] = [
     },
     LogoComponent: DucatiIcon,
     header: "VST & Sons - Ducati",
-    description: "In 2015, VST Ducati introduced Karnataka and Tamil Nadu to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms in Bangalore and Chennai, the brand pairs Italian heritage with local expertise and care. Showcasing the complete Ducati range, along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an unmatched riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
+    description: "In 2015, VST Ducati introduced Karnataka to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms and service centres in Bangalore, the brand blends Italian heritage with strong local expertise and care. VST Ducati showcases the complete Ducati range along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an exceptional riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
     learnMoreLink: "https://www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
     locations: {
       Bengaluru: {
@@ -270,17 +270,17 @@ export const slides: SlideData[] = [
           }
         ]
       },
-       Chennai: {
-        "sales & service": [
-          {
-            address: "#148, Rajiv Gandhi Salai, Okkiyam, \nThoraipakkam, Chennai, Tamil Nadu \n600096",
-            phone: "+91 99405 06040",
-            email: "info@vstducati.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.378970077429!2d80.2397104!3d12.9475848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526743a784e02f%3A0xf7842622171a72df!2sDucati%20Chennai!5e0!3m2!1sen!2sin!4v1747842004465!5m2!1sen!2sin" ,
-          }
-        ],
+      //  Chennai: {
+      //   "sales & service": [
+      //     {
+      //       address: "#148, Rajiv Gandhi Salai, Okkiyam, \nThoraipakkam, Chennai, Tamil Nadu \n600096",
+      //       phone: "+91 99405 06040",
+      //       email: "info@vstducati.in",
+      //       map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.378970077429!2d80.2397104!3d12.9475848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526743a784e02f%3A0xf7842622171a72df!2sDucati%20Chennai!5e0!3m2!1sen!2sin!4v1747842004465!5m2!1sen!2sin" ,
+      //     }
+      //   ],
       
-      },
+      // },
     }
   },
   {
