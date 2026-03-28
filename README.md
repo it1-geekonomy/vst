@@ -302,4 +302,4 @@ This project is proprietary to VST Group. All rights reserved.
 
 ---
 
-**Built with ❤️ for VST Group**
+**Built with ❤️ for VST Group***
