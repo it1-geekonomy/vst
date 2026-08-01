@@ -239,50 +239,50 @@ export const slides: SlideData[] = [
       },
     }
   },
-  {
-    id: 5,
-    backgroundImage: ducati,
-    brand: "ducati",
-    bgColor: {
-      from: "#E9354C",
-      to: "rgba(233, 53, 76, 0.4)",
-    },
-    LogoComponent: DucatiIcon,
-    header: "VST & Sons - Ducati",
-    description: "In 2015, VST Ducati introduced Karnataka to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms and service centres in Bangalore, the brand blends Italian heritage with strong local expertise and care. VST Ducati showcases the complete Ducati range along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an exceptional riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
-    learnMoreLink: "https://www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
-    locations: {
-      Bengaluru: {
-        sales: [
-          {
-            address: "#22, Sankey Road, Opp. BDA Office, \nBengaluru - 560 051.",
-            phone: "+91 72598 36655",
-            email: "info@vstducati.in",
-            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747218886328!5m2!1sen!2sin",
-          }
-        ],
-        service: [
-          {
-            address: "#459, Dhanalakshmi Building, \nCottenpet, Bengaluru - 560 053.",
-            phone: "+91 72598 36655",
-            email: "info@vstducati.in",
-            map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747250831535!5m2!1sen!2sin"
-          }
-        ]
-      },
-      //  Chennai: {
-      //   "sales & service": [
-      //     {
-      //       address: "#148, Rajiv Gandhi Salai, Okkiyam, \nThoraipakkam, Chennai, Tamil Nadu \n600096",
-      //       phone: "+91 99405 06040",
-      //       email: "info@vstducati.in",
-      //       map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.378970077429!2d80.2397104!3d12.9475848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526743a784e02f%3A0xf7842622171a72df!2sDucati%20Chennai!5e0!3m2!1sen!2sin!4v1747842004465!5m2!1sen!2sin" ,
-      //     }
-      //   ],
+  // {
+  //   id: 5,
+  //   backgroundImage: ducati,
+  //   brand: "ducati",
+  //   bgColor: {
+  //     from: "#E9354C",
+  //     to: "rgba(233, 53, 76, 0.4)",
+  //   },
+  //   LogoComponent: DucatiIcon,
+  //   header: "VST & Sons - Ducati",
+  //   description: "In 2015, VST Ducati introduced Karnataka to the world of Ducati, offering more than just motorcycles, but an unmatched riding lifestyle. With showrooms and service centres in Bangalore, the brand blends Italian heritage with strong local expertise and care. VST Ducati showcases the complete Ducati range along with premium riding gear, accessories, and merchandise. A dedicated sales team ensures customers find the perfect bike and safety gear for an exceptional riding experience. Our service centres, equipped with service bays and advanced diagnostic tools, are staffed by trained Ducati technicians using only genuine parts to maintain peak performance. At VST Ducati, buying a bike is just the beginning, we're committed to delivering exceptional care throughout your ownership journey.",
+  //   learnMoreLink: "https://www.ducati.com/in/en/dealers/bengaluru/vst-ducati",
+  //   locations: {
+  //     Bengaluru: {
+  //       sales: [
+  //         {
+  //           address: "#22, Sankey Road, Opp. BDA Office, \nBengaluru - 560 051.",
+  //           phone: "+91 72598 36655",
+  //           email: "info@vstducati.in",
+  //           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.61103241798!2d77.5848312!3d12.9967121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179017e9fa09%3A0x9e5a3f7c0c1b092e!2sVST%20Ducati%20Sales!5e0!3m2!1sen!2sin!4v1747218886328!5m2!1sen!2sin",
+  //         }
+  //       ],
+  //       service: [
+  //         {
+  //           address: "#459, Dhanalakshmi Building, \nCottenpet, Bengaluru - 560 053.",
+  //           phone: "+91 72598 36655",
+  //           email: "info@vstducati.in",
+  //           map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.9894930788764!2d77.5685244!3d12.9731958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17e258e463fb%3A0x333f8831fd53cd6d!2sVST%20Ducati%20Service!5e0!3m2!1sen!2sin!4v1747250831535!5m2!1sen!2sin"
+  //         }
+  //       ]
+  //     },
+  //     //  Chennai: {
+  //     //   "sales & service": [
+  //     //     {
+  //     //       address: "#148, Rajiv Gandhi Salai, Okkiyam, \nThoraipakkam, Chennai, Tamil Nadu \n600096",
+  //     //       phone: "+91 99405 06040",
+  //     //       email: "info@vstducati.in",
+  //     //       map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.378970077429!2d80.2397104!3d12.9475848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526743a784e02f%3A0xf7842622171a72df!2sDucati%20Chennai!5e0!3m2!1sen!2sin!4v1747842004465!5m2!1sen!2sin" ,
+  //     //     }
+  //     //   ],
       
-      // },
-    }
-  },
+  //     // },
+  //   }
+  // },
   {
     id: 6,
     backgroundImage: kia,
