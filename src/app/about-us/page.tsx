@@ -62,7 +62,7 @@ const timelineItems = [
   { year: '1995', image: Frame1974, description: 'VST Tillers Tractors became a publicly listed company' },
   { year: '2000', image: Frame1976, description: 'Expansion of businesses in automobile and manufacturing sectors'},
   { year: '2011', image: Frame1977, description: 'VST entered luxury with Jaguar Land Rover in Tamil Nadu.'},
-  { year: '2015', image: Frame1978, description: 'Expanded luxury portfolio with Ducati and Mercedes-Benz in South India.' },
+  { year: '2015', image: Frame1978, description: 'Expanded luxury portfolio with Mercedes-Benz in South India.' },
   { year: '2022', image: Frame2022, description: "Porsche joined VST's luxury lineup in Karnataka" }
 
 ];
