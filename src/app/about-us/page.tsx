@@ -51,7 +51,7 @@ const timelineItems = [
   { year: '2024', image: Frame2024, description: "Maserati added to VST's elite brand portfolio in South India" },
   { year: '1911', image: Frame1968, description: 'Formation of VST & Sons' },
   { year: '1930', image: Frame1930, description: 'Sons join the Business' },
-  { year: '1931', image: Frame1931, description: 'Founded Smt. Kamalabai Education Institution' },
+  { year: '1931', image: Frame1931, description: 'Founded Smt. Kamalabai Educational Institution' },
 
   
   { year: '1949', image: Frame1970, description: 'India Garage began its journey with Austin Motor Company and Studebaker cars in South India.' },
