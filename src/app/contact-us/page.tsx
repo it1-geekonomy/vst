@@ -49,6 +49,7 @@ export default function Page() {
       Object.keys(data).forEach(key => {
         formData.append(key, data[key as keyof ContactFormInputs])
       })
+      formData.append('recaptchaToken', recaptchaToken)
       
       const response = await axios.post('/api/contactEmail', formData, {
         headers: {
@@ -169,7 +170,7 @@ export default function Page() {
               <div className="mt-8 flex justify-center">
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey="6LdJJ38rAAAAACZeKQwQ3qCMn4-Dy6XkwlT5Ymb9" // <-- replace with your real site key
+                  sitekey="6Lfx6rMtAAAAAHq2W0uGfW1WM3laPkTF0a8WsX6e"
                   onChange={token => setRecaptchaToken(token)}
                 />
               </div>

@@ -394,7 +394,7 @@ export default function Page() {
               <div className="mt-6 md:mt-8 flex justify-center">
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey="6LdJJ38rAAAAACZeKQwQ3qCMn4-Dy6XkwlT5Ymb9" // <-- use your real site key here
+                  sitekey="6Lfx6rMtAAAAAHq2W0uGfW1WM3laPkTF0a8WsX6e"
                   onChange={token => setRecaptchaToken(token)}
                 />
               </div>

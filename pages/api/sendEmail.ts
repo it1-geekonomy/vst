@@ -10,6 +10,20 @@ export const config = {
 };
 
 const resend = new Resend('re_UAuQVvJD_Hy72u8ZJoWHm9KzWtuEss2GT');
+const RECAPTCHA_SECRET_KEY = '6Lfx6rMtAAAAADWs1QGRHdD5znLlvRoQxLsLPUQ_';
+
+async function verifyRecaptcha(token: string) {
+  const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      secret: RECAPTCHA_SECRET_KEY,
+      response: token,
+    }),
+  });
+  const data = await response.json();
+  return data.success === true;
+}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -19,6 +33,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const form = formidable({});
     const [fields, files] = await form.parse(req);
+    const recaptchaToken = fields.recaptchaToken?.[0] || '';
+    if (!recaptchaToken || !(await verifyRecaptcha(recaptchaToken))) {
+      return res.status(400).json({ message: 'reCAPTCHA verification failed' });
+    }
     const formData = {
       name: fields.name?.[0] || '',
       email: fields.email?.[0] || '',
